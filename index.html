@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HarvardX Neuroscience Practice Exam</title>
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --surface: #ffffff;
+      --text: #1a2332;
+      --text-muted: #5a6577;
+      --primary: #1e4d7b;
+      --primary-light: #e8f0f8;
+      --accent: #2a7a6f;
+      --accent-light: #e6f4f1;
+      --correct: #1f6b3a;
+      --correct-bg: #e8f5ec;
+      --incorrect: #9b2c2c;
+      --incorrect-bg: #fceaea;
+      --border: #d8dee8;
+      --shadow: 0 2px 12px rgba(26, 35, 50, 0.08);
+      --radius: 10px;
+      --font: "Segoe UI", system-ui, -apple-system, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      background: var(--primary);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      z-index: 100;
+      text-decoration: none;
+      border-radius: 0 0 var(--radius) var(--radius);
+    }
+
+    .skip-link:focus { left: 1rem; }
+
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0 0 0.4rem;
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    header p {
+      margin: 0;
+      opacity: 0.9;
+      font-size: 0.95rem;
+      max-width: 640px;
+      margin-inline: auto;
+    }
+
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+
+    .progress-bar {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .progress-bar label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .progress-track {
+      flex: 1;
+      min-width: 120px;
+      height: 8px;
+      background: var(--border);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: var(--accent);
+      border-radius: 99px;
+      transition: width 0.3s ease;
+      width: 0%;
+    }
+
+    .progress-count {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .question-meta {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .question-text {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin: 0 0 1.25rem;
+    }
+
+    fieldset {
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    legend.visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .options { display: flex; flex-direction: column; gap: 0.6rem; }
+
+    .option {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.85rem 1rem;
+      border: 2px solid var(--border);
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: border-color 0.15s, background 0.15s;
+    }
+
+    .option:hover { border-color: var(--primary); background: var(--primary-light); }
+
+    .option input[type="radio"] {
+      margin-top: 0.25rem;
+      accent-color: var(--primary);
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+    }
+
+    .option label {
+      cursor: pointer;
+      flex: 1;
+      font-size: 0.97rem;
+    }
+
+    .option.selected {
+      border-color: var(--primary);
+      background: var(--primary-light);
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    button {
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 0.7rem 1.4rem;
+      border-radius: var(--radius);
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.15s, transform 0.1s;
+    }
+
+    button:active { transform: scale(0.98); }
+
+    button:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .btn-primary:hover:not(:disabled) { opacity: 0.9; }
+
+    .btn-secondary {
+      background: var(--surface);
+      color: var(--primary);
+      border: 2px solid var(--border);
+    }
+
+    .btn-secondary:hover:not(:disabled) { border-color: var(--primary); }
+
+    .btn-accent {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn-accent:hover:not(:disabled) { opacity: 0.9; }
+
+    /* Results */
+    #results { display: none; }
+
+    .score-summary {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .score-circle {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: var(--primary-light);
+      border: 4px solid var(--primary);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+    }
+
+    .score-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1;
+    }
+
+    .score-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .score-message {
+      font-size: 1.15rem;
+      font-weight: 500;
+      margin: 0 0 0.5rem;
+    }
+
+    .score-detail {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin: 0 0 1.5rem;
+    }
+
+    .review-item {
+      border-left: 4px solid var(--border);
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+      background: var(--bg);
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
+
+    .review-item.correct { border-left-color: var(--correct); background: var(--correct-bg); }
+    .review-item.incorrect { border-left-color: var(--incorrect); background: var(--incorrect-bg); }
+
+    .review-status {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.4rem;
+    }
+
+    .review-item.correct .review-status { color: var(--correct); }
+    .review-item.incorrect .review-status { color: var(--incorrect); }
+
+    .review-question {
+      font-weight: 500;
+      margin: 0 0 0.5rem;
+    }
+
+    .review-answer {
+      font-size: 0.9rem;
+      margin: 0 0 0.4rem;
+    }
+
+    .review-explanation {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin: 0;
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+
+    @media (max-width: 480px) {
+      .card { padding: 1.25rem; }
+      .nav-buttons { flex-direction: column; }
+      .nav-buttons button { width: 100%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .progress-fill { transition: none; }
+      button { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#quiz-main">Skip to quiz</a>
+
+  <header>
+    <h1>HarvardX Introduction to Neuroscience</h1>
+    <p>Practice Exam — Cellular Signaling, Neuroanatomy, Sensory Processing &amp; Learning Mechanisms</p>
+  </header>
+
+  <main id="quiz-main">
+    <div id="quiz-view">
+      <div class="progress-bar" role="status" aria-live="polite">
+        <label for="progress-track">Progress</label>
+        <div class="progress-track" id="progress-track" aria-hidden="true">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <span class="progress-count" id="progress-count">Question 1 of 18</span>
+      </div>
+
+      <div class="card" id="question-card">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div class="nav-buttons">
+        <button type="button" class="btn-secondary" id="btn-prev" disabled>Previous</button>
+        <button type="button" class="btn-primary" id="btn-next">Next</button>
+      </div>
+    </div>
+
+    <div id="results">
+      <div class="card score-summary">
+        <div class="score-circle" aria-hidden="true">
+          <span class="score-number" id="score-pct">0%</span>
+          <span class="score-label">Score</span>
+        </div>
+        <p class="score-message" id="score-message"></p>
+        <p class="score-detail" id="score-detail"></p>
+        <button type="button" class="btn-accent" id="btn-restart">Retake Exam</button>
+      </div>
+
+      <h2 style="font-size:1.15rem; margin:1.5rem 0 1rem;">Answer Review</h2>
+      <div id="review-list"></div>
+    </div>
+  </main>
+
+  <footer>
+    Questions randomized on each load using Fisher-Yates shuffle.
+    Based on HarvardX MCB80x curriculum topics.
+  </footer>
+
+  <script>
+    /* ── Fisher-Yates shuffle ── */
+    function shuffle(array) {
+      const arr = array.slice();
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    /* ── Question bank ── */
+    const QUESTIONS = [
+      {
+        topic: "Cellular Signaling",
+        question: "During the rising phase of an action potential, which ionic event primarily drives depolarization?",
+        options: [
+          "Efflux of K\u207A through voltage-gated potassium channels",
+          "Influx of Na\u207A through voltage-gated sodium channels",
+          "Influx of Cl\u207B through ligand-gated chloride channels",
+          "Efflux of Ca\u00B2\u207A through voltage-gated calcium channels"
+        ],
+        correct: 1,
+        explanation: "Voltage-gated Na\u207A channels open rapidly at threshold, allowing Na\u207A influx that drives the upswing of the action potential."
+      },
+      {
+        topic: "Cellular Signaling",
+        question: "At a chemical synapse, neurotransmitter release from the presynaptic terminal depends most directly on:",
+        options: [
+          "Opening of voltage-gated Na\u207A channels in the axon hillock",
+          "Influx of Ca\u00B2\u207A through voltage-gated calcium channels",
+          "Activation of metabotropic glutamate receptors",
+          "Hyperpolarization of the postsynaptic membrane"
+        ],
+        correct: 1,
+        explanation: "Presynaptic Ca\u00B2\u207A influx triggers synaptic vesicle fusion with the presynaptic membrane via SNARE-mediated exocytosis."
+      },
+      {
+        topic: "Cellular Signaling",
+        question: "Which statement best describes the equilibrium potential for an ion?",
+        options: [
+          "The membrane voltage at which there is no net flux of that ion",
+          "The voltage at which all ion channels are maximally open",
+          "The resting membrane potential of a typical neuron (\u221270 mV)",
+          "The threshold voltage required to initiate an action potential"
+        ],
+        correct: 0,
+        explanation: "The Nernst (equilibrium) potential is the voltage at which the electrical and chemical driving forces on an ion balance, yielding zero net flux."
+      },
+      {
+        topic: "Cellular Signaling",
+        question: "IP\u2083 (inositol trisphosphate) produced during G-protein\u2013coupled receptor signaling primarily causes:",
+        options: [
+          "Direct opening of ligand-gated ion channels at the synapse",
+          "Release of Ca\u00B2\u207A from intracellular stores in the endoplasmic reticulum",
+          "Phosphorylation of CREB in the nucleus",
+          "Hydrolysis of cAMP by phosphodiesterase"
+        ],
+        correct: 1,
+        explanation: "IP\u2083 binds IP\u2083 receptors on the ER, releasing stored Ca\u00B2\u207A into the cytosol \u2014 a key second-messenger cascade in metabotropic signaling."
+      },
+      {
+        topic: "Neuroanatomy",
+        question: "The blood-brain barrier is formed primarily by tight junctions between which cell type?",
+        options: [
+          "Oligodendrocytes",
+          "Astrocyte end-feet",
+          "Endothelial cells of CNS capillaries",
+          "Microglia"
+        ],
+        correct: 2,
+        explanation: "CNS capillary endothelial cells form tight junctions that restrict paracellular diffusion; astrocyte end-feet surround but do not form the barrier itself."
+      },
+      {
+        topic: "Neuroanatomy",
+        question: "Which structure is part of the limbic system and is critically involved in converting short-term memories to long-term memories?",
+        options: [
+          "Cerebellum",
+          "Hippocampus",
+          "Primary motor cortex (M1)",
+          "Superior colliculus"
+        ],
+        correct: 1,
+        explanation: "The hippocampus is essential for declarative memory consolidation; damage (e.g., H.M. case) impairs formation of new episodic memories."
+      },
+      {
+        topic: "Neuroanatomy",
+        question: "In the somatosensory homunculus of the primary somatosensory cortex (S1), which body region receives the largest cortical representation?",
+        options: [
+          "Lower leg",
+          "Trunk",
+          "Hands and face",
+          "Upper arm"
+        ],
+        correct: 2,
+        explanation: "Cortical area is proportional to sensory acuity, not body size. Hands and face have the highest receptor density and largest S1 representation."
+      },
+      {
+        topic: "Neuroanatomy",
+        question: "The substantia nigra pars compacta projects to the striatum using which neurotransmitter?",
+        options: [
+          "GABA",
+          "Glutamate",
+          "Dopamine",
+          "Acetylcholine"
+        ],
+        correct: 2,
+        explanation: "Dopaminergic neurons of the substantia nigra pars compacta form the nigrostriatal pathway; their degeneration is central to Parkinson\u2019s disease."
+      },
+      {
+        topic: "Neuroanatomy",
+        question: "Which white-matter tract primarily connects the two cerebral hemispheres?",
+        options: [
+          "Internal capsule",
+          "Corpus callosum",
+          "Fornix",
+          "Corticospinal tract"
+        ],
+        correct: 1,
+        explanation: "The corpus callosum is the largest commissural tract, enabling interhemispheric communication between homologous cortical areas."
+      },
+      {
+        topic: "Sensory Processing",
+        question: "In the vertebrate retina, which cell type is responsible for transducing light into electrical signals?",
+        options: [
+          "Bipolar cells",
+          "Horizontal cells",
+          "Photoreceptors (rods and cones)",
+          "Retinal ganglion cells"
+        ],
+        correct: 2,
+        explanation: "Photoreceptors contain photopigments (rhodopsin, opsins) that undergo conformational change upon photon absorption, initiating the phototransduction cascade."
+      },
+      {
+        topic: "Sensory Processing",
+        question: "Place theory of pitch perception proposes that:",
+        options: [
+          "All frequencies are encoded solely by the firing rate of auditory nerve fibers",
+          "Different sound frequencies activate hair cells at specific locations along the basilar membrane",
+          "Pitch is determined exclusively by interaural time differences",
+          "The cochlea acts as a single resonator tuned to one frequency"
+        ],
+        correct: 1,
+        explanation: "The basilar membrane is tonotopically organized: high frequencies peak near the base, low frequencies near the apex, enabling frequency-place coding."
+      },
+      {
+        topic: "Sensory Processing",
+        question: "Receptive fields of retinal ganglion cells in the center-surround organization typically show:",
+        options: [
+          "Excitation to light in both center and surround simultaneously",
+          "Opponent responses: ON-center/OFF-surround or OFF-center/ON-surround",
+          "No spatial selectivity for light stimuli",
+          "Selectivity only for color, not luminance contrast"
+        ],
+        correct: 1,
+        explanation: "Center-surround antagonism enhances contrast detection. An ON-center cell depolarizes when light hits the center and hyperpolarizes when light hits the surround."
+      },
+      {
+        topic: "Sensory Processing",
+        question: "Which somatosensory receptor type is most specialized for detecting fine touch and low-frequency vibration?",
+        options: [
+          "Free nerve endings",
+          "Meissner\u2019s corpuscles",
+          "Pacinian corpuscles",
+          "Ruffini endings"
+        ],
+        correct: 1,
+        explanation: "Meissner\u2019s corpuscles are located in glabrous skin dermal papillae and are highly sensitive to light touch and low-frequency (≤50 Hz) vibration."
+      },
+      {
+        topic: "Sensory Processing",
+        question: "In the olfactory system, each olfactory sensory neuron typically expresses:",
+        options: [
+          "All ~400 human olfactory receptor genes simultaneously",
+          "Only one functional olfactory receptor gene (one neuron\u2013one receptor rule)",
+          "Only GABA receptors and no odorant receptors",
+          "Receptors identical to those in the gustatory system"
+        ],
+        correct: 1,
+        explanation: "The one neuron\u2013one receptor rule ensures each OSN responds to a defined subset of odorants, enabling combinatorial odor coding in the olfactory bulb."
+      },
+      {
+        topic: "Learning Mechanisms",
+        question: "Long-term potentiation (LTP) at hippocampal CA1 synapses classically requires:",
+        options: [
+          "Activation of NMDA receptors coincident with postsynaptic depolarization",
+          "Blockade of all voltage-gated Ca\u00B2\u207A channels",
+          "Exclusive activation of metabotropic GABA_B receptors",
+          "Removal of AMPA receptors from the postsynaptic membrane"
+        ],
+        correct: 0,
+        explanation: "NMDA receptors act as coincidence detectors: Mg\u00B2\u207A block is relieved by depolarization while glutamate is bound, allowing Ca\u00B2\u207A influx that triggers LTP."
+      },
+      {
+        topic: "Learning Mechanisms",
+        question: "The immediate early gene c-fos is commonly used as a marker of neural activity because its expression:",
+        options: [
+          "Is constitutively high in all neurons regardless of activity",
+          "Is rapidly and transiently induced by synaptic activity and calcium signaling",
+          "Only occurs during apoptosis of inactive neurons",
+          "Directly encodes a neurotransmitter receptor protein"
+        ],
+        correct: 1,
+        explanation: "c-fos is an activity-dependent transcription factor; its rapid induction reflects recent neuronal activation and is widely used in functional mapping."
+      },
+      {
+        topic: "Learning Mechanisms",
+        question: "CREB (cAMP response element-binding protein) contributes to long-term memory by:",
+        options: [
+          "Directly opening voltage-gated sodium channels at the synapse",
+          "Acting as a transcription factor that regulates genes required for synaptic growth and maintenance",
+          "Degrading proteins in the proteasome during LTD",
+          "Transporting neurotransmitters into synaptic vesicles"
+        ],
+        correct: 1,
+        explanation: "Phosphorylated CREB binds CRE elements in target gene promoters, driving expression of proteins needed for enduring synaptic changes underlying long-term memory."
+      },
+      {
+        topic: "Learning Mechanisms",
+        question: "According to Hebbian theory, synaptic strength increases when:",
+        options: [
+          "Presynaptic and postsynaptic neurons fire uncorrelated action potentials",
+          "A presynaptic neuron repeatedly contributes to firing of a postsynaptic neuron",
+          "Only inhibitory interneurons are activated",
+          "The synapse is never used (use-it-or-lose-it in reverse)"
+        ],
+        correct: 1,
+        explanation: "\u201cCells that fire together, wire together\u201d \u2014 correlated pre- and postsynaptic activity strengthens synapses, forming the conceptual basis for LTP."
+      }
+    ];
+
+    /* ── State ── */
+    let shuffledQuestions = [];
+    let currentIndex = 0;
+    let answers = {};
+
+    function prepareExam() {
+      shuffledQuestions = shuffle(QUESTIONS).map(q => {
+        const indexed = q.options.map((text, i) => ({ text, originalIndex: i }));
+        const shuffledOpts = shuffle(indexed);
+        const newCorrect = shuffledOpts.findIndex(o => o.originalIndex === q.correct);
+        return {
+          topic: q.topic,
+          question: q.question,
+          options: shuffledOpts.map(o => o.text),
+          correct: newCorrect,
+          explanation: q.explanation
+        };
+      });
+      currentIndex = 0;
+      answers = {};
+    }
+
+    /* ── DOM refs ── */
+    const questionCard = document.getElementById("question-card");
+    const progressFill = document.getElementById("progress-fill");
+    const progressCount = document.getElementById("progress-count");
+    const btnPrev = document.getElementById("btn-prev");
+    const btnNext = document.getElementById("btn-next");
+    const quizView = document.getElementById("quiz-view");
+    const resultsView = document.getElementById("results");
+    const reviewList = document.getElementById("review-list");
+    const btnRestart = document.getElementById("btn-restart");
+
+    function renderQuestion() {
+      const q = shuffledQuestions[currentIndex];
+      const total = shuffledQuestions.length;
+      const selected = answers[currentIndex];
+
+      progressFill.style.width = `${((currentIndex + 1) / total) * 100}%`;
+      progressCount.textContent = `Question ${currentIndex + 1} of ${total}`;
+
+      const optionsHtml = q.options.map((opt, i) => {
+        const checked = selected === i ? "checked" : "";
+        const selectedClass = selected === i ? "selected" : "";
+        return `
+          <div class="option ${selectedClass}" data-index="${i}">
+            <input type="radio" name="answer" id="opt-${i}" value="${i}" ${checked}
+                   aria-describedby="q-text">
+            <label for="opt-${i}">${opt}</label>
+          </div>`;
+      }).join("");
+
+      questionCard.innerHTML = `
+        <div class="question-meta">${q.topic}</div>
+        <p class="question-text" id="q-text">${currentIndex + 1}. ${q.question}</p>
+        <fieldset>
+          <legend class="visually-hidden">Answer choices for question ${currentIndex + 1}</legend>
+          <div class="options" role="radiogroup" aria-labelledby="q-text">
+            ${optionsHtml}
+          </div>
+        </fieldset>`;
+
+      questionCard.querySelectorAll(".option").forEach(el => {
+        el.addEventListener("click", () => {
+          const idx = parseInt(el.dataset.index, 10);
+          answers[currentIndex] = idx;
+          questionCard.querySelectorAll(".option").forEach(o => o.classList.remove("selected"));
+          el.classList.add("selected");
+          el.querySelector("input").checked = true;
+        });
+      });
+
+      btnPrev.disabled = currentIndex === 0;
+      btnNext.textContent = currentIndex === total - 1 ? "Submit Exam" : "Next";
+    }
+
+    function showResults() {
+      const total = shuffledQuestions.length;
+      let correct = 0;
+
+      reviewList.innerHTML = "";
+
+      shuffledQuestions.forEach((q, i) => {
+        const userAnswer = answers[i];
+        const isCorrect = userAnswer === q.correct;
+        if (isCorrect) correct++;
+
+        const item = document.createElement("div");
+        item.className = `review-item ${isCorrect ? "correct" : "incorrect"}`;
+
+        const userText = userAnswer !== undefined
+          ? q.options[userAnswer]
+          : "(No answer selected)";
+        const correctText = q.options[q.correct];
+
+        item.innerHTML = `
+          <div class="review-status">${isCorrect ? "Correct" : "Incorrect"}</div>
+          <p class="review-question">${i + 1}. ${q.question}</p>
+          <p class="review-answer"><strong>Your answer:</strong> ${userText}</p>
+          ${!isCorrect ? `<p class="review-answer"><strong>Correct answer:</strong> ${correctText}</p>` : ""}
+          <p class="review-explanation">${q.explanation}</p>`;
+
+        reviewList.appendChild(item);
+      });
+
+      const pct = Math.round((correct / total) * 100);
+      document.getElementById("score-pct").textContent = `${pct}%`;
+      document.getElementById("score-detail").textContent =
+        `${correct} of ${total} questions answered correctly.`;
+
+      let message;
+      if (pct >= 90) message = "Excellent work! You have a strong grasp of core neuroscience concepts.";
+      else if (pct >= 75) message = "Good performance. Review the missed topics to solidify your understanding.";
+      else if (pct >= 60) message = "Fair result. Focus on the explanations below and revisit lecture materials.";
+      else message = "Keep studying — use the review section to target your weak areas.";
+
+      document.getElementById("score-message").textContent = message;
+
+      quizView.style.display = "none";
+      resultsView.style.display = "block";
+      resultsView.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    function startExam() {
+      prepareExam();
+      quizView.style.display = "block";
+      resultsView.style.display = "none";
+      renderQuestion();
+    }
+
+    btnPrev.addEventListener("click", () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        renderQuestion();
+      }
+    });
+
+    btnNext.addEventListener("click", () => {
+      if (currentIndex < shuffledQuestions.length - 1) {
+        currentIndex++;
+        renderQuestion();
+      } else {
+        showResults();
+      }
+    });
+
+    btnRestart.addEventListener("click", startExam);
+
+    startExam();
+  </script>
+</body>
+</html>
