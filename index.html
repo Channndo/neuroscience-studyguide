@@ -191,6 +191,114 @@
 
     .quiz-card.final .meta { color: #fca5a5; }
 
+    .quiz-card.elite {
+      background: linear-gradient(145deg, var(--gray-800) 0%, #1a1a1f 100%);
+      border-color: var(--gray-700);
+      color: var(--gray-50);
+    }
+
+    .quiz-card.elite:hover { border-color: var(--crimson); }
+    .quiz-card.elite h3 { color: #fff; }
+    .quiz-card.elite .subtitle { color: var(--gray-400); }
+    .quiz-card.elite .meta { color: #fca5a5; }
+    .quiz-card.elite .quiz-card-icon {
+      background: rgba(165, 28, 48, 0.3);
+      color: #fff;
+    }
+
+    .quiz-card.pinnacle {
+      background: linear-gradient(145deg, #1a1a1f 0%, var(--crimson-dark) 120%);
+      border: 2px solid var(--crimson);
+      color: #fff;
+    }
+
+    .quiz-card.pinnacle .subtitle { color: rgba(255,255,255,0.75); }
+    .quiz-card.pinnacle .meta { color: #fecdd3; }
+
+    .quiz-card.locked {
+      opacity: 0.55;
+      cursor: not-allowed;
+      transform: none !important;
+      box-shadow: var(--shadow-sm) !important;
+      border-color: var(--gray-300) !important;
+    }
+
+    .quiz-card.locked:hover {
+      border-color: var(--gray-300) !important;
+      transform: none !important;
+    }
+
+    .lock-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--gray-500);
+      background: var(--gray-100);
+      padding: 0.3rem 0.65rem;
+      border-radius: 999px;
+      margin-top: 0.5rem;
+    }
+
+    .quiz-card.elite.locked .lock-badge,
+    .quiz-card.pinnacle.locked .lock-badge {
+      background: rgba(255,255,255,0.1);
+      color: var(--gray-400);
+    }
+
+    .dashboard-section {
+      margin-bottom: 2rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .section-header h3 {
+      margin: 0;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--gray-700);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .section-hint {
+      font-size: 0.8rem;
+      color: var(--gray-500);
+    }
+
+    .progress-banner {
+      background: var(--crimson-light);
+      border: 1px solid rgba(165, 28, 48, 0.2);
+      border-radius: var(--radius);
+      padding: 0.85rem 1.15rem;
+      margin-bottom: 1.75rem;
+      font-size: 0.88rem;
+      color: var(--gray-700);
+    }
+
+    .progress-banner strong { color: var(--crimson); }
+
+    .unlock-toast {
+      background: var(--correct-bg);
+      border: 1px solid var(--correct-border);
+      color: var(--correct);
+      border-radius: var(--radius);
+      padding: 0.85rem 1.15rem;
+      margin-bottom: 1rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
     /* ── Quiz view ── */
     .quiz-header {
       display: flex;
@@ -342,6 +450,167 @@
     .answer-btn.selected .letter {
       background: var(--crimson);
       color: #fff;
+    }
+
+    .answer-btn:disabled {
+      cursor: default;
+      opacity: 1;
+    }
+
+    .answer-btn.is-correct {
+      border-color: var(--correct-border);
+      background: var(--correct-bg);
+      color: var(--correct);
+    }
+
+    .answer-btn.is-correct .letter {
+      background: var(--correct);
+      color: #fff;
+    }
+
+    .answer-btn.is-incorrect {
+      border-color: var(--incorrect-border);
+      background: var(--incorrect-bg);
+      color: var(--incorrect);
+    }
+
+    .answer-btn.is-incorrect .letter {
+      background: var(--incorrect);
+      color: #fff;
+    }
+
+    .instant-feedback {
+      margin-top: 1.25rem;
+      padding: 1rem 1.15rem;
+      border-radius: var(--radius);
+      border-left: 4px solid var(--gray-300);
+    }
+
+    .instant-feedback.correct {
+      background: var(--correct-bg);
+      border-left-color: var(--correct);
+    }
+
+    .instant-feedback.incorrect {
+      background: var(--incorrect-bg);
+      border-left-color: var(--incorrect);
+    }
+
+    .instant-feedback-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin: 0 0 0.5rem;
+    }
+
+    .instant-feedback.correct .instant-feedback-label { color: var(--correct); }
+    .instant-feedback.incorrect .instant-feedback-label { color: var(--incorrect); }
+
+    .instant-feedback-text {
+      font-size: 0.9rem;
+      color: var(--gray-700);
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    .quiz-card.flashcards {
+      border-color: var(--crimson-muted);
+    }
+
+    .quiz-card.flashcards .quiz-card-icon {
+      background: var(--crimson-light);
+    }
+
+    /* ── Flashcard view ── */
+    .flashcard-area {
+      perspective: 1200px;
+      margin-bottom: 1.25rem;
+    }
+
+    .flashcard {
+      position: relative;
+      width: 100%;
+      min-height: 300px;
+      transform-style: preserve-3d;
+      transition: transform 0.55s cubic-bezier(0.4, 0.2, 0.2, 1);
+      cursor: pointer;
+    }
+
+    .flashcard.flipped { transform: rotateY(180deg); }
+
+    .flashcard-face {
+      position: absolute;
+      inset: 0;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      background: var(--surface);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      padding: 2rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .flashcard-back {
+      transform: rotateY(180deg);
+      background: linear-gradient(160deg, var(--gray-50) 0%, var(--surface) 100%);
+    }
+
+    .flashcard-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gray-500);
+      margin-bottom: 0.65rem;
+    }
+
+    .flashcard-question {
+      font-size: 1.1rem;
+      font-weight: 600;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .flashcard-answer {
+      font-size: 1.02rem;
+      font-weight: 600;
+      color: var(--crimson);
+      margin: 0 0 1rem;
+      line-height: 1.45;
+    }
+
+    .flashcard-mechanism {
+      font-size: 0.9rem;
+      color: var(--gray-600);
+      margin: 0;
+      line-height: 1.55;
+      padding-top: 0.85rem;
+      border-top: 1px solid var(--gray-200);
+    }
+
+    .flashcard-hint {
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--gray-500);
+      margin-bottom: 1rem;
+    }
+
+    .flashcard-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .flashcard-counter {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--gray-500);
+      font-variant-numeric: tabular-nums;
     }
 
     .nav-row {
@@ -535,7 +804,7 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .progress-fill, .quiz-card { transition: none; }
+      .progress-fill, .quiz-card, .flashcard { transition: none; }
     }
   </style>
 </head>
@@ -551,10 +820,12 @@
     <!-- Dashboard -->
     <section id="view-dashboard" class="view active">
       <div class="dashboard-intro">
-        <h2>Select a Module</h2>
-        <p>Each quiz draws from HarvardX curriculum material. Questions and answer order are randomized on every attempt.</p>
+        <h2>Study Dashboard</h2>
+        <p>HarvardX MCB80x curriculum practice. Chapter quizzes give instant feedback; finals reveal answers at the end. Missed questions auto-generate flashcards.</p>
       </div>
-      <div class="quiz-grid" id="quiz-grid"></div>
+      <div id="progress-banner" class="progress-banner" hidden></div>
+      <div id="unlock-toast" class="unlock-toast" hidden></div>
+      <div id="dashboard-sections"></div>
     </section>
 
     <!-- Quiz -->
@@ -573,6 +844,35 @@
       <div class="nav-row">
         <button type="button" class="btn-secondary" id="btn-prev" disabled>Previous</button>
         <button type="button" class="btn-primary" id="btn-next">Next</button>
+      </div>
+    </section>
+
+    <!-- Flashcards -->
+    <section id="view-flashcard" class="view">
+      <div class="quiz-header">
+        <button type="button" class="btn-back" id="fc-back">&larr; Dashboard</button>
+        <p class="quiz-title" id="fc-title"></p>
+      </div>
+      <p class="flashcard-hint">Click the card to flip &middot; Generated from questions you missed</p>
+      <div class="flashcard-area">
+        <div class="flashcard" id="flashcard" tabindex="0" role="button" aria-label="Flashcard. Press Enter or Space to flip.">
+          <div class="flashcard-face flashcard-front">
+            <span class="topic-badge" id="fc-topic"></span>
+            <p class="flashcard-label">Question</p>
+            <p class="flashcard-question" id="fc-question"></p>
+          </div>
+          <div class="flashcard-face flashcard-back">
+            <span class="topic-badge" id="fc-topic-back"></span>
+            <p class="flashcard-label">Answer</p>
+            <p class="flashcard-answer" id="fc-answer"></p>
+            <p class="flashcard-mechanism" id="fc-mechanism"></p>
+          </div>
+        </div>
+      </div>
+      <div class="flashcard-nav">
+        <button type="button" class="btn-secondary" id="fc-prev" disabled>Previous</button>
+        <span class="flashcard-counter" id="fc-counter">1 / 1</span>
+        <button type="button" class="btn-secondary" id="fc-next">Next</button>
       </div>
     </section>
 
@@ -596,6 +896,7 @@
     Fisher-Yates shuffle on every quiz start &middot; HarvardX MCB80x curriculum alignment
   </footer>
 
+  <script src="questions-bank.js"></script>
   <script>
     function shuffle(array) {
       const arr = array.slice();
@@ -1161,45 +1462,193 @@
       }
     ];
 
+    const SET_100 = [
+      ...PART1_VARIANTS, ...PART2_VARIANTS, ...PART3_VARIANTS, ...NEW_TIER1
+    ];
+    const SET_150 = [...SET_100, ...NEW_TIER2];
+    const SET_200 = [...SET_150, ...NEW_TIER3];
+    const SET_300 = [...SET_200, ...NEW_TIER4];
+
+    const PASS_THRESHOLD = 70;
+    const STORAGE_KEY = "mcb80x_progress";
+    const FLASHCARD_KEY = "mcb80x_flashcards";
+    const CHAPTER_IDS = ["part1", "part2", "part3"];
+
+    const CHAPTER_META = {
+      part1: { title: "Part 1 Flashcards", subtitle: "Electrical Properties — your missed topics" },
+      part2: { title: "Part 2 Flashcards", subtitle: "Neurons & Networks — your missed topics" },
+      part3: { title: "Part 3 Flashcards", subtitle: "The Brain — your missed topics" }
+    };
+
     const QUIZZES = {
       part1: {
         id: "part1",
+        section: "core",
+        chapterId: "part1",
         title: "Part 1 Quiz",
         subtitle: "The Electrical Properties of the Neuron",
-        meta: "15 Questions",
+        meta: "15 Questions · Instant feedback",
         description: "Resting potential, passive properties, action potentials, propagation",
         questions: PART1,
-        icon: "P1"
+        icon: "P1",
+        immediateFeedback: true
       },
       part2: {
         id: "part2",
+        section: "core",
+        chapterId: "part2",
         title: "Part 2 Quiz",
         subtitle: "Neurons and Networks",
-        meta: "15 Questions",
+        meta: "15 Questions · Instant feedback",
         description: "Synapses, receptors, integration, neuromodulation, circuits",
         questions: PART2,
-        icon: "P2"
+        icon: "P2",
+        immediateFeedback: true
       },
       part3: {
         id: "part3",
+        section: "core",
+        chapterId: "part3",
         title: "Part 3 Quiz",
         subtitle: "The Brain",
-        meta: "15 Questions",
+        meta: "15 Questions · Instant feedback",
         description: "Sensory systems, neuroanatomy, learning and memory",
         questions: PART3,
-        icon: "P3"
+        icon: "P3",
+        immediateFeedback: true
       },
       final: {
         id: "final",
+        section: "final",
         title: "Comprehensive Final Exam",
         subtitle: "Parts 1, 2 & 3 Combined",
-        meta: "45 Questions",
-        description: "Full MCB80x curriculum review across all three modules",
+        meta: "45 Questions · Results at end",
+        description: "Full MCB80x curriculum review — complete to unlock advanced finals",
         questions: [...PART1, ...PART2, ...PART3],
         icon: "FINAL",
-        final: true
+        cardClass: "final",
+        unlocksAdvanced: true,
+        immediateFeedback: false
+      },
+      final100: {
+        id: "final100",
+        section: "advanced",
+        title: "Advanced Final I",
+        subtitle: "Expanded Curriculum Review",
+        meta: "100 Questions",
+        description: "Reworded core concepts plus new MCB80x items — proctored-exam rigor",
+        questions: SET_100,
+        icon: "100",
+        cardClass: "elite",
+        requires: () => getProgress().finalCompleted,
+        lockHint: "Complete the Comprehensive Final Exam to unlock",
+        passKey: "final100Passed"
+      },
+      final150: {
+        id: "final150",
+        section: "advanced",
+        title: "Advanced Final II",
+        subtitle: "Intermediate Challenge",
+        meta: "150 Questions",
+        description: "Additional variations with increased conceptual precision",
+        questions: SET_150,
+        icon: "150",
+        cardClass: "elite",
+        requires: () => getProgress().finalCompleted,
+        lockHint: "Complete the Comprehensive Final Exam to unlock",
+        passKey: "final150Passed"
+      },
+      final200: {
+        id: "final200",
+        section: "advanced",
+        title: "Advanced Final III",
+        subtitle: "Advanced Challenge",
+        meta: "200 Questions",
+        description: "Broader coverage with rigorous single-variable mechanism testing",
+        questions: SET_200,
+        icon: "200",
+        cardClass: "elite",
+        requires: () => getProgress().finalCompleted,
+        lockHint: "Complete the Comprehensive Final Exam to unlock",
+        passKey: "final200Passed"
+      },
+      pinnacle300: {
+        id: "pinnacle300",
+        section: "pinnacle",
+        title: "Pinnacle Examination",
+        subtitle: "Ultimate MCB80x Mastery Test",
+        meta: "300 Questions",
+        description: "The complete advanced question bank — pass all three advanced finals to unlock",
+        questions: SET_300,
+        icon: "300",
+        cardClass: "pinnacle",
+        requires: () => {
+          const p = getProgress();
+          return p.final100Passed && p.final150Passed && p.final200Passed;
+        },
+        lockHint: "Pass Advanced Finals I, II, and III (70%+) to unlock",
+        passKey: "pinnacle300Passed"
       }
     };
+
+    const DASHBOARD_SECTIONS = [
+      { id: "core", title: "Core Modules", hint: "Part 1 · Part 2 · Part 3 — instant feedback on each answer" },
+      { id: "flashcards", title: "Weakness Flashcards", hint: "Auto-generated after each chapter quiz" },
+      { id: "final", title: "Comprehensive Final", hint: "No feedback until the end · unlocks advanced exams" },
+      { id: "advanced", title: "Advanced Finals", hint: "Unlocked after completing the Comprehensive Final" },
+      { id: "pinnacle", title: "Pinnacle Exam", hint: "Unlocked after passing all three advanced finals" }
+    ];
+
+    function getProgress() {
+      try {
+        return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+      } catch {
+        return {};
+      }
+    }
+
+    function saveProgress(updates) {
+      const progress = { ...getProgress(), ...updates };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+      return progress;
+    }
+
+    function isQuizUnlocked(quiz) {
+      if (!quiz.requires) return true;
+      return quiz.requires();
+    }
+
+    function isQuizPassed(quiz) {
+      if (!quiz.passKey) return false;
+      return !!getProgress()[quiz.passKey];
+    }
+
+    function getFlashcardDecks() {
+      try {
+        return JSON.parse(localStorage.getItem(FLASHCARD_KEY) || "{}");
+      } catch {
+        return {};
+      }
+    }
+
+    function saveWeaknessFlashcards(chapterId, missedQuestions) {
+      if (!missedQuestions.length) return;
+      const decks = getFlashcardDecks();
+      const existing = decks[chapterId] || [];
+      const byQuestion = new Map();
+      [...existing, ...missedQuestions].forEach(card => byQuestion.set(card.question, card));
+      decks[chapterId] = shuffle([...byQuestion.values()]);
+      localStorage.setItem(FLASHCARD_KEY, JSON.stringify(decks));
+    }
+
+    function hasImmediateFeedback() {
+      const quiz = QUIZZES[activeQuizId];
+      return !!(quiz && quiz.immediateFeedback);
+    }
+
+    function isQuestionAnswered(index) {
+      return answers[index] !== undefined;
+    }
 
     /* ═══════════════════════════════════════════════════════════
        APP STATE & VIEWS
@@ -1209,10 +1658,14 @@
     let shuffledQuestions = [];
     let currentIndex = 0;
     let answers = {};
+    let activeFlashcardChapter = null;
+    let fcDeck = [];
+    let fcIndex = 0;
 
     const views = {
       dashboard: document.getElementById("view-dashboard"),
       quiz: document.getElementById("view-quiz"),
+      flashcard: document.getElementById("view-flashcard"),
       results: document.getElementById("view-results")
     };
 
@@ -1237,19 +1690,115 @@
       });
     }
 
-    function renderDashboard() {
-      const grid = document.getElementById("quiz-grid");
-      grid.innerHTML = Object.values(QUIZZES).map(q => `
-        <div class="quiz-card${q.final ? " final" : ""}" tabindex="0" role="button"
-             aria-label="Start ${q.title}" data-quiz="${q.id}">
-          <div class="quiz-card-icon">${q.icon}</div>
-          <h3>${q.title}</h3>
-          <p class="subtitle">${q.subtitle}<br>${q.description}</p>
-          <span class="meta">${q.meta}</span>
-        </div>
-      `).join("");
+    let pendingUnlockMessage = null;
 
-      grid.querySelectorAll(".quiz-card").forEach(card => {
+    function renderDashboard() {
+      const container = document.getElementById("dashboard-sections");
+      const progress = getProgress();
+      const flashcardDecks = getFlashcardDecks();
+
+      container.innerHTML = DASHBOARD_SECTIONS.map(section => {
+        if (section.id === "flashcards") {
+          const decks = CHAPTER_IDS
+            .map(id => ({ id, cards: flashcardDecks[id] || [] }))
+            .filter(d => d.cards.length > 0);
+
+          if (!decks.length) {
+            return `
+              <div class="dashboard-section">
+                <div class="section-header">
+                  <h3>${section.title}</h3>
+                  <span class="section-hint">${section.hint}</span>
+                </div>
+                <p style="font-size:0.88rem;color:var(--gray-500);margin:0;">Complete a chapter quiz to auto-generate flashcards from questions you missed.</p>
+              </div>`;
+          }
+
+          const cards = decks.map(d => {
+            const meta = CHAPTER_META[d.id];
+            return `
+              <div class="quiz-card flashcards" tabindex="0" role="button"
+                   aria-label="Study ${meta.title}" data-flashcards="${d.id}">
+                <div class="quiz-card-icon">FC</div>
+                <h3>${meta.title}</h3>
+                <p class="subtitle">${meta.subtitle}</p>
+                <span class="meta">${d.cards.length} Cards</span>
+              </div>`;
+          }).join("");
+
+          return `
+            <div class="dashboard-section">
+              <div class="section-header">
+                <h3>${section.title}</h3>
+                <span class="section-hint">${section.hint}</span>
+              </div>
+              <div class="quiz-grid">${cards}</div>
+            </div>`;
+        }
+
+        const quizzes = Object.values(QUIZZES).filter(q => q.section === section.id);
+        const cards = quizzes.map(q => {
+          const unlocked = isQuizUnlocked(q);
+          const passed = isQuizPassed(q);
+          const cardClass = q.cardClass || "";
+          const lockBadge = !unlocked
+            ? `<span class="lock-badge">🔒 ${q.lockHint || "Locked"}</span>`
+            : passed
+              ? `<span class="lock-badge" style="background:var(--correct-bg);color:var(--correct);">✓ Passed</span>`
+              : "";
+
+          return `
+            <div class="quiz-card ${cardClass}${unlocked ? "" : " locked"}"
+                 ${unlocked ? `tabindex="0" role="button" aria-label="Start ${q.title}" data-quiz="${q.id}"` : `aria-disabled="true"`}>
+              <div class="quiz-card-icon">${q.icon}</div>
+              <h3>${q.title}</h3>
+              <p class="subtitle">${q.subtitle}<br>${q.description}</p>
+              <span class="meta">${q.meta}</span>
+              ${lockBadge}
+            </div>`;
+        }).join("");
+
+        return `
+          <div class="dashboard-section">
+            <div class="section-header">
+              <h3>${section.title}</h3>
+              <span class="section-hint">${section.hint}</span>
+            </div>
+            <div class="quiz-grid">${cards}</div>
+          </div>`;
+      }).join("");
+
+      const banner = document.getElementById("progress-banner");
+      const advancedPassed = [progress.final100Passed, progress.final150Passed, progress.final200Passed].filter(Boolean).length;
+      if (progress.pinnacle300Passed) {
+        banner.hidden = false;
+        banner.innerHTML = "<strong>Pinnacle achieved!</strong> You passed the 300-question mastery examination.";
+      } else if (progress.finalCompleted) {
+        banner.hidden = false;
+        banner.innerHTML = `<strong>Advanced track unlocked.</strong> ${advancedPassed}/3 advanced finals passed at 70%+. Pass all three to unlock the Pinnacle Exam.`;
+      } else {
+        banner.hidden = false;
+        banner.innerHTML = "<strong>Progress:</strong> Complete the Comprehensive Final Exam to unlock the 100, 150, and 200 question advanced finals.";
+      }
+
+      const toast = document.getElementById("unlock-toast");
+      if (pendingUnlockMessage) {
+        toast.hidden = false;
+        toast.textContent = pendingUnlockMessage;
+        pendingUnlockMessage = null;
+      } else {
+        toast.hidden = true;
+      }
+
+      container.querySelectorAll(".quiz-card:not(.locked)").forEach(card => {
+        if (card.dataset.flashcards) {
+          const open = () => startFlashcards(card.dataset.flashcards);
+          card.addEventListener("click", open);
+          card.addEventListener("keydown", e => {
+            if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(); }
+          });
+          return;
+        }
         const start = () => startQuiz(card.dataset.quiz);
         card.addEventListener("click", start);
         card.addEventListener("keydown", e => {
@@ -1261,9 +1810,39 @@
       });
     }
 
+    function startFlashcards(chapterId) {
+      const deck = getFlashcardDecks()[chapterId];
+      if (!deck || !deck.length) return;
+      activeFlashcardChapter = chapterId;
+      fcDeck = shuffle(deck.slice());
+      fcIndex = 0;
+      document.getElementById("fc-title").textContent = CHAPTER_META[chapterId].title;
+      showView("flashcard");
+      renderFlashcard();
+    }
+
+    function renderFlashcard() {
+      const card = fcDeck[fcIndex];
+      document.getElementById("fc-topic").textContent = card.topic;
+      document.getElementById("fc-topic-back").textContent = card.topic;
+      document.getElementById("fc-question").textContent = card.question;
+      document.getElementById("fc-answer").textContent = card.answer;
+      document.getElementById("fc-mechanism").textContent = card.explanation;
+      document.getElementById("fc-counter").textContent = `${fcIndex + 1} / ${fcDeck.length}`;
+      document.getElementById("flashcard").classList.remove("flipped");
+      document.getElementById("fc-prev").disabled = fcIndex === 0;
+      document.getElementById("fc-next").disabled = fcIndex === fcDeck.length - 1;
+    }
+
+    function flipFlashcard() {
+      document.getElementById("flashcard").classList.toggle("flipped");
+    }
+
     function startQuiz(quizId) {
-      activeQuizId = quizId;
       const quiz = QUIZZES[quizId];
+      if (!quiz || !isQuizUnlocked(quiz)) return;
+
+      activeQuizId = quizId;
       shuffledQuestions = prepareQuestions(quiz.questions);
       currentIndex = 0;
       answers = {};
@@ -1276,32 +1855,56 @@
       const q = shuffledQuestions[currentIndex];
       const total = shuffledQuestions.length;
       const selected = answers[currentIndex];
+      const revealed = hasImmediateFeedback() && isQuestionAnswered(currentIndex);
+      const isCorrect = revealed && selected === q.correct;
 
       document.getElementById("progress-fill").style.width = `${((currentIndex + 1) / total) * 100}%`;
       document.getElementById("progress-label").textContent = `${currentIndex + 1} / ${total}`;
 
       const optionsHtml = q.options.map((opt, i) => {
-        const sel = selected === i ? " selected" : "";
-        return `<button type="button" class="answer-btn${sel}" data-index="${i}">
+        let cls = "answer-btn";
+        if (revealed) {
+          if (i === q.correct) cls += " is-correct";
+          else if (i === selected) cls += " is-incorrect";
+        } else if (selected === i) {
+          cls += " selected";
+        }
+        const disabled = revealed ? " disabled" : "";
+        return `<button type="button" class="${cls}" data-index="${i}"${disabled}>
           <span class="letter">${LETTERS[i]}</span>${opt}
         </button>`;
       }).join("");
 
+      const feedbackHtml = revealed ? `
+        <div class="instant-feedback ${isCorrect ? "correct" : "incorrect"}" role="status">
+          <p class="instant-feedback-label">${isCorrect ? "Correct" : "Incorrect"}</p>
+          <p class="instant-feedback-text"><strong>Explanation:</strong> ${q.explanation}</p>
+        </div>` : "";
+
       document.getElementById("question-card").innerHTML = `
         <span class="topic-badge">${q.topic}</span>
         <p class="question-text">${currentIndex + 1}. ${q.question}</p>
-        <div class="answer-grid" role="radiogroup" aria-label="Answer choices">${optionsHtml}</div>`;
+        <div class="answer-grid" role="radiogroup" aria-label="Answer choices">${optionsHtml}</div>
+        ${feedbackHtml}`;
 
-      document.getElementById("question-card").querySelectorAll(".answer-btn").forEach(btn => {
-        btn.addEventListener("click", () => {
-          const idx = parseInt(btn.dataset.index, 10);
-          answers[currentIndex] = idx;
-          document.querySelectorAll(".answer-btn").forEach(b => b.classList.remove("selected"));
-          btn.classList.add("selected");
+      if (!revealed) {
+        document.getElementById("question-card").querySelectorAll(".answer-btn").forEach(btn => {
+          btn.addEventListener("click", () => {
+            const idx = parseInt(btn.dataset.index, 10);
+            answers[currentIndex] = idx;
+            if (hasImmediateFeedback()) {
+              renderQuestion();
+            } else {
+              document.querySelectorAll(".answer-btn").forEach(b => b.classList.remove("selected"));
+              btn.classList.add("selected");
+            }
+          });
         });
-      });
+      }
 
       document.getElementById("btn-prev").disabled = currentIndex === 0;
+      const needsAnswer = hasImmediateFeedback() && !isQuestionAnswered(currentIndex);
+      document.getElementById("btn-next").disabled = needsAnswer;
       document.getElementById("btn-next").textContent =
         currentIndex === total - 1 ? "Submit Quiz" : "Next";
     }
@@ -1346,24 +1949,72 @@
       document.getElementById("score-pct").textContent = `${pct}%`;
       document.getElementById("score-fraction").textContent = `${correct} / ${total} correct`;
 
+      const quiz = QUIZZES[activeQuizId];
+      const passed = pct >= PASS_THRESHOLD;
+
+      if (quiz && CHAPTER_IDS.includes(activeQuizId)) {
+        const missed = shuffledQuestions
+          .filter((q, i) => answers[i] !== q.correct)
+          .map(q => ({
+            topic: q.topic,
+            question: q.question,
+            answer: q.options[q.correct],
+            explanation: q.explanation
+          }));
+        if (missed.length) {
+          saveWeaknessFlashcards(activeQuizId, missed);
+          pendingUnlockMessage = `${missed.length} weakness flashcard${missed.length > 1 ? "s" : ""} added to ${CHAPTER_META[activeQuizId].title}.`;
+        }
+      }
+
+      if (quiz) {
+        const updates = {};
+        if (quiz.id === "final") {
+          updates.finalCompleted = true;
+          if (!getProgress().finalCompleted) {
+            pendingUnlockMessage = "Advanced Finals unlocked! Three new exams (100, 150, and 200 questions) are now available.";
+          }
+        }
+        if (quiz.passKey && passed) {
+          updates[quiz.passKey] = true;
+          if (quiz.id === "pinnacle300") {
+            pendingUnlockMessage = "Pinnacle Examination passed — full MCB80x mastery achieved!";
+          } else if (quiz.id.startsWith("final") && quiz.id !== "final") {
+            const p = { ...getProgress(), ...updates };
+            if (p.final100Passed && p.final150Passed && p.final200Passed && !getProgress().pinnacle300Passed) {
+              pendingUnlockMessage = "All three Advanced Finals passed! The 300-question Pinnacle Examination is now unlocked.";
+            }
+          }
+        }
+        if (Object.keys(updates).length) saveProgress(updates);
+      }
+
       let message;
-      if (pct >= 90) message = "Excellent — strong mastery of this module's core mechanisms.";
-      else if (pct >= 75) message = "Good work. Review the missed explanations below.";
-      else if (pct >= 60) message = "Fair result. Revisit the curriculum sections for missed topics.";
+      if (passed && pct >= 90) message = "Excellent — strong mastery at proctored-exam rigor.";
+      else if (passed) message = `Passed (${PASS_THRESHOLD}% required). Review missed explanations below.`;
+      else if (pct >= 75) message = `Below passing threshold (${PASS_THRESHOLD}%). Review explanations and retake.`;
+      else if (pct >= 60) message = "Fair result. Revisit curriculum sections for missed mechanisms.";
       else message = "Keep studying — use the review below to target weak areas.";
 
       document.getElementById("results-message").textContent = message;
       showView("results");
     }
 
-    document.getElementById("btn-back").addEventListener("click", () => showView("dashboard"));
-    document.getElementById("btn-dashboard").addEventListener("click", () => showView("dashboard"));
+    document.getElementById("btn-back").addEventListener("click", () => {
+      renderDashboard();
+      showView("dashboard");
+    });
+    document.getElementById("btn-dashboard").addEventListener("click", () => {
+      renderDashboard();
+      showView("dashboard");
+    });
 
     document.getElementById("btn-prev").addEventListener("click", () => {
       if (currentIndex > 0) { currentIndex--; renderQuestion(); }
     });
 
     document.getElementById("btn-next").addEventListener("click", () => {
+      if (hasImmediateFeedback() && !isQuestionAnswered(currentIndex)) return;
       if (currentIndex < shuffledQuestions.length - 1) {
         currentIndex++;
         renderQuestion();
@@ -1374,6 +2025,24 @@
 
     document.getElementById("btn-retake").addEventListener("click", () => {
       if (activeQuizId) startQuiz(activeQuizId);
+    });
+
+    document.getElementById("fc-back").addEventListener("click", () => {
+      renderDashboard();
+      showView("dashboard");
+    });
+
+    document.getElementById("flashcard").addEventListener("click", flipFlashcard);
+    document.getElementById("flashcard").addEventListener("keydown", e => {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); flipFlashcard(); }
+    });
+
+    document.getElementById("fc-prev").addEventListener("click", () => {
+      if (fcIndex > 0) { fcIndex--; renderFlashcard(); }
+    });
+
+    document.getElementById("fc-next").addEventListener("click", () => {
+      if (fcIndex < fcDeck.length - 1) { fcIndex++; renderFlashcard(); }
     });
 
     renderDashboard();
