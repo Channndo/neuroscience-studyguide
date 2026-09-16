@@ -74,11 +74,38 @@
     }
 
     header p {
-      margin: 0;
+      margin: 0 0 1rem;
       color: var(--gray-400);
       font-size: 0.92rem;
       max-width: 580px;
       margin-inline: auto;
+    }
+
+    .main-nav {
+      display: inline-flex;
+      gap: 4px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      padding: 4px;
+    }
+
+    .nav-tab {
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 0.5rem 1.25rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.7);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .nav-tab:hover { color: #fff; background: rgba(255, 255, 255, 0.1); }
+    .nav-tab.active {
+      background: #fff;
+      color: var(--gray-800);
     }
 
     main {
@@ -803,8 +830,238 @@
       .nav-row button { width: 100%; }
     }
 
+    /* ── Profile ── */
+    .profile-hero {
+      background: var(--surface);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      padding: 2rem 1.75rem;
+      margin-bottom: 1.5rem;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1.75rem;
+      align-items: center;
+    }
+
+    @media (max-width: 560px) {
+      .profile-hero { grid-template-columns: 1fr; text-align: center; justify-items: center; }
+    }
+
+    .readiness-ring-wrap {
+      position: relative;
+      width: 130px;
+      height: 130px;
+      flex-shrink: 0;
+    }
+
+    .readiness-ring-wrap svg {
+      width: 100%;
+      height: 100%;
+      transform: rotate(-90deg);
+    }
+
+    .readiness-ring-wrap circle { fill: none; stroke-width: 9; }
+    .readiness-ring-wrap .ring-track { stroke: var(--gray-200); }
+    .readiness-ring-wrap .ring-value {
+      stroke: var(--crimson);
+      stroke-linecap: round;
+      transition: stroke-dashoffset 0.6s ease;
+    }
+
+    .readiness-ring-text {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .readiness-score {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--crimson);
+      line-height: 1;
+    }
+
+    .readiness-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--gray-500);
+      margin-top: 0.15rem;
+    }
+
+    .profile-title {
+      margin: 0 0 0.35rem;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--gray-900);
+    }
+
+    .profile-tier {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      background: var(--crimson-light);
+      color: var(--crimson);
+      margin-bottom: 0.65rem;
+    }
+
+    .profile-summary {
+      margin: 0;
+      font-size: 0.92rem;
+      color: var(--gray-600);
+      line-height: 1.55;
+    }
+
+    .confidence-badge {
+      font-size: 0.75rem;
+      color: var(--gray-500);
+      margin-top: 0.5rem;
+    }
+
+    .profile-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .profile-card {
+      background: var(--surface);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.35rem 1.25rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .profile-card h3 {
+      margin: 0 0 1rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--gray-600);
+    }
+
+    .module-row {
+      margin-bottom: 1rem;
+    }
+
+    .module-row:last-child { margin-bottom: 0; }
+
+    .module-row-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+      color: var(--gray-800);
+    }
+
+    .module-bar {
+      height: 8px;
+      background: var(--gray-200);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+
+    .module-bar-fill {
+      height: 100%;
+      border-radius: 99px;
+      background: var(--crimson);
+      transition: width 0.5s ease;
+    }
+
+    .module-bar-fill.strong { background: var(--correct); }
+    .module-bar-fill.weak { background: #d97706; }
+
+    .topic-list { list-style: none; margin: 0; padding: 0; }
+
+    .topic-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.55rem 0;
+      border-bottom: 1px solid var(--gray-100);
+      font-size: 0.88rem;
+    }
+
+    .topic-list li:last-child { border-bottom: none; }
+
+    .topic-name { color: var(--gray-800); font-weight: 500; flex: 1; }
+    .topic-pct {
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      min-width: 3rem;
+      text-align: right;
+    }
+
+    .topic-pct.strong { color: var(--correct); }
+    .topic-pct.weak { color: var(--incorrect); }
+
+    .topic-meta {
+      font-size: 0.72rem;
+      color: var(--gray-400);
+      display: block;
+    }
+
+    .score-breakdown {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .breakdown-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.5rem;
+      font-size: 0.84rem;
+      align-items: center;
+    }
+
+    .breakdown-row span:first-child { color: var(--gray-600); }
+    .breakdown-row span:last-child { font-weight: 700; color: var(--gray-900); }
+
+    .attempts-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+    }
+
+    .attempts-table th {
+      text-align: left;
+      padding: 0.5rem 0.4rem;
+      color: var(--gray-500);
+      font-weight: 600;
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .attempts-table td {
+      padding: 0.55rem 0.4rem;
+      border-bottom: 1px solid var(--gray-100);
+      color: var(--gray-700);
+    }
+
+    .attempts-table tr:last-child td { border-bottom: none; }
+
+    .profile-empty {
+      text-align: center;
+      padding: 3rem 1.5rem;
+      color: var(--gray-500);
+      font-size: 0.95rem;
+    }
+
     @media (prefers-reduced-motion: reduce) {
-      .progress-fill, .quiz-card, .flashcard { transition: none; }
+      .progress-fill, .quiz-card, .flashcard, .module-bar-fill, .ring-value { transition: none; }
     }
   </style>
 </head>
@@ -814,6 +1071,10 @@
   <header>
     <h1>HarvardX Introduction to Neuroscience</h1>
     <p>MCB80x Practice Quiz Suite &mdash; Electrical Properties &middot; Neurons &amp; Networks &middot; The Brain</p>
+    <nav class="main-nav" aria-label="Main">
+      <button type="button" class="nav-tab active" data-nav="dashboard" id="nav-dashboard">Dashboard</button>
+      <button type="button" class="nav-tab" data-nav="profile" id="nav-profile">Profile &amp; Readiness</button>
+    </nav>
   </header>
 
   <main id="app-main">
@@ -826,6 +1087,11 @@
       <div id="progress-banner" class="progress-banner" hidden></div>
       <div id="unlock-toast" class="unlock-toast" hidden></div>
       <div id="dashboard-sections"></div>
+    </section>
+
+    <!-- Profile -->
+    <section id="view-profile" class="view">
+      <div id="profile-content"></div>
     </section>
 
     <!-- Quiz -->
@@ -1472,7 +1738,37 @@
     const PASS_THRESHOLD = 70;
     const STORAGE_KEY = "mcb80x_progress";
     const FLASHCARD_KEY = "mcb80x_flashcards";
+    const ANALYTICS_KEY = "mcb80x_analytics";
     const CHAPTER_IDS = ["part1", "part2", "part3"];
+
+    const MODULE_LABELS = {
+      part1: "Part 1 · Electrical Properties",
+      part2: "Part 2 · Neurons & Networks",
+      part3: "Part 3 · The Brain"
+    };
+
+    const EXAM_QUIZ_IDS = ["final", "final100", "final150", "final200", "pinnacle300"];
+
+    const QUIZ_EXAM_WEIGHT = {
+      part1: 0.5,
+      part2: 0.5,
+      part3: 0.5,
+      final: 1.0,
+      final100: 1.15,
+      final150: 1.3,
+      final200: 1.45,
+      pinnacle300: 1.6
+    };
+
+    const PART1_TOPIC_HINTS = new Set([
+      "Resting Potential", "Nernst Equation", "Passive Membrane Properties",
+      "Action Potentials", "Action Potential Propagation", "Electrical Signaling"
+    ]);
+
+    const PART2_TOPIC_HINTS = new Set([
+      "Chemical Synapses", "Synaptic Transmission", "Receptor Types", "Second Messengers",
+      "Synaptic Integration", "Neuromodulation", "Neural Circuits", "Electrical Synapses"
+    ]);
 
     const CHAPTER_META = {
       part1: { title: "Part 1 Flashcards", subtitle: "Electrical Properties — your missed topics" },
@@ -1641,6 +1937,339 @@
       localStorage.setItem(FLASHCARD_KEY, JSON.stringify(decks));
     }
 
+    function getAnalytics() {
+      try {
+        const raw = JSON.parse(localStorage.getItem(ANALYTICS_KEY) || "null");
+        if (raw && raw.version === 1) return raw;
+      } catch { /* ignore */ }
+      return {
+        version: 1,
+        attempts: [],
+        topicStats: {},
+        moduleStats: { part1: { correct: 0, total: 0 }, part2: { correct: 0, total: 0 }, part3: { correct: 0, total: 0 } },
+        totalQuestionsAnswered: 0,
+        firstActivityTs: null,
+        lastActivityTs: null
+      };
+    }
+
+    function saveAnalytics(data) {
+      localStorage.setItem(ANALYTICS_KEY, JSON.stringify(data));
+    }
+
+    function questionModule(q, quizId) {
+      if (CHAPTER_IDS.includes(quizId)) return quizId;
+      if (PART1.some(p => p.question === q.question)) return "part1";
+      if (PART2.some(p => p.question === q.question)) return "part2";
+      if (PART3.some(p => p.question === q.question)) return "part3";
+      if (PART1_TOPIC_HINTS.has(q.topic)) return "part1";
+      if (PART2_TOPIC_HINTS.has(q.topic)) return "part2";
+      return "part3";
+    }
+
+    function recordQuizAttempt(quizId, questions, answerMap, pct, passed) {
+      const quiz = QUIZZES[quizId];
+      if (!quiz) return;
+      const data = getAnalytics();
+      const ts = Date.now();
+      const total = questions.length;
+      let correct = 0;
+
+      questions.forEach((q, i) => {
+        const isCorrect = answerMap[i] === q.correct;
+        if (isCorrect) correct++;
+        const mod = questionModule(q, quizId);
+        const topic = q.topic || "General";
+
+        if (!data.moduleStats[mod]) data.moduleStats[mod] = { correct: 0, total: 0 };
+        data.moduleStats[mod].total++;
+        if (isCorrect) data.moduleStats[mod].correct++;
+
+        if (!data.topicStats[topic]) {
+          data.topicStats[topic] = { module: mod, correct: 0, total: 0, lastTs: ts };
+        }
+        data.topicStats[topic].total++;
+        if (isCorrect) data.topicStats[topic].correct++;
+        data.topicStats[topic].lastTs = ts;
+      });
+
+      data.attempts.unshift({
+        quizId,
+        title: quiz.title,
+        ts,
+        total,
+        correct,
+        pct,
+        passed,
+        weight: QUIZ_EXAM_WEIGHT[quizId] || 0.5
+      });
+      if (data.attempts.length > 40) data.attempts.length = 40;
+
+      data.totalQuestionsAnswered = (data.totalQuestionsAnswered || 0) + total;
+      if (!data.firstActivityTs) data.firstActivityTs = ts;
+      data.lastActivityTs = ts;
+      saveAnalytics(data);
+    }
+
+    function readinessTier(score) {
+      if (score === null) return { label: "Not enough data", class: "" };
+      if (score >= 93) return { label: "Highly prepared", class: "strong" };
+      if (score >= 85) return { label: "Exam ready", class: "strong" };
+      if (score >= 70) return { label: "Approaching readiness", class: "" };
+      if (score >= 50) return { label: "Developing", class: "weak" };
+      return { label: "Not yet ready", class: "weak" };
+    }
+
+    function computeExamReadiness(data) {
+      const totalQ = data.totalQuestionsAnswered || 0;
+      if (totalQ < 10) {
+        return {
+          score: null,
+          confidence: "low",
+          message: "Complete at least one chapter quiz (10+ questions) to generate a readiness estimate.",
+          breakdown: null
+        };
+      }
+
+      const modules = CHAPTER_IDS;
+      let moduleAccSum = 0;
+      let moduleParts = 0;
+      let fullCoverage = 0;
+
+      modules.forEach(m => {
+        const s = data.moduleStats[m];
+        if (!s || !s.total) return;
+        const acc = s.correct / s.total;
+        const partWeight = Math.min(1, s.total / 8);
+        moduleAccSum += acc * 100 * partWeight;
+        moduleParts += partWeight;
+        if (s.total >= 5) fullCoverage++;
+      });
+
+      const moduleMastery = moduleParts ? moduleAccSum / moduleParts : 0;
+      const coverageFactor = fullCoverage / 3;
+
+      const examAttempts = data.attempts.filter(a => EXAM_QUIZ_IDS.includes(a.quizId));
+      const noFinalTaken = !examAttempts.length;
+      let examPerformance = moduleMastery;
+
+      if (examAttempts.length) {
+        const bestByQuiz = {};
+        examAttempts.forEach(a => {
+          if (!bestByQuiz[a.quizId] || a.pct > bestByQuiz[a.quizId].pct) {
+            bestByQuiz[a.quizId] = a;
+          }
+        });
+        let weightedSum = 0;
+        let weightTotal = 0;
+        Object.values(bestByQuiz).forEach(a => {
+          const w = QUIZ_EXAM_WEIGHT[a.quizId] || 1;
+          weightedSum += a.pct * w;
+          weightTotal += w;
+        });
+        examPerformance = weightTotal ? weightedSum / weightTotal : moduleMastery;
+      } else {
+        examPerformance = moduleMastery * 0.88;
+      }
+
+      const topicEntries = Object.entries(data.topicStats).filter(([, s]) => s.total >= 1);
+      let topicConsistency = 75;
+      if (topicEntries.length >= 4) {
+        const accs = topicEntries.map(([, s]) => s.correct / s.total);
+        const mean = accs.reduce((a, b) => a + b, 0) / accs.length;
+        const variance = accs.reduce((sum, a) => sum + (a - mean) ** 2, 0) / accs.length;
+        const std = Math.sqrt(variance);
+        topicConsistency = Math.max(0, Math.min(100, (1 - std * 1.35) * 100));
+      }
+
+      const daysSince = (Date.now() - (data.lastActivityTs || Date.now())) / 86400000;
+      let recency = 100;
+      if (daysSince > 21) recency = 55;
+      else if (daysSince > 14) recency = 70;
+      else if (daysSince > 7) recency = 85;
+      else if (daysSince > 3) recency = 95;
+
+      const moduleComponent = moduleMastery * (0.55 + 0.45 * coverageFactor);
+      let examComponent = examPerformance;
+      if (noFinalTaken) examComponent *= 0.92;
+
+      let score =
+        0.40 * moduleComponent +
+        0.35 * examComponent +
+        0.15 * topicConsistency +
+        0.10 * recency;
+
+      if (noFinalTaken) score = Math.min(score, 78);
+
+      score = Math.round(Math.max(0, Math.min(100, score)));
+
+      let confidence = "low";
+      if (totalQ >= 45 && examAttempts.length >= 1) confidence = "high";
+      else if (totalQ >= 20) confidence = "medium";
+
+      return {
+        score,
+        confidence,
+        noFinalTaken,
+        breakdown: {
+          moduleComponent: Math.round(moduleComponent),
+          examComponent: Math.round(examComponent),
+          topicConsistency: Math.round(topicConsistency),
+          recency: Math.round(recency),
+          coverageFactor: Math.round(coverageFactor * 100),
+          moduleMastery: Math.round(moduleMastery)
+        },
+        message: noFinalTaken
+          ? "Score is capped until you complete at least one high-stakes exam (Comprehensive Final or Advanced). Module practice is weighted heavily until then."
+          : "Blended from module mastery (40%), best exam performance (35%), topic consistency (15%), and study recency (10%)."
+      };
+    }
+
+    function getTopicRankings(data, limit = 6) {
+      const entries = Object.entries(data.topicStats || {})
+        .filter(([, s]) => s.total >= 2)
+        .map(([name, s]) => ({
+          name,
+          module: s.module,
+          pct: Math.round((s.correct / s.total) * 100),
+          total: s.total
+        }))
+        .sort((a, b) => b.pct - a.pct || b.total - a.total);
+
+      const strengths = entries.filter(e => e.pct >= 70).slice(0, limit);
+      const weaknesses = [...entries].reverse().filter(e => e.pct < 70).slice(0, limit);
+      return { strengths, weaknesses, all: entries };
+    }
+
+    function renderProfile() {
+      const el = document.getElementById("profile-content");
+      const data = getAnalytics();
+      const readiness = computeExamReadiness(data);
+      const topics = getTopicRankings(data);
+      const flashDecks = getFlashcardDecks();
+      const flashCount = CHAPTER_IDS.reduce((n, id) => n + (flashDecks[id]?.length || 0), 0);
+
+      if (!data.totalQuestionsAnswered) {
+        el.innerHTML = `
+          <div class="profile-empty">
+            <p><strong>No performance data yet.</strong></p>
+            <p>Complete a Part 1, 2, or 3 quiz to build your profile, topic strengths/weaknesses, and exam readiness score.</p>
+          </div>`;
+        return;
+      }
+
+      const tier = readinessTier(readiness.score);
+      const circumference = 2 * Math.PI * 52;
+      const offset = readiness.score === null
+        ? circumference
+        : circumference - (readiness.score / 100) * circumference;
+
+      const moduleRows = CHAPTER_IDS.map(m => {
+        const s = data.moduleStats[m] || { correct: 0, total: 0 };
+        const pct = s.total ? Math.round((s.correct / s.total) * 100) : 0;
+        const barClass = pct >= 75 ? "strong" : pct < 60 && s.total ? "weak" : "";
+        return `
+          <div class="module-row">
+            <div class="module-row-header">
+              <span>${MODULE_LABELS[m]}</span>
+              <span>${s.total ? `${pct}% · ${s.correct}/${s.total}` : "No data"}</span>
+            </div>
+            <div class="module-bar">
+              <div class="module-bar-fill ${barClass}" style="width:${pct}%"></div>
+            </div>
+          </div>`;
+      }).join("");
+
+      const strengthList = topics.strengths.length
+        ? topics.strengths.map(t => `
+            <li>
+              <span class="topic-name">${t.name}<span class="topic-meta">${MODULE_LABELS[t.module] || t.module} · ${t.total} Q</span></span>
+              <span class="topic-pct strong">${t.pct}%</span>
+            </li>`).join("")
+        : '<li><span class="topic-name">Keep practicing — need 2+ questions per topic</span></li>';
+
+      const weaknessList = topics.weaknesses.length
+        ? topics.weaknesses.map(t => `
+            <li>
+              <span class="topic-name">${t.name}<span class="topic-meta">${MODULE_LABELS[t.module] || t.module} · ${t.total} Q</span></span>
+              <span class="topic-pct weak">${t.pct}%</span>
+            </li>`).join("")
+        : '<li><span class="topic-name">No weak topics flagged (below 70% with 2+ attempts)</span></li>';
+
+      const breakdownHtml = readiness.breakdown ? `
+        <div class="score-breakdown">
+          <div class="breakdown-row"><span>Module mastery (${readiness.breakdown.coverageFactor}% curriculum coverage)</span><span>${readiness.breakdown.moduleMastery}%</span></div>
+          <div class="breakdown-row"><span>High-stakes exam performance</span><span>${readiness.breakdown.examComponent}%</span></div>
+          <div class="breakdown-row"><span>Topic consistency</span><span>${readiness.breakdown.topicConsistency}%</span></div>
+          <div class="breakdown-row"><span>Study recency</span><span>${readiness.breakdown.recency}%</span></div>
+        </div>` : "";
+
+      const attemptsHtml = data.attempts.slice(0, 8).map(a => {
+        const date = new Date(a.ts).toLocaleDateString(undefined, { month: "short", day: "numeric" });
+        return `<tr><td>${date}</td><td>${a.title}</td><td>${a.pct}%</td><td>${a.passed ? "Pass" : "—"}</td></tr>`;
+      }).join("");
+
+      el.innerHTML = `
+        <div class="profile-hero">
+          <div class="readiness-ring-wrap" aria-hidden="true">
+            <svg viewBox="0 0 120 120">
+              <circle class="ring-track" cx="60" cy="60" r="52"/>
+              <circle class="ring-value" cx="60" cy="60" r="52"
+                stroke-dasharray="${circumference}" stroke-dashoffset="${offset}"/>
+            </svg>
+            <div class="readiness-ring-text">
+              <span class="readiness-score">${readiness.score !== null ? readiness.score : "—"}</span>
+              <span class="readiness-label">Readiness</span>
+            </div>
+          </div>
+          <div>
+            <h2 class="profile-title">Your Study Profile</h2>
+            <span class="profile-tier">${tier.label}</span>
+            <p class="profile-summary">${readiness.message}</p>
+            <p class="confidence-badge">Confidence: ${readiness.confidence} · ${data.totalQuestionsAnswered} questions tracked · ${flashCount} weakness flashcards</p>
+          </div>
+        </div>
+
+        <div class="profile-grid">
+          <div class="profile-card">
+            <h3>Module Performance</h3>
+            ${moduleRows}
+          </div>
+          <div class="profile-card">
+            <h3>Score Breakdown</h3>
+            ${breakdownHtml}
+            <p style="font-size:0.78rem;color:var(--gray-500);margin:1rem 0 0;line-height:1.45;">
+              Passing threshold on exams: ${PASS_THRESHOLD}%. Readiness aligns with MCB80x proctored exam standards when high-stakes attempts are included.
+            </p>
+          </div>
+        </div>
+
+        <div class="profile-grid">
+          <div class="profile-card">
+            <h3>Strengths</h3>
+            <ul class="topic-list">${strengthList}</ul>
+          </div>
+          <div class="profile-card">
+            <h3>Areas to Improve</h3>
+            <ul class="topic-list">${weaknessList}</ul>
+          </div>
+        </div>
+
+        <div class="profile-card">
+          <h3>Recent Quiz Attempts</h3>
+          <table class="attempts-table">
+            <thead><tr><th>Date</th><th>Quiz</th><th>Score</th><th>Pass</th></tr></thead>
+            <tbody>${attemptsHtml || "<tr><td colspan=\"4\">No attempts yet</td></tr>"}</tbody>
+          </table>
+        </div>`;
+    }
+
+    function setMainNav(active) {
+      document.querySelectorAll(".nav-tab").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.nav === active);
+      });
+    }
+
     function hasImmediateFeedback() {
       const quiz = QUIZZES[activeQuizId];
       return !!(quiz && quiz.immediateFeedback);
@@ -1664,6 +2293,7 @@
 
     const views = {
       dashboard: document.getElementById("view-dashboard"),
+      profile: document.getElementById("view-profile"),
       quiz: document.getElementById("view-quiz"),
       flashcard: document.getElementById("view-flashcard"),
       results: document.getElementById("view-results")
@@ -1672,6 +2302,10 @@
     function showView(name) {
       Object.values(views).forEach(v => v.classList.remove("active"));
       views[name].classList.add("active");
+      if (name === "dashboard" || name === "profile") {
+        setMainNav(name);
+        if (name === "profile") renderProfile();
+      }
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
@@ -1952,6 +2586,8 @@
       const quiz = QUIZZES[activeQuizId];
       const passed = pct >= PASS_THRESHOLD;
 
+      recordQuizAttempt(activeQuizId, shuffledQuestions, answers, pct, passed);
+
       if (quiz && CHAPTER_IDS.includes(activeQuizId)) {
         const missed = shuffledQuestions
           .filter((q, i) => answers[i] !== q.correct)
@@ -2043,6 +2679,16 @@
 
     document.getElementById("fc-next").addEventListener("click", () => {
       if (fcIndex < fcDeck.length - 1) { fcIndex++; renderFlashcard(); }
+    });
+
+    document.getElementById("nav-dashboard").addEventListener("click", () => {
+      renderDashboard();
+      showView("dashboard");
+    });
+
+    document.getElementById("nav-profile").addEventListener("click", () => {
+      renderProfile();
+      showView("profile");
     });
 
     renderDashboard();
