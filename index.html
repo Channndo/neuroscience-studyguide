@@ -315,6 +315,47 @@
 
     .progress-banner strong { color: var(--crimson); }
 
+    .activity-card {
+      background: var(--surface);
+      border: 2px solid var(--crimson-muted);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem 1.35rem;
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .activity-card h3 {
+      margin: 0 0 0.65rem;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--gray-900);
+    }
+
+    .activity-card p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--gray-600);
+      line-height: 1.5;
+    }
+
+    .activity-card .saved-badge {
+      display: inline-block;
+      margin-top: 0.65rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--correct);
+      background: var(--correct-bg);
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+    }
+
+    .results-saved-note {
+      font-size: 0.88rem;
+      color: var(--correct);
+      font-weight: 600;
+      margin: 0 0 1rem;
+    }
+
     .unlock-toast {
       background: var(--correct-bg);
       border: 1px solid var(--correct-border);
@@ -1084,6 +1125,7 @@
         <h2>Study Dashboard</h2>
         <p>HarvardX MCB80x curriculum practice. Chapter quizzes give instant feedback; finals reveal answers at the end. Missed questions auto-generate flashcards.</p>
       </div>
+      <div id="user-activity-card" class="activity-card"></div>
       <div id="progress-banner" class="progress-banner" hidden></div>
       <div id="unlock-toast" class="unlock-toast" hidden></div>
       <div id="dashboard-sections"></div>
@@ -1147,6 +1189,7 @@
       <div class="results-header">
         <div class="score-display" id="score-pct">0%</div>
         <div class="score-fraction" id="score-fraction">0 / 0</div>
+        <p class="results-saved-note" id="results-saved-note">Progress saved to this browser.</p>
         <p class="results-message" id="results-message"></p>
         <div class="results-actions">
           <button type="button" class="btn-primary" id="btn-retake">Retake Quiz</button>
@@ -1920,22 +1963,71 @@
 
     function getProgress() {
       try {
-        return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+        const primary = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+        if (primary.lastQuiz || primary.finalCompleted) return primary;
+        try {
+          const backup = JSON.parse(sessionStorage.getItem(STORAGE_KEY + "_backup") || "{}");
+          if (backup.lastQuiz) return { ...primary, ...backup };
+        } catch { /* ignore */ }
+        return primary;
       } catch {
         notifyStorageIssue();
         return {};
       }
     }
 
+    function getProgressWithBackup() {
+      return getProgress();
+    }
+
     function saveProgress(updates) {
       try {
         const progress = { ...getProgress(), ...updates };
         localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+        try {
+          sessionStorage.setItem(STORAGE_KEY + "_backup", JSON.stringify(progress));
+        } catch { /* ignore */ }
+        renderUserActivityCard();
         return progress;
       } catch {
         notifyStorageIssue();
         return getProgress();
       }
+    }
+
+    function renderUserActivityCard() {
+      const el = document.getElementById("user-activity-card");
+      if (!el) return;
+      const progress = getProgressWithBackup();
+      const analytics = getAnalytics();
+      const last = progress.lastQuiz;
+
+      if (!storageAvailable()) {
+        el.innerHTML = `
+          <h3>Your progress</h3>
+          <p><strong>Storage is blocked.</strong> Quizzes cannot be remembered in this browser mode. Open the site in a normal window at <strong>https://channndo.github.io/neuroscience-studyguide/</strong> (not a private tab).</p>`;
+        return;
+      }
+
+      if (!last && !analytics.totalQuestionsAnswered) {
+        el.innerHTML = `
+          <h3>Your progress</h3>
+          <p>No completed quizzes yet. Finish a quiz and tap <strong>Submit Quiz</strong> on the last question — your score will appear here and under Profile &amp; Readiness.</p>`;
+        return;
+      }
+
+      const lastText = last
+        ? `Last completed: <strong>${last.title}</strong> — ${last.pct}% (${last.correct}/${last.total}) · ${new Date(last.ts).toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" })}`
+        : "No completed quiz recorded in progress storage.";
+
+      const tracked = analytics.totalQuestionsAnswered
+        ? `${analytics.totalQuestionsAnswered} questions tracked for readiness · ${analytics.attempts?.length || 0} attempts logged`
+        : "Complete a full quiz to build your readiness profile.";
+
+      el.innerHTML = `
+        <h3>Your progress</h3>
+        <p>${lastText}<br>${tracked}</p>
+        <span class="saved-badge">Saved on this device</span>`;
     }
 
     function isQuizUnlocked(quiz) {
@@ -2185,15 +2277,25 @@
       const flashDecks = getFlashcardDecks();
       const flashCount = CHAPTER_IDS.reduce((n, id) => n + (flashDecks[id]?.length || 0), 0);
 
-      const lastFromProgress = getProgress().lastQuiz;
+      const lastFromProgress = getProgressWithBackup().lastQuiz;
 
-      if (!data.totalQuestionsAnswered) {
+      if (!data.totalQuestionsAnswered && !lastFromProgress) {
         el.innerHTML = `
           <div class="profile-empty">
             <p><strong>No performance data yet.</strong></p>
             <p>Finish a quiz with <strong>Submit Quiz</strong> on the last question — progress is saved when the results screen appears.</p>
-            ${lastFromProgress ? `<p>We found a saved last quiz (${lastFromProgress.title}, ${lastFromProgress.pct}%) in progress storage, but detailed analytics are missing — retake once on this browser/URL to rebuild your profile.</p>` : ""}
             ${!storageAvailable() ? "<p><strong>Local storage appears blocked</strong> in this browser session.</p>" : ""}
+          </div>`;
+        return;
+      }
+
+      if (!data.totalQuestionsAnswered && lastFromProgress) {
+        el.innerHTML = `
+          <div class="profile-hero">
+            <div>
+              <h2 class="profile-title">Your Study Profile</h2>
+              <p class="profile-summary">Last quiz saved: <strong>${lastFromProgress.title}</strong> (${lastFromProgress.pct}%). Detailed topic analytics will appear after your next full quiz completes on this same browser URL.</p>
+            </div>
           </div>`;
         return;
       }
@@ -2368,8 +2470,9 @@
 
     function renderDashboard() {
       const container = document.getElementById("dashboard-sections");
-      const progress = getProgress();
+      const progress = getProgressWithBackup();
       const flashcardDecks = getFlashcardDecks();
+      renderUserActivityCard();
 
       container.innerHTML = DASHBOARD_SECTIONS.map(section => {
         if (section.id === "flashcards") {
@@ -2637,8 +2740,6 @@
       const quiz = QUIZZES[activeQuizId];
       const passed = pct >= PASS_THRESHOLD;
 
-      recordQuizAttempt(activeQuizId, shuffledQuestions, answers, pct, passed);
-
       if (quiz) {
         const prev = getProgress();
         const bestKey = `best_${activeQuizId}`;
@@ -2655,6 +2756,12 @@
           [bestKey]: Math.max(prev[bestKey] || 0, pct),
           [`completed_${activeQuizId}`]: true
         });
+      }
+
+      try {
+        recordQuizAttempt(activeQuizId, shuffledQuestions, answers, pct, passed);
+      } catch (err) {
+        console.error("Analytics save failed:", err);
       }
 
       if (quiz && CHAPTER_IDS.includes(activeQuizId)) {
@@ -2702,6 +2809,7 @@
       else message = "Keep studying — use the review below to target weak areas.";
 
       document.getElementById("results-message").textContent = message;
+      renderUserActivityCard();
       showView("results");
     }
 
@@ -2760,6 +2868,7 @@
       showView("profile");
     });
 
+    renderUserActivityCard();
     renderDashboard();
   </script>
 </body>
