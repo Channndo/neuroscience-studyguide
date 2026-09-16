@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="HarvardX">
+  <rect width="32" height="32" fill="none"/>
+  <g transform="translate(16 16)">
+    <!-- Gold descending stroke (behind) -->
+    <rect x="-3.25" y="-14.5" width="6.5" height="29" fill="#C4A035" transform="rotate(45)"/>
+    <!-- Harvard crimson ascending stroke (front) -->
+    <rect x="-3.25" y="-14.5" width="6.5" height="29" fill="#A51C30" transform="rotate(-45)"/>
+  </g>
+</svg>
