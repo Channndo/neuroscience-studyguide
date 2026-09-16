@@ -1206,6 +1206,7 @@
   </footer>
 
   <script src="questions-bank.js"></script>
+  <script src="questions-extra-pools.js"></script>
   <script>
     function shuffle(array) {
       const arr = array.slice();
@@ -1778,6 +1779,88 @@
     const SET_200 = [...SET_150, ...NEW_TIER3];
     const SET_300 = [...SET_200, ...NEW_TIER4];
 
+    const PART1_TOPIC_HINTS = new Set([
+      "Resting Potential", "Nernst Equation", "Passive Membrane Properties",
+      "Action Potentials", "Action Potential Propagation", "Electrical Signaling"
+    ]);
+
+    const PART2_TOPIC_HINTS = new Set([
+      "Chemical Synapses", "Synaptic Transmission", "Receptor Types", "Second Messengers",
+      "Synaptic Integration", "Neuromodulation", "Neural Circuits", "Electrical Synapses"
+    ]);
+
+    function dedupeQuestions(list) {
+      const map = new Map();
+      list.forEach(q => {
+        if (q && q.question && !map.has(q.question)) map.set(q.question, q);
+      });
+      return [...map.values()];
+    }
+
+    function moduleFromQuestion(q) {
+      if (PART1.some(p => p.question === q.question) || PART1_TOPIC_HINTS.has(q.topic)) return "part1";
+      if (PART2.some(p => p.question === q.question) || PART2_TOPIC_HINTS.has(q.topic)) return "part2";
+      return "part3";
+    }
+
+    const MASTER_BANK = dedupeQuestions([
+      ...PART1, ...PART2, ...PART3,
+      ...PART1_VARIANTS, ...PART2_VARIANTS, ...PART3_VARIANTS,
+      ...NEW_TIER1, ...NEW_TIER2, ...NEW_TIER3, ...NEW_TIER4,
+      ...PART1_EXTRA_POOL, ...PART2_EXTRA_POOL, ...PART3_EXTRA_POOL
+    ]);
+
+    const MODULE_POOLS = {
+      part1: dedupeQuestions([
+        ...PART1, ...PART1_VARIANTS, ...PART1_EXTRA_POOL,
+        ...MASTER_BANK.filter(q => moduleFromQuestion(q) === "part1")
+      ]),
+      part2: dedupeQuestions([
+        ...PART2, ...PART2_VARIANTS, ...PART2_EXTRA_POOL,
+        ...MASTER_BANK.filter(q => moduleFromQuestion(q) === "part2")
+      ]),
+      part3: dedupeQuestions([
+        ...PART3, ...PART3_VARIANTS, ...PART3_EXTRA_POOL,
+        ...MASTER_BANK.filter(q => moduleFromQuestion(q) === "part3")
+      ])
+    };
+    MODULE_POOLS.all = dedupeQuestions([
+      ...MODULE_POOLS.part1, ...MODULE_POOLS.part2, ...MODULE_POOLS.part3
+    ]);
+
+    const QUIZ_SAMPLE_SIZES = {
+      part1: 15,
+      part2: 15,
+      part3: 15,
+      final: 45,
+      final100: 100,
+      final150: 150,
+      final200: 200,
+      pinnacle300: 300
+    };
+
+    function sampleFromPool(pool, count) {
+      return shuffle(pool).slice(0, Math.min(count, pool.length));
+    }
+
+    function drawQuizQuestionSet(quizId) {
+      if (quizId === "part1") return sampleFromPool(MODULE_POOLS.part1, 15);
+      if (quizId === "part2") return sampleFromPool(MODULE_POOLS.part2, 15);
+      if (quizId === "part3") return sampleFromPool(MODULE_POOLS.part3, 15);
+      if (quizId === "final") {
+        return shuffle([
+          ...sampleFromPool(MODULE_POOLS.part1, 15),
+          ...sampleFromPool(MODULE_POOLS.part2, 15),
+          ...sampleFromPool(MODULE_POOLS.part3, 15)
+        ]);
+      }
+      if (quizId === "final100") return sampleFromPool(MODULE_POOLS.all, 100);
+      if (quizId === "final150") return sampleFromPool(MODULE_POOLS.all, 150);
+      if (quizId === "final200") return sampleFromPool(MODULE_POOLS.all, 200);
+      if (quizId === "pinnacle300") return sampleFromPool(MODULE_POOLS.all, 300);
+      return [];
+    }
+
     const PASS_THRESHOLD = 70;
     const STORAGE_KEY = "mcb80x_progress";
     const FLASHCARD_KEY = "mcb80x_flashcards";
@@ -1803,16 +1886,6 @@
       pinnacle300: 1.6
     };
 
-    const PART1_TOPIC_HINTS = new Set([
-      "Resting Potential", "Nernst Equation", "Passive Membrane Properties",
-      "Action Potentials", "Action Potential Propagation", "Electrical Signaling"
-    ]);
-
-    const PART2_TOPIC_HINTS = new Set([
-      "Chemical Synapses", "Synaptic Transmission", "Receptor Types", "Second Messengers",
-      "Synaptic Integration", "Neuromodulation", "Neural Circuits", "Electrical Synapses"
-    ]);
-
     const CHAPTER_META = {
       part1: { title: "Part 1 Flashcards", subtitle: "Electrical Properties — your missed topics" },
       part2: { title: "Part 2 Flashcards", subtitle: "Neurons & Networks — your missed topics" },
@@ -1826,9 +1899,9 @@
         chapterId: "part1",
         title: "Part 1 Quiz",
         subtitle: "The Electrical Properties of the Neuron",
-        meta: "15 Questions · Instant feedback",
+        meta: "15 random · large Part 1 bank",
         description: "Resting potential, passive properties, action potentials, propagation",
-        questions: PART1,
+        poolModule: "part1",
         icon: "P1",
         immediateFeedback: true
       },
@@ -1838,9 +1911,9 @@
         chapterId: "part2",
         title: "Part 2 Quiz",
         subtitle: "Neurons and Networks",
-        meta: "15 Questions · Instant feedback",
+        meta: "15 random · large Part 2 bank",
         description: "Synapses, receptors, integration, neuromodulation, circuits",
-        questions: PART2,
+        poolModule: "part2",
         icon: "P2",
         immediateFeedback: true
       },
@@ -1850,9 +1923,9 @@
         chapterId: "part3",
         title: "Part 3 Quiz",
         subtitle: "The Brain",
-        meta: "15 Questions · Instant feedback",
+        meta: "15 random · large Part 3 bank",
         description: "Sensory systems, neuroanatomy, learning and memory",
-        questions: PART3,
+        poolModule: "part3",
         icon: "P3",
         immediateFeedback: true
       },
@@ -1861,9 +1934,8 @@
         section: "final",
         title: "Comprehensive Final Exam",
         subtitle: "Parts 1, 2 & 3 Combined",
-        meta: "45 Questions · Results at end",
+        meta: "45 random · all modules",
         description: "Full MCB80x curriculum review — complete to unlock advanced finals",
-        questions: [...PART1, ...PART2, ...PART3],
         icon: "FINAL",
         cardClass: "final",
         unlocksAdvanced: true,
@@ -1874,9 +1946,8 @@
         section: "advanced",
         title: "Advanced Final I",
         subtitle: "Expanded Curriculum Review",
-        meta: "100 Questions",
+        meta: "100 random · full bank",
         description: "Reworded core concepts plus new MCB80x items — proctored-exam rigor",
-        questions: SET_100,
         icon: "100",
         cardClass: "elite",
         requires: () => getProgress().finalCompleted,
@@ -1888,9 +1959,8 @@
         section: "advanced",
         title: "Advanced Final II",
         subtitle: "Intermediate Challenge",
-        meta: "150 Questions",
+        meta: "150 random · full bank",
         description: "Additional variations with increased conceptual precision",
-        questions: SET_150,
         icon: "150",
         cardClass: "elite",
         requires: () => getProgress().finalCompleted,
@@ -1902,9 +1972,8 @@
         section: "advanced",
         title: "Advanced Final III",
         subtitle: "Advanced Challenge",
-        meta: "200 Questions",
+        meta: "200 random · full bank",
         description: "Broader coverage with rigorous single-variable mechanism testing",
-        questions: SET_200,
         icon: "200",
         cardClass: "elite",
         requires: () => getProgress().finalCompleted,
@@ -1916,9 +1985,8 @@
         section: "pinnacle",
         title: "Pinnacle Examination",
         subtitle: "Ultimate MCB80x Mastery Test",
-        meta: "300 Questions",
+        meta: "300 random · pinnacle bank",
         description: "The complete advanced question bank — pass all three advanced finals to unlock",
-        questions: SET_300,
         icon: "300",
         cardClass: "pinnacle",
         requires: () => {
@@ -2087,12 +2155,7 @@
 
     function questionModule(q, quizId) {
       if (CHAPTER_IDS.includes(quizId)) return quizId;
-      if (PART1.some(p => p.question === q.question)) return "part1";
-      if (PART2.some(p => p.question === q.question)) return "part2";
-      if (PART3.some(p => p.question === q.question)) return "part3";
-      if (PART1_TOPIC_HINTS.has(q.topic)) return "part1";
-      if (PART2_TOPIC_HINTS.has(q.topic)) return "part2";
-      return "part3";
+      return moduleFromQuestion(q);
     }
 
     function recordQuizAttempt(quizId, questions, answerMap, pct, passed) {
@@ -2148,108 +2211,94 @@
       return { label: "Not yet ready", class: "weak" };
     }
 
+    function moduleCoverageFraction(data) {
+      let sum = 0;
+      CHAPTER_IDS.forEach(m => {
+        const t = data.moduleStats[m]?.total || 0;
+        sum += Math.min(1, t / 15);
+      });
+      return sum / 3;
+    }
+
+    function overallAccuracy(data) {
+      let c = 0;
+      let t = 0;
+      CHAPTER_IDS.forEach(m => {
+        const s = data.moduleStats[m];
+        if (!s) return;
+        c += s.correct;
+        t += s.total;
+      });
+      return t ? (c / t) * 100 : 0;
+    }
+
+    function bestExamPerformance(data) {
+      const examAttempts = data.attempts.filter(a => EXAM_QUIZ_IDS.includes(a.quizId));
+      if (!examAttempts.length) return null;
+      const bestByQuiz = {};
+      examAttempts.forEach(a => {
+        if (!bestByQuiz[a.quizId] || a.pct > bestByQuiz[a.quizId].pct) {
+          bestByQuiz[a.quizId] = a;
+        }
+      });
+      let weightedSum = 0;
+      let weightTotal = 0;
+      Object.values(bestByQuiz).forEach(a => {
+        const w = QUIZ_EXAM_WEIGHT[a.quizId] || 1;
+        weightedSum += a.pct * w;
+        weightTotal += w;
+      });
+      return weightTotal ? weightedSum / weightTotal : null;
+    }
+
     function computeExamReadiness(data) {
       const totalQ = data.totalQuestionsAnswered || 0;
-      if (totalQ < 10) {
+      if (totalQ < 5) {
         return {
           score: null,
           confidence: "low",
-          message: "Complete at least one chapter quiz (10+ questions) to generate a readiness estimate.",
+          message: "Complete at least one chapter quiz to generate a readiness estimate.",
           breakdown: null
         };
       }
 
-      const modules = CHAPTER_IDS;
-      let moduleAccSum = 0;
-      let moduleParts = 0;
-      let fullCoverage = 0;
+      const accuracy = overallAccuracy(data);
+      const coverage = moduleCoverageFraction(data);
+      const modulesTouched = CHAPTER_IDS.filter(m => (data.moduleStats[m]?.total || 0) >= 3).length;
+      const examPerformance = bestExamPerformance(data);
+      const noFinalTaken = examPerformance === null;
 
-      modules.forEach(m => {
-        const s = data.moduleStats[m];
-        if (!s || !s.total) return;
-        const acc = s.correct / s.total;
-        const partWeight = Math.min(1, s.total / 8);
-        moduleAccSum += acc * 100 * partWeight;
-        moduleParts += partWeight;
-        if (s.total >= 5) fullCoverage++;
-      });
+      const chapterFoundation = accuracy * coverage;
 
-      const moduleMastery = moduleParts ? moduleAccSum / moduleParts : 0;
-      const coverageFactor = fullCoverage / 3;
-
-      const examAttempts = data.attempts.filter(a => EXAM_QUIZ_IDS.includes(a.quizId));
-      const noFinalTaken = !examAttempts.length;
-      let examPerformance = moduleMastery;
-
-      if (examAttempts.length) {
-        const bestByQuiz = {};
-        examAttempts.forEach(a => {
-          if (!bestByQuiz[a.quizId] || a.pct > bestByQuiz[a.quizId].pct) {
-            bestByQuiz[a.quizId] = a;
-          }
-        });
-        let weightedSum = 0;
-        let weightTotal = 0;
-        Object.values(bestByQuiz).forEach(a => {
-          const w = QUIZ_EXAM_WEIGHT[a.quizId] || 1;
-          weightedSum += a.pct * w;
-          weightTotal += w;
-        });
-        examPerformance = weightTotal ? weightedSum / weightTotal : moduleMastery;
+      let score;
+      if (noFinalTaken) {
+        score = chapterFoundation;
       } else {
-        examPerformance = moduleMastery * 0.88;
+        score = 0.45 * chapterFoundation + 0.55 * examPerformance * (0.65 + 0.35 * coverage);
       }
-
-      const topicEntries = Object.entries(data.topicStats).filter(([, s]) => s.total >= 1);
-      let topicConsistency = 75;
-      if (topicEntries.length >= 4) {
-        const accs = topicEntries.map(([, s]) => s.correct / s.total);
-        const mean = accs.reduce((a, b) => a + b, 0) / accs.length;
-        const variance = accs.reduce((sum, a) => sum + (a - mean) ** 2, 0) / accs.length;
-        const std = Math.sqrt(variance);
-        topicConsistency = Math.max(0, Math.min(100, (1 - std * 1.35) * 100));
-      }
-
-      const daysSince = (Date.now() - (data.lastActivityTs || Date.now())) / 86400000;
-      let recency = 100;
-      if (daysSince > 21) recency = 55;
-      else if (daysSince > 14) recency = 70;
-      else if (daysSince > 7) recency = 85;
-      else if (daysSince > 3) recency = 95;
-
-      const moduleComponent = moduleMastery * (0.55 + 0.45 * coverageFactor);
-      let examComponent = examPerformance;
-      if (noFinalTaken) examComponent *= 0.92;
-
-      let score =
-        0.40 * moduleComponent +
-        0.35 * examComponent +
-        0.15 * topicConsistency +
-        0.10 * recency;
-
-      if (noFinalTaken) score = Math.min(score, 78);
 
       score = Math.round(Math.max(0, Math.min(100, score)));
 
       let confidence = "low";
-      if (totalQ >= 45 && examAttempts.length >= 1) confidence = "high";
-      else if (totalQ >= 20) confidence = "medium";
+      if (totalQ >= 45 && !noFinalTaken && coverage >= 0.66) confidence = "high";
+      else if (totalQ >= 15 && modulesTouched >= 2) confidence = "medium";
+
+      const tier = readinessTier(score);
 
       return {
         score,
         confidence,
         noFinalTaken,
         breakdown: {
-          moduleComponent: Math.round(moduleComponent),
-          examComponent: Math.round(examComponent),
-          topicConsistency: Math.round(topicConsistency),
-          recency: Math.round(recency),
-          coverageFactor: Math.round(coverageFactor * 100),
-          moduleMastery: Math.round(moduleMastery)
+          accuracy: Math.round(accuracy),
+          curriculumCoverage: Math.round(coverage * 100),
+          modulesTouched,
+          examPerformance: examPerformance === null ? null : Math.round(examPerformance),
+          chapterFoundation: Math.round(chapterFoundation)
         },
         message: noFinalTaken
-          ? "Score is capped until you complete at least one high-stakes exam (Comprehensive Final or Advanced). Module practice is weighted heavily until then."
-          : "Blended from module mastery (40%), best exam performance (35%), topic consistency (15%), and study recency (10%)."
+          ? `Estimate based on ${modulesTouched}/3 modules practiced. One chapter quiz cannot reflect full-exam readiness — complete Parts 1–3 and the Comprehensive Final for an accurate score.`
+          : "Blends curriculum coverage and accuracy with your best high-stakes exam performance (Comprehensive Final and Advanced exams weighted higher)."
       };
     }
 
@@ -2340,10 +2389,11 @@
 
       const breakdownHtml = readiness.breakdown ? `
         <div class="score-breakdown">
-          <div class="breakdown-row"><span>Module mastery (${readiness.breakdown.coverageFactor}% curriculum coverage)</span><span>${readiness.breakdown.moduleMastery}%</span></div>
-          <div class="breakdown-row"><span>High-stakes exam performance</span><span>${readiness.breakdown.examComponent}%</span></div>
-          <div class="breakdown-row"><span>Topic consistency</span><span>${readiness.breakdown.topicConsistency}%</span></div>
-          <div class="breakdown-row"><span>Study recency</span><span>${readiness.breakdown.recency}%</span></div>
+          <div class="breakdown-row"><span>Overall accuracy (all modules)</span><span>${readiness.breakdown.accuracy}%</span></div>
+          <div class="breakdown-row"><span>Curriculum coverage (Parts 1–3)</span><span>${readiness.breakdown.curriculumCoverage}%</span></div>
+          <div class="breakdown-row"><span>Chapter foundation (accuracy × coverage)</span><span>${readiness.breakdown.chapterFoundation}%</span></div>
+          <div class="breakdown-row"><span>Modules practiced (≥3 questions)</span><span>${readiness.breakdown.modulesTouched} / 3</span></div>
+          <div class="breakdown-row"><span>Best high-stakes exam</span><span>${readiness.breakdown.examPerformance === null ? "Not taken yet" : readiness.breakdown.examPerformance + "%"}</span></div>
         </div>` : "";
 
       const attemptsHtml = data.attempts.slice(0, 8).map(a => {
@@ -2468,6 +2518,17 @@
 
     let pendingUnlockMessage = null;
 
+    function formatQuizMeta(quiz) {
+      const size = QUIZ_SAMPLE_SIZES[quiz.id];
+      const poolSize = quiz.poolModule
+        ? MODULE_POOLS[quiz.poolModule]?.length
+        : MODULE_POOLS.all?.length;
+      if (size && poolSize) {
+        return `${size} per attempt · ${poolSize} in module bank`;
+      }
+      return quiz.meta || "";
+    }
+
     function renderDashboard() {
       const container = document.getElementById("dashboard-sections");
       const progress = getProgressWithBackup();
@@ -2534,8 +2595,8 @@
               <div class="quiz-card-icon">${q.icon}</div>
               <h3>${q.title}</h3>
               <p class="subtitle">${q.subtitle}<br>${q.description}</p>
-              <span class="meta">${q.meta}</span>
-              ${lockBadge}
+          <span class="meta">${formatQuizMeta(q)}</span>
+          ${lockBadge}
             </div>`;
         }).join("");
 
@@ -2631,7 +2692,7 @@
       if (!quiz || !isQuizUnlocked(quiz)) return;
 
       activeQuizId = quizId;
-      shuffledQuestions = prepareQuestions(quiz.questions);
+      shuffledQuestions = prepareQuestions(drawQuizQuestionSet(quizId));
       currentIndex = 0;
       answers = {};
       document.getElementById("quiz-title").textContent = quiz.title;
