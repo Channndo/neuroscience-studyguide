@@ -1895,18 +1895,47 @@
       { id: "pinnacle", title: "Pinnacle Exam", hint: "Unlocked after passing all three advanced finals" }
     ];
 
+    let storageWarningShown = false;
+
+    function storageAvailable() {
+      try {
+        const probe = "__mcb80x_storage_probe__";
+        localStorage.setItem(probe, "1");
+        localStorage.removeItem(probe);
+        return true;
+      } catch {
+        return false;
+      }
+    }
+
+    function notifyStorageIssue() {
+      if (storageWarningShown) return;
+      storageWarningShown = true;
+      const banner = document.getElementById("progress-banner");
+      if (!banner) return;
+      banner.hidden = false;
+      banner.innerHTML =
+        "<strong>Progress cannot be saved.</strong> Your browser is blocking local storage (private mode, strict settings, or a different site URL). Use the same browser URL each time — e.g. <code>https://channndo.github.io/neuroscience-studyguide/</code>.";
+    }
+
     function getProgress() {
       try {
         return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
       } catch {
+        notifyStorageIssue();
         return {};
       }
     }
 
     function saveProgress(updates) {
-      const progress = { ...getProgress(), ...updates };
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
-      return progress;
+      try {
+        const progress = { ...getProgress(), ...updates };
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+        return progress;
+      } catch {
+        notifyStorageIssue();
+        return getProgress();
+      }
     }
 
     function isQuizUnlocked(quiz) {
@@ -1954,7 +1983,14 @@
     }
 
     function saveAnalytics(data) {
-      localStorage.setItem(ANALYTICS_KEY, JSON.stringify(data));
+      try {
+        data.version = 1;
+        localStorage.setItem(ANALYTICS_KEY, JSON.stringify(data));
+        return true;
+      } catch {
+        notifyStorageIssue();
+        return false;
+      }
     }
 
     function questionModule(q, quizId) {
@@ -2149,11 +2185,15 @@
       const flashDecks = getFlashcardDecks();
       const flashCount = CHAPTER_IDS.reduce((n, id) => n + (flashDecks[id]?.length || 0), 0);
 
+      const lastFromProgress = getProgress().lastQuiz;
+
       if (!data.totalQuestionsAnswered) {
         el.innerHTML = `
           <div class="profile-empty">
             <p><strong>No performance data yet.</strong></p>
-            <p>Complete a Part 1, 2, or 3 quiz to build your profile, topic strengths/weaknesses, and exam readiness score.</p>
+            <p>Finish a quiz with <strong>Submit Quiz</strong> on the last question — progress is saved when the results screen appears.</p>
+            ${lastFromProgress ? `<p>We found a saved last quiz (${lastFromProgress.title}, ${lastFromProgress.pct}%) in progress storage, but detailed analytics are missing — retake once on this browser/URL to rebuild your profile.</p>` : ""}
+            ${!storageAvailable() ? "<p><strong>Local storage appears blocked</strong> in this browser session.</p>" : ""}
           </div>`;
         return;
       }
@@ -2375,11 +2415,15 @@
           const unlocked = isQuizUnlocked(q);
           const passed = isQuizPassed(q);
           const cardClass = q.cardClass || "";
+          const completed = progress[`completed_${q.id}`];
+          const best = progress[`best_${q.id}`];
           const lockBadge = !unlocked
             ? `<span class="lock-badge">🔒 ${q.lockHint || "Locked"}</span>`
             : passed
               ? `<span class="lock-badge" style="background:var(--correct-bg);color:var(--correct);">✓ Passed</span>`
-              : "";
+              : completed
+                ? `<span class="lock-badge" style="background:var(--gray-100);color:var(--gray-600);">Best: ${best}%</span>`
+                : "";
 
           return `
             <div class="quiz-card ${cardClass}${unlocked ? "" : " locked"}"
@@ -2404,16 +2448,23 @@
 
       const banner = document.getElementById("progress-banner");
       const advancedPassed = [progress.final100Passed, progress.final150Passed, progress.final200Passed].filter(Boolean).length;
+      const last = progress.lastQuiz;
+      const lastLine = last
+        ? `<strong>Last quiz:</strong> ${last.title} — ${last.pct}% (${last.correct}/${last.total}) on ${new Date(last.ts).toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" })}. `
+        : "";
+
       if (progress.pinnacle300Passed) {
         banner.hidden = false;
-        banner.innerHTML = "<strong>Pinnacle achieved!</strong> You passed the 300-question mastery examination.";
+        banner.innerHTML = lastLine + "<strong>Pinnacle achieved!</strong> You passed the 300-question mastery examination.";
       } else if (progress.finalCompleted) {
         banner.hidden = false;
-        banner.innerHTML = `<strong>Advanced track unlocked.</strong> ${advancedPassed}/3 advanced finals passed at 70%+. Pass all three to unlock the Pinnacle Exam.`;
+        banner.innerHTML = lastLine + `<strong>Advanced track unlocked.</strong> ${advancedPassed}/3 advanced finals passed at 70%+. Pass all three to unlock the Pinnacle Exam.`;
       } else {
         banner.hidden = false;
-        banner.innerHTML = "<strong>Progress:</strong> Complete the Comprehensive Final Exam to unlock the 100, 150, and 200 question advanced finals.";
+        banner.innerHTML = lastLine + "<strong>Progress:</strong> Complete the Comprehensive Final Exam to unlock the 100, 150, and 200 question advanced finals.";
       }
+
+      if (!storageAvailable()) notifyStorageIssue();
 
       const toast = document.getElementById("unlock-toast");
       if (pendingUnlockMessage) {
@@ -2587,6 +2638,24 @@
       const passed = pct >= PASS_THRESHOLD;
 
       recordQuizAttempt(activeQuizId, shuffledQuestions, answers, pct, passed);
+
+      if (quiz) {
+        const prev = getProgress();
+        const bestKey = `best_${activeQuizId}`;
+        saveProgress({
+          lastQuiz: {
+            quizId: activeQuizId,
+            title: quiz.title,
+            pct,
+            correct,
+            total,
+            passed,
+            ts: Date.now()
+          },
+          [bestKey]: Math.max(prev[bestKey] || 0, pct),
+          [`completed_${activeQuizId}`]: true
+        });
+      }
 
       if (quiz && CHAPTER_IDS.includes(activeQuizId)) {
         const missed = shuffledQuestions
