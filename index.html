@@ -1919,7 +1919,8 @@
         description: "Resting potential, passive properties, action potentials, propagation",
         poolModule: "part1",
         icon: "P1",
-        immediateFeedback: true
+        immediateFeedback: true,
+        passKey: "part1Passed"
       },
       part2: {
         id: "part2",
@@ -1931,7 +1932,8 @@
         description: "Synapses, receptors, integration, neuromodulation, circuits",
         poolModule: "part2",
         icon: "P2",
-        immediateFeedback: true
+        immediateFeedback: true,
+        passKey: "part2Passed"
       },
       part3: {
         id: "part3",
@@ -1943,7 +1945,8 @@
         description: "Sensory systems, neuroanatomy, learning and memory",
         poolModule: "part3",
         icon: "P3",
-        immediateFeedback: true
+        immediateFeedback: true,
+        passKey: "part3Passed"
       },
       final: {
         id: "final",
@@ -1955,7 +1958,9 @@
         icon: "FINAL",
         cardClass: "final",
         unlocksAdvanced: true,
-        immediateFeedback: false
+        immediateFeedback: false,
+        requires: () => allChapterQuizzesPassed(),
+        lockHint: "Pass Part 1, Part 2, and Part 3 (70%+) to unlock"
       },
       final100: {
         id: "final100",
@@ -2017,7 +2022,7 @@
     const DASHBOARD_SECTIONS = [
       { id: "core", title: "Core Modules", hint: "Part 1 · Part 2 · Part 3 — instant feedback on each answer" },
       { id: "flashcards", title: "Weakness Flashcards", hint: "Auto-generated after each chapter quiz" },
-      { id: "final", title: "Comprehensive Final", hint: "No feedback until the end · unlocks advanced exams" },
+      { id: "final", title: "Comprehensive Final", hint: "Unlocks after passing all three module quizzes · answers at end" },
       { id: "advanced", title: "Advanced Finals", hint: "Unlocked after completing the Comprehensive Final" },
       { id: "pinnacle", title: "Pinnacle Exam", hint: "Unlocked after passing all three advanced finals" }
     ];
@@ -2114,6 +2119,18 @@
         <span class="saved-badge">Saved on this device</span>`;
     }
 
+    function chapterQuizPassed(chapterId, progress) {
+      const p = progress || getProgressWithBackup();
+      const passKey = `${chapterId}Passed`;
+      if (p[passKey]) return true;
+      return (p[`best_${chapterId}`] || 0) >= PASS_THRESHOLD;
+    }
+
+    function allChapterQuizzesPassed(progress) {
+      const p = progress || getProgressWithBackup();
+      return CHAPTER_IDS.every(id => chapterQuizPassed(id, p));
+    }
+
     function isQuizUnlocked(quiz) {
       if (!quiz.requires) return true;
       return quiz.requires();
@@ -2121,7 +2138,10 @@
 
     function isQuizPassed(quiz) {
       if (!quiz.passKey) return false;
-      return !!getProgress()[quiz.passKey];
+      const p = getProgress();
+      if (p[quiz.passKey]) return true;
+      if (CHAPTER_IDS.includes(quiz.id)) return chapterQuizPassed(quiz.id, p);
+      return false;
     }
 
     function getFlashcardDecks() {
@@ -2653,9 +2673,13 @@
       } else if (progress.finalCompleted) {
         banner.hidden = false;
         banner.innerHTML = lastLine + `<strong>Advanced track unlocked.</strong> ${advancedPassed}/3 advanced finals passed at 70%+. Pass all three to unlock the Pinnacle Exam.`;
+      } else if (!allChapterQuizzesPassed(progress)) {
+        const chaptersPassed = CHAPTER_IDS.filter(id => chapterQuizPassed(id, progress)).length;
+        banner.hidden = false;
+        banner.innerHTML = lastLine + `<strong>Final exam locked.</strong> Pass Part 1, Part 2, and Part 3 at ${PASS_THRESHOLD}%+ to unlock the Comprehensive Final (${chaptersPassed}/3 passed).`;
       } else {
         banner.hidden = false;
-        banner.innerHTML = lastLine + "<strong>Progress:</strong> Complete the Comprehensive Final Exam to unlock the 100, 150, and 200 question advanced finals.";
+        banner.innerHTML = lastLine + "<strong>Comprehensive Final unlocked.</strong> Complete it to open the advanced exam track.";
       }
 
       if (!storageAvailable()) notifyStorageIssue();
@@ -2883,6 +2907,9 @@
         }
         if (quiz.passKey && passed) {
           updates[quiz.passKey] = true;
+          if (CHAPTER_IDS.includes(quiz.id) && !allChapterQuizzesPassed(prevProgress) && allChapterQuizzesPassed({ ...prevProgress, ...updates })) {
+            pendingUnlockMessage = "Comprehensive Final Exam unlocked — you passed all three module quizzes at 70%+.";
+          }
           if (quiz.id === "pinnacle300") {
             pendingUnlockMessage = "Pinnacle Examination passed — full MCB80x mastery achieved!";
           } else if (quiz.id.startsWith("final") && quiz.id !== "final") {
