@@ -1104,6 +1104,99 @@
       font-size: 0.95rem;
     }
 
+    .analytics-section {
+      margin-bottom: 1.5rem;
+    }
+
+    .analytics-section-header {
+      margin-bottom: 1rem;
+    }
+
+    .analytics-section-header h2 {
+      margin: 0 0 0.35rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--gray-900);
+    }
+
+    .analytics-section-header p {
+      margin: 0;
+      font-size: 0.88rem;
+      color: var(--gray-500);
+    }
+
+    .analytics-kpi-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .analytics-kpi {
+      background: var(--surface);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 0.85rem 1rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .analytics-kpi-value {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--crimson);
+      font-variant-numeric: tabular-nums;
+      line-height: 1.1;
+    }
+
+    .analytics-kpi-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--gray-500);
+      margin-top: 0.25rem;
+    }
+
+    .analytics-charts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+      gap: 1.25rem;
+    }
+
+    .chart-card {
+      background: var(--surface);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.15rem 1.1rem 1rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .chart-card h4 {
+      margin: 0 0 0.75rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--gray-600);
+    }
+
+    .chart-wrap {
+      position: relative;
+      height: 240px;
+    }
+
+    .chart-wrap.chart-tall {
+      height: 280px;
+    }
+
+    .chart-card.span-2 {
+      grid-column: 1 / -1;
+    }
+
+    @media (max-width: 640px) {
+      .chart-card.span-2 { grid-column: auto; }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       .progress-fill, .quiz-card, .flashcard, .module-bar-fill, .ring-value { transition: none; }
     }
@@ -1210,6 +1303,7 @@
 
   <script src="questions-bank.js"></script>
   <script src="questions-extra-pools.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" crossorigin="anonymous"></script>
   <script>
     function shuffle(array) {
       const arr = array.slice();
@@ -1878,6 +1972,15 @@
     }
 
     const PASS_THRESHOLD = 70;
+    const ADVANCED_PASS_THRESHOLD = 80;
+    const PINNACLE_PASS_THRESHOLD = 90;
+    const ADVANCED_FINAL_IDS = ["final100", "final150", "final200"];
+
+    function getPassThreshold(quizId) {
+      if (quizId === "pinnacle300") return PINNACLE_PASS_THRESHOLD;
+      if (ADVANCED_FINAL_IDS.includes(quizId)) return ADVANCED_PASS_THRESHOLD;
+      return PASS_THRESHOLD;
+    }
     const STORAGE_KEY = "mcb80x_progress";
     const FLASHCARD_KEY = "mcb80x_flashcards";
     const ANALYTICS_KEY = "mcb80x_analytics";
@@ -1967,7 +2070,7 @@
         section: "advanced",
         title: "Advanced Final I",
         subtitle: "Expanded Curriculum Review",
-        meta: "Expanded bank · answers at end",
+        meta: "80% to pass · answers at end",
         description: "Reworded core concepts plus new MCB80x items — proctored-exam rigor",
         icon: "I",
         cardClass: "elite",
@@ -1980,7 +2083,7 @@
         section: "advanced",
         title: "Advanced Final II",
         subtitle: "Intermediate Challenge",
-        meta: "Expanded bank · answers at end",
+        meta: "80% to pass · answers at end",
         description: "Additional variations with increased conceptual precision",
         icon: "II",
         cardClass: "elite",
@@ -1993,7 +2096,7 @@
         section: "advanced",
         title: "Advanced Final III",
         subtitle: "Advanced Challenge",
-        meta: "Expanded bank · answers at end",
+        meta: "80% to pass · answers at end",
         description: "Broader coverage with rigorous single-variable mechanism testing",
         icon: "III",
         cardClass: "elite",
@@ -2006,7 +2109,7 @@
         section: "pinnacle",
         title: "Pinnacle Examination",
         subtitle: "Ultimate MCB80x Mastery Test",
-        meta: "Full mastery bank · answers at end",
+        meta: "90% to pass · answers at end",
         description: "The complete advanced question bank — pass all three advanced finals to unlock",
         icon: "PIN",
         cardClass: "pinnacle",
@@ -2014,7 +2117,7 @@
           const p = getProgress();
           return p.final100Passed && p.final150Passed && p.final200Passed;
         },
-        lockHint: "Pass Advanced Finals I, II, and III (70%+) to unlock",
+        lockHint: "Pass Advanced Finals I, II, and III (80%+) to unlock",
         passKey: "pinnacle300Passed"
       }
     };
@@ -2023,8 +2126,8 @@
       { id: "core", title: "Core Modules", hint: "Part 1 · Part 2 · Part 3 — instant feedback on each answer" },
       { id: "flashcards", title: "Weakness Flashcards", hint: "Auto-generated after each chapter quiz" },
       { id: "final", title: "Comprehensive Final", hint: "Unlocks after passing all three module quizzes · answers at end" },
-      { id: "advanced", title: "Advanced Finals", hint: "Unlocked after completing the Comprehensive Final" },
-      { id: "pinnacle", title: "Pinnacle Exam", hint: "Unlocked after passing all three advanced finals" }
+      { id: "advanced", title: "Advanced Finals", hint: "Unlocked after the Comprehensive Final · 80% required to pass each" },
+      { id: "pinnacle", title: "Pinnacle Exam", hint: "Unlocked after passing all three advanced finals (80%+) · 90% to pass" }
     ];
 
     let storageWarningShown = false;
@@ -2374,7 +2477,311 @@
       return { strengths, weaknesses, all: entries };
     }
 
+    let profileChartInstances = [];
+
+    function destroyProfileCharts() {
+      profileChartInstances.forEach(c => c.destroy());
+      profileChartInstances = [];
+    }
+
+    function chartFontFamily() {
+      return "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+    }
+
+    function aggregateQuestionsByDay(attempts, days = 14) {
+      const labels = [];
+      const values = [];
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      const buckets = new Map();
+      for (let i = days - 1; i >= 0; i--) {
+        const d = new Date(today);
+        d.setDate(d.getDate() - i);
+        const key = d.toISOString().slice(0, 10);
+        buckets.set(key, 0);
+      }
+      (attempts || []).forEach(a => {
+        const key = new Date(a.ts).toISOString().slice(0, 10);
+        if (buckets.has(key)) buckets.set(key, buckets.get(key) + a.total);
+      });
+      buckets.forEach((count, key) => {
+        const d = new Date(key + "T12:00:00");
+        labels.push(d.toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric" }));
+        values.push(count);
+      });
+      return { labels, values };
+    }
+
+    function computeAnalyticsKpis(data) {
+      const attempts = data.attempts || [];
+      const n = attempts.length;
+      const avgScore = n ? Math.round(attempts.reduce((s, a) => s + a.pct, 0) / n) : 0;
+      const passed = attempts.filter(a => a.passed).length;
+      const passRate = n ? Math.round((passed / n) * 100) : 0;
+      return {
+        attempts: n,
+        avgScore,
+        passRate,
+        questions: data.totalQuestionsAnswered || 0
+      };
+    }
+
+    function renderProfileCharts(data) {
+      if (typeof Chart === "undefined") return;
+      destroyProfileCharts();
+
+      const crimson = "#A51C30";
+      const crimsonLight = "rgba(165, 28, 48, 0.65)";
+      const grayGrid = "rgba(228, 228, 231, 0.9)";
+      const grayTick = "#71717a";
+      const green = "#166534";
+      const amber = "#d97706";
+
+      const baseOptions = {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { labels: { font: { family: chartFontFamily(), size: 11 }, color: grayTick } }
+        }
+      };
+
+      const moduleCanvas = document.getElementById("chart-module-accuracy");
+      if (moduleCanvas) {
+        const labels = CHAPTER_IDS.map(m => MODULE_LABELS[m].replace(" · ", "\n"));
+        const acc = CHAPTER_IDS.map(m => {
+          const s = data.moduleStats[m] || { correct: 0, total: 0 };
+          return s.total ? Math.round((s.correct / s.total) * 100) : 0;
+        });
+        const totals = CHAPTER_IDS.map(m => (data.moduleStats[m] || {}).total || 0);
+        profileChartInstances.push(new Chart(moduleCanvas, {
+          type: "bar",
+          data: {
+            labels: CHAPTER_IDS.map(m => MODULE_LABELS[m].split(" · ")[0]),
+            datasets: [{
+              label: "Accuracy %",
+              data: acc,
+              backgroundColor: [crimsonLight, "rgba(82, 82, 91, 0.55)", "rgba(39, 39, 42, 0.5)"],
+              borderRadius: 6,
+              maxBarThickness: 48
+            }]
+          },
+          options: {
+            ...baseOptions,
+            plugins: {
+              ...baseOptions.plugins,
+              legend: { display: false },
+              tooltip: {
+                callbacks: {
+                  afterLabel(ctx) {
+                    const t = totals[ctx.dataIndex];
+                    return t ? `${t} questions answered` : "No data yet";
+                  }
+                }
+              }
+            },
+            scales: {
+              y: {
+                min: 0,
+                max: 100,
+                ticks: { stepSize: 20, color: grayTick, font: { family: chartFontFamily() } },
+                grid: { color: grayGrid }
+              },
+              x: {
+                ticks: { color: grayTick, font: { family: chartFontFamily(), size: 10 } },
+                grid: { display: false }
+              }
+            }
+          }
+        }));
+      }
+
+      const trendCanvas = document.getElementById("chart-score-trend");
+      if (trendCanvas) {
+        const chron = [...(data.attempts || [])].reverse().slice(-20);
+        const labels = chron.map(a =>
+          new Date(a.ts).toLocaleDateString(undefined, { month: "short", day: "numeric" })
+        );
+        const scores = chron.map(a => a.pct);
+        const pointColors = chron.map(a => (a.passed ? green : crimson));
+        profileChartInstances.push(new Chart(trendCanvas, {
+          type: "line",
+          data: {
+            labels,
+            datasets: [{
+              label: "Quiz score %",
+              data: scores,
+              borderColor: crimson,
+              backgroundColor: "rgba(165, 28, 48, 0.08)",
+              fill: true,
+              tension: 0.25,
+              pointBackgroundColor: pointColors,
+              pointBorderColor: "#fff",
+              pointBorderWidth: 2,
+              pointRadius: 5
+            }]
+          },
+          options: {
+            ...baseOptions,
+            plugins: {
+              ...baseOptions.plugins,
+              legend: { display: false },
+              annotation: {}
+            },
+            scales: {
+              y: {
+                min: 0,
+                max: 100,
+                ticks: { color: grayTick, font: { family: chartFontFamily() } },
+                grid: { color: grayGrid }
+              },
+              x: {
+                ticks: { maxRotation: 45, color: grayTick, font: { family: chartFontFamily(), size: 10 } },
+                grid: { display: false }
+              }
+            }
+          }
+        }));
+      }
+
+      const volumeCanvas = document.getElementById("chart-module-volume");
+      if (volumeCanvas) {
+        const totals = CHAPTER_IDS.map(m => (data.moduleStats[m] || {}).total || 0);
+        profileChartInstances.push(new Chart(volumeCanvas, {
+          type: "doughnut",
+          data: {
+            labels: CHAPTER_IDS.map(m => MODULE_LABELS[m].split(" · ")[0]),
+            datasets: [{
+              data: totals,
+              backgroundColor: [crimson, "#52525b", "#27272a"],
+              borderWidth: 2,
+              borderColor: "#fff"
+            }]
+          },
+          options: {
+            ...baseOptions,
+            cutout: "58%",
+            plugins: {
+              ...baseOptions.plugins,
+              legend: { position: "bottom" }
+            }
+          }
+        }));
+      }
+
+      const activityCanvas = document.getElementById("chart-daily-activity");
+      if (activityCanvas) {
+        const daily = aggregateQuestionsByDay(data.attempts, 14);
+        profileChartInstances.push(new Chart(activityCanvas, {
+          type: "bar",
+          data: {
+            labels: daily.labels,
+            datasets: [{
+              label: "Questions answered",
+              data: daily.values,
+              backgroundColor: daily.values.map(v => (v > 0 ? crimsonLight : "rgba(212, 212, 216, 0.5)")),
+              borderRadius: 4,
+              maxBarThickness: 22
+            }]
+          },
+          options: {
+            ...baseOptions,
+            plugins: { ...baseOptions.plugins, legend: { display: false } },
+            scales: {
+              y: {
+                beginAtZero: true,
+                ticks: { stepSize: 1, color: grayTick, font: { family: chartFontFamily() } },
+                grid: { color: grayGrid }
+              },
+              x: {
+                ticks: { maxRotation: 50, font: { size: 9, family: chartFontFamily() }, color: grayTick },
+                grid: { display: false }
+              }
+            }
+          }
+        }));
+      }
+
+      const topicCanvas = document.getElementById("chart-topic-focus");
+      const topicRows = getTopicRankings(data, 50).all
+        .sort((a, b) => a.pct - b.pct || b.total - a.total)
+        .slice(0, 10);
+      if (topicCanvas && topicRows.length) {
+        const shortName = name => (name.length > 28 ? name.slice(0, 26) + "…" : name);
+        profileChartInstances.push(new Chart(topicCanvas, {
+          type: "bar",
+          data: {
+            labels: topicRows.map(t => shortName(t.name)),
+            datasets: [{
+              label: "Accuracy %",
+              data: topicRows.map(t => t.pct),
+              backgroundColor: topicRows.map(t => (t.pct >= 70 ? green : t.pct >= 50 ? amber : crimson)),
+              borderRadius: 4
+            }]
+          },
+          options: {
+            indexAxis: "y",
+            ...baseOptions,
+            plugins: {
+              ...baseOptions.plugins,
+              legend: { display: false },
+              tooltip: {
+                callbacks: {
+                  afterLabel(ctx) {
+                    const t = topicRows[ctx.dataIndex];
+                    return `${t.total} questions · ${MODULE_LABELS[t.module] || t.module}`;
+                  }
+                }
+              }
+            },
+            scales: {
+              x: {
+                min: 0,
+                max: 100,
+                ticks: { color: grayTick, font: { family: chartFontFamily() } },
+                grid: { color: grayGrid }
+              },
+              y: {
+                ticks: { color: grayTick, font: { family: chartFontFamily(), size: 10 } },
+                grid: { display: false }
+              }
+            }
+          }
+        }));
+      }
+
+      const examCanvas = document.getElementById("chart-exam-types");
+      if (examCanvas) {
+        const chapterAttempts = (data.attempts || []).filter(a => CHAPTER_IDS.includes(a.quizId)).length;
+        const finalAttempts = (data.attempts || []).filter(a => a.quizId === "final").length;
+        const advancedAttempts = (data.attempts || []).filter(a => /^final(100|150|200)$/.test(a.quizId)).length;
+        const pinnacleAttempts = (data.attempts || []).filter(a => a.quizId === "pinnacle300").length;
+        profileChartInstances.push(new Chart(examCanvas, {
+          type: "polarArea",
+          data: {
+            labels: ["Chapter quizzes", "Comprehensive Final", "Advanced finals", "Pinnacle"],
+            datasets: [{
+              data: [chapterAttempts, finalAttempts, advancedAttempts, pinnacleAttempts],
+              backgroundColor: [
+                "rgba(165, 28, 48, 0.55)",
+                "rgba(82, 82, 91, 0.5)",
+                "rgba(39, 39, 42, 0.45)",
+                "rgba(139, 23, 40, 0.7)"
+              ],
+              borderWidth: 1,
+              borderColor: "#fff"
+            }]
+          },
+          options: {
+            ...baseOptions,
+            scales: { r: { ticks: { display: false }, grid: { color: grayGrid } } },
+            plugins: { ...baseOptions.plugins, legend: { position: "bottom" } }
+          }
+        }));
+      }
+    }
+
     function renderProfile() {
+      destroyProfileCharts();
       const el = document.getElementById("profile-content");
       const data = getAnalytics();
       const readiness = computeExamReadiness(data);
@@ -2458,6 +2865,8 @@
         return `<tr><td>${date}</td><td>${a.title}</td><td>${a.pct}%</td><td>${a.passed ? "Pass" : "—"}</td></tr>`;
       }).join("");
 
+      const kpis = computeAnalyticsKpis(data);
+
       el.innerHTML = `
         <div class="profile-hero">
           <div class="readiness-ring-wrap" aria-hidden="true">
@@ -2479,6 +2888,57 @@
           </div>
         </div>
 
+        <section class="analytics-section" aria-labelledby="analytics-heading">
+          <div class="analytics-section-header">
+            <h2 id="analytics-heading">Analytics</h2>
+            <p>Charts from your saved attempts on this device — updated each time you finish a quiz.</p>
+          </div>
+          <div class="analytics-kpi-row">
+            <div class="analytics-kpi">
+              <div class="analytics-kpi-value">${kpis.questions}</div>
+              <div class="analytics-kpi-label">Questions answered</div>
+            </div>
+            <div class="analytics-kpi">
+              <div class="analytics-kpi-value">${kpis.attempts}</div>
+              <div class="analytics-kpi-label">Quiz attempts</div>
+            </div>
+            <div class="analytics-kpi">
+              <div class="analytics-kpi-value">${kpis.avgScore}%</div>
+              <div class="analytics-kpi-label">Average score</div>
+            </div>
+            <div class="analytics-kpi">
+              <div class="analytics-kpi-value">${kpis.passRate}%</div>
+              <div class="analytics-kpi-label">Pass rate</div>
+            </div>
+          </div>
+          <div class="analytics-charts-grid">
+            <div class="chart-card span-2">
+              <h4>Score trend (recent attempts)</h4>
+              <div class="chart-wrap chart-tall"><canvas id="chart-score-trend" aria-label="Line chart of recent quiz scores"></canvas></div>
+            </div>
+            <div class="chart-card">
+              <h4>Module accuracy</h4>
+              <div class="chart-wrap"><canvas id="chart-module-accuracy" aria-label="Bar chart of accuracy by module"></canvas></div>
+            </div>
+            <div class="chart-card">
+              <h4>Volume by module</h4>
+              <div class="chart-wrap"><canvas id="chart-module-volume" aria-label="Doughnut chart of questions by module"></canvas></div>
+            </div>
+            <div class="chart-card span-2">
+              <h4>Study activity (last 14 days)</h4>
+              <div class="chart-wrap chart-tall"><canvas id="chart-daily-activity" aria-label="Bar chart of daily questions answered"></canvas></div>
+            </div>
+            <div class="chart-card span-2">
+              <h4>Topic focus (lowest accuracy, 2+ questions)</h4>
+              <div class="chart-wrap chart-tall"><canvas id="chart-topic-focus" aria-label="Horizontal bar chart of topic accuracy"></canvas></div>
+            </div>
+            <div class="chart-card">
+              <h4>Attempts by exam type</h4>
+              <div class="chart-wrap"><canvas id="chart-exam-types" aria-label="Polar chart of attempts by exam category"></canvas></div>
+            </div>
+          </div>
+        </section>
+
         <div class="profile-grid">
           <div class="profile-card">
             <h3>Module Performance</h3>
@@ -2488,7 +2948,7 @@
             <h3>Score Breakdown</h3>
             ${breakdownHtml}
             <p style="font-size:0.78rem;color:var(--gray-500);margin:1rem 0 0;line-height:1.45;">
-              Passing threshold on exams: ${PASS_THRESHOLD}%. Readiness aligns with MCB80x proctored exam standards when high-stakes attempts are included.
+              Passing: module &amp; comprehensive finals ${PASS_THRESHOLD}% · advanced finals ${ADVANCED_PASS_THRESHOLD}% · pinnacle ${PINNACLE_PASS_THRESHOLD}%.
             </p>
           </div>
         </div>
@@ -2511,6 +2971,8 @@
             <tbody>${attemptsHtml || "<tr><td colspan=\"4\">No attempts yet</td></tr>"}</tbody>
           </table>
         </div>`;
+
+      requestAnimationFrame(() => renderProfileCharts(data));
     }
 
     function setMainNav(active) {
@@ -2672,7 +3134,7 @@
         banner.innerHTML = lastLine + "<strong>Pinnacle achieved!</strong> You passed the mastery examination.";
       } else if (progress.finalCompleted) {
         banner.hidden = false;
-        banner.innerHTML = lastLine + `<strong>Advanced track unlocked.</strong> ${advancedPassed}/3 advanced finals passed at 70%+. Pass all three to unlock the Pinnacle Exam.`;
+        banner.innerHTML = lastLine + `<strong>Advanced track unlocked.</strong> ${advancedPassed}/3 advanced finals passed at ${ADVANCED_PASS_THRESHOLD}%+. Pass all three to unlock the Pinnacle Exam (${PINNACLE_PASS_THRESHOLD}% to pass).`;
       } else if (!allChapterQuizzesPassed(progress)) {
         const chaptersPassed = CHAPTER_IDS.filter(id => chapterQuizPassed(id, progress)).length;
         banner.hidden = false;
@@ -2853,7 +3315,8 @@
       document.getElementById("score-fraction").textContent = `${correct} / ${total} correct`;
 
       const quiz = QUIZZES[activeQuizId];
-      const passed = pct >= PASS_THRESHOLD;
+      const passThreshold = getPassThreshold(activeQuizId);
+      const passed = pct >= passThreshold;
       const prevProgress = getProgress();
 
       if (quiz) {
@@ -2924,8 +3387,8 @@
 
       let message;
       if (passed && pct >= 90) message = "Excellent — strong mastery at proctored-exam rigor.";
-      else if (passed) message = `Passed (${PASS_THRESHOLD}% required). Review missed explanations below.`;
-      else if (pct >= 75) message = `Below passing threshold (${PASS_THRESHOLD}%). Review explanations and retake.`;
+      else if (passed) message = `Passed (${passThreshold}% required). Review missed explanations below.`;
+      else if (pct >= passThreshold - 5) message = `Below passing threshold (${passThreshold}%). Review explanations and retake.`;
       else if (pct >= 60) message = "Fair result. Revisit curriculum sections for missed mechanisms.";
       else message = "Keep studying — use the review below to target weak areas.";
 
