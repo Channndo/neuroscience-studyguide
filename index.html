@@ -3020,17 +3020,97 @@
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
+    function optionWordCount(text) {
+      return text.trim().split(/\s+/).filter(Boolean).length;
+    }
+
+    function optionHash(text) {
+      let h = 0;
+      for (let i = 0; i < text.length; i++) h = ((h << 5) - h + text.charCodeAt(i)) | 0;
+      return Math.abs(h);
+    }
+
+    function shortenCorrectOption(text) {
+      const trimmed = text.trim();
+      const candidates = [
+        trimmed.split(/;\s+/)[0],
+        trimmed.split(/,\s+which\s+/i)[0],
+        trimmed.split(/,\s+and\s+/i)[0],
+        trimmed.split(/\s+—\s+/)[0]
+      ];
+      for (const part of candidates) {
+        if (!part || part === trimmed) continue;
+        if (part.length >= trimmed.length * 0.45 && optionWordCount(part) >= 3) {
+          return part.replace(/\s+$/, "");
+        }
+      }
+      return trimmed;
+    }
+
+    function lengthenDistractor(wrong, correct, salt) {
+      const wrongWords = optionWordCount(wrong);
+      const correctWords = optionWordCount(correct);
+      if (wrongWords >= correctWords - 2 || wrongWords >= correctWords * 0.82) return wrong;
+
+      let base = wrong.trim().replace(/[.!?]+$/, "");
+      const tails = [
+        ", independent of membrane capacitance and leak conductances",
+        ", regardless of Nernst equilibrium potential values",
+        ", even when voltage-gated channels remain closed",
+        ", under typical Hodgkin–Huxley axon assumptions",
+        ", throughout the neuron without passive attenuation alone",
+        ", relative to standard mammalian CNS recording conditions",
+        ", without requiring synaptic input or neuromodulation",
+        ", even if the Na⁺/K⁺ ATPase is pharmacologically blocked"
+      ];
+      base += tails[salt % tails.length];
+      if (!/[.!?]$/.test(base)) base += ".";
+      return base;
+    }
+
+    function balanceQuestionOptions(q) {
+      const correct = q.correct;
+      let options = q.options.map(o => String(o).trim());
+      if (options.length < 2 || correct < 0 || correct >= options.length) return q;
+
+      const counts = options.map(optionWordCount);
+      const correctWords = counts[correct];
+      const otherCounts = counts.filter((_, i) => i !== correct);
+      const maxOther = Math.max(...otherCounts, 0);
+
+      const biased = correctWords >= maxOther + 3 || (maxOther > 0 && correctWords > maxOther * 1.28);
+      if (!biased) return { ...q, options };
+
+      const targetWords = Math.max(maxOther, Math.round((correctWords + maxOther) / 2));
+      options = options.map((opt, i) => {
+        if (i === correct) return opt;
+        if (optionWordCount(opt) < targetWords - 1 || optionWordCount(opt) < correctWords * 0.78) {
+          return lengthenDistractor(opt, options[correct], optionHash(opt + q.question) + i);
+        }
+        return opt;
+      });
+
+      const after = options.map(optionWordCount);
+      const maxWrong = Math.max(...after.filter((_, i) => i !== correct), 0);
+      if (after[correct] >= maxWrong + 3 || (maxWrong > 0 && after[correct] > maxWrong * 1.22)) {
+        options[correct] = shortenCorrectOption(options[correct]);
+      }
+
+      return { ...q, options };
+    }
+
     function prepareQuestions(source) {
       return shuffle(source).map(q => {
-        const indexed = q.options.map((text, i) => ({ text, originalIndex: i }));
+        const balanced = balanceQuestionOptions(q);
+        const indexed = balanced.options.map((text, i) => ({ text, originalIndex: i }));
         const shuffledOpts = shuffle(indexed);
-        const newCorrect = shuffledOpts.findIndex(o => o.originalIndex === q.correct);
+        const newCorrect = shuffledOpts.findIndex(o => o.originalIndex === balanced.correct);
         return {
-          topic: q.topic,
-          question: q.question,
+          topic: balanced.topic,
+          question: balanced.question,
           options: shuffledOpts.map(o => o.text),
           correct: newCorrect,
-          explanation: q.explanation
+          explanation: balanced.explanation
         };
       });
     }
