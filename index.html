@@ -2218,11 +2218,16 @@
       saveAnalytics(data);
     }
 
+    const READINESS_COVERAGE_TARGET = 25;
+    const READINESS_CHAPTER_ONLY_CAP = 58;
+    const READINESS_NO_EXAM_PASS_CAP = 72;
+    const READINESS_STRONG_EXAM_MIN = 78;
+
     function readinessTier(score) {
       if (score === null) return { label: "Not enough data", class: "" };
-      if (score >= 93) return { label: "Highly prepared", class: "strong" };
-      if (score >= 85) return { label: "Exam ready", class: "strong" };
-      if (score >= 70) return { label: "Approaching readiness", class: "" };
+      if (score >= 96) return { label: "Highly prepared", class: "strong" };
+      if (score >= 88) return { label: "Exam ready", class: "strong" };
+      if (score >= 72) return { label: "Approaching readiness", class: "" };
       if (score >= 50) return { label: "Developing", class: "weak" };
       return { label: "Not yet ready", class: "weak" };
     }
@@ -2231,7 +2236,8 @@
       let sum = 0;
       CHAPTER_IDS.forEach(m => {
         const t = data.moduleStats[m]?.total || 0;
-        sum += Math.min(1, t / 15);
+        const linear = Math.min(1, t / READINESS_COVERAGE_TARGET);
+        sum += linear * linear;
       });
       return sum / 3;
     }
@@ -2267,9 +2273,13 @@
       return weightTotal ? weightedSum / weightTotal : null;
     }
 
+    function hasPassedHighStakesExam(data) {
+      return (data.attempts || []).some(a => EXAM_QUIZ_IDS.includes(a.quizId) && a.passed);
+    }
+
     function computeExamReadiness(data) {
       const totalQ = data.totalQuestionsAnswered || 0;
-      if (totalQ < 5) {
+      if (totalQ < 8) {
         return {
           score: null,
           confidence: "low",
@@ -2283,23 +2293,33 @@
       const modulesTouched = CHAPTER_IDS.filter(m => (data.moduleStats[m]?.total || 0) >= 3).length;
       const examPerformance = bestExamPerformance(data);
       const noFinalTaken = examPerformance === null;
+      const passedHighStakes = hasPassedHighStakesExam(data);
 
       const chapterFoundation = accuracy * coverage;
 
       let score;
       if (noFinalTaken) {
         score = chapterFoundation;
+        score = Math.min(score, READINESS_CHAPTER_ONLY_CAP);
       } else {
-        score = 0.45 * chapterFoundation + 0.55 * examPerformance * (0.65 + 0.35 * coverage);
+        const examScale = 0.52 + 0.48 * coverage;
+        score = 0.34 * chapterFoundation + 0.66 * examPerformance * examScale;
+        if (!passedHighStakes) {
+          score = Math.min(score, READINESS_NO_EXAM_PASS_CAP);
+        }
+        if (examPerformance < READINESS_STRONG_EXAM_MIN) {
+          score = Math.min(score, 82);
+        }
+        if (coverage < 0.55) {
+          score *= 0.88;
+        }
       }
 
       score = Math.round(Math.max(0, Math.min(100, score)));
 
       let confidence = "low";
-      if (totalQ >= 45 && !noFinalTaken && coverage >= 0.66) confidence = "high";
-      else if (totalQ >= 15 && modulesTouched >= 2) confidence = "medium";
-
-      const tier = readinessTier(score);
+      if (totalQ >= 60 && !noFinalTaken && coverage >= 0.75 && passedHighStakes) confidence = "high";
+      else if (totalQ >= 20 && modulesTouched >= 2) confidence = "medium";
 
       return {
         score,
@@ -2313,8 +2333,8 @@
           chapterFoundation: Math.round(chapterFoundation)
         },
         message: noFinalTaken
-          ? `Estimate based on ${modulesTouched}/3 modules practiced. One chapter quiz cannot reflect full-exam readiness — complete Parts 1–3 and the Comprehensive Final for an accurate score.`
-          : "Blends curriculum coverage and accuracy with your best high-stakes exam performance (Comprehensive Final and Advanced exams weighted higher)."
+          ? `Chapter-only estimate (capped at ${READINESS_CHAPTER_ONLY_CAP}). Practice all three modules and take the Comprehensive Final before trusting a high score.`
+          : "Weighted toward passed high-stakes exams; broad coverage across Parts 1–3 is required for scores in the high 80s and above."
       };
     }
 
@@ -2408,6 +2428,7 @@
           <div class="breakdown-row"><span>Overall accuracy (all modules)</span><span>${readiness.breakdown.accuracy}%</span></div>
           <div class="breakdown-row"><span>Curriculum coverage (Parts 1–3)</span><span>${readiness.breakdown.curriculumCoverage}%</span></div>
           <div class="breakdown-row"><span>Chapter foundation (accuracy × coverage)</span><span>${readiness.breakdown.chapterFoundation}%</span></div>
+          <div class="breakdown-row"><span>Coverage target</span><span>${READINESS_COVERAGE_TARGET} Q per module for full credit</span></div>
           <div class="breakdown-row"><span>Modules practiced (≥3 questions)</span><span>${readiness.breakdown.modulesTouched} / 3</span></div>
           <div class="breakdown-row"><span>Best high-stakes exam</span><span>${readiness.breakdown.examPerformance === null ? "Not taken yet" : readiness.breakdown.examPerformance + "%"}</span></div>
         </div>` : "";
