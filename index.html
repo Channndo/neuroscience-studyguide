@@ -1806,29 +1806,10 @@
       return "part3";
     }
 
-    const MASTER_BANK = dedupeQuestions([
+    const CORE_BANK = dedupeQuestions([
       ...PART1, ...PART2, ...PART3,
       ...PART1_VARIANTS, ...PART2_VARIANTS, ...PART3_VARIANTS,
-      ...NEW_TIER1, ...NEW_TIER2, ...NEW_TIER3, ...NEW_TIER4,
       ...PART1_EXTRA_POOL, ...PART2_EXTRA_POOL, ...PART3_EXTRA_POOL
-    ]);
-
-    const MODULE_POOLS = {
-      part1: dedupeQuestions([
-        ...PART1, ...PART1_VARIANTS, ...PART1_EXTRA_POOL,
-        ...MASTER_BANK.filter(q => moduleFromQuestion(q) === "part1")
-      ]),
-      part2: dedupeQuestions([
-        ...PART2, ...PART2_VARIANTS, ...PART2_EXTRA_POOL,
-        ...MASTER_BANK.filter(q => moduleFromQuestion(q) === "part2")
-      ]),
-      part3: dedupeQuestions([
-        ...PART3, ...PART3_VARIANTS, ...PART3_EXTRA_POOL,
-        ...MASTER_BANK.filter(q => moduleFromQuestion(q) === "part3")
-      ])
-    };
-    MODULE_POOLS.all = dedupeQuestions([
-      ...MODULE_POOLS.part1, ...MODULE_POOLS.part2, ...MODULE_POOLS.part3
     ]);
 
     const QUIZ_SAMPLE_SIZES = {
@@ -1839,28 +1820,60 @@
       final100: 100,
       final150: 150,
       final200: 200,
-      pinnacle300: 300
+      pinnacle300: 350
     };
+
+    function getProgressiveTierQuestions(progress) {
+      const p = progress || getProgressWithBackup();
+      const tiers = [];
+      if (p.completed_final100 || p.final100Passed) tiers.push(...NEW_TIER1);
+      if (p.completed_final150 || p.final150Passed) tiers.push(...NEW_TIER2);
+      if (p.completed_final200 || p.final200Passed) tiers.push(...NEW_TIER3);
+      if (p.final100Passed && p.final150Passed && p.final200Passed) tiers.push(...NEW_TIER4);
+      return dedupeQuestions(tiers);
+    }
+
+    function buildModulePools(progress) {
+      const unlocked = getProgressiveTierQuestions(progress);
+      const merged = dedupeQuestions([...CORE_BANK, ...unlocked]);
+      const pools = {
+        part1: dedupeQuestions([
+          ...PART1, ...PART1_VARIANTS, ...PART1_EXTRA_POOL,
+          ...merged.filter(q => moduleFromQuestion(q) === "part1")
+        ]),
+        part2: dedupeQuestions([
+          ...PART2, ...PART2_VARIANTS, ...PART2_EXTRA_POOL,
+          ...merged.filter(q => moduleFromQuestion(q) === "part2")
+        ]),
+        part3: dedupeQuestions([
+          ...PART3, ...PART3_VARIANTS, ...PART3_EXTRA_POOL,
+          ...merged.filter(q => moduleFromQuestion(q) === "part3")
+        ])
+      };
+      pools.all = dedupeQuestions([...pools.part1, ...pools.part2, ...pools.part3]);
+      return pools;
+    }
 
     function sampleFromPool(pool, count) {
       return shuffle(pool).slice(0, Math.min(count, pool.length));
     }
 
-    function drawQuizQuestionSet(quizId) {
-      if (quizId === "part1") return sampleFromPool(MODULE_POOLS.part1, 15);
-      if (quizId === "part2") return sampleFromPool(MODULE_POOLS.part2, 15);
-      if (quizId === "part3") return sampleFromPool(MODULE_POOLS.part3, 15);
+    function drawQuizQuestionSet(quizId, progress) {
+      const pools = buildModulePools(progress);
+      if (quizId === "part1") return sampleFromPool(pools.part1, QUIZ_SAMPLE_SIZES.part1);
+      if (quizId === "part2") return sampleFromPool(pools.part2, QUIZ_SAMPLE_SIZES.part2);
+      if (quizId === "part3") return sampleFromPool(pools.part3, QUIZ_SAMPLE_SIZES.part3);
       if (quizId === "final") {
         return shuffle([
-          ...sampleFromPool(MODULE_POOLS.part1, 15),
-          ...sampleFromPool(MODULE_POOLS.part2, 15),
-          ...sampleFromPool(MODULE_POOLS.part3, 15)
+          ...sampleFromPool(pools.part1, 15),
+          ...sampleFromPool(pools.part2, 15),
+          ...sampleFromPool(pools.part3, 15)
         ]);
       }
-      if (quizId === "final100") return sampleFromPool(MODULE_POOLS.all, 100);
-      if (quizId === "final150") return sampleFromPool(MODULE_POOLS.all, 150);
-      if (quizId === "final200") return sampleFromPool(MODULE_POOLS.all, 200);
-      if (quizId === "pinnacle300") return sampleFromPool(MODULE_POOLS.all, 300);
+      if (quizId === "final100") return sampleFromPool(pools.all, QUIZ_SAMPLE_SIZES.final100);
+      if (quizId === "final150") return sampleFromPool(pools.all, QUIZ_SAMPLE_SIZES.final150);
+      if (quizId === "final200") return sampleFromPool(pools.all, QUIZ_SAMPLE_SIZES.final200);
+      if (quizId === "pinnacle300") return sampleFromPool(pools.all, QUIZ_SAMPLE_SIZES.pinnacle300);
       return [];
     }
 
@@ -1902,7 +1915,7 @@
         chapterId: "part1",
         title: "Part 1 Quiz",
         subtitle: "The Electrical Properties of the Neuron",
-        meta: "15 random · large Part 1 bank",
+        meta: "Instant feedback · randomized",
         description: "Resting potential, passive properties, action potentials, propagation",
         poolModule: "part1",
         icon: "P1",
@@ -1914,7 +1927,7 @@
         chapterId: "part2",
         title: "Part 2 Quiz",
         subtitle: "Neurons and Networks",
-        meta: "15 random · large Part 2 bank",
+        meta: "Instant feedback · randomized",
         description: "Synapses, receptors, integration, neuromodulation, circuits",
         poolModule: "part2",
         icon: "P2",
@@ -1926,7 +1939,7 @@
         chapterId: "part3",
         title: "Part 3 Quiz",
         subtitle: "The Brain",
-        meta: "15 random · large Part 3 bank",
+        meta: "Instant feedback · randomized",
         description: "Sensory systems, neuroanatomy, learning and memory",
         poolModule: "part3",
         icon: "P3",
@@ -1937,7 +1950,7 @@
         section: "final",
         title: "Comprehensive Final Exam",
         subtitle: "Parts 1, 2 & 3 Combined",
-        meta: "45 random · all modules",
+        meta: "All modules · answers at end",
         description: "Full MCB80x curriculum review — complete to unlock advanced finals",
         icon: "FINAL",
         cardClass: "final",
@@ -1949,9 +1962,9 @@
         section: "advanced",
         title: "Advanced Final I",
         subtitle: "Expanded Curriculum Review",
-        meta: "100 random · full bank",
+        meta: "Expanded bank · answers at end",
         description: "Reworded core concepts plus new MCB80x items — proctored-exam rigor",
-        icon: "100",
+        icon: "I",
         cardClass: "elite",
         requires: () => getProgress().finalCompleted,
         lockHint: "Complete the Comprehensive Final Exam to unlock",
@@ -1962,9 +1975,9 @@
         section: "advanced",
         title: "Advanced Final II",
         subtitle: "Intermediate Challenge",
-        meta: "150 random · full bank",
+        meta: "Expanded bank · answers at end",
         description: "Additional variations with increased conceptual precision",
-        icon: "150",
+        icon: "II",
         cardClass: "elite",
         requires: () => getProgress().finalCompleted,
         lockHint: "Complete the Comprehensive Final Exam to unlock",
@@ -1975,9 +1988,9 @@
         section: "advanced",
         title: "Advanced Final III",
         subtitle: "Advanced Challenge",
-        meta: "200 random · full bank",
+        meta: "Expanded bank · answers at end",
         description: "Broader coverage with rigorous single-variable mechanism testing",
-        icon: "200",
+        icon: "III",
         cardClass: "elite",
         requires: () => getProgress().finalCompleted,
         lockHint: "Complete the Comprehensive Final Exam to unlock",
@@ -1988,9 +2001,9 @@
         section: "pinnacle",
         title: "Pinnacle Examination",
         subtitle: "Ultimate MCB80x Mastery Test",
-        meta: "300 random · pinnacle bank",
+        meta: "Full mastery bank · answers at end",
         description: "The complete advanced question bank — pass all three advanced finals to unlock",
-        icon: "300",
+        icon: "PIN",
         cardClass: "pinnacle",
         requires: () => {
           const p = getProgress();
@@ -2522,13 +2535,6 @@
     let pendingUnlockMessage = null;
 
     function formatQuizMeta(quiz) {
-      const size = QUIZ_SAMPLE_SIZES[quiz.id];
-      const poolSize = quiz.poolModule
-        ? MODULE_POOLS[quiz.poolModule]?.length
-        : MODULE_POOLS.all?.length;
-      if (size && poolSize) {
-        return `${size} per attempt · ${poolSize} in module bank`;
-      }
       return quiz.meta || "";
     }
 
@@ -2622,7 +2628,7 @@
 
       if (progress.pinnacle300Passed) {
         banner.hidden = false;
-        banner.innerHTML = lastLine + "<strong>Pinnacle achieved!</strong> You passed the 300-question mastery examination.";
+        banner.innerHTML = lastLine + "<strong>Pinnacle achieved!</strong> You passed the mastery examination.";
       } else if (progress.finalCompleted) {
         banner.hidden = false;
         banner.innerHTML = lastLine + `<strong>Advanced track unlocked.</strong> ${advancedPassed}/3 advanced finals passed at 70%+. Pass all three to unlock the Pinnacle Exam.`;
@@ -2695,7 +2701,7 @@
       if (!quiz || !isQuizUnlocked(quiz)) return;
 
       activeQuizId = quizId;
-      shuffledQuestions = prepareQuestions(drawQuizQuestionSet(quizId));
+      shuffledQuestions = prepareQuestions(drawQuizQuestionSet(quizId, getProgressWithBackup()));
       currentIndex = 0;
       answers = {};
       document.getElementById("quiz-title").textContent = quiz.title;
@@ -2803,9 +2809,9 @@
 
       const quiz = QUIZZES[activeQuizId];
       const passed = pct >= PASS_THRESHOLD;
+      const prevProgress = getProgress();
 
       if (quiz) {
-        const prev = getProgress();
         const bestKey = `best_${activeQuizId}`;
         saveProgress({
           lastQuiz: {
@@ -2817,7 +2823,7 @@
             passed,
             ts: Date.now()
           },
-          [bestKey]: Math.max(prev[bestKey] || 0, pct),
+          [bestKey]: Math.max(prevProgress[bestKey] || 0, pct),
           [`completed_${activeQuizId}`]: true
         });
       }
@@ -2847,18 +2853,21 @@
         const updates = {};
         if (quiz.id === "final") {
           updates.finalCompleted = true;
-          if (!getProgress().finalCompleted) {
-            pendingUnlockMessage = "Advanced Finals unlocked! Three new exams (100, 150, and 200 questions) are now available.";
+          if (!prevProgress.finalCompleted) {
+            pendingUnlockMessage = "Advanced Finals unlocked! Three expanded exams are now available.";
           }
+        }
+        if (["final100", "final150", "final200"].includes(quiz.id) && !prevProgress[`completed_${quiz.id}`]) {
+          pendingUnlockMessage = "New questions added to Parts 1–3 practice banks. Chapter quizzes and later exams will draw from a larger pool.";
         }
         if (quiz.passKey && passed) {
           updates[quiz.passKey] = true;
           if (quiz.id === "pinnacle300") {
             pendingUnlockMessage = "Pinnacle Examination passed — full MCB80x mastery achieved!";
           } else if (quiz.id.startsWith("final") && quiz.id !== "final") {
-            const p = { ...getProgress(), ...updates };
-            if (p.final100Passed && p.final150Passed && p.final200Passed && !getProgress().pinnacle300Passed) {
-              pendingUnlockMessage = "All three Advanced Finals passed! The 300-question Pinnacle Examination is now unlocked.";
+            const p = { ...prevProgress, ...updates };
+            if (p.final100Passed && p.final150Passed && p.final200Passed && !prevProgress.pinnacle300Passed) {
+              pendingUnlockMessage = "All three Advanced Finals passed! The Pinnacle Examination is now unlocked.";
             }
           }
         }
