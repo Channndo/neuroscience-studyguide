@@ -137,9 +137,9 @@ const PART1_VARIANTS = [
     topic: "Electrical Signaling",
     question: "The Goldman equation predicts that if membrane permeability to Na\u207a greatly exceeds permeability to K\u207a, V_m will approach:",
     options: [
-      "E_K\u207a",
-      "E_Na\u207a",
-      "0 mV only if {CL} is impermeant",
+      "E_K",
+      "E_Na",
+      "0 mV only if Cl\u207b is impermeant",
       "The reversal potential of gap junctions",
     ],
     correct: 1,

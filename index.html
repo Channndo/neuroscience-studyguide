@@ -530,6 +530,19 @@
       margin-bottom: 0.85rem;
     }
 
+    .question-text sub,
+    .answer-btn sub,
+    .instant-feedback-text sub,
+    .flashcard-question sub,
+    .flashcard-mechanism sub,
+    .review-question sub,
+    .review-option sub,
+    .review-explanation sub {
+      font-size: 0.72em;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
     .question-text {
       font-size: 1.1rem;
       font-weight: 600;
@@ -1380,6 +1393,92 @@
       border: 1px solid var(--crimson);
     }
 
+    .quiz-card.daily {
+      border-color: rgba(255, 107, 53, 0.35);
+      background: linear-gradient(160deg, #fffaf7 0%, var(--surface) 100%);
+    }
+
+    .quiz-card.daily .quiz-card-icon {
+      background: rgba(255, 107, 53, 0.15);
+      color: #ea580c;
+    }
+
+    .quiz-card.review {
+      border-color: rgba(165, 28, 48, 0.25);
+    }
+
+    .daily-pop-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+      background: rgba(24, 24, 27, 0.55);
+      backdrop-filter: blur(4px);
+    }
+
+    .daily-pop-modal[hidden] {
+      display: none !important;
+    }
+
+    .daily-pop-dialog {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      max-width: 420px;
+      width: 100%;
+      padding: 1.75rem 1.5rem;
+      text-align: center;
+      border: 1px solid var(--gray-200);
+    }
+
+    .daily-pop-dialog .pop-flame {
+      font-size: 2.5rem;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .daily-pop-dialog h2 {
+      margin: 0 0 0.5rem;
+      font-size: 1.25rem;
+      color: var(--gray-900);
+    }
+
+    .daily-pop-dialog p {
+      margin: 0 0 1.25rem;
+      font-size: 0.92rem;
+      color: var(--gray-600);
+      line-height: 1.5;
+    }
+
+    .daily-pop-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .daily-pop-actions button {
+      font-family: inherit;
+      font-size: 0.92rem;
+      font-weight: 700;
+      padding: 0.65rem 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      border: none;
+    }
+
+    .daily-pop-actions .btn-pop-start {
+      background: var(--crimson);
+      color: #fff;
+    }
+
+    .daily-pop-actions .btn-pop-later {
+      background: var(--gray-100);
+      color: var(--gray-700);
+    }
+
     @media (prefers-reduced-motion: reduce) {
       .progress-fill, .quiz-card, .flashcard, .module-bar-fill, .ring-value { transition: none; }
     }
@@ -1405,7 +1504,7 @@
     <section id="view-dashboard" class="view active">
       <div class="dashboard-intro">
         <h2>Study Dashboard</h2>
-        <p>HarvardX MCB80x curriculum practice. Chapter quizzes give instant feedback; finals reveal answers at the end. Missed questions auto-generate flashcards.</p>
+        <p>HarvardX MCB80x curriculum practice. Chapter quizzes give instant feedback; finals reveal answers at the end. Missed questions auto-generate flashcards. Ion labels use real superscripts (e.g. Na⁺); variables like E<sub>K</sub> and V<sub>m</sub> appear as subscripts, not underscores.</p>
       </div>
       <div id="user-activity-card" class="activity-card"></div>
       <div id="study-plan-dashboard" class="study-plan-panel dashboard-plan" hidden></div>
@@ -1484,6 +1583,18 @@
     </section>
   </main>
 
+  <div id="daily-pop-modal" class="daily-pop-modal" hidden role="dialog" aria-modal="true" aria-labelledby="daily-pop-title">
+    <div class="daily-pop-dialog">
+      <div class="pop-flame" aria-hidden="true">🔥</div>
+      <h2 id="daily-pop-title">Keep your streak alive</h2>
+      <p>Five quick questions for today — same set until local midnight. Instant answers and explanations after each choice.</p>
+      <div class="daily-pop-actions">
+        <button type="button" class="btn-pop-start" id="daily-pop-start">Start today&apos;s pop quiz</button>
+        <button type="button" class="btn-pop-later" id="daily-pop-dismiss">Maybe later</button>
+      </div>
+    </div>
+  </div>
+
   <footer>
     Fisher-Yates shuffle on every quiz start &middot; HarvardX MCB80x curriculum alignment
   </footer>
@@ -1502,6 +1613,45 @@
     }
 
     const LETTERS = ["A", "B", "C", "D"];
+
+    function escapeHtml(text) {
+      return String(text)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    /** Turn keyboard shorthand (E_K, Na+, V_m) into readable notation with subscripts/superscripts. */
+    function formatNeuroscienceText(raw) {
+      if (raw == null) return "";
+      let s = escapeHtml(raw);
+
+      s = s.replace(/\[([A-Za-z⁺²⁻]+)\]_([a-zA-Z]+)/g, "[$1]<sub>$2</sub>");
+      s = s.replace(/E_(K|Na|Cl|Ca|ion|rev|h|LTP|EPSP|IPSP|m)⁺/g, "E<sub>$1</sub>");
+      s = s.replace(/\bE_(K|Na|Cl|Ca|ion|rev|h|LTP|EPSP|IPSP|m)\b/g, "E<sub>$1</sub>");
+      s = s.replace(/\bP_(K|Na|Cl)\b/g, "P<sub>$1</sub>");
+      s = s.replace(/\bg_(K|Na|Cl)\b/g, "g<sub>$1</sub>");
+      s = s.replace(/\bI_(Na|K|ion|Cl)\b/g, "I<sub>$1</sub>");
+      s = s.replace(/\bV_m\b/g, "V<sub>m</sub>");
+      s = s.replace(/\bC_m\b/g, "C<sub>m</sub>");
+      s = s.replace(/\bR_m\b/g, "R<sub>m</sub>");
+      s = s.replace(/\bR_in\b/g, "R<sub>in</sub>");
+      s = s.replace(/\btau_m\b/g, "τ<sub>m</sub>");
+      s = s.replace(/\bIP_3\b/g, "IP<sub>3</sub>");
+      s = s.replace(/\bCa2\+\b/g, "Ca²⁺");
+      s = s.replace(/\bMg2\+\b/g, "Mg²⁺");
+      s = s.replace(/\bCl-\b/g, "Cl⁻");
+      s = s.replace(/\bNa\+\b/g, "Na⁺");
+      s = s.replace(/\bK\+\b/g, "K⁺");
+      s = s.replace(/Na\+(\/)/g, "Na⁺$1");
+      s = s.replace(/\/K\+/g, "/K⁺");
+      s = s.replace(/\bDelta\b/g, "Δ");
+
+      return s;
+    }
+
+    const fmt = formatNeuroscienceText;
 
     /* ═══════════════════════════════════════════════════════════
        QUESTION BANKS — HarvardX MCB80x curriculum alignment
@@ -2097,6 +2247,8 @@
       part1: 15,
       part2: 15,
       part3: 15,
+      dailyPop: 5,
+      finalReview: 100,
       final: 45,
       final100: 100,
       final150: 150,
@@ -2139,11 +2291,51 @@
       return shuffle(pool).slice(0, Math.min(count, pool.length));
     }
 
+    function seedFromString(str) {
+      let h = 0;
+      for (let i = 0; i < str.length; i++) h = ((h << 5) - h + str.charCodeAt(i)) | 0;
+      return Math.abs(h) || 1;
+    }
+
+    function seededShuffle(array, seed) {
+      const list = array.slice();
+      let state = seedFromString(String(seed));
+      for (let i = list.length - 1; i > 0; i--) {
+        state = (state * 1664525 + 1013904223) >>> 0;
+        const j = state % (i + 1);
+        [list[i], list[j]] = [list[j], list[i]];
+      }
+      return list;
+    }
+
+    function drawDailyPopSet(progress) {
+      const pools = buildModulePools(progress);
+      const bank = pools.all.length >= QUIZ_SAMPLE_SIZES.dailyPop ? pools.all : CORE_BANK;
+      const dayKey = localDateKey();
+      return seededShuffle(bank, `mcb80x-daily-pop-${dayKey}`).slice(0, QUIZ_SAMPLE_SIZES.dailyPop);
+    }
+
+    function dailyPopDoneToday(progress) {
+      const p = progress || getProgressWithBackup();
+      return p.dailyPopCompletedDate === localDateKey();
+    }
+
     function drawQuizQuestionSet(quizId, progress) {
       const pools = buildModulePools(progress);
       if (quizId === "part1") return sampleFromPool(pools.part1, QUIZ_SAMPLE_SIZES.part1);
       if (quizId === "part2") return sampleFromPool(pools.part2, QUIZ_SAMPLE_SIZES.part2);
       if (quizId === "part3") return sampleFromPool(pools.part3, QUIZ_SAMPLE_SIZES.part3);
+      if (quizId === "dailyPop") return drawDailyPopSet(progress);
+      if (quizId === "finalReview") {
+        const n1 = 34;
+        const n2 = 33;
+        const n3 = 33;
+        return shuffle([
+          ...sampleFromPool(pools.part1, n1),
+          ...sampleFromPool(pools.part2, n2),
+          ...sampleFromPool(pools.part3, n3)
+        ]);
+      }
       if (quizId === "final") {
         return shuffle([
           ...sampleFromPool(pools.part1, 15),
@@ -2164,6 +2356,8 @@
     const ADVANCED_FINAL_IDS = ["final100", "final150", "final200"];
 
     function getPassThreshold(quizId) {
+      const quiz = QUIZZES[quizId];
+      if (quiz?.learningMode) return 0;
       if (quizId === "pinnacle300") return PINNACLE_PASS_THRESHOLD;
       if (ADVANCED_FINAL_IDS.includes(quizId)) return ADVANCED_PASS_THRESHOLD;
       return PASS_THRESHOLD;
@@ -2185,6 +2379,8 @@
       part1: 0.5,
       part2: 0.5,
       part3: 0.5,
+      dailyPop: 0.2,
+      finalReview: 0.65,
       final: 1.0,
       final100: 1.15,
       final150: 1.3,
@@ -2237,6 +2433,32 @@
         icon: "P3",
         immediateFeedback: true,
         passKey: "part3Passed"
+      },
+      dailyPop: {
+        id: "dailyPop",
+        section: "daily",
+        title: "Daily Streak Pop Quiz",
+        subtitle: "Keep your streak alive",
+        meta: "Instant feedback · new set at midnight",
+        description: "Five questions drawn from the full curriculum — same five for your local calendar day.",
+        icon: "🔥",
+        cardClass: "daily",
+        immediateFeedback: true,
+        learningMode: true
+      },
+      finalReview: {
+        id: "finalReview",
+        section: "final",
+        title: "Comprehensive Final Review",
+        subtitle: "Learn mode · before the scored final",
+        meta: "Instant feedback · all modules",
+        description: "100 questions across Parts 1–3. See the correct answer and explanation immediately after each choice.",
+        icon: "REV",
+        cardClass: "final review",
+        immediateFeedback: true,
+        learningMode: true,
+        requires: () => allChapterQuizzesPassed(),
+        lockHint: "Pass Part 1, Part 2, and Part 3 (70%+) to unlock"
       },
       final: {
         id: "final",
@@ -2310,9 +2532,10 @@
     };
 
     const DASHBOARD_SECTIONS = [
+      { id: "daily", title: "Daily Streak", hint: "Five questions · new set at local midnight · instant feedback" },
       { id: "core", title: "Core Modules", hint: "Part 1 · Part 2 · Part 3 — instant feedback on each answer" },
       { id: "flashcards", title: "Weakness Flashcards", hint: "Auto-generated after each chapter quiz" },
-      { id: "final", title: "Comprehensive Final", hint: "Unlocks after passing all three module quizzes · answers at end" },
+      { id: "final", title: "Comprehensive Final", hint: "Final Review (learn mode) then the scored exam · unlocks after passing all module quizzes" },
       { id: "advanced", title: "Advanced Finals", hint: "Unlocked after the Comprehensive Final · 80% required to pass each" },
       { id: "pinnacle", title: "Pinnacle Exam", hint: "Unlocked after passing all three advanced finals (80%+) · 90% to pass" }
     ];
@@ -2765,16 +2988,43 @@
         .filter(id => (data.moduleStats?.[id]?.total || 0) > 0)
         .sort((a, b) => (moduleAcc(a) ?? 101) - (moduleAcc(b) ?? 101))[0];
 
+      if (!dailyPopDoneToday(progress)) {
+        addStep(
+          "Complete today's streak pop quiz",
+          "Five questions with instant feedback · new set at local midnight · counts toward your daily streak.",
+          { quizId: "dailyPop" }
+        );
+      }
+
       if (!data.totalQuestionsAnswered) {
+        addStep(
+          "Take Part 1 Quiz",
+          "15 randomized questions with instant feedback on mechanisms and electrical properties.",
+          { quizId: "part1" }
+        );
+        addStep(
+          "Review missed items",
+          "Wrong answers become weakness flashcards automatically after each chapter quiz.",
+          { nav: "dashboard" }
+        );
+        addStep(
+          "Pass all three modules at 70%+",
+          "Unlocks Final Review and the Comprehensive Final exam.",
+          { nav: "dashboard" }
+        );
+        const starterDeduped = [];
+        const seenStarter = new Set();
+        steps.forEach(s => {
+          const key = s.quizId || s.nav || s.title;
+          if (seenStarter.has(key)) return;
+          seenStarter.add(key);
+          starterDeduped.push(s);
+        });
         return {
           headline: "Start with Part 1",
           subline: "Complete chapter quizzes to unlock your personalized plan. MCB80x is sequenced Part 1 → 2 → 3, then finals.",
           tags: ["New learner"],
-          steps: [
-            { title: "Take Part 1 Quiz", detail: "15 randomized questions with instant feedback on mechanisms and electrical properties.", quizId: "part1" },
-            { title: "Review missed items", detail: "Wrong answers become weakness flashcards automatically after each chapter quiz.", nav: "dashboard" },
-            { title: "Pass all three modules at 70%+", detail: "Unlocks the Comprehensive Final and advanced exam track.", nav: "dashboard" }
-          ]
+          steps: starterDeduped.slice(0, 10)
         };
       }
 
@@ -2792,6 +3042,11 @@
       });
 
       if (allChapterQuizzesPassed(progress) && !progress.finalCompleted) {
+        addStep(
+          "Comprehensive Final Review (learn mode)",
+          "100 questions from all three parts with instant answers and explanations — use before the scored final.",
+          { quizId: "finalReview" }
+        );
         addStep(
           "Complete the Comprehensive Final",
           "45 questions across all modules · answers at end. Finishing unlocks Advanced Finals I–III.",
@@ -3699,13 +3954,16 @@
           const cardClass = q.cardClass || "";
           const completed = progress[`completed_${q.id}`];
           const best = progress[`best_${q.id}`];
-          const lockBadge = !unlocked
+          let lockBadge = !unlocked
             ? `<span class="lock-badge">🔒 ${q.lockHint || "Locked"}</span>`
             : passed
               ? `<span class="lock-badge" style="background:var(--correct-bg);color:var(--correct);">✓ Passed</span>`
               : completed
                 ? `<span class="lock-badge" style="background:var(--gray-100);color:var(--gray-600);">Best: ${best}%</span>`
                 : "";
+          if (q.id === "dailyPop" && dailyPopDoneToday(progress)) {
+            lockBadge = `<span class="lock-badge" style="background:var(--correct-bg);color:var(--correct);">✓ Done today</span>`;
+          }
 
           return `
             <div class="quiz-card ${cardClass}${unlocked ? "" : " locked"}"
@@ -3761,6 +4019,8 @@
         toast.hidden = true;
       }
 
+      maybeShowDailyPopModal(progress);
+
       container.querySelectorAll(".quiz-card:not(.locked)").forEach(card => {
         if (card.dataset.flashcards) {
           const open = () => startFlashcards(card.dataset.flashcards);
@@ -3796,9 +4056,9 @@
       const card = fcDeck[fcIndex];
       document.getElementById("fc-topic").textContent = card.topic;
       document.getElementById("fc-topic-back").textContent = card.topic;
-      document.getElementById("fc-question").textContent = card.question;
-      document.getElementById("fc-answer").textContent = card.answer;
-      document.getElementById("fc-mechanism").textContent = card.explanation;
+      document.getElementById("fc-question").innerHTML = fmt(card.question);
+      document.getElementById("fc-answer").innerHTML = fmt(card.answer);
+      document.getElementById("fc-mechanism").innerHTML = fmt(card.explanation);
       document.getElementById("fc-counter").textContent = `${fcIndex + 1} / ${fcDeck.length}`;
       document.getElementById("flashcard").classList.remove("flipped");
       document.getElementById("fc-prev").disabled = fcIndex === 0;
@@ -3809,9 +4069,31 @@
       document.getElementById("flashcard").classList.toggle("flipped");
     }
 
+    function hideDailyPopModal() {
+      const modal = document.getElementById("daily-pop-modal");
+      if (modal) modal.hidden = true;
+    }
+
+    function maybeShowDailyPopModal(progress) {
+      const modal = document.getElementById("daily-pop-modal");
+      if (!modal || !storageAvailable()) return;
+      const p = progress || getProgressWithBackup();
+      if (dailyPopDoneToday(p)) {
+        modal.hidden = true;
+        return;
+      }
+      if (p.dailyPopDismissedDate === localDateKey()) {
+        modal.hidden = true;
+        return;
+      }
+      modal.hidden = false;
+    }
+
     function startQuiz(quizId) {
       const quiz = QUIZZES[quizId];
       if (!quiz || !isQuizUnlocked(quiz)) return;
+
+      if (quizId === "dailyPop") hideDailyPopModal();
 
       activeQuizId = quizId;
       shuffledQuestions = prepareQuestions(drawQuizQuestionSet(quizId, getProgressWithBackup()));
@@ -3842,19 +4124,19 @@
         }
         const disabled = revealed ? " disabled" : "";
         return `<button type="button" class="${cls}" data-index="${i}"${disabled}>
-          <span class="letter">${LETTERS[i]}</span>${opt}
+          <span class="letter">${LETTERS[i]}</span>${fmt(opt)}
         </button>`;
       }).join("");
 
       const feedbackHtml = revealed ? `
         <div class="instant-feedback ${isCorrect ? "correct" : "incorrect"}" role="status">
           <p class="instant-feedback-label">${isCorrect ? "Correct" : "Incorrect"}</p>
-          <p class="instant-feedback-text"><strong>Explanation:</strong> ${q.explanation}</p>
+          <p class="instant-feedback-text"><strong>Explanation:</strong> ${fmt(q.explanation)}</p>
         </div>` : "";
 
       document.getElementById("question-card").innerHTML = `
         <span class="topic-badge">${q.topic}</span>
-        <p class="question-text">${currentIndex + 1}. ${q.question}</p>
+        <p class="question-text">${currentIndex + 1}. ${fmt(q.question)}</p>
         <div class="answer-grid" role="radiogroup" aria-label="Answer choices">${optionsHtml}</div>
         ${feedbackHtml}`;
 
@@ -3904,14 +4186,14 @@
             cls += " is-answer";
             label = `<span class="review-option-label">Correct answer</span>`;
           }
-          return `<div class="${cls}">${label}${LETTERS[j]}. ${opt}</div>`;
+          return `<div class="${cls}">${label}${LETTERS[j]}. ${fmt(opt)}</div>`;
         }).join("");
 
         card.innerHTML = `
           <span class="review-badge">${isCorrect ? "Correct" : "Incorrect"}</span>
-          <p class="review-question">${i + 1}. ${q.question}</p>
+          <p class="review-question">${i + 1}. ${fmt(q.question)}</p>
           <div class="review-options">${optionsHtml}</div>
-          <p class="review-explanation"><strong>Explanation:</strong> ${q.explanation}</p>`;
+          <p class="review-explanation"><strong>Explanation:</strong> ${fmt(q.explanation)}</p>`;
 
         reviewList.appendChild(card);
       });
@@ -3922,7 +4204,7 @@
 
       const quiz = QUIZZES[activeQuizId];
       const passThreshold = getPassThreshold(activeQuizId);
-      const passed = pct >= passThreshold;
+      const passed = quiz?.learningMode ? true : pct >= passThreshold;
       const prevProgress = getProgress();
 
       if (quiz) {
@@ -3981,18 +4263,31 @@
           }
           if (quiz.id === "pinnacle300") {
             pendingUnlockMessage = "Pinnacle Examination passed — full MCB80x mastery achieved!";
-          } else if (quiz.id.startsWith("final") && quiz.id !== "final") {
+          } else if (ADVANCED_FINAL_IDS.includes(quiz.id)) {
             const p = { ...prevProgress, ...updates };
             if (p.final100Passed && p.final150Passed && p.final200Passed && !prevProgress.pinnacle300Passed) {
               pendingUnlockMessage = "All three Advanced Finals passed! The Pinnacle Examination is now unlocked.";
             }
           }
         }
+        if (quiz.id === "dailyPop") {
+          updates.dailyPopCompletedDate = localDateKey();
+          updateStreakOnVisit();
+          pendingUnlockMessage = "Daily pop quiz complete — streak updated for today!";
+        }
         if (Object.keys(updates).length) saveProgress(updates);
       }
 
       let message;
-      if (passed && pct >= 90) message = "Excellent — strong mastery at proctored-exam rigor.";
+      if (quiz?.learningMode) {
+        if (quiz.id === "dailyPop") {
+          message = `Daily pop complete — ${pct}% today. Same five questions return tomorrow after local midnight.`;
+        } else if (quiz.id === "finalReview") {
+          message = `Final review complete — ${pct}% for learning. When ready, take the scored Comprehensive Final below.`;
+        } else {
+          message = `Practice complete — ${pct}%. Review explanations below.`;
+        }
+      } else if (passed && pct >= 90) message = "Excellent — strong mastery at proctored-exam rigor.";
       else if (passed) message = `Passed (${passThreshold}% required). Review missed explanations below.`;
       else if (pct >= passThreshold - 5) message = `Below passing threshold (${passThreshold}%). Review explanations and retake.`;
       else if (pct >= 60) message = "Fair result. Revisit curriculum sections for missed mechanisms.";
@@ -4057,6 +4352,16 @@
     document.getElementById("nav-profile").addEventListener("click", () => {
       renderProfile();
       showView("profile");
+    });
+
+    document.getElementById("daily-pop-start").addEventListener("click", () => {
+      hideDailyPopModal();
+      startQuiz("dailyPop");
+    });
+
+    document.getElementById("daily-pop-dismiss").addEventListener("click", () => {
+      hideDailyPopModal();
+      saveProgress({ dailyPopDismissedDate: localDateKey() });
     });
 
     updateStreakOnVisit();

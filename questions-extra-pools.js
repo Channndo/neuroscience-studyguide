@@ -5,8 +5,8 @@ const PART1_EXTRA_POOL = [
     topic: "Goldman Equation",
     question: "At rest, if P_K is much greater than P_Na and P_Cl is negligible, the membrane potential is dominated by:",
     options: [
-      "E_Na",
-      "E_K",
+      "Sodium equilibrium (E_Na)",
+      "Potassium equilibrium (E_K)",
       "Exactly 0 mV",
       "The reversal of the pump only",
     ],
