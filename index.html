@@ -2308,11 +2308,71 @@
       return list;
     }
 
-    function drawDailyPopSet(progress) {
+    function calendarDayNumber() {
+      return Math.floor(parseLocalDateKey(localDateKey()).getTime() / 86400000);
+    }
+
+    function composeDailyPopSet(progress) {
       const pools = buildModulePools(progress);
-      const bank = pools.all.length >= QUIZ_SAMPLE_SIZES.dailyPop ? pools.all : CORE_BANK;
       const dayKey = localDateKey();
-      return seededShuffle(bank, `mcb80x-daily-pop-${dayKey}`).slice(0, QUIZ_SAMPLE_SIZES.dailyPop);
+      const dayNum = calendarDayNumber();
+      const seedBase = `mcb80x-daily-v2-${dayKey}-${dayNum}`;
+
+      const pick = (pool, count, part) => {
+        if (!pool?.length) return [];
+        return seededShuffle(pool, `${seedBase}-${part}`).slice(0, Math.min(count, pool.length));
+      };
+
+      const fallbackPart = partId =>
+        CORE_BANK.filter(q => moduleFromQuestion(q) === partId);
+
+      let set = [
+        ...pick(pools.part1.length ? pools.part1 : fallbackPart("part1"), 2, "p1"),
+        ...pick(pools.part2.length ? pools.part2 : fallbackPart("part2"), 2, "p2"),
+        ...pick(pools.part3.length ? pools.part3 : fallbackPart("part3"), 1, "p3")
+      ];
+
+      const seen = new Set();
+      set = set.filter(q => {
+        if (!q?.question || seen.has(q.question)) return false;
+        seen.add(q.question);
+        return true;
+      });
+
+      const bank = pools.all.length ? pools.all : CORE_BANK;
+      let fillSalt = 0;
+      while (set.length < QUIZ_SAMPLE_SIZES.dailyPop && fillSalt < 40) {
+        const extra = seededShuffle(bank, `${seedBase}-fill-${fillSalt}`).find(q => q?.question && !seen.has(q.question));
+        fillSalt++;
+        if (!extra) break;
+        seen.add(extra.question);
+        set.push(extra);
+      }
+
+      return seededShuffle(set, `${seedBase}-order`).slice(0, QUIZ_SAMPLE_SIZES.dailyPop);
+    }
+
+    function getDailyPopQuestionSet(progress) {
+      const p = progress || getProgressWithBackup();
+      const today = localDateKey();
+
+      if (p.dailyPopSetDate === today && Array.isArray(p.dailyPopSetKeys) && p.dailyPopSetKeys.length === QUIZ_SAMPLE_SIZES.dailyPop) {
+        const pools = buildModulePools(p);
+        const lookup = new Map(
+          dedupeQuestions(pools.all.length ? pools.all : CORE_BANK).map(q => [q.question, q])
+        );
+        const restored = p.dailyPopSetKeys.map(key => lookup.get(key)).filter(Boolean);
+        if (restored.length === QUIZ_SAMPLE_SIZES.dailyPop) return restored;
+      }
+
+      const drawn = composeDailyPopSet(p);
+      if (drawn.length && storageAvailable()) {
+        saveProgress({
+          dailyPopSetDate: today,
+          dailyPopSetKeys: drawn.map(q => q.question)
+        });
+      }
+      return drawn;
     }
 
     function dailyPopDoneToday(progress) {
@@ -2325,7 +2385,7 @@
       if (quizId === "part1") return sampleFromPool(pools.part1, QUIZ_SAMPLE_SIZES.part1);
       if (quizId === "part2") return sampleFromPool(pools.part2, QUIZ_SAMPLE_SIZES.part2);
       if (quizId === "part3") return sampleFromPool(pools.part3, QUIZ_SAMPLE_SIZES.part3);
-      if (quizId === "dailyPop") return drawDailyPopSet(progress);
+      if (quizId === "dailyPop") return getDailyPopQuestionSet(progress);
       if (quizId === "finalReview") {
         const n1 = 34;
         const n2 = 33;
@@ -2440,7 +2500,7 @@
         title: "Daily Streak Pop Quiz",
         subtitle: "Keep your streak alive",
         meta: "Instant feedback · new set at midnight",
-        description: "Five questions drawn from the full curriculum — same five for your local calendar day.",
+        description: "Five new questions each local calendar day (2 Part 1 · 2 Part 2 · 1 Part 3) — locked at midnight.",
         icon: "🔥",
         cardClass: "daily",
         immediateFeedback: true,
@@ -2532,7 +2592,7 @@
     };
 
     const DASHBOARD_SECTIONS = [
-      { id: "daily", title: "Daily Streak", hint: "Five questions · new set at local midnight · instant feedback" },
+      { id: "daily", title: "Daily Streak", hint: "Five questions · new mix every calendar day at local midnight" },
       { id: "core", title: "Core Modules", hint: "Part 1 · Part 2 · Part 3 — instant feedback on each answer" },
       { id: "flashcards", title: "Weakness Flashcards", hint: "Auto-generated after each chapter quiz" },
       { id: "final", title: "Comprehensive Final", hint: "Final Review (learn mode) then the scored exam · unlocks after passing all module quizzes" },
@@ -3879,8 +3939,9 @@
       return { ...q, options };
     }
 
-    function prepareQuestions(source) {
-      return shuffle(source).map(q => {
+    function prepareQuestions(source, quizId) {
+      const ordered = quizId === "dailyPop" ? source.slice() : shuffle(source);
+      return ordered.map(q => {
         const balanced = balanceQuestionOptions(q);
         const indexed = balanced.options.map((text, i) => ({ text, originalIndex: i }));
         const shuffledOpts = shuffle(indexed);
@@ -4096,10 +4157,15 @@
       if (quizId === "dailyPop") hideDailyPopModal();
 
       activeQuizId = quizId;
-      shuffledQuestions = prepareQuestions(drawQuizQuestionSet(quizId, getProgressWithBackup()));
+      shuffledQuestions = prepareQuestions(drawQuizQuestionSet(quizId, getProgressWithBackup()), quizId);
       currentIndex = 0;
       answers = {};
-      document.getElementById("quiz-title").textContent = quiz.title;
+      const titleEl = document.getElementById("quiz-title");
+      if (quizId === "dailyPop") {
+        titleEl.textContent = `${quiz.title} · ${new Date().toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric" })}`;
+      } else {
+        titleEl.textContent = quiz.title;
+      }
       showView("quiz");
       renderQuestion();
     }
