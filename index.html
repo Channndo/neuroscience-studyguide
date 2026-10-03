@@ -7,6 +7,14 @@
   <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <title>HarvardX Neuroscience Quiz Suite</title>
+  <script>
+    (function () {
+      try {
+        var s = JSON.parse(localStorage.getItem("mcb80x_settings") || "{}");
+        if (s.theme === "dark") document.documentElement.setAttribute("data-theme", "dark");
+      } catch (e) { /* ignore */ }
+    })();
+  </script>
   <style>
     :root {
       --gray-50: #fafafa;
@@ -35,6 +43,45 @@
       --radius: 12px;
       --radius-lg: 16px;
       --font: "Segoe UI", system-ui, -apple-system, sans-serif;
+    }
+
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --gray-100: #18181b;
+      --gray-200: #3f3f46;
+      --gray-300: #52525b;
+      --gray-400: #a1a1aa;
+      --gray-500: #d4d4d8;
+      --gray-600: #e4e4e7;
+      --gray-700: #f4f4f5;
+      --gray-800: #27272a;
+      --gray-900: #fafafa;
+      --crimson-light: rgba(165, 28, 48, 0.28);
+      --surface: #27272a;
+      --correct-bg: rgba(22, 101, 52, 0.22);
+      --correct-border: rgba(134, 239, 172, 0.35);
+      --incorrect-bg: rgba(153, 27, 27, 0.22);
+      --incorrect-border: rgba(252, 165, 165, 0.35);
+      --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+      --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    html[data-theme="dark"] body {
+      background: #18181b;
+      color: var(--gray-600);
+    }
+
+    html[data-theme="dark"] .nav-tab.active {
+      background: var(--crimson);
+      color: #fff;
+    }
+
+    html[data-theme="dark"] .quiz-card.daily {
+      background: linear-gradient(160deg, #1f1f23 0%, var(--surface) 100%);
+    }
+
+    html[data-theme="dark"] .quiz-card.exam-review {
+      background: linear-gradient(165deg, #1f1f23 0%, var(--surface) 100%);
     }
 
     *, *::before, *::after { box-sizing: border-box; }
@@ -1407,6 +1454,151 @@
       border-color: rgba(165, 28, 48, 0.25);
     }
 
+    .quiz-card.exam-review {
+      border-color: rgba(63, 63, 70, 0.35);
+      background: linear-gradient(165deg, var(--gray-50) 0%, var(--surface) 100%);
+    }
+
+    .quiz-card.exam-review .quiz-card-icon {
+      background: var(--gray-200);
+      color: var(--gray-800);
+    }
+
+    /* ── Settings ── */
+    .settings-panel {
+      background: var(--surface);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      padding: 2rem 1.75rem;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .settings-panel h2 {
+      margin: 0 0 0.35rem;
+      font-size: 1.35rem;
+      color: var(--gray-900);
+    }
+
+    .settings-panel > .settings-lead {
+      margin: 0 0 1.75rem;
+      color: var(--gray-500);
+      font-size: 0.92rem;
+    }
+
+    .settings-block {
+      padding: 1.25rem 0;
+      border-top: 1px solid var(--gray-200);
+    }
+
+    .settings-block:first-of-type {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .settings-block h3 {
+      margin: 0 0 0.35rem;
+      font-size: 1rem;
+      color: var(--gray-900);
+    }
+
+    .settings-block p {
+      margin: 0 0 1rem;
+      font-size: 0.85rem;
+      color: var(--gray-500);
+    }
+
+    .settings-avatar-row {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .user-avatar {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 2px solid var(--crimson);
+      background: var(--crimson-light);
+    }
+
+    .user-avatar-default {
+      font-size: 1.75rem;
+      line-height: 1;
+    }
+
+    .settings-avatar-preview {
+      width: 96px;
+      height: 96px;
+      font-size: 2.5rem;
+    }
+
+    .settings-avatar-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: flex-start;
+    }
+
+    .settings-file-input {
+      font-size: 0.85rem;
+      max-width: 100%;
+      color: var(--gray-600);
+    }
+
+    .theme-segment {
+      display: inline-flex;
+      gap: 4px;
+      background: var(--gray-100);
+      border: 1px solid var(--gray-200);
+      border-radius: 999px;
+      padding: 4px;
+    }
+
+    .theme-segment button {
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 0.45rem 1.1rem;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      background: transparent;
+      color: var(--gray-500);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .theme-segment button.active {
+      background: var(--surface);
+      color: var(--gray-900);
+      box-shadow: var(--shadow-sm);
+    }
+
+    html[data-theme="dark"] .theme-segment button.active {
+      background: var(--gray-200);
+      color: var(--gray-900);
+    }
+
+    .activity-user-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .profile-title-row {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.35rem;
+    }
+
     .daily-pop-modal {
       position: fixed;
       inset: 0;
@@ -1493,6 +1685,7 @@
     <nav class="main-nav" aria-label="Main">
       <button type="button" class="nav-tab active" data-nav="dashboard" id="nav-dashboard">Dashboard</button>
       <button type="button" class="nav-tab" data-nav="profile" id="nav-profile">Profile &amp; Readiness</button>
+      <button type="button" class="nav-tab" data-nav="settings" id="nav-settings">Settings</button>
     </nav>
     <div class="header-streak-wrap">
       <div id="header-streak-badge" class="streak-badge" role="status" aria-live="polite"></div>
@@ -1516,6 +1709,11 @@
     <!-- Profile -->
     <section id="view-profile" class="view">
       <div id="profile-content"></div>
+    </section>
+
+    <!-- Settings -->
+    <section id="view-settings" class="view">
+      <div id="settings-content"></div>
     </section>
 
     <!-- Quiz -->
@@ -2248,6 +2446,7 @@
       part2: 15,
       part3: 15,
       dailyPop: 5,
+      review10: 10,
       finalReview: 100,
       final: 45,
       final100: 100,
@@ -2289,6 +2488,40 @@
 
     function sampleFromPool(pool, count) {
       return shuffle(pool).slice(0, Math.min(count, pool.length));
+    }
+
+    /** Spread questions across topics (exam-style breadth) instead of clustering one subject. */
+    function sampleExamStyleFromPool(pool, count) {
+      if (!pool?.length) return [];
+      const target = Math.min(count, pool.length);
+      const byTopic = new Map();
+      pool.forEach(q => {
+        const topic = q.topic || "General";
+        if (!byTopic.has(topic)) byTopic.set(topic, []);
+        byTopic.get(topic).push(q);
+      });
+      const topics = shuffle([...byTopic.keys()]);
+      const picked = [];
+      const seen = new Set();
+      let guard = 0;
+      while (picked.length < target && guard < target * 40) {
+        const topic = topics[guard % topics.length];
+        const candidates = shuffle(byTopic.get(topic) || []);
+        const q = candidates.find(item => item?.question && !seen.has(item.question));
+        if (q) {
+          seen.add(q.question);
+          picked.push(q);
+        }
+        guard++;
+      }
+      if (picked.length < target) {
+        shuffle(pool).forEach(q => {
+          if (picked.length >= target || !q?.question || seen.has(q.question)) return;
+          seen.add(q.question);
+          picked.push(q);
+        });
+      }
+      return shuffle(picked);
     }
 
     function seedFromString(str) {
@@ -2386,6 +2619,16 @@
       if (quizId === "part2") return sampleFromPool(pools.part2, QUIZ_SAMPLE_SIZES.part2);
       if (quizId === "part3") return sampleFromPool(pools.part3, QUIZ_SAMPLE_SIZES.part3);
       if (quizId === "dailyPop") return getDailyPopQuestionSet(progress);
+      if (quizId === "review10P1") return sampleExamStyleFromPool(pools.part1, QUIZ_SAMPLE_SIZES.review10);
+      if (quizId === "review10P2") return sampleExamStyleFromPool(pools.part2, QUIZ_SAMPLE_SIZES.review10);
+      if (quizId === "review10P3") return sampleExamStyleFromPool(pools.part3, QUIZ_SAMPLE_SIZES.review10);
+      if (quizId === "review10Mix") {
+        return shuffle([
+          ...sampleExamStyleFromPool(pools.part1, 4),
+          ...sampleExamStyleFromPool(pools.part2, 3),
+          ...sampleExamStyleFromPool(pools.part3, 3)
+        ]);
+      }
       if (quizId === "finalReview") {
         const n1 = 34;
         const n2 = 33;
@@ -2423,6 +2666,7 @@
       return PASS_THRESHOLD;
     }
     const STORAGE_KEY = "mcb80x_progress";
+    const SETTINGS_KEY = "mcb80x_settings";
     const FLASHCARD_KEY = "mcb80x_flashcards";
     const ANALYTICS_KEY = "mcb80x_analytics";
     const CHAPTER_IDS = ["part1", "part2", "part3"];
@@ -2440,6 +2684,10 @@
       part2: 0.5,
       part3: 0.5,
       dailyPop: 0.2,
+      review10P1: 0.55,
+      review10P2: 0.55,
+      review10P3: 0.55,
+      review10Mix: 0.7,
       finalReview: 0.65,
       final: 1.0,
       final100: 1.15,
@@ -2493,6 +2741,55 @@
         icon: "P3",
         immediateFeedback: true,
         passKey: "part3Passed"
+      },
+      review10P1: {
+        id: "review10P1",
+        section: "review10",
+        title: "Part 1 Exam Review",
+        subtitle: "10 questions · electrical properties",
+        meta: "HarvardX-style · answers at end",
+        description: "Topic-spread multiple choice like the edX exam — no feedback until you submit.",
+        poolModule: "part1",
+        icon: "10·P1",
+        cardClass: "exam-review",
+        immediateFeedback: false
+      },
+      review10P2: {
+        id: "review10P2",
+        section: "review10",
+        title: "Part 2 Exam Review",
+        subtitle: "10 questions · neurons & networks",
+        meta: "HarvardX-style · answers at end",
+        description: "Synapses, integration, and circuits with broad topic coverage each attempt.",
+        poolModule: "part2",
+        icon: "10·P2",
+        cardClass: "exam-review",
+        immediateFeedback: false
+      },
+      review10P3: {
+        id: "review10P3",
+        section: "review10",
+        title: "Part 3 Exam Review",
+        subtitle: "10 questions · the brain",
+        meta: "HarvardX-style · answers at end",
+        description: "Sensory, motor, and cognitive neuroscience items drawn across Part 3 topics.",
+        poolModule: "part3",
+        icon: "10·P3",
+        cardClass: "exam-review",
+        immediateFeedback: false
+      },
+      review10Mix: {
+        id: "review10Mix",
+        section: "review10",
+        title: "Mixed Exam Review",
+        subtitle: "10 questions · all three parts",
+        meta: "HarvardX-style · answers at end",
+        description: "Mini comprehensive exam (4 Part 1 · 3 Part 2 · 3 Part 3) — closest short format to the real final.",
+        icon: "10·ALL",
+        cardClass: "exam-review",
+        immediateFeedback: false,
+        requires: () => allChapterQuizzesPassed(),
+        lockHint: "Pass Part 1, Part 2, and Part 3 (70%+) to unlock"
       },
       dailyPop: {
         id: "dailyPop",
@@ -2594,6 +2891,7 @@
     const DASHBOARD_SECTIONS = [
       { id: "daily", title: "Daily Streak", hint: "Five questions · new mix every calendar day at local midnight" },
       { id: "core", title: "Core Modules", hint: "Part 1 · Part 2 · Part 3 — instant feedback on each answer" },
+      { id: "review10", title: "10-Question Exam Reviews", hint: "HarvardX-style MCQs · topic spread · answers revealed at the end" },
       { id: "flashcards", title: "Weakness Flashcards", hint: "Auto-generated after each chapter quiz" },
       { id: "final", title: "Comprehensive Final", hint: "Final Review (learn mode) then the scored exam · unlocks after passing all module quizzes" },
       { id: "advanced", title: "Advanced Finals", hint: "Unlocked after the Comprehensive Final · 80% required to pass each" },
@@ -2601,6 +2899,159 @@
     ];
 
     let storageWarningShown = false;
+
+    function getSettings() {
+      try {
+        const raw = JSON.parse(localStorage.getItem(SETTINGS_KEY) || "{}");
+        return {
+          theme: raw.theme === "dark" ? "dark" : "light",
+          avatarDataUrl: typeof raw.avatarDataUrl === "string" ? raw.avatarDataUrl : null
+        };
+      } catch {
+        return { theme: "light", avatarDataUrl: null };
+      }
+    }
+
+    function saveSettings(partial) {
+      const next = { ...getSettings(), ...partial };
+      try {
+        localStorage.setItem(SETTINGS_KEY, JSON.stringify(next));
+      } catch (err) {
+        console.error("Settings save failed:", err);
+      }
+      applyTheme(next.theme);
+      refreshAvatarSurfaces();
+      return next;
+    }
+
+    function applyTheme(theme) {
+      if (theme === "dark") document.documentElement.setAttribute("data-theme", "dark");
+      else document.documentElement.removeAttribute("data-theme");
+      if (document.getElementById("view-profile")?.classList.contains("active")) renderProfile();
+    }
+
+    function avatarMarkup(size, extraClass = "") {
+      const { avatarDataUrl } = getSettings();
+      const cls = `user-avatar ${extraClass}`.trim();
+      if (avatarDataUrl) {
+        return `<img class="${cls}" src="${avatarDataUrl}" alt="Your profile picture" width="${size}" height="${size}" style="width:${size}px;height:${size}px">`;
+      }
+      return `<span class="${cls} user-avatar-default" style="width:${size}px;height:${size}px" aria-hidden="true">🧠</span>`;
+    }
+
+    function refreshAvatarSurfaces() {
+      renderUserActivityCard();
+      if (document.getElementById("view-settings")?.classList.contains("active")) renderSettings();
+    }
+
+    function processAvatarFile(file, onDone) {
+      if (!file || !file.type.startsWith("image/")) {
+        onDone(null, "Choose a JPG, PNG, or GIF image.");
+        return;
+      }
+      if (file.size > 4 * 1024 * 1024) {
+        onDone(null, "Image must be under 4 MB.");
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = e => {
+        const img = new Image();
+        img.onload = () => {
+          const max = 256;
+          const scale = Math.min(1, max / Math.max(img.width, img.height, 1));
+          const w = Math.max(1, Math.round(img.width * scale));
+          const h = Math.max(1, Math.round(img.height * scale));
+          const canvas = document.createElement("canvas");
+          canvas.width = w;
+          canvas.height = h;
+          const ctx = canvas.getContext("2d");
+          if (!ctx) {
+            onDone(null, "Could not process image in this browser.");
+            return;
+          }
+          ctx.drawImage(img, 0, 0, w, h);
+          onDone(canvas.toDataURL("image/jpeg", 0.88), null);
+        };
+        img.onerror = () => onDone(null, "Could not read that image.");
+        img.src = e.target.result;
+      };
+      reader.onerror = () => onDone(null, "Could not read file.");
+      reader.readAsDataURL(file);
+    }
+
+    function renderSettings() {
+      const el = document.getElementById("settings-content");
+      if (!el) return;
+      const settings = getSettings();
+      el.innerHTML = `
+        <div class="settings-panel">
+          <h2>Settings</h2>
+          <p class="settings-lead">Saved on this device only — no account required.</p>
+          <div class="settings-block">
+            <h3>Profile picture</h3>
+            <p>Shows on your dashboard activity card and study profile. Stored locally in your browser.</p>
+            <div class="settings-avatar-row">
+              <div id="settings-avatar-preview">${avatarMarkup(96, "settings-avatar-preview")}</div>
+              <div class="settings-avatar-actions">
+                <label class="btn-secondary" style="cursor:pointer;margin:0;">
+                  Change picture
+                  <input type="file" id="settings-avatar-input" class="settings-file-input" accept="image/*" hidden>
+                </label>
+                <button type="button" class="btn-secondary" id="settings-avatar-remove"${settings.avatarDataUrl ? "" : " disabled"}>Remove picture</button>
+                <p id="settings-avatar-msg" style="margin:0;font-size:0.8rem;color:var(--incorrect);" hidden></p>
+              </div>
+            </div>
+          </div>
+          <div class="settings-block">
+            <h3>Appearance</h3>
+            <p>Light or dark mode for the quiz app (header stays Harvard crimson).</p>
+            <div class="theme-segment" role="group" aria-label="Theme">
+              <button type="button" data-theme-pick="light"${settings.theme === "light" ? ' class="active"' : ""}>Light</button>
+              <button type="button" data-theme-pick="dark"${settings.theme === "dark" ? ' class="active"' : ""}>Dark</button>
+            </div>
+          </div>
+        </div>`;
+
+      el.querySelectorAll("[data-theme-pick]").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const theme = btn.dataset.themePick === "dark" ? "dark" : "light";
+          saveSettings({ theme });
+          el.querySelectorAll("[data-theme-pick]").forEach(b => b.classList.toggle("active", b.dataset.themePick === theme));
+        });
+      });
+
+      const fileInput = document.getElementById("settings-avatar-input");
+      const msg = document.getElementById("settings-avatar-msg");
+      fileInput?.addEventListener("change", () => {
+        const file = fileInput.files?.[0];
+        fileInput.value = "";
+        if (!file) return;
+        processAvatarFile(file, (dataUrl, err) => {
+          if (err) {
+            if (msg) {
+              msg.textContent = err;
+              msg.hidden = false;
+            }
+            return;
+          }
+          saveSettings({ avatarDataUrl: dataUrl });
+          const preview = document.getElementById("settings-avatar-preview");
+          if (preview) preview.innerHTML = avatarMarkup(96, "settings-avatar-preview");
+          const removeBtn = document.getElementById("settings-avatar-remove");
+          if (removeBtn) removeBtn.disabled = false;
+          if (msg) msg.hidden = true;
+        });
+      });
+
+      document.getElementById("settings-avatar-remove")?.addEventListener("click", () => {
+        saveSettings({ avatarDataUrl: null });
+        const preview = document.getElementById("settings-avatar-preview");
+        if (preview) preview.innerHTML = avatarMarkup(96, "settings-avatar-preview");
+        const removeBtn = document.getElementById("settings-avatar-remove");
+        if (removeBtn) removeBtn.disabled = true;
+        if (msg) msg.hidden = true;
+      });
+    }
 
     function storageAvailable() {
       try {
@@ -2772,11 +3223,14 @@
 
       const streakRow = activityStreakRowHtml();
 
+      const avatarRow = `<div class="activity-user-row">${avatarMarkup(52)}<div>`;
+
       if (!last && !analytics.totalQuestionsAnswered) {
         el.innerHTML = `
           ${streakRow}
+          ${avatarRow}
           <h3>Your progress</h3>
-          <p>No completed quizzes yet. Finish a quiz and tap <strong>Submit Quiz</strong> on the last question — your score will appear here and under Profile &amp; Readiness.</p>`;
+          <p>No completed quizzes yet. Finish a quiz and tap <strong>Submit Quiz</strong> on the last question — your score will appear here and under Profile &amp; Readiness.</p></div>`;
         return;
       }
 
@@ -2790,9 +3244,10 @@
 
       el.innerHTML = `
         ${streakRow}
+        ${avatarRow}
         <h3>Your progress</h3>
         <p>${lastText}<br>${tracked}</p>
-        <span class="saved-badge">Saved on this device</span>`;
+        <span class="saved-badge">Saved on this device</span></div>`;
     }
 
     function chapterQuizPassed(chapterId, progress) {
@@ -3103,6 +3558,11 @@
 
       if (allChapterQuizzesPassed(progress) && !progress.finalCompleted) {
         addStep(
+          "Mixed Exam Review (10 questions)",
+          "HarvardX-style mini final across all parts — answers at end, 70% target.",
+          { quizId: "review10Mix" }
+        );
+        addStep(
           "Comprehensive Final Review (learn mode)",
           "100 questions from all three parts with instant answers and explanations — use before the scored final.",
           { quizId: "finalReview" }
@@ -3362,8 +3822,9 @@
 
       const crimson = "#A51C30";
       const crimsonLight = "rgba(165, 28, 48, 0.65)";
-      const grayGrid = "rgba(228, 228, 231, 0.9)";
-      const grayTick = "#71717a";
+      const darkCharts = document.documentElement.getAttribute("data-theme") === "dark";
+      const grayGrid = darkCharts ? "rgba(161, 161, 170, 0.2)" : "rgba(228, 228, 231, 0.9)";
+      const grayTick = darkCharts ? "#a1a1aa" : "#71717a";
       const green = "#166534";
       const amber = "#d97706";
 
@@ -3716,7 +4177,10 @@
             </div>
           </div>
           <div>
-            <h2 class="profile-title">Your Study Profile</h2>
+            <div class="profile-title-row">
+              ${avatarMarkup(56)}
+              <h2 class="profile-title">Your Study Profile</h2>
+            </div>
             <span class="profile-tier">${tier.label}</span>
             <p class="profile-summary">${readiness.message}</p>
             <p class="confidence-badge">Confidence: ${readiness.confidence} · ${data.totalQuestionsAnswered} questions tracked · ${flashCount} weakness flashcards</p>
@@ -3845,6 +4309,7 @@
     const views = {
       dashboard: document.getElementById("view-dashboard"),
       profile: document.getElementById("view-profile"),
+      settings: document.getElementById("view-settings"),
       quiz: document.getElementById("view-quiz"),
       flashcard: document.getElementById("view-flashcard"),
       results: document.getElementById("view-results")
@@ -3853,9 +4318,10 @@
     function showView(name) {
       Object.values(views).forEach(v => v.classList.remove("active"));
       views[name].classList.add("active");
-      if (name === "dashboard" || name === "profile") {
+      if (name === "dashboard" || name === "profile" || name === "settings") {
         setMainNav(name);
         if (name === "profile") renderProfile();
+        if (name === "settings") renderSettings();
       }
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
@@ -4418,6 +4884,11 @@
     document.getElementById("nav-profile").addEventListener("click", () => {
       renderProfile();
       showView("profile");
+    });
+
+    document.getElementById("nav-settings").addEventListener("click", () => {
+      renderSettings();
+      showView("settings");
     });
 
     document.getElementById("daily-pop-start").addEventListener("click", () => {
