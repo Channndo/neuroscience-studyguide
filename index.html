@@ -1454,6 +1454,20 @@
       border-color: rgba(165, 28, 48, 0.25);
     }
 
+    .quiz-card.mixed-review {
+      border-color: rgba(165, 28, 48, 0.2);
+      background: linear-gradient(165deg, var(--crimson-light) 0%, var(--surface) 55%);
+    }
+
+    html[data-theme="dark"] .quiz-card.mixed-review {
+      background: linear-gradient(165deg, rgba(165, 28, 48, 0.12) 0%, var(--surface) 55%);
+    }
+
+    .quiz-card.mixed-review .quiz-card-icon {
+      background: var(--crimson-muted);
+      color: var(--crimson);
+    }
+
     .quiz-card.exam-review {
       border-color: rgba(63, 63, 70, 0.35);
       background: linear-gradient(165deg, var(--gray-50) 0%, var(--surface) 100%);
@@ -2441,11 +2455,117 @@
       ...PART1_EXTRA_POOL, ...PART2_EXTRA_POOL, ...PART3_EXTRA_POOL
     ]);
 
+    const MIXED_REVIEW_IDS = ["mixedReview20", "mixedReview30", "mixedReview40", "mixedReview50"];
+    const MIXED_REVIEW_LEVEL = {
+      mixedReview20: 1,
+      mixedReview30: 2,
+      mixedReview40: 3,
+      mixedReview50: 4
+    };
+    const MIXED_REVIEW_PASS = {
+      mixedReview20: 70,
+      mixedReview30: 72,
+      mixedReview40: 75,
+      mixedReview50: 78
+    };
+
+    function buildQuestionHardnessLookup() {
+      const map = new Map();
+      const assign = (list, tier) => {
+        (list || []).forEach(q => {
+          if (q?.question) map.set(q.question, Math.max(map.get(q.question) || 0, tier));
+        });
+      };
+      assign(PART1, 1);
+      assign(PART2, 1);
+      assign(PART3, 1);
+      assign(PART1_VARIANTS, 2);
+      assign(PART2_VARIANTS, 2);
+      assign(PART3_VARIANTS, 2);
+      assign(PART1_EXTRA_POOL, 3);
+      assign(PART2_EXTRA_POOL, 3);
+      assign(PART3_EXTRA_POOL, 3);
+      assign(typeof NEW_TIER1 !== "undefined" ? NEW_TIER1 : [], 4);
+      assign(typeof NEW_TIER2 !== "undefined" ? NEW_TIER2 : [], 5);
+      assign(typeof NEW_TIER3 !== "undefined" ? NEW_TIER3 : [], 6);
+      assign(typeof NEW_TIER4 !== "undefined" ? NEW_TIER4 : [], 7);
+      return map;
+    }
+
+    const QUESTION_HARDNESS = buildQuestionHardnessLookup();
+
+    function questionHardness(q) {
+      return QUESTION_HARDNESS.get(q?.question) || 2;
+    }
+
+    function poolForMixedReviewLevel(fullPool, level) {
+      const ranges = [
+        [1, 2],
+        [2, 3],
+        [3, 5],
+        [4, 7]
+      ];
+      const [lo, hi] = ranges[Math.max(1, Math.min(4, level)) - 1];
+      let filtered = fullPool.filter(q => {
+        const h = questionHardness(q);
+        return h >= lo && h <= hi;
+      });
+      if (filtered.length < 12) {
+        filtered = fullPool.filter(q => questionHardness(q) >= Math.max(1, lo - 1));
+      }
+      return filtered.length ? filtered : fullPool;
+    }
+
+    function mixedReviewPartSplit(total) {
+      const base = Math.floor(total / 3);
+      const counts = [base, base, base];
+      let extra = total - base * 3;
+      for (let i = 0; i < extra; i++) counts[i % 3]++;
+      return counts;
+    }
+
+    function drawMixedReviewSet(progress, quizId) {
+      const total = QUIZ_SAMPLE_SIZES[quizId];
+      const level = MIXED_REVIEW_LEVEL[quizId] || 1;
+      const pools = buildModulePools(progress);
+      const [n1, n2, n3] = mixedReviewPartSplit(total);
+      const partPools = [
+        poolForMixedReviewLevel(pools.part1, level),
+        poolForMixedReviewLevel(pools.part2, level),
+        poolForMixedReviewLevel(pools.part3, level)
+      ];
+      return shuffle([
+        ...sampleExamStyleFromPool(partPools[0], n1),
+        ...sampleExamStyleFromPool(partPools[1], n2),
+        ...sampleExamStyleFromPool(partPools[2], n3)
+      ]);
+    }
+
+    function mixedReviewUnlocked(quizId, progress) {
+      const p = progress || getProgressWithBackup();
+      if (!allChapterQuizzesPassed(p)) return false;
+      if (quizId === "mixedReview20") return true;
+      if (quizId === "mixedReview30") {
+        return (p.best_mixedReview20 || 0) >= MIXED_REVIEW_PASS.mixedReview20;
+      }
+      if (quizId === "mixedReview40") {
+        return (p.best_mixedReview30 || 0) >= MIXED_REVIEW_PASS.mixedReview30;
+      }
+      if (quizId === "mixedReview50") {
+        return (p.best_mixedReview40 || 0) >= MIXED_REVIEW_PASS.mixedReview40;
+      }
+      return false;
+    }
+
     const QUIZ_SAMPLE_SIZES = {
       part1: 15,
       part2: 15,
       part3: 15,
       dailyPop: 5,
+      mixedReview20: 20,
+      mixedReview30: 30,
+      mixedReview40: 40,
+      mixedReview50: 50,
       review10: 10,
       finalReview: 100,
       final: 45,
@@ -2619,6 +2739,7 @@
       if (quizId === "part2") return sampleFromPool(pools.part2, QUIZ_SAMPLE_SIZES.part2);
       if (quizId === "part3") return sampleFromPool(pools.part3, QUIZ_SAMPLE_SIZES.part3);
       if (quizId === "dailyPop") return getDailyPopQuestionSet(progress);
+      if (MIXED_REVIEW_IDS.includes(quizId)) return drawMixedReviewSet(progress, quizId);
       if (quizId === "review10P1") return sampleExamStyleFromPool(pools.part1, QUIZ_SAMPLE_SIZES.review10);
       if (quizId === "review10P2") return sampleExamStyleFromPool(pools.part2, QUIZ_SAMPLE_SIZES.review10);
       if (quizId === "review10P3") return sampleExamStyleFromPool(pools.part3, QUIZ_SAMPLE_SIZES.review10);
@@ -2663,6 +2784,7 @@
       if (quiz?.learningMode) return 0;
       if (quizId === "pinnacle300") return PINNACLE_PASS_THRESHOLD;
       if (ADVANCED_FINAL_IDS.includes(quizId)) return ADVANCED_PASS_THRESHOLD;
+      if (MIXED_REVIEW_PASS[quizId] != null) return MIXED_REVIEW_PASS[quizId];
       return PASS_THRESHOLD;
     }
     const STORAGE_KEY = "mcb80x_progress";
@@ -2684,6 +2806,10 @@
       part2: 0.5,
       part3: 0.5,
       dailyPop: 0.2,
+      mixedReview20: 0.58,
+      mixedReview30: 0.62,
+      mixedReview40: 0.66,
+      mixedReview50: 0.7,
       review10P1: 0.55,
       review10P2: 0.55,
       review10P3: 0.55,
@@ -2741,6 +2867,58 @@
         icon: "P3",
         immediateFeedback: true,
         passKey: "part3Passed"
+      },
+      mixedReview20: {
+        id: "mixedReview20",
+        section: "mixedReview",
+        title: "Mixed Review I",
+        subtitle: "20 questions · all three parts",
+        meta: "Instant feedback · 70% to pass",
+        description: "Foundation mix across Parts 1–3 — core curriculum with topic spread each attempt.",
+        icon: "20",
+        cardClass: "mixed-review",
+        immediateFeedback: true,
+        requires: () => mixedReviewUnlocked("mixedReview20"),
+        lockHint: "Pass Part 1, Part 2, and Part 3 (70%+) to unlock"
+      },
+      mixedReview30: {
+        id: "mixedReview30",
+        section: "mixedReview",
+        title: "Mixed Review II",
+        subtitle: "30 questions · harder item mix",
+        meta: "Instant feedback · 72% to pass",
+        description: "More reworded variants and integration items from every module.",
+        icon: "30",
+        cardClass: "mixed-review",
+        immediateFeedback: true,
+        requires: () => mixedReviewUnlocked("mixedReview30"),
+        lockHint: "Score 70%+ on Mixed Review I to unlock"
+      },
+      mixedReview40: {
+        id: "mixedReview40",
+        section: "mixedReview",
+        title: "Mixed Review III",
+        subtitle: "40 questions · expanded bank",
+        meta: "Instant feedback · 75% to pass",
+        description: "Draws heavily from extended pools — longer comprehensive drill before exam-style sets.",
+        icon: "40",
+        cardClass: "mixed-review",
+        immediateFeedback: true,
+        requires: () => mixedReviewUnlocked("mixedReview40"),
+        lockHint: "Score 72%+ on Mixed Review II to unlock"
+      },
+      mixedReview50: {
+        id: "mixedReview50",
+        section: "mixedReview",
+        title: "Mixed Review IV",
+        subtitle: "50 questions · peak pre-exam grind",
+        meta: "Instant feedback · 78% to pass",
+        description: "Toughest mixed set: advanced-tier items when unlocked, full curriculum breadth.",
+        icon: "50",
+        cardClass: "mixed-review",
+        immediateFeedback: true,
+        requires: () => mixedReviewUnlocked("mixedReview50"),
+        lockHint: "Score 75%+ on Mixed Review III to unlock"
       },
       review10P1: {
         id: "review10P1",
@@ -2891,6 +3069,7 @@
     const DASHBOARD_SECTIONS = [
       { id: "daily", title: "Daily Streak", hint: "Five questions · new mix every calendar day at local midnight" },
       { id: "core", title: "Core Modules", hint: "Part 1 · Part 2 · Part 3 — instant feedback on each answer" },
+      { id: "mixedReview", title: "Mixed Chapter Reviews", hint: "20 → 50 questions · all parts · instant feedback · difficulty rises each tier" },
       { id: "review10", title: "10-Question Exam Reviews", hint: "HarvardX-style MCQs · topic spread · answers revealed at the end" },
       { id: "flashcards", title: "Weakness Flashcards", hint: "Auto-generated after each chapter quiz" },
       { id: "final", title: "Comprehensive Final", hint: "Final Review (learn mode) then the scored exam · unlocks after passing all module quizzes" },
@@ -3557,6 +3736,19 @@
       });
 
       if (allChapterQuizzesPassed(progress) && !progress.finalCompleted) {
+        MIXED_REVIEW_IDS.forEach(id => {
+          if (!mixedReviewUnlocked(id, progress)) return;
+          const best = progress[`best_${id}`];
+          const thresh = MIXED_REVIEW_PASS[id];
+          if ((best || 0) >= thresh) return;
+          addStep(
+            `${QUIZZES[id].title} (${QUIZ_SAMPLE_SIZES[id]} questions)`,
+            best != null
+              ? `Best: ${best}% — aim for ${thresh}%+ with instant feedback before the 10-question exam-style sets.`
+              : QUIZZES[id].description,
+            { quizId: id }
+          );
+        });
         addStep(
           "Mixed Exam Review (10 questions)",
           "HarvardX-style mini final across all parts — answers at end, 70% target.",
