@@ -144,7 +144,7 @@ def part1_bank(existing: set[str]) -> list[dict]:
     for i, scen in enumerate(goldman_scenarios):
         add_unique(items, existing, [Q(
             "Goldman Equation",
-            f"Goldman/constant-field scenario {i + 1}: {scen}. V_m is pulled toward:",
+            f"Given: {scen}. In the Goldman (constant-field) relation, V_m is pulled toward:",
             ["The weighted equilibrium of permeant ions (not a single fixed value for all cases)", "Always +100 mV", "Always 0 mV regardless of gradients", "Only the pump reversal potential with no leaks"],
             0,
             "Multi-ion permeability sets V_m via weighted equilibria (Goldman equation).",
@@ -160,7 +160,7 @@ def part1_combinatorial(existing: set[str], items: list[dict]) -> None:
         leak_pct = 5 + (n % 45)
         add_unique(items, existing, [Q(
             "Passive Membrane Properties",
-            f"Neuron model #{n}: leak conductance rises by {leak_pct}% (R_m falls). The length constant λ compared with baseline is:",
+            f"If leak conductance rises by {leak_pct}% (R_m falls) with geometry unchanged, the length constant λ compared with baseline is:",
             ["Shorter — signals attenuate faster with distance", "Longer — signals spread farther always", "Unchanged — λ never depends on R_m", "Infinite — passive spread without limit"],
             0,
             "Higher leak (lower R_m) shortens λ in passive cable models.",
@@ -168,7 +168,7 @@ def part1_combinatorial(existing: set[str], items: list[dict]) -> None:
         tau_pct = 10 + (n % 50)
         add_unique(items, existing, [Q(
             "Passive Membrane Properties",
-            f"Neuron model #{n}: membrane capacitance increases by {tau_pct}% with R_m fixed. The time constant τ is:",
+            f"If membrane capacitance increases by {tau_pct}% while R_m is held fixed, the time constant τ is:",
             [f"~{100 + tau_pct}% of baseline (τ = R_m C_m)", "Zero — voltage changes instantly always", "Independent of C_m always", "Determined only by myelin thickness"],
             0,
             "τ scales with C_m when R_m is held constant.",
@@ -176,7 +176,7 @@ def part1_combinatorial(existing: set[str], items: list[dict]) -> None:
         dep = 3 + (n % 17)
         add_unique(items, existing, [Q(
             "Electrical Signaling",
-            f"Training set #{n}: resting V_m = -70 mV; a subthreshold EPSP peaks at -70 + {dep} mV. This EPSP is:",
+            f"Resting V_m is −70 mV. A subthreshold EPSP peaks at −70 + {dep} mV. This EPSP is:",
             [f"Depolarizing by about {dep} mV without reaching threshold", f"Hyperpolarizing by {dep} mV always", "At E_Na (+60 mV)", "Blocked by photopigment"],
             0,
             "EPSP amplitude adds to resting potential until threshold mechanisms engage.",
@@ -291,7 +291,7 @@ def part2_combinatorial(existing: set[str], items: list[dict]) -> None:
         freq = 5 + (n % 95)
         add_unique(items, existing, [Q(
             "Short-Term Plasticity",
-            f"Synapse #{n}: presynaptic fiber stimulated at {freq} Hz briefly. A common short-term change is:",
+            f"After brief presynaptic stimulation at {freq} Hz, a common short-term synaptic change is:",
             ["Synaptic depression or facilitation depending on prior activity", "Permanent loss of all receptors", "Conversion to electrical synapses only", "Photoreceptor dark current increase"],
             0,
             "High-frequency use changes release probability and vesicle availability.",
@@ -299,7 +299,7 @@ def part2_combinatorial(existing: set[str], items: list[dict]) -> None:
         epsp = 1 + (n % 12)
         add_unique(items, existing, [Q(
             "Synaptic Integration",
-            f"Integration drill #{n}: two EPSPs (+{epsp} mV each) arrive 5 ms apart at one synapse (temporal summation). Compared with one EPSP, peak depolarization tends to be:",
+            f"Two EPSPs (+{epsp} mV each) arrive 5 ms apart at one synapse (temporal summation). Compared with one EPSP alone, peak depolarization tends to be:",
             ["Larger if within τ of the membrane", "Smaller always", "Unchanged always", "Exactly at E_K"],
             0,
             "Temporal summation combines inputs within the membrane time window.",
@@ -425,14 +425,21 @@ def part3_combinatorial(existing: set[str], items: list[dict]) -> None:
         hz = 200 + (n % 800)
         add_unique(items, existing, [Q(
             "Auditory System",
-            f"Cochlear tuning example #{n}: a place on the basilar membrane best responding near {hz} Hz reflects:",
+            f"A basilar membrane region with peak sensitivity near {hz} Hz best reflects:",
             ["Tonotopic organization — frequency mapped to location", "Random wiring without frequency order", "Only olfactory receptor choice", "Only NMJ ACh release"],
             0,
             "Cochlear mechanics map frequency to position (place theory).",
         )])
+        hippocampus_stems = [
+            "Bilateral hippocampal system damage in humans most consistently impairs:",
+            "Profound medial temporal lobe damage in humans most consistently impairs:",
+            "Following extensive hippocampal injury in adults, the ability to form new memories is:",
+            "After bilateral hippocampal loss, which learning is most impaired in typical cases?",
+            "Medial temporal lobe damage producing anterograde amnesia primarily disrupts:",
+        ]
         add_unique(items, existing, [Q(
             "Learning & Memory",
-            f"Memory systems drill #{n}: hippocampal damage in humans most consistently impairs:",
+            hippocampus_stems[n % len(hippocampus_stems)],
             ["Forming new declarative/episodic memories", "All procedural skills such as riding a bike", "All sensation including touch", "Phototransduction in rods"],
             0,
             "Medial temporal lobe/hippocampus is critical for new declarative memory.",
