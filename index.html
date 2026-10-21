@@ -1813,6 +1813,7 @@
 
   <script src="questions-bank.js"></script>
   <script src="questions-extra-pools.js"></script>
+  <script src="questions-fresh-pools.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" crossorigin="anonymous"></script>
   <script>
     function shuffle(array) {
@@ -2449,10 +2450,15 @@
       return "part3";
     }
 
+    const FRESH_POOLS = typeof PART1_FRESH_POOL !== "undefined"
+      ? [...PART1_FRESH_POOL, ...PART2_FRESH_POOL, ...PART3_FRESH_POOL]
+      : [];
+
     const CORE_BANK = dedupeQuestions([
       ...PART1, ...PART2, ...PART3,
       ...PART1_VARIANTS, ...PART2_VARIANTS, ...PART3_VARIANTS,
-      ...PART1_EXTRA_POOL, ...PART2_EXTRA_POOL, ...PART3_EXTRA_POOL
+      ...PART1_EXTRA_POOL, ...PART2_EXTRA_POOL, ...PART3_EXTRA_POOL,
+      ...FRESH_POOLS
     ]);
 
     const MIXED_REVIEW_IDS = ["mixedReview20", "mixedReview30", "mixedReview40", "mixedReview50"];
@@ -2485,6 +2491,9 @@
       assign(PART1_EXTRA_POOL, 3);
       assign(PART2_EXTRA_POOL, 3);
       assign(PART3_EXTRA_POOL, 3);
+      assign(typeof PART1_FRESH_POOL !== "undefined" ? PART1_FRESH_POOL : [], 3);
+      assign(typeof PART2_FRESH_POOL !== "undefined" ? PART2_FRESH_POOL : [], 3);
+      assign(typeof PART3_FRESH_POOL !== "undefined" ? PART3_FRESH_POOL : [], 3);
       assign(typeof NEW_TIER1 !== "undefined" ? NEW_TIER1 : [], 4);
       assign(typeof NEW_TIER2 !== "undefined" ? NEW_TIER2 : [], 5);
       assign(typeof NEW_TIER3 !== "undefined" ? NEW_TIER3 : [], 6);
@@ -2527,6 +2536,7 @@
     function drawMixedReviewSet(progress, quizId) {
       const total = QUIZ_SAMPLE_SIZES[quizId];
       const level = MIXED_REVIEW_LEVEL[quizId] || 1;
+      const avoid = lastDrawAvoidKeys(quizId, progress);
       const pools = buildModulePools(progress);
       const [n1, n2, n3] = mixedReviewPartSplit(total);
       const partPools = [
@@ -2535,9 +2545,9 @@
         poolForMixedReviewLevel(pools.part3, level)
       ];
       return shuffle([
-        ...sampleExamStyleFromPool(partPools[0], n1),
-        ...sampleExamStyleFromPool(partPools[1], n2),
-        ...sampleExamStyleFromPool(partPools[2], n3)
+        ...sampleExamStyleFromPool(partPools[0], n1, avoid),
+        ...sampleExamStyleFromPool(partPools[1], n2, avoid),
+        ...sampleExamStyleFromPool(partPools[2], n3, avoid)
       ]);
     }
 
@@ -2591,14 +2601,17 @@
       const pools = {
         part1: dedupeQuestions([
           ...PART1, ...PART1_VARIANTS, ...PART1_EXTRA_POOL,
+          ...(typeof PART1_FRESH_POOL !== "undefined" ? PART1_FRESH_POOL : []),
           ...merged.filter(q => moduleFromQuestion(q) === "part1")
         ]),
         part2: dedupeQuestions([
           ...PART2, ...PART2_VARIANTS, ...PART2_EXTRA_POOL,
+          ...(typeof PART2_FRESH_POOL !== "undefined" ? PART2_FRESH_POOL : []),
           ...merged.filter(q => moduleFromQuestion(q) === "part2")
         ]),
         part3: dedupeQuestions([
           ...PART3, ...PART3_VARIANTS, ...PART3_EXTRA_POOL,
+          ...(typeof PART3_FRESH_POOL !== "undefined" ? PART3_FRESH_POOL : []),
           ...merged.filter(q => moduleFromQuestion(q) === "part3")
         ])
       };
@@ -2606,16 +2619,28 @@
       return pools;
     }
 
-    function sampleFromPool(pool, count) {
-      return shuffle(pool).slice(0, Math.min(count, pool.length));
+    function lastDrawAvoidKeys(quizId, progress) {
+      const keys = progress?.[`lastDraw_${quizId}`];
+      return Array.isArray(keys) ? keys : [];
+    }
+
+    function sampleFromPool(pool, count, avoidKeys) {
+      const avoid = new Set(avoidKeys || []);
+      let candidates = pool.filter(q => q?.question && !avoid.has(q.question));
+      if (candidates.length < count) {
+        candidates = pool.filter(q => q?.question);
+      }
+      return shuffle(candidates).slice(0, Math.min(count, candidates.length));
     }
 
     /** Spread questions across topics (exam-style breadth) instead of clustering one subject. */
-    function sampleExamStyleFromPool(pool, count) {
+    function sampleExamStyleFromPool(pool, count, avoidKeys) {
       if (!pool?.length) return [];
       const target = Math.min(count, pool.length);
+      const avoid = new Set(avoidKeys || []);
       const byTopic = new Map();
       pool.forEach(q => {
+        if (avoid.has(q?.question)) return;
         const topic = q.topic || "General";
         if (!byTopic.has(topic)) byTopic.set(topic, []);
         byTopic.get(topic).push(q);
@@ -2627,7 +2652,7 @@
       while (picked.length < target && guard < target * 40) {
         const topic = topics[guard % topics.length];
         const candidates = shuffle(byTopic.get(topic) || []);
-        const q = candidates.find(item => item?.question && !seen.has(item.question));
+        const q = candidates.find(item => item?.question && !seen.has(item.question) && !avoid.has(item.question));
         if (q) {
           seen.add(q.question);
           picked.push(q);
@@ -2635,6 +2660,13 @@
         guard++;
       }
       if (picked.length < target) {
+        shuffle(pool).forEach(q => {
+          if (picked.length >= target || !q?.question || seen.has(q.question) || avoid.has(q.question)) return;
+          seen.add(q.question);
+          picked.push(q);
+        });
+      }
+      if (picked.length < target && avoid.size) {
         shuffle(pool).forEach(q => {
           if (picked.length >= target || !q?.question || seen.has(q.question)) return;
           seen.add(q.question);
@@ -2735,19 +2767,20 @@
 
     function drawQuizQuestionSet(quizId, progress) {
       const pools = buildModulePools(progress);
-      if (quizId === "part1") return sampleFromPool(pools.part1, QUIZ_SAMPLE_SIZES.part1);
-      if (quizId === "part2") return sampleFromPool(pools.part2, QUIZ_SAMPLE_SIZES.part2);
-      if (quizId === "part3") return sampleFromPool(pools.part3, QUIZ_SAMPLE_SIZES.part3);
+      const avoid = lastDrawAvoidKeys(quizId, progress);
+      if (quizId === "part1") return sampleFromPool(pools.part1, QUIZ_SAMPLE_SIZES.part1, avoid);
+      if (quizId === "part2") return sampleFromPool(pools.part2, QUIZ_SAMPLE_SIZES.part2, avoid);
+      if (quizId === "part3") return sampleFromPool(pools.part3, QUIZ_SAMPLE_SIZES.part3, avoid);
       if (quizId === "dailyPop") return getDailyPopQuestionSet(progress);
       if (MIXED_REVIEW_IDS.includes(quizId)) return drawMixedReviewSet(progress, quizId);
-      if (quizId === "review10P1") return sampleExamStyleFromPool(pools.part1, QUIZ_SAMPLE_SIZES.review10);
-      if (quizId === "review10P2") return sampleExamStyleFromPool(pools.part2, QUIZ_SAMPLE_SIZES.review10);
-      if (quizId === "review10P3") return sampleExamStyleFromPool(pools.part3, QUIZ_SAMPLE_SIZES.review10);
+      if (quizId === "review10P1") return sampleExamStyleFromPool(pools.part1, QUIZ_SAMPLE_SIZES.review10, avoid);
+      if (quizId === "review10P2") return sampleExamStyleFromPool(pools.part2, QUIZ_SAMPLE_SIZES.review10, avoid);
+      if (quizId === "review10P3") return sampleExamStyleFromPool(pools.part3, QUIZ_SAMPLE_SIZES.review10, avoid);
       if (quizId === "review10Mix") {
         return shuffle([
-          ...sampleExamStyleFromPool(pools.part1, 4),
-          ...sampleExamStyleFromPool(pools.part2, 3),
-          ...sampleExamStyleFromPool(pools.part3, 3)
+          ...sampleExamStyleFromPool(pools.part1, 4, avoid),
+          ...sampleExamStyleFromPool(pools.part2, 3, avoid),
+          ...sampleExamStyleFromPool(pools.part3, 3, avoid)
         ]);
       }
       if (quizId === "finalReview") {
@@ -2755,22 +2788,22 @@
         const n2 = 33;
         const n3 = 33;
         return shuffle([
-          ...sampleFromPool(pools.part1, n1),
-          ...sampleFromPool(pools.part2, n2),
-          ...sampleFromPool(pools.part3, n3)
+          ...sampleFromPool(pools.part1, n1, avoid),
+          ...sampleFromPool(pools.part2, n2, avoid),
+          ...sampleFromPool(pools.part3, n3, avoid)
         ]);
       }
       if (quizId === "final") {
         return shuffle([
-          ...sampleFromPool(pools.part1, 15),
-          ...sampleFromPool(pools.part2, 15),
-          ...sampleFromPool(pools.part3, 15)
+          ...sampleFromPool(pools.part1, 15, avoid),
+          ...sampleFromPool(pools.part2, 15, avoid),
+          ...sampleFromPool(pools.part3, 15, avoid)
         ]);
       }
-      if (quizId === "final100") return sampleFromPool(pools.all, QUIZ_SAMPLE_SIZES.final100);
-      if (quizId === "final150") return sampleFromPool(pools.all, QUIZ_SAMPLE_SIZES.final150);
-      if (quizId === "final200") return sampleFromPool(pools.all, QUIZ_SAMPLE_SIZES.final200);
-      if (quizId === "pinnacle300") return sampleFromPool(pools.all, QUIZ_SAMPLE_SIZES.pinnacle300);
+      if (quizId === "final100") return sampleFromPool(pools.all, QUIZ_SAMPLE_SIZES.final100, avoid);
+      if (quizId === "final150") return sampleFromPool(pools.all, QUIZ_SAMPLE_SIZES.final150, avoid);
+      if (quizId === "final200") return sampleFromPool(pools.all, QUIZ_SAMPLE_SIZES.final200, avoid);
+      if (quizId === "pinnacle300") return sampleFromPool(pools.all, QUIZ_SAMPLE_SIZES.pinnacle300, avoid);
       return [];
     }
 
@@ -4815,7 +4848,12 @@
       if (quizId === "dailyPop") hideDailyPopModal();
 
       activeQuizId = quizId;
-      shuffledQuestions = prepareQuestions(drawQuizQuestionSet(quizId, getProgressWithBackup()), quizId);
+      const progress = getProgressWithBackup();
+      const drawn = drawQuizQuestionSet(quizId, progress);
+      shuffledQuestions = prepareQuestions(drawn, quizId);
+      if (drawn.length && quizId !== "dailyPop") {
+        saveProgress({ [`lastDraw_${quizId}`]: drawn.map(q => q.question) });
+      }
       currentIndex = 0;
       answers = {};
       const titleEl = document.getElementById("quiz-title");
