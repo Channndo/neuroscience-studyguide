@@ -564,6 +564,29 @@
       margin-bottom: 1.25rem;
     }
 
+    .question-meta-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-bottom: 0.85rem;
+      align-items: center;
+    }
+
+    .module-badge {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      color: var(--gray-800);
+      background: var(--gray-200);
+      padding: 0.28rem 0.65rem;
+      border-radius: 999px;
+    }
+
+    html[data-theme="dark"] .module-badge {
+      color: var(--gray-900);
+    }
+
     .topic-badge {
       display: inline-block;
       font-size: 0.7rem;
@@ -574,7 +597,7 @@
       background: var(--crimson-light);
       padding: 0.28rem 0.7rem;
       border-radius: 999px;
-      margin-bottom: 0.85rem;
+      margin-bottom: 0;
     }
 
     .question-text sub,
@@ -2426,15 +2449,87 @@
     const SET_200 = [...SET_150, ...NEW_TIER3];
     const SET_300 = [...SET_200, ...NEW_TIER4];
 
+    /** MCB80x Part 1 — The Electrical Properties of the Neuron */
     const PART1_TOPIC_HINTS = new Set([
-      "Resting Potential", "Nernst Equation", "Passive Membrane Properties",
-      "Action Potentials", "Action Potential Propagation", "Electrical Signaling"
+      "Resting Potential", "Nernst Equation", "Goldman Equation", "Passive Membrane Properties",
+      "Action Potentials", "Action Potential Propagation", "Electrical Signaling",
+      "Patch Clamp", "Current Clamp", "Voltage Clamp", "Pharmacology", "Ion Selectivity",
+      "Channel Gating", "Axon Initial Segment", "Equilibrium vs Steady State", "Experimental Methods",
+      "Quantitative Physiology", "Dendritic Integration", "Cable Properties", "Membrane Biophysics"
     ]);
 
+    /** MCB80x Part 2 — Neurons & Networks (signaling between neurons) */
     const PART2_TOPIC_HINTS = new Set([
       "Chemical Synapses", "Synaptic Transmission", "Receptor Types", "Second Messengers",
-      "Synaptic Integration", "Neuromodulation", "Neural Circuits", "Electrical Synapses"
+      "Synaptic Integration", "Neuromodulation", "Neural Circuits", "Electrical Synapses",
+      "Synaptic Vesicles", "Short-Term Plasticity", "Long-Term Plasticity", "Retrograde Signaling",
+      "Synaptic Anatomy", "Excitatory-Inhibitory Balance", "Drug Effects", "Peptide Transmitters",
+      "Neuromuscular Junction", "Co-transmission", "Inhibitory Circuits", "Synaptic Plasticity Rules",
+      "Integration", "Circuit Modulation"
     ]);
+
+    /** MCB80x Part 3 — The Brain (sensory systems, anatomy, cognition) */
+    const PART3_TOPIC_HINTS = new Set([
+      "Visual System", "Visual Cortex", "Phototransduction", "Retinal Circuitry",
+      "Auditory System", "Auditory Pathway", "Olfactory System", "Olfaction", "Taste",
+      "Somatosensation", "Pain", "Proprioception", "Motor Systems", "Neuroanatomy",
+      "Learning & Memory", "Synaptic Basis of Memory", "Brain Function", "Language",
+      "Sleep & Memory", "Emotion & Memory", "Executive Function", "Neuroimaging",
+      "Clinical Correlates", "Sensory Systems", "Vestibular System", "Basal Ganglia",
+      "Hippocampus", "Cerebellum", "Thalamus", "Cortex"
+    ]);
+
+    const MODULE_LABELS = {
+      part1: "Part 1 · Electrical Properties of the Neuron",
+      part2: "Part 2 · Neurons & Networks",
+      part3: "Part 3 · The Brain"
+    };
+
+    let QUESTION_MODULE_REGISTRY = null;
+
+    function moduleFromTopic(topic) {
+      if (PART1_TOPIC_HINTS.has(topic)) return "part1";
+      if (PART2_TOPIC_HINTS.has(topic)) return "part2";
+      if (PART3_TOPIC_HINTS.has(topic)) return "part3";
+      return null;
+    }
+
+    function buildQuestionModuleRegistry() {
+      const reg = new Map();
+      const assign = (list, mod) => {
+        (list || []).forEach(q => {
+          if (q?.question) reg.set(q.question, mod);
+        });
+      };
+      assign(PART1, "part1");
+      assign(PART1_VARIANTS, "part1");
+      assign(PART1_EXTRA_POOL, "part1");
+      assign(typeof PART1_FRESH_POOL !== "undefined" ? PART1_FRESH_POOL : [], "part1");
+      assign(typeof PART1_FRESH_POOL_2 !== "undefined" ? PART1_FRESH_POOL_2 : [], "part1");
+      assign(PART2, "part2");
+      assign(PART2_VARIANTS, "part2");
+      assign(PART2_EXTRA_POOL, "part2");
+      assign(typeof PART2_FRESH_POOL !== "undefined" ? PART2_FRESH_POOL : [], "part2");
+      assign(typeof PART2_FRESH_POOL_2 !== "undefined" ? PART2_FRESH_POOL_2 : [], "part2");
+      assign(PART3, "part3");
+      assign(PART3_VARIANTS, "part3");
+      assign(PART3_EXTRA_POOL, "part3");
+      assign(typeof PART3_FRESH_POOL !== "undefined" ? PART3_FRESH_POOL : [], "part3");
+      assign(typeof PART3_FRESH_POOL_2 !== "undefined" ? PART3_FRESH_POOL_2 : [], "part3");
+      [NEW_TIER1, NEW_TIER2, NEW_TIER3, NEW_TIER4].forEach(tier => {
+        (tier || []).forEach(q => {
+          if (!q?.question || reg.has(q.question)) return;
+          const mod = moduleFromTopic(q.topic);
+          if (mod) reg.set(q.question, mod);
+        });
+      });
+      return reg;
+    }
+
+    function getQuestionModuleRegistry() {
+      if (!QUESTION_MODULE_REGISTRY) QUESTION_MODULE_REGISTRY = buildQuestionModuleRegistry();
+      return QUESTION_MODULE_REGISTRY;
+    }
 
     function dedupeQuestions(list) {
       const map = new Map();
@@ -2445,14 +2540,36 @@
     }
 
     function moduleFromQuestion(q) {
-      if (PART1.some(p => p.question === q.question) || PART1_TOPIC_HINTS.has(q.topic)) return "part1";
-      if (PART2.some(p => p.question === q.question) || PART2_TOPIC_HINTS.has(q.topic)) return "part2";
+      if (!q) return "part3";
+      const reg = getQuestionModuleRegistry();
+      if (reg.has(q.question)) return reg.get(q.question);
+      const fromTopic = moduleFromTopic(q.topic);
+      if (fromTopic) return fromTopic;
       return "part3";
     }
 
-    const FRESH_POOLS = typeof PART1_FRESH_POOL !== "undefined"
-      ? [...PART1_FRESH_POOL, ...PART2_FRESH_POOL, ...PART3_FRESH_POOL]
-      : [];
+    function part1FreshQuestions() {
+      return [
+        ...(typeof PART1_FRESH_POOL !== "undefined" ? PART1_FRESH_POOL : []),
+        ...(typeof PART1_FRESH_POOL_2 !== "undefined" ? PART1_FRESH_POOL_2 : [])
+      ];
+    }
+
+    function part2FreshQuestions() {
+      return [
+        ...(typeof PART2_FRESH_POOL !== "undefined" ? PART2_FRESH_POOL : []),
+        ...(typeof PART2_FRESH_POOL_2 !== "undefined" ? PART2_FRESH_POOL_2 : [])
+      ];
+    }
+
+    function part3FreshQuestions() {
+      return [
+        ...(typeof PART3_FRESH_POOL !== "undefined" ? PART3_FRESH_POOL : []),
+        ...(typeof PART3_FRESH_POOL_2 !== "undefined" ? PART3_FRESH_POOL_2 : [])
+      ];
+    }
+
+    const FRESH_POOLS = [...part1FreshQuestions(), ...part2FreshQuestions(), ...part3FreshQuestions()];
 
     const CORE_BANK = dedupeQuestions([
       ...PART1, ...PART2, ...PART3,
@@ -2491,9 +2608,9 @@
       assign(PART1_EXTRA_POOL, 3);
       assign(PART2_EXTRA_POOL, 3);
       assign(PART3_EXTRA_POOL, 3);
-      assign(typeof PART1_FRESH_POOL !== "undefined" ? PART1_FRESH_POOL : [], 3);
-      assign(typeof PART2_FRESH_POOL !== "undefined" ? PART2_FRESH_POOL : [], 3);
-      assign(typeof PART3_FRESH_POOL !== "undefined" ? PART3_FRESH_POOL : [], 3);
+      assign(part1FreshQuestions(), 3);
+      assign(part2FreshQuestions(), 3);
+      assign(part3FreshQuestions(), 3);
       assign(typeof NEW_TIER1 !== "undefined" ? NEW_TIER1 : [], 4);
       assign(typeof NEW_TIER2 !== "undefined" ? NEW_TIER2 : [], 5);
       assign(typeof NEW_TIER3 !== "undefined" ? NEW_TIER3 : [], 6);
@@ -2601,17 +2718,17 @@
       const pools = {
         part1: dedupeQuestions([
           ...PART1, ...PART1_VARIANTS, ...PART1_EXTRA_POOL,
-          ...(typeof PART1_FRESH_POOL !== "undefined" ? PART1_FRESH_POOL : []),
+          ...part1FreshQuestions(),
           ...merged.filter(q => moduleFromQuestion(q) === "part1")
         ]),
         part2: dedupeQuestions([
           ...PART2, ...PART2_VARIANTS, ...PART2_EXTRA_POOL,
-          ...(typeof PART2_FRESH_POOL !== "undefined" ? PART2_FRESH_POOL : []),
+          ...part2FreshQuestions(),
           ...merged.filter(q => moduleFromQuestion(q) === "part2")
         ]),
         part3: dedupeQuestions([
           ...PART3, ...PART3_VARIANTS, ...PART3_EXTRA_POOL,
-          ...(typeof PART3_FRESH_POOL !== "undefined" ? PART3_FRESH_POOL : []),
+          ...part3FreshQuestions(),
           ...merged.filter(q => moduleFromQuestion(q) === "part3")
         ])
       };
@@ -2826,12 +2943,6 @@
     const ANALYTICS_KEY = "mcb80x_analytics";
     const CHAPTER_IDS = ["part1", "part2", "part3"];
 
-    const MODULE_LABELS = {
-      part1: "Part 1 · Electrical Properties",
-      part2: "Part 2 · Neurons & Networks",
-      part3: "Part 3 · The Brain"
-    };
-
     const EXAM_QUIZ_IDS = ["final", "final100", "final150", "final200", "pinnacle300"];
 
     const QUIZ_EXAM_WEIGHT = {
@@ -2867,7 +2978,7 @@
         section: "core",
         chapterId: "part1",
         title: "Part 1 Quiz",
-        subtitle: "The Electrical Properties of the Neuron",
+        subtitle: "Electrical Properties of the Neuron (MCB80x Part 1)",
         meta: "Instant feedback · randomized",
         description: "Resting potential, passive properties, action potentials, propagation",
         poolModule: "part1",
@@ -2880,7 +2991,7 @@
         section: "core",
         chapterId: "part2",
         title: "Part 2 Quiz",
-        subtitle: "Neurons and Networks",
+        subtitle: "Neurons & Networks (MCB80x Part 2)",
         meta: "Instant feedback · randomized",
         description: "Synapses, receptors, integration, neuromodulation, circuits",
         poolModule: "part2",
@@ -2893,7 +3004,7 @@
         section: "core",
         chapterId: "part3",
         title: "Part 3 Quiz",
-        subtitle: "The Brain",
+        subtitle: "The Brain (MCB80x Part 3)",
         meta: "Instant feedback · randomized",
         description: "Sensory systems, neuroanatomy, learning and memory",
         poolModule: "part3",
@@ -4896,8 +5007,14 @@
           <p class="instant-feedback-text"><strong>Explanation:</strong> ${fmt(q.explanation)}</p>
         </div>` : "";
 
+      const qModule = questionModule(q, activeQuizId);
+      const moduleBadge = MODULE_LABELS[qModule] || qModule;
+
       document.getElementById("question-card").innerHTML = `
-        <span class="topic-badge">${q.topic}</span>
+        <div class="question-meta-badges">
+          <span class="module-badge">${moduleBadge}</span>
+          <span class="topic-badge">${q.topic}</span>
+        </div>
         <p class="question-text">${currentIndex + 1}. ${fmt(q.question)}</p>
         <div class="answer-grid" role="radiogroup" aria-label="Answer choices">${optionsHtml}</div>
         ${feedbackHtml}`;
