@@ -1837,6 +1837,7 @@
   <script src="questions-bank.js"></script>
   <script src="questions-extra-pools.js"></script>
   <script src="questions-fresh-pools.js"></script>
+  <script src="questions-expansion.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" crossorigin="anonymous"></script>
   <script>
     function shuffle(array) {
@@ -2506,16 +2507,19 @@
       assign(PART1_EXTRA_POOL, "part1");
       assign(typeof PART1_FRESH_POOL !== "undefined" ? PART1_FRESH_POOL : [], "part1");
       assign(typeof PART1_FRESH_POOL_2 !== "undefined" ? PART1_FRESH_POOL_2 : [], "part1");
+      assign(typeof PART1_EXPANSION_POOL !== "undefined" ? PART1_EXPANSION_POOL : [], "part1");
       assign(PART2, "part2");
       assign(PART2_VARIANTS, "part2");
       assign(PART2_EXTRA_POOL, "part2");
       assign(typeof PART2_FRESH_POOL !== "undefined" ? PART2_FRESH_POOL : [], "part2");
       assign(typeof PART2_FRESH_POOL_2 !== "undefined" ? PART2_FRESH_POOL_2 : [], "part2");
+      assign(typeof PART2_EXPANSION_POOL !== "undefined" ? PART2_EXPANSION_POOL : [], "part2");
       assign(PART3, "part3");
       assign(PART3_VARIANTS, "part3");
       assign(PART3_EXTRA_POOL, "part3");
       assign(typeof PART3_FRESH_POOL !== "undefined" ? PART3_FRESH_POOL : [], "part3");
       assign(typeof PART3_FRESH_POOL_2 !== "undefined" ? PART3_FRESH_POOL_2 : [], "part3");
+      assign(typeof PART3_EXPANSION_POOL !== "undefined" ? PART3_EXPANSION_POOL : [], "part3");
       [NEW_TIER1, NEW_TIER2, NEW_TIER3, NEW_TIER4].forEach(tier => {
         (tier || []).forEach(q => {
           if (!q?.question || reg.has(q.question)) return;
@@ -2548,28 +2552,35 @@
       return "part3";
     }
 
-    function part1FreshQuestions() {
+    function part1SupplementalQuestions() {
       return [
         ...(typeof PART1_FRESH_POOL !== "undefined" ? PART1_FRESH_POOL : []),
-        ...(typeof PART1_FRESH_POOL_2 !== "undefined" ? PART1_FRESH_POOL_2 : [])
+        ...(typeof PART1_FRESH_POOL_2 !== "undefined" ? PART1_FRESH_POOL_2 : []),
+        ...(typeof PART1_EXPANSION_POOL !== "undefined" ? PART1_EXPANSION_POOL : [])
       ];
     }
 
-    function part2FreshQuestions() {
+    function part2SupplementalQuestions() {
       return [
         ...(typeof PART2_FRESH_POOL !== "undefined" ? PART2_FRESH_POOL : []),
-        ...(typeof PART2_FRESH_POOL_2 !== "undefined" ? PART2_FRESH_POOL_2 : [])
+        ...(typeof PART2_FRESH_POOL_2 !== "undefined" ? PART2_FRESH_POOL_2 : []),
+        ...(typeof PART2_EXPANSION_POOL !== "undefined" ? PART2_EXPANSION_POOL : [])
       ];
     }
 
-    function part3FreshQuestions() {
+    function part3SupplementalQuestions() {
       return [
         ...(typeof PART3_FRESH_POOL !== "undefined" ? PART3_FRESH_POOL : []),
-        ...(typeof PART3_FRESH_POOL_2 !== "undefined" ? PART3_FRESH_POOL_2 : [])
+        ...(typeof PART3_FRESH_POOL_2 !== "undefined" ? PART3_FRESH_POOL_2 : []),
+        ...(typeof PART3_EXPANSION_POOL !== "undefined" ? PART3_EXPANSION_POOL : [])
       ];
     }
 
-    const FRESH_POOLS = [...part1FreshQuestions(), ...part2FreshQuestions(), ...part3FreshQuestions()];
+    const FRESH_POOLS = [
+      ...part1SupplementalQuestions(),
+      ...part2SupplementalQuestions(),
+      ...part3SupplementalQuestions()
+    ];
 
     const CORE_BANK = dedupeQuestions([
       ...PART1, ...PART2, ...PART3,
@@ -2608,9 +2619,9 @@
       assign(PART1_EXTRA_POOL, 3);
       assign(PART2_EXTRA_POOL, 3);
       assign(PART3_EXTRA_POOL, 3);
-      assign(part1FreshQuestions(), 3);
-      assign(part2FreshQuestions(), 3);
-      assign(part3FreshQuestions(), 3);
+      assign(part1SupplementalQuestions(), 3);
+      assign(part2SupplementalQuestions(), 3);
+      assign(part3SupplementalQuestions(), 3);
       assign(typeof NEW_TIER1 !== "undefined" ? NEW_TIER1 : [], 4);
       assign(typeof NEW_TIER2 !== "undefined" ? NEW_TIER2 : [], 5);
       assign(typeof NEW_TIER3 !== "undefined" ? NEW_TIER3 : [], 6);
@@ -2718,17 +2729,17 @@
       const pools = {
         part1: dedupeQuestions([
           ...PART1, ...PART1_VARIANTS, ...PART1_EXTRA_POOL,
-          ...part1FreshQuestions(),
+          ...part1SupplementalQuestions(),
           ...merged.filter(q => moduleFromQuestion(q) === "part1")
         ]),
         part2: dedupeQuestions([
           ...PART2, ...PART2_VARIANTS, ...PART2_EXTRA_POOL,
-          ...part2FreshQuestions(),
+          ...part2SupplementalQuestions(),
           ...merged.filter(q => moduleFromQuestion(q) === "part2")
         ]),
         part3: dedupeQuestions([
           ...PART3, ...PART3_VARIANTS, ...PART3_EXTRA_POOL,
-          ...part3FreshQuestions(),
+          ...part3SupplementalQuestions(),
           ...merged.filter(q => moduleFromQuestion(q) === "part3")
         ])
       };

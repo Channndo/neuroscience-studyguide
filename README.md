@@ -25,3 +25,11 @@ python3 -m http.server 8080
 Then open **http://localhost:8080/** (required so `questions-bank.js` loads correctly).
 
 Progress and settings stay in **localStorage** on whichever origin you use.
+
+### Regenerate large expansion banks
+
+```bash
+python3 _generate_expansion.py
+```
+
+Writes `questions-expansion.js` (700+ part-aligned items; skips stems already in other bank files).
