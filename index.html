@@ -2596,6 +2596,12 @@
       return [...map.values()];
     }
 
+    /** Collapse numeric-only variants so one quiz does not repeat the same template. */
+    function questionStemSkeleton(text) {
+      if (!text) return "";
+      return String(text).replace(/\d+/g, "N").replace(/\s+/g, " ").trim().toLowerCase();
+    }
+
     function moduleFromQuestion(q) {
       if (!q) return "part3";
       const reg = getQuestionModuleRegistry();
@@ -2811,7 +2817,23 @@
       if (candidates.length < count) {
         candidates = pool.filter(q => q?.question);
       }
-      return shuffle(candidates).slice(0, Math.min(count, candidates.length));
+      const target = Math.min(count, candidates.length);
+      const seenStem = new Set();
+      const picked = [];
+      shuffle(candidates).forEach(q => {
+        if (picked.length >= target) return;
+        const sk = questionStemSkeleton(q.question);
+        if (seenStem.has(sk)) return;
+        seenStem.add(sk);
+        picked.push(q);
+      });
+      if (picked.length < target) {
+        shuffle(candidates).forEach(q => {
+          if (picked.length >= target || picked.some(p => p.question === q.question)) return;
+          picked.push(q);
+        });
+      }
+      return picked;
     }
 
     /** Spread questions across topics (exam-style breadth) instead of clustering one subject. */
@@ -2829,13 +2851,19 @@
       const topics = shuffle([...byTopic.keys()]);
       const picked = [];
       const seen = new Set();
+      const seenStem = new Set();
       let guard = 0;
       while (picked.length < target && guard < target * 40) {
         const topic = topics[guard % topics.length];
         const candidates = shuffle(byTopic.get(topic) || []);
-        const q = candidates.find(item => item?.question && !seen.has(item.question) && !avoid.has(item.question));
+        const q = candidates.find(item => {
+          if (!item?.question || seen.has(item.question) || avoid.has(item.question)) return false;
+          const sk = questionStemSkeleton(item.question);
+          return !seenStem.has(sk);
+        });
         if (q) {
           seen.add(q.question);
+          seenStem.add(questionStemSkeleton(q.question));
           picked.push(q);
         }
         guard++;
@@ -2843,14 +2871,20 @@
       if (picked.length < target) {
         shuffle(pool).forEach(q => {
           if (picked.length >= target || !q?.question || seen.has(q.question) || avoid.has(q.question)) return;
+          const sk = questionStemSkeleton(q.question);
+          if (seenStem.has(sk)) return;
           seen.add(q.question);
+          seenStem.add(sk);
           picked.push(q);
         });
       }
       if (picked.length < target && avoid.size) {
         shuffle(pool).forEach(q => {
           if (picked.length >= target || !q?.question || seen.has(q.question)) return;
+          const sk = questionStemSkeleton(q.question);
+          if (seenStem.has(sk)) return;
           seen.add(q.question);
+          seenStem.add(sk);
           picked.push(q);
         });
       }
@@ -4736,6 +4770,14 @@
       return answers[index] !== undefined;
     }
 
+    /** When Next/Submit stays disabled until the current item is complete. */
+    function nextButtonNeedsAnswer(index) {
+      const q = shuffledQuestions[index];
+      if (!q) return true;
+      if (isWrittenQuestion(q)) return !isQuestionAnswered(index);
+      return hasImmediateFeedback() && !isQuestionAnswered(index);
+    }
+
     /* ═══════════════════════════════════════════════════════════
        APP STATE & VIEWS
     ═══════════════════════════════════════════════════════════ */
@@ -5164,8 +5206,7 @@
         const sync = () => {
           answers[currentIndex] = ta.value;
           if (hint) hint.textContent = `${ta.value.trim().length} / ${min} characters minimum`;
-          const needsAnswer = hasImmediateFeedback() && !isQuestionAnswered(currentIndex);
-          document.getElementById("btn-next").disabled = needsAnswer;
+          document.getElementById("btn-next").disabled = nextButtonNeedsAnswer(currentIndex);
         };
         ta.addEventListener("input", sync);
         sync();
@@ -5185,10 +5226,7 @@
       }
 
       document.getElementById("btn-prev").disabled = currentIndex === 0;
-      const needsAnswer = !written && hasImmediateFeedback() && !isQuestionAnswered(currentIndex);
-      if (!written) {
-        document.getElementById("btn-next").disabled = needsAnswer;
-      }
+      document.getElementById("btn-next").disabled = nextButtonNeedsAnswer(currentIndex);
       document.getElementById("btn-next").textContent =
         currentIndex === total - 1 ? "Submit Quiz" : "Next";
     }
@@ -5247,7 +5285,8 @@
         reviewList.appendChild(card);
       });
 
-      const mcqTotal = mcqQuestions.length || 1;
+      const mcqCount = mcqQuestions.length;
+      const mcqTotal = mcqCount || 1;
       const pct = Math.round((correct / mcqTotal) * 100);
       document.getElementById("score-pct").textContent = `${pct}%`;
       const writtenNote = writtenQuestions.length
@@ -5260,76 +5299,78 @@
       const passThreshold = getPassThreshold(activeQuizId);
       const passed = quiz?.learningMode ? true : pct >= passThreshold;
       const prevProgress = getProgress();
-
-      if (quiz) {
-        const bestKey = `best_${activeQuizId}`;
-        saveProgress({
-          lastQuiz: {
-            quizId: activeQuizId,
-            title: quiz.title,
-            pct,
-            correct,
-            total,
-            passed,
-            ts: Date.now()
-          },
-          [bestKey]: Math.max(prevProgress[bestKey] || 0, pct),
-          [`completed_${activeQuizId}`]: true
-        });
-      }
+      let progressSaveWarning = "";
 
       try {
+        if (quiz) {
+          const bestKey = `best_${activeQuizId}`;
+          saveProgress({
+            lastQuiz: {
+              quizId: activeQuizId,
+              title: quiz.title,
+              pct,
+              correct,
+              total: mcqCount,
+              passed,
+              ts: Date.now()
+            },
+            [bestKey]: Math.max(prevProgress[bestKey] || 0, pct),
+            [`completed_${activeQuizId}`]: true
+          });
+        }
+
         recordQuizAttempt(activeQuizId, shuffledQuestions, answers, pct, passed);
-      } catch (err) {
-        console.error("Analytics save failed:", err);
-      }
 
-      if (quiz && CHAPTER_IDS.includes(activeQuizId)) {
-        const missed = shuffledQuestions
-          .filter((q, i) => answers[i] !== q.correct)
-          .map(q => ({
-            topic: q.topic,
-            question: q.question,
-            answer: q.options[q.correct],
-            explanation: q.explanation
-          }));
-        if (missed.length) {
-          saveWeaknessFlashcards(activeQuizId, missed);
-          pendingUnlockMessage = `${missed.length} weakness flashcard${missed.length > 1 ? "s" : ""} added to ${CHAPTER_META[activeQuizId].title}.`;
-        }
-      }
-
-      if (quiz) {
-        const updates = {};
-        if (quiz.id === "final") {
-          updates.finalCompleted = true;
-          if (!prevProgress.finalCompleted) {
-            pendingUnlockMessage = "Advanced Finals unlocked! Three expanded exams are now available.";
+        if (quiz && CHAPTER_IDS.includes(activeQuizId)) {
+          const missed = shuffledQuestions
+            .filter((q, i) => !isWrittenQuestion(q) && answers[i] !== q.correct)
+            .map(q => ({
+              topic: q.topic,
+              question: q.question,
+              answer: q.options[q.correct],
+              explanation: q.explanation
+            }));
+          if (missed.length) {
+            saveWeaknessFlashcards(activeQuizId, missed);
+            pendingUnlockMessage = `${missed.length} weakness flashcard${missed.length > 1 ? "s" : ""} added to ${CHAPTER_META[activeQuizId].title}.`;
           }
         }
-        if (["final100", "final150", "final200"].includes(quiz.id) && !prevProgress[`completed_${quiz.id}`]) {
-          pendingUnlockMessage = "New questions added to Parts 1–3 practice banks. Chapter quizzes and later exams will draw from a larger pool.";
-        }
-        if (quiz.passKey && passed) {
-          updates[quiz.passKey] = true;
-          if (CHAPTER_IDS.includes(quiz.id) && !allChapterQuizzesPassed(prevProgress) && allChapterQuizzesPassed({ ...prevProgress, ...updates })) {
-            pendingUnlockMessage = "Comprehensive Final Exam unlocked — you passed all three module quizzes at 70%+.";
-          }
-          if (quiz.id === "pinnacle300") {
-            pendingUnlockMessage = "Pinnacle Examination passed — full MCB80x mastery achieved!";
-          } else if (ADVANCED_FINAL_IDS.includes(quiz.id)) {
-            const p = { ...prevProgress, ...updates };
-            if (p.final100Passed && p.final150Passed && p.final200Passed && !prevProgress.pinnacle300Passed) {
-              pendingUnlockMessage = "All three Advanced Finals passed! The Pinnacle Examination is now unlocked.";
+
+        if (quiz) {
+          const updates = {};
+          if (quiz.id === "final") {
+            updates.finalCompleted = true;
+            if (!prevProgress.finalCompleted) {
+              pendingUnlockMessage = "Advanced Finals unlocked! Three expanded exams are now available.";
             }
           }
+          if (["final100", "final150", "final200"].includes(quiz.id) && !prevProgress[`completed_${quiz.id}`]) {
+            pendingUnlockMessage = "New questions added to Parts 1–3 practice banks. Chapter quizzes and later exams will draw from a larger pool.";
+          }
+          if (quiz.passKey && passed) {
+            updates[quiz.passKey] = true;
+            if (CHAPTER_IDS.includes(quiz.id) && !allChapterQuizzesPassed(prevProgress) && allChapterQuizzesPassed({ ...prevProgress, ...updates })) {
+              pendingUnlockMessage = "Comprehensive Final Exam unlocked — you passed all three module quizzes at 70%+.";
+            }
+            if (quiz.id === "pinnacle300") {
+              pendingUnlockMessage = "Pinnacle Examination passed — full MCB80x mastery achieved!";
+            } else if (ADVANCED_FINAL_IDS.includes(quiz.id)) {
+              const p = { ...prevProgress, ...updates };
+              if (p.final100Passed && p.final150Passed && p.final200Passed && !prevProgress.pinnacle300Passed) {
+                pendingUnlockMessage = "All three Advanced Finals passed! The Pinnacle Examination is now unlocked.";
+              }
+            }
+          }
+          if (quiz.id === "dailyPop") {
+            updates.dailyPopCompletedDate = localDateKey();
+            updateStreakOnVisit();
+            pendingUnlockMessage = "Daily pop quiz complete — streak updated for today!";
+          }
+          if (Object.keys(updates).length) saveProgress(updates);
         }
-        if (quiz.id === "dailyPop") {
-          updates.dailyPopCompletedDate = localDateKey();
-          updateStreakOnVisit();
-          pendingUnlockMessage = "Daily pop quiz complete — streak updated for today!";
-        }
-        if (Object.keys(updates).length) saveProgress(updates);
+      } catch (err) {
+        console.error("Quiz progress save failed:", err);
+        progressSaveWarning = " Scores shown below may not have saved — check that browser storage is enabled and try again.";
       }
 
       let message;
@@ -5347,9 +5388,13 @@
       else if (pct >= 60) message = "Fair result. Revisit curriculum sections for missed mechanisms.";
       else message = "Keep studying — use the review below to target weak areas.";
 
-      document.getElementById("results-message").textContent = message;
-      renderUserActivityCard();
-      renderStudyPlanDashboard();
+      document.getElementById("results-message").textContent = message + progressSaveWarning;
+      try {
+        renderUserActivityCard();
+        renderStudyPlanDashboard();
+      } catch (err) {
+        console.error("Dashboard refresh failed:", err);
+      }
       showView("results");
     }
 

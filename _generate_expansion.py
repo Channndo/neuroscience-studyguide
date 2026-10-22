@@ -7,6 +7,8 @@ import json
 import re
 from pathlib import Path
 
+from _expansion_variety import variety_by_part
+
 ROOT = Path(__file__).parent
 OUT = ROOT / "questions-expansion.js"
 
@@ -14,6 +16,8 @@ OUT = ROOT / "questions-expansion.js"
 def load_existing_stems() -> set[str]:
     stems: set[str] = set()
     for path in ROOT.glob("*.js"):
+        if path.resolve() == OUT.resolve():
+            continue
         text = path.read_text(encoding="utf-8", errors="ignore")
         for m in re.finditer(r'question:\s*"((?:\\.|[^"\\])*)"', text):
             stems.add(json.loads(f'"{m.group(1)}"'))
@@ -151,13 +155,14 @@ def part1_bank(existing: set[str]) -> list[dict]:
         )])
 
     part1_combinatorial(existing, items)
+    p1_variety, _, _ = variety_by_part(Q)
+    add_unique(items, existing, p1_variety)
     return items
 
 
 def part1_combinatorial(existing: set[str], items: list[dict]) -> None:
-    """Unique numeric scenarios for Part 1 (electrical properties)."""
-    for n in range(1, 101):
-        leak_pct = 5 + (n % 45)
+    """A few numeric exemplars only — avoid hundreds of same-template items."""
+    for leak_pct in (12, 28, 41):
         add_unique(items, existing, [Q(
             "Passive Membrane Properties",
             f"If leak conductance rises by {leak_pct}% (R_m falls) with geometry unchanged, the length constant λ compared with baseline is:",
@@ -165,7 +170,7 @@ def part1_combinatorial(existing: set[str], items: list[dict]) -> None:
             0,
             "Higher leak (lower R_m) shortens λ in passive cable models.",
         )])
-        tau_pct = 10 + (n % 50)
+    for tau_pct in (15, 35, 55):
         add_unique(items, existing, [Q(
             "Passive Membrane Properties",
             f"If membrane capacitance increases by {tau_pct}% while R_m is held fixed, the time constant τ is:",
@@ -173,7 +178,7 @@ def part1_combinatorial(existing: set[str], items: list[dict]) -> None:
             0,
             "τ scales with C_m when R_m is held constant.",
         )])
-        dep = 3 + (n % 17)
+    for dep in (4, 9, 14):
         add_unique(items, existing, [Q(
             "Electrical Signaling",
             f"Resting V_m is −70 mV. A subthreshold EPSP peaks at −70 + {dep} mV. This EPSP is:",
@@ -283,12 +288,13 @@ def part2_bank(existing: set[str]) -> list[dict]:
         )])
 
     part2_combinatorial(existing, items)
+    _, p2_variety, _ = variety_by_part(Q)
+    add_unique(items, existing, p2_variety)
     return items
 
 
 def part2_combinatorial(existing: set[str], items: list[dict]) -> None:
-    for n in range(1, 101):
-        freq = 5 + (n % 95)
+    for freq in (10, 40, 100):
         add_unique(items, existing, [Q(
             "Short-Term Plasticity",
             f"After brief presynaptic stimulation at {freq} Hz, a common short-term synaptic change is:",
@@ -296,7 +302,7 @@ def part2_combinatorial(existing: set[str], items: list[dict]) -> None:
             0,
             "High-frequency use changes release probability and vesicle availability.",
         )])
-        epsp = 1 + (n % 12)
+    for epsp in (2, 5, 8):
         add_unique(items, existing, [Q(
             "Synaptic Integration",
             f"Two EPSPs (+{epsp} mV each) arrive 5 ms apart at one synapse (temporal summation). Compared with one EPSP alone, peak depolarization tends to be:",
@@ -417,12 +423,13 @@ def part3_bank(existing: set[str]) -> list[dict]:
         )])
 
     part3_combinatorial(existing, items)
+    _, _, p3_variety = variety_by_part(Q)
+    add_unique(items, existing, p3_variety)
     return items
 
 
 def part3_combinatorial(existing: set[str], items: list[dict]) -> None:
-    for n in range(1, 101):
-        hz = 200 + (n % 800)
+    for hz in (400, 1500, 4000):
         add_unique(items, existing, [Q(
             "Auditory System",
             f"A basilar membrane region with peak sensitivity near {hz} Hz best reflects:",
@@ -430,16 +437,17 @@ def part3_combinatorial(existing: set[str], items: list[dict]) -> None:
             0,
             "Cochlear mechanics map frequency to position (place theory).",
         )])
-        hippocampus_stems = [
-            "Bilateral hippocampal system damage in humans most consistently impairs:",
-            "Profound medial temporal lobe damage in humans most consistently impairs:",
-            "Following extensive hippocampal injury in adults, the ability to form new memories is:",
-            "After bilateral hippocampal loss, which learning is most impaired in typical cases?",
-            "Medial temporal lobe damage producing anterograde amnesia primarily disrupts:",
-        ]
+    hippocampus_stems = [
+        "Bilateral hippocampal system damage in humans most consistently impairs:",
+        "Profound medial temporal lobe damage in humans most consistently impairs:",
+        "Following extensive hippocampal injury in adults, the ability to form new memories is:",
+        "After bilateral hippocampal loss, which learning is most impaired in typical cases?",
+        "Medial temporal lobe damage producing anterograde amnesia primarily disrupts:",
+    ]
+    for stem in hippocampus_stems:
         add_unique(items, existing, [Q(
             "Learning & Memory",
-            hippocampus_stems[n % len(hippocampus_stems)],
+            stem,
             ["Forming new declarative/episodic memories", "All procedural skills such as riding a bike", "All sensation including touch", "Phototransduction in rods"],
             0,
             "Medial temporal lobe/hippocampus is critical for new declarative memory.",
