@@ -3888,28 +3888,83 @@
       saveAnalytics(data);
     }
 
-    const READINESS_COVERAGE_TARGET = 25;
-    const READINESS_CHAPTER_ONLY_CAP = 58;
-    const READINESS_NO_EXAM_PASS_CAP = 72;
-    const READINESS_STRONG_EXAM_MIN = 78;
+    const READINESS_COVERAGE_TARGET = 40;
+    const READINESS_FOUNDATION_MAX = 48;
+    const READINESS_COMPREHENSIVE_MAX = 31;
+    const READINESS_ADVANCED_MAX = 18;
+    const READINESS_PINNACLE_MAX = 12;
 
     function readinessTier(score) {
       if (score === null) return { label: "Not enough data", class: "" };
-      if (score >= 96) return { label: "Highly prepared", class: "strong" };
-      if (score >= 88) return { label: "Exam ready", class: "strong" };
-      if (score >= 72) return { label: "Approaching readiness", class: "" };
-      if (score >= 50) return { label: "Developing", class: "weak" };
+      if (score >= 92) return { label: "Highly prepared", class: "strong" };
+      if (score >= 82) return { label: "Exam ready", class: "strong" };
+      if (score >= 68) return { label: "Approaching readiness", class: "" };
+      if (score >= 45) return { label: "Developing", class: "weak" };
       return { label: "Not yet ready", class: "weak" };
     }
 
-    function moduleCoverageFraction(data) {
+    /** Linear coverage 0–1 (no quadratic jump). */
+    function moduleCoverageLinear(data) {
       let sum = 0;
       CHAPTER_IDS.forEach(m => {
         const t = data.moduleStats[m]?.total || 0;
-        const linear = Math.min(1, t / READINESS_COVERAGE_TARGET);
-        sum += linear * linear;
+        sum += Math.min(1, t / READINESS_COVERAGE_TARGET);
       });
       return sum / 3;
+    }
+
+    function moduleCoverageFraction(data) {
+      return moduleCoverageLinear(data);
+    }
+
+    function bestAttemptPct(data, quizId) {
+      const attempts = (data.attempts || []).filter(a => a.quizId === quizId);
+      if (!attempts.length) return null;
+      return Math.max(...attempts.map(a => a.pct));
+    }
+
+    function hasPassedQuiz(data, quizId) {
+      return (data.attempts || []).some(a => a.quizId === quizId && a.passed);
+    }
+
+    function foundationReadinessPoints(data) {
+      const accuracy = overallAccuracy(data) / 100;
+      const coverage = moduleCoverageLinear(data);
+      const blend = coverage * (0.35 + 0.65 * accuracy);
+      return READINESS_FOUNDATION_MAX * blend;
+    }
+
+    function comprehensiveFinalReadinessPoints(pct) {
+      if (pct === null) return 0;
+      if (pct < 70) return Math.max(0, (pct / 70) * 5);
+      return Math.min(
+        READINESS_COMPREHENSIVE_MAX,
+        15 + ((pct - 70) / 30) * (READINESS_COMPREHENSIVE_MAX - 15)
+      );
+    }
+
+    function advancedFinalReadinessPoints(data) {
+      if (!hasPassedQuiz(data, "final")) return 0;
+      const ids = ADVANCED_FINAL_IDS;
+      const perExam = READINESS_ADVANCED_MAX / ids.length;
+      let pts = 0;
+      ids.forEach(id => {
+        const pct = bestAttemptPct(data, id);
+        if (pct === null) return;
+        if (pct >= 80) pts += perExam;
+        else if (pct >= 70) pts += perExam * 0.55;
+        else pts += perExam * (pct / 100) * 0.25;
+      });
+      return Math.min(READINESS_ADVANCED_MAX, pts);
+    }
+
+    function pinnacleReadinessPoints(data) {
+      if (!ADVANCED_FINAL_IDS.every(id => hasPassedQuiz(data, id))) return 0;
+      const pct = bestAttemptPct(data, "pinnacle300");
+      if (pct === null) return 0;
+      if (pct >= 90) return READINESS_PINNACLE_MAX;
+      if (pct >= 80) return READINESS_PINNACLE_MAX * 0.65;
+      return Math.max(0, (pct / 90) * (READINESS_PINNACLE_MAX * 0.45));
     }
 
     function overallAccuracy(data) {
@@ -3959,52 +4014,64 @@
       }
 
       const accuracy = overallAccuracy(data);
-      const coverage = moduleCoverageFraction(data);
+      const coverage = moduleCoverageLinear(data);
       const modulesTouched = CHAPTER_IDS.filter(m => (data.moduleStats[m]?.total || 0) >= 3).length;
       const examPerformance = bestExamPerformance(data);
-      const noFinalTaken = examPerformance === null;
-      const passedHighStakes = hasPassedHighStakesExam(data);
+      const compPct = bestAttemptPct(data, "final");
+      const noComprehensiveTaken = compPct === null;
 
-      const chapterFoundation = accuracy * coverage;
+      const foundationPts = foundationReadinessPoints(data);
+      const comprehensivePts = comprehensiveFinalReadinessPoints(compPct);
+      const advancedPts = advancedFinalReadinessPoints(data);
+      const pinnaclePts = pinnacleReadinessPoints(data);
 
-      let score;
-      if (noFinalTaken) {
-        score = chapterFoundation;
-        score = Math.min(score, READINESS_CHAPTER_ONLY_CAP);
-      } else {
-        const examScale = 0.52 + 0.48 * coverage;
-        score = 0.34 * chapterFoundation + 0.66 * examPerformance * examScale;
-        if (!passedHighStakes) {
-          score = Math.min(score, READINESS_NO_EXAM_PASS_CAP);
-        }
-        if (examPerformance < READINESS_STRONG_EXAM_MIN) {
-          score = Math.min(score, 82);
-        }
-        if (coverage < 0.55) {
-          score *= 0.88;
-        }
+      let score = foundationPts + comprehensivePts + advancedPts + pinnaclePts;
+
+      if (coverage < 0.5 && score > 52) {
+        score = 52 + (score - 52) * 0.75;
       }
 
       score = Math.round(Math.max(0, Math.min(100, score)));
 
       let confidence = "low";
-      if (totalQ >= 60 && !noFinalTaken && coverage >= 0.75 && passedHighStakes) confidence = "high";
-      else if (totalQ >= 20 && modulesTouched >= 2) confidence = "medium";
+      const passedComprehensive = hasPassedQuiz(data, "final");
+      if (totalQ >= 80 && passedComprehensive && coverage >= 0.7 && hasPassedHighStakesExam(data)) {
+        confidence = "high";
+      } else if (totalQ >= 20 && modulesTouched >= 2) {
+        confidence = "medium";
+      }
+
+      let message;
+      if (noComprehensiveTaken) {
+        message = `Foundation only (max ~${READINESS_FOUNDATION_MAX} until the scored Comprehensive Final). Coverage grows linearly — about ${READINESS_COVERAGE_TARGET} questions per module for full foundation credit.`;
+      } else if (!passedComprehensive) {
+        message = "Comprehensive Final attempted but not yet passed at 70%+. Readiness stays conservative until you pass.";
+      } else if (!hasPassedQuiz(data, "final100")) {
+        message = "Comprehensive Final on the board. Advanced Finals and broader coverage unlock the next readiness band (high 70s → 80s).";
+      } else if (!ADVANCED_FINAL_IDS.every(id => hasPassedQuiz(data, id))) {
+        message = "Advanced track in progress — complete all three Advanced Finals (80%+) to unlock Pinnacle credit toward the 90s.";
+      } else if (!hasPassedQuiz(data, "pinnacle300")) {
+        message = "Advanced track complete. Pinnacle (90%+) adds the last readiness slice — optional but the strictest check.";
+      } else {
+        message = "Full ladder complete (foundation → comprehensive → advanced → pinnacle). Score reflects your best verified performance on each tier.";
+      }
 
       return {
         score,
         confidence,
-        noFinalTaken,
+        noFinalTaken: noComprehensiveTaken,
         breakdown: {
           accuracy: Math.round(accuracy),
           curriculumCoverage: Math.round(coverage * 100),
           modulesTouched,
           examPerformance: examPerformance === null ? null : Math.round(examPerformance),
-          chapterFoundation: Math.round(chapterFoundation)
+          chapterFoundation: Math.round(foundationPts),
+          comprehensivePoints: Math.round(comprehensivePts),
+          advancedPoints: Math.round(advancedPts),
+          pinnaclePoints: Math.round(pinnaclePts),
+          comprehensiveExamPct: compPct === null ? null : Math.round(compPct)
         },
-        message: noFinalTaken
-          ? `Chapter-only estimate (capped at ${READINESS_CHAPTER_ONLY_CAP}). Practice all three modules and take the Comprehensive Final before trusting a high score.`
-          : "Weighted toward passed high-stakes exams; broad coverage across Parts 1–3 is required for scores in the high 80s and above."
+        message
       };
     }
 
@@ -4682,10 +4749,13 @@
         <div class="score-breakdown">
           <div class="breakdown-row"><span>Overall accuracy (all modules)</span><span>${readiness.breakdown.accuracy}%</span></div>
           <div class="breakdown-row"><span>Curriculum coverage (Parts 1–3)</span><span>${readiness.breakdown.curriculumCoverage}%</span></div>
-          <div class="breakdown-row"><span>Chapter foundation (accuracy × coverage)</span><span>${readiness.breakdown.chapterFoundation}%</span></div>
-          <div class="breakdown-row"><span>Coverage target</span><span>${READINESS_COVERAGE_TARGET} Q per module for full credit</span></div>
+          <div class="breakdown-row"><span>Foundation points (chapters + coverage)</span><span>${readiness.breakdown.chapterFoundation} / ${READINESS_FOUNDATION_MAX}</span></div>
+          <div class="breakdown-row"><span>Comprehensive Final credit</span><span>${readiness.breakdown.comprehensivePoints ?? 0} / ${READINESS_COMPREHENSIVE_MAX}${readiness.breakdown.comprehensiveExamPct != null ? ` · best ${readiness.breakdown.comprehensiveExamPct}%` : ""}</span></div>
+          <div class="breakdown-row"><span>Advanced Finals credit</span><span>${readiness.breakdown.advancedPoints ?? 0} / ${READINESS_ADVANCED_MAX}</span></div>
+          <div class="breakdown-row"><span>Pinnacle credit</span><span>${readiness.breakdown.pinnaclePoints ?? 0} / ${READINESS_PINNACLE_MAX}</span></div>
+          <div class="breakdown-row"><span>Coverage target</span><span>${READINESS_COVERAGE_TARGET} Q per module for full foundation</span></div>
           <div class="breakdown-row"><span>Modules practiced (≥3 questions)</span><span>${readiness.breakdown.modulesTouched} / 3</span></div>
-          <div class="breakdown-row"><span>Best high-stakes exam</span><span>${readiness.breakdown.examPerformance === null ? "Not taken yet" : readiness.breakdown.examPerformance + "%"}</span></div>
+          <div class="breakdown-row"><span>Best high-stakes exam (info)</span><span>${readiness.breakdown.examPerformance === null ? "Not taken yet" : readiness.breakdown.examPerformance + "%"}</span></div>
         </div>` : "";
 
       const attemptsHtml = data.attempts.slice(0, 8).map(a => {
