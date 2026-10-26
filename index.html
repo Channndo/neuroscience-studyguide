@@ -1890,6 +1890,7 @@
   <script src="questions-extra-pools.js"></script>
   <script src="questions-fresh-pools.js"></script>
   <script src="questions-expansion.js"></script>
+  <script src="questions-exam-paraphrases.js"></script>
   <script src="questions-written-final.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" crossorigin="anonymous"></script>
   <script>
@@ -2561,18 +2562,21 @@
       assign(typeof PART1_FRESH_POOL !== "undefined" ? PART1_FRESH_POOL : [], "part1");
       assign(typeof PART1_FRESH_POOL_2 !== "undefined" ? PART1_FRESH_POOL_2 : [], "part1");
       assign(typeof PART1_EXPANSION_POOL !== "undefined" ? PART1_EXPANSION_POOL : [], "part1");
+      assign(typeof PART1_EXAM_PARAPHRASE_POOL !== "undefined" ? PART1_EXAM_PARAPHRASE_POOL : [], "part1");
       assign(PART2, "part2");
       assign(PART2_VARIANTS, "part2");
       assign(PART2_EXTRA_POOL, "part2");
       assign(typeof PART2_FRESH_POOL !== "undefined" ? PART2_FRESH_POOL : [], "part2");
       assign(typeof PART2_FRESH_POOL_2 !== "undefined" ? PART2_FRESH_POOL_2 : [], "part2");
       assign(typeof PART2_EXPANSION_POOL !== "undefined" ? PART2_EXPANSION_POOL : [], "part2");
+      assign(typeof PART2_EXAM_PARAPHRASE_POOL !== "undefined" ? PART2_EXAM_PARAPHRASE_POOL : [], "part2");
       assign(PART3, "part3");
       assign(PART3_VARIANTS, "part3");
       assign(PART3_EXTRA_POOL, "part3");
       assign(typeof PART3_FRESH_POOL !== "undefined" ? PART3_FRESH_POOL : [], "part3");
       assign(typeof PART3_FRESH_POOL_2 !== "undefined" ? PART3_FRESH_POOL_2 : [], "part3");
       assign(typeof PART3_EXPANSION_POOL !== "undefined" ? PART3_EXPANSION_POOL : [], "part3");
+      assign(typeof PART3_EXAM_PARAPHRASE_POOL !== "undefined" ? PART3_EXAM_PARAPHRASE_POOL : [], "part3");
       [NEW_TIER1, NEW_TIER2, NEW_TIER3, NEW_TIER4].forEach(tier => {
         (tier || []).forEach(q => {
           if (!q?.question || reg.has(q.question)) return;
@@ -2681,6 +2685,9 @@
       assign(part1SupplementalQuestions(), 3);
       assign(part2SupplementalQuestions(), 3);
       assign(part3SupplementalQuestions(), 3);
+      assign(typeof PART1_EXAM_PARAPHRASE_POOL !== "undefined" ? PART1_EXAM_PARAPHRASE_POOL : [], 3);
+      assign(typeof PART2_EXAM_PARAPHRASE_POOL !== "undefined" ? PART2_EXAM_PARAPHRASE_POOL : [], 3);
+      assign(typeof PART3_EXAM_PARAPHRASE_POOL !== "undefined" ? PART3_EXAM_PARAPHRASE_POOL : [], 3);
       assign(typeof NEW_TIER1 !== "undefined" ? NEW_TIER1 : [], 4);
       assign(typeof NEW_TIER2 !== "undefined" ? NEW_TIER2 : [], 5);
       assign(typeof NEW_TIER3 !== "undefined" ? NEW_TIER3 : [], 6);
@@ -2724,7 +2731,7 @@
       const total = QUIZ_SAMPLE_SIZES[quizId];
       const level = MIXED_REVIEW_LEVEL[quizId] || 1;
       const avoid = lastDrawAvoidKeys(quizId, progress);
-      const pools = buildModulePools(progress);
+      const pools = buildExamReviewPools(progress);
       const [n1, n2, n3] = mixedReviewPartSplit(total);
       const partPools = [
         poolForMixedReviewLevel(pools.part1, level),
@@ -3006,7 +3013,7 @@
     }
 
     function drawQuizQuestionSet(quizId, progress) {
-      const pools = buildModulePools(progress);
+      const pools = poolsForQuiz(quizId, progress);
       const avoid = lastDrawAvoidKeys(quizId, progress);
       if (quizId === "part1") return sampleFromPool(pools.part1, QUIZ_SAMPLE_SIZES.part1, avoid);
       if (quizId === "part2") return sampleFromPool(pools.part2, QUIZ_SAMPLE_SIZES.part2, avoid);
@@ -3075,6 +3082,44 @@
     const CHAPTER_IDS = ["part1", "part2", "part3"];
 
     const EXAM_QUIZ_IDS = ["final", "final100", "final150", "final200", "pinnacle300"];
+    const REVIEW10_QUIZ_IDS = ["review10P1", "review10P2", "review10P3", "review10Mix"];
+    const EXAM_STYLE_QUIZ_IDS = new Set([
+      ...REVIEW10_QUIZ_IDS,
+      "finalReview",
+      ...EXAM_QUIZ_IDS,
+      ...MIXED_REVIEW_IDS
+    ]);
+
+    function examParaphrasePool(partId) {
+      if (partId === "part1") {
+        return typeof PART1_EXAM_PARAPHRASE_POOL !== "undefined" ? PART1_EXAM_PARAPHRASE_POOL : [];
+      }
+      if (partId === "part2") {
+        return typeof PART2_EXAM_PARAPHRASE_POOL !== "undefined" ? PART2_EXAM_PARAPHRASE_POOL : [];
+      }
+      return typeof PART3_EXAM_PARAPHRASE_POOL !== "undefined" ? PART3_EXAM_PARAPHRASE_POOL : [];
+    }
+
+    function isExamStyleQuiz(quizId) {
+      return EXAM_STYLE_QUIZ_IDS.has(quizId);
+    }
+
+    function buildExamReviewPools(progress) {
+      const base = buildModulePools(progress);
+      const part1 = dedupeQuestions([...base.part1, ...examParaphrasePool("part1")]);
+      const part2 = dedupeQuestions([...base.part2, ...examParaphrasePool("part2")]);
+      const part3 = dedupeQuestions([...base.part3, ...examParaphrasePool("part3")]);
+      return {
+        part1,
+        part2,
+        part3,
+        all: dedupeQuestions([...part1, ...part2, ...part3])
+      };
+    }
+
+    function poolsForQuiz(quizId, progress) {
+      return isExamStyleQuiz(quizId) ? buildExamReviewPools(progress) : buildModulePools(progress);
+    }
 
     const QUIZ_EXAM_WEIGHT = {
       part1: 0.5,
@@ -4858,6 +4903,28 @@
       return base;
     }
 
+    const EXAM_SURFACE_SWAP_RULES = [
+      [/\bbest describes\b/gi, "most accurately describes"],
+      [/\bprimarily\b/gi, "mainly"],
+      [/\btypically\b/gi, "usually"],
+      [/\bWhich of the following\b/i, "Which statement"],
+      [/\bWhat is the\b/i, "Which option best identifies the"],
+      [/\bDuring the\b/g, "In the phase of the"],
+      [/\bcompared with\b/gi, "relative to"],
+      [/\bresults in\b/gi, "leads to"]
+    ];
+
+    function applyExamSurfaceVariant(q, quizId) {
+      if (!isExamStyleQuiz(quizId) || !q?.question || isWrittenQuestion(q)) return q;
+      if (optionHash(q.question) % 100 >= 42) return q;
+      const ruleIndex = optionHash(`${q.question}-${quizId}`) % EXAM_SURFACE_SWAP_RULES.length;
+      const [re, rep] = EXAM_SURFACE_SWAP_RULES[ruleIndex];
+      if (!re.test(q.question)) return q;
+      const question = q.question.replace(re, rep);
+      if (question === q.question) return q;
+      return { ...q, question };
+    }
+
     function balanceQuestionOptions(q) {
       const correct = q.correct;
       let options = q.options.map(o => String(o).trim());
@@ -4903,7 +4970,8 @@
             explanation: q.modelAnswer
           };
         }
-        const balanced = balanceQuestionOptions(q);
+        const surfaced = applyExamSurfaceVariant(q, quizId);
+        const balanced = balanceQuestionOptions(surfaced);
         const indexed = balanced.options.map((text, i) => ({ text, originalIndex: i }));
         const shuffledOpts = shuffle(indexed);
         const newCorrect = shuffledOpts.findIndex(o => o.originalIndex === balanced.correct);
