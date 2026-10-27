@@ -2794,7 +2794,8 @@
       final100: 100,
       final150: 150,
       final200: 200,
-      pinnacle300: 350
+      pinnacle300: 350,
+      writtenReview10: 10
     };
 
     function getProgressiveTierQuestions(progress) {
@@ -3030,9 +3031,17 @@
       return shuffle([...mcqSet, ...written]);
     }
 
+    function drawWrittenOnlySet(progress, quizId) {
+      const avoid = lastDrawAvoidKeys(quizId, progress);
+      const pool = typeof WRITTEN_EXAM_POOL !== "undefined" ? WRITTEN_EXAM_POOL.filter(q => q?.question) : [];
+      if (!pool.length) return [];
+      return sampleFromPool(pool, QUIZ_SAMPLE_SIZES[quizId] || 10, avoid);
+    }
+
     function drawQuizQuestionSet(quizId, progress) {
       const pools = poolsForQuiz(quizId, progress);
       const avoid = lastDrawAvoidKeys(quizId, progress);
+      if (quizId === "writtenReview10") return drawWrittenOnlySet(progress, quizId);
       if (quizId === "part1") return sampleFromPool(pools.part1, QUIZ_SAMPLE_SIZES.part1, avoid);
       if (quizId === "part2") return sampleFromPool(pools.part2, QUIZ_SAMPLE_SIZES.part2, avoid);
       if (quizId === "part3") return sampleFromPool(pools.part3, QUIZ_SAMPLE_SIZES.part3, avoid);
@@ -3152,6 +3161,7 @@
       review10P2: 0.55,
       review10P3: 0.55,
       review10Mix: 0.7,
+      writtenReview10: 0.15,
       finalReview: 0.65,
       final: 1.0,
       final100: 1.15,
@@ -3307,6 +3317,19 @@
         requires: () => allChapterQuizzesPassed(),
         lockHint: "Pass Part 1, Part 2, and Part 3 (70%+) to unlock"
       },
+      writtenReview10: {
+        id: "writtenReview10",
+        section: "written",
+        title: "Short Answer Drills",
+        subtitle: "10 written responses · all parts",
+        meta: "Always unlocked · shuffle each run",
+        description: "Short-answer only — same style as scored finals. Compare your responses to model answers after you submit (not auto-graded).",
+        icon: "✎",
+        cardClass: "exam-review",
+        immediateFeedback: false,
+        learningMode: true,
+        writtenOnly: true
+      },
       dailyPop: {
         id: "dailyPop",
         section: "daily",
@@ -3409,6 +3432,7 @@
       { id: "core", title: "Core Modules", hint: "Part 1 · Part 2 · Part 3 — instant feedback on each answer" },
       { id: "mixedReview", title: "Mixed Chapter Reviews", hint: "20 → 50 questions · all parts · instant feedback · difficulty rises each tier" },
       { id: "review10", title: "10-Question Exam Reviews", hint: "HarvardX-style MCQs · topic spread · answers revealed at the end" },
+      { id: "written", title: "Short Answer Drills", hint: "10 written responses · model answers at the end · new shuffle every attempt" },
       { id: "flashcards", title: "Weakness Flashcards", hint: "Auto-generated after each chapter quiz" },
       { id: "final", title: "Comprehensive Final", hint: "Final Review (learn mode) then the scored exam · unlocks after passing all module quizzes" },
       { id: "advanced", title: "Advanced Finals", hint: "Unlocked after the Comprehensive Final · 80% required to pass each" },
@@ -3752,7 +3776,7 @@
       }
 
       const lastText = last
-        ? `Last completed: <strong>${last.title}</strong> — ${last.pct}% (${last.correct}/${last.total}) · ${new Date(last.ts).toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" })}`
+        ? `Last completed: <strong>${last.title}</strong> — ${last.pct != null ? `${last.pct}%` : "self-review"} (${last.correct}/${last.total}) · ${new Date(last.ts).toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" })}`
         : "No completed quiz recorded in progress storage.";
 
       const tracked = analytics.totalQuestionsAnswered
@@ -3852,7 +3876,20 @@
       let correct = 0;
 
       questions.forEach((q, i) => {
-        if (isWrittenQuestion(q)) return;
+        if (isWrittenQuestion(q)) {
+          if (quiz.writtenOnly) {
+            const mod = questionModule(q, quizId);
+            const topic = q.topic || "General";
+            if (!data.moduleStats[mod]) data.moduleStats[mod] = { correct: 0, total: 0 };
+            data.moduleStats[mod].total++;
+            if (!data.topicStats[topic]) {
+              data.topicStats[topic] = { module: mod, correct: 0, total: 0, lastTs: ts };
+            }
+            data.topicStats[topic].total++;
+            data.topicStats[topic].lastTs = ts;
+          }
+          return;
+        }
         const isCorrect = answerMap[i] === q.correct;
         if (isCorrect) correct++;
         const mod = questionModule(q, quizId);
@@ -3875,8 +3912,8 @@
         title: quiz.title,
         ts,
         total,
-        correct,
-        pct,
+        correct: quiz.writtenOnly ? 0 : correct,
+        pct: quiz.writtenOnly ? null : pct,
         passed,
         weight: QUIZ_EXAM_WEIGHT[quizId] || 0.5
       });
@@ -5168,7 +5205,7 @@
       const advancedPassed = [progress.final100Passed, progress.final150Passed, progress.final200Passed].filter(Boolean).length;
       const last = progress.lastQuiz;
       const lastLine = last
-        ? `<strong>Last quiz:</strong> ${last.title} — ${last.pct}% (${last.correct}/${last.total}) on ${new Date(last.ts).toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" })}. `
+        ? `<strong>Last quiz:</strong> ${last.title} — ${last.pct != null ? `${last.pct}%` : "self-review"} (${last.correct}/${last.total}) on ${new Date(last.ts).toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" })}. `
         : "";
 
       if (progress.pinnacle300Passed) {
@@ -5318,8 +5355,11 @@
         const min = q.minChars || 30;
         const saved = typeof selected === "string" ? selected : "";
         const len = saved.trim().length;
+        const writtenHint = QUIZZES[activeQuizId]?.writtenOnly
+          ? "Short written response — not auto-graded. After you submit, compare your answer to the model response below each item."
+          : "Short written response — not auto-graded. You will compare your answer to a model response after you submit the exam. Pass/fail uses multiple-choice score only.";
         bodyHtml = `
-        <p class="written-prompt-hint">Short written response — not auto-graded. You will compare your answer to a model response after you submit the exam. Pass/fail uses multiple-choice score only.</p>
+        <p class="written-prompt-hint">${writtenHint}</p>
         <textarea id="written-answer-input" class="written-answer-textarea" aria-label="Your written answer" placeholder="Write 2–5 sentences in your own words…">${escapeHtml(saved)}</textarea>
         <p class="written-char-hint">${len} / ${min} characters minimum</p>`;
       } else {
@@ -5441,17 +5481,24 @@
         reviewList.appendChild(card);
       });
 
+      const quiz = QUIZZES[activeQuizId];
       const mcqCount = mcqQuestions.length;
       const mcqTotal = mcqCount || 1;
-      const pct = Math.round((correct / mcqTotal) * 100);
-      document.getElementById("score-pct").textContent = `${pct}%`;
-      const writtenNote = writtenQuestions.length
-        ? ` · ${writtenQuestions.length} short answer (self-review)`
-        : "";
-      document.getElementById("score-fraction").textContent =
-        `${correct} / ${mcqTotal} MCQ correct${writtenNote}`;
+      let pct = Math.round((correct / mcqTotal) * 100);
+      if (quiz?.writtenOnly) {
+        document.getElementById("score-pct").textContent = "Done";
+        document.getElementById("score-fraction").textContent =
+          `${writtenQuestions.length} short answers · self-review against model responses`;
+        pct = null;
+      } else {
+        document.getElementById("score-pct").textContent = `${pct}%`;
+        const writtenNote = writtenQuestions.length
+          ? ` · ${writtenQuestions.length} short answer (self-review)`
+          : "";
+        document.getElementById("score-fraction").textContent =
+          `${correct} / ${mcqTotal} MCQ correct${writtenNote}`;
+      }
 
-      const quiz = QUIZZES[activeQuizId];
       const passThreshold = getPassThreshold(activeQuizId);
       const passed = quiz?.learningMode ? true : pct >= passThreshold;
       const prevProgress = getProgress();
@@ -5460,22 +5507,26 @@
       try {
         if (quiz) {
           const bestKey = `best_${activeQuizId}`;
-          saveProgress({
-            lastQuiz: {
-              quizId: activeQuizId,
-              title: quiz.title,
-              pct,
-              correct,
-              total: mcqCount,
-              passed,
-              ts: Date.now()
-            },
-            [bestKey]: Math.max(prevProgress[bestKey] || 0, pct),
+          const lastQuizPayload = {
+            quizId: activeQuizId,
+            title: quiz.title,
+            pct: quiz.writtenOnly ? null : pct,
+            correct: quiz.writtenOnly ? writtenQuestions.length : correct,
+            total: quiz.writtenOnly ? writtenQuestions.length : mcqCount,
+            passed,
+            ts: Date.now()
+          };
+          const progressPatch = {
+            lastQuiz: lastQuizPayload,
             [`completed_${activeQuizId}`]: true
-          });
+          };
+          if (!quiz.writtenOnly && pct != null) {
+            progressPatch[bestKey] = Math.max(prevProgress[bestKey] || 0, pct);
+          }
+          saveProgress(progressPatch);
         }
 
-        recordQuizAttempt(activeQuizId, shuffledQuestions, answers, pct, passed);
+        recordQuizAttempt(activeQuizId, shuffledQuestions, answers, quiz.writtenOnly ? 0 : pct, passed);
 
         if (quiz && CHAPTER_IDS.includes(activeQuizId)) {
           const missed = shuffledQuestions
@@ -5533,6 +5584,8 @@
       if (quiz?.learningMode) {
         if (quiz.id === "dailyPop") {
           message = `Daily pop complete — ${pct}% today. Same five questions return tomorrow after local midnight.`;
+        } else if (quiz.id === "writtenReview10") {
+          message = "Short answer drill complete — read each model response and note gaps before Advanced Final III or the proctored exam.";
         } else if (quiz.id === "finalReview") {
           message = `Final review complete — ${pct}% for learning. When ready, take the scored Comprehensive Final below.`;
         } else {
