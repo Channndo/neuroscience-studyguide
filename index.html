@@ -5429,8 +5429,20 @@
       return out;
     }
 
+    function isPausableQuiz(quizId) {
+      return Boolean(quizId) && quizId !== "dailyPop" && !EXAM_QUIZ_IDS.includes(quizId);
+    }
+
+    function updateQuizBackLabel() {
+      const btn = document.getElementById("btn-back");
+      if (!btn) return;
+      btn.innerHTML = isPausableQuiz(activeQuizId)
+        ? "&larr; Save &amp; exit"
+        : "&larr; Dashboard";
+    }
+
     function canPersistQuizSession() {
-      return activeQuizId && activeQuizId !== "dailyPop" && shuffledQuestions?.length > 0;
+      return isPausableQuiz(activeQuizId) && shuffledQuestions?.length > 0;
     }
 
     function saveQuizSession() {
@@ -5452,7 +5464,7 @@
     function loadQuizSession() {
       try {
         const raw = JSON.parse(localStorage.getItem(QUIZ_SESSION_KEY) || "null");
-        if (!raw || raw.version !== 1 || raw.quizId === "dailyPop") return null;
+        if (!raw || raw.version !== 1 || !isPausableQuiz(raw.quizId)) return null;
         if (!raw.quizId || !Array.isArray(raw.questions) || !raw.questions.length) return null;
         const quiz = QUIZZES[raw.quizId];
         if (!quiz || !isQuizUnlocked(quiz)) return null;
@@ -5470,7 +5482,7 @@
     }
 
     function resumeQuizSession(data) {
-      if (!data?.quizId || data.quizId === "dailyPop") return false;
+      if (!isPausableQuiz(data?.quizId)) return false;
       const quiz = QUIZZES[data.quizId];
       if (!quiz || !isQuizUnlocked(quiz)) return false;
       activeQuizId = data.quizId;
@@ -5482,6 +5494,7 @@
       answers = normalizeAnswersMap(data.answers);
       const titleEl = document.getElementById("quiz-title");
       titleEl.textContent = quiz.title;
+      updateQuizBackLabel();
       showView("quiz");
       renderQuestion();
       return true;
@@ -5557,12 +5570,13 @@
       delete el.dataset.mode;
     }
 
-    function tryResumeSavedSession() {
-      const q = loadQuizSession();
-      if (q && resumeQuizSession(q)) return true;
-      const f = loadFlashcardSession();
-      if (f && resumeFlashcardSession(f)) return true;
-      return false;
+    function discardNonPausableQuizSession() {
+      try {
+        const raw = JSON.parse(localStorage.getItem(QUIZ_SESSION_KEY) || "null");
+        if (raw?.quizId && !isPausableQuiz(raw.quizId)) {
+          localStorage.removeItem(QUIZ_SESSION_KEY);
+        }
+      } catch { /* ignore */ }
     }
 
     function pauseQuizAndExit() {
@@ -5596,10 +5610,9 @@
       const quiz = QUIZZES[quizId];
       if (!quiz || !isQuizUnlocked(quiz)) return;
 
-      if (quizId === "dailyPop") {
-        hideDailyPopModal();
-        clearQuizSession();
-      } else if (!forceFresh) {
+      if (quizId === "dailyPop") hideDailyPopModal();
+
+      if (isPausableQuiz(quizId) && !forceFresh) {
         const saved = loadQuizSession();
         if (saved && saved.quizId === quizId) {
           resumeQuizSession(saved);
@@ -5607,13 +5620,13 @@
         }
       }
 
-      if (quizId !== "dailyPop") clearQuizSession();
+      clearQuizSession();
 
       activeQuizId = quizId;
       const progress = getProgressWithBackup();
       const drawn = drawQuizQuestionSet(quizId, progress);
       shuffledQuestions = prepareQuestions(drawn, quizId);
-      if (drawn.length && quizId !== "dailyPop") {
+      if (drawn.length && isPausableQuiz(quizId)) {
         saveProgress({ [`lastDraw_${quizId}`]: drawn.map(q => q.question) });
       }
       currentIndex = 0;
@@ -5624,9 +5637,10 @@
       } else {
         titleEl.textContent = quiz.title;
       }
+      updateQuizBackLabel();
       showView("quiz");
       renderQuestion();
-      if (quizId !== "dailyPop") saveQuizSession();
+      if (isPausableQuiz(quizId)) saveQuizSession();
     }
 
     function persistWrittenAnswerFromDom() {
@@ -6034,13 +6048,12 @@
       saveProgress({ dailyPopDismissedDate: localDateKey() });
     });
 
+    discardNonPausableQuizSession();
     updateStreakOnVisit();
     renderStreakBadge();
     renderUserActivityCard();
     renderDashboard();
-    if (!tryResumeSavedSession()) {
-      showView("dashboard");
-    }
+    showView("dashboard");
   </script>
 </body>
 </html>
