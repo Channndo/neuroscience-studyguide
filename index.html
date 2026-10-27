@@ -421,6 +421,55 @@
       color: var(--gray-500);
     }
 
+    .quiz-resume-banner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.65rem 1rem;
+      padding: 0.85rem 1rem;
+      margin-bottom: 1rem;
+      border-radius: var(--radius);
+      border: 2px solid var(--crimson);
+      background: var(--crimson-light);
+      font-size: 0.9rem;
+      color: var(--gray-800);
+    }
+
+    html[data-theme="dark"] .quiz-resume-banner {
+      background: rgba(165, 28, 48, 0.18);
+      color: var(--gray-600);
+    }
+
+    .quiz-resume-banner strong { color: var(--crimson-dark); }
+    html[data-theme="dark"] .quiz-resume-banner strong { color: #fca5a5; }
+
+    .quiz-resume-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-left: auto;
+    }
+
+    .quiz-resume-actions button {
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 0.45rem 0.85rem;
+      border-radius: 8px;
+      cursor: pointer;
+      border: none;
+    }
+
+    .quiz-resume-actions .btn-resume-go {
+      background: var(--crimson);
+      color: #fff;
+    }
+
+    .quiz-resume-actions .btn-resume-discard {
+      background: var(--gray-200);
+      color: var(--gray-800);
+    }
+
     .progress-banner {
       background: var(--crimson-light);
       border: 1px solid rgba(165, 28, 48, 0.2);
@@ -1869,6 +1918,13 @@
       </div>
       <div id="user-activity-card" class="activity-card"></div>
       <div id="study-plan-dashboard" class="study-plan-panel dashboard-plan" hidden></div>
+      <div id="quiz-resume-banner" class="quiz-resume-banner" hidden>
+        <span id="quiz-resume-text"></span>
+        <div class="quiz-resume-actions">
+          <button type="button" class="btn-resume-go" id="quiz-resume-go">Resume</button>
+          <button type="button" class="btn-resume-discard" id="quiz-resume-discard">Discard</button>
+        </div>
+      </div>
       <div id="progress-banner" class="progress-banner" hidden></div>
       <div id="unlock-toast" class="unlock-toast" hidden></div>
       <div id="dashboard-sections"></div>
@@ -1887,7 +1943,7 @@
     <!-- Quiz -->
     <section id="view-quiz" class="view">
       <div class="quiz-header">
-        <button type="button" class="btn-back" id="btn-back">&larr; Dashboard</button>
+        <button type="button" class="btn-back" id="btn-back">&larr; Save &amp; exit</button>
         <p class="quiz-title" id="quiz-title"></p>
       </div>
       <div class="progress-card" role="status" aria-live="polite">
@@ -1906,7 +1962,7 @@
     <!-- Flashcards -->
     <section id="view-flashcard" class="view">
       <div class="quiz-header">
-        <button type="button" class="btn-back" id="fc-back">&larr; Dashboard</button>
+        <button type="button" class="btn-back" id="fc-back">&larr; Save &amp; exit</button>
         <p class="quiz-title" id="fc-title"></p>
       </div>
       <p class="flashcard-hint">Click the card to flip &middot; Generated from questions you missed</p>
@@ -3168,6 +3224,8 @@
     const SETTINGS_KEY = "mcb80x_settings";
     const FLASHCARD_KEY = "mcb80x_flashcards";
     const ANALYTICS_KEY = "mcb80x_analytics";
+    const QUIZ_SESSION_KEY = "mcb80x_quiz_session";
+    const FLASHCARD_SESSION_KEY = "mcb80x_flashcard_session";
     const CHAPTER_IDS = ["part1", "part2", "part3"];
 
     const EXAM_QUIZ_IDS = ["final", "final100", "final150", "final200", "pinnacle300"];
@@ -5297,6 +5355,7 @@
       }
 
       maybeShowDailyPopModal(progress);
+      renderResumeBanner();
 
       container.querySelectorAll(".quiz-card:not(.locked)").forEach(card => {
         if (card.dataset.flashcards) {
@@ -5318,7 +5377,15 @@
       });
     }
 
-    function startFlashcards(chapterId) {
+    function startFlashcards(chapterId, { forceFresh = false } = {}) {
+      if (!forceFresh) {
+        const saved = loadFlashcardSession();
+        if (saved && saved.chapterId === chapterId) {
+          resumeFlashcardSession(saved);
+          return;
+        }
+      }
+      clearFlashcardSession();
       const deck = getFlashcardDecks()[chapterId];
       if (!deck || !deck.length) return;
       activeFlashcardChapter = chapterId;
@@ -5327,6 +5394,7 @@
       document.getElementById("fc-title").textContent = CHAPTER_META[chapterId].title;
       showView("flashcard");
       renderFlashcard();
+      saveFlashcardSession();
     }
 
     function renderFlashcard() {
@@ -5351,6 +5419,164 @@
       if (modal) modal.hidden = true;
     }
 
+    function normalizeAnswersMap(raw) {
+      if (!raw || typeof raw !== "object") return {};
+      const out = {};
+      Object.keys(raw).forEach(k => {
+        const idx = parseInt(k, 10);
+        if (!Number.isNaN(idx)) out[idx] = raw[k];
+      });
+      return out;
+    }
+
+    function canPersistQuizSession() {
+      return activeQuizId && activeQuizId !== "dailyPop" && shuffledQuestions?.length > 0;
+    }
+
+    function saveQuizSession() {
+      if (!canPersistQuizSession() || !storageAvailable()) return;
+      persistWrittenAnswerFromDom();
+      try {
+        localStorage.setItem(QUIZ_SESSION_KEY, JSON.stringify({
+          version: 1,
+          quizId: activeQuizId,
+          currentIndex,
+          answers,
+          questions: shuffledQuestions,
+          ts: Date.now()
+        }));
+        renderResumeBanner();
+      } catch { /* storage full */ }
+    }
+
+    function loadQuizSession() {
+      try {
+        const raw = JSON.parse(localStorage.getItem(QUIZ_SESSION_KEY) || "null");
+        if (!raw || raw.version !== 1 || raw.quizId === "dailyPop") return null;
+        if (!raw.quizId || !Array.isArray(raw.questions) || !raw.questions.length) return null;
+        const quiz = QUIZZES[raw.quizId];
+        if (!quiz || !isQuizUnlocked(quiz)) return null;
+        return raw;
+      } catch {
+        return null;
+      }
+    }
+
+    function clearQuizSession() {
+      try {
+        localStorage.removeItem(QUIZ_SESSION_KEY);
+      } catch { /* ignore */ }
+      renderResumeBanner();
+    }
+
+    function resumeQuizSession(data) {
+      if (!data?.quizId || data.quizId === "dailyPop") return false;
+      const quiz = QUIZZES[data.quizId];
+      if (!quiz || !isQuizUnlocked(quiz)) return false;
+      activeQuizId = data.quizId;
+      shuffledQuestions = data.questions;
+      currentIndex = Math.min(
+        Math.max(0, data.currentIndex || 0),
+        Math.max(0, shuffledQuestions.length - 1)
+      );
+      answers = normalizeAnswersMap(data.answers);
+      const titleEl = document.getElementById("quiz-title");
+      titleEl.textContent = quiz.title;
+      showView("quiz");
+      renderQuestion();
+      return true;
+    }
+
+    function saveFlashcardSession() {
+      if (!activeFlashcardChapter || !fcDeck?.length || !storageAvailable()) return;
+      try {
+        localStorage.setItem(FLASHCARD_SESSION_KEY, JSON.stringify({
+          version: 1,
+          chapterId: activeFlashcardChapter,
+          fcIndex,
+          deck: fcDeck,
+          ts: Date.now()
+        }));
+        renderResumeBanner();
+      } catch { /* ignore */ }
+    }
+
+    function loadFlashcardSession() {
+      try {
+        const raw = JSON.parse(localStorage.getItem(FLASHCARD_SESSION_KEY) || "null");
+        if (!raw || raw.version !== 1 || !raw.chapterId || !Array.isArray(raw.deck) || !raw.deck.length) {
+          return null;
+        }
+        if (!CHAPTER_META[raw.chapterId]) return null;
+        return raw;
+      } catch {
+        return null;
+      }
+    }
+
+    function clearFlashcardSession() {
+      try {
+        localStorage.removeItem(FLASHCARD_SESSION_KEY);
+      } catch { /* ignore */ }
+      renderResumeBanner();
+    }
+
+    function resumeFlashcardSession(data) {
+      if (!data?.chapterId || !data.deck?.length) return false;
+      activeFlashcardChapter = data.chapterId;
+      fcDeck = data.deck;
+      fcIndex = Math.min(Math.max(0, data.fcIndex || 0), fcDeck.length - 1);
+      document.getElementById("fc-title").textContent = CHAPTER_META[data.chapterId].title;
+      showView("flashcard");
+      renderFlashcard();
+      return true;
+    }
+
+    function renderResumeBanner() {
+      const el = document.getElementById("quiz-resume-banner");
+      const text = document.getElementById("quiz-resume-text");
+      if (!el || !text) return;
+      const q = loadQuizSession();
+      const f = loadFlashcardSession();
+      if (q) {
+        const quiz = QUIZZES[q.quizId];
+        const idx = Math.min(q.currentIndex + 1, q.questions.length);
+        text.innerHTML = `Paused quiz: <strong>${quiz?.title || q.quizId}</strong> — question ${idx} of ${q.questions.length}`;
+        el.dataset.mode = "quiz";
+        el.hidden = false;
+        return;
+      }
+      if (f) {
+        const idx = Math.min(f.fcIndex + 1, f.deck.length);
+        text.innerHTML = `Paused flashcards: <strong>${CHAPTER_META[f.chapterId]?.title || f.chapterId}</strong> — card ${idx} of ${f.deck.length}`;
+        el.dataset.mode = "flashcard";
+        el.hidden = false;
+        return;
+      }
+      el.hidden = true;
+      delete el.dataset.mode;
+    }
+
+    function tryResumeSavedSession() {
+      const q = loadQuizSession();
+      if (q && resumeQuizSession(q)) return true;
+      const f = loadFlashcardSession();
+      if (f && resumeFlashcardSession(f)) return true;
+      return false;
+    }
+
+    function pauseQuizAndExit() {
+      saveQuizSession();
+      renderDashboard();
+      showView("dashboard");
+    }
+
+    function pauseFlashcardsAndExit() {
+      saveFlashcardSession();
+      renderDashboard();
+      showView("dashboard");
+    }
+
     function maybeShowDailyPopModal(progress) {
       const modal = document.getElementById("daily-pop-modal");
       if (!modal || !storageAvailable()) return;
@@ -5366,11 +5592,22 @@
       modal.hidden = false;
     }
 
-    function startQuiz(quizId) {
+    function startQuiz(quizId, { forceFresh = false } = {}) {
       const quiz = QUIZZES[quizId];
       if (!quiz || !isQuizUnlocked(quiz)) return;
 
-      if (quizId === "dailyPop") hideDailyPopModal();
+      if (quizId === "dailyPop") {
+        hideDailyPopModal();
+        clearQuizSession();
+      } else if (!forceFresh) {
+        const saved = loadQuizSession();
+        if (saved && saved.quizId === quizId) {
+          resumeQuizSession(saved);
+          return;
+        }
+      }
+
+      if (quizId !== "dailyPop") clearQuizSession();
 
       activeQuizId = quizId;
       const progress = getProgressWithBackup();
@@ -5389,6 +5626,7 @@
       }
       showView("quiz");
       renderQuestion();
+      if (quizId !== "dailyPop") saveQuizSession();
     }
 
     function persistWrittenAnswerFromDom() {
@@ -5469,6 +5707,7 @@
           answers[currentIndex] = ta.value;
           if (hint) hint.textContent = `${ta.value.trim().length} / ${min} characters minimum`;
           document.getElementById("btn-next").disabled = nextButtonNeedsAnswer(currentIndex);
+          saveQuizSession();
         };
         ta.addEventListener("input", sync);
         sync();
@@ -5483,6 +5722,7 @@
               document.querySelectorAll(".answer-btn").forEach(b => b.classList.remove("selected"));
               btn.classList.add("selected");
             }
+            saveQuizSession();
           });
         });
       }
@@ -5491,10 +5731,12 @@
       document.getElementById("btn-next").disabled = nextButtonNeedsAnswer(currentIndex);
       document.getElementById("btn-next").textContent =
         currentIndex === total - 1 ? "Submit Quiz" : "Next";
+      saveQuizSession();
     }
 
     function showResults() {
       persistWrittenAnswerFromDom();
+      clearQuizSession();
       const mcqQuestions = shuffledQuestions.filter(q => !isWrittenQuestion(q));
       const writtenQuestions = shuffledQuestions.filter(q => isWrittenQuestion(q));
       let correct = 0;
@@ -5674,8 +5916,7 @@
     }
 
     document.getElementById("btn-back").addEventListener("click", () => {
-      renderDashboard();
-      showView("dashboard");
+      pauseQuizAndExit();
     });
     document.getElementById("btn-dashboard").addEventListener("click", () => {
       renderDashboard();
@@ -5684,7 +5925,11 @@
 
     document.getElementById("btn-prev").addEventListener("click", () => {
       persistWrittenAnswerFromDom();
-      if (currentIndex > 0) { currentIndex--; renderQuestion(); }
+      if (currentIndex > 0) {
+        currentIndex--;
+        renderQuestion();
+        saveQuizSession();
+      }
     });
 
     document.getElementById("btn-next").addEventListener("click", () => {
@@ -5693,18 +5938,18 @@
       if (currentIndex < shuffledQuestions.length - 1) {
         currentIndex++;
         renderQuestion();
+        saveQuizSession();
       } else {
         showResults();
       }
     });
 
     document.getElementById("btn-retake").addEventListener("click", () => {
-      if (activeQuizId) startQuiz(activeQuizId);
+      if (activeQuizId) startQuiz(activeQuizId, { forceFresh: true });
     });
 
     document.getElementById("fc-back").addEventListener("click", () => {
-      renderDashboard();
-      showView("dashboard");
+      pauseFlashcardsAndExit();
     });
 
     document.getElementById("flashcard").addEventListener("click", flipFlashcard);
@@ -5713,24 +5958,68 @@
     });
 
     document.getElementById("fc-prev").addEventListener("click", () => {
-      if (fcIndex > 0) { fcIndex--; renderFlashcard(); }
+      if (fcIndex > 0) {
+        fcIndex--;
+        renderFlashcard();
+        saveFlashcardSession();
+      }
     });
 
     document.getElementById("fc-next").addEventListener("click", () => {
-      if (fcIndex < fcDeck.length - 1) { fcIndex++; renderFlashcard(); }
+      if (fcIndex < fcDeck.length - 1) {
+        fcIndex++;
+        renderFlashcard();
+        saveFlashcardSession();
+      }
+    });
+
+    document.getElementById("quiz-resume-go").addEventListener("click", () => {
+      const mode = document.getElementById("quiz-resume-banner")?.dataset.mode;
+      if (mode === "flashcard") {
+        const f = loadFlashcardSession();
+        if (f) resumeFlashcardSession(f);
+      } else {
+        const q = loadQuizSession();
+        if (q) resumeQuizSession(q);
+      }
+    });
+
+    document.getElementById("quiz-resume-discard").addEventListener("click", () => {
+      const mode = document.getElementById("quiz-resume-banner")?.dataset.mode;
+      if (mode === "flashcard") clearFlashcardSession();
+      else clearQuizSession();
+      renderResumeBanner();
+    });
+
+    window.addEventListener("beforeunload", () => {
+      saveQuizSession();
+      saveFlashcardSession();
+    });
+
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "hidden") {
+        saveQuizSession();
+        saveFlashcardSession();
+      }
     });
 
     document.getElementById("nav-dashboard").addEventListener("click", () => {
+      saveQuizSession();
+      saveFlashcardSession();
       renderDashboard();
       showView("dashboard");
     });
 
     document.getElementById("nav-profile").addEventListener("click", () => {
+      saveQuizSession();
+      saveFlashcardSession();
       renderProfile();
       showView("profile");
     });
 
     document.getElementById("nav-settings").addEventListener("click", () => {
+      saveQuizSession();
+      saveFlashcardSession();
       renderSettings();
       showView("settings");
     });
@@ -5749,6 +6038,9 @@
     renderStreakBadge();
     renderUserActivityCard();
     renderDashboard();
+    if (!tryResumeSavedSession()) {
+      showView("dashboard");
+    }
   </script>
 </body>
 </html>
