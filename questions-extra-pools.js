@@ -12,6 +12,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 1,
     explanation: "Goldman (constant-field) weighting makes V_m approach the equilibrium potential of the most permeant ion.",
+    wrongExplanations: [
+      "This option is inconsistent with the stem; the keyed answer (Potassium equilibrium (E_K)) matches the underlying mechanism.",
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Potassium equilibrium (E_K)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Potassium equilibrium (E_K)) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Goldman Equation",
@@ -24,6 +30,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Higher external Na⁺ makes E_Na more positive; if a small Na⁺ leak exists at rest, V_m shifts slightly toward E_Na.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Toward E_Na (less negative)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Toward E_Na (less negative)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Toward E_Na (less negative)) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Resting Potential",
@@ -36,6 +48,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "The electrogenic pump maintains gradients; resting V_m is set by leak conductances and those gradients.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Maintaining ion gradients that set equilibrium potentials) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Maintaining ion gradients that set equilibrium potentials) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Maintaining ion gradients that set equilibrium potentials) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Resting Potential",
@@ -48,6 +66,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Removing dominant K⁺ leak leaves remaining Na⁺ (and other) conductances to set V_m closer to E_Na.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Toward E_Na (depolarized relative to normal K⁺-dominated rest)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Toward E_Na (depolarized relative to normal K⁺-dominated rest)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Toward E_Na (depolarized relative to normal K⁺-dominated rest)) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Nernst Equation",
@@ -60,6 +84,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Nernst slope scales as RT/zF; divalent ions use half the mV per decade of a monovalent ion.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (~31 mV (half the monovalent slope)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (~31 mV (half the monovalent slope)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (~31 mV (half the monovalent slope)) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Nernst Equation",
@@ -72,6 +102,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "With no concentration gradient, E_K = 0 mV regardless of channel presence.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (0 mV) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (0 mV) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (0 mV) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Nernst Equation",
@@ -84,6 +120,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "RT/F decreases with temperature, reducing mV per log concentration change.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Reduce the Nernst slope in mV per decade) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Reduce the Nernst slope in mV per decade) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Reduce the Nernst slope in mV per decade) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Electrical Signaling",
@@ -96,6 +138,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "At equilibrium potential, net electrochemical driving force for that ion is zero.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Zero) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Zero) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Zero) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Passive Membrane Properties",
@@ -108,6 +156,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "The bilayer acts as a capacitor; charge accumulates on inner and outer leaflets.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (The lipid bilayer stores charge separated across a thin dielectric) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (The lipid bilayer stores charge separated across a thin dielectric) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (The lipid bilayer stores charge separated across a thin dielectric) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Passive Membrane Properties",
@@ -120,6 +174,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Immediately after current onset, I charges C_m before reaching the steady ohmic response.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Capacitive charging (ΔV ≈ I/C)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Capacitive charging (ΔV ≈ I/C)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Capacitive charging (ΔV ≈ I/C)) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Passive Membrane Properties",
@@ -132,6 +192,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "τ = R_m C_m; higher R_m lengthens the membrane time constant.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Increase τ and slow subthreshold responses) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Increase τ and slow subthreshold responses) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Increase τ and slow subthreshold responses) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Passive Membrane Properties",
@@ -144,6 +210,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "λ = √(R_m/R_i); lower R_m shrinks the space constant.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Shorten λ and attenuate dendritic signals faster) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Shorten λ and attenuate dendritic signals faster) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Shorten λ and attenuate dendritic signals faster) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Passive Membrane Properties",
@@ -156,6 +228,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Passive spread along dendrites attenuates amplitude and spreads rise time.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Cable filtering (attenuation and low-pass filtering)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Cable filtering (attenuation and low-pass filtering)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Cable filtering (attenuation and low-pass filtering)) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Passive Membrane Properties",
@@ -168,6 +246,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Additional open channels lower input resistance and increase conductance.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (More ion channels open in the dendritic tree) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (More ion channels open in the dendritic tree) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (More ion channels open in the dendritic tree) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Patch Clamp",
@@ -180,6 +264,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Whole-cell mode electrically couples the pipette to the soma and can exchange small molecules.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Dialyze the cytoplasm and control V_m directly) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Dialyze the cytoplasm and control V_m directly) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Dialyze the cytoplasm and control V_m directly) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Patch Clamp",
@@ -192,6 +282,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Tight seals isolate the patch from bath noise and enable single-channel resolution.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Leak current between pipette and bath, improving signal-to-noise) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Leak current between pipette and bath, improving signal-to-noise) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Leak current between pipette and bath, improving signal-to-noise) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Patch Clamp",
@@ -204,6 +300,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "The patch stays on the outside surface, preserving intracellular milieu.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Single-channel currents without disrupting cytosolic composition) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Single-channel currents without disrupting cytosolic composition) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Single-channel currents without disrupting cytosolic composition) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Action Potentials",
@@ -216,6 +318,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "TTX selectively occludes voltage-gated Na⁺ channels.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Voltage-gated Na⁺ channel pore) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Voltage-gated Na⁺ channel pore) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Voltage-gated Na⁺ channel pore) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Action Potentials",
@@ -228,6 +336,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "TEA blocks some K⁺ channels, slowing repolarization.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Certain voltage-gated K⁺ channels) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Certain voltage-gated K⁺ channels) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Certain voltage-gated K⁺ channels) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Action Potentials",
@@ -240,6 +354,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Hodgkin–Huxley dynamics: rapid Na⁺ entry drives depolarization.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Voltage-gated Na⁺ influx) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Voltage-gated Na⁺ influx) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Voltage-gated Na⁺ influx) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Action Potentials",
@@ -252,6 +372,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "K⁺ channels remain active briefly, hyperpolarizing the membrane.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Continued K⁺ efflux through delayed rectifiers and/or Ca²⁺-activated K⁺) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Continued K⁺ efflux through delayed rectifiers and/or Ca²⁺-activated K⁺) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Continued K⁺ efflux through delayed rectifiers and/or Ca²⁺-activated K⁺) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Action Potentials",
@@ -264,6 +390,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Inactivation gate closure prevents repeated Na⁺ opening (absolute refractory period).",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Cannot fire another action potential until recovery) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Cannot fire another action potential until recovery) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Cannot fire another action potential until recovery) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Action Potentials",
@@ -276,6 +408,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Positive feedback from Na⁺ activation makes depolarization self-sustaining.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Net inward current exceeds net outward current regeneratively) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Net inward current exceeds net outward current regeneratively) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Net inward current exceeds net outward current regeneratively) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Action Potentials",
@@ -288,6 +426,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Subthreshold events are passive; leak restores resting potential.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Passive leak currents oppose the change (return toward rest)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Passive leak currents oppose the change (return toward rest)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Passive leak currents oppose the change (return toward rest)) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Action Potentials",
@@ -300,6 +444,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Ca²⁺ affects gating and excitability; extreme lowering has complex effects on spike width.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Reducing surface charge screening and altering channel kinetics / excitability) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Reducing surface charge screening and altering channel kinetics / excitability) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Reducing surface charge screening and altering channel kinetics / excitability) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Action Potential Propagation",
@@ -312,6 +462,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Depolarization spreads passively to the next segment, triggering local Na⁺ influx.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Local current loops depolarize adjacent membrane to threshold) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Local current loops depolarize adjacent membrane to threshold) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Local current loops depolarize adjacent membrane to threshold) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Action Potential Propagation",
@@ -324,6 +480,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Myelin insulates internodes; nodes concentrate ion channels for efficient jumping.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Reducing capacitive load and limiting active regeneration to nodes) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Reducing capacitive load and limiting active regeneration to nodes) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Reducing capacitive load and limiting active regeneration to nodes) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Action Potential Propagation",
@@ -336,6 +498,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "MCB80x emphasizes use-dependent block and diameter effects; small sensory fibers are often affected early clinically.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Small-diameter fibers (higher sensitivity varies by drug and use dependence)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Small-diameter fibers (higher sensitivity varies by drug and use dependence)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Small-diameter fibers (higher sensitivity varies by drug and use dependence)) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Action Potential Propagation",
@@ -348,6 +516,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "High Na⁺ channel density at nodes supports saltatory propagation.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Regenerate the action potential efficiently) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Regenerate the action potential efficiently) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Regenerate the action potential efficiently) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Action Potential Propagation",
@@ -360,6 +534,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Loss of insulation forces more membrane to be charged, delaying regeneration.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Effective capacitance increases and current must charge more membrane per unit length) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Effective capacitance increases and current must charge more membrane per unit length) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Effective capacitance increases and current must charge more membrane per unit length) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Action Potential Propagation",
@@ -372,6 +552,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Antidromic spikes travel from axon toward soma; orthodromic is soma-to-terminal.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Propagates toward the soma (opposite normal orthodromic direction)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Propagates toward the soma (opposite normal orthodromic direction)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Propagates toward the soma (opposite normal orthodromic direction)) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Axon Initial Segment",
@@ -384,6 +570,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "MCB80x highlights AIS as a primary site of action potential generation.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Voltage-gated Na⁺ channels and contributes strongly to spike initiation) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Voltage-gated Na⁺ channels and contributes strongly to spike initiation) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Voltage-gated Na⁺ channels and contributes strongly to spike initiation) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Axon Initial Segment",
@@ -396,6 +588,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Integration at the AIS converts synaptic input into firing output.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Determine whether threshold is reached for spike initiation) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Determine whether threshold is reached for spike initiation) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Determine whether threshold is reached for spike initiation) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Channel Gating",
@@ -408,6 +606,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Fast inactivation involves a cytoplasmic domain occluding the channel.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (An intracellular inactivation particle blocking the pore after activation) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (An intracellular inactivation particle blocking the pore after activation) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (An intracellular inactivation particle blocking the pore after activation) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Channel Gating",
@@ -420,6 +624,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Delayed K⁺ activation terminates the spike.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Repolarize the membrane after the Na⁺ surge) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Repolarize the membrane after the Na⁺ surge) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Repolarize the membrane after the Na⁺ surge) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Equilibrium vs Steady State",
@@ -432,6 +642,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Equilibrium means balanced fluxes, not absence of movement.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Individual K⁺ ions still cross the membrane in both directions) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Individual K⁺ ions still cross the membrane in both directions) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Individual K⁺ ions still cross the membrane in both directions) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Equilibrium vs Steady State",
@@ -444,6 +660,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "The pump continuously works to offset passive ion loss.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Active transport maintains ion gradients against passive leak) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Active transport maintains ion gradients against passive leak) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Active transport maintains ion gradients against passive leak) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Experimental Methods",
@@ -456,6 +678,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Hodgkin and Huxley clamped voltage to dissect underlying ionic currents.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Hold membrane voltage constant and measure the currents required) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Hold membrane voltage constant and measure the currents required) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Hold membrane voltage constant and measure the currents required) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Experimental Methods",
@@ -468,6 +696,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Current clamp reveals integrative and spiking behavior under controlled input.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Resulting voltage changes) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Resulting voltage changes) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Resulting voltage changes) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Ion Selectivity",
@@ -480,6 +714,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Selectivity filters and gating restrict permeation to Na⁺.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Pore architecture and charge filtering favor Na⁺ over K⁺) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Pore architecture and charge filtering favor Na⁺ over K⁺) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Pore architecture and charge filtering favor Na⁺ over K⁺) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Ion Selectivity",
@@ -492,6 +732,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "V_m negative relative to E_Na drives cation influx if channels open.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Inward Na⁺ movement (into the cell)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Inward Na⁺ movement (into the cell)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Inward Na⁺ movement (into the cell)) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Dendritic Integration",
@@ -504,6 +750,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "EPSPs must summate within the membrane time constant window.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Overlap in time before passive decay completes) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Overlap in time before passive decay completes) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Overlap in time before passive decay completes) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Dendritic Integration",
@@ -516,6 +768,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Inputs from different locations add passively toward spike initiation.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Multiple synaptic inputs on different branches combine at the axon hillock/AIS) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Multiple synaptic inputs on different branches combine at the axon hillock/AIS) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Multiple synaptic inputs on different branches combine at the axon hillock/AIS) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Pharmacology",
@@ -528,6 +786,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Pump inhibition collapses gradients, raising [Na⁺]_i and depolarizing toward failure.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Depolarize cells as Na⁺ accumulates and K⁺ is lost) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Depolarize cells as Na⁺ accumulates and K⁺ is lost) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Depolarize cells as Na⁺ accumulates and K⁺ is lost) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Pharmacology",
@@ -540,6 +804,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "More K⁺ conductance pulls V_m toward E_K (often more negative).",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Hyperpolarize or stabilize V_m nearer E_K) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Hyperpolarize or stabilize V_m nearer E_K) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Hyperpolarize or stabilize V_m nearer E_K) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Pharmacology",
@@ -552,6 +822,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Slower repolarization prolongs depolarization and can alter refractory period.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Broadens the spike and may increase firing rate) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Broadens the spike and may increase firing rate) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Broadens the spike and may increase firing rate) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Quantitative Physiology",
@@ -564,6 +840,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Classic HH model: fast Na⁺ conductance rise, slower K⁺ rise for repolarization.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Hodgkin–Huxley separation of Na⁺ activation and K⁺ delayed activation) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Hodgkin–Huxley separation of Na⁺ activation and K⁺ delayed activation) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Hodgkin–Huxley separation of Na⁺ activation and K⁺ delayed activation) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Quantitative Physiology",
@@ -576,6 +858,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Reversal potential satisfies I_ion = g(V_m − E_rev) = 0.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Net ionic current through that conductance is zero) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Net ionic current through that conductance is zero) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Net ionic current through that conductance is zero) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Quantitative Physiology",
@@ -588,6 +876,12 @@ const PART1_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "λ = √(R_m/R_i); increased λ implies better passive spread along the cable.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Higher R_m or lower R_i) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Higher R_m or lower R_i) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Higher R_m or lower R_i) matches the underlying mechanism."
+    ]
   }
 ];
 
@@ -603,6 +897,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Each vesicle contributes a miniature EPSC/IPSC of roughly fixed amplitude.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Release occurs in discrete vesicle units (quanta)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Release occurs in discrete vesicle units (quanta)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Release occurs in discrete vesicle units (quanta)) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Synaptic Transmission",
@@ -615,6 +915,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Spontaneous quantal release produces mEPSPs/mEPSCs.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Spontaneous single-vesicle fusion occurs without presynaptic spikes) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Spontaneous single-vesicle fusion occurs without presynaptic spikes) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Spontaneous single-vesicle fusion occurs without presynaptic spikes) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Synaptic Transmission",
@@ -627,6 +933,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Ca²⁺ triggers synaptotagmin and SNARE-mediated fusion.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Increases release probability) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Increases release probability) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Increases release probability) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Synaptic Transmission",
@@ -639,6 +951,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Botulinum proteolysis of SNAREs prevents exocytosis.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (SNARE proteins required for vesicle fusion) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (SNARE proteins required for vesicle fusion) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (SNARE proteins required for vesicle fusion) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Synaptic Transmission",
@@ -651,6 +969,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Several presynaptic steps add milliseconds between spike and response.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Ca²⁺ influx, vesicle fusion, and transmitter diffusion/binding) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Ca²⁺ influx, vesicle fusion, and transmitter diffusion/binding) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Ca²⁺ influx, vesicle fusion, and transmitter diffusion/binding) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Synaptic Vesicles",
@@ -663,6 +987,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Primed vesicles supply the first wave of evoked release.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Are docked/primed and can fuse quickly after Ca²⁺ rise) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Are docked/primed and can fuse quickly after Ca²⁺ rise) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Are docked/primed and can fuse quickly after Ca²⁺ rise) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Synaptic Vesicles",
@@ -675,6 +1005,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Without recycling, synapses deplete vesicle supply.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Recycle vesicle membrane and maintain release capacity) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Recycle vesicle membrane and maintain release capacity) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Recycle vesicle membrane and maintain release capacity) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Receptor Types",
@@ -687,6 +1023,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "AMPA channels dominate fast EPSCs when Glu is released.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Fast excitatory postsynaptic currents at many glutamatergic synapses) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Fast excitatory postsynaptic currents at many glutamatergic synapses) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Fast excitatory postsynaptic currents at many glutamatergic synapses) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Receptor Types",
@@ -699,6 +1041,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "GABA_A is a ligand-gated Cl⁻ channel (E_Cl sets direction).",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Cl⁻ (often hyperpolarizing or shunting)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Cl⁻ (often hyperpolarizing or shunting)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Cl⁻ (often hyperpolarizing or shunting)) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Receptor Types",
@@ -711,6 +1059,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "nAChR permits Na⁺/K⁺ flux, depolarizing the muscle fiber.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Ligand-gated cation channels causing endplate depolarization) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Ligand-gated cation channels causing endplate depolarization) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Ligand-gated cation channels causing endplate depolarization) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Receptor Types",
@@ -723,6 +1077,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Muscarinic receptors use G-proteins for slower modulatory effects.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Modulate K⁺ channels, phospholipase C, and other second-messenger pathways) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Modulate K⁺ channels, phospholipase C, and other second-messenger pathways) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Modulate K⁺ channels, phospholipase C, and other second-messenger pathways) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Second Messengers",
@@ -735,6 +1095,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "PLC splits PIP2 into IP3 (Ca²⁺ release) and DAG (PKC activation).",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (IP3 and DAG, raising intracellular Ca²⁺ from stores) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (IP3 and DAG, raising intracellular Ca²⁺ from stores) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (IP3 and DAG, raising intracellular Ca²⁺ from stores) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Second Messengers",
@@ -747,6 +1113,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "PKA phosphorylation alters channel function and gene expression.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Phosphorylating channels and transcription factors) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Phosphorylating channels and transcription factors) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Phosphorylating channels and transcription factors) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Synaptic Integration",
@@ -759,6 +1131,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Increased conductance diverts current, reducing voltage change elsewhere.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Lowering input resistance so synaptic current leaks locally) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Lowering input resistance so synaptic current leaks locally) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Lowering input resistance so synaptic current leaks locally) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Synaptic Integration",
@@ -771,6 +1149,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Inhibition can divide or scale excitation rather than only subtract absolutely.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Inhibitory input scaling excitatory drive proportionally) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Inhibitory input scaling excitatory drive proportionally) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Inhibitory input scaling excitatory drive proportionally) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Short-Term Plasticity",
@@ -783,6 +1167,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "High-frequency use exhausts primed vesicles temporarily.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Depletion of the readily releasable vesicle pool) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Depletion of the readily releasable vesicle pool) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Depletion of the readily releasable vesicle pool) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Short-Term Plasticity",
@@ -795,6 +1185,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Ca²⁺ buildup increases P_release for subsequent spikes.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Residual presynaptic Ca²⁺ enhancing release probability) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Residual presynaptic Ca²⁺ enhancing release probability) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Residual presynaptic Ca²⁺ enhancing release probability) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Long-Term Plasticity",
@@ -807,6 +1203,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Correlated pre/post activity drives LTP-like strengthening.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Cells that fire together wire together (correlated activity strengthens synapses)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Cells that fire together wire together (correlated activity strengthens synapses)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Cells that fire together wire together (correlated activity strengthens synapses)) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Long-Term Plasticity",
@@ -819,6 +1221,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Specific timing/frequency rules can weaken synapses (LTD).",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Postsynaptic activity is low during presynaptic input (e.g., low-frequency pairing)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Postsynaptic activity is low during presynaptic input (e.g., low-frequency pairing)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Postsynaptic activity is low during presynaptic input (e.g., low-frequency pairing)) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Long-Term Plasticity",
@@ -831,6 +1239,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Ca²⁺ influx through NMDA activates CaMKII, reinforcing synaptic strength.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (LTP maintenance at many glutamatergic synapses) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (LTP maintenance at many glutamatergic synapses) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (LTP maintenance at many glutamatergic synapses) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Neuromodulation",
@@ -843,6 +1257,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Dopamine GPCRs tune excitability and plasticity in striatal circuits.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (D1/D2 GPCRs changing cAMP and downstream phosphorylation) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (D1/D2 GPCRs changing cAMP and downstream phosphorylation) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (D1/D2 GPCRs changing cAMP and downstream phosphorylation) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Neuromodulation",
@@ -855,6 +1275,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "NE modulates attention/arousal through widespread noradrenergic projections.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Increases arousal and modulates sensory gain via β-adrenergic receptors) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Increases arousal and modulates sensory gain via β-adrenergic receptors) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Increases arousal and modulates sensory gain via β-adrenergic receptors) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Neuromodulation",
@@ -867,6 +1293,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "5-HT has broad neuromodulatory roles via many receptor types.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Multiple receptor subtypes (many GPCRs) with diverse effects) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Multiple receptor subtypes (many GPCRs) with diverse effects) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Multiple receptor subtypes (many GPCRs) with diverse effects) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Neuromodulation",
@@ -879,6 +1311,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Modulators reshape network state over seconds to minutes.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Act on longer timescales and often via second messengers / volume transmission) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Act on longer timescales and often via second messengers / volume transmission) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Act on longer timescales and often via second messengers / volume transmission) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Neural Circuits",
@@ -891,6 +1329,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Feedforward: excitation recruits interneurons that inhibit other principal neurons.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (An excitatory input drives both principal cells and interneurons that inhibit downstream targets) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (An excitatory input drives both principal cells and interneurons that inhibit downstream targets) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (An excitatory input drives both principal cells and interneurons that inhibit downstream targets) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Neural Circuits",
@@ -903,6 +1347,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Recurrent loops limit runaway excitation.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Interneurons inhibiting the same or nearby principal cells that excited them) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Interneurons inhibiting the same or nearby principal cells that excited them) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Interneurons inhibiting the same or nearby principal cells that excited them) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Neural Circuits",
@@ -915,6 +1365,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "CPGs underlie breathing, locomotion, and other rhythmic motor patterns.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Without sensory input for each cycle (intrinsic circuit dynamics)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Without sensory input for each cycle (intrinsic circuit dynamics)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Without sensory input for each cycle (intrinsic circuit dynamics)) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Neural Circuits",
@@ -927,6 +1383,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Most cortical interneurons are GABAergic.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (GABA) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (GABA) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (GABA) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Electrical Synapses",
@@ -939,6 +1401,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Gap junctions electrically couple adjacent neurons or glia.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Direct ionic and small-molecule coupling between cells) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Direct ionic and small-molecule coupling between cells) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Direct ionic and small-molecule coupling between cells) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Electrical Synapses",
@@ -951,6 +1419,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Current flows directly through connexons with minimal delay.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (No vesicle fusion or diffusion delay is required) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (No vesicle fusion or diffusion delay is required) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (No vesicle fusion or diffusion delay is required) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Electrical Synapses",
@@ -963,6 +1437,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Some gap junctions pass current preferentially from cell A to B.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Connexon subunit composition creates voltage-dependent asymmetry) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Connexon subunit composition creates voltage-dependent asymmetry) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Connexon subunit composition creates voltage-dependent asymmetry) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Retrograde Signaling",
@@ -975,6 +1455,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Postsynaptically produced endocannabinoids often inhibit presynaptic release.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Suppress presynaptic neurotransmitter release after strong postsynaptic activity) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Suppress presynaptic neurotransmitter release after strong postsynaptic activity) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Suppress presynaptic neurotransmitter release after strong postsynaptic activity) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Synaptic Anatomy",
@@ -987,6 +1473,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Active zones align release machinery with receptor clusters.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Vesicle docking and Ca²⁺-triggered fusion opposite postsynaptic receptors) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Vesicle docking and Ca²⁺-triggered fusion opposite postsynaptic receptors) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Vesicle docking and Ca²⁺-triggered fusion opposite postsynaptic receptors) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Synaptic Anatomy",
@@ -999,6 +1491,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "PSD organizes AMPA/NMDA receptors and signaling complexes.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Scaffolding proteins and glutamate receptors at excitatory synapses) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Scaffolding proteins and glutamate receptors at excitatory synapses) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Scaffolding proteins and glutamate receptors at excitatory synapses) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Excitatory-Inhibitory Balance",
@@ -1011,6 +1509,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Circuit function depends on balanced excitation and inhibition.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Relative levels of excitatory and inhibitory synaptic drive onto a neuron) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Relative levels of excitatory and inhibitory synaptic drive onto a neuron) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Relative levels of excitatory and inhibitory synaptic drive onto a neuron) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Drug Effects",
@@ -1023,6 +1527,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "BZDs bind allosteric sites to potentiate GABA_A responses.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Increasing frequency of channel opening (allosteric modulation)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Increasing frequency of channel opening (allosteric modulation)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Increasing frequency of channel opening (allosteric modulation)) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Drug Effects",
@@ -1035,6 +1545,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Loss of glycinergic inhibition leads to uncontrolled motor activity.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Glycine receptors (in spinal inhibitory circuits)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Glycine receptors (in spinal inhibitory circuits)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Glycine receptors (in spinal inhibitory circuits)) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Peptide Transmitters",
@@ -1047,6 +1563,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Peptides modulate circuits over longer ranges and timescales.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Are often co-released, act on GPCRs, and can have long-lasting effects) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Are often co-released, act on GPCRs, and can have long-lasting effects) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Are often co-released, act on GPCRs, and can have long-lasting effects) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Neuromuscular Junction",
@@ -1059,6 +1581,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Rapid ACh breakdown keeps NMJ signaling brief.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Hydrolyzes ACh to terminate the endplate potential) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Hydrolyzes ACh to terminate the endplate potential) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Hydrolyzes ACh to terminate the endplate potential) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Neuromuscular Junction",
@@ -1071,6 +1599,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "nAChR block prevents endplate depolarization.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Competitive antagonism at nicotinic ACh receptors) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Competitive antagonism at nicotinic ACh receptors) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Competitive antagonism at nicotinic ACh receptors) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Co-transmission",
@@ -1083,6 +1617,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Many neurons co-release multiple transmitters/modulators.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Co-transmission with fast and slow signaling components) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Co-transmission with fast and slow signaling components) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Co-transmission with fast and slow signaling components) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Inhibitory Circuits",
@@ -1095,6 +1635,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Removing inhibitory input on a neuron can increase its activity.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Inhibition of an interneuron releases a target from suppression) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Inhibition of an interneuron releases a target from suppression) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Inhibition of an interneuron releases a target from suppression) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Synaptic Plasticity Rules",
@@ -1107,6 +1653,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Millisecond-scale timing windows determine LTP vs LTD.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Order and timing of pre- and postsynaptic spikes) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Order and timing of pre- and postsynaptic spikes) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Order and timing of pre- and postsynaptic spikes) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Synaptic Plasticity Rules",
@@ -1119,6 +1671,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Classic example of presynaptic enhancement of release probability.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Increased quantal release (presynaptic mechanism)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Increased quantal release (presynaptic mechanism)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Increased quantal release (presynaptic mechanism)) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Integration",
@@ -1131,6 +1689,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Inhibition subtracts from excitation in integration.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Reduce net depolarization and prevent threshold crossing) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Reduce net depolarization and prevent threshold crossing) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Reduce net depolarization and prevent threshold crossing) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Integration",
@@ -1143,6 +1707,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Active dendritic conductances can nonlinearly amplify inputs.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Boost local depolarization and influence somatic output) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Boost local depolarization and influence somatic output) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Boost local depolarization and influence somatic output) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Circuit Modulation",
@@ -1155,6 +1725,12 @@ const PART2_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "ACh neuromodulation supports arousal and cortical processing.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Increase responsiveness and modulate attention via muscarinic and nicotinic receptors) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Increase responsiveness and modulate attention via muscarinic and nicotinic receptors) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Increase responsiveness and modulate attention via muscarinic and nicotinic receptors) matches the underlying mechanism."
+    ]
   }
 ];
 
@@ -1170,6 +1746,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "High cGMP keeps channels open; light lowers cGMP and hyperpolarizes.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Cyclic nucleotide-gated channels pass cation influx (dark current)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Cyclic nucleotide-gated channels pass cation influx (dark current)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Cyclic nucleotide-gated channels pass cation influx (dark current)) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Phototransduction",
@@ -1182,6 +1764,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Photon absorption activates transducin/phosphodiesterase, dropping cGMP and hyperpolarizing the cell.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Reduced cGMP and closure of cGMP-gated channels) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Reduced cGMP and closure of cGMP-gated channels) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Reduced cGMP and closure of cGMP-gated channels) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Retinal Circuitry",
@@ -1194,6 +1782,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Lateral inhibition shapes spatial contrast in retinal ganglion cells.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Center-surround receptive fields) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Center-surround receptive fields) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Center-surround receptive fields) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Visual System",
@@ -1206,6 +1800,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Retinal output is spiking activity in optic nerve fibers.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Patterns of action potentials (rate and timing)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Patterns of action potentials (rate and timing)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Patterns of action potentials (rate and timing)) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Visual System",
@@ -1218,6 +1818,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "M pathway: motion/transient; P pathway: color/fine detail (MCB80x contrast).",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (High temporal frequency and motion (coarse detail)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (High temporal frequency and motion (coarse detail)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (High temporal frequency and motion (coarse detail)) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Visual System",
@@ -1230,6 +1836,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "P cells drive detailed form/color processing in V1.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Primary visual cortex (V1) layer 4Cβ (classic geniculate input)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Primary visual cortex (V1) layer 4Cβ (classic geniculate input)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Primary visual cortex (V1) layer 4Cβ (classic geniculate input)) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Visual Cortex",
@@ -1242,6 +1854,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Hubel & Wiesel: elongated subfields produce orientation tuning.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Spatially offset ON/OFF subregions in receptive fields) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Spatially offset ON/OFF subregions in receptive fields) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Spatially offset ON/OFF subregions in receptive fields) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Visual Cortex",
@@ -1254,6 +1872,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Disparity-tuned cells in visual cortex support 3D vision.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Depth perception (stereopsis)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Depth perception (stereopsis)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Depth perception (stereopsis)) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Auditory System",
@@ -1266,6 +1890,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Basilar membrane stiffness varies along length, mapping frequency.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Tonotopic organization (location maps frequency)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Tonotopic organization (location maps frequency)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Tonotopic organization (location maps frequency)) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Auditory System",
@@ -1278,6 +1908,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Stereocilia deflection opens ion channels in hair cells.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Mechanotransduction channels opened by tip-link tension) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Mechanotransduction channels opened by tip-link tension) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Mechanotransduction channels opened by tip-link tension) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Auditory System",
@@ -1290,6 +1926,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Louder sounds generally drive higher spike rates in auditory nerve.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Increased firing rate in cochlear nerve fibers) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Increased firing rate in cochlear nerve fibers) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Increased firing rate in cochlear nerve fibers) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Auditory Pathway",
@@ -1302,6 +1944,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Binaural processing in SOC supports localization.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Sound localization cues (ITD and ILD)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Sound localization cues (ITD and ILD)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Sound localization cues (ITD and ILD)) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Somatosensation",
@@ -1314,6 +1962,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Meissner endings detect fine tactile vibrations.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Light touch and flutter (low-amplitude movement)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Light touch and flutter (low-amplitude movement)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Light touch and flutter (low-amplitude movement)) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Somatosensation",
@@ -1326,6 +1980,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Pacinian fibers are rapidly adapting vibration detectors.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (High-frequency vibration and deep pressure transients) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (High-frequency vibration and deep pressure transients) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (High-frequency vibration and deep pressure transients) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Somatosensation",
@@ -1338,6 +1998,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Nociceptors and thermoreceptors are unencapsulated endings.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Pain and temperature sensation) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Pain and temperature sensation) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Pain and temperature sensation) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Pain",
@@ -1350,6 +2016,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Aδ fibers mediate first, localized pain; C fibers mediate slow burning pain.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Myelinated and conduct sharp, fast pain) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Myelinated and conduct sharp, fast pain) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Myelinated and conduct sharp, fast pain) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Pain",
@@ -1362,6 +2034,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Inhibitory interneurons in dorsal horn can gate pain signals.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Spinal circuitry can modulate pain transmission (e.g., touch inputs affecting nociceptive relay)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Spinal circuitry can modulate pain transmission (e.g., touch inputs affecting nociceptive relay)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Spinal circuitry can modulate pain transmission (e.g., touch inputs affecting nociceptive relay)) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Proprioception",
@@ -1374,6 +2052,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "GTOs inhibit excessive force via Ib afferents.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Muscle tension (force) at the tendon) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Muscle tension (force) at the tendon) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Muscle tension (force) at the tendon) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Olfaction",
@@ -1386,6 +2070,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Bulb principal cells relay odor info to cortex.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Olfactory cortex (piriform and related areas)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Olfactory cortex (piriform and related areas)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Olfactory cortex (piriform and related areas)) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Taste",
@@ -1398,6 +2088,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Amino acid (glutamate) taste uses specific taste receptors.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Metabotropic glutamate receptors (T1R1/T1R3) on taste cells) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Metabotropic glutamate receptors (T1R1/T1R3) on taste cells) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Metabotropic glutamate receptors (T1R1/T1R3) on taste cells) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Neuroanatomy",
@@ -1410,6 +2106,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Endothelial tight junctions limit paracellular diffusion into CNS.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Cerebral endothelial tight junctions (with astrocyte endfeet support)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Cerebral endothelial tight junctions (with astrocyte endfeet support)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Cerebral endothelial tight junctions (with astrocyte endfeet support)) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Neuroanatomy",
@@ -1422,6 +2124,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "White matter is axons; gray matter is cell bodies and neuropil.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Myelinated axon tracts) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Myelinated axon tracts) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Myelinated axon tracts) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Neuroanatomy",
@@ -1434,6 +2142,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Commissural fibers integrate bilateral cortex.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Left and right cerebral hemispheres) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Left and right cerebral hemispheres) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Left and right cerebral hemispheres) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Neuroanatomy",
@@ -1446,6 +2160,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "MCB80x links basal ganglia to movement and reinforcement.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Action selection and habit learning) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Action selection and habit learning) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Action selection and habit learning) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Neuroanatomy",
@@ -1458,6 +2178,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Hippocampus supports episodic and spatial memory consolidation.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Declarative (explicit) memory formation) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Declarative (explicit) memory formation) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Declarative (explicit) memory formation) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Neuroanatomy",
@@ -1470,6 +2196,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Cerebellar circuits fine-tune movement and timing.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Error correction, coordination, and some forms of motor learning) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Error correction, coordination, and some forms of motor learning) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Error correction, coordination, and some forms of motor learning) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Neuroanatomy",
@@ -1482,6 +2214,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Thalamic nuclei route sensory and motor-related signals.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (A relay and gate for sensory information to cortex (and cortical loops)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (A relay and gate for sensory information to cortex (and cortical loops)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (A relay and gate for sensory information to cortex (and cortical loops)) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Motor Systems",
@@ -1494,6 +2232,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "LMNs are the final common path to muscle.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Innervate skeletal muscle fibers directly) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Innervate skeletal muscle fibers directly) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Innervate skeletal muscle fibers directly) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Motor Systems",
@@ -1506,6 +2250,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Stretch activates spindles → Ia synapses on homonymous motoneurons.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Ia afferent and α motor neuron) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Ia afferent and α motor neuron) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Ia afferent and α motor neuron) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Brain Function",
@@ -1518,6 +2268,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "PFC supports higher cognitive control and working memory.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Working memory, planning, and executive control) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Working memory, planning, and executive control) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Working memory, planning, and executive control) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Learning & Memory",
@@ -1530,6 +2286,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Working memory is temporary; LTM involves lasting synaptic/anatomic changes.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Holds information transiently for ongoing behavior) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Holds information transiently for ongoing behavior) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Holds information transiently for ongoing behavior) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Learning & Memory",
@@ -1542,6 +2304,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Explicit facts/events depend on medial temporal lobe circuits.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Hippocampus and medial temporal lobe structures) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Hippocampus and medial temporal lobe structures) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Hippocampus and medial temporal lobe structures) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Learning & Memory",
@@ -1554,6 +2322,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Motor skills and habits engage striatum/cerebellum.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Basal ganglia and cerebellum among other areas) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Basal ganglia and cerebellum among other areas) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Basal ganglia and cerebellum among other areas) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Learning & Memory",
@@ -1566,6 +2340,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Amygdala modulates emotional memory strength.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Emotional salience and fear conditioning associations) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Emotional salience and fear conditioning associations) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Emotional salience and fear conditioning associations) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Learning & Memory",
@@ -1578,6 +2358,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Consolidation includes synaptic and systems-level reorganization.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Hours to years via systems and synaptic mechanisms) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Hours to years via systems and synaptic mechanisms) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Hours to years via systems and synaptic mechanisms) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Learning & Memory",
@@ -1590,6 +2376,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Hidden platform task assesses hippocampal-dependent navigation.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Spatial learning dependent on hippocampus in rodents) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Spatial learning dependent on hippocampus in rodents) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Spatial learning dependent on hippocampus in rodents) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Learning & Memory",
@@ -1602,6 +2394,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Classic dissociation: anterograde declarative amnesia with spared skills.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (New declarative memories while leaving much procedural learning intact) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (New declarative memories while leaving much procedural learning intact) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (New declarative memories while leaving much procedural learning intact) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Synaptic Basis of Memory",
@@ -1614,6 +2412,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Late LTP and long-term memory need gene expression and new proteins.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Long-lasting LTP/LTM (late phase), not early short-term changes only) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Long-lasting LTP/LTM (late phase), not early short-term changes only) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Long-lasting LTP/LTM (late phase), not early short-term changes only) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Synaptic Basis of Memory",
@@ -1626,6 +2430,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Ensemble of neurons physically underlying a memory.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Neurons whose activity participates in storing a specific memory trace) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Neurons whose activity participates in storing a specific memory trace) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Neurons whose activity participates in storing a specific memory trace) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Sensory Integration",
@@ -1638,6 +2448,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Cross-modal alignment can super-additive boost orienting responses.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Enhanced responses when auditory and visual stimuli coincide spatially) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Enhanced responses when auditory and visual stimuli coincide spatially) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Enhanced responses when auditory and visual stimuli coincide spatially) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Balance",
@@ -1650,6 +2466,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Canal hair cells respond to rotational head movements.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Angular acceleration of the head) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Angular acceleration of the head) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Angular acceleration of the head) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Balance",
@@ -1662,6 +2484,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Otoliths sense gravity and linear acceleration.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Linear acceleration and head tilt (otolith organs)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Linear acceleration and head tilt (otolith organs)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Linear acceleration and head tilt (otolith organs)) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Development",
@@ -1674,6 +2502,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Experience shapes connectivity during development (MCB80x visual system).",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Hebbian/plastic mechanisms shaping circuits during critical periods) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Hebbian/plastic mechanisms shaping circuits during critical periods) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Hebbian/plastic mechanisms shaping circuits during critical periods) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Clinical Correlates",
@@ -1686,6 +2520,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Face recognition deficits implicate specialized ventral visual cortex.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Fusiform face area / ventral visual stream (face recognition)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Fusiform face area / ventral visual stream (face recognition)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Fusiform face area / ventral visual stream (face recognition)) matches the underlying mechanism."
+    ]
   },
   {
     topic: "Clinical Correlates",
@@ -1698,6 +2538,12 @@ const PART3_EXTRA_POOL = [
     ],
     correct: 0,
     explanation: "Optic tract/radiation/cortex lesions cause contralateral field defects.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Loss of contralateral visual field representation) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Loss of contralateral visual field representation) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Loss of contralateral visual field representation) matches the underlying mechanism."
+    ]
   }
 ];
 
