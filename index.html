@@ -2691,26 +2691,32 @@
           if (q?.question) reg.set(q.question, mod);
         });
       };
+      const assignByTopic = (list, fallback) => {
+        (list || []).forEach(q => {
+          if (!q?.question) return;
+          reg.set(q.question, moduleFromTopic(q.topic) || fallback);
+        });
+      };
       assign(PART1, "part1");
       assign(PART1_VARIANTS, "part1");
       assign(PART1_EXTRA_POOL, "part1");
-      assign(typeof PART1_FRESH_POOL !== "undefined" ? PART1_FRESH_POOL : [], "part1");
-      assign(typeof PART1_FRESH_POOL_2 !== "undefined" ? PART1_FRESH_POOL_2 : [], "part1");
-      assign(typeof PART1_EXPANSION_POOL !== "undefined" ? PART1_EXPANSION_POOL : [], "part1");
+      assignByTopic(typeof PART1_FRESH_POOL !== "undefined" ? PART1_FRESH_POOL : [], "part1");
+      assignByTopic(typeof PART1_FRESH_POOL_2 !== "undefined" ? PART1_FRESH_POOL_2 : [], "part1");
+      assignByTopic(typeof PART1_EXPANSION_POOL !== "undefined" ? PART1_EXPANSION_POOL : [], "part1");
       assign(typeof PART1_EXAM_PARAPHRASE_POOL !== "undefined" ? PART1_EXAM_PARAPHRASE_POOL : [], "part1");
       assign(PART2, "part2");
       assign(PART2_VARIANTS, "part2");
       assign(PART2_EXTRA_POOL, "part2");
-      assign(typeof PART2_FRESH_POOL !== "undefined" ? PART2_FRESH_POOL : [], "part2");
-      assign(typeof PART2_FRESH_POOL_2 !== "undefined" ? PART2_FRESH_POOL_2 : [], "part2");
-      assign(typeof PART2_EXPANSION_POOL !== "undefined" ? PART2_EXPANSION_POOL : [], "part2");
+      assignByTopic(typeof PART2_FRESH_POOL !== "undefined" ? PART2_FRESH_POOL : [], "part2");
+      assignByTopic(typeof PART2_FRESH_POOL_2 !== "undefined" ? PART2_FRESH_POOL_2 : [], "part2");
+      assignByTopic(typeof PART2_EXPANSION_POOL !== "undefined" ? PART2_EXPANSION_POOL : [], "part2");
       assign(typeof PART2_EXAM_PARAPHRASE_POOL !== "undefined" ? PART2_EXAM_PARAPHRASE_POOL : [], "part2");
       assign(PART3, "part3");
       assign(PART3_VARIANTS, "part3");
       assign(PART3_EXTRA_POOL, "part3");
-      assign(typeof PART3_FRESH_POOL !== "undefined" ? PART3_FRESH_POOL : [], "part3");
-      assign(typeof PART3_FRESH_POOL_2 !== "undefined" ? PART3_FRESH_POOL_2 : [], "part3");
-      assign(typeof PART3_EXPANSION_POOL !== "undefined" ? PART3_EXPANSION_POOL : [], "part3");
+      assignByTopic(typeof PART3_FRESH_POOL !== "undefined" ? PART3_FRESH_POOL : [], "part3");
+      assignByTopic(typeof PART3_FRESH_POOL_2 !== "undefined" ? PART3_FRESH_POOL_2 : [], "part3");
+      assignByTopic(typeof PART3_EXPANSION_POOL !== "undefined" ? PART3_EXPANSION_POOL : [], "part3");
       assign(typeof PART3_EXAM_PARAPHRASE_POOL !== "undefined" ? PART3_EXAM_PARAPHRASE_POOL : [], "part3");
       [NEW_TIER1, NEW_TIER2, NEW_TIER3, NEW_TIER4].forEach(tier => {
         (tier || []).forEach(q => {
@@ -5115,8 +5121,6 @@
       [/\bprimarily\b/gi, "mainly"],
       [/\btypically\b/gi, "usually"],
       [/\bWhich of the following\b/i, "Which statement"],
-      [/\bWhat is the\b/i, "Which option best identifies the"],
-      [/\bDuring the\b/g, "In the phase of the"],
       [/\bcompared with\b/gi, "relative to"],
       [/\bresults in\b/gi, "leads to"]
     ];

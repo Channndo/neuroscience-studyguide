@@ -63,43 +63,7 @@ const PART1_EXPANSION_POOL = [
   },
   {
     topic: "Passive Membrane Properties",
-    question: "If membrane leak conductance increases by ~25% (R_m falls) with unchanged geometry, the length constant λ typically:",
-    options: [
-      "Becomes shorter (less spatial spread)",
-      "Becomes infinitely long",
-      "Does not change ever",
-      "Converts dendrites to photoreceptors",
-    ],
-    correct: 0,
-    explanation: "Higher leak (lower R_m) shortens λ, attenuating signals faster with distance.",
-  },
-  {
-    topic: "Passive Membrane Properties",
     question: "If membrane leak conductance increases by ~40% (R_m falls) with unchanged geometry, the length constant λ typically:",
-    options: [
-      "Becomes shorter (less spatial spread)",
-      "Becomes infinitely long",
-      "Does not change ever",
-      "Converts dendrites to photoreceptors",
-    ],
-    correct: 0,
-    explanation: "Higher leak (lower R_m) shortens λ, attenuating signals faster with distance.",
-  },
-  {
-    topic: "Passive Membrane Properties",
-    question: "If membrane leak conductance increases by ~60% (R_m falls) with unchanged geometry, the length constant λ typically:",
-    options: [
-      "Becomes shorter (less spatial spread)",
-      "Becomes infinitely long",
-      "Does not change ever",
-      "Converts dendrites to photoreceptors",
-    ],
-    correct: 0,
-    explanation: "Higher leak (lower R_m) shortens λ, attenuating signals faster with distance.",
-  },
-  {
-    topic: "Passive Membrane Properties",
-    question: "If membrane leak conductance increases by ~80% (R_m falls) with unchanged geometry, the length constant λ typically:",
     options: [
       "Becomes shorter (less spatial spread)",
       "Becomes infinitely long",
@@ -1373,30 +1337,6 @@ const PART2_EXPANSION_POOL = [
     explanation: "Temporal summation combines inputs within the membrane time window.",
   },
   {
-    topic: "Synaptic Integration",
-    question: "Two EPSPs (+5 mV each) arrive 5 ms apart at one synapse (temporal summation). Compared with one EPSP alone, peak depolarization tends to be:",
-    options: [
-      "Larger if within τ of the membrane",
-      "Smaller always",
-      "Unchanged always",
-      "Exactly at E_K",
-    ],
-    correct: 0,
-    explanation: "Temporal summation combines inputs within the membrane time window.",
-  },
-  {
-    topic: "Synaptic Integration",
-    question: "Two EPSPs (+8 mV each) arrive 5 ms apart at one synapse (temporal summation). Compared with one EPSP alone, peak depolarization tends to be:",
-    options: [
-      "Larger if within τ of the membrane",
-      "Smaller always",
-      "Unchanged always",
-      "Exactly at E_K",
-    ],
-    correct: 0,
-    explanation: "Temporal summation combines inputs within the membrane time window.",
-  },
-  {
     topic: "Synaptic Transmission",
     question: "Calcium entry into the presynaptic terminal is required because it:",
     options: [
@@ -2170,18 +2110,6 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Auditory System",
     question: "A basilar membrane region with peak sensitivity near 400 Hz best reflects:",
-    options: [
-      "Tonotopic organization — frequency mapped to location",
-      "Random wiring without frequency order",
-      "Only olfactory receptor choice",
-      "Only NMJ ACh release",
-    ],
-    correct: 0,
-    explanation: "Cochlear mechanics map frequency to position (place theory).",
-  },
-  {
-    topic: "Auditory System",
-    question: "A basilar membrane region with peak sensitivity near 1500 Hz best reflects:",
     options: [
       "Tonotopic organization — frequency mapped to location",
       "Random wiring without frequency order",
