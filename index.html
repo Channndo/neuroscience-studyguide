@@ -909,6 +909,17 @@
     .instant-feedback.correct .instant-feedback-label { color: var(--correct); }
     .instant-feedback.incorrect .instant-feedback-label { color: var(--incorrect); }
 
+    .instant-feedback-wrong {
+      margin: 0.5rem 0 0;
+      font-size: 0.88rem;
+      line-height: 1.45;
+      color: var(--gray-700);
+    }
+
+    html[data-theme="dark"] .instant-feedback-wrong {
+      color: var(--gray-500);
+    }
+
     .instant-feedback-text {
       font-size: 0.9rem;
       color: var(--gray-700);
@@ -1013,6 +1024,23 @@
       font-weight: 600;
       color: var(--gray-500);
       font-variant-numeric: tabular-nums;
+    }
+
+    .flashcard-grade {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .flashcard-grade-hint {
+      width: 100%;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--gray-500);
+      margin: 0 0 0.25rem;
     }
 
     .nav-row {
@@ -1986,6 +2014,12 @@
         <span class="flashcard-counter" id="fc-counter">1 / 1</span>
         <button type="button" class="btn-secondary" id="fc-next">Next</button>
       </div>
+      <div class="flashcard-grade" id="fc-grade" hidden>
+        <p class="flashcard-grade-hint">Rate this card (shown when flipped):</p>
+        <button type="button" class="btn-secondary" id="fc-again">Again</button>
+        <button type="button" class="btn-primary" id="fc-good">Good</button>
+        <button type="button" class="btn-secondary" id="fc-easy">Easy</button>
+      </div>
     </section>
 
     <!-- Results -->
@@ -2917,7 +2951,7 @@
       final100: 100,
       final150: 150,
       final200: 200,
-      pinnacle300: 350,
+      pinnacle300: 300,
       writtenReview10: 10
     };
 
@@ -3229,6 +3263,7 @@
     const STORAGE_KEY = "mcb80x_progress";
     const SETTINGS_KEY = "mcb80x_settings";
     const FLASHCARD_KEY = "mcb80x_flashcards";
+    const FLASHCARD_SRS_KEY = "mcb80x_fc_srs";
     const ANALYTICS_KEY = "mcb80x_analytics";
     const QUIZ_SESSION_KEY = "mcb80x_quiz_session";
     const FLASHCARD_SESSION_KEY = "mcb80x_flashcard_session";
@@ -3447,7 +3482,7 @@
         id: "writtenReview10",
         section: "written",
         title: "Short Answer Drills",
-        subtitle: "10 prompts · drawn from a pool of 20",
+        subtitle: "10 prompts · drawn from a pool of 30",
         meta: "Always unlocked · new shuffle each run",
         description: "Ten short-answer items (Parts 1–3) sampled from a 20-item pool — same style as scored finals. Compare to model answers after submit.",
         icon: "✎",
@@ -3540,8 +3575,8 @@
         section: "pinnacle",
         title: "Pinnacle Examination",
         subtitle: "Ultimate MCB80x Mastery Test",
-        meta: "90% to pass · answers at end",
-        description: "The complete advanced question bank — pass all three advanced finals to unlock",
+        meta: "300 questions · 90% to pass · answers at end",
+        description: "300-question mastery draw from the full advanced bank — pass all three advanced finals to unlock",
         icon: "PIN",
         cardClass: "pinnacle",
         requires: () => {
@@ -3950,13 +3985,107 @@
       }
     }
 
+    function flashcardSrsKey(chapterId, card) {
+      return `${chapterId}::${String(card?.question || "").trim()}`;
+    }
+
+    function getFlashcardSrsStore() {
+      try {
+        return JSON.parse(localStorage.getItem(FLASHCARD_SRS_KEY) || "{}");
+      } catch {
+        return {};
+      }
+    }
+
+    function saveFlashcardSrsStore(store) {
+      try {
+        localStorage.setItem(FLASHCARD_SRS_KEY, JSON.stringify(store));
+      } catch {
+        notifyStorageIssue();
+      }
+    }
+
+    function ensureFlashcardSrs(chapterId, card) {
+      const store = getFlashcardSrsStore();
+      const key = flashcardSrsKey(chapterId, card);
+      if (!store[key]) {
+        store[key] = {
+          box: 1,
+          ease: 2.5,
+          intervalDays: 0,
+          due: Date.now(),
+          reps: 0,
+          retired: false
+        };
+        saveFlashcardSrsStore(store);
+      }
+      return store[key];
+    }
+
+    function buildFlashcardStudyDeck(chapterId) {
+      const cards = getFlashcardDecks()[chapterId] || [];
+      const store = getFlashcardSrsStore();
+      const now = Date.now();
+      const active = cards.filter(c => {
+        const meta = store[flashcardSrsKey(chapterId, c)] || ensureFlashcardSrs(chapterId, c);
+        return !meta.retired;
+      });
+      active.sort((a, b) => {
+        const ma = store[flashcardSrsKey(chapterId, a)] || ensureFlashcardSrs(chapterId, a);
+        const mb = store[flashcardSrsKey(chapterId, b)] || ensureFlashcardSrs(chapterId, b);
+        const da = ma.due <= now ? 0 : 1;
+        const db = mb.due <= now ? 0 : 1;
+        if (da !== db) return da - db;
+        if (ma.due !== mb.due) return ma.due - mb.due;
+        return ma.box - mb.box;
+      });
+      return active;
+    }
+
+    function gradeFlashcard(quality) {
+      const card = fcDeck[fcIndex];
+      if (!card || !activeFlashcardChapter) return;
+      const store = getFlashcardSrsStore();
+      const key = flashcardSrsKey(activeFlashcardChapter, card);
+      const meta = store[key] || ensureFlashcardSrs(activeFlashcardChapter, card);
+      const now = Date.now();
+      meta.reps = (meta.reps || 0) + 1;
+      if (quality < 3) {
+        meta.box = 1;
+        meta.intervalDays = 0;
+        meta.due = now + 10 * 60 * 1000;
+      } else {
+        if (meta.reps <= 1) meta.intervalDays = 1;
+        else if (meta.reps === 2) meta.intervalDays = 3;
+        else meta.intervalDays = Math.min(60, Math.round(meta.intervalDays * meta.ease));
+        if (quality >= 5) meta.ease = Math.min(3.2, meta.ease + 0.15);
+        meta.box = Math.min(5, meta.box + 1);
+        meta.due = now + meta.intervalDays * 86400000;
+        if (meta.intervalDays >= 21 && meta.box >= 4) meta.retired = true;
+      }
+      store[key] = meta;
+      saveFlashcardSrsStore(store);
+      fcDeck = buildFlashcardStudyDeck(activeFlashcardChapter);
+      if (!fcDeck.length) {
+        renderDashboard();
+        showView("dashboard");
+        return;
+      }
+      fcIndex = Math.min(fcIndex, fcDeck.length - 1);
+      renderFlashcard();
+      saveFlashcardSession();
+    }
+
     function saveWeaknessFlashcards(chapterId, missedQuestions) {
       if (!missedQuestions.length) return;
       const decks = getFlashcardDecks();
       const existing = decks[chapterId] || [];
       const byQuestion = new Map();
-      [...existing, ...missedQuestions].forEach(card => byQuestion.set(card.question, card));
-      decks[chapterId] = shuffle([...byQuestion.values()]);
+      [...existing, ...missedQuestions].forEach(card => {
+        byQuestion.set(card.question, card);
+        ensureFlashcardSrs(chapterId, card);
+      });
+      decks[chapterId] = [...byQuestion.values()];
       localStorage.setItem(FLASHCARD_KEY, JSON.stringify(decks));
     }
 
@@ -5154,12 +5283,20 @@
         const indexed = surfaced.options.map((text, i) => ({ text, originalIndex: i }));
         const shuffledOpts = shuffle(indexed);
         const newCorrect = shuffledOpts.findIndex(o => o.originalIndex === surfaced.correct);
+        const wrongExplanations = Array.isArray(surfaced.wrongExplanations)
+          ? shuffledOpts.map(o => surfaced.wrongExplanations[o.originalIndex] || "")
+          : shuffledOpts.map(o =>
+              o.originalIndex === surfaced.correct
+                ? ""
+                : `This choice does not match the mechanism in the keyed answer (${surfaced.options[surfaced.correct]}).`
+            );
         return {
           topic: surfaced.topic,
           question: surfaced.question,
           options: shuffledOpts.map(o => o.text),
           correct: newCorrect,
-          explanation: surfaced.explanation
+          explanation: surfaced.explanation,
+          wrongExplanations
         };
       });
     }
@@ -5320,10 +5457,10 @@
         }
       }
       clearFlashcardSession();
-      const deck = getFlashcardDecks()[chapterId];
-      if (!deck || !deck.length) return;
+      const deck = buildFlashcardStudyDeck(chapterId);
+      if (!deck.length) return;
       activeFlashcardChapter = chapterId;
-      fcDeck = shuffle(deck.slice());
+      fcDeck = deck;
       fcIndex = 0;
       document.getElementById("fc-title").textContent = CHAPTER_META[chapterId].title;
       showView("flashcard");
@@ -5342,10 +5479,15 @@
       document.getElementById("flashcard").classList.remove("flipped");
       document.getElementById("fc-prev").disabled = fcIndex === 0;
       document.getElementById("fc-next").disabled = fcIndex === fcDeck.length - 1;
+      const grade = document.getElementById("fc-grade");
+      if (grade) grade.hidden = true;
     }
 
     function flipFlashcard() {
-      document.getElementById("flashcard").classList.toggle("flipped");
+      const el = document.getElementById("flashcard");
+      el.classList.toggle("flipped");
+      const grade = document.getElementById("fc-grade");
+      if (grade) grade.hidden = !el.classList.contains("flipped");
     }
 
     function hideDailyPopModal() {
@@ -5627,10 +5769,19 @@
         </button>`;
         }).join("");
 
+        const wrongNotesHtml = revealed
+          ? q.options.map((opt, i) => {
+              if (i === q.correct) return "";
+              const note = q.wrongExplanations?.[i];
+              if (!note) return "";
+              return `<p class="instant-feedback-wrong"><strong>Why ${LETTERS[i]} is wrong:</strong> ${fmt(note)}</p>`;
+            }).join("")
+          : "";
         const feedbackHtml = revealed ? `
         <div class="instant-feedback ${isCorrect ? "correct" : "incorrect"}" role="status">
           <p class="instant-feedback-label">${isCorrect ? "Correct" : "Incorrect"}</p>
           <p class="instant-feedback-text"><strong>Explanation:</strong> ${fmt(q.explanation)}</p>
+          ${wrongNotesHtml}
         </div>` : "";
         bodyHtml = `
         <div class="answer-grid" role="radiogroup" aria-label="Answer choices">${optionsHtml}</div>
@@ -5732,7 +5883,11 @@
           <span class="review-badge">${isCorrect ? "Correct" : "Incorrect"}</span>
           <p class="review-question">${i + 1}. ${fmt(q.question)}</p>
           <div class="review-options">${optionsHtml}</div>
-          <p class="review-explanation"><strong>Explanation:</strong> ${fmt(q.explanation)}</p>`;
+          <p class="review-explanation"><strong>Explanation:</strong> ${fmt(q.explanation)}</p>
+          ${q.options.map((opt, j) => {
+            if (j === q.correct || !q.wrongExplanations?.[j]) return "";
+            return `<p class="review-explanation"><strong>Why ${LETTERS[j]} is wrong:</strong> ${fmt(q.wrongExplanations[j])}</p>`;
+          }).join("")}`;
 
         reviewList.appendChild(card);
       });
@@ -5920,6 +6075,10 @@
         saveFlashcardSession();
       }
     });
+
+    document.getElementById("fc-again").addEventListener("click", () => gradeFlashcard(1));
+    document.getElementById("fc-good").addEventListener("click", () => gradeFlashcard(4));
+    document.getElementById("fc-easy").addEventListener("click", () => gradeFlashcard(5));
 
     document.getElementById("quiz-resume-go").addEventListener("click", () => {
       const mode = document.getElementById("quiz-resume-banner")?.dataset.mode;
