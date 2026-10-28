@@ -158,8 +158,88 @@ const WRITTEN_EXAM_POOL = [
     topic: "Basal Ganglia",
     module: "part3",
     question: "In simplified terms, how does loss of substantia nigra dopamine relate to Parkinson motor symptoms?",
-    modelAnswer: "Loss of SNc dopamine disrupts basal ganglia loop balance (direct/indirect pathways), impairing initiation and smooth control of movement → bradykinesia, rigidity, tremor.",
+    modelAnswer: "Loss of SNc dopamine disrupts basal ganglia loop balance (direct/indirect pathways), impairing initiation and smooth control of movement → bradykinesia, rigidity, tremor.\n\nMarking checklist: names substantia nigra / dopamine loss; mentions direct vs indirect pathway imbalance; links to bradykinesia, rigidity, or tremor.",
     minChars: 45
+  },
+  {
+    type: "shortAnswer",
+    topic: "Goldman Equation",
+    module: "part1",
+    question: "Given [K⁺]_in=140, [K⁺]_out=5, [Na⁺]_in=15, [Na⁺]_out=145 mM at 37°C, estimate resting V_m if P_K:P_Na = 1:0.05 (ignore Cl⁻). Show reasoning qualitatively.",
+    modelAnswer: "Compute E_K ≈ −94 mV and E_Na ≈ +67 mV; with dominant K⁺ permeability, Goldman V_m sits much closer to E_K than E_Na (roughly −80 to −70 mV range depending on exact weighting).\n\nMarking checklist: cites both E_K and E_Na direction; states K⁺ dominance; gives plausible V_m between E_K and E_Na, nearer E_K.",
+    minChars: 50
+  },
+  {
+    type: "shortAnswer",
+    topic: "Electrical Signaling",
+    module: "part1",
+    question: "A patch has g_leak=10 nS, E_leak=−70 mV, V_m=−60 mV. What is the leak current (sign = outward positive)?",
+    modelAnswer: "I = g(V−E) = 10 nS × (−60 − (−70)) mV = +100 pA outward (positive by convention).\n\nMarking checklist: uses I=g(V−E); correct mV difference (+10 mV); states outward/positive sign.",
+    minChars: 35
+  },
+  {
+    type: "shortAnswer",
+    topic: "Action Potentials",
+    module: "part1",
+    question: "What roles do Hodgkin–Huxley m, h, and n gates play during a single action potential?",
+    modelAnswer: "m activates Na⁺ channels (rising phase); h inactivates Na⁺ (limits peak); n activates delayed K⁺ (repolarization/afterhyperpolarization).\n\nMarking checklist: links m to Na⁺ activation; h to inactivation; n to K⁺ repolarization.",
+    minChars: 45
+  },
+  {
+    type: "shortAnswer",
+    topic: "Voltage Clamp",
+    module: "part1",
+    question: "During a voltage-clamp step from −70 mV to 0 mV, why do you first see capacitive then ionic currents?",
+    modelAnswer: "Step change charges membrane capacitance (instant capacitive transient), then clamp holds voltage while separated ionic currents (Na⁺ then K⁺) are measured.\n\nMarking checklist: mentions capacitive transient; distinguishes ionic Na⁺/K⁺ components; notes clamp holds V_m fixed.",
+    minChars: 45
+  },
+  {
+    type: "shortAnswer",
+    topic: "Motor Systems",
+    module: "part2",
+    question: "Describe reciprocal inhibition in a spinal stretch reflex.",
+    modelAnswer: "Ia afferents excite agonist α-motor neurons and Ia inhibitory interneurons that suppress antagonist α-motor neurons, coordinating agonist contraction with antagonist relaxation.\n\nMarking checklist: Ia afferent; agonist excitation; inhibitory interneuron; antagonist relaxation.",
+    minChars: 40
+  },
+  {
+    type: "shortAnswer",
+    topic: "Synaptic Plasticity Rules",
+    module: "part2",
+    question: "Contrast habituation and sensitization in Aplysia gill-withdrawal.",
+    modelAnswer: "Habituation decreases presynaptic release from repeated benign stimulation; sensitization increases release after noxious shock via serotonergic facilitation.\n\nMarking checklist: habituation = decreased release; sensitization = modulatory facilitation; mentions serotonin or tail shock.",
+    minChars: 40
+  },
+  {
+    type: "shortAnswer",
+    topic: "Clinical Correlates",
+    module: "part3",
+    question: "Explain why a right optic tract lesion causes left homonymous hemianopia.",
+    modelAnswer: "Nasal retinal fibers cross at the chiasm; temporal fibers stay ipsilateral. Post-chiasmal tracts carry contralateral visual field information, so right tract damage removes left field in both eyes.\n\nMarking checklist: post-chiasmal; contralateral field; both eyes affected; left field loss.",
+    minChars: 45
+  },
+  {
+    type: "shortAnswer",
+    topic: "Language",
+    module: "part3",
+    question: "Compare Broca and Wernicke aphasia in fluency and comprehension.",
+    modelAnswer: "Broca: nonfluent, effortful speech, relatively preserved comprehension. Wernicke: fluent but impaired comprehension with paraphasic content.\n\nMarking checklist: Broca nonfluent; Wernicke fluent; comprehension contrast.",
+    minChars: 40
+  },
+  {
+    type: "shortAnswer",
+    topic: "Vestibular System",
+    module: "part3",
+    question: "How do semicircular canals signal head rotation?",
+    modelAnswer: "Endolymph inertia deflects the cupula, bending hair cell stereocilia toward or away from kinocilium, changing receptor potential and afferent firing.\n\nMarking checklist: cupula/endolymph; hair cell deflection; rotation encoding.",
+    minChars: 40
+  },
+  {
+    type: "shortAnswer",
+    topic: "Gustation",
+    module: "part3",
+    question: "Outline the path from taste receptor to gustatory cortex.",
+    modelAnswer: "Taste bud cells → cranial nerve afferents (VII, IX, X) → nucleus of solitary tract → thalamus (VPM) → insular/gustatory cortex.\n\nMarking checklist: taste bud; brainstem NST; thalamus; cortex.",
+    minChars: 40
   }
 ];
 
