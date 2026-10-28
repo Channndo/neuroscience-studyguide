@@ -1229,7 +1229,7 @@ const NEW_TIER2 = [
     topic: "Nernst Equation",
     question: "If intracellular K\u207a is 140 mM and extracellular K\u207a is 4 mM, E_K is approximately:",
     options: [
-      "\u221290 mV (negative inside)",
+      "\u221296 mV (negative inside)",
       "+60 mV (positive inside)",
       "0 mV",
       "+120 mV",
@@ -3155,13 +3155,13 @@ const NEW_TIER4 = [
     topic: "Nernst Equation",
     question: "If z = +2 for Ca\u00b2\u207a, a fourfold increase in external Ca\u00b2\u207a (fixed internal) changes E_Ca by approximately:",
     options: [
-      "+30 mV at 37\u00b0C",
+      "+18.5 mV at 37\u00b0C (more positive)",
       "+61 mV",
       "0 mV",
       "\u221261 mV",
     ],
     correct: 0,
-    explanation: "For divalent ions the Nernst slope is halved (~30 mV per tenfold change at 37\u00b0C).",
+    explanation: "For divalent ions the Nernst slope is halved; a fourfold outside change is ~ (61/2)\u00d7log10(4) \u2248 18.5 mV at 37\u00b0C.",
   },
   {
     topic: "Passive Membrane Properties",

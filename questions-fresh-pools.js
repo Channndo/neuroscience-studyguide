@@ -29,13 +29,13 @@ const PART1_FRESH_POOL = [
     topic: "Nernst Equation",
     question: "If extracellular K\u207a is raised fourfold while intracellular K\u207a is unchanged, E_K shifts approximately:",
     options: [
-      "~24 mV toward 0 mV (less negative)",
-      "~24 mV more negative",
+      "~37 mV toward 0 mV (less negative)",
+      "~37 mV more negative",
       "To exactly +58 mV",
       "Not at all because K\u207a is impermeant",
     ],
     correct: 0,
-    explanation: "The Nernst relation includes a log term; a fourfold outside change is about 61 mV \u00d7 log10(4) \u2248 24 mV toward 0.",
+    explanation: "The Nernst relation includes a log term; a fourfold outside change is about 61 mV \u00d7 log10(4) \u2248 37 mV toward 0.",
   },
   {
     topic: "Action Potential Propagation",

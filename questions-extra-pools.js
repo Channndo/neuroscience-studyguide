@@ -23,7 +23,7 @@ const PART1_EXTRA_POOL = [
       "Away from any ion equilibrium",
     ],
     correct: 0,
-    explanation: "Higher external Na⁺ lowers E_Na and increases Na⁺ permeability contribution at rest if Na⁺ leak exists.",
+    explanation: "Higher external Na⁺ makes E_Na more positive; if a small Na⁺ leak exists at rest, V_m shifts slightly toward E_Na.",
   },
   {
     topic: "Resting Potential",
@@ -39,15 +39,15 @@ const PART1_EXTRA_POOL = [
   },
   {
     topic: "Resting Potential",
-    question: "If K⁺ leak channels are blocked but the Na⁺/K⁺ pump remains active, resting potential will tend to move:",
+    question: "If K⁺ leak conductance is blocked but the Na⁺/K⁺ pump keeps gradients intact and a small resting Na⁺ leak remains, V_m will tend to move:",
     options: [
-      "Toward E_Na",
-      "Toward E_K",
-      "To 0 mV instantly",
+      "Toward E_Na (depolarized relative to normal K⁺-dominated rest)",
+      "Toward E_K as if K⁺ leak were unchanged",
+      "To 0 mV instantly regardless of gradients",
       "Below −150 mV",
     ],
     correct: 0,
-    explanation: "Without K⁺ leak, Na⁺ leak and other conductances pull V_m toward E_Na.",
+    explanation: "Removing dominant K⁺ leak leaves remaining Na⁺ (and other) conductances to set V_m closer to E_Na.",
   },
   {
     topic: "Nernst Equation",
