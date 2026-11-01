@@ -2139,24 +2139,6 @@ const NEW_TIER3 = [
   },
   {
     topic: "Neuroanatomy",
-    question: "The thalamus functions mainly as:",
-    options: [
-      "A relay and gate for sensory information to cortex",
-      "The primary site of phototransduction",
-      "The only location of cerebellar Purkinje cells",
-      "The exclusive source of cerebrospinal fluid production without other roles"
-    ],
-    correct: 0,
-    explanation: "Thalamic nuclei relay and modulate sensory and motor signals to cortex.",
-    wrongExplanations: [
-      "",
-      "Unlike the keyed answer (A relay and gate for sensory information to cortex), this option misstates the mechanism or direction described in the stem.",
-      "Unlike the keyed answer (A relay and gate for sensory information to cortex), this option misstates the mechanism or direction described in the stem.",
-      "Unlike the keyed answer (A relay and gate for sensory information to cortex), this option misstates the mechanism or direction described in the stem."
-    ]
-  },
-  {
-    topic: "Neuroanatomy",
     question: "The ventricular system contains:",
     options: [
       "CSF-filled cavities lined by ependyma connecting brain regions",
