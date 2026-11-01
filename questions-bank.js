@@ -1925,18 +1925,18 @@ const NEW_TIER2 = [
     topic: "Electrical Signaling",
     question: "Ohm's law applied to a membrane patch states that current equals:",
     options: [
-      "Conductance times voltage (I = g × V)",
+      "Conductance times driving force (I = g × (V_m − E_ion))",
+      "Conductance times voltage alone (I = g × V_m)",
       "Voltage divided by capacitance only",
-      "Charge times length constant",
       "Permeability times Nernst potential squared"
     ],
     correct: 0,
-    explanation: "Ionic current through open channels follows I = g(V_m − E_ion).",
+    explanation: "Ionic current through open channels follows I = g(V_m − E_ion); E_ion sets the reversal potential.",
     wrongExplanations: [
       "",
-      "This option is inconsistent with the stem; the keyed answer (Conductance times voltage (I = g × V)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Conductance times voltage (I = g × V)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Conductance times voltage (I = g × V)) matches the underlying mechanism."
+      "I = g×V_m ignores the ion reversal potential; driving force is (V_m − E_ion).",
+      "Capacitive current involves dV/dt, not Ohm’s law for ionic conductance.",
+      "Permeability and E_ion relate to equilibrium, not a simple I = P×E² form."
     ]
   },
   {

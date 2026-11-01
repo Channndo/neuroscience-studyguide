@@ -166,7 +166,7 @@ const WRITTEN_EXAM_POOL = [
     topic: "Goldman Equation",
     module: "part1",
     question: "Given [K⁺]_in=140, [K⁺]_out=5, [Na⁺]_in=15, [Na⁺]_out=145 mM at 37°C, estimate resting V_m if P_K:P_Na = 1:0.05 (ignore Cl⁻). Show reasoning qualitatively.",
-    modelAnswer: "Compute E_K ≈ −94 mV and E_Na ≈ +67 mV; with dominant K⁺ permeability, Goldman V_m sits much closer to E_K than E_Na (roughly −80 to −70 mV range depending on exact weighting).\n\nMarking checklist: cites both E_K and E_Na direction; states K⁺ dominance; gives plausible V_m between E_K and E_Na, nearer E_K.",
+    modelAnswer: "Nernst: E_K ≈ −89.1 mV and E_Na ≈ +60.6 mV (37°C, 61.54 mV/decade). Goldman with P_K:P_Na = 1:0.05 (ignore Cl⁻): V_m ≈ −65.3 mV from weighted permeability and concentrations.\n\nMarking checklist: cites E_K ≈ −89 mV and E_Na ≈ +61 mV; uses Goldman (not Nernst alone); resting V_m near −65 mV with K⁺-weighted permeability.",
     minChars: 50
   },
   {

@@ -2081,18 +2081,18 @@ const PART3_EXTRA_POOL = [
     topic: "Taste",
     question: "Umami taste is transduced largely through:",
     options: [
-      "Metabotropic glutamate receptors (T1R1/T1R3) on taste cells",
+      "T1R1/T1R3 heterodimer taste GPCRs on taste receptor cells",
+      "Metabotropic glutamate receptors (mGluRs) in cortex",
       "Rhodopsin in taste buds",
-      "Hair cell tip links",
-      "Muscle spindle Ia fibers"
+      "Hair cell tip links"
     ],
     correct: 0,
-    explanation: "Amino acid (glutamate) taste uses specific taste receptors.",
+    explanation: "Umami (glutamate/nucleotides) is detected by the T1R1+T1R3 taste GPCR, not by brain mGluRs.",
     wrongExplanations: [
       "",
-      "This option is inconsistent with the stem; the keyed answer (Metabotropic glutamate receptors (T1R1/T1R3) on taste cells) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Metabotropic glutamate receptors (T1R1/T1R3) on taste cells) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Metabotropic glutamate receptors (T1R1/T1R3) on taste cells) matches the underlying mechanism."
+      "mGluRs are CNS metabotropic glutamate receptors; peripheral umami uses T1R taste GPCRs.",
+      "Rhodopsin mediates vision, not taste transduction.",
+      "Hair cell tip links transduce sound in the cochlea, not taste."
     ]
   },
   {

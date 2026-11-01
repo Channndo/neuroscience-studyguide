@@ -221,18 +221,18 @@ const PART1_FRESH_POOL = [
     topic: "Passive Membrane Properties",
     question: "Increasing membrane thickness (more lipid) without changing channel density would tend to:",
     options: [
+      "Lower capacitance per unit area (C ∝ 1/d) and alter τ depending on R_m",
       "Increase capacitance per unit area and slow voltage responses",
       "Decrease τ to zero",
-      "Remove the need for ion channels",
       "Make λ infinite"
     ],
     correct: 0,
-    explanation: "More membrane area per unit length increases C_m, lengthening τ for a given R_m.",
+    explanation: "In the parallel-plate model, thicker membrane (larger d) lowers C per unit area; τ = R_m C_m changes with both R_m and C_m.",
     wrongExplanations: [
       "",
-      "This option is inconsistent with the stem; the keyed answer (Increase capacitance per unit area and slow voltage responses) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Increase capacitance per unit area and slow voltage responses) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Increase capacitance per unit area and slow voltage responses) matches the underlying mechanism."
+      "Capacitance per unit area decreases with thickness, not increases.",
+      "τ does not collapse to zero when thickness increases.",
+      "Length constant depends on R_m and R_i, not membrane thickness alone."
     ]
   },
   {
@@ -1344,20 +1344,20 @@ const PART1_FRESH_POOL_2 = [
   },
   {
     topic: "Action Potential Propagation",
-    question: "An action potential traveling toward a severed axon end will:",
+    question: "When an action potential reaches a cut axon terminal (open end), active propagation:",
     options: [
-      "Reflect and collide; propagation fails at the cut",
-      "Jump to dendrites without channels",
-      "Increase amplitude to infinity",
-      "Become purely passive forever"
+      "Fails at the discontinuity; the spike does not reflect back along the axon",
+      "Reflects like a cable and travels backward with full amplitude",
+      "Jumps to dendrites without voltage-gated channels",
+      "Continues indefinitely with increasing amplitude"
     ],
     correct: 0,
-    explanation: "Discontinuities disrupt active propagation.",
+    explanation: "Active regeneration needs continuous excitable membrane; an open cut stops propagation—there is no cable-style reflection of full spikes.",
     wrongExplanations: [
       "",
-      "This option is inconsistent with the stem; the keyed answer (Reflect and collide; propagation fails at the cut) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Reflect and collide; propagation fails at the cut) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Reflect and collide; propagation fails at the cut) matches the underlying mechanism."
+      "Myelinated/unmyelinated axons do not show optical-style reflection of action potentials at a cut end.",
+      "Dendrites are not bypassed by spikes jumping across a cut.",
+      "Amplitude is bounded by channel kinetics; propagation does not grow without bound at a terminal."
     ]
   },
   {

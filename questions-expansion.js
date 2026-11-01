@@ -23,18 +23,18 @@ const PART1_EXPANSION_POOL = [
     topic: "Nernst Equation",
     question: "Nernst scenario: extracellular Na⁺ is doubled. Expected change in equilibrium potential:",
     options: [
+      "E_Na becomes more positive (about +18 mV at 37°C)",
       "E_Na becomes less positive (toward 0 mV)",
-      "Always exactly 0 mV",
       "Unaffected by concentration",
-      "Equal to E_Na for every ion"
+      "Shifts by exactly −61 mV regardless of ion"
     ],
     correct: 0,
-    explanation: "Concentration changes for Na⁺ shift its equilibrium potential per the Nernst equation.",
+    explanation: "Doubling [Na⁺]_out increases log([Na⁺]_out/[Na⁺]_in), so E_Na moves more positive by ~61.54 mV×log10(2) ≈ +18.5 mV.",
     wrongExplanations: [
       "",
-      "This option is inconsistent with the stem; the keyed answer (E_Na becomes less positive (toward 0 mV)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (E_Na becomes less positive (toward 0 mV)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (E_Na becomes less positive (toward 0 mV)) matches the underlying mechanism."
+      "Higher extracellular Na⁺ increases the out/in ratio, making E_Na more positive, not less.",
+      "Nernst potentials change when concentrations change.",
+      "The shift magnitude depends on the fold-change in concentration, not a fixed −61 mV for every ion."
     ]
   },
   {
@@ -1463,36 +1463,36 @@ const PART1_EXPANSION_POOL = [
     topic: "Electrical Signaling",
     question: "A patch with g_Na=50 nS, V_m=−10 mV, and E_Na=+60 mV. The Na⁺ current (conventional positive outward) is approximately:",
     options: [
-      "−3.5 µA (inward Na⁺ current at −10 mV)",
-      "+3.5 µA outward",
-      "0 µA because V_m is negative",
-      "−60 µA regardless of E_Na"
+      "−3.5 nA (inward Na⁺ current at −10 mV)",
+      "+3.5 nA outward",
+      "0 nA because V_m is negative",
+      "−60 nA regardless of E_Na"
     ],
     correct: 0,
-    explanation: "I = g(V−E): (−10−60)=−70 mV → inward cation current, negative by outward-positive convention.",
+    explanation: "I = g(V−E): 50 nS × (−70 mV) = −3500 pA = −3.5 nA inward (negative by outward-positive convention).",
     wrongExplanations: [
       "",
-      "This option is inconsistent with the stem; the keyed answer (−3.5 µA (inward Na⁺ current at −10 mV)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (−3.5 µA (inward Na⁺ current at −10 mV)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (−3.5 µA (inward Na⁺ current at −10 mV)) matches the underlying mechanism."
+      "Driving force (V_m−E_Na) is negative here, so positive outward current is not expected.",
+      "V_m sign alone does not zero current; compare V_m to E_Na.",
+      "Current scales with g and (V_m−E), not a fixed −60 nA."
     ]
   },
   {
     topic: "Passive Membrane Properties",
     question: "Membrane τ = R_m C_m. If R_m doubles and C_m is unchanged, a step current produces a voltage response that:",
     options: [
+      "Reaches twice the original steady-state amplitude with a longer time constant (2× τ)",
       "Rises to the same steady state but with a longer time constant (2× τ)",
-      "Reaches half the original steady-state amplitude",
-      "Becomes instantaneous",
+      "Becomes instantaneous with half the amplitude",
       "Oscillates at 100 Hz"
     ],
     correct: 0,
-    explanation: "τ sets charging speed; steady-state V = I·R_m unchanged if current and R_m scale together.",
+    explanation: "For fixed injected current, steady-state V = I·R_m doubles when R_m doubles; τ = R_m C_m also doubles, slowing the approach.",
     wrongExplanations: [
       "",
-      "This option is inconsistent with the stem; the keyed answer (Rises to the same steady state but with a longer time constant (2× τ)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Rises to the same steady state but with a longer time constant (2× τ)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Rises to the same steady state but with a longer time constant (2× τ)) matches the underlying mechanism."
+      "Same steady-state amplitude would require current to change with R_m; with fixed I, V_steady = I·R_m scales with R_m.",
+      "Higher R_m and C_m slow the response; it does not become instantaneous.",
+      "Passive RC charging does not produce sustained oscillations at fixed current."
     ]
   },
   {
