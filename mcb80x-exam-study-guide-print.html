@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MCB80x Proctored Exam Study Guide · HarvardX</title>
+  <style>
+    :root {
+      --crimson: #a41034;
+      --crimson-dark: #7a0c27;
+      --ink: #1a1a1a;
+      --muted: #444;
+      --rule: #ccc;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: "Georgia", "Times New Roman", serif;
+      font-size: 11pt;
+      line-height: 1.45;
+      color: var(--ink);
+      max-width: 7.5in;
+      margin: 0 auto;
+      padding: 0.5in 0.65in 0.75in;
+      background: #fff;
+    }
+
+    .no-print {
+      font-family: system-ui, sans-serif;
+      font-size: 0.9rem;
+      background: #f5f5f5;
+      border: 1px solid var(--rule);
+      padding: 0.75rem 1rem;
+      margin-bottom: 1.25rem;
+      border-radius: 6px;
+    }
+
+    .no-print button {
+      font: inherit;
+      padding: 0.4rem 0.9rem;
+      background: var(--crimson);
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    header.brand {
+      text-align: center;
+      border-bottom: 3px solid var(--crimson);
+      padding-bottom: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .harvardx-mark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.08em;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-weight: 700;
+      font-size: 2rem;
+      letter-spacing: -0.02em;
+      color: var(--crimson);
+      line-height: 1.1;
+    }
+
+    .harvardx-mark .x-logo {
+      width: 0.88em;
+      height: 0.88em;
+      flex-shrink: 0;
+    }
+
+    .program-line {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 0.35rem;
+      letter-spacing: 0.02em;
+    }
+
+    h1 {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin: 0.5rem 0 0;
+      color: var(--ink);
+    }
+
+    .intro {
+      font-size: 10.5pt;
+      color: var(--muted);
+      margin: 1rem 0 1.5rem;
+    }
+
+    h2 {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 1.05rem;
+      color: var(--crimson-dark);
+      margin: 1.75rem 0 0.65rem;
+      padding-top: 0.5rem;
+      border-top: 1px solid var(--rule);
+      page-break-after: avoid;
+    }
+
+    h2:first-of-type { border-top: none; padding-top: 0; }
+
+    h3 {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin: 1.1rem 0 0.4rem;
+      color: var(--ink);
+      page-break-after: avoid;
+    }
+
+    ul {
+      margin: 0.25rem 0 0.75rem;
+      padding-left: 1.15rem;
+    }
+
+    li {
+      margin: 0.35rem 0;
+      padding-left: 0.15rem;
+    }
+
+    li.sub {
+      list-style-type: circle;
+      margin-left: 0.5rem;
+      font-size: 10.5pt;
+    }
+
+    .check li {
+      list-style: none;
+      position: relative;
+      padding-left: 1.35rem;
+    }
+
+    .check li::before {
+      content: "☐";
+      position: absolute;
+      left: 0;
+      font-family: sans-serif;
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 2rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--rule);
+      font-size: 9pt;
+      color: var(--muted);
+      font-family: "Helvetica Neue", Arial, sans-serif;
+    }
+
+    @media print {
+      .no-print { display: none !important; }
+      body { padding: 0; max-width: none; }
+      h2 { page-break-before: auto; }
+      a { color: inherit; text-decoration: none; }
+    }
+
+    @page {
+      margin: 0.75in;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="no-print">
+    <strong>Print tip:</strong> Use <kbd>Cmd+P</kbd> (Mac) or <kbd>Ctrl+P</kbd> (Windows), enable “Background graphics” if you want crimson accents, then “Save as PDF”.
+    <button type="button" onclick="window.print()">Print / Save PDF</button>
+  </div>
+
+  <header class="brand">
+    <div class="harvardx-mark" aria-label="HarvardX">
+      Harvard
+      <svg class="x-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true">
+        <g transform="translate(16 16)">
+          <rect x="-3.25" y="-14.5" width="6.5" height="29" fill="#C4A035" transform="rotate(45)"/>
+          <rect x="-3.25" y="-14.5" width="6.5" height="29" fill="#A51C30" transform="rotate(-45)"/>
+        </g>
+      </svg>
+    </div>
+    <p class="program-line">Fundamentals of Neuroscience · MicroBachelors<sup>®</sup> Program</p>
+    <h1>Proctored Final Exam — Study Guide</h1>
+    <p class="program-line">MCB80.1x · MCB80.2x · MCB80.3x (MCB80x)</p>
+  </header>
+
+  <p class="intro">
+    This guide is organized into three sections, each corresponding to a course in the MicroBachelors program.
+    Use these questions to focus your studying. When you can answer them clearly in your own words—without guessing—you are ready for the proctored final exam.
+    Check each box as you master a prompt.
+  </p>
+
+  <h2>MCB80.1x — The Electrical Properties of the Neuron</h2>
+
+  <h3>Cell biology &amp; forces</h3>
+  <ul class="check">
+    <li>What are the main parts of a neuron? What are their primary functions and characteristics?</li>
+    <li>How do diffusion and electrostatic forces influence the movement of ions? For a charged particle, what happens if the diffusional force balances the electrostatic force?</li>
+  </ul>
+
+  <h3>Membrane potential &amp; equilibrium</h3>
+  <ul class="check">
+    <li>What is the difference between membrane potential, resting potential, and reversal potential? How do you measure or calculate each?</li>
+    <li>How do you calculate the equilibrium potential (Nernst potential) for a given ion? What does the equilibrium potential tell you?</li>
+    <li>What are the typical ion permeabilities and concentration gradients for a typical neuron? How do they relate to the resting membrane potential?</li>
+    <li>Explain how the Na⁺/K⁺ pump functions and why it is necessary.</li>
+  </ul>
+
+  <h3>Electrical properties &amp; passive spread</h3>
+  <ul class="check">
+    <li>Define driving force, resistance, conductance, capacitance, and current.</li>
+    <li>How are voltage, current, and conductance/resistance related by Ohm’s law?</li>
+    <li>What is the relationship between neuron size, membrane resistance, axial resistance, and capacitance? How do changes in any of these factors affect the membrane time constant (τ) and the length constant (λ)?</li>
+  </ul>
+
+  <h3>Action potential</h3>
+  <ul class="check">
+    <li>Which ion channels and gates are critical for the action potential? What are the relative kinetics for activation and inactivation?</li>
+    <li>What state are each of the channels (or the channel gates) in during each phase of the action potential?</li>
+    <li>Which ions, flowing in which direction, determine the shape of the action potential?</li>
+    <li>What factors are responsible for the relative and absolute refractory periods?</li>
+    <li>What does “propagation” of an action potential mean? How do action potentials transmit information down an axon?</li>
+    <li>What is the shape of the voltage vs. length graph? What is the state of the voltage-gated channels at different locations along the graph?</li>
+  </ul>
+
+  <h3>Myelin &amp; conduction velocity</h3>
+  <ul class="check">
+    <li>How does myelin increase conduction velocity?</li>
+    <li class="sub">What properties does myelination change?</li>
+    <li class="sub">What is a Node of Ranvier?</li>
+    <li>Are there other mechanisms/changes that also increase conduction velocity?</li>
+  </ul>
+
+  <h2>MCB80.2x — Neurons and Networks</h2>
+
+  <h3>Synapse types &amp; structure</h3>
+  <ul class="check">
+    <li>What are the major differences between electrical and chemical synapses?</li>
+    <li>What are the major differences between ionotropic and metabotropic synapses?</li>
+    <li>Label an electron micrograph or diagram of a chemical synapse. Know the location and function of important structures, proteins, and molecules.</li>
+  </ul>
+
+  <h3>Postsynaptic potentials &amp; quantal release</h3>
+  <ul class="check">
+    <li>What do EPP, EPSP, and IPSP stand for? Where and how would you record each of them?</li>
+    <li>What is the difference between an EPSP and a miniEPSP?</li>
+    <li>What is Katz’s quantum hypothesis? What would be the alternative mechanism for neurotransmitter release?</li>
+    <li>List the steps involved in synaptic transmission beginning with the presynaptic action potential.</li>
+  </ul>
+
+  <h3>Excitation, inhibition &amp; receptors</h3>
+  <ul class="check">
+    <li>What makes a synapse either inhibitory or excitatory?</li>
+    <li>How does the structure of a receptor determine its ionic conductance?</li>
+    <li>What are agonists, antagonists, and re-uptake transporters?</li>
+    <li>How do neuromodulators differ from neurotransmitters?</li>
+    <li>What are the major neurotransmitters and their receptors in the brain? In the spinal cord? At the neuromuscular junction? What are their effects?</li>
+    <li>How is the reversal potential calculated, and how does it dictate how permeable ions flow through the channel?</li>
+    <li>How are AMPA and NMDA receptors gated?</li>
+  </ul>
+
+  <h3>Integration &amp; circuits</h3>
+  <ul class="check">
+    <li>Where are excitatory and inhibitory synapses found on a neuron? How are they distributed?</li>
+    <li>What is EPSP attenuation and what causes it?</li>
+    <li>How do excitatory and inhibitory potentials combine in synaptic integration?</li>
+    <li>What is temporal summation, and how does inhibition affect temporal summation?</li>
+    <li>What are the major small neuronal circuit motifs? How are they different from each other?</li>
+  </ul>
+
+  <h3>Neuromodulation &amp; plasticity</h3>
+  <ul class="check">
+    <li>How do you define neuromodulation? How does it occur?</li>
+    <li>Describe the serotonergic modulatory system of the mammalian brain.</li>
+    <li>How do G-protein-coupled receptors function?</li>
+    <li>What is Hebb’s postulate and how does it relate to synaptic plasticity?</li>
+    <li>How do short-term facilitation, short-term depression, long-term potentiation, and long-term depression change synaptic strength?</li>
+    <li>What are the major requirements and steps in NMDA-dependent LTP?</li>
+  </ul>
+
+  <h2>MCB80.3x — The Brain</h2>
+
+  <h3>Vision</h3>
+  <ul class="check">
+    <li>What is the overall structure of the retina? What are the main cell types of the retina and their functions?</li>
+    <li>Summarize the steps in phototransduction, including the functions of rhodopsin and retinal as well as the effect that phototransduction has on the membrane potential of a photoreceptor.</li>
+    <li>Explain the advantages of having both rods and cones, including how the selective activation of the three different color cones gives rise to color vision.</li>
+    <li>What causes color blindness?</li>
+    <li>Describe how visual information flows from the retina to the cortex along the retinofugal pathway. Know the names of the anatomical areas and which part of the visual field and which types of information are encoded by each part.</li>
+    <li>How is information organized in the primary visual cortex (V1)? What are the response properties of cells in V1? What are the parallel pathways following V1?</li>
+    <li>Compare how sensory information is organized in the primary visual cortex (V1), primary auditory cortex, and somatosensory cortex.</li>
+  </ul>
+
+  <h3>Audition</h3>
+  <ul class="check">
+    <li>What are the structures and functions of the three main compartments of the ear?</li>
+    <li>Describe in general terms how sound waves travel through the ear and are detected by hair cells in the cochlea.</li>
+    <li class="sub">What type of receptor is present in the hair cells?</li>
+    <li class="sub">How do the membranes of the cochlea help convert sound waves into neural signals?</li>
+    <li class="sub">Are all sound waves detected equally well by all hair cells?</li>
+    <li class="sub">How are the hair cells arranged within the cochlea?</li>
+    <li>How does sensorineural hearing loss differ from conductive hearing loss?</li>
+    <li>What are the pathways that auditory information travels from the cochlea to the auditory cortex? What components of sound are processed by the superior olive and inferior colliculus?</li>
+  </ul>
+
+  <h3>Gustation &amp; olfaction</h3>
+  <ul class="check">
+    <li>What are the five main tastes? What is the overall structure of the receptors for each? How are those receptors arranged on the tongue?</li>
+    <li>What type of receptors are olfactory receptors? How many different olfactory receptors are there in mammals? How does olfactory receptor activation lead to perception of a particular odorant?</li>
+    <li>How is olfactory information sent from receptors to the olfactory bulb and on to the brain? What are the synaptic targets of the olfactory bulb mitral cells?</li>
+  </ul>
+
+  <h3>Somatosensation &amp; motor systems</h3>
+  <ul class="check">
+    <li>What is somatosensation and what sensations (e.g., touch, pain, etc.) are included under that term? What cells are responsible for these sensations?</li>
+    <li>How do the properties of dorsal root ganglion cells differ and affect the speed of somatosensory perception?</li>
+    <li>What is a lower motor neuron and a motor unit? How are lower motor neurons arranged/mapped in the spinal cord? What are the three sources of synaptic input to lower motor neurons?</li>
+    <li>Describe the circuitry and function of the myotatic stretch reflex.</li>
+    <li>What is a central pattern generator (CPG), and what is a common circuitry motif found in CPGs? What types of movement are CPGs implicated in?</li>
+    <li>What is the location and organization of the primary motor cortex?</li>
+    <li>Where is the premotor cortex located, and what is the functional difference between the primary motor cortex and the premotor cortex?</li>
+    <li>What pathways carry motor information from the brain to the lower motor neurons?</li>
+  </ul>
+
+  <h3>Brain regions &amp; memory</h3>
+  <ul class="check">
+    <li>Know the general location and primary functions of the following areas:</li>
+    <li class="sub">Hindbrain · Midbrain · Cerebellum · Forebrain</li>
+    <li class="sub">Basal ganglia (including implications in Parkinson’s and Huntington’s disease)</li>
+    <li class="sub">Thalamus · Limbic system · Hippocampus · Hypothalamus</li>
+    <li>What are the different types of memory? What is the function of each? What brain regions or structures are involved in each?</li>
+  </ul>
+
+  <footer>
+    <p>
+      Study prompts aligned with the HarvardX MCB80x exam preparation materials on edX.
+      This document is for personal study; HarvardX and edX names are used descriptively.
+      Companion practice: <strong>neuroscience-studyguide</strong> (GitHub Pages).
+    </p>
+    <p>Printed: <span id="print-date"></span></p>
+  </footer>
+
+  <script>
+    document.getElementById("print-date").textContent = new Date().toLocaleDateString(undefined, {
+      year: "numeric", month: "long", day: "numeric"
+    });
+  </script>
+</body>
+</html>
