@@ -132,6 +132,11 @@ function processFile(file) {
   const names = [...code.matchAll(/const ([A-Z0-9_]+) = \[/g)].map(m => m[1]);
   if (!names.length) return 0;
   const bag = new Function(`${code}\nreturn { ${names.join(", ")} };`)();
+  for (const name of names) {
+    if (!Array.isArray(bag[name])) {
+      throw new Error(`${file}: expected array ${name} after load`);
+    }
+  }
   let changed = 0;
   for (const name of names) {
     for (const q of bag[name] || []) {

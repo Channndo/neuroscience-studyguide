@@ -885,6 +885,855 @@ const PART1_EXTRA_POOL = [
   }
 ];
 
+const PART2_EXTRA_POOL = [
+  {
+    topic: "Chemical Synapses",
+    question: "Quantal transmission means postsynaptic responses fluctuate in steps because:",
+    options: [
+      "Release occurs in discrete vesicle units (quanta)",
+      "Ion channels open continuously without discreteness",
+      "Only electrical synapses are used",
+      "Neurotransmitter is always infinite in concentration"
+    ],
+    correct: 0,
+    explanation: "Each vesicle contributes a miniature EPSC/IPSC of roughly fixed amplitude.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Release occurs in discrete vesicle units (quanta)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Release occurs in discrete vesicle units (quanta)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Release occurs in discrete vesicle units (quanta)) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Transmission",
+    question: "Miniature EPSPs (mEPSPs) are observed when:",
+    options: [
+      "Spontaneous single-vesicle fusion occurs without presynaptic spikes",
+      "The axon is cut and sealed (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Only inhibitory neurons are present (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Myelin covers the synapse (mixes up presynaptic release with postsynaptic receptor logic)"
+    ],
+    correct: 0,
+    explanation: "Spontaneous quantal release produces mEPSPs/mEPSCs.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Spontaneous single-vesicle fusion occurs without presynaptic spikes) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Spontaneous single-vesicle fusion occurs without presynaptic spikes) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Spontaneous single-vesicle fusion occurs without presynaptic spikes) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Transmission",
+    question: "Increasing presynaptic Ca²⁺ entry near active zones generally:",
+    options: [
+      "Increases release probability",
+      "Eliminates all vesicle fusion",
+      "Converts ionotropic receptors to metabotropic only",
+      "Blocks postsynaptic K⁺ channels"
+    ],
+    correct: 0,
+    explanation: "Ca²⁺ triggers synaptotagmin and SNARE-mediated fusion.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Increases release probability) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Increases release probability) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Increases release probability) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Transmission",
+    question: "Botulinum toxin reduces synaptic transmission by cleaving:",
+    options: [
+      "SNARE proteins required for vesicle fusion",
+      "Voltage-gated Na⁺ channels in the axon hillock only",
+      "Glutamate entirely in the cleft",
+      "All postsynaptic AMPA receptors"
+    ],
+    correct: 0,
+    explanation: "Botulinum proteolysis of SNAREs prevents exocytosis.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (SNARE proteins required for vesicle fusion) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (SNARE proteins required for vesicle fusion) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (SNARE proteins required for vesicle fusion) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Transmission",
+    question: "Synaptic delay is largely attributable to:",
+    options: [
+      "Ca²⁺ influx, vesicle fusion, and transmitter diffusion/binding",
+      "Action potential backpropagation only in dendrites (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Myelin thickness at the synapse (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Pump reversal at the postsynaptic density (mixes up presynaptic release with postsynaptic receptor logic)"
+    ],
+    correct: 0,
+    explanation: "Several presynaptic steps add milliseconds between spike and response.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Ca²⁺ influx, vesicle fusion, and transmitter diffusion/binding) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Ca²⁺ influx, vesicle fusion, and transmitter diffusion/binding) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Ca²⁺ influx, vesicle fusion, and transmitter diffusion/binding) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Vesicles",
+    question: "The readily releasable pool refers to vesicles that:",
+    options: [
+      "Are docked/primed and can fuse quickly after Ca²⁺ rise",
+      "Are permanently trapped in the nucleus (does not follow from the mechanism implied in the stem)",
+      "Only contain neuropeptides for hours-long release (does not follow from the mechanism implied in the stem)",
+      "Exist only in electrical synapses (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "Primed vesicles supply the first wave of evoked release.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Are docked/primed and can fuse quickly after Ca²⁺ rise) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Are docked/primed and can fuse quickly after Ca²⁺ rise) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Are docked/primed and can fuse quickly after Ca²⁺ rise) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Vesicles",
+    question: "Endocytosis after exocytosis is needed to:",
+    options: [
+      "Recycle vesicle membrane and maintain release capacity",
+      "Generate action potentials in the cleft (does not follow from the mechanism implied in the stem)",
+      "Open gap junctions (does not follow from the mechanism implied in the stem)",
+      "Depolarize all mitochondria (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "Without recycling, synapses deplete vesicle supply.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Recycle vesicle membrane and maintain release capacity) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Recycle vesicle membrane and maintain release capacity) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Recycle vesicle membrane and maintain release capacity) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Receptor Types",
+    question: "AMPA receptors on hippocampal pyramidal cells typically mediate:",
+    options: [
+      "Fast excitatory postsynaptic currents at many glutamatergic synapses",
+      "Slow G-protein inhibitory currents only (does not follow from the mechanism implied in the stem)",
+      "Direct opening of voltage-gated Na⁺ in myelin (does not follow from the mechanism implied in the stem)",
+      "Peptide hormone release (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "AMPA channels dominate fast EPSCs when Glu is released.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Fast excitatory postsynaptic currents at many glutamatergic synapses) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Fast excitatory postsynaptic currents at many glutamatergic synapses) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Fast excitatory postsynaptic currents at many glutamatergic synapses) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Receptor Types",
+    question: "GABA<sub>A</sub> receptors are ionotropic and conduct primarily:",
+    options: [
+      "Cl⁻ (often hyperpolarizing or shunting)",
+      "Na⁺ exclusively (does not follow from the mechanism implied in the stem)",
+      "Ca²⁺ only in all neurons always (does not follow from the mechanism implied in the stem)",
+      "K⁺ never (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "GABA<sub>A</sub> is a ligand-gated Cl⁻ channel (E_Cl sets direction).",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Cl⁻ (often hyperpolarizing or shunting)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Cl⁻ (often hyperpolarizing or shunting)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Cl⁻ (often hyperpolarizing or shunting)) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Receptor Types",
+    question: "Nicotinic ACh receptors at the neuromuscular junction are:",
+    options: [
+      "Ligand-gated cation channels causing endplate depolarization",
+      "Metabotropic GPCRs only (does not follow from the mechanism implied in the stem)",
+      "Voltage-gated Cl⁻ channels (does not follow from the mechanism implied in the stem)",
+      "Electrical synapses (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "nAChR permits Na⁺/K⁺ flux, depolarizing the muscle fiber.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Ligand-gated cation channels causing endplate depolarization) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Ligand-gated cation channels causing endplate depolarization) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Ligand-gated cation channels causing endplate depolarization) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Receptor Types",
+    question: "Muscarinic ACh receptors are metabotropic and can:",
+    options: [
+      "Modulate K⁺ channels, phospholipase C, and other second-messenger pathways",
+      "Directly form a fast cation pore identical to AMPA (does not follow from the mechanism implied in the stem)",
+      "Replace SNARE proteins (does not follow from the mechanism implied in the stem)",
+      "Conduct myelin insulation (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "Muscarinic receptors use G-proteins for slower modulatory effects.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Modulate K⁺ channels, phospholipase C, and other second-messenger pathways) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Modulate K⁺ channels, phospholipase C, and other second-messenger pathways) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Modulate K⁺ channels, phospholipase C, and other second-messenger pathways) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Second Messengers",
+    question: "Activation of phospholipase C via Gq often increases:",
+    options: [
+      "IP3 and DAG, raising intracellular Ca²⁺ from stores",
+      "cAMP only without any Ca²⁺ change (does not follow from the mechanism implied in the stem)",
+      "Myelin basic protein synthesis only (does not follow from the mechanism implied in the stem)",
+      "Voltage-gated Na⁺ density at nodes instantly (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "PLC splits PIP2 into IP3 (Ca²⁺ release) and DAG (PKC activation).",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (IP3 and DAG, raising intracellular Ca²⁺ from stores) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (IP3 and DAG, raising intracellular Ca²⁺ from stores) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (IP3 and DAG, raising intracellular Ca²⁺ from stores) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Second Messengers",
+    question: "cAMP-dependent protein kinase (PKA) can modulate synapses by:",
+    options: [
+      "Phosphorylating channels and transcription factors",
+      "Cleaving SNARE proteins (does not follow from the mechanism implied in the stem)",
+      "Blocking all glutamate release permanently (does not follow from the mechanism implied in the stem)",
+      "Opening gap junctions in myelin (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "PKA phosphorylation alters channel function and gene expression.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Phosphorylating channels and transcription factors) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Phosphorylating channels and transcription factors) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Phosphorylating channels and transcription factors) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Integration",
+    question: "Shunting inhibition reduces EPSP amplitude at the soma mainly by:",
+    options: [
+      "Lowering input resistance so synaptic current leaks locally",
+      "Increasing Na⁺ channel density at AIS always (ignores how EPSPs/IPSPs sum in time or space)",
+      "Preventing any Cl⁻ flux (ignores how EPSPs/IPSPs sum in time or space)",
+      "Eliminating temporal summation entirely (ignores how EPSPs/IPSPs sum in time or space)"
+    ],
+    correct: 0,
+    explanation: "Increased conductance diverts current, reducing voltage change elsewhere.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Lowering input resistance so synaptic current leaks locally) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Lowering input resistance so synaptic current leaks locally) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Lowering input resistance so synaptic current leaks locally) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Integration",
+    question: "Divisive normalization in some circuits refers to:",
+    options: [
+      "Inhibitory input scaling excitatory drive proportionally",
+      "Adding only spatial summation without time (ignores how EPSPs/IPSPs sum in time or space)",
+      "Blocking all GABA release (ignores how EPSPs/IPSPs sum in time or space)",
+      "Converting spikes to graded release only in retina (ignores how EPSPs/IPSPs sum in time or space)"
+    ],
+    correct: 0,
+    explanation: "Inhibition can divide or scale excitation rather than only subtract absolutely.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Inhibitory input scaling excitatory drive proportionally) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Inhibitory input scaling excitatory drive proportionally) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Inhibitory input scaling excitatory drive proportionally) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Short-Term Plasticity",
+    question: "Synaptic depression after repetitive firing often reflects:",
+    options: [
+      "Depletion of the readily releasable vesicle pool",
+      "Permanent removal of all postsynaptic receptors",
+      "Myelin growth in the cleft (does not follow from the mechanism implied in the stem)",
+      "Only LTP induction (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "High-frequency use exhausts primed vesicles temporarily.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Depletion of the readily releasable vesicle pool) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Depletion of the readily releasable vesicle pool) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Depletion of the readily releasable vesicle pool) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Short-Term Plasticity",
+    question: "Facilitation at some synapses is attributed partly to:",
+    options: [
+      "Residual presynaptic Ca²⁺ enhancing release probability",
+      "Complete SNARE destruction (does not follow from the mechanism implied in the stem)",
+      "Blocking all K⁺ channels in the cleft (does not follow from the mechanism implied in the stem)",
+      "Loss of action potentials (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "Ca²⁺ buildup increases P_release for subsequent spikes.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Residual presynaptic Ca²⁺ enhancing release probability) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Residual presynaptic Ca²⁺ enhancing release probability) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Residual presynaptic Ca²⁺ enhancing release probability) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Long-Term Plasticity",
+    question: "Hebbian plasticity is summarized as:",
+    options: [
+      "Cells that fire together wire together",
+      "Random synapse elimination only (states the wrong induction requirement for LTP/LTD)",
+      "Only inhibitory synapses strengthen with uncorrelated input",
+      "Myelin determines synaptic weight alone"
+    ],
+    correct: 0,
+    explanation: "Correlated pre/post activity drives LTP-like strengthening.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Cells that fire together wire together (correlated activity strengthens synapses)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Cells that fire together wire together (correlated activity strengthens synapses)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Cells that fire together wire together (correlated activity strengthens synapses)) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Long-Term Plasticity",
+    question: "LTD (long-term depression) can be induced when:",
+    options: [
+      "Postsynaptic activity is low during presynaptic input (e.g., low-frequency pairing)",
+      "Only a single mEPSP occurs once (states the wrong induction requirement for LTP/LTD)",
+      "All NMDA receptors are removed genetically always (states the wrong induction requirement for LTP/LTD)",
+      "Only electrical synapses fire (states the wrong induction requirement for LTP/LTD)"
+    ],
+    correct: 0,
+    explanation: "Specific timing/frequency rules can weaken synapses (LTD).",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Postsynaptic activity is low during presynaptic input (e.g., low-frequency pairing)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Postsynaptic activity is low during presynaptic input (e.g., low-frequency pairing)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Postsynaptic activity is low during presynaptic input (e.g., low-frequency pairing)) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Long-Term Plasticity",
+    question: "CaMKII activation postsynaptically is associated with:",
+    options: [
+      "LTP maintenance at many glutamatergic synapses",
+      "Immediate botulinum effects (states the wrong induction requirement for LTP/LTD)",
+      "Only GABA<sub>B</sub> signaling (states the wrong induction requirement for LTP/LTD)",
+      "Saltatory conduction failure (states the wrong induction requirement for LTP/LTD)"
+    ],
+    correct: 0,
+    explanation: "Ca²⁺ influx through NMDA activates CaMKII, reinforcing synaptic strength.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (LTP maintenance at many glutamatergic synapses) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (LTP maintenance at many glutamatergic synapses) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (LTP maintenance at many glutamatergic synapses) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Neuromodulation",
+    question: "Dopamine modulates corticostriatal synapses largely via:",
+    options: [
+      "D1/D2 GPCRs changing cAMP and downstream phosphorylation",
+      "Direct nAChR pores at every synapse (does not follow from the mechanism implied in the stem)",
+      "Only gap junction coupling (does not follow from the mechanism implied in the stem)",
+      "Myelin thickness (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "Dopamine GPCRs tune excitability and plasticity in striatal circuits.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (D1/D2 GPCRs changing cAMP and downstream phosphorylation) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (D1/D2 GPCRs changing cAMP and downstream phosphorylation) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (D1/D2 GPCRs changing cAMP and downstream phosphorylation) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Neuromodulation",
+    question: "Norepinephrine from locus coeruleus often:",
+    options: [
+      "Increases arousal and modulates sensory gain via β-adrenergic receptors",
+      "Blocks all Na⁺ channels permanently (does not follow from the mechanism implied in the stem)",
+      "Is the primary transmitter at NMJ (does not follow from the mechanism implied in the stem)",
+      "Only activates GABA<sub>A</sub> (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "NE modulates attention/arousal through widespread noradrenergic projections.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Increases arousal and modulates sensory gain via β-adrenergic receptors) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Increases arousal and modulates sensory gain via β-adrenergic receptors) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Increases arousal and modulates sensory gain via β-adrenergic receptors) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Neuromodulation",
+    question: "Serotonin (5-HT) modulates circuits through:",
+    options: [
+      "Multiple receptor subtypes (many GPCRs) with diverse effects",
+      "A single ionotropic receptor only in mammals (does not follow from the mechanism implied in the stem)",
+      "Exclusive action on myelin (does not follow from the mechanism implied in the stem)",
+      "Direct voltage-gated Na⁺ gating only (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "5-HT has broad neuromodulatory roles via many receptor types.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Multiple receptor subtypes (many GPCRs) with diverse effects) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Multiple receptor subtypes (many GPCRs) with diverse effects) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Multiple receptor subtypes (many GPCRs) with diverse effects) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Neuromodulation",
+    question: "Neuromodulators differ from fast transmitters mainly because they:",
+    options: [
+      "Act on longer timescales and often via second messengers / volume transmission",
+      "Always use electrical synapses (does not follow from the mechanism implied in the stem)",
+      "Never affect ion channels (does not follow from the mechanism implied in the stem)",
+      "Only exist in invertebrate NMJs (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "Modulators reshape network state over seconds to minutes.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Act on longer timescales and often via second messengers / volume transmission) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Act on longer timescales and often via second messengers / volume transmission) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Act on longer timescales and often via second messengers / volume transmission) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Neural Circuits",
+    question: "Feedforward inhibition occurs when:",
+    options: [
+      "An excitatory input drives both principal cells and interneurons that inhibit downstream targets",
+      "Inhibition only returns to the same cell that was excited (feedback only)",
+      "Only electrical synapses connect layers (does not follow from the mechanism implied in the stem)",
+      "Myelin provides inhibition (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "Feedforward: excitation recruits interneurons that inhibit other principal neurons.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (An excitatory input drives both principal cells and interneurons that inhibit downstream targets) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (An excitatory input drives both principal cells and interneurons that inhibit downstream targets) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (An excitatory input drives both principal cells and interneurons that inhibit downstream targets) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Neural Circuits",
+    question: "Feedback (recurrent) inhibition stabilizes firing by:",
+    options: [
+      "Interneurons inhibiting the same or nearby principal cells that excited them",
+      "Blocking all EPSPs permanently (does not follow from the mechanism implied in the stem)",
+      "Preventing any action potentials in interneurons (does not follow from the mechanism implied in the stem)",
+      "Only modulating retina photoreceptors (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "Recurrent loops limit runaway excitation.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Interneurons inhibiting the same or nearby principal cells that excited them) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Interneurons inhibiting the same or nearby principal cells that excited them) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Interneurons inhibiting the same or nearby principal cells that excited them) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Neural Circuits",
+    question: "Central pattern generators (CPGs) can produce rhythms:",
+    options: [
+      "Without sensory input for each cycle (intrinsic circuit dynamics)",
+      "Only when every muscle spindle fires once (does not follow from the mechanism implied in the stem)",
+      "Exclusively in cerebellar Purkinje somata alone (does not follow from the mechanism implied in the stem)",
+      "Only via myelin oscillations (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "CPGs underlie breathing, locomotion, and other rhythmic motor patterns.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Without sensory input for each cycle (intrinsic circuit dynamics)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Without sensory input for each cycle (intrinsic circuit dynamics)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Without sensory input for each cycle (intrinsic circuit dynamics)) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Neural Circuits",
+    question: "Inhibitory interneurons in cortex often release:",
+    options: [
+      "GABA",
+      "Glutamate exclusively",
+      "Acetylcholine only at every synapse",
+      "Myelin basic protein"
+    ],
+    correct: 0,
+    explanation: "Most cortical interneurons are GABAergic.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (GABA) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (GABA) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (GABA) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Electrical Synapses",
+    question: "Connexin-based gap junctions allow:",
+    options: [
+      "Direct ionic and small-molecule coupling between cells",
+      "Only retrograde peptide signaling (does not follow from the mechanism implied in the stem)",
+      "Saltatory conduction in unmyelinated axons (does not follow from the mechanism implied in the stem)",
+      "Quantal release from vesicles (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "Gap junctions electrically couple adjacent neurons or glia.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Direct ionic and small-molecule coupling between cells) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Direct ionic and small-molecule coupling between cells) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Direct ionic and small-molecule coupling between cells) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Electrical Synapses",
+    question: "Electrical synapses are often faster than chemical synapses because:",
+    options: [
+      "No vesicle fusion or diffusion delay is required",
+      "They always use second messengers (does not follow from the mechanism implied in the stem)",
+      "They require NMDA activation (does not follow from the mechanism implied in the stem)",
+      "They depend on myelin stripping (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "Current flows directly through connexons with minimal delay.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (No vesicle fusion or diffusion delay is required) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (No vesicle fusion or diffusion delay is required) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (No vesicle fusion or diffusion delay is required) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Electrical Synapses",
+    question: "Rectifying electrical synapses conduct better in one direction because:",
+    options: [
+      "Connexon subunit composition creates voltage-dependent asymmetry",
+      "Myelin blocks reverse current (does not follow from the mechanism implied in the stem)",
+      "Only Cl⁻ is passed backward (does not follow from the mechanism implied in the stem)",
+      "SNARE proteins orient vesicles (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "Some gap junctions pass current preferentially from cell A to B.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Connexon subunit composition creates voltage-dependent asymmetry) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Connexon subunit composition creates voltage-dependent asymmetry) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Connexon subunit composition creates voltage-dependent asymmetry) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Retrograde Signaling",
+    question: "Endocannabinoids can act retrogradely to:",
+    options: [
+      "Suppress presynaptic neurotransmitter release after strong postsynaptic activity",
+      "Open nAChR at the NMJ (does not follow from the mechanism implied in the stem)",
+      "Generate action potentials in myelin (does not follow from the mechanism implied in the stem)",
+      "Replace glutamate in vesicles (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "Postsynaptically produced endocannabinoids often inhibit presynaptic release.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Suppress presynaptic neurotransmitter release after strong postsynaptic activity) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Suppress presynaptic neurotransmitter release after strong postsynaptic activity) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Suppress presynaptic neurotransmitter release after strong postsynaptic activity) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Anatomy",
+    question: "The active zone is specialized for:",
+    options: [
+      "Vesicle docking and Ca²⁺-triggered fusion opposite postsynaptic receptors",
+      "Myelin formation (does not follow from the mechanism implied in the stem)",
+      "Action potential initiation in dendrites only (does not follow from the mechanism implied in the stem)",
+      "Phototransduction (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "Active zones align release machinery with receptor clusters.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Vesicle docking and Ca²⁺-triggered fusion opposite postsynaptic receptors) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Vesicle docking and Ca²⁺-triggered fusion opposite postsynaptic receptors) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Vesicle docking and Ca²⁺-triggered fusion opposite postsynaptic receptors) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Anatomy",
+    question: "Postsynaptic density (PSD) is enriched in:",
+    options: [
+      "Scaffolding proteins and glutamate receptors at excitatory synapses",
+      "Only oligodendrocyte processes (does not follow from the mechanism implied in the stem)",
+      "Rhodopsin (does not follow from the mechanism implied in the stem)",
+      "Cochlear hair cell tip links (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "PSD organizes AMPA/NMDA receptors and signaling complexes.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Scaffolding proteins and glutamate receptors at excitatory synapses) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Scaffolding proteins and glutamate receptors at excitatory synapses) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Scaffolding proteins and glutamate receptors at excitatory synapses) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Excitatory-Inhibitory Balance",
+    question: "E/I balance refers to:",
+    options: [
+      "Relative levels of excitatory and inhibitory synaptic drive onto a neuron",
+      "Equal numbers of axons and dendrites anatomically (does not follow from the mechanism implied in the stem)",
+      "Only GABAergic monosynaptic reflexes (does not follow from the mechanism implied in the stem)",
+      "Myelin equal to axon diameter (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "Circuit function depends on balanced excitation and inhibition.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Relative levels of excitatory and inhibitory synaptic drive onto a neuron) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Relative levels of excitatory and inhibitory synaptic drive onto a neuron) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Relative levels of excitatory and inhibitory synaptic drive onto a neuron) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Drug Effects",
+    question: "Benzodiazepines enhance GABA<sub>A</sub> signaling by:",
+    options: [
+      "Increasing frequency of channel opening (allosteric modulation)",
+      "Blocking GABA synthesis irreversibly (does not follow from the mechanism implied in the stem)",
+      "Opening NMDA receptors (does not follow from the mechanism implied in the stem)",
+      "Preventing Cl⁻ flux (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "BZDs bind allosteric sites to potentiate GABA<sub>A</sub> responses.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Increasing frequency of channel opening (allosteric modulation)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Increasing frequency of channel opening (allosteric modulation)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Increasing frequency of channel opening (allosteric modulation)) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Drug Effects",
+    question: "Strychnine causes convulsions by blocking:",
+    options: [
+      "Glycine receptors (in spinal inhibitory circuits)",
+      "AMPA receptors in retina (does not follow from the mechanism implied in the stem)",
+      "Voltage-gated K⁺ in nodes only (does not follow from the mechanism implied in the stem)",
+      "Connexins in heart only (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "Loss of glycinergic inhibition leads to uncontrolled motor activity.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Glycine receptors (in spinal inhibitory circuits)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Glycine receptors (in spinal inhibitory circuits)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Glycine receptors (in spinal inhibitory circuits)) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Peptide Transmitters",
+    question: "Neuropeptides differ from classical transmitters because they:",
+    options: [
+      "Are often co-released, act on GPCRs, and can have long-lasting effects",
+      "Always use ionotropic pores with sub-ms kinetics only (does not follow from the mechanism implied in the stem)",
+      "Are stored only in mitochondria (does not follow from the mechanism implied in the stem)",
+      "Cannot be released by activity (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "Peptides modulate circuits over longer ranges and timescales.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Are often co-released, act on GPCRs, and can have long-lasting effects) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Are often co-released, act on GPCRs, and can have long-lasting effects) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Are often co-released, act on GPCRs, and can have long-lasting effects) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Neuromuscular Junction",
+    question: "Acetylcholinesterase in the synaptic cleft:",
+    options: [
+      "Hydrolyzes ACh to terminate the endplate potential",
+      "Synthesizes ACh from glutamate (does not follow from the mechanism implied in the stem)",
+      "Opens K⁺ channels directly (does not follow from the mechanism implied in the stem)",
+      "Myelinates the motor axon (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "Rapid ACh breakdown keeps NMJ signaling brief.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Hydrolyzes ACh to terminate the endplate potential) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Hydrolyzes ACh to terminate the endplate potential) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Hydrolyzes ACh to terminate the endplate potential) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Neuromuscular Junction",
+    question: "Curare-like drugs block NMJ transmission by:",
+    options: [
+      "Competitive antagonism at nicotinic ACh receptors",
+      "Blocking voltage-gated Na⁺ in muscle T-tubules only always",
+      "Preventing action potentials in motor cortex only",
+      "Enhancing GABA<sub>A</sub> on motoneurons exclusively"
+    ],
+    correct: 0,
+    explanation: "nAChR block prevents endplate depolarization.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Competitive antagonism at nicotinic ACh receptors) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Competitive antagonism at nicotinic ACh receptors) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Competitive antagonism at nicotinic ACh receptors) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Co-transmission",
+    question: "A neuron releasing both glutamate and a neuropeptide illustrates:",
+    options: [
+      "Co-transmission with fast and slow signaling components",
+      "Only electrical coupling (does not follow from the mechanism implied in the stem)",
+      "Purely retrograde dopamine signaling (does not follow from the mechanism implied in the stem)",
+      "Myelin-mediated transmission (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "Many neurons co-release multiple transmitters/modulators.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Co-transmission with fast and slow signaling components) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Co-transmission with fast and slow signaling components) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Co-transmission with fast and slow signaling components) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Inhibitory Circuits",
+    question: "Disinhibition occurs when:",
+    options: [
+      "Inhibition of an interneuron releases a target from suppression",
+      "All GABA neurons are removed globally (does not follow from the mechanism implied in the stem)",
+      "Only AMPA receptors activate (does not follow from the mechanism implied in the stem)",
+      "Myelin is added to interneurons (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "Removing inhibitory input on a neuron can increase its activity.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Inhibition of an interneuron releases a target from suppression) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Inhibition of an interneuron releases a target from suppression) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Inhibition of an interneuron releases a target from suppression) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Plasticity Rules",
+    question: "Spike-timing-dependent plasticity (STDP) depends on:",
+    options: [
+      "Order and timing of pre- and postsynaptic spikes",
+      "Only ambient temperature (does not follow from the mechanism implied in the stem)",
+      "Myelin length (does not follow from the mechanism implied in the stem)",
+      "Olfactory receptor choice (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "Millisecond-scale timing windows determine LTP vs LTD.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Order and timing of pre- and postsynaptic spikes) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Order and timing of pre- and postsynaptic spikes) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Order and timing of pre- and postsynaptic spikes) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Plasticity Rules",
+    question: "Presynaptic LTP at the crayfish neuromuscular junction involves:",
+    options: [
+      "Increased quantal release (presynaptic mechanism)",
+      "Only postsynaptic receptor insertion always (does not follow from the mechanism implied in the stem)",
+      "Gap junction doubling (does not follow from the mechanism implied in the stem)",
+      "Photoreceptor adaptation (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "Classic example of presynaptic enhancement of release probability.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Increased quantal release (presynaptic mechanism)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Increased quantal release (presynaptic mechanism)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Increased quantal release (presynaptic mechanism)) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Integration",
+    question: "An IPSP arriving at the soma during an EPSP can:",
+    options: [
+      "Reduce net depolarization and prevent threshold crossing",
+      "Always increase Na⁺ influx (does not follow from the mechanism implied in the stem)",
+      "Eliminate resting potential permanently (does not follow from the mechanism implied in the stem)",
+      "Convert the cell to photoreceptor function (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "Inhibition subtracts from excitation in integration.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Reduce net depolarization and prevent threshold crossing) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Reduce net depolarization and prevent threshold crossing) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Reduce net depolarization and prevent threshold crossing) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Integration",
+    question: "Dendritic spikes in some neurons can:",
+    options: [
+      "Boost local depolarization and influence somatic output",
+      "Only occur in unmyelinated sensory axons always (does not follow from the mechanism implied in the stem)",
+      "Replace all chemical synapses (does not follow from the mechanism implied in the stem)",
+      "Block all K⁺ channels globally (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "Active dendritic conductances can nonlinearly amplify inputs.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Boost local depolarization and influence somatic output) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Boost local depolarization and influence somatic output) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Boost local depolarization and influence somatic output) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Circuit Modulation",
+    question: "Acetylcholine in cortex during wakefulness tends to:",
+    options: [
+      "Increase responsiveness and modulate attention via muscarinic and nicotinic receptors",
+      "Silence all thalamocortical input permanently (does not follow from the mechanism implied in the stem)",
+      "Replace glutamate at every synapse (does not follow from the mechanism implied in the stem)",
+      "Only hyperpolarize via GABA<sub>B</sub> (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "ACh neuromodulation supports arousal and cortical processing.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Increase responsiveness and modulate attention via muscarinic and nicotinic receptors) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Increase responsiveness and modulate attention via muscarinic and nicotinic receptors) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Increase responsiveness and modulate attention via muscarinic and nicotinic receptors) matches the underlying mechanism."
+    ]
+  }
+];
+
 const PART3_EXTRA_POOL = [
   {
     topic: "Phototransduction",

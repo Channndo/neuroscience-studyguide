@@ -51,6 +51,9 @@ function processFile(file) {
   const code = fs.readFileSync(fp, "utf8");
   const names = [...code.matchAll(/const ([A-Z0-9_]+) = \[/g)].map(m => m[1]);
   const bag = new Function(`${code}\nreturn { ${names.join(", ")} };`)();
+  for (const name of names) {
+    if (!Array.isArray(bag[name])) throw new Error(`${file}: missing array ${name}`);
+  }
   const seen = [];
   let removed = 0;
   for (const name of names) {

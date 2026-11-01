@@ -85,17 +85,17 @@ function processIndexPartArrays() {
 function processBankFile(file, poolNames) {
   const fp = path.join(root, file);
   const code = fs.readFileSync(fp, "utf8");
-  const bag = new Function(`${code}\nreturn { ${poolNames.join(", ")} };`)();
+  const allNames = [...code.matchAll(/const ([A-Z0-9_]+) = \[/g)].map(m => m[1]);
+  const bag = new Function(`${code}\nreturn { ${allNames.join(", ")} };`)();
   let total = 0;
   for (const name of poolNames) {
     for (const q of bag[name] || []) total += enrichQuestion(q);
   }
   if (!total) return 0;
   let out = code.split(/const [A-Z0-9_]+ = \[/)[0];
-  const allNames = [...code.matchAll(/const ([A-Z0-9_]+) = \[/g)].map(m => m[1]);
   for (const name of allNames) {
     const list = bag[name];
-    if (!list) continue;
+    if (!Array.isArray(list)) throw new Error(`${file}: missing array ${name}`);
     const body = list
       .map(q => {
         const opts = q.options.map(o => JSON.stringify(o)).join(",\n      ");

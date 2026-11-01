@@ -92,6 +92,24 @@ const PART1_EXPANSION_POOL = [
     ]
   },
   {
+    topic: "Passive Membrane Properties",
+    question: "If membrane leak conductance increases by ~40% (R_m falls) with unchanged geometry, the length constant λ typically:",
+    options: [
+      "Becomes shorter (less spatial spread)",
+      "Becomes infinitely long (misstates how R_m, C_m, or geometry set τ or λ)",
+      "Does not change ever (misstates how R_m, C_m, or geometry set τ or λ)",
+      "Converts dendrites to photoreceptors"
+    ],
+    correct: 0,
+    explanation: "Higher leak (lower R_m) shortens λ, attenuating signals faster with distance.",
+    wrongExplanations: [
+      "",
+      "Unlike the keyed answer (Becomes shorter (less spatial spread)), this option misstates the mechanism or direction described in the stem.",
+      "Unlike the keyed answer (Becomes shorter (less spatial spread)), this option misstates the mechanism or direction described in the stem.",
+      "This mechanism belongs to a different sensory or synaptic system than the stem describes."
+    ]
+  },
+  {
     topic: "Pharmacology",
     question: "Drug: TTX. Mechanism → outcome:",
     options: [
@@ -222,6 +240,78 @@ const PART1_EXPANSION_POOL = [
     question: "A neuron at -70 mV receives a +5 mV EPSP that remains subthreshold. Approximate peak V_m:",
     options: [
       "-65 mV",
+      "+40 mV always",
+      "Exactly E_Na",
+      "Exactly E_K always"
+    ],
+    correct: 0,
+    explanation: "Subthreshold EPSPs shift V_m approximately by the EPSP amplitude.",
+    wrongExplanations: [
+      "",
+      "This choice (+40 mV always) does not match the keyed answer’s mechanism for Electrical Signaling.",
+      "This choice (Exactly E_Na) does not match the keyed answer’s mechanism for Electrical Signaling.",
+      "This choice (Exactly E_K always) does not match the keyed answer’s mechanism for Electrical Signaling."
+    ]
+  },
+  {
+    topic: "Electrical Signaling",
+    question: "A neuron at -70 mV receives a +8 mV EPSP that remains subthreshold. Approximate peak V_m:",
+    options: [
+      "-62 mV",
+      "+40 mV always",
+      "Exactly E_Na",
+      "Exactly E_K always"
+    ],
+    correct: 0,
+    explanation: "Subthreshold EPSPs shift V_m approximately by the EPSP amplitude.",
+    wrongExplanations: [
+      "",
+      "This choice (+40 mV always) does not match the keyed answer’s mechanism for Electrical Signaling.",
+      "This choice (Exactly E_Na) does not match the keyed answer’s mechanism for Electrical Signaling.",
+      "This choice (Exactly E_K always) does not match the keyed answer’s mechanism for Electrical Signaling."
+    ]
+  },
+  {
+    topic: "Electrical Signaling",
+    question: "A neuron at -70 mV receives a +12 mV EPSP that remains subthreshold. Approximate peak V_m:",
+    options: [
+      "-58 mV",
+      "+40 mV always",
+      "Exactly E_Na",
+      "Exactly E_K always"
+    ],
+    correct: 0,
+    explanation: "Subthreshold EPSPs shift V_m approximately by the EPSP amplitude.",
+    wrongExplanations: [
+      "",
+      "This choice (+40 mV always) does not match the keyed answer’s mechanism for Electrical Signaling.",
+      "This choice (Exactly E_Na) does not match the keyed answer’s mechanism for Electrical Signaling.",
+      "This choice (Exactly E_K always) does not match the keyed answer’s mechanism for Electrical Signaling."
+    ]
+  },
+  {
+    topic: "Electrical Signaling",
+    question: "A neuron at -70 mV receives a +15 mV EPSP that remains subthreshold. Approximate peak V_m:",
+    options: [
+      "-55 mV",
+      "+40 mV always",
+      "Exactly E_Na",
+      "Exactly E_K always"
+    ],
+    correct: 0,
+    explanation: "Subthreshold EPSPs shift V_m approximately by the EPSP amplitude.",
+    wrongExplanations: [
+      "",
+      "This choice (+40 mV always) does not match the keyed answer’s mechanism for Electrical Signaling.",
+      "This choice (Exactly E_Na) does not match the keyed answer’s mechanism for Electrical Signaling.",
+      "This choice (Exactly E_K always) does not match the keyed answer’s mechanism for Electrical Signaling."
+    ]
+  },
+  {
+    topic: "Electrical Signaling",
+    question: "A neuron at -70 mV receives a +20 mV EPSP that remains subthreshold. Approximate peak V_m:",
+    options: [
+      "-50 mV",
       "+40 mV always",
       "Exactly E_Na",
       "Exactly E_K always"
@@ -471,6 +561,42 @@ const PART1_EXPANSION_POOL = [
   },
   {
     topic: "Passive Membrane Properties",
+    question: "If leak conductance rises by 28% (R_m falls) with geometry unchanged, the length constant λ compared with baseline is:",
+    options: [
+      "Shorter — signals attenuate faster with distance",
+      "Longer — signals spread farther always (misstates how R_m, C_m, or geometry set τ or λ)",
+      "Unchanged — λ never depends on R_m (misstates how R_m, C_m, or geometry set τ or λ)",
+      "Infinite — passive spread without limit (misstates how R_m, C_m, or geometry set τ or λ)"
+    ],
+    correct: 0,
+    explanation: "Higher leak (lower R_m) shortens λ in passive cable models.",
+    wrongExplanations: [
+      "",
+      "Unlike the keyed answer (Shorter — signals attenuate faster with distance), this option misstates the mechanism or direction described in the stem.",
+      "Unlike the keyed answer (Shorter — signals attenuate faster with distance), this option misstates the mechanism or direction described in the stem.",
+      "Unlike the keyed answer (Shorter — signals attenuate faster with distance), this option misstates the mechanism or direction described in the stem."
+    ]
+  },
+  {
+    topic: "Passive Membrane Properties",
+    question: "If leak conductance rises by 41% (R_m falls) with geometry unchanged, the length constant λ compared with baseline is:",
+    options: [
+      "Shorter — signals attenuate faster with distance",
+      "Longer — signals spread farther always (misstates how R_m, C_m, or geometry set τ or λ)",
+      "Unchanged — λ never depends on R_m (misstates how R_m, C_m, or geometry set τ or λ)",
+      "Infinite — passive spread without limit (misstates how R_m, C_m, or geometry set τ or λ)"
+    ],
+    correct: 0,
+    explanation: "Higher leak (lower R_m) shortens λ in passive cable models.",
+    wrongExplanations: [
+      "",
+      "Unlike the keyed answer (Shorter — signals attenuate faster with distance), this option misstates the mechanism or direction described in the stem.",
+      "Unlike the keyed answer (Shorter — signals attenuate faster with distance), this option misstates the mechanism or direction described in the stem.",
+      "Unlike the keyed answer (Shorter — signals attenuate faster with distance), this option misstates the mechanism or direction described in the stem."
+    ]
+  },
+  {
+    topic: "Passive Membrane Properties",
     question: "If membrane capacitance increases by 15% while R_m is held fixed, the time constant τ is:",
     options: [
       "~115% of baseline (τ = R_m C_m)",
@@ -485,6 +611,42 @@ const PART1_EXPANSION_POOL = [
       "Unlike the keyed answer (~115% of baseline (τ = R_m C_m)), this option misstates the mechanism or direction described in the stem.",
       "Unlike the keyed answer (~115% of baseline (τ = R_m C_m)), this option misstates the mechanism or direction described in the stem.",
       "Unlike the keyed answer (~115% of baseline (τ = R_m C_m)), this option misstates the mechanism or direction described in the stem."
+    ]
+  },
+  {
+    topic: "Passive Membrane Properties",
+    question: "If membrane capacitance increases by 35% while R_m is held fixed, the time constant τ is:",
+    options: [
+      "~135% of baseline (τ = R_m C_m)",
+      "Zero — voltage changes instantly always",
+      "Independent of C_m always",
+      "Determined only by myelin thickness"
+    ],
+    correct: 0,
+    explanation: "τ scales with C_m when R_m is held constant.",
+    wrongExplanations: [
+      "",
+      "Unlike the keyed answer (~135% of baseline (τ = R_m C_m)), this option misstates the mechanism or direction described in the stem.",
+      "Unlike the keyed answer (~135% of baseline (τ = R_m C_m)), this option misstates the mechanism or direction described in the stem.",
+      "Unlike the keyed answer (~135% of baseline (τ = R_m C_m)), this option misstates the mechanism or direction described in the stem."
+    ]
+  },
+  {
+    topic: "Passive Membrane Properties",
+    question: "If membrane capacitance increases by 55% while R_m is held fixed, the time constant τ is:",
+    options: [
+      "~155% of baseline (τ = R_m C_m)",
+      "Zero — voltage changes instantly always",
+      "Independent of C_m always",
+      "Determined only by myelin thickness"
+    ],
+    correct: 0,
+    explanation: "τ scales with C_m when R_m is held constant.",
+    wrongExplanations: [
+      "",
+      "Unlike the keyed answer (~155% of baseline (τ = R_m C_m)), this option misstates the mechanism or direction described in the stem.",
+      "Unlike the keyed answer (~155% of baseline (τ = R_m C_m)), this option misstates the mechanism or direction described in the stem.",
+      "Unlike the keyed answer (~155% of baseline (τ = R_m C_m)), this option misstates the mechanism or direction described in the stem."
     ]
   },
   {
@@ -503,6 +665,42 @@ const PART1_EXPANSION_POOL = [
       "Unlike the keyed answer (Depolarizing by about 4 mV without reaching threshold), this option misstates the mechanism or direction described in the stem.",
       "Unlike the keyed answer (Depolarizing by about 4 mV without reaching threshold), this option misstates the mechanism or direction described in the stem.",
       "Unlike the keyed answer (Depolarizing by about 4 mV without reaching threshold), this option misstates the mechanism or direction described in the stem."
+    ]
+  },
+  {
+    topic: "Electrical Signaling",
+    question: "Resting V_m is −70 mV. A subthreshold EPSP peaks at −70 + 9 mV. This EPSP is:",
+    options: [
+      "Depolarizing by about 9 mV without reaching threshold",
+      "Hyperpolarizing by 9 mV always (uses the wrong sign or driving force for ionic current)",
+      "At E_Na (+60 mV) — uses the wrong sign or driving force for ionic current.",
+      "Blocked by photopigment (uses the wrong sign or driving force for ionic current)"
+    ],
+    correct: 0,
+    explanation: "EPSP amplitude adds to resting potential until threshold mechanisms engage.",
+    wrongExplanations: [
+      "",
+      "Unlike the keyed answer (Depolarizing by about 9 mV without reaching threshold), this option misstates the mechanism or direction described in the stem.",
+      "Unlike the keyed answer (Depolarizing by about 9 mV without reaching threshold), this option misstates the mechanism or direction described in the stem.",
+      "Unlike the keyed answer (Depolarizing by about 9 mV without reaching threshold), this option misstates the mechanism or direction described in the stem."
+    ]
+  },
+  {
+    topic: "Electrical Signaling",
+    question: "Resting V_m is −70 mV. A subthreshold EPSP peaks at −70 + 14 mV. This EPSP is:",
+    options: [
+      "Depolarizing by about 14 mV without reaching threshold",
+      "Hyperpolarizing by 14 mV always (uses the wrong sign or driving force for ionic current)",
+      "At E_Na (+60 mV) — uses the wrong sign or driving force for ionic current.",
+      "Blocked by photopigment (uses the wrong sign or driving force for ionic current)"
+    ],
+    correct: 0,
+    explanation: "EPSP amplitude adds to resting potential until threshold mechanisms engage.",
+    wrongExplanations: [
+      "",
+      "Unlike the keyed answer (Depolarizing by about 14 mV without reaching threshold), this option misstates the mechanism or direction described in the stem.",
+      "Unlike the keyed answer (Depolarizing by about 14 mV without reaching threshold), this option misstates the mechanism or direction described in the stem.",
+      "Unlike the keyed answer (Depolarizing by about 14 mV without reaching threshold), this option misstates the mechanism or direction described in the stem."
     ]
   },
   {
@@ -1176,15 +1374,15 @@ const PART1_EXPANSION_POOL = [
     question: "A selective increase in P_Cl with E_Cl below rest tends to:",
     options: [
       "Hyperpolarize or stabilize V_m near E_Cl",
-      "Depolarize to E_Na",
-      "Have no effect on V_m ever",
+      "Depolarize to E_Na (ignores which ion dominates resting permeability)",
+      "Have no effect on V_m ever (ignores which ion dominates resting permeability)",
       "Open voltage-gated Ca²⁺ channels at rest"
     ],
     correct: 0,
     explanation: "Cl⁻ conductance pulls V_m toward the Cl⁻ reversal potential.",
     wrongExplanations: [
       "",
-      "This choice (Depolarize to E_Na) does not match the keyed answer’s mechanism for Resting Potential.",
+      "Unlike the keyed answer (Hyperpolarize or stabilize V_m near E_Cl), this option misstates the mechanism or direction described in the stem.",
       "Unlike the keyed answer (Hyperpolarize or stabilize V_m near E_Cl), this option misstates the mechanism or direction described in the stem.",
       "Unlike the keyed answer (Hyperpolarize or stabilize V_m near E_Cl), this option misstates the mechanism or direction described in the stem."
     ]
@@ -1349,6 +1547,1305 @@ const PART1_EXPANSION_POOL = [
       "Unlike the keyed answer (Shows a graded, passive depolarization), this option misstates the mechanism or direction described in the stem.",
       "Unlike the keyed answer (Shows a graded, passive depolarization), this option misstates the mechanism or direction described in the stem.",
       "Unlike the keyed answer (Shows a graded, passive depolarization), this option misstates the mechanism or direction described in the stem."
+    ]
+  }
+];
+
+const PART2_EXPANSION_POOL = [
+  {
+    topic: "Synaptic Transmission",
+    question: "Sequence step: AP invades terminal. Immediate consequence:",
+    options: [
+      "Depolarization opens presynaptic Ca²⁺ channels",
+      "Photopigment isomerization (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Basilar membrane vibration only (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Permanent DNA transcription in muscle (mixes up presynaptic release with postsynaptic receptor logic)"
+    ],
+    correct: 0,
+    explanation: "AP invades terminal leads to Depolarization opens presynaptic Ca²⁺ channels in chemical synaptic transmission.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Depolarization opens presynaptic Ca²⁺ channels) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Depolarization opens presynaptic Ca²⁺ channels) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Depolarization opens presynaptic Ca²⁺ channels) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Transmission",
+    question: "Sequence step: Ca²⁺ influx. Immediate consequence:",
+    options: [
+      "Triggers SNARE-mediated vesicle fusion",
+      "Photopigment isomerization (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Basilar membrane vibration only (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Permanent DNA transcription in muscle"
+    ],
+    correct: 0,
+    explanation: "Ca²⁺ influx leads to Triggers SNARE-mediated vesicle fusion in chemical synaptic transmission.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Triggers SNARE-mediated vesicle fusion) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Triggers SNARE-mediated vesicle fusion) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Triggers SNARE-mediated vesicle fusion) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Transmission",
+    question: "Sequence step: Vesicle fusion. Immediate consequence:",
+    options: [
+      "Quantal transmitter release into cleft",
+      "Photopigment isomerization (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Basilar membrane vibration only (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Permanent DNA transcription in muscle"
+    ],
+    correct: 0,
+    explanation: "Vesicle fusion leads to Quantal transmitter release into cleft in chemical synaptic transmission.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Quantal transmitter release into cleft) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Quantal transmitter release into cleft) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Quantal transmitter release into cleft) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Transmission",
+    question: "Sequence step: Transmitter binding. Immediate consequence:",
+    options: [
+      "Postsynaptic receptor opening/conformation change",
+      "Photopigment isomerization (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Basilar membrane vibration only (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Permanent DNA transcription in muscle (mixes up presynaptic release with postsynaptic receptor logic)"
+    ],
+    correct: 0,
+    explanation: "Transmitter binding leads to Postsynaptic receptor opening/conformation change in chemical synaptic transmission.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Postsynaptic receptor opening/conformation change) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Postsynaptic receptor opening/conformation change) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Postsynaptic receptor opening/conformation change) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Transmission",
+    question: "Transmitter: Glutamate. Typical role:",
+    options: [
+      "Fast excitatory ionotropic signaling (often AMPA/NMDA)",
+      "Only phototransduction (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Only cochlear outer hair motility (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Only cerebrospinal fluid secretion (mixes up presynaptic release with postsynaptic receptor logic)"
+    ],
+    correct: 0,
+    explanation: "Glutamate primarily mediates Fast excitatory ionotropic signaling (often AMPA/NMDA).",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Fast excitatory ionotropic signaling (often AMPA/NMDA)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Fast excitatory ionotropic signaling (often AMPA/NMDA)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Fast excitatory ionotropic signaling (often AMPA/NMDA)) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Transmission",
+    question: "Transmitter: GABA. Typical role:",
+    options: [
+      "Fast inhibitory Cl⁻ conductance (GABA<sub>A</sub>)",
+      "Only phototransduction (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Only cochlear outer hair motility (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Only cerebrospinal fluid secretion (mixes up presynaptic release with postsynaptic receptor logic)"
+    ],
+    correct: 0,
+    explanation: "GABA primarily mediates Fast inhibitory Cl⁻ conductance (GABA<sub>A</sub>).",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Fast inhibitory Cl⁻ conductance (GABA<sub>A</sub>)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Fast inhibitory Cl⁻ conductance (GABA<sub>A</sub>)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Fast inhibitory Cl⁻ conductance (GABA<sub>A</sub>)) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Chemical Synapses",
+    question: "Transmitter: Acetylcholine. Typical role:",
+    options: [
+      "Nicotinic ionotropic at NMJ; muscarinic modulatory in CNS",
+      "Only phototransduction (describes the wrong synaptic structure or transmission step)",
+      "Only cochlear outer hair motility (describes the wrong synaptic structure or transmission step)",
+      "Only cerebrospinal fluid secretion (describes the wrong synaptic structure or transmission step)"
+    ],
+    correct: 0,
+    explanation: "Acetylcholine primarily mediates Nicotinic ionotropic at NMJ; muscarinic modulatory in CNS.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Nicotinic ionotropic at NMJ; muscarinic modulatory in CNS) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Nicotinic ionotropic at NMJ; muscarinic modulatory in CNS) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Nicotinic ionotropic at NMJ; muscarinic modulatory in CNS) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Neuromodulation",
+    question: "Transmitter: Dopamine. Typical role:",
+    options: [
+      "Neuromodulation of motivation/movement circuits",
+      "Only phototransduction (does not follow from the mechanism implied in the stem)",
+      "Only cochlear outer hair motility (does not follow from the mechanism implied in the stem)",
+      "Only cerebrospinal fluid secretion (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "Dopamine primarily mediates Neuromodulation of motivation/movement circuits.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Neuromodulation of motivation/movement circuits) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Neuromodulation of motivation/movement circuits) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Neuromodulation of motivation/movement circuits) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Long-Term Plasticity",
+    question: "Plasticity form: NMDA-dependent LTP. Induction requirement:",
+    options: [
+      "Postsynaptic Ca²⁺ entry during strong depolarization",
+      "Only muscle stretch (states the wrong induction requirement for LTP/LTD)",
+      "Only rod dark current (states the wrong induction requirement for LTP/LTD)",
+      "Only olfactory adaptation (states the wrong induction requirement for LTP/LTD)"
+    ],
+    correct: 0,
+    explanation: "NMDA-dependent LTP requires Postsynaptic Ca²⁺ entry during strong depolarization.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Postsynaptic Ca²⁺ entry during strong depolarization) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Postsynaptic Ca²⁺ entry during strong depolarization) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Postsynaptic Ca²⁺ entry during strong depolarization) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Long-Term Plasticity",
+    question: "Plasticity form: Homosynaptic LTD. Induction requirement:",
+    options: [
+      "Prolonged low-frequency stimulation",
+      "Only muscle stretch (states the wrong induction requirement for LTP/LTD)",
+      "Only rod dark current (states the wrong induction requirement for LTP/LTD)",
+      "Only olfactory adaptation (states the wrong induction requirement for LTP/LTD)"
+    ],
+    correct: 0,
+    explanation: "Homosynaptic LTD requires Prolonged low-frequency stimulation.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Prolonged low-frequency stimulation) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Prolonged low-frequency stimulation) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Prolonged low-frequency stimulation) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Plasticity Rules",
+    question: "Plasticity form: STDP potentiation. Induction requirement:",
+    options: [
+      "Presynaptic spike shortly before postsynaptic spike",
+      "Only muscle stretch (does not follow from the mechanism implied in the stem)",
+      "Only rod dark current (does not follow from the mechanism implied in the stem)",
+      "Only olfactory adaptation (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "STDP potentiation requires Presynaptic spike shortly before postsynaptic spike.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Presynaptic spike shortly before postsynaptic spike) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Presynaptic spike shortly before postsynaptic spike) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Presynaptic spike shortly before postsynaptic spike) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Short-Term Plasticity",
+    question: "Plasticity form: Facilitation. Induction requirement:",
+    options: [
+      "Residual presynaptic Ca²⁺ increases release probability",
+      "Only muscle stretch (does not follow from the mechanism implied in the stem)",
+      "Only rod dark current (does not follow from the mechanism implied in the stem)",
+      "Only olfactory adaptation (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "Facilitation requires Residual presynaptic Ca²⁺ increases release probability.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Residual presynaptic Ca²⁺ increases release probability) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Residual presynaptic Ca²⁺ increases release probability) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Residual presynaptic Ca²⁺ increases release probability) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Neural Circuits",
+    question: "Circuit motif: Feedforward inhibition. Functional effect:",
+    options: [
+      "Limits spread and sharpens timing of excitation",
+      "Eliminates all spikes globally (does not follow from the mechanism implied in the stem)",
+      "Only maps sound frequency (does not follow from the mechanism implied in the stem)",
+      "Only stores declarative memory in NMJ (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "Feedforward inhibition: Limits spread and sharpens timing of excitation.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Limits spread and sharpens timing of excitation) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Limits spread and sharpens timing of excitation) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Limits spread and sharpens timing of excitation) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Neural Circuits",
+    question: "Circuit motif: Feedback inhibition. Functional effect:",
+    options: [
+      "Stabilizes firing rate after activity",
+      "Eliminates all spikes globally",
+      "Only maps sound frequency",
+      "Only stores declarative memory in NMJ"
+    ],
+    correct: 0,
+    explanation: "Feedback inhibition: Stabilizes firing rate after activity.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Stabilizes firing rate after activity) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Stabilizes firing rate after activity) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Stabilizes firing rate after activity) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Neural Circuits",
+    question: "Circuit motif: Lateral inhibition. Functional effect:",
+    options: [
+      "Enhances contrast between active and surround",
+      "Eliminates all spikes globally (does not follow from the mechanism implied in the stem)",
+      "Only maps sound frequency (does not follow from the mechanism implied in the stem)",
+      "Only stores declarative memory in NMJ (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "Lateral inhibition: Enhances contrast between active and surround.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Enhances contrast between active and surround) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Enhances contrast between active and surround) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Enhances contrast between active and surround) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Inhibitory Circuits",
+    question: "Circuit motif: Disinhibition. Functional effect:",
+    options: [
+      "Removing inhibition from a target increases net excitation",
+      "Eliminates all spikes globally (does not follow from the mechanism implied in the stem)",
+      "Only maps sound frequency (does not follow from the mechanism implied in the stem)",
+      "Only stores declarative memory in NMJ (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "Disinhibition: Removing inhibition from a target increases net excitation.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Removing inhibition from a target increases net excitation) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Removing inhibition from a target increases net excitation) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Removing inhibition from a target increases net excitation) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Second Messengers",
+    question: "Second-messenger pathway: cAMP → PKA. Common action:",
+    options: [
+      "Phosphorylation of channels/transporters",
+      "Direct opening of rhodopsin (does not follow from the mechanism implied in the stem)",
+      "Saltatory conduction in dendrites (does not follow from the mechanism implied in the stem)",
+      "Only Cl⁻ pumping at NMJ (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "cAMP → PKA typically causes Phosphorylation of channels/transporters.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Phosphorylation of channels/transporters) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Phosphorylation of channels/transporters) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Phosphorylation of channels/transporters) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Second Messengers",
+    question: "Second-messenger pathway: IP₃. Common action:",
+    options: [
+      "Ca²⁺ release from ER stores",
+      "Direct opening of rhodopsin",
+      "Saltatory conduction in dendrites",
+      "Only Cl⁻ pumping at NMJ"
+    ],
+    correct: 0,
+    explanation: "IP₃ typically causes Ca²⁺ release from ER stores.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Ca²⁺ release from ER stores) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Ca²⁺ release from ER stores) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Ca²⁺ release from ER stores) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Second Messengers",
+    question: "Second-messenger pathway: DAG. Common action:",
+    options: [
+      "Can activate PKC at membrane",
+      "Direct opening of rhodopsin",
+      "Saltatory conduction in dendrites",
+      "Only Cl⁻ pumping at NMJ"
+    ],
+    correct: 0,
+    explanation: "DAG typically causes Can activate PKC at membrane.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Can activate PKC at membrane) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Can activate PKC at membrane) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Can activate PKC at membrane) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Integration",
+    question: "Two simultaneous EPSPs of +3 mV each (spatial summation at soma) from rest (-70 mV) yield approximate peak:",
+    options: [
+      "-64 mV if approximately linear",
+      "Always threshold crossed (ignores how EPSPs/IPSPs sum in time or space)",
+      "Always hyperpolarization (ignores how EPSPs/IPSPs sum in time or space)",
+      "Exactly E_Na (ignores how EPSPs/IPSPs sum in time or space)"
+    ],
+    correct: 0,
+    explanation: "Spatial summation combines depolarizations at the integration zone.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (-64 mV if approximately linear) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (-64 mV if approximately linear) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (-64 mV if approximately linear) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Integration",
+    question: "Two simultaneous EPSPs of +6 mV each (spatial summation at soma) from rest (-70 mV) yield approximate peak:",
+    options: [
+      "-58 mV if approximately linear",
+      "Always threshold crossed (ignores how EPSPs/IPSPs sum in time or space)",
+      "Always hyperpolarization (ignores how EPSPs/IPSPs sum in time or space)",
+      "Exactly E_Na (ignores how EPSPs/IPSPs sum in time or space)"
+    ],
+    correct: 0,
+    explanation: "Spatial summation combines depolarizations at the integration zone.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (-58 mV if approximately linear) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (-58 mV if approximately linear) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (-58 mV if approximately linear) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Integration",
+    question: "Two simultaneous EPSPs of +9 mV each (spatial summation at soma) from rest (-70 mV) yield approximate peak:",
+    options: [
+      "-52 mV if approximately linear",
+      "Always threshold crossed (ignores how EPSPs/IPSPs sum in time or space)",
+      "Always hyperpolarization (ignores how EPSPs/IPSPs sum in time or space)",
+      "Exactly E_Na (ignores how EPSPs/IPSPs sum in time or space)"
+    ],
+    correct: 0,
+    explanation: "Spatial summation combines depolarizations at the integration zone.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (-52 mV if approximately linear) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (-52 mV if approximately linear) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (-52 mV if approximately linear) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Integration",
+    question: "Two simultaneous EPSPs of +12 mV each (spatial summation at soma) from rest (-70 mV) yield approximate peak:",
+    options: [
+      "-46 mV if approximately linear",
+      "Always threshold crossed (ignores how EPSPs/IPSPs sum in time or space)",
+      "Always hyperpolarization (ignores how EPSPs/IPSPs sum in time or space)",
+      "Exactly E_Na (ignores how EPSPs/IPSPs sum in time or space)"
+    ],
+    correct: 0,
+    explanation: "Spatial summation combines depolarizations at the integration zone.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (-46 mV if approximately linear) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (-46 mV if approximately linear) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (-46 mV if approximately linear) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Integration",
+    question: "Two simultaneous EPSPs of +15 mV each (spatial summation at soma) from rest (-70 mV) yield approximate peak:",
+    options: [
+      "-40 mV if approximately linear",
+      "Always threshold crossed (ignores how EPSPs/IPSPs sum in time or space)",
+      "Always hyperpolarization (ignores how EPSPs/IPSPs sum in time or space)",
+      "Exactly E_Na (ignores how EPSPs/IPSPs sum in time or space)"
+    ],
+    correct: 0,
+    explanation: "Spatial summation combines depolarizations at the integration zone.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (-40 mV if approximately linear) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (-40 mV if approximately linear) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (-40 mV if approximately linear) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Integration",
+    question: "Two simultaneous EPSPs of +18 mV each (spatial summation at soma) from rest (-70 mV) yield approximate peak:",
+    options: [
+      "-34 mV if approximately linear",
+      "Always threshold crossed (ignores how EPSPs/IPSPs sum in time or space)",
+      "Always hyperpolarization (ignores how EPSPs/IPSPs sum in time or space)",
+      "Exactly E_Na (ignores how EPSPs/IPSPs sum in time or space)"
+    ],
+    correct: 0,
+    explanation: "Spatial summation combines depolarizations at the integration zone.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (-34 mV if approximately linear) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (-34 mV if approximately linear) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (-34 mV if approximately linear) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Neuromuscular Junction",
+    question: "NMJ concept: End-plate potential. Description:",
+    options: [
+      "Graded depolarization of muscle membrane",
+      "Photoreceptor hyperpolarization to light",
+      "Cochlear phase locking only",
+      "Glomerular one-receptor rule only"
+    ],
+    correct: 0,
+    explanation: "End-plate potential: Graded depolarization of muscle membrane.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Graded depolarization of muscle membrane) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Graded depolarization of muscle membrane) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Graded depolarization of muscle membrane) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Neuromuscular Junction",
+    question: "NMJ concept: AChE in cleft. Description:",
+    options: [
+      "Clears ACh to terminate signal",
+      "Photoreceptor hyperpolarization to light",
+      "Cochlear phase locking only",
+      "Glomerular one-receptor rule only"
+    ],
+    correct: 0,
+    explanation: "AChE in cleft: Clears ACh to terminate signal.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Clears ACh to terminate signal) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Clears ACh to terminate signal) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Clears ACh to terminate signal) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Drug Effects",
+    question: "NMJ concept: Curare-like antagonists. Description:",
+    options: [
+      "Block nicotinic receptors",
+      "Photoreceptor hyperpolarization to light",
+      "Cochlear phase locking only",
+      "Glomerular one-receptor rule only"
+    ],
+    correct: 0,
+    explanation: "Curare-like antagonists: Block nicotinic receptors.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Block nicotinic receptors) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Block nicotinic receptors) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Block nicotinic receptors) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Short-Term Plasticity",
+    question: "After a brief presynaptic train at 10 Hz, the next EPSC is often larger because:",
+    options: [
+      "Residual presynaptic Ca²⁺ elevates release probability (paired-pulse facilitation)",
+      "Permanent insertion of all postsynaptic NMDA receptors (does not follow from the mechanism implied in the stem)",
+      "Complete vesicle pool depletion on the first spike (does not follow from the mechanism implied in the stem)",
+      "Assigns an unrelated sensory or synaptic mechanism to this context"
+    ],
+    correct: 0,
+    explanation: "Moderate-frequency spikes leave Ca²⁺ elevated briefly, increasing release probability for the following spike.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Residual presynaptic Ca²⁺ elevates release probability (paired-pulse facilitation)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Residual presynaptic Ca²⁺ elevates release probability (paired-pulse facilitation)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Residual presynaptic Ca²⁺ elevates release probability (paired-pulse facilitation)) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Short-Term Plasticity",
+    question: "After a brief presynaptic train at 40 Hz, release often shows:",
+    options: [
+      "Mixed facilitation early in the train with growing depression as the readily releasable pool depletes",
+      "Permanent loss of all receptors (does not follow from the mechanism implied in the stem)",
+      "Conversion to electrical synapses only (does not follow from the mechanism implied in the stem)",
+      "Assigns an unrelated sensory or synaptic mechanism to this context"
+    ],
+    correct: 0,
+    explanation: "Intermediate frequencies can facilitate initially, then depress as vesicle availability falls.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Mixed facilitation early in the train with growing depression as the readily releasable pool depletes) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Mixed facilitation early in the train with growing depression as the readily releasable pool depletes) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Mixed facilitation early in the train with growing depression as the readily releasable pool depletes) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Short-Term Plasticity",
+    question: "After a brief presynaptic train at 100 Hz, the dominant short-term change is usually:",
+    options: [
+      "Synaptic depression from rapid depletion of the readily releasable vesicle pool",
+      "Permanent loss of all receptors (does not follow from the mechanism implied in the stem)",
+      "Conversion to electrical synapses only (does not follow from the mechanism implied in the stem)",
+      "Assigns an unrelated sensory or synaptic mechanism to this context"
+    ],
+    correct: 0,
+    explanation: "Very high-frequency stimulation exhausts releasable vesicles, reducing subsequent release (short-term depression).",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Synaptic depression from rapid depletion of the readily releasable vesicle pool) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Synaptic depression from rapid depletion of the readily releasable vesicle pool) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Synaptic depression from rapid depletion of the readily releasable vesicle pool) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Integration",
+    question: "Two EPSPs (+2 mV each) arrive 5 ms apart at one synapse (temporal summation). Compared with one EPSP alone, peak depolarization tends to be:",
+    options: [
+      "Larger if within τ of the membrane",
+      "Smaller always (ignores how EPSPs/IPSPs sum in time or space)",
+      "Unchanged always (ignores how EPSPs/IPSPs sum in time or space)",
+      "Exactly at E_K (ignores how EPSPs/IPSPs sum in time or space)"
+    ],
+    correct: 0,
+    explanation: "Temporal summation combines inputs within the membrane time window.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Larger if within τ of the membrane) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Larger if within τ of the membrane) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Larger if within τ of the membrane) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Transmission",
+    question: "Calcium entry into the presynaptic terminal is required because it:",
+    options: [
+      "Triggers vesicle fusion machinery (SNARE complex)",
+      "Directly opens postsynaptic AMPA receptors (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Hyperpolarizes the postsynaptic cell always (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Replaces ACh in the cleft (mixes up presynaptic release with postsynaptic receptor logic)"
+    ],
+    correct: 0,
+    explanation: "Ca²⁺–sensor coupling drives exocytosis of neurotransmitter.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Triggers vesicle fusion machinery (SNARE complex)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Triggers vesicle fusion machinery (SNARE complex)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Triggers vesicle fusion machinery (SNARE complex)) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Transmission",
+    question: "Miniature EPSCs (mEPSCs) in the absence of presynaptic spikes indicate:",
+    options: [
+      "Spontaneous quantal release of vesicles",
+      "Postsynthetic DNA damage (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Cochlear amplification failure only (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Permanent LTP (mixes up presynaptic release with postsynaptic receptor logic)"
+    ],
+    correct: 0,
+    explanation: "mEPSCs reflect single vesicle fusion events.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Spontaneous quantal release of vesicles) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Spontaneous quantal release of vesicles) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Spontaneous quantal release of vesicles) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Chemical Synapses",
+    question: "Nicotinic ACh receptors at the NMJ are:",
+    options: [
+      "Ligand-gated cation channels (fast EPSP)",
+      "Metabotropic G-protein only receptors (describes the wrong synaptic structure or transmission step)",
+      "Voltage-gated Cl⁻ channels (describes the wrong synaptic structure or transmission step)",
+      "Gap junction hemichannels (describes the wrong synaptic structure or transmission step)"
+    ],
+    correct: 0,
+    explanation: "Nicotinic receptors pass cations and depolarize muscle.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Ligand-gated cation channels (fast EPSP)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Ligand-gated cation channels (fast EPSP)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Ligand-gated cation channels (fast EPSP)) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Integration",
+    question: "If E_rev for a GABA<sub>A</sub> synapse is near −70 mV at rest, GABA at rest:",
+    options: [
+      "Produces little change in V_m (shunting may still occur)",
+      "Always massive hyperpolarization to −90 mV (ignores how EPSPs/IPSPs sum in time or space)",
+      "Depolarizes to E_Na (ignores how EPSPs/IPSPs sum in time or space)",
+      "Blocks all quantal release (ignores how EPSPs/IPSPs sum in time or space)"
+    ],
+    correct: 0,
+    explanation: "Driving force is small when E_rev matches V_m; conductance changes still matter.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Produces little change in V_m (shunting may still occur)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Produces little change in V_m (shunting may still occur)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Produces little change in V_m (shunting may still occur)) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Long-Term Plasticity",
+    question: "NMDA receptors act as coincidence detectors because they require:",
+    options: [
+      "Glutamate binding AND postsynaptic depolarization to relieve Mg²⁺ block",
+      "Only presynaptic Ca²⁺ (states the wrong induction requirement for LTP/LTD)",
+      "Only GABA release (states the wrong induction requirement for LTP/LTD)",
+      "Photopigment isomerization (states the wrong induction requirement for LTP/LTD)"
+    ],
+    correct: 0,
+    explanation: "Voltage-dependent Mg²⁺ block links pre and post activity.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Glutamate binding AND postsynaptic depolarization to relieve Mg²⁺ block) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Glutamate binding AND postsynaptic depolarization to relieve Mg²⁺ block) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Glutamate binding AND postsynaptic depolarization to relieve Mg²⁺ block) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Short-Term Plasticity",
+    question: "Post-tetanic potentiation reflects primarily:",
+    options: [
+      "Elevated presynaptic Ca²⁺ and increased release probability briefly",
+      "Permanent insertion of AMPA receptors only (does not follow from the mechanism implied in the stem)",
+      "Loss of all inhibitory interneurons (does not follow from the mechanism implied in the stem)",
+      "Cochlear outer hair cell motility (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "Residual Ca²⁺ enhances short-term release.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Elevated presynaptic Ca²⁺ and increased release probability briefly) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Elevated presynaptic Ca²⁺ and increased release probability briefly) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Elevated presynaptic Ca²⁺ and increased release probability briefly) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Neural Circuits",
+    question: "Feedforward inhibition in sensory pathways often:",
+    options: [
+      "Narrows the temporal window for effective excitation",
+      "Eliminates all thalamic relay (does not follow from the mechanism implied in the stem)",
+      "Prevents any spikes in cortex (does not follow from the mechanism implied in the stem)",
+      "Stores declarative memories directly (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "Inhibition follows disynaptic paths that limit excitation duration.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Narrows the temporal window for effective excitation) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Narrows the temporal window for effective excitation) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Narrows the temporal window for effective excitation) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Second Messengers",
+    question: "Metabotropic glutamate receptor activation can:",
+    options: [
+      "Modulate ion channels via G-proteins and second messengers",
+      "Directly pass Na⁺ like AMPA always (does not follow from the mechanism implied in the stem)",
+      "Transduce sound in the cochlea exclusively (does not follow from the mechanism implied in the stem)",
+      "Replace SNARE proteins (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "GPCRs adjust excitability and synaptic strength slowly compared with ionotropic receptors.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Modulate ion channels via G-proteins and second messengers) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Modulate ion channels via G-proteins and second messengers) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Modulate ion channels via G-proteins and second messengers) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Plasticity Rules",
+    question: "In spike-timing-dependent plasticity (STDP), pre-before-post within ~20 ms often yields:",
+    options: [
+      "LTP (potentiation)",
+      "LTD always",
+      "No change regardless of timing",
+      "Only retrograde amnesia clinically"
+    ],
+    correct: 0,
+    explanation: "Classic STDP windows link order of spikes to sign of plasticity.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (LTP (potentiation)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (LTP (potentiation)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (LTP (potentiation)) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Drug Effects",
+    question: "Botulinum toxin reduces transmission by:",
+    options: [
+      "Cleaving SNARE proteins required for vesicle fusion",
+      "Blocking nicotinic receptors on muscle only via curare mechanism",
+      "Opening NMDA receptors",
+      "Increasing photoreceptor gain"
+    ],
+    correct: 0,
+    explanation: "SNARE cleavage prevents exocytosis of transmitter.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Cleaving SNARE proteins required for vesicle fusion) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Cleaving SNARE proteins required for vesicle fusion) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Cleaving SNARE proteins required for vesicle fusion) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Neuromuscular Junction",
+    question: "Acetylcholinesterase inhibitors (e.g., neostigmine) increase:",
+    options: [
+      "Duration of ACh in the synaptic cleft",
+      "Quantal size of each vesicle permanently",
+      "Myelin thickness",
+      "Cochlear place map spacing"
+    ],
+    correct: 0,
+    explanation: "Slowing ACh breakdown prolongs receptor activation.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Duration of ACh in the synaptic cleft) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Duration of ACh in the synaptic cleft) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Duration of ACh in the synaptic cleft) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Transmission",
+    question: "Desensitization of ionotropic receptors means:",
+    options: [
+      "Receptors enter a closed state despite agonist still bound",
+      "Vesicles stop fusing permanently (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Axons myelinate faster (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Hippocampus is removed (mixes up presynaptic release with postsynaptic receptor logic)"
+    ],
+    correct: 0,
+    explanation: "Desensitized receptors no longer conduct even with ligand present.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Receptors enter a closed state despite agonist still bound) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Receptors enter a closed state despite agonist still bound) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Receptors enter a closed state despite agonist still bound) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Chemical Synapses",
+    question: "Electrical synapses (gap junctions) differ from chemical synapses because they:",
+    options: [
+      "Pass ionic current directly with less synaptic delay",
+      "Always require SNARE-mediated fusion",
+      "Use only dopamine as transmitter",
+      "Exist only in retina amacrine cells with no exceptions"
+    ],
+    correct: 0,
+    explanation: "Connexin channels couple pre and post voltages rapidly.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Pass ionic current directly with less synaptic delay) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Pass ionic current directly with less synaptic delay) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Pass ionic current directly with less synaptic delay) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Long-Term Plasticity",
+    question: "LTD induced by low-frequency stimulation often involves:",
+    options: [
+      "Reduced AMPA receptor insertion or enhanced endocytosis",
+      "Immediate permanent axotomy (states the wrong induction requirement for LTP/LTD)",
+      "Only cochlear tuning shifts (states the wrong induction requirement for LTP/LTD)",
+      "Loss of all K⁺ channels (states the wrong induction requirement for LTP/LTD)"
+    ],
+    correct: 0,
+    explanation: "LTD protocols weaken synapses via receptor trafficking and signaling.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Reduced AMPA receptor insertion or enhanced endocytosis) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Reduced AMPA receptor insertion or enhanced endocytosis) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Reduced AMPA receptor insertion or enhanced endocytosis) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Transmission",
+    question: "Synaptotagmin acts as a Ca²⁺ sensor because it:",
+    options: [
+      "Triggers fast exocytosis when Ca²⁺ binds after an action potential",
+      "Opens voltage-gated Na⁺ channels (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Is a ligand for glutamate (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Defines tonotopic position (mixes up presynaptic release with postsynaptic receptor logic)"
+    ],
+    correct: 0,
+    explanation: "Synaptotagmin couples Ca²⁺ influx to vesicle fusion timing.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Triggers fast exocytosis when Ca²⁺ binds after an action potential) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Triggers fast exocytosis when Ca²⁺ binds after an action potential) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Triggers fast exocytosis when Ca²⁺ binds after an action potential) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Neural Circuits",
+    question: "Recurrent excitatory circuits can:",
+    options: [
+      "Sustain activity or amplify patterns but risk runaway without inhibition",
+      "Guarantee perfect stability always (does not follow from the mechanism implied in the stem)",
+      "Prevent all oscillations (does not follow from the mechanism implied in the stem)",
+      "Replace hippocampal indexing (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "Recurrent loops need inhibitory balance to avoid epileptiform activity.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Sustain activity or amplify patterns but risk runaway without inhibition) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Sustain activity or amplify patterns but risk runaway without inhibition) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Sustain activity or amplify patterns but risk runaway without inhibition) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Second Messengers",
+    question: "cAMP elevation in neurons commonly:",
+    options: [
+      "Activates PKA to phosphorylate channels and transcription factors",
+      "Directly opens nicotinic receptors (does not follow from the mechanism implied in the stem)",
+      "Hyperpolarizes rods to light (does not follow from the mechanism implied in the stem)",
+      "Sets E_Na to 0 mV (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "PKA-mediated phosphorylation modulates excitability and gene expression.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Activates PKA to phosphorylate channels and transcription factors) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Activates PKA to phosphorylate channels and transcription factors) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Activates PKA to phosphorylate channels and transcription factors) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Transmission",
+    question: "Retrograde messengers (e.g., endocannabinoids) can:",
+    options: [
+      "Suppress presynaptic release following strong postsynaptic activity",
+      "Travel only anterograde in myelin (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Replace all electrical coupling (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Encode sound frequency on basilar membrane (mixes up presynaptic release with postsynaptic receptor logic)"
+    ],
+    correct: 0,
+    explanation: "Retrograde signaling adjusts future presynaptic release.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Suppress presynaptic release following strong postsynaptic activity) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Suppress presynaptic release following strong postsynaptic activity) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Suppress presynaptic release following strong postsynaptic activity) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Integration",
+    question: "Coincidence detection in dendrites can use:",
+    options: [
+      "Nonlinear NMDA and active dendritic conductances",
+      "Only passive leak at all sites (ignores how EPSPs/IPSPs sum in time or space)",
+      "Photopigment regeneration (ignores how EPSPs/IPSPs sum in time or space)",
+      "Outer hair cell somatic motility alone (ignores how EPSPs/IPSPs sum in time or space)"
+    ],
+    correct: 0,
+    explanation: "Nonlinearities allow dendrites to detect conjunctive inputs.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Nonlinear NMDA and active dendritic conductances) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Nonlinear NMDA and active dendritic conductances) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Nonlinear NMDA and active dendritic conductances) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Short-Term Plasticity",
+    question: "Synaptic depression after sustained high-frequency firing often reflects:",
+    options: [
+      "Depletion of readily releasable vesicles",
+      "Instant permanent SNARE loss (does not follow from the mechanism implied in the stem)",
+      "Only LTD at CA3–CA1 (does not follow from the mechanism implied in the stem)",
+      "Elimination of ITD coding (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "Vesicle pool depletion reduces release probability transiently.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Depletion of readily releasable vesicles) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Depletion of readily releasable vesicles) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Depletion of readily releasable vesicles) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Chemical Synapses",
+    question: "Muscarinic ACh receptors in the CNS are typically:",
+    options: [
+      "Metabotropic — slow modulation of excitability",
+      "Ionotropic nicotinic channels identical to NMJ",
+      "Only located on muscle endplate",
+      "Responsible for phototransduction"
+    ],
+    correct: 0,
+    explanation: "Muscarinic receptors are GPCRs with diverse downstream effects.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Metabotropic — slow modulation of excitability) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Metabotropic — slow modulation of excitability) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Metabotropic — slow modulation of excitability) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Neuromodulation",
+    question: "Dopamine depletion in Parkinson disease primarily affects:",
+    options: [
+      "Basal ganglia circuits for movement initiation and selection",
+      "Cochlear inner hair cell transduction (does not follow from the mechanism implied in the stem)",
+      "Assigns an unrelated sensory or synaptic mechanism to this context",
+      "NMJ quantal content exclusively (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "SNc dopamine loss disrupts basal ganglia motor loops.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Basal ganglia circuits for movement initiation and selection) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Basal ganglia circuits for movement initiation and selection) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Basal ganglia circuits for movement initiation and selection) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Plasticity Rules",
+    question: "Hebbian plasticity is often summarized as:",
+    options: [
+      "Cells that fire together wire together",
+      "All synapses weaken every second regardless of activity",
+      "Only inhibitory synapses potentiate (does not follow from the mechanism implied in the stem)",
+      "Spikes cannot change receptor number"
+    ],
+    correct: 0,
+    explanation: "Correlated pre/post activity drives strengthening in classic Hebbian models.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Cells that fire together wire together (correlated activity strengthens synapses)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Cells that fire together wire together (correlated activity strengthens synapses)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Cells that fire together wire together (correlated activity strengthens synapses)) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Neural Circuits",
+    question: "Center-surround receptive fields in retina emerge largely from:",
+    options: [
+      "Lateral inhibition and bipolar/amacrine connectivity",
+      "Only cochlear amplification (does not follow from the mechanism implied in the stem)",
+      "Gap junctions at the NMJ (does not follow from the mechanism implied in the stem)",
+      "Hippocampal place fields (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "Antagonistic surround via lateral inhibition enhances contrast.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Lateral inhibition and bipolar/amacrine connectivity) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Lateral inhibition and bipolar/amacrine connectivity) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Lateral inhibition and bipolar/amacrine connectivity) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Transmission",
+    question: "Clathrin-mediated endocytosis after fusion serves to:",
+    options: [
+      "Recycle vesicle membrane and maintain release capacity",
+      "Open new Na⁺ channels at nodes (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Generate photoreceptor hyperpolarization (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Encode odor identity in glomeruli only (mixes up presynaptic release with postsynaptic receptor logic)"
+    ],
+    correct: 0,
+    explanation: "Endocytosis retrieves membrane for new vesicle formation.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Recycle vesicle membrane and maintain release capacity) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Recycle vesicle membrane and maintain release capacity) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Recycle vesicle membrane and maintain release capacity) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Second Messengers",
+    question: "IP₃ opens channels on the ER to:",
+    options: [
+      "Release Ca²⁺ from internal stores into the cytosol",
+      "Pump Na⁺ out of the cell directly (does not follow from the mechanism implied in the stem)",
+      "Hyperpolarize photoreceptors to light (does not follow from the mechanism implied in the stem)",
+      "Set basilar membrane stiffness globally (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "IP₃ receptors release stored Ca²⁺ for signaling.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Release Ca²⁺ from internal stores into the cytosol) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Release Ca²⁺ from internal stores into the cytosol) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Release Ca²⁺ from internal stores into the cytosol) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Integration",
+    question: "An inhibitory synapse with E_rev above rest can be:",
+    options: [
+      "Depolarizing yet still inhibitory (shunting / Cl⁻ load) in some developing circuits",
+      "Impossible under any condition (ignores how EPSPs/IPSPs sum in time or space)",
+      "Always excitatory if depolarizing (ignores how EPSPs/IPSPs sum in time or space)",
+      "Only found in cochlear hair cells (ignores how EPSPs/IPSPs sum in time or space)"
+    ],
+    correct: 0,
+    explanation: "Depolarizing IPSPs can still reduce excitatory drive via conductance increase.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Depolarizing yet still inhibitory (shunting / Cl⁻ load) in some developing circuits) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Depolarizing yet still inhibitory (shunting / Cl⁻ load) in some developing circuits) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Depolarizing yet still inhibitory (shunting / Cl⁻ load) in some developing circuits) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Drug Effects",
+    question: "AMPA receptor blockers reduce:",
+    options: [
+      "Fast excitatory synaptic currents in many CNS pathways",
+      "Only GABAergic tonic inhibition (does not follow from the mechanism implied in the stem)",
+      "Myelin thickness (does not follow from the mechanism implied in the stem)",
+      "Muscle endplate quantal size directly (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "AMPA mediates rapid glutamatergic EPSCs.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Fast excitatory synaptic currents in many CNS pathways) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Fast excitatory synaptic currents in many CNS pathways) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Fast excitatory synaptic currents in many CNS pathways) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Neuromuscular Junction",
+    question: "Miniature end-plate potentials (MEPPs) demonstrate:",
+    options: [
+      "Quantal nature of synaptic transmission at the NMJ",
+      "Continuous graded muscle depolarization without vesicles",
+      "Saltatory conduction in muscle spindles only",
+      "Tonotopic mapping"
+    ],
+    correct: 0,
+    explanation: "MEPPs are single-quantum events at motor endplates.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Quantal nature of synaptic transmission at the NMJ) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Quantal nature of synaptic transmission at the NMJ) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Quantal nature of synaptic transmission at the NMJ) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Transmission",
+    question: "Tetanus toxin prevents release by:",
+    options: [
+      "Proteolyzing SNARE proteins (similar mechanism to botulinum)",
+      "Blocking voltage-gated K⁺ only (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Opening gap junctions globally (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Destroying hippocampal place fields (mixes up presynaptic release with postsynaptic receptor logic)"
+    ],
+    correct: 0,
+    explanation: "SNARE cleavage abolishes vesicle fusion.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Proteolyzing SNARE proteins (similar mechanism to botulinum)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Proteolyzing SNARE proteins (similar mechanism to botulinum)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Proteolyzing SNARE proteins (similar mechanism to botulinum)) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Neural Circuits",
+    question: "Winner-take-all selection can be implemented by:",
+    options: [
+      "Strong mutual inhibition among competing representations",
+      "Removing all inhibition (does not follow from the mechanism implied in the stem)",
+      "Only photoreceptor coupling (does not follow from the mechanism implied in the stem)",
+      "Increasing leak without synapses (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "Lateral inhibition suppresses weaker active units.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Strong mutual inhibition among competing representations) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Strong mutual inhibition among competing representations) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Strong mutual inhibition among competing representations) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Integration",
+    question: "Dendritic spikes (active dendritic conductances) allow:",
+    options: [
+      "Local nonlinear amplification before somatic integration",
+      "Only passive decay everywhere (ignores how EPSPs/IPSPs sum in time or space)",
+      "Elimination of all IPSPs (ignores how EPSPs/IPSPs sum in time or space)",
+      "Direct transduction of odor to muscle (ignores how EPSPs/IPSPs sum in time or space)"
+    ],
+    correct: 0,
+    explanation: "Active dendrites boost coincident synaptic input locally.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Local nonlinear amplification before somatic integration) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Local nonlinear amplification before somatic integration) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Local nonlinear amplification before somatic integration) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Chemical Synapses",
+    question: "Glutamate reuptake transporters on glia and neurons serve to:",
+    options: [
+      "Terminate synaptic action and prevent excitotoxic buildup",
+      "Synthesize GABA from glutamate only in cochlea (describes the wrong synaptic structure or transmission step)",
+      "Open nicotinic receptors (describes the wrong synaptic structure or transmission step)",
+      "Set E_K to +60 mV (describes the wrong synaptic structure or transmission step)"
+    ],
+    correct: 0,
+    explanation: "Clearance of glutamate limits receptor activation duration.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Terminate synaptic action and prevent excitotoxic buildup) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Terminate synaptic action and prevent excitotoxic buildup) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Terminate synaptic action and prevent excitotoxic buildup) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Short-Term Plasticity",
+    question: "Facilitation after a single presynaptic spike partly reflects:",
+    options: [
+      "Leftover presynaptic Ca²⁺ elevating release probability for the next spike",
+      "Permanent insertion of new axons (does not follow from the mechanism implied in the stem)",
+      "Loss of all AMPA receptors (does not follow from the mechanism implied in the stem)",
+      "Increased rod dark current (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "Ca²⁺ remains elevated briefly, enhancing subsequent release.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Leftover presynaptic Ca²⁺ elevating release probability for the next spike) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Leftover presynaptic Ca²⁺ elevating release probability for the next spike) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Leftover presynaptic Ca²⁺ elevating release probability for the next spike) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Neuromodulation",
+    question: "Norepinephrine in arousal networks tends to:",
+    options: [
+      "Increase gain and reduce background noise correlation in cortex",
+      "Silence all thalamic relay permanently (does not follow from the mechanism implied in the stem)",
+      "Block all Na⁺ channels (does not follow from the mechanism implied in the stem)",
+      "Replace cerebellar climbing fibers (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "NE modulates alertness and signal-to-noise in sensory cortex.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Increase gain and reduce background noise correlation in cortex) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Increase gain and reduce background noise correlation in cortex) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Increase gain and reduce background noise correlation in cortex) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Motor Systems",
+    question: "A central pattern generator (CPG) for locomotion can produce rhythmic output because:",
+    options: [
+      "Reciprocally connected interneurons and endogenous bursting sustain alternating activity",
+      "Every motor neuron requires continuous cortical spikes each cycle",
+      "Only sensory feedback from muscle spindles creates rhythm",
+      "Gap junctions replace all chemical synapses in cortex (maps the lesion to the wrong motor pathway or reflex)"
+    ],
+    correct: 0,
+    explanation: "CPGs combine intrinsic pacemaker properties with inhibitory wiring for rhythm.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Reciprocally connected interneurons and endogenous bursting sustain alternating activity) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Reciprocally connected interneurons and endogenous bursting sustain alternating activity) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Reciprocally connected interneurons and endogenous bursting sustain alternating activity) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Motor Systems",
+    question: "Reciprocal inhibition in a spinal stretch reflex circuit ensures that:",
+    options: [
+      "Agonist contraction is accompanied by antagonist relaxation",
+      "Both agonist and antagonist contract maximally together",
+      "Only sensory neurons fire without motor output (maps the lesion to the wrong motor pathway or reflex)",
+      "Upper motor neurons are bypassed entirely (maps the lesion to the wrong motor pathway or reflex)"
+    ],
+    correct: 0,
+    explanation: "Ia interneurons inhibit antagonist α-motor neurons during agonist activation.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Agonist contraction is accompanied by antagonist relaxation) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Agonist contraction is accompanied by antagonist relaxation) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Agonist contraction is accompanied by antagonist relaxation) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Plasticity Rules",
+    question: "In Aplysia, habituation of the gill-withdrawal reflex is associated with:",
+    options: [
+      "Decreased presynaptic glutamate release from sensory neurons",
+      "New insertion of AMPA receptors on motor neurons only (does not follow from the mechanism implied in the stem)",
+      "Permanent LTP at every synapse (does not follow from the mechanism implied in the stem)",
+      "Loss of all voltage-gated Na⁺ channels (does not follow from the mechanism implied in the stem)"
+    ],
+    correct: 0,
+    explanation: "Habituation reflects homosynaptic depression of sensory→motor transmission.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Decreased presynaptic glutamate release from sensory neurons) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Decreased presynaptic glutamate release from sensory neurons) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Decreased presynaptic glutamate release from sensory neurons) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Plasticity Rules",
+    question: "Sensitization in Aplysia after noxious tail shock involves:",
+    options: [
+      "Modulatory serotonergic facilitation of sensory neuron terminals",
+      "Immediate long-term potentiation requiring NMDA only in hippocampus",
+      "Exclusive gap junction coupling in cerebellum",
+      "Photoreceptor bleaching"
+    ],
+    correct: 0,
+    explanation: "Serotonin increases cAMP/PKA signaling and enhances transmitter release.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Modulatory serotonergic facilitation of sensory neuron terminals) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Modulatory serotonergic facilitation of sensory neuron terminals) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Modulatory serotonergic facilitation of sensory neuron terminals) matches the underlying mechanism."
+    ]
+  },
+  {
+    topic: "Synaptic Transmission",
+    question: "Quantal analysis showing discrete step sizes in EPSC amplitude supports:",
+    options: [
+      "Vesicles release fixed amounts of transmitter (quantal packets)",
+      "Continuous fluid secretion without vesicles (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Only electrical coupling without quanta (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Infinite release without saturation (mixes up presynaptic release with postsynaptic receptor logic)"
+    ],
+    correct: 0,
+    explanation: "Stepwise mEPSC/EPSC sizes reflect multimodal vesicle fusion events.",
+    wrongExplanations: [
+      "",
+      "This option is inconsistent with the stem; the keyed answer (Vesicles release fixed amounts of transmitter (quantal packets)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Vesicles release fixed amounts of transmitter (quantal packets)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (Vesicles release fixed amounts of transmitter (quantal packets)) matches the underlying mechanism."
     ]
   }
 ];
