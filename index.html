@@ -253,6 +253,76 @@
       font-size: 0.95rem;
     }
 
+    .study-guide-card {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      padding: 1.1rem 1.25rem;
+      background: linear-gradient(135deg, rgba(164, 16, 52, 0.06) 0%, var(--surface) 55%);
+      border: 1px solid var(--gray-200);
+      border-left: 4px solid var(--crimson);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .study-guide-card-text h3 {
+      margin: 0 0 0.35rem;
+      font-size: 1.05rem;
+      color: var(--gray-900);
+    }
+
+    .study-guide-card-text p {
+      margin: 0;
+      font-size: 0.88rem;
+      color: var(--gray-600);
+      line-height: 1.45;
+      max-width: 42rem;
+    }
+
+    .study-guide-card-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .study-guide-card-actions a {
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 0.55rem 1rem;
+      border-radius: 10px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .study-guide-card-actions .btn-guide-pdf {
+      background: var(--crimson);
+      color: #fff;
+    }
+
+    .study-guide-card-actions .btn-guide-pdf:hover {
+      background: var(--crimson-dark);
+    }
+
+    .study-guide-card-actions .btn-guide-print {
+      background: var(--gray-100);
+      color: var(--gray-800);
+      border: 1px solid var(--gray-200);
+    }
+
+    html[data-theme="dark"] .study-guide-card {
+      background: linear-gradient(135deg, rgba(164, 16, 52, 0.18) 0%, var(--surface) 55%);
+    }
+
+    html[data-theme="dark"] .study-guide-card-actions .btn-guide-print {
+      background: var(--gray-800);
+      color: var(--gray-100);
+      border-color: var(--gray-600);
+    }
+
     .quiz-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -1265,6 +1335,16 @@
       font-size: 0.78rem;
     }
 
+    footer a {
+      color: var(--crimson);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
     @media (max-width: 540px) {
       .question-card { padding: 1.35rem; }
       .nav-row { flex-direction: column; }
@@ -1982,6 +2062,16 @@
         <h2>Study Dashboard</h2>
         <p>HarvardX MCB80x curriculum practice. Chapter quizzes give instant feedback; finals reveal answers at the end. Missed questions auto-generate flashcards. Ion labels use real superscripts (e.g. Na⁺); variables like E<sub>K</sub> and V<sub>m</sub> appear as subscripts, not underscores.</p>
       </div>
+      <aside class="study-guide-card" aria-labelledby="study-guide-heading">
+        <div class="study-guide-card-text">
+          <h3 id="study-guide-heading">Proctored exam study guide (PDF)</h3>
+          <p>Official-style MCB80.1x / 2x / 3x review prompts with checkboxes — use with chapter quizzes and the timed mock. Personal study sheet aligned with edX exam prep (not an edX publication).</p>
+        </div>
+        <div class="study-guide-card-actions">
+          <a class="btn-guide-pdf" href="mcb80x-exam-study-guide.pdf" download="MCB80x-exam-study-guide.pdf">Download PDF</a>
+          <a class="btn-guide-print" href="mcb80x-exam-study-guide-print.html" target="_blank" rel="noopener">Open print view</a>
+        </div>
+      </aside>
       <div id="user-activity-card" class="activity-card"></div>
       <div id="study-plan-dashboard" class="study-plan-panel dashboard-plan" hidden></div>
       <div id="quiz-resume-banner" class="quiz-resume-banner" hidden>
@@ -2093,6 +2183,7 @@
 
   <footer>
     Fisher-Yates shuffle on every quiz start &middot; HarvardX MCB80x curriculum alignment
+    &middot; <a href="mcb80x-exam-study-guide.pdf" download="MCB80x-exam-study-guide.pdf">Exam study guide (PDF)</a>
   </footer>
 
   <script src="questions-bank.js"></script>
