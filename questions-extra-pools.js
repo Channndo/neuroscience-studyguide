@@ -42,9 +42,9 @@ const PART1_EXTRA_POOL = [
     question: "The Na⁺/K⁺ ATPase contributes directly to resting potential mainly by:",
     options: [
       "Maintaining ion gradients that set equilibrium potentials",
-      "Opening voltage-gated Na⁺ channels",
-      "Depolarizing the cell to threshold on every cycle",
-      "Blocking K⁺ leak channels"
+      "Opening voltage-gated Na⁺ channels (ignores which ion dominates resting permeability)",
+      "Depolarizing the cell to threshold on every cycle (ignores which ion dominates resting permeability)",
+      "Blocking K⁺ leak channels (ignores which ion dominates resting permeability)"
     ],
     correct: 0,
     explanation: "The electrogenic pump maintains gradients; resting V_m is set by leak conductances and those gradients.",
@@ -60,9 +60,9 @@ const PART1_EXTRA_POOL = [
     question: "If K⁺ leak conductance is blocked but the Na⁺/K⁺ pump keeps gradients intact and a small resting Na⁺ leak remains, V_m will tend to move:",
     options: [
       "Toward E_Na (depolarized relative to normal K⁺-dominated rest)",
-      "Toward E_K as if K⁺ leak were unchanged",
-      "To 0 mV instantly regardless of gradients",
-      "Below −150 mV"
+      "Toward E_K as if K⁺ leak were unchanged (ignores which ion dominates resting permeability)",
+      "To 0 mV instantly regardless of gradients (ignores which ion dominates resting permeability)",
+      "Below −150 mV (ignores which ion dominates resting permeability)"
     ],
     correct: 0,
     explanation: "Removing dominant K⁺ leak leaves remaining Na⁺ (and other) conductances to set V_m closer to E_Na.",
@@ -78,9 +78,9 @@ const PART1_EXTRA_POOL = [
     question: "For a divalent cation such as Ca²⁺, a 10-fold concentration ratio at 37°C changes the Nernst potential by roughly:",
     options: [
       "~31 mV (half the monovalent slope)",
-      "~62 mV",
-      "~124 mV",
-      "0 mV (valence cancels)"
+      "~62 mV (contradicts the Nernst dependence on inside/outside concentrations)",
+      "~124 mV (contradicts the Nernst dependence on inside/outside concentrations)",
+      "0 mV (valence cancels) — contradicts the Nernst dependence on inside/outside concentrations."
     ],
     correct: 0,
     explanation: "Nernst slope scales as RT/zF; divalent ions use half the mV per decade of a monovalent ion.",
@@ -150,9 +150,9 @@ const PART1_EXTRA_POOL = [
     question: "Membrane capacitance arises primarily because:",
     options: [
       "The lipid bilayer stores charge separated across a thin dielectric",
-      "Myelin increases ion channel density",
-      "Na⁺ channels pump charge into the ER",
-      "Dendrites lack any resistance"
+      "Myelin increases ion channel density (misstates how R_m, C_m, or geometry set τ or λ)",
+      "Na⁺ channels pump charge into the ER (misstates how R_m, C_m, or geometry set τ or λ)",
+      "Dendrites lack any resistance (misstates how R_m, C_m, or geometry set τ or λ)"
     ],
     correct: 0,
     explanation: "The bilayer acts as a capacitor; charge accumulates on inner and outer leaflets.",
@@ -186,9 +186,9 @@ const PART1_EXTRA_POOL = [
     question: "Increasing membrane resistance R_m while C_m is unchanged will:",
     options: [
       "Increase τ and slow subthreshold responses",
-      "Decrease τ",
-      "Prevent passive decay along dendrites",
-      "Block inactivation of Na⁺ channels"
+      "Decrease τ (misstates how R_m, C_m, or geometry set τ or λ)",
+      "Prevent passive decay along dendrites (misstates how R_m, C_m, or geometry set τ or λ)",
+      "Block inactivation of Na⁺ channels (misstates how R_m, C_m, or geometry set τ or λ)"
     ],
     correct: 0,
     explanation: "τ = R_m C_m; higher R_m lengthens the membrane time constant.",
@@ -222,9 +222,9 @@ const PART1_EXTRA_POOL = [
     question: "An EPSP recorded at the soma from a distal synapse is typically smaller and slower because of:",
     options: [
       "Cable filtering (attenuation and low-pass filtering)",
-      "Complete absence of ionotropic receptors",
-      "Myelin on dendrites",
-      "Only electrical synapses distally"
+      "Complete absence of ionotropic receptors (misstates how R_m, C_m, or geometry set τ or λ)",
+      "Myelin on dendrites (misstates how R_m, C_m, or geometry set τ or λ)",
+      "Only electrical synapses distally (misstates how R_m, C_m, or geometry set τ or λ)"
     ],
     correct: 0,
     explanation: "Passive spread along dendrites attenuates amplitude and spreads rise time.",
@@ -240,9 +240,9 @@ const PART1_EXTRA_POOL = [
     question: "Input conductance (1/R_in) increases when:",
     options: [
       "More ion channels open in the dendritic tree",
-      "Myelin thickness increases",
-      "Extracellular K⁺ drops",
-      "Temperature falls below 0°C"
+      "Myelin thickness increases (misstates how R_m, C_m, or geometry set τ or λ)",
+      "Extracellular K⁺ drops (misstates how R_m, C_m, or geometry set τ or λ)",
+      "Temperature falls below 0°C (misstates how R_m, C_m, or geometry set τ or λ)"
     ],
     correct: 0,
     explanation: "Additional open channels lower input resistance and increase conductance.",
@@ -258,9 +258,9 @@ const PART1_EXTRA_POOL = [
     question: "In whole-cell patch clamp, breaking into the cell interior allows the electrode to:",
     options: [
       "Dialyze the cytoplasm and control V_m directly",
-      "Measure only extracellular field potentials",
-      "Record from single channels without seal",
-      "Block all K⁺ currents irreversibly"
+      "Measure only extracellular field potentials (does not follow from the mechanism implied in the stem)",
+      "Record from single channels without seal (does not follow from the mechanism implied in the stem)",
+      "Block all K⁺ currents irreversibly (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Whole-cell mode electrically couples the pipette to the soma and can exchange small molecules.",
@@ -276,9 +276,9 @@ const PART1_EXTRA_POOL = [
     question: "A gigaohm seal in patch clamp reduces:",
     options: [
       "Leak current between pipette and bath, improving signal-to-noise",
-      "Membrane capacitance to zero",
-      "The need for any amplifier",
-      "All synaptic transmission in the slice"
+      "Membrane capacitance to zero (does not follow from the mechanism implied in the stem)",
+      "The need for any amplifier (does not follow from the mechanism implied in the stem)",
+      "All synaptic transmission in the slice (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Tight seals isolate the patch from bath noise and enable single-channel resolution.",
@@ -294,9 +294,9 @@ const PART1_EXTRA_POOL = [
     question: "Cell-attached patch configuration is useful for recording:",
     options: [
       "Single-channel currents without disrupting cytosolic composition",
-      "Only action potentials in axons",
-      "Population spikes in cortex only",
-      "Magnetic fields from myelin"
+      "Only action potentials in axons (does not follow from the mechanism implied in the stem)",
+      "Population spikes in cortex only (does not follow from the mechanism implied in the stem)",
+      "Magnetic fields from myelin (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "The patch stays on the outside surface, preserving intracellular milieu.",
@@ -312,9 +312,9 @@ const PART1_EXTRA_POOL = [
     question: "Tetrodotoxin (TTX) blocks action potentials primarily by binding:",
     options: [
       "Voltage-gated Na⁺ channel pore",
-      "Voltage-gated K⁺ channels",
-      "The Na⁺/K⁺ pump",
-      "Gap junction connexins"
+      "Voltage-gated K⁺ channels (does not follow from the mechanism implied in the stem)",
+      "The Na⁺/K⁺ pump (does not follow from the mechanism implied in the stem)",
+      "Gap junction connexins (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "TTX selectively occludes voltage-gated Na⁺ channels.",
@@ -330,9 +330,9 @@ const PART1_EXTRA_POOL = [
     question: "Tetraethylammonium (TEA) applied to axons typically prolongs spikes by blocking:",
     options: [
       "Certain voltage-gated K⁺ channels",
-      "Voltage-gated Na⁺ channels",
-      "Glutamate receptors",
-      "Myelin basic protein"
+      "Voltage-gated Na⁺ channels (does not follow from the mechanism implied in the stem)",
+      "Glutamate receptors (does not follow from the mechanism implied in the stem)",
+      "Myelin basic protein (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "TEA blocks some K⁺ channels, slowing repolarization.",
@@ -366,9 +366,9 @@ const PART1_EXTRA_POOL = [
     question: "Afterhyperpolarization following a spike often reflects:",
     options: [
       "Continued K⁺ efflux through delayed rectifiers and/or Ca²⁺-activated K⁺",
-      "Sustained Na⁺ influx",
-      "Opening of all gap junctions",
-      "Pump reversal only"
+      "Sustained Na⁺ influx (does not follow from the mechanism implied in the stem)",
+      "Opening of all gap junctions (does not follow from the mechanism implied in the stem)",
+      "Pump reversal only (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "K⁺ channels remain active briefly, hyperpolarizing the membrane.",
@@ -384,9 +384,9 @@ const PART1_EXTRA_POOL = [
     question: "If voltage-gated Na⁺ channels are held in the inactivated state, the neuron:",
     options: [
       "Cannot fire another action potential until recovery",
-      "Fires at higher frequency",
-      "Depolarizes to E_Na permanently",
-      "Loses all resting potential"
+      "Fires at higher frequency (does not follow from the mechanism implied in the stem)",
+      "Depolarizes to E_Na permanently (does not follow from the mechanism implied in the stem)",
+      "Loses all resting potential (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Inactivation gate closure prevents repeated Na⁺ opening (absolute refractory period).",
@@ -402,9 +402,9 @@ const PART1_EXTRA_POOL = [
     question: "Threshold is best described as the voltage at which:",
     options: [
       "Net inward current exceeds net outward current regeneratively",
-      "K⁺ channels fully close forever",
-      "The pump stops",
-      "Myelin is stripped"
+      "K⁺ channels fully close forever (does not follow from the mechanism implied in the stem)",
+      "The pump stops (does not follow from the mechanism implied in the stem)",
+      "Myelin is stripped (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Positive feedback from Na⁺ activation makes depolarization self-sustaining.",
@@ -420,9 +420,9 @@ const PART1_EXTRA_POOL = [
     question: "A subthreshold depolarization decays because:",
     options: [
       "Passive leak currents oppose the change (return toward rest)",
-      "Na⁺ channels cannot ever open",
-      "Myelin prevents all current",
-      "Synapses are only inhibitory"
+      "Na⁺ channels cannot ever open (does not follow from the mechanism implied in the stem)",
+      "Myelin prevents all current (does not follow from the mechanism implied in the stem)",
+      "Synapses are only inhibitory (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Subthreshold events are passive; leak restores resting potential.",
@@ -438,9 +438,9 @@ const PART1_EXTRA_POOL = [
     question: "Lowering extracellular Ca²⁺ can narrow action potentials partly by:",
     options: [
       "Reducing surface charge screening and altering channel kinetics / excitability",
-      "Blocking Na⁺ channels irreversibly",
-      "Eliminating K⁺ gradients",
-      "Stopping saltatory conduction always"
+      "Blocking Na⁺ channels irreversibly (does not follow from the mechanism implied in the stem)",
+      "Eliminating K⁺ gradients (does not follow from the mechanism implied in the stem)",
+      "Stopping saltatory conduction always (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Ca²⁺ affects gating and excitability; extreme lowering has complex effects on spike width.",
@@ -456,9 +456,9 @@ const PART1_EXTRA_POOL = [
     question: "In continuous conduction, the action potential moves because:",
     options: [
       "Local current loops depolarize adjacent membrane to threshold",
-      "The spike travels as a single electron flow in myelin",
-      "Only the soma fires repeatedly",
-      "Synaptic vesicles propagate down the axon"
+      "The spike travels as a single electron flow in myelin (misapplies how active propagation uses local circuit currents)",
+      "Only the soma fires repeatedly (misapplies how active propagation uses local circuit currents)",
+      "Synaptic vesicles propagate down the axon (misapplies how active propagation uses local circuit currents)"
     ],
     correct: 0,
     explanation: "Depolarization spreads passively to the next segment, triggering local Na⁺ influx.",
@@ -474,9 +474,9 @@ const PART1_EXTRA_POOL = [
     question: "Saltatory conduction increases conduction velocity mainly by:",
     options: [
       "Reducing capacitive load and limiting active regeneration to nodes",
-      "Increasing axon diameter only in the soma",
-      "Blocking K⁺ at every internode",
-      "Converting spikes to graded potentials"
+      "Increasing axon diameter only in the soma (misapplies how active propagation uses local circuit currents)",
+      "Blocking K⁺ at every internode (misapplies how active propagation uses local circuit currents)",
+      "Converting spikes to graded potentials (misapplies how active propagation uses local circuit currents)"
     ],
     correct: 0,
     explanation: "Myelin insulates internodes; nodes concentrate ion channels for efficient jumping.",
@@ -491,8 +491,8 @@ const PART1_EXTRA_POOL = [
     topic: "Action Potential Propagation",
     question: "Local anesthetic block of myelinated fibers often fails first in:",
     options: [
-      "Small-diameter fibers (higher sensitivity varies by drug and use dependence)",
-      "Only motor alpha fibers always",
+      "Small-diameter fibers",
+      "Only motor alpha fibers always (misapplies how active propagation uses local circuit currents)",
       "Only proprioceptive Ia fibers always",
       "Unmyelinated C fibers exclusively in all cases"
     ],
@@ -510,9 +510,9 @@ const PART1_EXTRA_POOL = [
     question: "At a node of Ranvier, voltage-gated channels are concentrated to:",
     options: [
       "Regenerate the action potential efficiently",
-      "Pump Na⁺ into myelin",
-      "Generate EPSPs only",
-      "Store synaptic vesicles"
+      "Pump Na⁺ into myelin (misapplies how active propagation uses local circuit currents)",
+      "Generate EPSPs only (misapplies how active propagation uses local circuit currents)",
+      "Store synaptic vesicles (misapplies how active propagation uses local circuit currents)"
     ],
     correct: 0,
     explanation: "High Na⁺ channel density at nodes supports saltatory propagation.",
@@ -528,9 +528,9 @@ const PART1_EXTRA_POOL = [
     question: "Demyelination slows conduction because:",
     options: [
       "Effective capacitance increases and current must charge more membrane per unit length",
-      "Na⁺ channels disappear from the genome",
-      "K⁺ equilibrium becomes +60 mV",
-      "Axons become purely passive forever"
+      "Na⁺ channels disappear from the genome (misapplies how active propagation uses local circuit currents)",
+      "K⁺ equilibrium becomes +60 mV (misapplies how active propagation uses local circuit currents)",
+      "Axons become purely passive forever (misapplies how active propagation uses local circuit currents)"
     ],
     correct: 0,
     explanation: "Loss of insulation forces more membrane to be charged, delaying regeneration.",
@@ -546,9 +546,9 @@ const PART1_EXTRA_POOL = [
     question: "An antidromic action potential is one that:",
     options: [
       "Propagates toward the soma (opposite normal orthodromic direction)",
-      "Never occurs in sensory neurons",
-      "Only occurs in dendrites",
-      "Is always subthreshold"
+      "Never occurs in sensory neurons (misapplies how active propagation uses local circuit currents)",
+      "Only occurs in dendrites (misapplies how active propagation uses local circuit currents)",
+      "Is always subthreshold (misapplies how active propagation uses local circuit currents)"
     ],
     correct: 0,
     explanation: "Antidromic spikes travel from axon toward soma; orthodromic is soma-to-terminal.",
@@ -564,9 +564,9 @@ const PART1_EXTRA_POOL = [
     question: "The axon initial segment (AIS) often has a high density of:",
     options: [
       "Voltage-gated Na⁺ channels and contributes strongly to spike initiation",
-      "Only gap junctions",
-      "Photopigment molecules",
-      "Olfactory receptors"
+      "Only gap junctions (does not follow from the mechanism implied in the stem)",
+      "Photopigment molecules (does not follow from the mechanism implied in the stem)",
+      "Olfactory receptors (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "MCB80x highlights AIS as a primary site of action potential generation.",
@@ -582,9 +582,9 @@ const PART1_EXTRA_POOL = [
     question: "Graded synaptic potentials summate at the AIS to:",
     options: [
       "Determine whether threshold is reached for spike initiation",
-      "Directly release neurotransmitter without spikes",
-      "Generate myelin",
-      "Reverse the Na⁺/K⁺ pump"
+      "Directly release neurotransmitter without spikes (does not follow from the mechanism implied in the stem)",
+      "Generate myelin (does not follow from the mechanism implied in the stem)",
+      "Reverse the Na⁺/K⁺ pump (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Integration at the AIS converts synaptic input into firing output.",
@@ -600,9 +600,9 @@ const PART1_EXTRA_POOL = [
     question: "Ball-and-chain inactivation in Na⁺ channels refers to:",
     options: [
       "An intracellular inactivation particle blocking the pore after activation",
-      "Myelin wrapping the channel",
-      "Glutamate binding to the pore",
-      "Pump phosphorylation only"
+      "Myelin wrapping the channel (does not follow from the mechanism implied in the stem)",
+      "Glutamate binding to the pore (does not follow from the mechanism implied in the stem)",
+      "Pump phosphorylation only (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Fast inactivation involves a cytoplasmic domain occluding the channel.",
@@ -618,9 +618,9 @@ const PART1_EXTRA_POOL = [
     question: "Delayed rectifier K⁺ channels open with slower kinetics than Na⁺ channels to:",
     options: [
       "Repolarize the membrane after the Na⁺ surge",
-      "Depolarize to threshold faster",
-      "Permit indefinite Na⁺ influx",
-      "Close gap junctions"
+      "Depolarize to threshold faster (does not follow from the mechanism implied in the stem)",
+      "Permit indefinite Na⁺ influx (does not follow from the mechanism implied in the stem)",
+      "Close gap junctions (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Delayed K⁺ activation terminates the spike.",
@@ -636,9 +636,9 @@ const PART1_EXTRA_POOL = [
     question: "At the potassium equilibrium potential, net K⁺ current is zero even though:",
     options: [
       "Individual K⁺ ions still cross the membrane in both directions",
-      "No ions move at all",
-      "The pump is off",
-      "Na⁺ channels are open maximally"
+      "No ions move at all (does not follow from the mechanism implied in the stem)",
+      "The pump is off (does not follow from the mechanism implied in the stem)",
+      "Na⁺ channels are open maximally (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Equilibrium means balanced fluxes, not absence of movement.",
@@ -654,9 +654,9 @@ const PART1_EXTRA_POOL = [
     question: "Resting potential is a steady state, not a true equilibrium, because:",
     options: [
       "Active transport maintains ion gradients against passive leak",
-      "No channels are open",
-      "Temperature is zero",
-      "Capacitance is infinite"
+      "No channels are open (does not follow from the mechanism implied in the stem)",
+      "Temperature is zero (does not follow from the mechanism implied in the stem)",
+      "Capacitance is infinite (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "The pump continuously works to offset passive ion loss.",
@@ -672,9 +672,9 @@ const PART1_EXTRA_POOL = [
     question: "Voltage clamp was developed primarily to:",
     options: [
       "Hold membrane voltage constant and measure the currents required",
-      "Measure only resting potential without perturbation",
-      "Visualize myelin with light microscopy alone",
-      "Count synaptic vesicles directly"
+      "Measure only resting potential without perturbation (does not follow from the mechanism implied in the stem)",
+      "Visualize myelin with light microscopy alone (does not follow from the mechanism implied in the stem)",
+      "Count synaptic vesicles directly (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Hodgkin and Huxley clamped voltage to dissect underlying ionic currents.",
@@ -708,9 +708,9 @@ const PART1_EXTRA_POOL = [
     question: "Voltage-gated Na⁺ channels are far more selective than leak channels partly because:",
     options: [
       "Pore architecture and charge filtering favor Na⁺ over K⁺",
-      "They only open at E_K",
-      "They pump ions actively",
-      "They are located only in dendrites"
+      "They only open at E_K (does not follow from the mechanism implied in the stem)",
+      "They pump ions actively (does not follow from the mechanism implied in the stem)",
+      "They are located only in dendrites (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Selectivity filters and gating restrict permeation to Na⁺.",
@@ -744,9 +744,9 @@ const PART1_EXTRA_POOL = [
     question: "Temporal summation requires synaptic inputs that:",
     options: [
       "Overlap in time before passive decay completes",
-      "Arrive exactly one year apart",
-      "Are only inhibitory",
-      "Occur only in myelin"
+      "Arrive exactly one year apart (does not follow from the mechanism implied in the stem)",
+      "Are only inhibitory (does not follow from the mechanism implied in the stem)",
+      "Occur only in myelin (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "EPSPs must summate within the membrane time constant window.",
@@ -762,9 +762,9 @@ const PART1_EXTRA_POOL = [
     question: "Spatial summation occurs when:",
     options: [
       "Multiple synaptic inputs on different branches combine at the axon hillock/AIS",
-      "One synapse fires repeatedly after decay",
-      "Only one channel opens",
-      "The cell is voltage-clamped at 0 mV"
+      "One synapse fires repeatedly after decay (does not follow from the mechanism implied in the stem)",
+      "Only one channel opens (does not follow from the mechanism implied in the stem)",
+      "The cell is voltage-clamped at 0 mV (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Inputs from different locations add passively toward spike initiation.",
@@ -816,9 +816,9 @@ const PART1_EXTRA_POOL = [
     question: "Blocking voltage-gated K⁺ channels during an action potential typically:",
     options: [
       "Broadens the spike and may increase firing rate",
-      "Prevents Na⁺ influx entirely",
-      "Hyperpolarizes below rest instantly always",
-      "Stops propagation only in dendrites"
+      "Prevents Na⁺ influx entirely (does not follow from the mechanism implied in the stem)",
+      "Hyperpolarizes below rest instantly always (does not follow from the mechanism implied in the stem)",
+      "Stops propagation only in dendrites (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Slower repolarization prolongs depolarization and can alter refractory period.",
@@ -834,9 +834,9 @@ const PART1_EXTRA_POOL = [
     question: "If g_Na increases transiently during a spike while g_K rises later, the sequence reflects:",
     options: [
       "Hodgkin–Huxley separation of Na⁺ activation and K⁺ delayed activation",
-      "Goldman equation at rest only",
-      "Only pump activity",
-      "Gap junction coupling"
+      "Goldman equation at rest only (does not follow from the mechanism implied in the stem)",
+      "Only pump activity (does not follow from the mechanism implied in the stem)",
+      "Gap junction coupling (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Classic HH model: fast Na⁺ conductance rise, slower K⁺ rise for repolarization.",
@@ -909,9 +909,9 @@ const PART2_EXTRA_POOL = [
     question: "Miniature EPSPs (mEPSPs) are observed when:",
     options: [
       "Spontaneous single-vesicle fusion occurs without presynaptic spikes",
-      "The axon is cut and sealed",
-      "Only inhibitory neurons are present",
-      "Myelin covers the synapse"
+      "The axon is cut and sealed (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Only inhibitory neurons are present (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Myelin covers the synapse (mixes up presynaptic release with postsynaptic receptor logic)"
     ],
     correct: 0,
     explanation: "Spontaneous quantal release produces mEPSPs/mEPSCs.",
@@ -963,9 +963,9 @@ const PART2_EXTRA_POOL = [
     question: "Synaptic delay is largely attributable to:",
     options: [
       "Ca²⁺ influx, vesicle fusion, and transmitter diffusion/binding",
-      "Action potential backpropagation only in dendrites",
-      "Myelin thickness at the synapse",
-      "Pump reversal at the postsynaptic density"
+      "Action potential backpropagation only in dendrites (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Myelin thickness at the synapse (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Pump reversal at the postsynaptic density (mixes up presynaptic release with postsynaptic receptor logic)"
     ],
     correct: 0,
     explanation: "Several presynaptic steps add milliseconds between spike and response.",
@@ -981,9 +981,9 @@ const PART2_EXTRA_POOL = [
     question: "The readily releasable pool refers to vesicles that:",
     options: [
       "Are docked/primed and can fuse quickly after Ca²⁺ rise",
-      "Are permanently trapped in the nucleus",
-      "Only contain neuropeptides for hours-long release",
-      "Exist only in electrical synapses"
+      "Are permanently trapped in the nucleus (does not follow from the mechanism implied in the stem)",
+      "Only contain neuropeptides for hours-long release (does not follow from the mechanism implied in the stem)",
+      "Exist only in electrical synapses (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Primed vesicles supply the first wave of evoked release.",
@@ -999,9 +999,9 @@ const PART2_EXTRA_POOL = [
     question: "Endocytosis after exocytosis is needed to:",
     options: [
       "Recycle vesicle membrane and maintain release capacity",
-      "Generate action potentials in the cleft",
-      "Open gap junctions",
-      "Depolarize all mitochondria"
+      "Generate action potentials in the cleft (does not follow from the mechanism implied in the stem)",
+      "Open gap junctions (does not follow from the mechanism implied in the stem)",
+      "Depolarize all mitochondria (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Without recycling, synapses deplete vesicle supply.",
@@ -1017,9 +1017,9 @@ const PART2_EXTRA_POOL = [
     question: "AMPA receptors on hippocampal pyramidal cells typically mediate:",
     options: [
       "Fast excitatory postsynaptic currents at many glutamatergic synapses",
-      "Slow G-protein inhibitory currents only",
-      "Direct opening of voltage-gated Na⁺ in myelin",
-      "Peptide hormone release"
+      "Slow G-protein inhibitory currents only (does not follow from the mechanism implied in the stem)",
+      "Direct opening of voltage-gated Na⁺ in myelin (does not follow from the mechanism implied in the stem)",
+      "Peptide hormone release (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "AMPA channels dominate fast EPSCs when Glu is released.",
@@ -1032,15 +1032,15 @@ const PART2_EXTRA_POOL = [
   },
   {
     topic: "Receptor Types",
-    question: "GABA_A receptors are ionotropic and conduct primarily:",
+    question: "GABA<sub>A</sub> receptors are ionotropic and conduct primarily:",
     options: [
       "Cl⁻ (often hyperpolarizing or shunting)",
-      "Na⁺ exclusively",
-      "Ca²⁺ only in all neurons always",
-      "K⁺ never"
+      "Na⁺ exclusively (does not follow from the mechanism implied in the stem)",
+      "Ca²⁺ only in all neurons always (does not follow from the mechanism implied in the stem)",
+      "K⁺ never (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
-    explanation: "GABA_A is a ligand-gated Cl⁻ channel (E_Cl sets direction).",
+    explanation: "GABA<sub>A</sub> is a ligand-gated Cl⁻ channel (E_Cl sets direction).",
     wrongExplanations: [
       "",
       "This option is inconsistent with the stem; the keyed answer (Cl⁻ (often hyperpolarizing or shunting)) matches the underlying mechanism.",
@@ -1053,9 +1053,9 @@ const PART2_EXTRA_POOL = [
     question: "Nicotinic ACh receptors at the neuromuscular junction are:",
     options: [
       "Ligand-gated cation channels causing endplate depolarization",
-      "Metabotropic GPCRs only",
-      "Voltage-gated Cl⁻ channels",
-      "Electrical synapses"
+      "Metabotropic GPCRs only (does not follow from the mechanism implied in the stem)",
+      "Voltage-gated Cl⁻ channels (does not follow from the mechanism implied in the stem)",
+      "Electrical synapses (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "nAChR permits Na⁺/K⁺ flux, depolarizing the muscle fiber.",
@@ -1071,9 +1071,9 @@ const PART2_EXTRA_POOL = [
     question: "Muscarinic ACh receptors are metabotropic and can:",
     options: [
       "Modulate K⁺ channels, phospholipase C, and other second-messenger pathways",
-      "Directly form a fast cation pore identical to AMPA",
-      "Replace SNARE proteins",
-      "Conduct myelin insulation"
+      "Directly form a fast cation pore identical to AMPA (does not follow from the mechanism implied in the stem)",
+      "Replace SNARE proteins (does not follow from the mechanism implied in the stem)",
+      "Conduct myelin insulation (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Muscarinic receptors use G-proteins for slower modulatory effects.",
@@ -1089,9 +1089,9 @@ const PART2_EXTRA_POOL = [
     question: "Activation of phospholipase C via Gq often increases:",
     options: [
       "IP3 and DAG, raising intracellular Ca²⁺ from stores",
-      "cAMP only without any Ca²⁺ change",
-      "Myelin basic protein synthesis only",
-      "Voltage-gated Na⁺ density at nodes instantly"
+      "cAMP only without any Ca²⁺ change (does not follow from the mechanism implied in the stem)",
+      "Myelin basic protein synthesis only (does not follow from the mechanism implied in the stem)",
+      "Voltage-gated Na⁺ density at nodes instantly (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "PLC splits PIP2 into IP3 (Ca²⁺ release) and DAG (PKC activation).",
@@ -1107,9 +1107,9 @@ const PART2_EXTRA_POOL = [
     question: "cAMP-dependent protein kinase (PKA) can modulate synapses by:",
     options: [
       "Phosphorylating channels and transcription factors",
-      "Cleaving SNARE proteins",
-      "Blocking all glutamate release permanently",
-      "Opening gap junctions in myelin"
+      "Cleaving SNARE proteins (does not follow from the mechanism implied in the stem)",
+      "Blocking all glutamate release permanently (does not follow from the mechanism implied in the stem)",
+      "Opening gap junctions in myelin (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "PKA phosphorylation alters channel function and gene expression.",
@@ -1125,9 +1125,9 @@ const PART2_EXTRA_POOL = [
     question: "Shunting inhibition reduces EPSP amplitude at the soma mainly by:",
     options: [
       "Lowering input resistance so synaptic current leaks locally",
-      "Increasing Na⁺ channel density at AIS always",
-      "Preventing any Cl⁻ flux",
-      "Eliminating temporal summation entirely"
+      "Increasing Na⁺ channel density at AIS always (ignores how EPSPs/IPSPs sum in time or space)",
+      "Preventing any Cl⁻ flux (ignores how EPSPs/IPSPs sum in time or space)",
+      "Eliminating temporal summation entirely (ignores how EPSPs/IPSPs sum in time or space)"
     ],
     correct: 0,
     explanation: "Increased conductance diverts current, reducing voltage change elsewhere.",
@@ -1143,9 +1143,9 @@ const PART2_EXTRA_POOL = [
     question: "Divisive normalization in some circuits refers to:",
     options: [
       "Inhibitory input scaling excitatory drive proportionally",
-      "Adding only spatial summation without time",
-      "Blocking all GABA release",
-      "Converting spikes to graded release only in retina"
+      "Adding only spatial summation without time (ignores how EPSPs/IPSPs sum in time or space)",
+      "Blocking all GABA release (ignores how EPSPs/IPSPs sum in time or space)",
+      "Converting spikes to graded release only in retina (ignores how EPSPs/IPSPs sum in time or space)"
     ],
     correct: 0,
     explanation: "Inhibition can divide or scale excitation rather than only subtract absolutely.",
@@ -1162,8 +1162,8 @@ const PART2_EXTRA_POOL = [
     options: [
       "Depletion of the readily releasable vesicle pool",
       "Permanent removal of all postsynaptic receptors",
-      "Myelin growth in the cleft",
-      "Only LTP induction"
+      "Myelin growth in the cleft (does not follow from the mechanism implied in the stem)",
+      "Only LTP induction (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "High-frequency use exhausts primed vesicles temporarily.",
@@ -1179,9 +1179,9 @@ const PART2_EXTRA_POOL = [
     question: "Facilitation at some synapses is attributed partly to:",
     options: [
       "Residual presynaptic Ca²⁺ enhancing release probability",
-      "Complete SNARE destruction",
-      "Blocking all K⁺ channels in the cleft",
-      "Loss of action potentials"
+      "Complete SNARE destruction (does not follow from the mechanism implied in the stem)",
+      "Blocking all K⁺ channels in the cleft (does not follow from the mechanism implied in the stem)",
+      "Loss of action potentials (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Ca²⁺ buildup increases P_release for subsequent spikes.",
@@ -1196,8 +1196,8 @@ const PART2_EXTRA_POOL = [
     topic: "Long-Term Plasticity",
     question: "Hebbian plasticity is summarized as:",
     options: [
-      "Cells that fire together wire together (correlated activity strengthens synapses)",
-      "Random synapse elimination only",
+      "Cells that fire together wire together",
+      "Random synapse elimination only (states the wrong induction requirement for LTP/LTD)",
       "Only inhibitory synapses strengthen with uncorrelated input",
       "Myelin determines synaptic weight alone"
     ],
@@ -1215,9 +1215,9 @@ const PART2_EXTRA_POOL = [
     question: "LTD (long-term depression) can be induced when:",
     options: [
       "Postsynaptic activity is low during presynaptic input (e.g., low-frequency pairing)",
-      "Only a single mEPSP occurs once",
-      "All NMDA receptors are removed genetically always",
-      "Only electrical synapses fire"
+      "Only a single mEPSP occurs once (states the wrong induction requirement for LTP/LTD)",
+      "All NMDA receptors are removed genetically always (states the wrong induction requirement for LTP/LTD)",
+      "Only electrical synapses fire (states the wrong induction requirement for LTP/LTD)"
     ],
     correct: 0,
     explanation: "Specific timing/frequency rules can weaken synapses (LTD).",
@@ -1233,9 +1233,9 @@ const PART2_EXTRA_POOL = [
     question: "CaMKII activation postsynaptically is associated with:",
     options: [
       "LTP maintenance at many glutamatergic synapses",
-      "Immediate botulinum effects",
-      "Only GABA_B signaling",
-      "Saltatory conduction failure"
+      "Immediate botulinum effects (states the wrong induction requirement for LTP/LTD)",
+      "Only GABA<sub>B</sub> signaling (states the wrong induction requirement for LTP/LTD)",
+      "Saltatory conduction failure (states the wrong induction requirement for LTP/LTD)"
     ],
     correct: 0,
     explanation: "Ca²⁺ influx through NMDA activates CaMKII, reinforcing synaptic strength.",
@@ -1251,9 +1251,9 @@ const PART2_EXTRA_POOL = [
     question: "Dopamine modulates corticostriatal synapses largely via:",
     options: [
       "D1/D2 GPCRs changing cAMP and downstream phosphorylation",
-      "Direct nAChR pores at every synapse",
-      "Only gap junction coupling",
-      "Myelin thickness"
+      "Direct nAChR pores at every synapse (does not follow from the mechanism implied in the stem)",
+      "Only gap junction coupling (does not follow from the mechanism implied in the stem)",
+      "Myelin thickness (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Dopamine GPCRs tune excitability and plasticity in striatal circuits.",
@@ -1269,9 +1269,9 @@ const PART2_EXTRA_POOL = [
     question: "Norepinephrine from locus coeruleus often:",
     options: [
       "Increases arousal and modulates sensory gain via β-adrenergic receptors",
-      "Blocks all Na⁺ channels permanently",
-      "Is the primary transmitter at NMJ",
-      "Only activates GABA_A"
+      "Blocks all Na⁺ channels permanently (does not follow from the mechanism implied in the stem)",
+      "Is the primary transmitter at NMJ (does not follow from the mechanism implied in the stem)",
+      "Only activates GABA<sub>A</sub> (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "NE modulates attention/arousal through widespread noradrenergic projections.",
@@ -1287,9 +1287,9 @@ const PART2_EXTRA_POOL = [
     question: "Serotonin (5-HT) modulates circuits through:",
     options: [
       "Multiple receptor subtypes (many GPCRs) with diverse effects",
-      "A single ionotropic receptor only in mammals",
-      "Exclusive action on myelin",
-      "Direct voltage-gated Na⁺ gating only"
+      "A single ionotropic receptor only in mammals (does not follow from the mechanism implied in the stem)",
+      "Exclusive action on myelin (does not follow from the mechanism implied in the stem)",
+      "Direct voltage-gated Na⁺ gating only (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "5-HT has broad neuromodulatory roles via many receptor types.",
@@ -1305,9 +1305,9 @@ const PART2_EXTRA_POOL = [
     question: "Neuromodulators differ from fast transmitters mainly because they:",
     options: [
       "Act on longer timescales and often via second messengers / volume transmission",
-      "Always use electrical synapses",
-      "Never affect ion channels",
-      "Only exist in invertebrate NMJs"
+      "Always use electrical synapses (does not follow from the mechanism implied in the stem)",
+      "Never affect ion channels (does not follow from the mechanism implied in the stem)",
+      "Only exist in invertebrate NMJs (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Modulators reshape network state over seconds to minutes.",
@@ -1324,8 +1324,8 @@ const PART2_EXTRA_POOL = [
     options: [
       "An excitatory input drives both principal cells and interneurons that inhibit downstream targets",
       "Inhibition only returns to the same cell that was excited (feedback only)",
-      "Only electrical synapses connect layers",
-      "Myelin provides inhibition"
+      "Only electrical synapses connect layers (does not follow from the mechanism implied in the stem)",
+      "Myelin provides inhibition (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Feedforward: excitation recruits interneurons that inhibit other principal neurons.",
@@ -1341,9 +1341,9 @@ const PART2_EXTRA_POOL = [
     question: "Feedback (recurrent) inhibition stabilizes firing by:",
     options: [
       "Interneurons inhibiting the same or nearby principal cells that excited them",
-      "Blocking all EPSPs permanently",
-      "Preventing any action potentials in interneurons",
-      "Only modulating retina photoreceptors"
+      "Blocking all EPSPs permanently (does not follow from the mechanism implied in the stem)",
+      "Preventing any action potentials in interneurons (does not follow from the mechanism implied in the stem)",
+      "Only modulating retina photoreceptors (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Recurrent loops limit runaway excitation.",
@@ -1359,9 +1359,9 @@ const PART2_EXTRA_POOL = [
     question: "Central pattern generators (CPGs) can produce rhythms:",
     options: [
       "Without sensory input for each cycle (intrinsic circuit dynamics)",
-      "Only when every muscle spindle fires once",
-      "Exclusively in cerebellar Purkinje somata alone",
-      "Only via myelin oscillations"
+      "Only when every muscle spindle fires once (does not follow from the mechanism implied in the stem)",
+      "Exclusively in cerebellar Purkinje somata alone (does not follow from the mechanism implied in the stem)",
+      "Only via myelin oscillations (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "CPGs underlie breathing, locomotion, and other rhythmic motor patterns.",
@@ -1395,9 +1395,9 @@ const PART2_EXTRA_POOL = [
     question: "Connexin-based gap junctions allow:",
     options: [
       "Direct ionic and small-molecule coupling between cells",
-      "Only retrograde peptide signaling",
-      "Saltatory conduction in unmyelinated axons",
-      "Quantal release from vesicles"
+      "Only retrograde peptide signaling (does not follow from the mechanism implied in the stem)",
+      "Saltatory conduction in unmyelinated axons (does not follow from the mechanism implied in the stem)",
+      "Quantal release from vesicles (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Gap junctions electrically couple adjacent neurons or glia.",
@@ -1413,9 +1413,9 @@ const PART2_EXTRA_POOL = [
     question: "Electrical synapses are often faster than chemical synapses because:",
     options: [
       "No vesicle fusion or diffusion delay is required",
-      "They always use second messengers",
-      "They require NMDA activation",
-      "They depend on myelin stripping"
+      "They always use second messengers (does not follow from the mechanism implied in the stem)",
+      "They require NMDA activation (does not follow from the mechanism implied in the stem)",
+      "They depend on myelin stripping (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Current flows directly through connexons with minimal delay.",
@@ -1431,9 +1431,9 @@ const PART2_EXTRA_POOL = [
     question: "Rectifying electrical synapses conduct better in one direction because:",
     options: [
       "Connexon subunit composition creates voltage-dependent asymmetry",
-      "Myelin blocks reverse current",
-      "Only Cl⁻ is passed backward",
-      "SNARE proteins orient vesicles"
+      "Myelin blocks reverse current (does not follow from the mechanism implied in the stem)",
+      "Only Cl⁻ is passed backward (does not follow from the mechanism implied in the stem)",
+      "SNARE proteins orient vesicles (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Some gap junctions pass current preferentially from cell A to B.",
@@ -1449,9 +1449,9 @@ const PART2_EXTRA_POOL = [
     question: "Endocannabinoids can act retrogradely to:",
     options: [
       "Suppress presynaptic neurotransmitter release after strong postsynaptic activity",
-      "Open nAChR at the NMJ",
-      "Generate action potentials in myelin",
-      "Replace glutamate in vesicles"
+      "Open nAChR at the NMJ (does not follow from the mechanism implied in the stem)",
+      "Generate action potentials in myelin (does not follow from the mechanism implied in the stem)",
+      "Replace glutamate in vesicles (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Postsynaptically produced endocannabinoids often inhibit presynaptic release.",
@@ -1467,9 +1467,9 @@ const PART2_EXTRA_POOL = [
     question: "The active zone is specialized for:",
     options: [
       "Vesicle docking and Ca²⁺-triggered fusion opposite postsynaptic receptors",
-      "Myelin formation",
-      "Action potential initiation in dendrites only",
-      "Phototransduction"
+      "Myelin formation (does not follow from the mechanism implied in the stem)",
+      "Action potential initiation in dendrites only (does not follow from the mechanism implied in the stem)",
+      "Phototransduction (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Active zones align release machinery with receptor clusters.",
@@ -1485,9 +1485,9 @@ const PART2_EXTRA_POOL = [
     question: "Postsynaptic density (PSD) is enriched in:",
     options: [
       "Scaffolding proteins and glutamate receptors at excitatory synapses",
-      "Only oligodendrocyte processes",
-      "Rhodopsin",
-      "Cochlear hair cell tip links"
+      "Only oligodendrocyte processes (does not follow from the mechanism implied in the stem)",
+      "Rhodopsin (does not follow from the mechanism implied in the stem)",
+      "Cochlear hair cell tip links (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "PSD organizes AMPA/NMDA receptors and signaling complexes.",
@@ -1503,9 +1503,9 @@ const PART2_EXTRA_POOL = [
     question: "E/I balance refers to:",
     options: [
       "Relative levels of excitatory and inhibitory synaptic drive onto a neuron",
-      "Equal numbers of axons and dendrites anatomically",
-      "Only GABAergic monosynaptic reflexes",
-      "Myelin equal to axon diameter"
+      "Equal numbers of axons and dendrites anatomically (does not follow from the mechanism implied in the stem)",
+      "Only GABAergic monosynaptic reflexes (does not follow from the mechanism implied in the stem)",
+      "Myelin equal to axon diameter (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Circuit function depends on balanced excitation and inhibition.",
@@ -1518,15 +1518,15 @@ const PART2_EXTRA_POOL = [
   },
   {
     topic: "Drug Effects",
-    question: "Benzodiazepines enhance GABA_A signaling by:",
+    question: "Benzodiazepines enhance GABA<sub>A</sub> signaling by:",
     options: [
       "Increasing frequency of channel opening (allosteric modulation)",
-      "Blocking GABA synthesis irreversibly",
-      "Opening NMDA receptors",
-      "Preventing Cl⁻ flux"
+      "Blocking GABA synthesis irreversibly (does not follow from the mechanism implied in the stem)",
+      "Opening NMDA receptors (does not follow from the mechanism implied in the stem)",
+      "Preventing Cl⁻ flux (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
-    explanation: "BZDs bind allosteric sites to potentiate GABA_A responses.",
+    explanation: "BZDs bind allosteric sites to potentiate GABA<sub>A</sub> responses.",
     wrongExplanations: [
       "",
       "This option is inconsistent with the stem; the keyed answer (Increasing frequency of channel opening (allosteric modulation)) matches the underlying mechanism.",
@@ -1539,9 +1539,9 @@ const PART2_EXTRA_POOL = [
     question: "Strychnine causes convulsions by blocking:",
     options: [
       "Glycine receptors (in spinal inhibitory circuits)",
-      "AMPA receptors in retina",
-      "Voltage-gated K⁺ in nodes only",
-      "Connexins in heart only"
+      "AMPA receptors in retina (does not follow from the mechanism implied in the stem)",
+      "Voltage-gated K⁺ in nodes only (does not follow from the mechanism implied in the stem)",
+      "Connexins in heart only (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Loss of glycinergic inhibition leads to uncontrolled motor activity.",
@@ -1557,9 +1557,9 @@ const PART2_EXTRA_POOL = [
     question: "Neuropeptides differ from classical transmitters because they:",
     options: [
       "Are often co-released, act on GPCRs, and can have long-lasting effects",
-      "Always use ionotropic pores with sub-ms kinetics only",
-      "Are stored only in mitochondria",
-      "Cannot be released by activity"
+      "Always use ionotropic pores with sub-ms kinetics only (does not follow from the mechanism implied in the stem)",
+      "Are stored only in mitochondria (does not follow from the mechanism implied in the stem)",
+      "Cannot be released by activity (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Peptides modulate circuits over longer ranges and timescales.",
@@ -1575,9 +1575,9 @@ const PART2_EXTRA_POOL = [
     question: "Acetylcholinesterase in the synaptic cleft:",
     options: [
       "Hydrolyzes ACh to terminate the endplate potential",
-      "Synthesizes ACh from glutamate",
-      "Opens K⁺ channels directly",
-      "Myelinates the motor axon"
+      "Synthesizes ACh from glutamate (does not follow from the mechanism implied in the stem)",
+      "Opens K⁺ channels directly (does not follow from the mechanism implied in the stem)",
+      "Myelinates the motor axon (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Rapid ACh breakdown keeps NMJ signaling brief.",
@@ -1595,7 +1595,7 @@ const PART2_EXTRA_POOL = [
       "Competitive antagonism at nicotinic ACh receptors",
       "Blocking voltage-gated Na⁺ in muscle T-tubules only always",
       "Preventing action potentials in motor cortex only",
-      "Enhancing GABA_A on motoneurons exclusively"
+      "Enhancing GABA<sub>A</sub> on motoneurons exclusively"
     ],
     correct: 0,
     explanation: "nAChR block prevents endplate depolarization.",
@@ -1611,9 +1611,9 @@ const PART2_EXTRA_POOL = [
     question: "A neuron releasing both glutamate and a neuropeptide illustrates:",
     options: [
       "Co-transmission with fast and slow signaling components",
-      "Only electrical coupling",
-      "Purely retrograde dopamine signaling",
-      "Myelin-mediated transmission"
+      "Only electrical coupling (does not follow from the mechanism implied in the stem)",
+      "Purely retrograde dopamine signaling (does not follow from the mechanism implied in the stem)",
+      "Myelin-mediated transmission (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Many neurons co-release multiple transmitters/modulators.",
@@ -1629,9 +1629,9 @@ const PART2_EXTRA_POOL = [
     question: "Disinhibition occurs when:",
     options: [
       "Inhibition of an interneuron releases a target from suppression",
-      "All GABA neurons are removed globally",
-      "Only AMPA receptors activate",
-      "Myelin is added to interneurons"
+      "All GABA neurons are removed globally (does not follow from the mechanism implied in the stem)",
+      "Only AMPA receptors activate (does not follow from the mechanism implied in the stem)",
+      "Myelin is added to interneurons (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Removing inhibitory input on a neuron can increase its activity.",
@@ -1647,9 +1647,9 @@ const PART2_EXTRA_POOL = [
     question: "Spike-timing-dependent plasticity (STDP) depends on:",
     options: [
       "Order and timing of pre- and postsynaptic spikes",
-      "Only ambient temperature",
-      "Myelin length",
-      "Olfactory receptor choice"
+      "Only ambient temperature (does not follow from the mechanism implied in the stem)",
+      "Myelin length (does not follow from the mechanism implied in the stem)",
+      "Olfactory receptor choice (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Millisecond-scale timing windows determine LTP vs LTD.",
@@ -1665,9 +1665,9 @@ const PART2_EXTRA_POOL = [
     question: "Presynaptic LTP at the crayfish neuromuscular junction involves:",
     options: [
       "Increased quantal release (presynaptic mechanism)",
-      "Only postsynaptic receptor insertion always",
-      "Gap junction doubling",
-      "Photoreceptor adaptation"
+      "Only postsynaptic receptor insertion always (does not follow from the mechanism implied in the stem)",
+      "Gap junction doubling (does not follow from the mechanism implied in the stem)",
+      "Photoreceptor adaptation (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Classic example of presynaptic enhancement of release probability.",
@@ -1683,9 +1683,9 @@ const PART2_EXTRA_POOL = [
     question: "An IPSP arriving at the soma during an EPSP can:",
     options: [
       "Reduce net depolarization and prevent threshold crossing",
-      "Always increase Na⁺ influx",
-      "Eliminate resting potential permanently",
-      "Convert the cell to photoreceptor function"
+      "Always increase Na⁺ influx (does not follow from the mechanism implied in the stem)",
+      "Eliminate resting potential permanently (does not follow from the mechanism implied in the stem)",
+      "Convert the cell to photoreceptor function (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Inhibition subtracts from excitation in integration.",
@@ -1701,9 +1701,9 @@ const PART2_EXTRA_POOL = [
     question: "Dendritic spikes in some neurons can:",
     options: [
       "Boost local depolarization and influence somatic output",
-      "Only occur in unmyelinated sensory axons always",
-      "Replace all chemical synapses",
-      "Block all K⁺ channels globally"
+      "Only occur in unmyelinated sensory axons always (does not follow from the mechanism implied in the stem)",
+      "Replace all chemical synapses (does not follow from the mechanism implied in the stem)",
+      "Block all K⁺ channels globally (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Active dendritic conductances can nonlinearly amplify inputs.",
@@ -1719,9 +1719,9 @@ const PART2_EXTRA_POOL = [
     question: "Acetylcholine in cortex during wakefulness tends to:",
     options: [
       "Increase responsiveness and modulate attention via muscarinic and nicotinic receptors",
-      "Silence all thalamocortical input permanently",
-      "Replace glutamate at every synapse",
-      "Only hyperpolarize via GABA_B"
+      "Silence all thalamocortical input permanently (does not follow from the mechanism implied in the stem)",
+      "Replace glutamate at every synapse (does not follow from the mechanism implied in the stem)",
+      "Only hyperpolarize via GABA<sub>B</sub> (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "ACh neuromodulation supports arousal and cortical processing.",
@@ -1740,9 +1740,9 @@ const PART3_EXTRA_POOL = [
     question: "In darkness, vertebrate photoreceptors are depolarized because:",
     options: [
       "Cyclic nucleotide-gated channels pass cation influx (dark current)",
-      "Rhodopsin maximally activates transducin always",
-      "Only K⁺ leak is closed",
-      "Myelin wraps the outer segment"
+      "Rhodopsin maximally activates transducin always (does not follow from the mechanism implied in the stem)",
+      "Only K⁺ leak is closed (does not follow from the mechanism implied in the stem)",
+      "Myelin wraps the outer segment (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "High cGMP keeps channels open; light lowers cGMP and hyperpolarizes.",
@@ -1794,9 +1794,9 @@ const PART3_EXTRA_POOL = [
     question: "Ganglion cells encode visual information primarily as:",
     options: [
       "Patterns of action potentials (rate and timing)",
-      "Graded muscle contractions",
-      "Direct myelin thickness changes",
-      "Only peptide release without spikes"
+      "Graded muscle contractions (assigns the deficit to the wrong visual pathway stage)",
+      "Direct myelin thickness changes (assigns the deficit to the wrong visual pathway stage)",
+      "Only peptide release without spikes (assigns the deficit to the wrong visual pathway stage)"
     ],
     correct: 0,
     explanation: "Retinal output is spiking activity in optic nerve fibers.",
@@ -1812,9 +1812,9 @@ const PART3_EXTRA_POOL = [
     question: "Magnocellular pathway neurons generally prefer:",
     options: [
       "High temporal frequency and motion (coarse detail)",
-      "Fine color static patterns only",
-      "Olfactory combinations",
-      "Proprioception from muscle spindles"
+      "Fine color static patterns only (assigns the deficit to the wrong visual pathway stage)",
+      "Olfactory combinations (assigns the deficit to the wrong visual pathway stage)",
+      "Proprioception from muscle spindles (assigns the deficit to the wrong visual pathway stage)"
     ],
     correct: 0,
     explanation: "M pathway: motion/transient; P pathway: color/fine detail (MCB80x contrast).",
@@ -1830,9 +1830,9 @@ const PART3_EXTRA_POOL = [
     question: "Parvocellular LGN neurons project mainly to:",
     options: [
       "Primary visual cortex (V1) layer 4Cβ (classic geniculate input)",
-      "Cerebellar cortex only",
-      "Spinal cord ventral horn exclusively",
-      "Olfactory bulb"
+      "Cerebellar cortex only (assigns the deficit to the wrong visual pathway stage)",
+      "Spinal cord ventral horn exclusively (assigns the deficit to the wrong visual pathway stage)",
+      "Olfactory bulb (assigns the deficit to the wrong visual pathway stage)"
     ],
     correct: 0,
     explanation: "P cells drive detailed form/color processing in V1.",
@@ -1848,9 +1848,9 @@ const PART3_EXTRA_POOL = [
     question: "Orientation selectivity in V1 simple cells arises partly from:",
     options: [
       "Spatially offset ON/OFF subregions in receptive fields",
-      "Random channel noise only",
-      "Myelin orientation",
-      "Cochlear tonotopy"
+      "Random channel noise only (does not follow from the mechanism implied in the stem)",
+      "Myelin orientation (does not follow from the mechanism implied in the stem)",
+      "Cochlear tonotopy (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Hubel & Wiesel: elongated subfields produce orientation tuning.",
@@ -1884,9 +1884,9 @@ const PART3_EXTRA_POOL = [
     question: "Frequency tuning in the cochlea basilar membrane follows:",
     options: [
       "Tonotopic organization (location maps frequency)",
-      "Random placement without order",
-      "Only olfactory glomeruli rules",
-      "Retinal eccentricity"
+      "Random placement without order (confuses cochlear place coding with an unrelated modality)",
+      "Only olfactory glomeruli rules (confuses cochlear place coding with an unrelated modality)",
+      "Retinal eccentricity (confuses cochlear place coding with an unrelated modality)"
     ],
     correct: 0,
     explanation: "Basilar membrane stiffness varies along length, mapping frequency.",
@@ -1902,9 +1902,9 @@ const PART3_EXTRA_POOL = [
     question: "Inner hair cells transduce sound via:",
     options: [
       "Mechanotransduction channels opened by tip-link tension",
-      "Rhodopsin and cGMP",
-      "Nicotinic ACh at NMJ",
-      "Gap junctions to photoreceptors"
+      "Rhodopsin and cGMP (confuses cochlear place coding with an unrelated modality)",
+      "Nicotinic ACh at NMJ (confuses cochlear place coding with an unrelated modality)",
+      "Gap junctions to photoreceptors (confuses cochlear place coding with an unrelated modality)"
     ],
     correct: 0,
     explanation: "Stereocilia deflection opens ion channels in hair cells.",
@@ -1920,9 +1920,9 @@ const PART3_EXTRA_POOL = [
     question: "The auditory nerve encodes sound intensity largely by:",
     options: [
       "Increased firing rate in cochlear nerve fibers",
-      "Changing myelin color",
-      "Only inhibitory synapses without spikes",
-      "Releasing dopamine in the cochlea"
+      "Changing myelin color (confuses cochlear place coding with an unrelated modality)",
+      "Only inhibitory synapses without spikes (confuses cochlear place coding with an unrelated modality)",
+      "Releasing dopamine in the cochlea (confuses cochlear place coding with an unrelated modality)"
     ],
     correct: 0,
     explanation: "Louder sounds generally drive higher spike rates in auditory nerve.",
@@ -1956,9 +1956,9 @@ const PART3_EXTRA_POOL = [
     question: "Meissner corpuscles in skin are most sensitive to:",
     options: [
       "Light touch and flutter (low-amplitude movement)",
-      "Deep pressure only",
-      "No temperature change ever",
-      "Visual motion"
+      "Deep pressure only (does not follow from the mechanism implied in the stem)",
+      "No temperature change ever (does not follow from the mechanism implied in the stem)",
+      "Visual motion (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Meissner endings detect fine tactile vibrations.",
@@ -1974,9 +1974,9 @@ const PART3_EXTRA_POOL = [
     question: "Pacinian corpuscles respond best to:",
     options: [
       "High-frequency vibration and deep pressure transients",
-      "Static hair position only",
-      "Bitter taste",
-      "Red-green color opponency"
+      "Static hair position only (does not follow from the mechanism implied in the stem)",
+      "Bitter taste (does not follow from the mechanism implied in the stem)",
+      "Red-green color opponency (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Pacinian fibers are rapidly adapting vibration detectors.",
@@ -2010,9 +2010,9 @@ const PART3_EXTRA_POOL = [
     question: "Nociceptive Aδ fibers are:",
     options: [
       "Myelinated and conduct sharp, fast pain",
-      "Unmyelinated C fibers exclusively",
-      "Only found in retina",
-      "Purely electrical synapses"
+      "Unmyelinated C fibers exclusively (does not follow from the mechanism implied in the stem)",
+      "Only found in retina (does not follow from the mechanism implied in the stem)",
+      "Purely electrical synapses (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Aδ fibers mediate first, localized pain; C fibers mediate slow burning pain.",
@@ -2027,10 +2027,10 @@ const PART3_EXTRA_POOL = [
     topic: "Pain",
     question: "Gate control theory proposes:",
     options: [
-      "Spinal circuitry can modulate pain transmission (e.g., touch inputs affecting nociceptive relay)",
+      "Spinal circuitry can modulate pain transmission",
       "Pain is purely cortical with no spinal component",
-      "Only myelin gates pain always open",
-      "NMDA is absent in pain pathways"
+      "Only myelin gates pain always open (does not follow from the mechanism implied in the stem)",
+      "NMDA is absent in pain pathways (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Inhibitory interneurons in dorsal horn can gate pain signals.",
@@ -2046,9 +2046,9 @@ const PART3_EXTRA_POOL = [
     question: "Golgi tendon organs signal:",
     options: [
       "Muscle tension (force) at the tendon",
-      "Retinal illuminance",
-      "Olfactory concentration only",
-      "Cochlear phase"
+      "Retinal illuminance (does not follow from the mechanism implied in the stem)",
+      "Olfactory concentration only (does not follow from the mechanism implied in the stem)",
+      "Cochlear phase (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "GTOs inhibit excessive force via Ib afferents.",
@@ -2064,9 +2064,9 @@ const PART3_EXTRA_POOL = [
     question: "Mitral/tufted cells in the bulb send output to:",
     options: [
       "Olfactory cortex (piriform and related areas)",
-      "Primary visual cortex exclusively",
-      "Cochlear nucleus only",
-      "Spinal motor pools only"
+      "Primary visual cortex exclusively (does not follow from the mechanism implied in the stem)",
+      "Cochlear nucleus only (does not follow from the mechanism implied in the stem)",
+      "Spinal motor pools only (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Bulb principal cells relay odor info to cortex.",
@@ -2082,9 +2082,9 @@ const PART3_EXTRA_POOL = [
     question: "Umami taste is transduced largely through:",
     options: [
       "T1R1/T1R3 heterodimer taste GPCRs on taste receptor cells",
-      "Metabotropic glutamate receptors (mGluRs) in cortex",
-      "Rhodopsin in taste buds",
-      "Hair cell tip links"
+      "Metabotropic glutamate receptors (mGluRs) in cortex (does not follow from the mechanism implied in the stem)",
+      "Rhodopsin in taste buds (does not follow from the mechanism implied in the stem)",
+      "Hair cell tip links (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Umami (glutamate/nucleotides) is detected by the T1R1+T1R3 taste GPCR, not by brain mGluRs.",
@@ -2100,9 +2100,9 @@ const PART3_EXTRA_POOL = [
     question: "The blood-brain barrier restricts passage mainly at:",
     options: [
       "Cerebral endothelial tight junctions (with astrocyte endfeet support)",
-      "Nodes of Ranvier exclusively",
-      "Photoreceptor outer segments only",
-      "NMJ synaptic cleft"
+      "Nodes of Ranvier exclusively (localizes the function to the wrong brain region)",
+      "Photoreceptor outer segments only (localizes the function to the wrong brain region)",
+      "NMJ synaptic cleft (localizes the function to the wrong brain region)"
     ],
     correct: 0,
     explanation: "Endothelial tight junctions limit paracellular diffusion into CNS.",
@@ -2136,9 +2136,9 @@ const PART3_EXTRA_POOL = [
     question: "The corpus callosum connects:",
     options: [
       "Left and right cerebral hemispheres",
-      "Spinal cord to cerebellum only",
-      "Cochlea to retina",
-      "Olfactory bulb to tongue"
+      "Spinal cord to cerebellum only (localizes the function to the wrong brain region)",
+      "Cochlea to retina (localizes the function to the wrong brain region)",
+      "Olfactory bulb to tongue (localizes the function to the wrong brain region)"
     ],
     correct: 0,
     explanation: "Commissural fibers integrate bilateral cortex.",
@@ -2154,9 +2154,9 @@ const PART3_EXTRA_POOL = [
     question: "Basal ganglia loops (cortex–striatum–GP/SN–thalamus) are critical for:",
     options: [
       "Action selection and habit learning",
-      "Phototransduction exclusively",
-      "Cochlear tuning only",
-      "Pain fiber myelination"
+      "Phototransduction exclusively (localizes the function to the wrong brain region)",
+      "Cochlear tuning only (localizes the function to the wrong brain region)",
+      "Pain fiber myelination (localizes the function to the wrong brain region)"
     ],
     correct: 0,
     explanation: "MCB80x links basal ganglia to movement and reinforcement.",
@@ -2190,9 +2190,9 @@ const PART3_EXTRA_POOL = [
     question: "Cerebellum is heavily involved in:",
     options: [
       "Error correction, coordination, and some forms of motor learning",
-      "Initial phototransduction",
-      "Olfactory receptor choice",
-      "Only pain transmission"
+      "Initial phototransduction (localizes the function to the wrong brain region)",
+      "Olfactory receptor choice (localizes the function to the wrong brain region)",
+      "Only pain transmission (localizes the function to the wrong brain region)"
     ],
     correct: 0,
     explanation: "Cerebellar circuits fine-tune movement and timing.",
@@ -2208,9 +2208,9 @@ const PART3_EXTRA_POOL = [
     question: "Thalamus functions as:",
     options: [
       "A relay and gate for sensory information to cortex (and cortical loops)",
-      "The sole site of rhodopsin expression",
-      "Myelin factory for peripheral nerves only",
-      "Only respiratory CPG without sensory role"
+      "The sole site of rhodopsin expression (localizes the function to the wrong brain region)",
+      "Myelin factory for peripheral nerves only (localizes the function to the wrong brain region)",
+      "Only respiratory CPG without sensory role (localizes the function to the wrong brain region)"
     ],
     correct: 0,
     explanation: "Thalamic nuclei route sensory and motor-related signals.",
@@ -2226,9 +2226,9 @@ const PART3_EXTRA_POOL = [
     question: "Lower motor neurons in ventral horn:",
     options: [
       "Innervate skeletal muscle fibers directly",
-      "Project to LGN only",
-      "Encode sound frequency",
-      "Release rhodopsin"
+      "Project to LGN only (maps the lesion to the wrong motor pathway or reflex)",
+      "Encode sound frequency (maps the lesion to the wrong motor pathway or reflex)",
+      "Release rhodopsin (maps the lesion to the wrong motor pathway or reflex)"
     ],
     correct: 0,
     explanation: "LMNs are the final common path to muscle.",
@@ -2262,9 +2262,9 @@ const PART3_EXTRA_POOL = [
     question: "Prefrontal cortex is associated with:",
     options: [
       "Working memory, planning, and executive control",
-      "Cochlear basilar stiffness only",
-      "Rhodopsin regeneration exclusively",
-      "Pacinian vibration transduction"
+      "Cochlear basilar stiffness only (does not follow from the mechanism implied in the stem)",
+      "Rhodopsin regeneration exclusively (does not follow from the mechanism implied in the stem)",
+      "Pacinian vibration transduction (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "PFC supports higher cognitive control and working memory.",
@@ -2280,9 +2280,9 @@ const PART3_EXTRA_POOL = [
     question: "Working memory differs from long-term memory in that it:",
     options: [
       "Holds information transiently for ongoing behavior",
-      "Is stored permanently after one spike",
-      "Exists only in peripheral nerves",
-      "Requires myelin in olfactory bulb"
+      "Is stored permanently after one spike (does not follow from the mechanism implied in the stem)",
+      "Exists only in peripheral nerves (does not follow from the mechanism implied in the stem)",
+      "Requires myelin in olfactory bulb (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Working memory is temporary; LTM involves lasting synaptic/anatomic changes.",
@@ -2298,9 +2298,9 @@ const PART3_EXTRA_POOL = [
     question: "Declarative memory is typically associated with:",
     options: [
       "Hippocampus and medial temporal lobe structures",
-      "Only cerebellar cortex for all memories",
-      "Cochlear nucleus exclusively",
-      "Skin Meissner corpuscles"
+      "Only cerebellar cortex for all memories (does not follow from the mechanism implied in the stem)",
+      "Cochlear nucleus exclusively (does not follow from the mechanism implied in the stem)",
+      "Skin Meissner corpuscles (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Explicit facts/events depend on medial temporal lobe circuits.",
@@ -2316,9 +2316,9 @@ const PART3_EXTRA_POOL = [
     question: "Procedural memory (skills/habits) involves strongly:",
     options: [
       "Basal ganglia and cerebellum among other areas",
-      "Only retina photoreceptors",
-      "Olfactory glomeruli alone",
-      "Free nerve endings exclusively"
+      "Only retina photoreceptors (does not follow from the mechanism implied in the stem)",
+      "Olfactory glomeruli alone (does not follow from the mechanism implied in the stem)",
+      "Free nerve endings exclusively (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Motor skills and habits engage striatum/cerebellum.",
@@ -2334,9 +2334,9 @@ const PART3_EXTRA_POOL = [
     question: "The amygdala contributes to memory by:",
     options: [
       "Emotional salience and fear conditioning associations",
-      "Tonotopic mapping",
-      "Photoreceptor dark current",
-      "NMJ acetylcholinesterase"
+      "Tonotopic mapping (does not follow from the mechanism implied in the stem)",
+      "Assigns an unrelated sensory or synaptic mechanism to this context",
+      "NMJ acetylcholinesterase (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Amygdala modulates emotional memory strength.",
@@ -2352,9 +2352,9 @@ const PART3_EXTRA_POOL = [
     question: "Consolidation transfers labile memory to stable storage over:",
     options: [
       "Hours to years via systems and synaptic mechanisms",
-      "One millisecond only",
-      "Only during sleep never",
-      "Only in myelin"
+      "One millisecond only (does not follow from the mechanism implied in the stem)",
+      "Only during sleep never (does not follow from the mechanism implied in the stem)",
+      "Only in myelin (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Consolidation includes synaptic and systems-level reorganization.",
@@ -2370,9 +2370,9 @@ const PART3_EXTRA_POOL = [
     question: "Morris water maze tests primarily:",
     options: [
       "Spatial learning dependent on hippocampus in rodents",
-      "Color vision in flies only",
-      "Cochlear phase locking exclusively",
-      "Olfactory one-receptor rule"
+      "Color vision in flies only (does not follow from the mechanism implied in the stem)",
+      "Cochlear phase locking exclusively (does not follow from the mechanism implied in the stem)",
+      "Olfactory one-receptor rule (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Hidden platform task assesses hippocampal-dependent navigation.",
@@ -2388,9 +2388,9 @@ const PART3_EXTRA_POOL = [
     question: "Patient H.M.-like medial temporal lobe damage impairs:",
     options: [
       "New declarative memories while leaving much procedural learning intact",
-      "All sensation including touch",
-      "Myelin formation in CNS",
-      "Dark current in photoreceptors"
+      "All sensation including touch (does not follow from the mechanism implied in the stem)",
+      "Myelin formation in CNS (does not follow from the mechanism implied in the stem)",
+      "Dark current in photoreceptors (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Classic dissociation: anterograde declarative amnesia with spared skills.",
@@ -2406,9 +2406,9 @@ const PART3_EXTRA_POOL = [
     question: "Protein synthesis is often required for:",
     options: [
       "Long-lasting LTP/LTM (late phase), not early short-term changes only",
-      "Immediate reflex arcs only",
-      "Photoreceptor bleaching",
-      "Passive membrane τ"
+      "Immediate reflex arcs only (does not follow from the mechanism implied in the stem)",
+      "Photoreceptor bleaching (does not follow from the mechanism implied in the stem)",
+      "Passive membrane τ (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Late LTP and long-term memory need gene expression and new proteins.",
@@ -2424,9 +2424,9 @@ const PART3_EXTRA_POOL = [
     question: "Engram cells refer to:",
     options: [
       "Neurons whose activity participates in storing a specific memory trace",
-      "Only glial cells in white matter",
-      "Cochlear outer hair cells exclusively",
-      "All nociceptors uniformly"
+      "Only glial cells in white matter (does not follow from the mechanism implied in the stem)",
+      "Cochlear outer hair cells exclusively (does not follow from the mechanism implied in the stem)",
+      "All nociceptors uniformly (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Ensemble of neurons physically underlying a memory.",
@@ -2442,9 +2442,9 @@ const PART3_EXTRA_POOL = [
     question: "Multisensory integration in superior colliculus can produce:",
     options: [
       "Enhanced responses when auditory and visual stimuli coincide spatially",
-      "Loss of all retinal ON/OFF pathways",
-      "Only olfactory adaptation",
-      "Exclusive GABA_B signaling in muscle"
+      "Loss of all retinal ON/OFF pathways (does not follow from the mechanism implied in the stem)",
+      "Only olfactory adaptation (does not follow from the mechanism implied in the stem)",
+      "Exclusive GABA<sub>B</sub> signaling in muscle (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Cross-modal alignment can super-additive boost orienting responses.",
@@ -2478,9 +2478,9 @@ const PART3_EXTRA_POOL = [
     question: "Utricle and saccule detect:",
     options: [
       "Linear acceleration and head tilt (otolith organs)",
-      "High-frequency sound only",
-      "Olfactory concentration",
-      "Color wavelength exclusively"
+      "High-frequency sound only (does not follow from the mechanism implied in the stem)",
+      "Olfactory concentration (does not follow from the mechanism implied in the stem)",
+      "Color wavelength exclusively (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Otoliths sense gravity and linear acceleration.",
@@ -2496,9 +2496,9 @@ const PART3_EXTRA_POOL = [
     question: "Activity-dependent refinement of visual maps (e.g., ocular dominance) illustrates:",
     options: [
       "Hebbian/plastic mechanisms shaping circuits during critical periods",
-      "Fixed wiring with zero experience dependence always",
-      "Only myelin growth without synapses",
-      "Olfactory receptor switching each hour"
+      "Fixed wiring with zero experience dependence always (does not follow from the mechanism implied in the stem)",
+      "Only myelin growth without synapses (does not follow from the mechanism implied in the stem)",
+      "Olfactory receptor switching each hour (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Experience shapes connectivity during development (MCB80x visual system).",
@@ -2514,9 +2514,9 @@ const PART3_EXTRA_POOL = [
     question: "Prosopagnosia typically reflects dysfunction in:",
     options: [
       "Fusiform face area / ventral visual stream (face recognition)",
-      "Cochlear nucleus only",
-      "Stretch reflex arc exclusively",
-      "NMJ acetylcholine release only"
+      "Cochlear nucleus only (does not follow from the mechanism implied in the stem)",
+      "Stretch reflex arc exclusively (does not follow from the mechanism implied in the stem)",
+      "NMJ acetylcholine release only (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Face recognition deficits implicate specialized ventral visual cortex.",
@@ -2532,9 +2532,9 @@ const PART3_EXTRA_POOL = [
     question: "Hemianopia after post-chiasmal lesion reflects:",
     options: [
       "Loss of contralateral visual field representation",
-      "Complete blindness in both eyes always",
-      "Only olfactory loss",
-      "Deafness without cochlear damage"
+      "Complete blindness in both eyes always (does not follow from the mechanism implied in the stem)",
+      "Only olfactory loss (does not follow from the mechanism implied in the stem)",
+      "Deafness without cochlear damage (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
     explanation: "Optic tract/radiation/cortex lesions cause contralateral field defects.",
@@ -2546,4 +2546,3 @@ const PART3_EXTRA_POOL = [
     ]
   }
 ];
-

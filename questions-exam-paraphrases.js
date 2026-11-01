@@ -11,49 +11,31 @@ const PART1_EXAM_PARAPHRASE_POOL = [
       "Efflux of Ca²⁺ through voltage-gated calcium channels"
     ],
     correct: 1,
-    explanation: "Voltage-gated Na⁺ channels open at threshold, producing rapid Na⁺ influx that drives the upswing of the action potential.",
-    wrongExplanations: [
-      "This option is inconsistent with the stem; the keyed answer (Influx of Na⁺ through voltage-gated sodium channels) matches the underlying mechanism.",
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Influx of Na⁺ through voltage-gated sodium channels) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Influx of Na⁺ through voltage-gated sodium channels) matches the underlying mechanism."
-    ]
+    explanation: "Voltage-gated Na⁺ channels open at threshold, producing rapid Na⁺ influx that drives the upswing of the action potential."
   },
   {
     topic: "Action Potentials",
     question: "In the phase associated with the falling phase of an action potential, which ionic current dominates?",
     options: [
-      "Na⁺ influx through open sodium channels",
+      "Na⁺ influx through open sodium channels (does not follow from the mechanism implied in the stem)",
       "K⁺ efflux through voltage-gated potassium channels",
-      "Ca²⁺ influx through N-type channels",
-      "Cl⁻ influx through GABA receptors"
+      "Ca²⁺ influx through N-type channels (does not follow from the mechanism implied in the stem)",
+      "Cl⁻ influx through GABA receptors (does not follow from the mechanism implied in the stem)"
     ],
     correct: 1,
-    explanation: "Voltage-gated K⁺ channels open during repolarization, allowing K⁺ efflux that returns the membrane toward its resting potential.",
-    wrongExplanations: [
-      "This option is inconsistent with the stem; the keyed answer (K⁺ efflux through voltage-gated potassium channels) matches the underlying mechanism.",
-      "",
-      "This option is inconsistent with the stem; the keyed answer (K⁺ efflux through voltage-gated potassium channels) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (K⁺ efflux through voltage-gated potassium channels) matches the underlying mechanism."
-    ]
+    explanation: "Voltage-gated K⁺ channels open during repolarization, allowing K⁺ efflux that returns the membrane toward its resting potential."
   },
   {
     topic: "Action Potential Propagation",
     question: "Myelination of an axon mainly increases:",
     options: [
-      "The resting membrane potential",
+      "The resting membrane potential (misapplies how active propagation uses local circuit currents)",
       "The speed of action potential propagation",
       "The number of synaptic vesicles released",
-      "The equilibrium potential for Na⁺"
+      "The equilibrium potential for Na⁺ (misapplies how active propagation uses local circuit currents)"
     ],
     correct: 1,
-    explanation: "Myelin reduces membrane capacitance and enables saltatory conduction, allowing faster propagation of action potentials.",
-    wrongExplanations: [
-      "This option is inconsistent with the stem; the keyed answer (The speed of action potential propagation) matches the underlying mechanism.",
-      "",
-      "This option is inconsistent with the stem; the keyed answer (The speed of action potential propagation) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (The speed of action potential propagation) matches the underlying mechanism."
-    ]
+    explanation: "Myelin reduces membrane capacitance and enables saltatory conduction, allowing faster propagation of action potentials."
   },
   {
     topic: "Resting Potential",
@@ -65,13 +47,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
       "The Cl⁻ equilibrium potential only"
     ],
     correct: 1,
-    explanation: "Resting potential is weighted toward the equilibrium potential of the ion with highest permeability; dominant K⁺ leak channels place V_m near E_K.",
-    wrongExplanations: [
-      "This option is inconsistent with the stem; the keyed answer (The K⁺ equilibrium potential) matches the underlying mechanism.",
-      "",
-      "This option is inconsistent with the stem; the keyed answer (The K⁺ equilibrium potential) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (The K⁺ equilibrium potential) matches the underlying mechanism."
-    ]
+    explanation: "Resting potential is weighted toward the equilibrium potential of the ion with highest permeability; dominant K⁺ leak channels place V_m near E_K."
   },
   {
     topic: "Nernst Equation",
@@ -83,49 +59,31 @@ const PART1_EXAM_PARAPHRASE_POOL = [
       "Is unaffected by concentration changes"
     ],
     correct: 1,
-    explanation: "The Nernst equation predicts that raising external K⁺ reduces the concentration gradient, shifting E_K toward 0 mV.",
-    wrongExplanations: [
-      "This option is inconsistent with the stem; the keyed answer (Becomes less negative (moves toward 0 mV)) matches the underlying mechanism.",
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Becomes less negative (moves toward 0 mV)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Becomes less negative (moves toward 0 mV)) matches the underlying mechanism."
-    ]
+    explanation: "The Nernst equation predicts that raising external K⁺ reduces the concentration gradient, shifting E_K toward 0 mV."
   },
   {
     topic: "Action Potentials",
     question: "In the phase associated with the relative refractory period, a larger-than-normal depolarizing stimulus may still trigger a spike because:",
     options: [
       "Inactivated Na⁺ channels are recovering and fewer channels are available",
-      "All K⁺ channels are permanently closed",
-      "Myelin is absent at the axon hillock",
-      "The Na⁺/K⁺ pump stops functioning"
+      "All K⁺ channels are permanently closed (does not follow from the mechanism implied in the stem)",
+      "Myelin is absent at the axon hillock (does not follow from the mechanism implied in the stem)",
+      "The Na⁺/K⁺ pump stops functioning (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
-    explanation: "Partial recovery of Na⁺ channels from inactivation during the relative refractory period requires stronger stimulation to reach threshold.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Inactivated Na⁺ channels are recovering and fewer channels are available) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Inactivated Na⁺ channels are recovering and fewer channels are available) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Inactivated Na⁺ channels are recovering and fewer channels are available) matches the underlying mechanism."
-    ]
+    explanation: "Partial recovery of Na⁺ channels from inactivation during the relative refractory period requires stronger stimulation to reach threshold."
   },
   {
     topic: "Action Potentials",
     question: "The falling phase of the action potential is driven mainly by delayed-rectifier K⁺ channels because they:",
     options: [
       "Open with slower kinetics than the initial Na⁺ surge and carry outward current",
-      "Permit massive Na⁺ influx",
-      "Block all Cl⁻ conductance permanently",
-      "Pump Ca²⁺ into the cytosol"
+      "Permit massive Na⁺ influx (does not follow from the mechanism implied in the stem)",
+      "Block all Cl⁻ conductance permanently (does not follow from the mechanism implied in the stem)",
+      "Pump Ca²⁺ into the cytosol (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
-    explanation: "Delayed-rectifier K⁺ channels activate during the spike and repolarize the membrane through K⁺ efflux.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Open with slower kinetics than the initial Na⁺ surge and carry outward current) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Open with slower kinetics than the initial Na⁺ surge and carry outward current) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Open with slower kinetics than the initial Na⁺ surge and carry outward current) matches the underlying mechanism."
-    ]
+    explanation: "Delayed-rectifier K⁺ channels activate during the spike and repolarize the membrane through K⁺ efflux."
   },
   {
     topic: "Action Potential Propagation",
@@ -133,17 +91,11 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     options: [
       "Increasing the number of voltage-gated channels per unit length",
       "Reducing effective membrane capacitance and limiting active regeneration to nodes",
-      "Raising the resting membrane potential above 0 mV",
-      "Blocking all passive current flow"
+      "Raising the resting membrane potential above 0 mV (misapplies how active propagation uses local circuit currents)",
+      "Blocking all passive current flow (misapplies how active propagation uses local circuit currents)"
     ],
     correct: 1,
-    explanation: "Myelin insulation lowers capacitive load and confines ion channel activity to nodes, enabling faster saltatory propagation.",
-    wrongExplanations: [
-      "This option is inconsistent with the stem; the keyed answer (Reducing effective membrane capacitance and limiting active regeneration to nodes) matches the underlying mechanism.",
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Reducing effective membrane capacitance and limiting active regeneration to nodes) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Reducing effective membrane capacitance and limiting active regeneration to nodes) matches the underlying mechanism."
-    ]
+    explanation: "Myelin insulation lowers capacitive load and confines ion channel activity to nodes, enabling faster saltatory propagation."
   },
   {
     topic: "Electrical Signaling",
@@ -155,13 +107,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
       "The reversal potential of gap junction channels, not voltage-gated cation channels"
     ],
     correct: 1,
-    explanation: "The Goldman equation weights each ion's equilibrium potential by relative permeability; high P_Na drives V_m toward E_Na.",
-    wrongExplanations: [
-      "This option is inconsistent with the stem; the keyed answer (The sodium reversal potential (E_Na), weighted by high relative Na⁺ permeability) matches the underlying mechanism.",
-      "",
-      "This option is inconsistent with the stem; the keyed answer (The sodium reversal potential (E_Na), weighted by high relative Na⁺ permeability) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (The sodium reversal potential (E_Na), weighted by high relative Na⁺ permeability) matches the underlying mechanism."
-    ]
+    explanation: "The Goldman equation weights each ion's equilibrium potential by relative permeability; high P_Na drives V_m toward E_Na."
   },
   {
     topic: "Passive Membrane Properties",
@@ -173,67 +119,43 @@ const PART1_EXAM_PARAPHRASE_POOL = [
       "Immediate action potential firing at all stimulus amplitudes"
     ],
     correct: 1,
-    explanation: "A larger τ (R_m × C_m) slows the charging of the membrane capacitance, delaying voltage change.",
-    wrongExplanations: [
-      "This option is inconsistent with the stem; the keyed answer (A slower rise to steady-state voltage) matches the underlying mechanism.",
-      "",
-      "This option is inconsistent with the stem; the keyed answer (A slower rise to steady-state voltage) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (A slower rise to steady-state voltage) matches the underlying mechanism."
-    ]
+    explanation: "A larger τ (R_m × C_m) slows the charging of the membrane capacitance, delaying voltage change."
   },
   {
     topic: "Resting Potential",
     question: "What mainly sets the ion concentration gradients that establish the resting potential?",
     options: [
       "The Na⁺/K⁺ ATPase maintaining Na⁺ and K⁺ gradients",
-      "Voltage-gated channels at the axon hillock only",
-      "Synaptic vesicle recycling",
-      "Photoreceptor cGMP channels"
+      "Voltage-gated channels at the axon hillock only (ignores which ion dominates resting permeability)",
+      "Synaptic vesicle recycling (ignores which ion dominates resting permeability)",
+      "Photoreceptor cGMP channels (ignores which ion dominates resting permeability)"
     ],
     correct: 0,
-    explanation: "The Na⁺/K⁺ pump establishes the concentration gradients that drive passive ion flux at rest.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (The Na⁺/K⁺ ATPase maintaining Na⁺ and K⁺ gradients) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (The Na⁺/K⁺ ATPase maintaining Na⁺ and K⁺ gradients) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (The Na⁺/K⁺ ATPase maintaining Na⁺ and K⁺ gradients) matches the underlying mechanism."
-    ]
+    explanation: "The Na⁺/K⁺ pump establishes the concentration gradients that drive passive ion flux at rest."
   },
   {
     topic: "Neuromodulation",
     question: "Dopamine modulates striatal circuits mainly through:",
     options: [
       "Metabotropic D1 and D2 receptors altering cAMP and channel activity",
-      "Direct ionotropic pores with millisecond kinetics only",
-      "Gap junctions between photoreceptors",
-      "Voltage-gated Na⁺ channels in the cochlea"
+      "Direct ionotropic pores with millisecond kinetics only (does not follow from the mechanism implied in the stem)",
+      "Gap junctions between photoreceptors (does not follow from the mechanism implied in the stem)",
+      "Voltage-gated Na⁺ channels in the cochlea (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
-    explanation: "Dopamine acts through G-protein-coupled receptors to modulate excitability and plasticity.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Metabotropic D1 and D2 receptors altering cAMP and channel activity) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Metabotropic D1 and D2 receptors altering cAMP and channel activity) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Metabotropic D1 and D2 receptors altering cAMP and channel activity) matches the underlying mechanism."
-    ]
+    explanation: "Dopamine acts through G-protein-coupled receptors to modulate excitability and plasticity."
   },
   {
     topic: "Visual System",
     question: "Rods are more sensitive than cones mainly because:",
     options: [
       "They express higher levels of photopigment and converge on bipolar cells",
-      "They respond only to bright daylight",
-      "They lack cGMP-gated channels",
+      "They respond only to bright daylight (assigns the deficit to the wrong visual pathway stage)",
+      "They lack cGMP-gated channels (assigns the deficit to the wrong visual pathway stage)",
       "They fire action potentials with higher amplitude always"
     ],
     correct: 0,
-    explanation: "Rod convergence and high photopigment density support scotopic vision.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (They express higher levels of photopigment and converge on bipolar cells) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (They express higher levels of photopigment and converge on bipolar cells) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (They express higher levels of photopigment and converge on bipolar cells) matches the underlying mechanism."
-    ]
+    explanation: "Rod convergence and high photopigment density support scotopic vision."
   },
   {
     topic: "Neuroanatomy",
@@ -245,31 +167,19 @@ const PART1_EXAM_PARAPHRASE_POOL = [
       "Photoreceptor outer segments only"
     ],
     correct: 0,
-    explanation: "Gray matter is rich in neuronal somata and synaptic neuropil.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Neuronal cell bodies, dendrites, and synapses) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Neuronal cell bodies, dendrites, and synapses) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Neuronal cell bodies, dendrites, and synapses) matches the underlying mechanism."
-    ]
+    explanation: "Gray matter is rich in neuronal somata and synaptic neuropil."
   },
   {
     topic: "Synaptic Integration",
     question: "Shunting inhibition reduces EPSP amplitude mainly by:",
     options: [
       "Lowering input resistance and diverting current",
-      "Opening Na⁺ channels at the axon hillock",
-      "Increasing length constant indefinitely",
-      "Blocking the Na⁺/K⁺ pump"
+      "Opening Na⁺ channels at the axon hillock (ignores how EPSPs/IPSPs sum in time or space)",
+      "Increasing length constant indefinitely (ignores how EPSPs/IPSPs sum in time or space)",
+      "Blocking the Na⁺/K⁺ pump (ignores how EPSPs/IPSPs sum in time or space)"
     ],
     correct: 0,
-    explanation: "Increased conductance lowers input resistance, shunting depolarizing current and shrinking EPSPs.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Lowering input resistance and diverting current) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Lowering input resistance and diverting current) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Lowering input resistance and diverting current) matches the underlying mechanism."
-    ]
+    explanation: "Increased conductance lowers input resistance, shunting depolarizing current and shrinking EPSPs."
   },
   {
     topic: "Somatosensation",
@@ -281,13 +191,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
       "Photons of visible light"
     ],
     correct: 0,
-    explanation: "Free nerve endings are nociceptors and thermoreceptors for pain and temperature.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Pain and temperature) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Pain and temperature) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Pain and temperature) matches the underlying mechanism."
-    ]
+    explanation: "Free nerve endings are nociceptors and thermoreceptors for pain and temperature."
   },
   {
     topic: "Olfaction",
@@ -299,13 +203,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
       "Nicotinic acetylcholine receptors exclusively"
     ],
     correct: 0,
-    explanation: "One-receptor-per-neuron rule supports combinatorial odor coding in the bulb.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (One functional odor receptor type) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (One functional odor receptor type) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (One functional odor receptor type) matches the underlying mechanism."
-    ]
+    explanation: "One-receptor-per-neuron rule supports combinatorial odor coding in the bulb."
   },
   {
     topic: "Neuroanatomy",
@@ -317,31 +215,19 @@ const PART1_EXAM_PARAPHRASE_POOL = [
       "Photoreceptor outer segments"
     ],
     correct: 0,
-    explanation: "White matter is dominated by myelinated axon bundles connecting brain regions.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Myelinated axons) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Myelinated axons) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Myelinated axons) matches the underlying mechanism."
-    ]
+    explanation: "White matter is dominated by myelinated axon bundles connecting brain regions."
   },
   {
     topic: "Neuroanatomy",
     question: "The blood-brain barrier restricts passage of many substances mainly at:",
     options: [
       "CNS capillary endothelial tight junctions",
-      "Nodes of Ranvier in peripheral nerve",
+      "Nodes of Ranvier in peripheral nerve (localizes the function to the wrong brain region)",
       "Synaptic clefts of all chemical synapses",
-      "Photoreceptor outer segments"
+      "Photoreceptor outer segments (localizes the function to the wrong brain region)"
     ],
     correct: 0,
-    explanation: "Tight junctions between CNS endothelial cells limit paracellular diffusion into brain tissue.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (CNS capillary endothelial tight junctions) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (CNS capillary endothelial tight junctions) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (CNS capillary endothelial tight junctions) matches the underlying mechanism."
-    ]
+    explanation: "Tight junctions between CNS endothelial cells limit paracellular diffusion into brain tissue."
   },
   {
     topic: "Current Clamp",
@@ -353,31 +239,19 @@ const PART1_EXAM_PARAPHRASE_POOL = [
       "Block the Na⁺/K⁺ pump permanently"
     ],
     correct: 0,
-    explanation: "Hyperpolarizing current makes the cell more negative, increasing distance to spike threshold.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Move V_m away from threshold) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Move V_m away from threshold) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Move V_m away from threshold) matches the underlying mechanism."
-    ]
+    explanation: "Hyperpolarizing current makes the cell more negative, increasing distance to spike threshold."
   },
   {
     topic: "Pharmacology",
     question: "Tetrodotoxin (TTX) applied to an axon prevents action potentials mainly by:",
     options: [
       "Blocking voltage-gated Na⁺ channels",
-      "Blocking voltage-gated K⁺ channels",
-      "Inhibiting the Na⁺/K⁺ ATPase",
-      "Sealing gap junctions"
+      "Blocking voltage-gated K⁺ channels (does not follow from the mechanism implied in the stem)",
+      "Inhibiting the Na⁺/K⁺ ATPase (does not follow from the mechanism implied in the stem)",
+      "Sealing gap junctions (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
-    explanation: "TTX selectively blocks voltage-gated Na⁺ channels, preventing spike initiation and propagation.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Blocking voltage-gated Na⁺ channels) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Blocking voltage-gated Na⁺ channels) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Blocking voltage-gated Na⁺ channels) matches the underlying mechanism."
-    ]
+    explanation: "TTX selectively blocks voltage-gated Na⁺ channels, preventing spike initiation and propagation."
   },
   {
     topic: "Nernst Equation",
@@ -389,85 +263,55 @@ const PART1_EXAM_PARAPHRASE_POOL = [
       "Not at all because K⁺ is impermeant"
     ],
     correct: 0,
-    explanation: "The Nernst relation includes a log term; a fourfold outside change is about 61 mV × log10(4) ≈ 37 mV toward 0.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (~37 mV toward 0 mV (less negative)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (~37 mV toward 0 mV (less negative)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (~37 mV toward 0 mV (less negative)) matches the underlying mechanism."
-    ]
+    explanation: "The Nernst relation includes a log term; a fourfold outside change is about 61 mV × log10(4) ≈ 37 mV toward 0."
   },
   {
     topic: "Passive Membrane Properties",
     question: "Suppose that τ increases but λ is unchanged, subthreshold signals at the soma will:",
     options: [
       "Reach steady deflection more slowly but spread the same distance",
-      "Spread farther along dendrites",
-      "Always trigger full spikes",
-      "No longer decay passively"
+      "Spread farther along dendrites (misstates how R_m, C_m, or geometry set τ or λ)",
+      "Always trigger full spikes (misstates how R_m, C_m, or geometry set τ or λ)",
+      "No longer decay passively (misstates how R_m, C_m, or geometry set τ or λ)"
     ],
     correct: 0,
-    explanation: "τ = R_m C_m sets temporal filtering; λ sets spatial spread independently in idealized cable theory.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Reach steady deflection more slowly but spread the same distance) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Reach steady deflection more slowly but spread the same distance) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Reach steady deflection more slowly but spread the same distance) matches the underlying mechanism."
-    ]
+    explanation: "τ = R_m C_m sets temporal filtering; λ sets spatial spread independently in idealized cable theory."
   },
   {
     topic: "Goldman Equation",
     question: "Suppose that P_Cl becomes significant at rest and E_Cl is more negative than V_m, adding Cl⁻ conductance will:",
     options: [
       "Tend to hyperpolarize or stabilize V_m toward E_Cl",
-      "Always depolarize to E_Na",
-      "Have no effect because Cl⁻ is not charged",
-      "Reverse the Na⁺/K⁺ pump"
+      "Always depolarize to E_Na (ignores weighted permeabilities in the constant-field equation)",
+      "Have no effect because Cl⁻ is not charged (ignores weighted permeabilities in the constant-field equation)",
+      "Reverse the Na⁺/K⁺ pump (ignores weighted permeabilities in the constant-field equation)"
     ],
     correct: 0,
-    explanation: "Opening Cl⁻ conductance pulls V_m toward E_Cl, often hyperpolarizing when E_Cl is negative to rest.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Tend to hyperpolarize or stabilize V_m toward E_Cl) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Tend to hyperpolarize or stabilize V_m toward E_Cl) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Tend to hyperpolarize or stabilize V_m toward E_Cl) matches the underlying mechanism."
-    ]
+    explanation: "Opening Cl⁻ conductance pulls V_m toward E_Cl, often hyperpolarizing when E_Cl is negative to rest."
   },
   {
     topic: "Action Potentials",
     question: "In the phase associated with the relative refractory period, a second stimulus must be:",
     options: [
       "Stronger to reach threshold because many Na⁺ channels remain inactivated",
-      "Weaker because K⁺ channels are closed",
-      "Identical in strength always",
-      "Applied only to dendrites"
+      "Weaker because K⁺ channels are closed (does not follow from the mechanism implied in the stem)",
+      "Identical in strength always (does not follow from the mechanism implied in the stem)",
+      "Applied only to dendrites (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
-    explanation: "Partial Na⁺ channel inactivation raises the effective threshold for a second spike.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Stronger to reach threshold because many Na⁺ channels remain inactivated) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Stronger to reach threshold because many Na⁺ channels remain inactivated) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Stronger to reach threshold because many Na⁺ channels remain inactivated) matches the underlying mechanism."
-    ]
+    explanation: "Partial Na⁺ channel inactivation raises the effective threshold for a second spike."
   },
   {
     topic: "Resting Potential",
     question: "Suppose that the cell is permeable only to K⁺ at rest, V_m equals E_K. Adding a small Na⁺ leak without changing pump activity will:",
     options: [
       "Make V_m less negative (depolarized relative to E_K)",
-      "Make V_m equal E_Na instantly",
-      "Hyperpolarize below E_K always",
-      "Stop all ion movement"
+      "Make V_m equal E_Na instantly (ignores which ion dominates resting permeability)",
+      "Hyperpolarize below E_K always (ignores which ion dominates resting permeability)",
+      "Stop all ion movement (ignores which ion dominates resting permeability)"
     ],
     correct: 0,
-    explanation: "Na⁺ leak pulls resting potential toward E_Na, depolarizing from pure K⁺ rest.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Make V_m less negative (depolarized relative to E_K)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Make V_m less negative (depolarized relative to E_K)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Make V_m less negative (depolarized relative to E_K)) matches the underlying mechanism."
-    ]
+    explanation: "Na⁺ leak pulls resting potential toward E_Na, depolarizing from pure K⁺ rest."
   },
   {
     topic: "Action Potentials",
@@ -479,13 +323,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
       "Na⁺/K⁺ pump reverses direction"
     ],
     correct: 0,
-    explanation: "Lower temperature slows gating and diffusion, delaying spike propagation.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Channel kinetics and ion mobility slow) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Channel kinetics and ion mobility slow) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Channel kinetics and ion mobility slow) matches the underlying mechanism."
-    ]
+    explanation: "Lower temperature slows gating and diffusion, delaying spike propagation."
   },
   {
     topic: "Goldman Equation",
@@ -497,319 +335,139 @@ const PART1_EXAM_PARAPHRASE_POOL = [
       "Stop the Na+/K+ pump"
     ],
     correct: 0,
-    explanation: "Goldman weighting shifts V_m toward newly permeant ions.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Depolarize V_m toward E_Na) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Depolarize V_m toward E_Na) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Depolarize V_m toward E_Na) matches the underlying mechanism."
-    ]
+    explanation: "Goldman weighting shifts V_m toward newly permeant ions."
   },
   {
     topic: "Quantitative Physiology",
     question: "Suppose that E_K = -80 mV and E_Na = +60 mV, V_m at rest near -65 mV implies:",
     options: [
       "Resting permeability is dominated by K+ with some Na+ leak",
-      "Only Na+ channels are open",
-      "V_m equals E_Na",
-      "No ion gradients exist"
+      "Only Na+ channels are open (does not follow from the mechanism implied in the stem)",
+      "V_m equals E_Na (does not follow from the mechanism implied in the stem)",
+      "No ion gradients exist (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
-    explanation: "Rest lies closer to E_K when K+ permeability dominates.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Resting permeability is dominated by K+ with some Na+ leak) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Resting permeability is dominated by K+ with some Na+ leak) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Resting permeability is dominated by K+ with some Na+ leak) matches the underlying mechanism."
-    ]
+    explanation: "Rest lies closer to E_K when K+ permeability dominates."
   },
   {
     topic: "Passive Membrane Properties",
     question: "Suppose that membrane leak conductance increases by ~10% (R_m falls) with unchanged geometry, the length constant λ typically:",
     options: [
       "Becomes shorter (less spatial spread)",
-      "Becomes infinitely long",
-      "Does not change ever",
+      "Becomes infinitely long (misstates how R_m, C_m, or geometry set τ or λ)",
+      "Does not change ever (misstates how R_m, C_m, or geometry set τ or λ)",
       "Converts dendrites to photoreceptors"
     ],
     correct: 0,
-    explanation: "Higher leak (lower R_m) shortens λ, attenuating signals faster with distance.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Becomes shorter (less spatial spread)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Becomes shorter (less spatial spread)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Becomes shorter (less spatial spread)) matches the underlying mechanism."
-    ]
-  },
-  {
-    topic: "Passive Membrane Properties",
-    question: "Suppose that membrane leak conductance increases by ~25% (R_m falls) with unchanged geometry, the length constant λ typically:",
-    options: [
-      "Becomes shorter (less spatial spread)",
-      "Becomes infinitely long",
-      "Does not change ever",
-      "Converts dendrites to photoreceptors"
-    ],
-    correct: 0,
-    explanation: "Higher leak (lower R_m) shortens λ, attenuating signals faster with distance.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Becomes shorter (less spatial spread)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Becomes shorter (less spatial spread)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Becomes shorter (less spatial spread)) matches the underlying mechanism."
-    ]
-  },
-  {
-    topic: "Passive Membrane Properties",
-    question: "Suppose that membrane leak conductance increases by ~40% (R_m falls) with unchanged geometry, the length constant λ typically:",
-    options: [
-      "Becomes shorter (less spatial spread)",
-      "Becomes infinitely long",
-      "Does not change ever",
-      "Converts dendrites to photoreceptors"
-    ],
-    correct: 0,
-    explanation: "Higher leak (lower R_m) shortens λ, attenuating signals faster with distance.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Becomes shorter (less spatial spread)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Becomes shorter (less spatial spread)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Becomes shorter (less spatial spread)) matches the underlying mechanism."
-    ]
-  },
-  {
-    topic: "Passive Membrane Properties",
-    question: "Suppose that membrane leak conductance increases by ~60% (R_m falls) with unchanged geometry, the length constant λ typically:",
-    options: [
-      "Becomes shorter (less spatial spread)",
-      "Becomes infinitely long",
-      "Does not change ever",
-      "Converts dendrites to photoreceptors"
-    ],
-    correct: 0,
-    explanation: "Higher leak (lower R_m) shortens λ, attenuating signals faster with distance.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Becomes shorter (less spatial spread)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Becomes shorter (less spatial spread)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Becomes shorter (less spatial spread)) matches the underlying mechanism."
-    ]
-  },
-  {
-    topic: "Passive Membrane Properties",
-    question: "Suppose that membrane leak conductance increases by ~80% (R_m falls) with unchanged geometry, the length constant λ typically:",
-    options: [
-      "Becomes shorter (less spatial spread)",
-      "Becomes infinitely long",
-      "Does not change ever",
-      "Converts dendrites to photoreceptors"
-    ],
-    correct: 0,
-    explanation: "Higher leak (lower R_m) shortens λ, attenuating signals faster with distance.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Becomes shorter (less spatial spread)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Becomes shorter (less spatial spread)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Becomes shorter (less spatial spread)) matches the underlying mechanism."
-    ]
+    explanation: "Higher leak (lower R_m) shortens λ, attenuating signals faster with distance."
   },
   {
     topic: "Action Potentials",
     question: "In the phase associated with the threshold period/mechanism:",
     options: [
       "Net inward current exceeds outward current initiating regenerative Na⁺ entry",
-      "Myelin is synthesized in the soma",
-      "Only GABA is released globally",
-      "Photoreceptors depolarize to light"
+      "Myelin is synthesized in the soma (does not follow from the mechanism implied in the stem)",
+      "Only GABA is released globally (does not follow from the mechanism implied in the stem)",
+      "Photoreceptors depolarize to light (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
-    explanation: "Net inward current exceeds outward current initiating regenerative Na⁺ entry",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Net inward current exceeds outward current initiating regenerative Na⁺ entry) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Net inward current exceeds outward current initiating regenerative Na⁺ entry) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Net inward current exceeds outward current initiating regenerative Na⁺ entry) matches the underlying mechanism."
-    ]
+    explanation: "Net inward current exceeds outward current initiating regenerative Na⁺ entry"
   },
   {
     topic: "Action Potentials",
     question: "In the phase associated with the absolute refractory period/mechanism:",
     options: [
       "Many Na⁺ channels inactivated; no new spike possible",
-      "Myelin is synthesized in the soma",
-      "Only GABA is released globally",
-      "Photoreceptors depolarize to light"
+      "Myelin is synthesized in the soma (does not follow from the mechanism implied in the stem)",
+      "Only GABA is released globally (does not follow from the mechanism implied in the stem)",
+      "Photoreceptors depolarize to light (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
-    explanation: "Many Na⁺ channels inactivated; no new spike possible",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Many Na⁺ channels inactivated; no new spike possible) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Many Na⁺ channels inactivated; no new spike possible) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Many Na⁺ channels inactivated; no new spike possible) matches the underlying mechanism."
-    ]
+    explanation: "Many Na⁺ channels inactivated; no new spike possible"
   },
   {
     topic: "Action Potentials",
     question: "In the phase associated with the relative refractory period/mechanism:",
     options: [
       "Partial recovery requires stronger stimulus",
-      "Myelin is synthesized in the soma",
-      "Only GABA is released globally",
-      "Photoreceptors depolarize to light"
+      "Myelin is synthesized in the soma (does not follow from the mechanism implied in the stem)",
+      "Only GABA is released globally (does not follow from the mechanism implied in the stem)",
+      "Photoreceptors depolarize to light (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
-    explanation: "Partial recovery requires stronger stimulus",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Partial recovery requires stronger stimulus) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Partial recovery requires stronger stimulus) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Partial recovery requires stronger stimulus) matches the underlying mechanism."
-    ]
+    explanation: "Partial recovery requires stronger stimulus"
   },
   {
     topic: "Action Potentials",
     question: "In the phase associated with the afterhyperpolarization period/mechanism:",
     options: [
       "Delayed K⁺ (and sometimes Ca²⁺-activated K⁺) drives V_m below rest",
-      "Myelin is synthesized in the soma",
-      "Only GABA is released globally",
-      "Photoreceptors depolarize to light"
+      "Myelin is synthesized in the soma (does not follow from the mechanism implied in the stem)",
+      "Only GABA is released globally (does not follow from the mechanism implied in the stem)",
+      "Photoreceptors depolarize to light (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
-    explanation: "Delayed K⁺ (and sometimes Ca²⁺-activated K⁺) drives V_m below rest",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Delayed K⁺ (and sometimes Ca²⁺-activated K⁺) drives V_m below rest) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Delayed K⁺ (and sometimes Ca²⁺-activated K⁺) drives V_m below rest) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Delayed K⁺ (and sometimes Ca²⁺-activated K⁺) drives V_m below rest) matches the underlying mechanism."
-    ]
+    explanation: "Delayed K⁺ (and sometimes Ca²⁺-activated K⁺) drives V_m below rest"
   },
   {
     topic: "Action Potential Propagation",
     question: "Structure/condition: Unmyelinated axon. Key process and outcome:",
     options: [
       "Active regeneration along membrane; Non-decremental propagation",
-      "Only passive spread forever",
-      "Only cochlear tuning",
-      "Only LTP induction"
+      "Only passive spread forever (misapplies how active propagation uses local circuit currents)",
+      "Only cochlear tuning (misapplies how active propagation uses local circuit currents)",
+      "Only LTP induction (misapplies how active propagation uses local circuit currents)"
     ],
     correct: 0,
-    explanation: "Unmyelinated axon: Active regeneration along membrane → Non-decremental propagation.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Active regeneration along membrane; Non-decremental propagation) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Active regeneration along membrane; Non-decremental propagation) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Active regeneration along membrane; Non-decremental propagation) matches the underlying mechanism."
-    ]
+    explanation: "Unmyelinated axon: Active regeneration along membrane → Non-decremental propagation."
   },
   {
     topic: "Action Potential Propagation",
     question: "Structure/condition: Myelinated axon. Key process and outcome:",
     options: [
       "Nodes of Ranvier concentrate Na⁺ channels; Saltatory conduction",
-      "Only passive spread forever",
-      "Only cochlear tuning",
-      "Only LTP induction"
+      "Only passive spread forever (misapplies how active propagation uses local circuit currents)",
+      "Only cochlear tuning (misapplies how active propagation uses local circuit currents)",
+      "Only LTP induction (misapplies how active propagation uses local circuit currents)"
     ],
     correct: 0,
-    explanation: "Myelinated axon: Nodes of Ranvier concentrate Na⁺ channels → Saltatory conduction.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Nodes of Ranvier concentrate Na⁺ channels; Saltatory conduction) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Nodes of Ranvier concentrate Na⁺ channels; Saltatory conduction) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Nodes of Ranvier concentrate Na⁺ channels; Saltatory conduction) matches the underlying mechanism."
-    ]
+    explanation: "Myelinated axon: Nodes of Ranvier concentrate Na⁺ channels → Saltatory conduction."
   },
   {
     topic: "Action Potential Propagation",
     question: "Structure/condition: Cold temperature. Key process and outcome:",
     options: [
       "Slower channel kinetics; Reduced conduction velocity",
-      "Only passive spread forever",
-      "Only cochlear tuning",
-      "Only LTP induction"
+      "Only passive spread forever (misapplies how active propagation uses local circuit currents)",
+      "Only cochlear tuning (misapplies how active propagation uses local circuit currents)",
+      "Only LTP induction (misapplies how active propagation uses local circuit currents)"
     ],
     correct: 0,
-    explanation: "Cold temperature: Slower channel kinetics → Reduced conduction velocity.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Slower channel kinetics; Reduced conduction velocity) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Slower channel kinetics; Reduced conduction velocity) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Slower channel kinetics; Reduced conduction velocity) matches the underlying mechanism."
-    ]
+    explanation: "Cold temperature: Slower channel kinetics → Reduced conduction velocity."
   },
   {
     topic: "Action Potential Propagation",
     question: "Structure/condition: Local anesthetic. Key process and outcome:",
     options: [
       "Na⁺ block in pain fibers; Loss of sensation in region",
-      "Only passive spread forever",
-      "Only cochlear tuning",
-      "Only LTP induction"
+      "Only passive spread forever (misapplies how active propagation uses local circuit currents)",
+      "Only cochlear tuning (misapplies how active propagation uses local circuit currents)",
+      "Only LTP induction (misapplies how active propagation uses local circuit currents)"
     ],
     correct: 0,
-    explanation: "Local anesthetic: Na⁺ block in pain fibers → Loss of sensation in region.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Na⁺ block in pain fibers; Loss of sensation in region) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Na⁺ block in pain fibers; Loss of sensation in region) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Na⁺ block in pain fibers; Loss of sensation in region) matches the underlying mechanism."
-    ]
+    explanation: "Local anesthetic: Na⁺ block in pain fibers → Loss of sensation in region."
   },
   {
     topic: "Passive Membrane Properties",
     question: "Suppose that leak conductance rises by 12% (R_m falls) with geometry unchanged, the length constant λ compared with baseline is:",
     options: [
       "Shorter — signals attenuate faster with distance",
-      "Longer — signals spread farther always",
-      "Unchanged — λ never depends on R_m",
-      "Infinite — passive spread without limit"
+      "Longer — signals spread farther always (misstates how R_m, C_m, or geometry set τ or λ)",
+      "Unchanged — λ never depends on R_m (misstates how R_m, C_m, or geometry set τ or λ)",
+      "Infinite — passive spread without limit (misstates how R_m, C_m, or geometry set τ or λ)"
     ],
     correct: 0,
-    explanation: "Higher leak (lower R_m) shortens λ in passive cable models.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Shorter — signals attenuate faster with distance) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Shorter — signals attenuate faster with distance) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Shorter — signals attenuate faster with distance) matches the underlying mechanism."
-    ]
-  },
-  {
-    topic: "Passive Membrane Properties",
-    question: "Suppose that leak conductance rises by 28% (R_m falls) with geometry unchanged, the length constant λ compared with baseline is:",
-    options: [
-      "Shorter — signals attenuate faster with distance",
-      "Longer — signals spread farther always",
-      "Unchanged — λ never depends on R_m",
-      "Infinite — passive spread without limit"
-    ],
-    correct: 0,
-    explanation: "Higher leak (lower R_m) shortens λ in passive cable models.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Shorter — signals attenuate faster with distance) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Shorter — signals attenuate faster with distance) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Shorter — signals attenuate faster with distance) matches the underlying mechanism."
-    ]
-  },
-  {
-    topic: "Passive Membrane Properties",
-    question: "Suppose that leak conductance rises by 41% (R_m falls) with geometry unchanged, the length constant λ compared with baseline is:",
-    options: [
-      "Shorter — signals attenuate faster with distance",
-      "Longer — signals spread farther always",
-      "Unchanged — λ never depends on R_m",
-      "Infinite — passive spread without limit"
-    ],
-    correct: 0,
-    explanation: "Higher leak (lower R_m) shortens λ in passive cable models.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Shorter — signals attenuate faster with distance) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Shorter — signals attenuate faster with distance) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Shorter — signals attenuate faster with distance) matches the underlying mechanism."
-    ]
+    explanation: "Higher leak (lower R_m) shortens λ in passive cable models."
   },
   {
     topic: "Passive Membrane Properties",
@@ -821,49 +479,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
       "Determined only by myelin thickness"
     ],
     correct: 0,
-    explanation: "τ scales with C_m when R_m is held constant.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (~115% of baseline (τ = R_m C_m)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (~115% of baseline (τ = R_m C_m)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (~115% of baseline (τ = R_m C_m)) matches the underlying mechanism."
-    ]
-  },
-  {
-    topic: "Passive Membrane Properties",
-    question: "Suppose that membrane capacitance increases by 35% while R_m is held fixed, the time constant τ is:",
-    options: [
-      "~135% of baseline (τ = R_m C_m)",
-      "Zero — voltage changes instantly always",
-      "Independent of C_m always",
-      "Determined only by myelin thickness"
-    ],
-    correct: 0,
-    explanation: "τ scales with C_m when R_m is held constant.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (~135% of baseline (τ = R_m C_m)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (~135% of baseline (τ = R_m C_m)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (~135% of baseline (τ = R_m C_m)) matches the underlying mechanism."
-    ]
-  },
-  {
-    topic: "Passive Membrane Properties",
-    question: "Suppose that membrane capacitance increases by 55% while R_m is held fixed, the time constant τ is:",
-    options: [
-      "~155% of baseline (τ = R_m C_m)",
-      "Zero — voltage changes instantly always",
-      "Independent of C_m always",
-      "Determined only by myelin thickness"
-    ],
-    correct: 0,
-    explanation: "τ scales with C_m when R_m is held constant.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (~155% of baseline (τ = R_m C_m)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (~155% of baseline (τ = R_m C_m)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (~155% of baseline (τ = R_m C_m)) matches the underlying mechanism."
-    ]
+    explanation: "τ scales with C_m when R_m is held constant."
   },
   {
     topic: "Nernst Equation",
@@ -875,67 +491,43 @@ const PART1_EXAM_PARAPHRASE_POOL = [
       "Not at all — Nernst ignores Na⁺"
     ],
     correct: 0,
-    explanation: "Higher inside Na⁺ reduces the driving equilibrium toward outside.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Less positive (toward 0 mV)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Less positive (toward 0 mV)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Less positive (toward 0 mV)) matches the underlying mechanism."
-    ]
+    explanation: "Higher inside Na⁺ reduces the driving equilibrium toward outside."
   },
   {
     topic: "Passive Membrane Properties",
     question: "Myelin on an axon mainly increases effective R_m locally, which:",
     options: [
       "Lengthens λ and reduces current leak per unit length",
-      "Shortens λ by increasing capacitance only",
-      "Prevents all ion flow at nodes",
-      "Converts active to purely graded signals forever"
+      "Shortens λ by increasing capacitance only (misstates how R_m, C_m, or geometry set τ or λ)",
+      "Prevents all ion flow at nodes (misstates how R_m, C_m, or geometry set τ or λ)",
+      "Converts active to purely graded signals forever (misstates how R_m, C_m, or geometry set τ or λ)"
     ],
     correct: 0,
-    explanation: "Myelin reduces membrane leak between nodes, improving passive spread to the next node.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Lengthens λ and reduces current leak per unit length) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Lengthens λ and reduces current leak per unit length) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Lengthens λ and reduces current leak per unit length) matches the underlying mechanism."
-    ]
+    explanation: "Myelin reduces membrane leak between nodes, improving passive spread to the next node."
   },
   {
     topic: "Action Potentials",
     question: "In the phase associated with the rising phase of a squid-giant-axon spike, the dominant current is:",
     options: [
       "Inward Na⁺ through voltage-gated channels",
-      "Outward K⁺ through leak channels only",
-      "Inward Cl⁻ through GABA receptors",
-      "Na⁺/K⁺ pump current reversing each ms"
+      "Outward K⁺ through leak channels only (does not follow from the mechanism implied in the stem)",
+      "Inward Cl⁻ through GABA receptors (does not follow from the mechanism implied in the stem)",
+      "Na⁺/K⁺ pump current reversing each ms (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
-    explanation: "Voltage-gated Na⁺ entry drives rapid depolarization.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Inward Na⁺ through voltage-gated channels) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Inward Na⁺ through voltage-gated channels) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Inward Na⁺ through voltage-gated channels) matches the underlying mechanism."
-    ]
+    explanation: "Voltage-gated Na⁺ entry drives rapid depolarization."
   },
   {
     topic: "Action Potentials",
     question: "Suppose that voltage-gated K⁺ channels are blocked during a spike, you expect:",
     options: [
       "Prolonged repolarization and broader spikes",
-      "No change in spike width",
-      "Immediate loss of resting potential",
-      "Only photoreceptor responses"
+      "No change in spike width (does not follow from the mechanism implied in the stem)",
+      "Immediate loss of resting potential (does not follow from the mechanism implied in the stem)",
+      "Only photoreceptor responses (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
-    explanation: "Delayed K⁺ repolarization widens the action potential.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Prolonged repolarization and broader spikes) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Prolonged repolarization and broader spikes) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Prolonged repolarization and broader spikes) matches the underlying mechanism."
-    ]
+    explanation: "Delayed K⁺ repolarization widens the action potential."
   },
   {
     topic: "Patch Clamp",
@@ -947,85 +539,55 @@ const PART1_EXAM_PARAPHRASE_POOL = [
       "Replaces need for electrodes in cochlea"
     ],
     correct: 0,
-    explanation: "Whole-cell dialyzes the cytoplasm and clamps the entire cell membrane.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Controls V_m or I_m across the entire cell interior) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Controls V_m or I_m across the entire cell interior) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Controls V_m or I_m across the entire cell interior) matches the underlying mechanism."
-    ]
+    explanation: "Whole-cell dialyzes the cytoplasm and clamps the entire cell membrane."
   },
   {
     topic: "Pharmacology",
     question: "A drug that selectively increases K⁺ leak conductance at rest would be expected to tend to:",
     options: [
       "Hyperpolarize the cell and shorten λ",
-      "Depolarize toward E_Na",
-      "Block all synaptic vesicle fusion",
-      "Increase cochlear gain only"
+      "Depolarize toward E_Na (does not follow from the mechanism implied in the stem)",
+      "Block all synaptic vesicle fusion (does not follow from the mechanism implied in the stem)",
+      "Increase cochlear gain only (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
-    explanation: "More leak conductance lowers R_m, hyperpolarizing toward E_K and shortening λ.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Hyperpolarize the cell and shorten λ) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Hyperpolarize the cell and shorten λ) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Hyperpolarize the cell and shorten λ) matches the underlying mechanism."
-    ]
+    explanation: "More leak conductance lowers R_m, hyperpolarizing toward E_K and shortening λ."
   },
   {
     topic: "Voltage Clamp",
     question: "In voltage clamp, a downward step in command potential usually produces:",
     options: [
       "Inward (negative) clamp current if channels open during the step",
-      "Zero current because voltage is clamped",
-      "Only mechanical cochlear motion",
-      "Irreversible LTP"
+      "Zero current because voltage is clamped (does not follow from the mechanism implied in the stem)",
+      "Only mechanical cochlear motion (does not follow from the mechanism implied in the stem)",
+      "Irreversible LTP (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
-    explanation: "Clamp current equals the net ionic current required to hold V constant.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Inward (negative) clamp current if channels open during the step) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Inward (negative) clamp current if channels open during the step) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Inward (negative) clamp current if channels open during the step) matches the underlying mechanism."
-    ]
+    explanation: "Clamp current equals the net ionic current required to hold V constant."
   },
   {
     topic: "Goldman Equation",
     question: "Suppose that Cl⁻ channels open with E_Cl below rest, net Cl⁻ current at rest will:",
     options: [
       "Be inward (hyperpolarizing) until V_m approaches E_Cl",
-      "Always be outward",
-      "Be zero because Cl⁻ is impermeant",
-      "Depend only on photopigment"
+      "Always be outward (ignores weighted permeabilities in the constant-field equation)",
+      "Be zero because Cl⁻ is impermeant (ignores weighted permeabilities in the constant-field equation)",
+      "Depend only on photopigment (ignores weighted permeabilities in the constant-field equation)"
     ],
     correct: 0,
-    explanation: "When V_m is above E_Cl, Cl⁻ enters and hyperpolarizes.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Be inward (hyperpolarizing) until V_m approaches E_Cl) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Be inward (hyperpolarizing) until V_m approaches E_Cl) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Be inward (hyperpolarizing) until V_m approaches E_Cl) matches the underlying mechanism."
-    ]
+    explanation: "When V_m is above E_Cl, Cl⁻ enters and hyperpolarizes."
   },
   {
     topic: "Action Potentials",
     question: "Afterhyperpolarization following a spike is mainly due to:",
     options: [
       "Continued/outlasting K⁺ conductance (and sometimes Ca²⁺-activated K⁺)",
-      "Reopening of all Na⁺ channels",
-      "Cl⁻ influx through AMPA receptors",
-      "Photoreceptor hyperpolarization to light"
+      "Reopening of all Na⁺ channels (does not follow from the mechanism implied in the stem)",
+      "Cl⁻ influx through AMPA receptors (does not follow from the mechanism implied in the stem)",
+      "Photoreceptor hyperpolarization to light (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
-    explanation: "Delayed K⁺ currents drive V_m below rest briefly.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Continued/outlasting K⁺ conductance (and sometimes Ca²⁺-activated K⁺)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Continued/outlasting K⁺ conductance (and sometimes Ca²⁺-activated K⁺)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Continued/outlasting K⁺ conductance (and sometimes Ca²⁺-activated K⁺)) matches the underlying mechanism."
-    ]
+    explanation: "Delayed K⁺ currents drive V_m below rest briefly."
   },
   {
     topic: "Goldman Equation",
@@ -1037,31 +599,19 @@ const PART1_EXAM_PARAPHRASE_POOL = [
       "Away from any ion equilibrium"
     ],
     correct: 0,
-    explanation: "Higher external Na⁺ makes E_Na more positive; if a small Na⁺ leak exists at rest, V_m shifts slightly toward E_Na.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Toward E_Na (less negative)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Toward E_Na (less negative)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Toward E_Na (less negative)) matches the underlying mechanism."
-    ]
+    explanation: "Higher external Na⁺ makes E_Na more positive; if a small Na⁺ leak exists at rest, V_m shifts slightly toward E_Na."
   },
   {
     topic: "Resting Potential",
     question: "Suppose K⁺ leak conductance is blocked but the Na⁺/K⁺ pump keeps gradients intact and a small resting Na⁺ leak remains. V_m will tend to move:",
     options: [
       "Toward E_Na (depolarized relative to normal K⁺-dominated rest)",
-      "Toward E_K as if K⁺ leak were unchanged",
-      "To 0 mV instantly regardless of gradients",
-      "Below −150 mV"
+      "Toward E_K as if K⁺ leak were unchanged (ignores which ion dominates resting permeability)",
+      "To 0 mV instantly regardless of gradients (ignores which ion dominates resting permeability)",
+      "Below −150 mV (ignores which ion dominates resting permeability)"
     ],
     correct: 0,
-    explanation: "Removing dominant K⁺ leak leaves remaining Na⁺ conductances to set V_m closer to E_Na.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Toward E_Na (depolarized relative to normal K⁺-dominated rest)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Toward E_Na (depolarized relative to normal K⁺-dominated rest)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Toward E_Na (depolarized relative to normal K⁺-dominated rest)) matches the underlying mechanism."
-    ]
+    explanation: "Removing dominant K⁺ leak leaves remaining Na⁺ conductances to set V_m closer to E_Na."
   },
   {
     topic: "Nernst Equation",
@@ -1073,13 +623,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
       "Undefined"
     ],
     correct: 0,
-    explanation: "With no concentration gradient, E_K = 0 mV regardless of channel presence.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (0 mV) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (0 mV) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (0 mV) matches the underlying mechanism."
-    ]
+    explanation: "With no concentration gradient, E_K = 0 mV regardless of channel presence."
   },
   {
     topic: "Electrical Signaling",
@@ -1091,121 +635,79 @@ const PART1_EXAM_PARAPHRASE_POOL = [
       "Equal to the pump flux only"
     ],
     correct: 0,
-    explanation: "At equilibrium potential, net electrochemical driving force for that ion is zero.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Zero) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Zero) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Zero) matches the underlying mechanism."
-    ]
+    explanation: "At equilibrium potential, net electrochemical driving force for that ion is zero."
   },
   {
     topic: "Passive Membrane Properties",
     question: "Membrane capacitance arises mainly because:",
     options: [
       "The lipid bilayer stores charge separated across a thin dielectric",
-      "Myelin increases ion channel density",
-      "Na⁺ channels pump charge into the ER",
-      "Dendrites lack any resistance"
+      "Myelin increases ion channel density (misstates how R_m, C_m, or geometry set τ or λ)",
+      "Na⁺ channels pump charge into the ER (misstates how R_m, C_m, or geometry set τ or λ)",
+      "Dendrites lack any resistance (misstates how R_m, C_m, or geometry set τ or λ)"
     ],
     correct: 0,
-    explanation: "The bilayer acts as a capacitor; charge accumulates on inner and outer leaflets.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (The lipid bilayer stores charge separated across a thin dielectric) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (The lipid bilayer stores charge separated across a thin dielectric) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (The lipid bilayer stores charge separated across a thin dielectric) matches the underlying mechanism."
-    ]
+    explanation: "The bilayer acts as a capacitor; charge accumulates on inner and outer leaflets."
   },
   {
     topic: "Passive Membrane Properties",
     question: "An EPSP recorded at the soma from a distal synapse is usually smaller and slower because of:",
     options: [
       "Cable filtering (attenuation and low-pass filtering)",
-      "Complete absence of ionotropic receptors",
-      "Myelin on dendrites",
-      "Only electrical synapses distally"
+      "Complete absence of ionotropic receptors (misstates how R_m, C_m, or geometry set τ or λ)",
+      "Myelin on dendrites (misstates how R_m, C_m, or geometry set τ or λ)",
+      "Only electrical synapses distally (misstates how R_m, C_m, or geometry set τ or λ)"
     ],
     correct: 0,
-    explanation: "Passive spread along dendrites attenuates amplitude and spreads rise time.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Cable filtering (attenuation and low-pass filtering)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Cable filtering (attenuation and low-pass filtering)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Cable filtering (attenuation and low-pass filtering)) matches the underlying mechanism."
-    ]
+    explanation: "Passive spread along dendrites attenuates amplitude and spreads rise time."
   },
   {
     topic: "Action Potentials",
     question: "Tetrodotoxin (TTX) blocks action potentials mainly by binding:",
     options: [
       "Voltage-gated Na⁺ channel pore",
-      "Voltage-gated K⁺ channels",
-      "The Na⁺/K⁺ pump",
-      "Gap junction connexins"
+      "Voltage-gated K⁺ channels (does not follow from the mechanism implied in the stem)",
+      "The Na⁺/K⁺ pump (does not follow from the mechanism implied in the stem)",
+      "Gap junction connexins (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
-    explanation: "TTX selectively occludes voltage-gated Na⁺ channels.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Voltage-gated Na⁺ channel pore) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Voltage-gated Na⁺ channel pore) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Voltage-gated Na⁺ channel pore) matches the underlying mechanism."
-    ]
+    explanation: "TTX selectively occludes voltage-gated Na⁺ channels."
   },
   {
     topic: "Action Potentials",
     question: "Tetraethylammonium (TEA) applied to axons usually prolongs spikes by blocking:",
     options: [
       "Certain voltage-gated K⁺ channels",
-      "Voltage-gated Na⁺ channels",
-      "Glutamate receptors",
-      "Myelin basic protein"
+      "Voltage-gated Na⁺ channels (does not follow from the mechanism implied in the stem)",
+      "Glutamate receptors (does not follow from the mechanism implied in the stem)",
+      "Myelin basic protein (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
-    explanation: "TEA blocks some K⁺ channels, slowing repolarization.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Certain voltage-gated K⁺ channels) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Certain voltage-gated K⁺ channels) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Certain voltage-gated K⁺ channels) matches the underlying mechanism."
-    ]
+    explanation: "TEA blocks some K⁺ channels, slowing repolarization."
   },
   {
     topic: "Action Potentials",
     question: "Suppose that voltage-gated Na⁺ channels are held in the inactivated state, the neuron:",
     options: [
       "Cannot fire another action potential until recovery",
-      "Fires at higher frequency",
-      "Depolarizes to E_Na permanently",
-      "Loses all resting potential"
+      "Fires at higher frequency (does not follow from the mechanism implied in the stem)",
+      "Depolarizes to E_Na permanently (does not follow from the mechanism implied in the stem)",
+      "Loses all resting potential (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
-    explanation: "Inactivation gate closure prevents repeated Na⁺ opening (absolute refractory period).",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Cannot fire another action potential until recovery) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Cannot fire another action potential until recovery) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Cannot fire another action potential until recovery) matches the underlying mechanism."
-    ]
+    explanation: "Inactivation gate closure prevents repeated Na⁺ opening (absolute refractory period)."
   },
   {
     topic: "Experimental Methods",
     question: "Voltage clamp was developed mainly to:",
     options: [
       "Hold membrane voltage constant and measure the currents required",
-      "Measure only resting potential without perturbation",
-      "Visualize myelin with light microscopy alone",
-      "Count synaptic vesicles directly"
+      "Measure only resting potential without perturbation (does not follow from the mechanism implied in the stem)",
+      "Visualize myelin with light microscopy alone (does not follow from the mechanism implied in the stem)",
+      "Count synaptic vesicles directly (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
-    explanation: "Hodgkin and Huxley clamped voltage to dissect underlying ionic currents.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Hold membrane voltage constant and measure the currents required) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Hold membrane voltage constant and measure the currents required) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Hold membrane voltage constant and measure the currents required) matches the underlying mechanism."
-    ]
+    explanation: "Hodgkin and Huxley clamped voltage to dissect underlying ionic currents."
   },
   {
     topic: "Ion Selectivity",
@@ -1217,13 +719,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
       "Movement only through gap junctions"
     ],
     correct: 0,
-    explanation: "V_m negative relative to E_Na drives cation influx if channels open.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Inward Na⁺ movement (into the cell)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Inward Na⁺ movement (into the cell)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Inward Na⁺ movement (into the cell)) matches the underlying mechanism."
-    ]
+    explanation: "V_m negative relative to E_Na drives cation influx if channels open."
   },
   {
     topic: "Pharmacology",
@@ -1235,31 +731,19 @@ const PART1_EXAM_PARAPHRASE_POOL = [
       "Eliminate capacitance"
     ],
     correct: 0,
-    explanation: "More K⁺ conductance pulls V_m toward E_K (often more negative).",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Hyperpolarize or stabilize V_m nearer E_K) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Hyperpolarize or stabilize V_m nearer E_K) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Hyperpolarize or stabilize V_m nearer E_K) matches the underlying mechanism."
-    ]
+    explanation: "More K⁺ conductance pulls V_m toward E_K (often more negative)."
   },
   {
     topic: "Quantitative Physiology",
     question: "Suppose that g_Na increases transiently during a spike while g_K rises later, the sequence reflects:",
     options: [
       "Hodgkin–Huxley separation of Na⁺ activation and K⁺ delayed activation",
-      "Goldman equation at rest only",
-      "Only pump activity",
-      "Gap junction coupling"
+      "Goldman equation at rest only (does not follow from the mechanism implied in the stem)",
+      "Only pump activity (does not follow from the mechanism implied in the stem)",
+      "Gap junction coupling (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
-    explanation: "Classic HH model: fast Na⁺ conductance rise, slower K⁺ rise for repolarization.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Hodgkin–Huxley separation of Na⁺ activation and K⁺ delayed activation) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Hodgkin–Huxley separation of Na⁺ activation and K⁺ delayed activation) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Hodgkin–Huxley separation of Na⁺ activation and K⁺ delayed activation) matches the underlying mechanism."
-    ]
+    explanation: "Classic HH model: fast Na⁺ conductance rise, slower K⁺ rise for repolarization."
   }
 ];
 
@@ -1268,109 +752,73 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     topic: "Synaptic Transmission",
     question: "An excitatory postsynaptic potential (EPSP) can be described as a postsynaptic depolarization that:",
     options: [
-      "Always prevents action potential generation",
+      "Always prevents action potential generation (mixes up presynaptic release with postsynaptic receptor logic)",
       "Brings the membrane closer to threshold for firing",
-      "Always hyperpolarizes the postsynaptic cell",
-      "Only occurs at inhibitory synapses"
+      "Always hyperpolarizes the postsynaptic cell (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Only occurs at inhibitory synapses (mixes up presynaptic release with postsynaptic receptor logic)"
     ],
     correct: 1,
-    explanation: "EPSPs depolarize the postsynaptic membrane, moving it closer to the threshold needed to trigger an action potential.",
-    wrongExplanations: [
-      "This option is inconsistent with the stem; the keyed answer (Brings the membrane closer to threshold for firing) matches the underlying mechanism.",
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Brings the membrane closer to threshold for firing) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Brings the membrane closer to threshold for firing) matches the underlying mechanism."
-    ]
+    explanation: "EPSPs depolarize the postsynaptic membrane, moving it closer to the threshold needed to trigger an action potential."
   },
   {
     topic: "Synaptic Transmission",
     question: "An inhibitory postsynaptic potential (IPSP) can be described as a postsynaptic change that:",
     options: [
-      "Depolarizes the membrane toward threshold",
+      "Depolarizes the membrane toward threshold (mixes up presynaptic release with postsynaptic receptor logic)",
       "Hyperpolarizes the membrane or stabilizes it away from threshold",
-      "Always opens voltage-gated Na⁺ channels",
-      "Directly triggers neurotransmitter release"
+      "Always opens voltage-gated Na⁺ channels (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Directly triggers neurotransmitter release (mixes up presynaptic release with postsynaptic receptor logic)"
     ],
     correct: 1,
-    explanation: "IPSPs hyperpolarize the postsynaptic cell or clamp the membrane potential, making it harder to reach threshold.",
-    wrongExplanations: [
-      "This option is inconsistent with the stem; the keyed answer (Hyperpolarizes the membrane or stabilizes it away from threshold) matches the underlying mechanism.",
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Hyperpolarizes the membrane or stabilizes it away from threshold) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Hyperpolarizes the membrane or stabilizes it away from threshold) matches the underlying mechanism."
-    ]
+    explanation: "IPSPs hyperpolarize the postsynaptic cell or clamp the membrane potential, making it harder to reach threshold."
   },
   {
     topic: "Receptor Types",
     question: "Metabotropic receptors usually act by:",
     options: [
-      "Opening an ion channel pore directly upon binding",
+      "Opening an ion channel pore directly upon binding (does not follow from the mechanism implied in the stem)",
       "Activating G-proteins that modulate ion channels or second-messenger systems",
-      "Blocking all synaptic transmission permanently",
+      "Blocking all synaptic transmission permanently (does not follow from the mechanism implied in the stem)",
       "Generating action potentials in the presynaptic terminal"
     ],
     correct: 1,
-    explanation: "Metabotropic receptors couple to G-proteins, which activate intracellular signaling cascades such as cAMP or IP₃ pathways.",
-    wrongExplanations: [
-      "This option is inconsistent with the stem; the keyed answer (Activating G-proteins that modulate ion channels or second-messenger systems) matches the underlying mechanism.",
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Activating G-proteins that modulate ion channels or second-messenger systems) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Activating G-proteins that modulate ion channels or second-messenger systems) matches the underlying mechanism."
-    ]
+    explanation: "Metabotropic receptors couple to G-proteins, which activate intracellular signaling cascades such as cAMP or IP₃ pathways."
   },
   {
     topic: "Second Messengers",
     question: "IP₃ (inositol trisphosphate) produced during metabotropic signaling mainly causes:",
     options: [
-      "Direct opening of voltage-gated Na⁺ channels",
+      "Direct opening of voltage-gated Na⁺ channels (does not follow from the mechanism implied in the stem)",
       "Release of Ca²⁺ from intracellular stores in the endoplasmic reticulum",
-      "Immediate repolarization of the axon",
-      "Degradation of all cAMP in the cell"
+      "Immediate repolarization of the axon (does not follow from the mechanism implied in the stem)",
+      "Degradation of all cAMP in the cell (does not follow from the mechanism implied in the stem)"
     ],
     correct: 1,
-    explanation: "IP₃ binds receptors on the endoplasmic reticulum, releasing stored Ca²⁺ into the cytosol as part of the signaling cascade.",
-    wrongExplanations: [
-      "This option is inconsistent with the stem; the keyed answer (Release of Ca²⁺ from intracellular stores in the endoplasmic reticulum) matches the underlying mechanism.",
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Release of Ca²⁺ from intracellular stores in the endoplasmic reticulum) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Release of Ca²⁺ from intracellular stores in the endoplasmic reticulum) matches the underlying mechanism."
-    ]
+    explanation: "IP₃ binds receptors on the endoplasmic reticulum, releasing stored Ca²⁺ into the cytosol as part of the signaling cascade."
   },
   {
     topic: "Receptor Types",
     question: "Metabotropic receptor signaling is usually slower than ionotropic signaling because it involves:",
     options: [
-      "Direct ion flux through the receptor pore",
+      "Direct ion flux through the receptor pore (does not follow from the mechanism implied in the stem)",
       "G-protein activation and second-messenger cascades before channel modulation",
-      "Immediate fusion of synaptic vesicles",
-      "Saltatory conduction in the dendrite"
+      "Immediate fusion of synaptic vesicles (does not follow from the mechanism implied in the stem)",
+      "Saltatory conduction in the dendrite (does not follow from the mechanism implied in the stem)"
     ],
     correct: 1,
-    explanation: "Metabotropic pathways require G-protein and second-messenger steps, producing slower but longer-lasting modulation.",
-    wrongExplanations: [
-      "This option is inconsistent with the stem; the keyed answer (G-protein activation and second-messenger cascades before channel modulation) matches the underlying mechanism.",
-      "",
-      "This option is inconsistent with the stem; the keyed answer (G-protein activation and second-messenger cascades before channel modulation) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (G-protein activation and second-messenger cascades before channel modulation) matches the underlying mechanism."
-    ]
+    explanation: "Metabotropic pathways require G-protein and second-messenger steps, producing slower but longer-lasting modulation."
   },
   {
     topic: "Second Messengers",
     question: "IP₃ signaling raises cytosolic Ca²⁺ mainly by:",
     options: [
-      "Opening plasmalemmal Na⁺ channels",
+      "Opening plasmalemmal Na⁺ channels (does not follow from the mechanism implied in the stem)",
       "Releasing Ca²⁺ from endoplasmic reticulum stores",
-      "Blocking all K⁺ channels permanently",
-      "Stopping vesicle endocytosis"
+      "Blocking all K⁺ channels permanently (does not follow from the mechanism implied in the stem)",
+      "Stopping vesicle endocytosis (does not follow from the mechanism implied in the stem)"
     ],
     correct: 1,
-    explanation: "IP₃ binds ER receptors and releases stored Ca²⁺ into the cytosol as part of metabotropic cascades.",
-    wrongExplanations: [
-      "This option is inconsistent with the stem; the keyed answer (Releasing Ca²⁺ from endoplasmic reticulum stores) matches the underlying mechanism.",
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Releasing Ca²⁺ from endoplasmic reticulum stores) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Releasing Ca²⁺ from endoplasmic reticulum stores) matches the underlying mechanism."
-    ]
+    explanation: "IP₃ binds ER receptors and releases stored Ca²⁺ into the cytosol as part of metabotropic cascades."
   },
   {
     topic: "Synaptic Transmission",
@@ -1382,31 +830,19 @@ const PART2_EXAM_PARAPHRASE_POOL = [
       "Current only when the cell is hyperpolarized below −90 mV"
     ],
     correct: 0,
-    explanation: "AMPA receptors are largely permeable to cations including Na⁺, producing rapid depolarizing currents at rest.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Na⁺ and some K⁺ at resting potentials) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Na⁺ and some K⁺ at resting potentials) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Na⁺ and some K⁺ at resting potentials) matches the underlying mechanism."
-    ]
+    explanation: "AMPA receptors are largely permeable to cations including Na⁺, producing rapid depolarizing currents at rest."
   },
   {
     topic: "Synaptic Transmission",
-    question: "GABA_A receptor activation usually produces inhibition by:",
+    question: "GABA<sub>A</sub> receptor activation usually produces inhibition by:",
     options: [
       "Increasing Cl⁻ conductance when E_Cl⁻ is below rest",
-      "Opening Na⁺ channels at the axon hillock",
-      "Blocking all metabotropic signaling permanently",
-      "Releasing Ca²⁺ from mitochondria only"
+      "Opening Na⁺ channels at the axon hillock (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Blocking all metabotropic signaling permanently (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Releasing Ca²⁺ from mitochondria only (mixes up presynaptic release with postsynaptic receptor logic)"
     ],
     correct: 0,
-    explanation: "GABA_A receptors are Cl⁻ channels; when E_Cl⁻ is negative to rest, opening them hyperpolarizes or shunts the membrane.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Increasing Cl⁻ conductance when E_Cl⁻ is below rest) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Increasing Cl⁻ conductance when E_Cl⁻ is below rest) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Increasing Cl⁻ conductance when E_Cl⁻ is below rest) matches the underlying mechanism."
-    ]
+    explanation: "GABA<sub>A</sub> receptors are Cl⁻ channels; when E_Cl⁻ is negative to rest, opening them hyperpolarizes or shunts the membrane."
   },
   {
     topic: "Resting Potential",
@@ -1418,13 +854,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
       "Prevent all action potentials by hyperpolarizing above 0 mV"
     ],
     correct: 0,
-    explanation: "Without active transport, Na⁺ and K⁺ gradients dissipate and V_m drifts toward 0 mV.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Move toward 0 mV as gradients collapse) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Move toward 0 mV as gradients collapse) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Move toward 0 mV as gradients collapse) matches the underlying mechanism."
-    ]
+    explanation: "Without active transport, Na⁺ and K⁺ gradients dissipate and V_m drifts toward 0 mV."
   },
   {
     topic: "Nernst Equation",
@@ -1436,49 +866,31 @@ const PART2_EXAM_PARAPHRASE_POOL = [
       "+120 mV"
     ],
     correct: 0,
-    explanation: "A large inward K⁺ gradient yields a strongly negative E_K.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (−96 mV (negative inside)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (−96 mV (negative inside)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (−96 mV (negative inside)) matches the underlying mechanism."
-    ]
+    explanation: "A large inward K⁺ gradient yields a strongly negative E_K."
   },
   {
     topic: "Chemical Synapses",
     question: "Blocking presynaptic voltage-gated Ca²⁺ channels would be expected to most directly reduce:",
     options: [
       "Neurotransmitter release probability",
-      "Postsynaptic AMPA receptor density",
-      "Axonal myelin thickness",
-      "Retinal phototransduction"
+      "Postsynaptic AMPA receptor density (describes the wrong synaptic structure or transmission step)",
+      "Axonal myelin thickness (describes the wrong synaptic structure or transmission step)",
+      "Retinal phototransduction (describes the wrong synaptic structure or transmission step)"
     ],
     correct: 0,
-    explanation: "Ca²⁺ influx is the immediate trigger for vesicle fusion.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Neurotransmitter release probability) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Neurotransmitter release probability) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Neurotransmitter release probability) matches the underlying mechanism."
-    ]
+    explanation: "Ca²⁺ influx is the immediate trigger for vesicle fusion."
   },
   {
     topic: "Somatosensation",
     question: "Free nerve endings in skin mainly signal:",
     options: [
       "Pain and temperature (nociception and thermoreception)",
-      "Only fine discriminative touch on glabrous skin",
-      "Auditory frequency place coding",
-      "Declarative memory consolidation"
+      "Only fine discriminative touch on glabrous skin (does not follow from the mechanism implied in the stem)",
+      "Auditory frequency place coding (does not follow from the mechanism implied in the stem)",
+      "Declarative memory consolidation (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
-    explanation: "Polymodal nociceptors and thermoreceptors use free nerve endings.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Pain and temperature (nociception and thermoreception)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Pain and temperature (nociception and thermoreception)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Pain and temperature (nociception and thermoreception)) matches the underlying mechanism."
-    ]
+    explanation: "Polymodal nociceptors and thermoreceptors use free nerve endings."
   },
   {
     topic: "Resting Potential",
@@ -1490,31 +902,19 @@ const PART2_EXAM_PARAPHRASE_POOL = [
       "Away from both equilibrium potentials equally"
     ],
     correct: 0,
-    explanation: "Goldman weighting pulls V_m toward the equilibrium potential of the ion with increased relative permeability.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Toward E_Na (less negative)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Toward E_Na (less negative)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Toward E_Na (less negative)) matches the underlying mechanism."
-    ]
+    explanation: "Goldman weighting pulls V_m toward the equilibrium potential of the ion with increased relative permeability."
   },
   {
     topic: "Nernst Equation",
     question: "Raising intracellular Na⁺ concentration while extracellular Na⁺ is fixed would be expected to make E_Na:",
     options: [
       "Less positive (closer to 0 mV)",
-      "More positive",
-      "Equal to E_K",
-      "Independent of Na⁺ gradients"
+      "More positive (contradicts the Nernst dependence on inside/outside concentrations)",
+      "Equal to E_K (contradicts the Nernst dependence on inside/outside concentrations)",
+      "Independent of Na⁺ gradients (contradicts the Nernst dependence on inside/outside concentrations)"
     ],
     correct: 0,
-    explanation: "Higher internal Na⁺ reduces the inward driving force, lowering E_Na.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Less positive (closer to 0 mV)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Less positive (closer to 0 mV)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Less positive (closer to 0 mV)) matches the underlying mechanism."
-    ]
+    explanation: "Higher internal Na⁺ reduces the inward driving force, lowering E_Na."
   },
   {
     topic: "Electrical Signaling",
@@ -1526,13 +926,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
       "Depend only on the Na⁺/K⁺ pump rate"
     ],
     correct: 0,
-    explanation: "Ohmic ion current scales with conductance times driving force (V_m − E_ion).",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Increase in magnitude if V_m ≠ E_Na) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Increase in magnitude if V_m ≠ E_Na) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Increase in magnitude if V_m ≠ E_Na) matches the underlying mechanism."
-    ]
+    explanation: "Ohmic ion current scales with conductance times driving force (V_m − E_ion)."
   },
   {
     topic: "Synaptic Transmission",
@@ -1544,13 +938,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
       "Conversion of IPSPs to action potentials in the axon"
     ],
     correct: 0,
-    explanation: "Release probability is steeply dependent on presynaptic Ca²⁺ concentration.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Lower probability of vesicle release) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Lower probability of vesicle release) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Lower probability of vesicle release) matches the underlying mechanism."
-    ]
+    explanation: "Release probability is steeply dependent on presynaptic Ca²⁺ concentration."
   },
   {
     topic: "Auditory System",
@@ -1562,85 +950,55 @@ const PART2_EXAM_PARAPHRASE_POOL = [
       "Eliminating all spontaneous activity at threshold"
     ],
     correct: 0,
-    explanation: "Rate coding in auditory nerve fibers conveys stimulus intensity.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Increasing firing rate with louder stimuli) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Increasing firing rate with louder stimuli) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Increasing firing rate with louder stimuli) matches the underlying mechanism."
-    ]
+    explanation: "Rate coding in auditory nerve fibers conveys stimulus intensity."
   },
   {
     topic: "Peptide Transmitters",
     question: "Neuropeptides usually differ from small transmitters by:",
     options: [
       "Slower synthesis/release and longer-range/modulatory actions",
-      "Being stored only in mitochondria",
-      "Opening voltage-gated Na directly always",
-      "Existing only in retina"
+      "Being stored only in mitochondria (does not follow from the mechanism implied in the stem)",
+      "Opening voltage-gated Na directly always (does not follow from the mechanism implied in the stem)",
+      "Existing only in retina (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
-    explanation: "Peptides modulate on slower timescales.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Slower synthesis/release and longer-range/modulatory actions) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Slower synthesis/release and longer-range/modulatory actions) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Slower synthesis/release and longer-range/modulatory actions) matches the underlying mechanism."
-    ]
+    explanation: "Peptides modulate on slower timescales."
   },
   {
     topic: "Synaptic Integration",
-    question: "Suppose that E_rev for a GABA_A synapse is near −70 mV at rest, GABA at rest:",
+    question: "Suppose that E_rev for a GABA<sub>A</sub> synapse is near −70 mV at rest, GABA at rest:",
     options: [
       "Produces little change in V_m (shunting may still occur)",
-      "Always massive hyperpolarization to −90 mV",
-      "Depolarizes to E_Na",
-      "Blocks all quantal release"
+      "Always massive hyperpolarization to −90 mV (ignores how EPSPs/IPSPs sum in time or space)",
+      "Depolarizes to E_Na (ignores how EPSPs/IPSPs sum in time or space)",
+      "Blocks all quantal release (ignores how EPSPs/IPSPs sum in time or space)"
     ],
     correct: 0,
-    explanation: "Driving force is small when E_rev matches V_m; conductance changes still matter.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Produces little change in V_m (shunting may still occur)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Produces little change in V_m (shunting may still occur)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Produces little change in V_m (shunting may still occur)) matches the underlying mechanism."
-    ]
+    explanation: "Driving force is small when E_rev matches V_m; conductance changes still matter."
   },
   {
     topic: "Neuromodulation",
     question: "Dopamine depletion in Parkinson disease mainly affects:",
     options: [
       "Basal ganglia circuits for movement initiation and selection",
-      "Cochlear inner hair cell transduction",
-      "Rod photoreceptor dark current only",
-      "NMJ quantal content exclusively"
+      "Cochlear inner hair cell transduction (does not follow from the mechanism implied in the stem)",
+      "Assigns an unrelated sensory or synaptic mechanism to this context",
+      "NMJ quantal content exclusively (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
-    explanation: "SNc dopamine loss disrupts basal ganglia motor loops.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Basal ganglia circuits for movement initiation and selection) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Basal ganglia circuits for movement initiation and selection) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Basal ganglia circuits for movement initiation and selection) matches the underlying mechanism."
-    ]
+    explanation: "SNc dopamine loss disrupts basal ganglia motor loops."
   },
   {
     topic: "Receptor Types",
     question: "AMPA receptors on hippocampal pyramidal cells usually mediate:",
     options: [
       "Fast excitatory postsynaptic currents at many glutamatergic synapses",
-      "Slow G-protein inhibitory currents only",
-      "Direct opening of voltage-gated Na⁺ in myelin",
-      "Peptide hormone release"
+      "Slow G-protein inhibitory currents only (does not follow from the mechanism implied in the stem)",
+      "Direct opening of voltage-gated Na⁺ in myelin (does not follow from the mechanism implied in the stem)",
+      "Peptide hormone release (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
-    explanation: "AMPA channels dominate fast EPSCs when Glu is released.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Fast excitatory postsynaptic currents at many glutamatergic synapses) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Fast excitatory postsynaptic currents at many glutamatergic synapses) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Fast excitatory postsynaptic currents at many glutamatergic synapses) matches the underlying mechanism."
-    ]
+    explanation: "AMPA channels dominate fast EPSCs when Glu is released."
   }
 ];
 
@@ -1649,37 +1007,25 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Olfaction",
     question: "In the olfactory system, each olfactory sensory neuron usually expresses:",
     options: [
-      "All olfactory receptor genes simultaneously",
+      "All olfactory receptor genes simultaneously (does not follow from the mechanism implied in the stem)",
       "One functional olfactory receptor gene (one neuron–one receptor rule)",
-      "Only voltage-gated Na⁺ channels and no receptors",
-      "The same receptors as gustatory taste cells"
+      "Only voltage-gated Na⁺ channels and no receptors (does not follow from the mechanism implied in the stem)",
+      "The same receptors as gustatory taste cells (does not follow from the mechanism implied in the stem)"
     ],
     correct: 1,
-    explanation: "The one neuron–one receptor rule ensures each OSN responds to a defined subset of odorants for combinatorial coding in the bulb.",
-    wrongExplanations: [
-      "This option is inconsistent with the stem; the keyed answer (One functional olfactory receptor gene (one neuron–one receptor rule)) matches the underlying mechanism.",
-      "",
-      "This option is inconsistent with the stem; the keyed answer (One functional olfactory receptor gene (one neuron–one receptor rule)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (One functional olfactory receptor gene (one neuron–one receptor rule)) matches the underlying mechanism."
-    ]
+    explanation: "The one neuron–one receptor rule ensures each OSN responds to a defined subset of odorants for combinatorial coding in the bulb."
   },
   {
     topic: "Neuroanatomy",
     question: "The corpus callosum mainly connects:",
     options: [
-      "The spinal cord to the cerebellum",
+      "The spinal cord to the cerebellum (localizes the function to the wrong brain region)",
       "Homologous regions of the left and right cerebral hemispheres",
-      "The hippocampus to the hypothalamus only",
-      "Sensory receptors to motor neurons directly"
+      "The hippocampus to the hypothalamus only (localizes the function to the wrong brain region)",
+      "Sensory receptors to motor neurons directly (localizes the function to the wrong brain region)"
     ],
     correct: 1,
-    explanation: "The corpus callosum is the largest commissural tract, enabling interhemispheric communication between corresponding cortical areas.",
-    wrongExplanations: [
-      "This option is inconsistent with the stem; the keyed answer (Homologous regions of the left and right cerebral hemispheres) matches the underlying mechanism.",
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Homologous regions of the left and right cerebral hemispheres) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Homologous regions of the left and right cerebral hemispheres) matches the underlying mechanism."
-    ]
+    explanation: "The corpus callosum is the largest commissural tract, enabling interhemispheric communication between corresponding cortical areas."
   },
   {
     topic: "Resting Potential",
@@ -1691,13 +1037,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
       "Away from both equilibrium potentials equally with no shift"
     ],
     correct: 0,
-    explanation: "Resting V_m is a conductance-weighted average of equilibrium potentials; added Na⁺ leak pulls V_m toward E_Na.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Toward E_Na (less negative)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Toward E_Na (less negative)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Toward E_Na (less negative)) matches the underlying mechanism."
-    ]
+    explanation: "Resting V_m is a conductance-weighted average of equilibrium potentials; added Na⁺ leak pulls V_m toward E_Na."
   },
   {
     topic: "Passive Membrane Properties",
@@ -1709,31 +1049,19 @@ const PART3_EXAM_PARAPHRASE_POOL = [
       "Converted directly to action potentials without decay"
     ],
     correct: 0,
-    explanation: "Passive decrement limits the impact of distant synaptic inputs on the spike initiation zone.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Smaller due to greater attenuation) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Smaller due to greater attenuation) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Smaller due to greater attenuation) matches the underlying mechanism."
-    ]
+    explanation: "Passive decrement limits the impact of distant synaptic inputs on the spike initiation zone."
   },
   {
     topic: "Electrical Signaling",
     question: "Suppose that E_ion for a permeant cation is +50 mV and V_m is −70 mV, the driving force for that ion is:",
     options: [
       "120 mV inward (V_m − E_ion = −120 mV)",
-      "20 mV outward only",
-      "Zero because the cell is at rest",
-      "50 mV with no direction"
+      "20 mV outward only (uses the wrong sign or driving force for ionic current)",
+      "Zero because the cell is at rest (uses the wrong sign or driving force for ionic current)",
+      "50 mV with no direction (uses the wrong sign or driving force for ionic current)"
     ],
     correct: 0,
-    explanation: "Driving force is V_m − E_ion; negative values indicate inward current for cations.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (120 mV inward (V_m − E_ion = −120 mV)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (120 mV inward (V_m − E_ion = −120 mV)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (120 mV inward (V_m − E_ion = −120 mV)) matches the underlying mechanism."
-    ]
+    explanation: "Driving force is V_m − E_ion; negative values indicate inward current for cations."
   },
   {
     topic: "Synaptic Integration",
@@ -1745,13 +1073,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
       "Photoreceptor convergence only"
     ],
     correct: 0,
-    explanation: "Electrotonic decay reduces distal synaptic impact at the soma/AIS.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Passive cable attenuation along dendrites) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Passive cable attenuation along dendrites) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Passive cable attenuation along dendrites) matches the underlying mechanism."
-    ]
+    explanation: "Electrotonic decay reduces distal synaptic impact at the soma/AIS."
   },
   {
     topic: "Auditory System",
@@ -1763,121 +1085,79 @@ const PART3_EXAM_PARAPHRASE_POOL = [
       "Blocking all K⁺ leak channels permanently"
     ],
     correct: 0,
-    explanation: "Rate coding complements place coding for intensity and temporal features.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Increased action potential firing rate) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Increased action potential firing rate) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Increased action potential firing rate) matches the underlying mechanism."
-    ]
+    explanation: "Rate coding complements place coding for intensity and temporal features."
   },
   {
     topic: "Resting Potential",
     question: "Suppose that the Na⁺/K⁺ pump rate doubles but relative leak conductances are unchanged, the immediate effect on V_m is:",
     options: [
       "Slight hyperpolarization due to electrogenic 3Na⁺/2K⁺ exchange",
-      "Immediate depolarization to E_Na",
-      "No change because pumps do not affect voltage",
-      "Shift to E_Cl regardless of Cl⁻ conductance"
+      "Immediate depolarization to E_Na (ignores which ion dominates resting permeability)",
+      "No change because pumps do not affect voltage (ignores which ion dominates resting permeability)",
+      "Shift to E_Cl regardless of Cl⁻ conductance (ignores which ion dominates resting permeability)"
     ],
     correct: 0,
-    explanation: "Increased electrogenic pumping moves net positive charge out, hyperpolarizing slightly.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Slight hyperpolarization due to electrogenic 3Na⁺/2K⁺ exchange) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Slight hyperpolarization due to electrogenic 3Na⁺/2K⁺ exchange) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Slight hyperpolarization due to electrogenic 3Na⁺/2K⁺ exchange) matches the underlying mechanism."
-    ]
+    explanation: "Increased electrogenic pumping moves net positive charge out, hyperpolarizing slightly."
   },
   {
     topic: "Passive Membrane Properties",
     question: "Suppose that both R_m and R_i double while C_m is constant, the length constant λ:",
     options: [
       "Remains unchanged because λ = √(R_m/R_i)",
-      "Doubles",
-      "Halves",
-      "Becomes zero"
+      "Doubles (misstates how R_m, C_m, or geometry set τ or λ)",
+      "Halves (misstates how R_m, C_m, or geometry set τ or λ)",
+      "Becomes zero (misstates how R_m, C_m, or geometry set τ or λ)"
     ],
     correct: 0,
-    explanation: "Proportional changes in R_m and R_i cancel in the ratio under the square root.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Remains unchanged because λ = √(R_m/R_i)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Remains unchanged because λ = √(R_m/R_i)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Remains unchanged because λ = √(R_m/R_i)) matches the underlying mechanism."
-    ]
+    explanation: "Proportional changes in R_m and R_i cancel in the ratio under the square root."
   },
   {
     topic: "Action Potential Propagation",
     question: "Cooling an axon reduces conduction velocity mainly by:",
     options: [
       "Slowing voltage-gated channel kinetics and ion diffusion",
-      "Increasing myelin thickness",
-      "Raising E_Na above +100 mV",
-      "Eliminating passive spread between nodes"
+      "Increasing myelin thickness (misapplies how active propagation uses local circuit currents)",
+      "Raising E_Na above +100 mV (misapplies how active propagation uses local circuit currents)",
+      "Eliminating passive spread between nodes (misapplies how active propagation uses local circuit currents)"
     ],
     correct: 0,
-    explanation: "Temperature affects channel gating rates and ion mobility, slowing propagation.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Slowing voltage-gated channel kinetics and ion diffusion) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Slowing voltage-gated channel kinetics and ion diffusion) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Slowing voltage-gated channel kinetics and ion diffusion) matches the underlying mechanism."
-    ]
+    explanation: "Temperature affects channel gating rates and ion mobility, slowing propagation."
   },
   {
     topic: "Electrical Signaling",
     question: "Suppose that V_m is clamped at E_K, the driving force on K⁺ ions is:",
     options: [
       "Zero (no net electrochemical driving force)",
-      "Maximal inward",
-      "Maximal outward always",
-      "Determined only by the Na⁺/K⁺ pump"
+      "Maximal inward (uses the wrong sign or driving force for ionic current)",
+      "Maximal outward always (uses the wrong sign or driving force for ionic current)",
+      "Determined only by the Na⁺/K⁺ pump (uses the wrong sign or driving force for ionic current)"
     ],
     correct: 0,
-    explanation: "When V_m equals E_ion, (V_m − E_ion) = 0 and net ion flux at equilibrium is zero.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Zero (no net electrochemical driving force)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Zero (no net electrochemical driving force)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Zero (no net electrochemical driving force)) matches the underlying mechanism."
-    ]
+    explanation: "When V_m equals E_ion, (V_m − E_ion) = 0 and net ion flux at equilibrium is zero."
   },
   {
     topic: "Receptor Types",
-    question: "GABA_B receptors inhibit neurons mainly by:",
+    question: "GABA<sub>B</sub> receptors inhibit neurons mainly by:",
     options: [
       "Activating GIRK K⁺ channels and reducing Ca²⁺ channel activity",
-      "Direct fast Cl⁻ influx identical to GABA_A",
-      "Opening voltage-gated Na⁺ channels",
-      "Bleaching photopigment in rods"
+      "Direct fast Cl⁻ influx identical to GABA<sub>A</sub> (does not follow from the mechanism implied in the stem)",
+      "Opening voltage-gated Na⁺ channels (does not follow from the mechanism implied in the stem)",
+      "Bleaching photopigment in rods (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
-    explanation: "Metabotropic GABA_B signaling opens K⁺ channels and inhibits Ca²⁺ channels.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Activating GIRK K⁺ channels and reducing Ca²⁺ channel activity) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Activating GIRK K⁺ channels and reducing Ca²⁺ channel activity) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Activating GIRK K⁺ channels and reducing Ca²⁺ channel activity) matches the underlying mechanism."
-    ]
+    explanation: "Metabotropic GABA<sub>B</sub> signaling opens K⁺ channels and inhibits Ca²⁺ channels."
   },
   {
     topic: "Motor Systems",
     question: "The cerebellum contributes to motor control mainly by:",
     options: [
       "Error correction and timing of movements via mossy and climbing fiber input",
-      "Transducing odorants in glomeruli",
-      "Encoding color opponency in blobs",
-      "Generating the cochlear traveling wave"
+      "Transducing odorants in glomeruli (maps the lesion to the wrong motor pathway or reflex)",
+      "Encoding color opponency in blobs (maps the lesion to the wrong motor pathway or reflex)",
+      "Generating the cochlear traveling wave (maps the lesion to the wrong motor pathway or reflex)"
     ],
     correct: 0,
-    explanation: "Cerebellar circuits compare intended and actual movement for fine coordination.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Error correction and timing of movements via mossy and climbing fiber input) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Error correction and timing of movements via mossy and climbing fiber input) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Error correction and timing of movements via mossy and climbing fiber input) matches the underlying mechanism."
-    ]
+    explanation: "Cerebellar circuits compare intended and actual movement for fine coordination."
   },
   {
     topic: "Action Potentials",
@@ -1889,13 +1169,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
       "Permanent hyperpolarization to E_K without stimulation"
     ],
     correct: 0,
-    explanation: "Fewer Na⁺ channels require stronger depolarization and slow regenerative upswing.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Higher threshold and slower rising phase) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Higher threshold and slower rising phase) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Higher threshold and slower rising phase) matches the underlying mechanism."
-    ]
+    explanation: "Fewer Na⁺ channels require stronger depolarization and slow regenerative upswing."
   },
   {
     topic: "Resting Potential",
@@ -1907,13 +1181,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
       "Become exactly 0 mV"
     ],
     correct: 0,
-    explanation: "Higher K⁺ conductance increases the weight of E_K in the Goldman equation.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Move closer to E_K) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Move closer to E_K) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Move closer to E_K) matches the underlying mechanism."
-    ]
+    explanation: "Higher K⁺ conductance increases the weight of E_K in the Goldman equation."
   },
   {
     topic: "Resting Potential",
@@ -1925,13 +1193,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
       "The photoreceptor dark current"
     ],
     correct: 0,
-    explanation: "Increased Cl⁻ conductance pulls V_m toward E_Cl in the Goldman equation.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (E_Cl (more negative)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (E_Cl (more negative)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (E_Cl (more negative)) matches the underlying mechanism."
-    ]
+    explanation: "Increased Cl⁻ conductance pulls V_m toward E_Cl in the Goldman equation."
   },
   {
     topic: "Nernst Equation",
@@ -1943,67 +1205,43 @@ const PART3_EXAM_PARAPHRASE_POOL = [
       "Equal to E_K"
     ],
     correct: 0,
-    explanation: "Lower internal Na⁺ increases the driving force for inward Na⁺, making E_Na more positive.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (More positive) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (More positive) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (More positive) matches the underlying mechanism."
-    ]
+    explanation: "Lower internal Na⁺ increases the driving force for inward Na⁺, making E_Na more positive."
   },
   {
     topic: "Action Potentials",
     question: "Suppose that voltage-gated K⁺ channels are pharmacologically blocked during a spike, repolarization will:",
     options: [
       "Be slowed and the action potential may broaden",
-      "Complete instantly with no change",
-      "Prevent all Na⁺ channel opening permanently",
-      "Eliminate the need for Na⁺ inactivation"
+      "Complete instantly with no change (does not follow from the mechanism implied in the stem)",
+      "Prevent all Na⁺ channel opening permanently (does not follow from the mechanism implied in the stem)",
+      "Eliminate the need for Na⁺ inactivation (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
-    explanation: "K⁺ efflux normally repolarizes the membrane; blockade prolongs depolarization.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Be slowed and the action potential may broaden) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Be slowed and the action potential may broaden) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Be slowed and the action potential may broaden) matches the underlying mechanism."
-    ]
+    explanation: "K⁺ efflux normally repolarizes the membrane; blockade prolongs depolarization."
   },
   {
     topic: "Action Potential Propagation",
     question: "Suppose that nodes of Ranvier are spaced farther apart in a myelinated axon, conduction velocity typically:",
     options: [
       "Increases up to a point because fewer regenerative steps are needed",
-      "Decreases to zero always",
-      "Is unaffected by internode distance",
-      "Requires elimination of all K⁺ channels"
+      "Decreases to zero always (misapplies how active propagation uses local circuit currents)",
+      "Is unaffected by internode distance (misapplies how active propagation uses local circuit currents)",
+      "Requires elimination of all K⁺ channels (misapplies how active propagation uses local circuit currents)"
     ],
     correct: 0,
-    explanation: "Longer internodes reduce the number of regeneration steps, increasing velocity until passive spread fails.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Increases up to a point because fewer regenerative steps are needed) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Increases up to a point because fewer regenerative steps are needed) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Increases up to a point because fewer regenerative steps are needed) matches the underlying mechanism."
-    ]
+    explanation: "Longer internodes reduce the number of regeneration steps, increasing velocity until passive spread fails."
   },
   {
     topic: "Synaptic Integration",
     question: "Suppose that EPSPs and IPSPs arrive simultaneously at the axon hillock, the net effect depends on:",
     options: [
       "The algebraic sum of depolarizing and hyperpolarizing inputs weighted by timing and location",
-      "Only the largest EPSP regardless of IPSPs",
-      "The myelin thickness exclusively",
-      "The olfactory receptor expressed by the neuron"
+      "Only the largest EPSP regardless of IPSPs (ignores how EPSPs/IPSPs sum in time or space)",
+      "The myelin thickness exclusively (ignores how EPSPs/IPSPs sum in time or space)",
+      "The olfactory receptor expressed by the neuron (ignores how EPSPs/IPSPs sum in time or space)"
     ],
     correct: 0,
-    explanation: "Integration combines excitatory and inhibitory inputs according to timing, location, and conductance changes.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (The algebraic sum of depolarizing and hyperpolarizing inputs weighted by timing and location) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (The algebraic sum of depolarizing and hyperpolarizing inputs weighted by timing and location) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (The algebraic sum of depolarizing and hyperpolarizing inputs weighted by timing and location) matches the underlying mechanism."
-    ]
+    explanation: "Integration combines excitatory and inhibitory inputs according to timing, location, and conductance changes."
   },
   {
     topic: "Somatosensation",
@@ -2015,13 +1253,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
       "Dopamine to the striatum"
     ],
     correct: 0,
-    explanation: "Thin unmyelinated C fibers mediate slow nociceptive and thermal signals.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Slow pain and temperature (unmyelinated)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Slow pain and temperature (unmyelinated)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Slow pain and temperature (unmyelinated)) matches the underlying mechanism."
-    ]
+    explanation: "Thin unmyelinated C fibers mediate slow nociceptive and thermal signals."
   },
   {
     topic: "Motor Systems",
@@ -2033,31 +1265,19 @@ const PART3_EXAM_PARAPHRASE_POOL = [
       "Permanent hyperpolarization of all photoreceptors in light"
     ],
     correct: 0,
-    explanation: "Most corticospinal fibers decussate, causing contralateral motor deficits.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Contralateral weakness or paralysis of voluntary movement) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Contralateral weakness or paralysis of voluntary movement) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Contralateral weakness or paralysis of voluntary movement) matches the underlying mechanism."
-    ]
+    explanation: "Most corticospinal fibers decussate, causing contralateral motor deficits."
   },
   {
     topic: "Nernst Equation",
     question: "Suppose that z = +2 for Ca²⁺, a fourfold increase in external Ca²⁺ (fixed internal) changes E_Ca by approximately:",
     options: [
       "+18.5 mV at 37°C (more positive)",
-      "+61 mV",
-      "0 mV",
-      "−61 mV"
+      "+61 mV (contradicts the Nernst dependence on inside/outside concentrations)",
+      "0 mV (contradicts the Nernst dependence on inside/outside concentrations)",
+      "−61 mV (contradicts the Nernst dependence on inside/outside concentrations)"
     ],
     correct: 0,
-    explanation: "For divalent ions the Nernst slope is halved; a fourfold outside change is ~ (61/2)×log10(4) ≈ 18.5 mV at 37°C.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (+18.5 mV at 37°C (more positive)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (+18.5 mV at 37°C (more positive)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (+18.5 mV at 37°C (more positive)) matches the underlying mechanism."
-    ]
+    explanation: "For divalent ions the Nernst slope is halved; a fourfold outside change is ~ (61/2)×log10(4) ≈ 18.5 mV at 37°C."
   },
   {
     topic: "Action Potential Propagation",
@@ -2069,31 +1289,19 @@ const PART3_EXAM_PARAPHRASE_POOL = [
       "Temperature is raised to accelerate kinetics"
     ],
     correct: 0,
-    explanation: "Insufficient nodal regeneration combined with excessive internodal decay blocks propagation.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Internodal distance is long and passive decay is large) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Internodal distance is long and passive decay is large) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Internodal distance is long and passive decay is large) matches the underlying mechanism."
-    ]
+    explanation: "Insufficient nodal regeneration combined with excessive internodal decay blocks propagation."
   },
   {
     topic: "Synaptic Transmission",
     question: "Suppose that release probability p approaches 1, the coefficient of variation (CV) of EPSC amplitude across trials:",
     options: [
       "Decreases toward zero (less trial-to-trial variability)",
-      "Increases without bound",
-      "Equals p independent of quantal size",
-      "Is determined solely by mEPSP frequency in darkness"
+      "Increases without bound (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Equals p independent of quantal size (mixes up presynaptic release with postsynaptic receptor logic)",
+      "Is determined solely by mEPSP frequency in darkness (mixes up presynaptic release with postsynaptic receptor logic)"
     ],
     correct: 0,
-    explanation: "When release is nearly deterministic, variability from binomial release statistics diminishes.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Decreases toward zero (less trial-to-trial variability)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Decreases toward zero (less trial-to-trial variability)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Decreases toward zero (less trial-to-trial variability)) matches the underlying mechanism."
-    ]
+    explanation: "When release is nearly deterministic, variability from binomial release statistics diminishes."
   },
   {
     topic: "Electrical Synapses",
@@ -2105,13 +1313,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
       "Trigger photopigment regeneration"
     ],
     correct: 0,
-    explanation: "Electrical synapses pass transmembrane voltage changes bidirectionally (non-rectifying case).",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Hyperpolarize the coupled partner (if junction is open)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Hyperpolarize the coupled partner (if junction is open)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Hyperpolarize the coupled partner (if junction is open)) matches the underlying mechanism."
-    ]
+    explanation: "Electrical synapses pass transmembrane voltage changes bidirectionally (non-rectifying case)."
   },
   {
     topic: "Electrical Signaling",
@@ -2123,49 +1325,31 @@ const PART3_EXAM_PARAPHRASE_POOL = [
       "Determined only by the pump without channels"
     ],
     correct: 0,
-    explanation: "V_m above E_K drives K⁺ outward through open channels.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Outward (efflux)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Outward (efflux)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Outward (efflux)) matches the underlying mechanism."
-    ]
+    explanation: "V_m above E_K drives K⁺ outward through open channels."
   },
   {
     topic: "Auditory System",
     question: "The lateral superior olive uses interaural level differences mainly for:",
     options: [
       "High-frequency localization via intensity cues",
-      "Low-frequency phase locking without level",
-      "Color processing in V1",
-      "Olfactory discrimination in piriform cortex"
+      "Low-frequency phase locking without level (confuses cochlear place coding with an unrelated modality)",
+      "Color processing in V1 (confuses cochlear place coding with an unrelated modality)",
+      "Olfactory discrimination in piriform cortex (confuses cochlear place coding with an unrelated modality)"
     ],
     correct: 0,
-    explanation: "LSO compares sound level at the two ears, effective at higher frequencies.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (High-frequency localization via intensity cues) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (High-frequency localization via intensity cues) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (High-frequency localization via intensity cues) matches the underlying mechanism."
-    ]
+    explanation: "LSO compares sound level at the two ears, effective at higher frequencies."
   },
   {
     topic: "Motor Systems",
     question: "Upper motor neurons originate mainly in:",
     options: [
       "Motor cortex and brainstem descending tracts",
-      "Photoreceptors",
-      "Olfactory bulb mitral cells only",
-      "Cochlear inner hair cells"
+      "Photoreceptors (maps the lesion to the wrong motor pathway or reflex)",
+      "Olfactory bulb mitral cells only (maps the lesion to the wrong motor pathway or reflex)",
+      "Cochlear inner hair cells (maps the lesion to the wrong motor pathway or reflex)"
     ],
     correct: 0,
-    explanation: "UMNs project to spinal/brainstem motor neurons.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Motor cortex and brainstem descending tracts) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Motor cortex and brainstem descending tracts) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Motor cortex and brainstem descending tracts) matches the underlying mechanism."
-    ]
+    explanation: "UMNs project to spinal/brainstem motor neurons."
   },
   {
     topic: "Learning & Memory",
@@ -2177,67 +1361,43 @@ const PART3_EXAM_PARAPHRASE_POOL = [
       "Phototransduction in rods"
     ],
     correct: 0,
-    explanation: "Medial temporal lobe/hippocampus is critical for new declarative memory.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Forming new declarative/episodic memories) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Forming new declarative/episodic memories) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Forming new declarative/episodic memories) matches the underlying mechanism."
-    ]
+    explanation: "Medial temporal lobe/hippocampus is critical for new declarative memory."
   },
   {
     topic: "Visual System",
     question: "Retinal ganglion cells encode visual information mainly as:",
     options: [
       "Patterns of action potentials sent to the brain",
-      "Graded muscle contractions",
-      "Continuous DC without spikes",
-      "Direct hormone release into CSF"
+      "Graded muscle contractions (assigns the deficit to the wrong visual pathway stage)",
+      "Continuous DC without spikes (assigns the deficit to the wrong visual pathway stage)",
+      "Direct hormone release into CSF (assigns the deficit to the wrong visual pathway stage)"
     ],
     correct: 0,
-    explanation: "Ganglion cells are the spiking output of the retina.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Patterns of action potentials sent to the brain) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Patterns of action potentials sent to the brain) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Patterns of action potentials sent to the brain) matches the underlying mechanism."
-    ]
+    explanation: "Ganglion cells are the spiking output of the retina."
   },
   {
     topic: "Clinical Correlates",
     question: "Damage to primary visual cortex (V1) usually causes:",
     options: [
       "Cortical blindness in corresponding visual field regions",
-      "Complete loss of all sensation including touch",
-      "Deafness for all frequencies",
-      "Immediate loss of all procedural memory"
+      "Complete loss of all sensation including touch (does not follow from the mechanism implied in the stem)",
+      "Deafness for all frequencies (does not follow from the mechanism implied in the stem)",
+      "Immediate loss of all procedural memory (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
-    explanation: "V1 lesions produce scotomas or field loss depending on extent.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Cortical blindness in corresponding visual field regions) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Cortical blindness in corresponding visual field regions) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Cortical blindness in corresponding visual field regions) matches the underlying mechanism."
-    ]
+    explanation: "V1 lesions produce scotomas or field loss depending on extent."
   },
   {
     topic: "Visual System",
     question: "Ganglion cells encode visual information mainly as:",
     options: [
       "Patterns of action potentials (rate and timing)",
-      "Graded muscle contractions",
-      "Direct myelin thickness changes",
-      "Only peptide release without spikes"
+      "Graded muscle contractions (assigns the deficit to the wrong visual pathway stage)",
+      "Direct myelin thickness changes (assigns the deficit to the wrong visual pathway stage)",
+      "Only peptide release without spikes (assigns the deficit to the wrong visual pathway stage)"
     ],
     correct: 0,
-    explanation: "Retinal output is spiking activity in optic nerve fibers.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Patterns of action potentials (rate and timing)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Patterns of action potentials (rate and timing)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Patterns of action potentials (rate and timing)) matches the underlying mechanism."
-    ]
+    explanation: "Retinal output is spiking activity in optic nerve fibers."
   },
   {
     topic: "Neuroanatomy",
@@ -2249,49 +1409,30 @@ const PART3_EXAM_PARAPHRASE_POOL = [
       "Taste bud cells"
     ],
     correct: 0,
-    explanation: "White matter is axons; gray matter is cell bodies and neuropil.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Myelinated axon tracts) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Myelinated axon tracts) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Myelinated axon tracts) matches the underlying mechanism."
-    ]
+    explanation: "White matter is axons; gray matter is cell bodies and neuropil."
   },
   {
     topic: "Learning & Memory",
     question: "Declarative memory is usually associated with:",
     options: [
       "Hippocampus and medial temporal lobe structures",
-      "Only cerebellar cortex for all memories",
-      "Cochlear nucleus exclusively",
-      "Skin Meissner corpuscles"
+      "Only cerebellar cortex for all memories (does not follow from the mechanism implied in the stem)",
+      "Cochlear nucleus exclusively (does not follow from the mechanism implied in the stem)",
+      "Skin Meissner corpuscles (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
-    explanation: "Explicit facts/events depend on medial temporal lobe circuits.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Hippocampus and medial temporal lobe structures) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Hippocampus and medial temporal lobe structures) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Hippocampus and medial temporal lobe structures) matches the underlying mechanism."
-    ]
+    explanation: "Explicit facts/events depend on medial temporal lobe circuits."
   },
   {
     topic: "Clinical Correlates",
     question: "Prosopagnosia usually reflects dysfunction in:",
     options: [
       "Fusiform face area / ventral visual stream (face recognition)",
-      "Cochlear nucleus only",
-      "Stretch reflex arc exclusively",
-      "NMJ acetylcholine release only"
+      "Cochlear nucleus only (does not follow from the mechanism implied in the stem)",
+      "Stretch reflex arc exclusively (does not follow from the mechanism implied in the stem)",
+      "NMJ acetylcholine release only (does not follow from the mechanism implied in the stem)"
     ],
     correct: 0,
-    explanation: "Face recognition deficits implicate specialized ventral visual cortex.",
-    wrongExplanations: [
-      "",
-      "This option is inconsistent with the stem; the keyed answer (Fusiform face area / ventral visual stream (face recognition)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Fusiform face area / ventral visual stream (face recognition)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (Fusiform face area / ventral visual stream (face recognition)) matches the underlying mechanism."
-    ]
+    explanation: "Face recognition deficits implicate specialized ventral visual cortex."
   }
 ];
-
