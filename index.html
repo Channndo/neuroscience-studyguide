@@ -909,6 +909,68 @@
       color: #fff;
     }
 
+    .quiz-card.formula-lab {
+      border: 2px solid #1a5276;
+      background: linear-gradient(165deg, rgba(26, 82, 118, 0.12) 0%, var(--surface) 55%);
+    }
+
+    html[data-theme="dark"] .quiz-card.formula-lab {
+      background: linear-gradient(165deg, rgba(52, 152, 219, 0.15) 0%, var(--surface) 55%);
+      border-color: #5dade2;
+    }
+
+    .quiz-card.formula-lab .quiz-card-icon {
+      background: #1a5276;
+      color: #fff;
+    }
+
+    html[data-theme="dark"] .quiz-card.formula-lab .quiz-card-icon {
+      background: #2874a6;
+    }
+
+    .formula-hint-panel {
+      margin: 0 0 1rem;
+      padding: 0.85rem 1rem;
+      border-radius: 8px;
+      border: 1px solid rgba(26, 82, 118, 0.35);
+      background: rgba(26, 82, 118, 0.08);
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+
+    html[data-theme="dark"] .formula-hint-panel {
+      border-color: rgba(93, 173, 226, 0.45);
+      background: rgba(40, 116, 166, 0.18);
+    }
+
+    .formula-hint-label {
+      margin: 0 0 0.35rem;
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #1a5276;
+    }
+
+    html[data-theme="dark"] .formula-hint-label {
+      color: #85c1e9;
+    }
+
+    .formula-steps {
+      margin: 0.5rem 0 0.35rem 1.1rem;
+      padding: 0;
+    }
+
+    .formula-sheet-link {
+      margin: 0.5rem 0 0;
+      font-size: 0.85rem;
+    }
+
+    .formula-sheet-link a {
+      color: var(--crimson);
+      font-weight: 600;
+    }
+
     .answer-grid {
       display: flex;
       flex-direction: column;
@@ -2196,6 +2258,7 @@
   <script src="questions-exam-paraphrases.js"></script>
   <script src="questions-written-final.js"></script>
   <script src="questions-proctored-mock.js"></script>
+  <script src="questions-formula-drills.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" crossorigin="anonymous"></script>
   <script>
     function shuffle(array) {
@@ -2891,6 +2954,7 @@
       assignByTopic(typeof PROCTORED_LESION_POOL !== "undefined" ? PROCTORED_LESION_POOL : [], "part3");
       assignByTopic(typeof PROCTORED_CIRCUIT_POOL !== "undefined" ? PROCTORED_CIRCUIT_POOL : [], "part2");
       assignByTopic(typeof PROCTORED_CLAMP_TRACE_POOL !== "undefined" ? PROCTORED_CLAMP_TRACE_POOL : [], "part1");
+      assignByTopic(typeof FORMULA_DRILL_POOL !== "undefined" ? FORMULA_DRILL_POOL : [], "part1");
       [NEW_TIER1, NEW_TIER2, NEW_TIER3, NEW_TIER4].forEach(tier => {
         (tier || []).forEach(q => {
           if (!q?.question || reg.has(q.question)) return;
@@ -3092,7 +3156,9 @@
       final200: 200,
       pinnacle300: 300,
       writtenReview10: 10,
-      proctoredMock: 46
+      proctoredMock: 46,
+      formulaLabLearn: 12,
+      formulaLabExam: 12
     };
 
     function getProgressiveTierQuestions(progress) {
@@ -3416,6 +3482,10 @@
       if (quizId === "pinnacle300") {
         return attachWrittenToExamSet(sampleFromPool(pools.all, QUIZ_SAMPLE_SIZES.pinnacle300, avoid), quizId, avoid);
       }
+      if (quizId === "formulaLabLearn" || quizId === "formulaLabExam") {
+        const pool = typeof FORMULA_DRILL_POOL !== "undefined" ? FORMULA_DRILL_POOL : [];
+        return sampleFromPool(pool, QUIZ_SAMPLE_SIZES[quizId], avoid);
+      }
       if (quizId === "proctoredMock") {
         const sataPool = typeof PROCTORED_SATA_POOL !== "undefined" ? PROCTORED_SATA_POOL : [];
         const lesionPool = typeof PROCTORED_LESION_POOL !== "undefined" ? PROCTORED_LESION_POOL : [];
@@ -3470,6 +3540,8 @@
       ...CHAPTER_IDS,
       ...REVIEW10_QUIZ_IDS,
       ...MIXED_REVIEW_IDS,
+      "formulaLabLearn",
+      "formulaLabExam",
       ...EXAM_QUIZ_IDS.filter(id => id !== "proctoredMock")
     ]);
 
@@ -3526,6 +3598,8 @@
       review10P3: 0.55,
       review10Mix: 0.7,
       writtenReview10: 0.15,
+      formulaLabLearn: 0.45,
+      formulaLabExam: 0.55,
       finalReview: 0.65,
       final: 1.0,
       proctoredMock: 0.95,
@@ -3695,6 +3769,33 @@
         learningMode: true,
         writtenOnly: true
       },
+      formulaLabLearn: {
+        id: "formulaLabLearn",
+        section: "formula",
+        title: "Formula Lab — Learn",
+        subtitle: "12 calculation MCQs · hints + steps",
+        meta: "Instant feedback · 70% to unlock exam mode",
+        description: "Part 1-style Nernst, Goldman, I = g(V−E), τ, and λ drills with formula hints and worked-step reminders. Pass once at 70%+ to unlock blind exam mode.",
+        icon: "ƒ",
+        cardClass: "formula-lab",
+        immediateFeedback: true,
+        showFormulaHints: true,
+        passKey: "formulaLabLearnPassed"
+      },
+      formulaLabExam: {
+        id: "formulaLabExam",
+        section: "formula",
+        title: "Formula Lab — Exam",
+        subtitle: "12 MCQs · no hints · answers at end",
+        meta: "70% to pass · new shuffle each run",
+        description: "Same calculation pool as Learn mode, but no formula panel — mirrors edX-style calculation load under test conditions.",
+        icon: "ƒ×",
+        cardClass: "formula-lab",
+        immediateFeedback: false,
+        requires: () => getProgress().formulaLabLearnPassed,
+        lockHint: "Score 70%+ on Formula Lab — Learn to unlock",
+        passKey: "formulaLabExamPassed"
+      },
       dailyPop: {
         id: "dailyPop",
         section: "daily",
@@ -3812,6 +3913,7 @@
       { id: "mixedReview", title: "Mixed Chapter Reviews", hint: "20 → 50 questions · all parts · instant feedback · difficulty rises each tier" },
       { id: "review10", title: "10-Question Exam Reviews", hint: "HarvardX-style MCQs · topic spread · answers revealed at the end" },
       { id: "written", title: "Short Answer Drills", hint: "10 per quiz from a 30-item pool · shuffled each attempt · model answers at the end" },
+      { id: "formula", title: "Formula Lab", hint: "Part 1 calculations · learn with hints, then test without the formula sheet on screen" },
       { id: "flashcards", title: "Weakness Flashcards", hint: "Auto-generated after each chapter quiz" },
       { id: "final", title: "Comprehensive Final", hint: "Final Review (learn mode) then the scored exam · unlocks after passing all module quizzes" },
       { id: "advanced", title: "Advanced Finals", hint: "Unlocked after the Comprehensive Final · 80% required to pass each" },
@@ -5549,7 +5651,10 @@
           explanation: surfaced.explanation,
           wrongExplanations,
           diagram: surfaced.diagram,
-          module: surfaced.module || routeQuestionToModule(surfaced)
+          module: surfaced.module || routeQuestionToModule(surfaced),
+          formulaHint: surfaced.formulaHint,
+          formulaSteps: surfaced.formulaSteps,
+          calcType: surfaced.calcType
         };
       });
     }
@@ -6116,6 +6221,18 @@
         ? `<div class="question-diagram" role="img">${q.diagram}</div>`
         : "";
 
+      const quizDef = QUIZZES[activeQuizId];
+      const formulaHtml = !written && quizDef?.showFormulaHints && q.formulaHint
+        ? `<div class="formula-hint-panel" role="note">
+          <p class="formula-hint-label">Formula hint</p>
+          <p>${fmt(q.formulaHint)}</p>
+          ${Array.isArray(q.formulaSteps) && q.formulaSteps.length
+            ? `<ol class="formula-steps">${q.formulaSteps.map(s => `<li>${fmt(s)}</li>`).join("")}</ol>`
+            : ""}
+          <p class="formula-sheet-link"><a href="mcb80x-formula-sheet.pdf" target="_blank" rel="noopener">Open printable formula sheet (PDF)</a></p>
+        </div>`
+        : "";
+
       const questionCard = document.getElementById("question-card");
       questionCard.classList.toggle("question-card--written", written);
       questionCard.innerHTML = `
@@ -6123,6 +6240,7 @@
           <span class="module-badge">${moduleBadge}</span>
           <span class="topic-badge${written ? " topic-badge--short-answer" : selectAll ? " topic-badge--short-answer" : ""}">${written ? "Short answer — written response" : selectAll ? "Select all that apply" : q.topic}</span>
         </div>
+        ${formulaHtml}
         <p class="question-text">${currentIndex + 1}. ${fmt(q.question)}</p>
         ${diagramHtml}
         ${bodyHtml}`;
