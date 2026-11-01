@@ -535,6 +535,44 @@
     }
 
     /* ── Quiz view ── */
+    .quiz-timer {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--crimson);
+      margin: 0.25rem 0 0;
+    }
+
+    .quiz-timer.is-low {
+      color: var(--incorrect);
+    }
+
+    .question-diagram {
+      margin: 0.75rem 0 1rem;
+      max-width: 100%;
+      border: 1px solid var(--gray-200);
+      border-radius: 8px;
+      padding: 0.5rem;
+      background: var(--gray-50);
+    }
+
+    .answer-grid--select-all .answer-btn {
+      text-align: left;
+    }
+
+    .answer-btn.is-selected-multi {
+      border-color: var(--harvard-crimson);
+      background: rgba(164, 16, 52, 0.08);
+    }
+
+    .flashcard-srs-feedback {
+      width: 100%;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--gray-600);
+      margin: 0.5rem 0 0;
+    }
+
     .quiz-header {
       display: flex;
       align-items: center;
@@ -1973,6 +2011,7 @@
       <div class="quiz-header">
         <button type="button" class="btn-back" id="btn-back">&larr; Save &amp; exit</button>
         <p class="quiz-title" id="quiz-title"></p>
+        <p class="quiz-timer" id="quiz-timer" hidden aria-live="polite"></p>
       </div>
       <div class="progress-card" role="status" aria-live="polite">
         <div class="progress-track" aria-hidden="true">
@@ -2019,6 +2058,7 @@
         <button type="button" class="btn-secondary" id="fc-again">Again</button>
         <button type="button" class="btn-primary" id="fc-good">Good</button>
         <button type="button" class="btn-secondary" id="fc-easy">Easy</button>
+        <p class="flashcard-srs-feedback" id="fc-srs-feedback" hidden role="status"></p>
       </div>
     </section>
 
@@ -2061,6 +2101,7 @@
   <script src="questions-expansion.js"></script>
   <script src="questions-exam-paraphrases.js"></script>
   <script src="questions-written-final.js"></script>
+  <script src="questions-proctored-mock.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" crossorigin="anonymous"></script>
   <script>
     function shuffle(array) {
@@ -2752,6 +2793,10 @@
       assignByTopic(typeof PART3_FRESH_POOL_2 !== "undefined" ? PART3_FRESH_POOL_2 : [], "part3");
       assignByTopic(typeof PART3_EXPANSION_POOL !== "undefined" ? PART3_EXPANSION_POOL : [], "part3");
       assign(typeof PART3_EXAM_PARAPHRASE_POOL !== "undefined" ? PART3_EXAM_PARAPHRASE_POOL : [], "part3");
+      assignByTopic(typeof PROCTORED_SATA_POOL !== "undefined" ? PROCTORED_SATA_POOL : [], "part2");
+      assignByTopic(typeof PROCTORED_LESION_POOL !== "undefined" ? PROCTORED_LESION_POOL : [], "part3");
+      assignByTopic(typeof PROCTORED_CIRCUIT_POOL !== "undefined" ? PROCTORED_CIRCUIT_POOL : [], "part2");
+      assignByTopic(typeof PROCTORED_CLAMP_TRACE_POOL !== "undefined" ? PROCTORED_CLAMP_TRACE_POOL : [], "part1");
       [NEW_TIER1, NEW_TIER2, NEW_TIER3, NEW_TIER4].forEach(tier => {
         (tier || []).forEach(q => {
           if (!q?.question || reg.has(q.question)) return;
@@ -2952,7 +2997,8 @@
       final150: 150,
       final200: 200,
       pinnacle300: 300,
-      writtenReview10: 10
+      writtenReview10: 10,
+      proctoredMock: 46
     };
 
     function getProgressiveTierQuestions(progress) {
@@ -3167,6 +3213,38 @@
       return !!(q && (q.type === "shortAnswer" || (q.modelAnswer && !q.options)));
     }
 
+    function isSelectAllQuestion(q) {
+      return !!(q && (q.type === "selectAll" || Array.isArray(q.correctIndices)));
+    }
+
+    function scoreSelectAllQuestion(q, userAnswer) {
+      if (!isSelectAllQuestion(q)) return false;
+      const picked = new Set(Array.isArray(userAnswer) ? userAnswer : []);
+      const need = new Set(q.correctIndices || []);
+      if (picked.size !== need.size) return false;
+      for (const i of need) if (!picked.has(i)) return false;
+      return true;
+    }
+
+    const PART1_TOPIC_LABELS = new Set([
+      "Resting Potential", "Nernst Equation", "Goldman Equation", "Passive Membrane Properties",
+      "Action Potential", "Action Potential Propagation", "Electrical Signaling", "Voltage Clamp",
+      "Pharmacology", "Cable Theory", "Current Clamp", "Patch Clamp", "Action Potentials"
+    ]);
+    const PART2_TOPIC_LABELS = new Set([
+      "Chemical Synapses", "Synaptic Transmission", "Synaptic Integration", "Receptor Types",
+      "Second Messengers", "Long-Term Plasticity", "Short-Term Plasticity", "Neuromodulation",
+      "Neural Circuits", "Synaptic Plasticity Rules", "Synaptic Vesicles"
+    ]);
+
+    function routeQuestionToModule(q) {
+      if (q?.module && CHAPTER_IDS.includes(q.module)) return q.module;
+      const t = q?.topic || "";
+      if (PART1_TOPIC_LABELS.has(t)) return "part1";
+      if (PART2_TOPIC_LABELS.has(t)) return "part2";
+      return "part3";
+    }
+
     function sampleWrittenForExam(quizId, avoidKeys) {
       const n = typeof WRITTEN_EXAM_COUNTS !== "undefined" ? (WRITTEN_EXAM_COUNTS[quizId] || 0) : 0;
       if (!n || typeof WRITTEN_EXAM_POOL === "undefined" || !WRITTEN_EXAM_POOL.length) return [];
@@ -3244,6 +3322,23 @@
       if (quizId === "pinnacle300") {
         return attachWrittenToExamSet(sampleFromPool(pools.all, QUIZ_SAMPLE_SIZES.pinnacle300, avoid), quizId, avoid);
       }
+      if (quizId === "proctoredMock") {
+        const sataPool = typeof PROCTORED_SATA_POOL !== "undefined" ? PROCTORED_SATA_POOL : [];
+        const lesionPool = typeof PROCTORED_LESION_POOL !== "undefined" ? PROCTORED_LESION_POOL : [];
+        const circuitPool = typeof PROCTORED_CIRCUIT_POOL !== "undefined" ? PROCTORED_CIRCUIT_POOL : [];
+        const clampPool = typeof PROCTORED_CLAMP_TRACE_POOL !== "undefined" ? PROCTORED_CLAMP_TRACE_POOL : [];
+        const sataCount = 12;
+        const sata = sampleFromPool(sataPool, sataCount, avoid);
+        const mcq = shuffle([
+          ...sampleFromPool(pools.part1, 12, avoid),
+          ...sampleFromPool(pools.part2, 12, avoid),
+          ...sampleFromPool(pools.part3, 8, avoid),
+          ...sampleFromPool(lesionPool, 6, avoid),
+          ...sampleFromPool(circuitPool, 4, avoid),
+          ...sampleFromPool(clampPool, 2, avoid)
+        ]);
+        return shuffle([...sata, ...mcq]);
+      }
       return [];
     }
 
@@ -3269,13 +3364,19 @@
     const FLASHCARD_SESSION_KEY = "mcb80x_flashcard_session";
     const CHAPTER_IDS = ["part1", "part2", "part3"];
 
-    const EXAM_QUIZ_IDS = ["final", "final100", "final150", "final200", "pinnacle300"];
+    const EXAM_QUIZ_IDS = ["final", "final100", "final150", "final200", "pinnacle300", "proctoredMock"];
     const REVIEW10_QUIZ_IDS = ["review10P1", "review10P2", "review10P3", "review10Mix"];
     const EXAM_STYLE_QUIZ_IDS = new Set([
       ...REVIEW10_QUIZ_IDS,
       "finalReview",
       ...EXAM_QUIZ_IDS,
       ...MIXED_REVIEW_IDS
+    ]);
+    const FLASHCARD_MISS_QUIZ_IDS = new Set([
+      ...CHAPTER_IDS,
+      ...REVIEW10_QUIZ_IDS,
+      ...MIXED_REVIEW_IDS,
+      ...EXAM_QUIZ_IDS.filter(id => id !== "proctoredMock")
     ]);
 
     function examParaphrasePool(partId) {
@@ -3294,9 +3395,17 @@
 
     function buildExamReviewPools(progress) {
       const base = buildModulePools(progress);
-      const part1 = dedupeQuestions([...base.part1, ...examParaphrasePool("part1")]);
-      const part2 = dedupeQuestions([...base.part2, ...examParaphrasePool("part2")]);
-      const part3 = dedupeQuestions([...base.part3, ...examParaphrasePool("part3")]);
+      const paraphraseAll = dedupeQuestions([
+        ...examParaphrasePool("part1"),
+        ...examParaphrasePool("part2"),
+        ...examParaphrasePool("part3")
+      ]);
+      const p1Extra = paraphraseAll.filter(q => routeQuestionToModule(q) === "part1");
+      const p2Extra = paraphraseAll.filter(q => routeQuestionToModule(q) === "part2");
+      const p3Extra = paraphraseAll.filter(q => routeQuestionToModule(q) === "part3");
+      const part1 = dedupeQuestions([...base.part1, ...p1Extra]);
+      const part2 = dedupeQuestions([...base.part2, ...p2Extra]);
+      const part3 = dedupeQuestions([...base.part3, ...p3Extra]);
       return {
         part1,
         part2,
@@ -3325,6 +3434,7 @@
       writtenReview10: 0.15,
       finalReview: 0.65,
       final: 1.0,
+      proctoredMock: 0.95,
       final100: 1.15,
       final150: 1.3,
       final200: 1.45,
@@ -3484,7 +3594,7 @@
         title: "Short Answer Drills",
         subtitle: "10 prompts · drawn from a pool of 30",
         meta: "Always unlocked · new shuffle each run",
-        description: "Ten short-answer items (Parts 1–3) sampled from a 20-item pool — same style as scored finals. Compare to model answers after submit.",
+        description: "Ten short-answer items (Parts 1–3) sampled from a 30-item pool — same style as scored finals. Compare to model answers after submit.",
         icon: "✎",
         cardClass: "exam-review written-drill",
         immediateFeedback: false,
@@ -3514,6 +3624,20 @@
         cardClass: "final review",
         immediateFeedback: true,
         learningMode: true,
+        requires: () => allChapterQuizzesPassed(),
+        lockHint: "Pass Part 1, Part 2, and Part 3 (70%+) to unlock"
+      },
+      proctoredMock: {
+        id: "proctoredMock",
+        section: "final",
+        title: "Proctored Mock Exam (Timed)",
+        subtitle: "Mixed Parts 1–3 · select-all items · 90 minutes",
+        meta: "70% to pass · answers at end · all-or-nothing SATA scoring",
+        description: "50-question mixed exam with visible timer, checkbox items (~20% select-all), lesion/circuit/clamp items — mimics proctored format.",
+        icon: "⏱",
+        cardClass: "final",
+        immediateFeedback: false,
+        timedMinutes: 90,
         requires: () => allChapterQuizzesPassed(),
         lockHint: "Pass Part 1, Part 2, and Part 3 (70%+) to unlock"
       },
@@ -3553,8 +3677,8 @@
         description: "Additional variations with increased conceptual precision",
         icon: "II",
         cardClass: "elite",
-        requires: () => getProgress().finalCompleted,
-        lockHint: "Complete the Comprehensive Final Exam to unlock",
+        requires: () => getProgress().final100Passed,
+        lockHint: "Pass Advanced Final I (80%+) to unlock",
         passKey: "final150Passed"
       },
       final200: {
@@ -3566,8 +3690,8 @@
         description: "Broader coverage with rigorous single-variable mechanism testing",
         icon: "III",
         cardClass: "elite",
-        requires: () => getProgress().finalCompleted,
-        lockHint: "Complete the Comprehensive Final Exam to unlock",
+        requires: () => getProgress().final100Passed,
+        lockHint: "Pass Advanced Final I (80%+) to unlock",
         passKey: "final200Passed"
       },
       pinnacle300: {
@@ -3593,7 +3717,7 @@
       { id: "core", title: "Core Modules", hint: "Part 1 · Part 2 · Part 3 — instant feedback on each answer" },
       { id: "mixedReview", title: "Mixed Chapter Reviews", hint: "20 → 50 questions · all parts · instant feedback · difficulty rises each tier" },
       { id: "review10", title: "10-Question Exam Reviews", hint: "HarvardX-style MCQs · topic spread · answers revealed at the end" },
-      { id: "written", title: "Short Answer Drills", hint: "10 per quiz from a 20-item pool · shuffled each attempt · model answers at the end" },
+      { id: "written", title: "Short Answer Drills", hint: "10 per quiz from a 30-item pool · shuffled each attempt · model answers at the end" },
       { id: "flashcards", title: "Weakness Flashcards", hint: "Auto-generated after each chapter quiz" },
       { id: "final", title: "Comprehensive Final", hint: "Final Review (learn mode) then the scored exam · unlocks after passing all module quizzes" },
       { id: "advanced", title: "Advanced Finals", hint: "Unlocked after the Comprehensive Final · 80% required to pass each" },
@@ -4065,6 +4189,13 @@
       }
       store[key] = meta;
       saveFlashcardSrsStore(store);
+      const fb = document.getElementById("fc-srs-feedback");
+      if (fb) {
+        const dueStr = new Date(meta.due).toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" });
+        const label = quality < 3 ? "Again — review in ~10 minutes" : `Next review: ${dueStr}${meta.retired ? " · retired from active deck" : ""}`;
+        fb.textContent = label;
+        fb.hidden = false;
+      }
       fcDeck = buildFlashcardStudyDeck(activeFlashcardChapter);
       if (!fcDeck.length) {
         renderDashboard();
@@ -4145,7 +4276,9 @@
           }
           return;
         }
-        const isCorrect = answerMap[i] === q.correct;
+        const isCorrect = isSelectAllQuestion(q)
+          ? scoreSelectAllQuestion(q, answerMap[i])
+          : answerMap[i] === q.correct;
         if (isCorrect) correct++;
         const mod = questionModule(q, quizId);
         const topic = q.topic || "General";
@@ -5192,6 +5325,9 @@
         const min = q.minChars || 30;
         return typeof text === "string" && text.trim().length >= min;
       }
+      if (isSelectAllQuestion(q)) {
+        return Array.isArray(answers[index]) && answers[index].length > 0;
+      }
       return answers[index] !== undefined;
     }
 
@@ -5282,6 +5418,27 @@
         const surfaced = applyExamSurfaceVariant(q, quizId);
         const indexed = surfaced.options.map((text, i) => ({ text, originalIndex: i }));
         const shuffledOpts = shuffle(indexed);
+        if (isSelectAllQuestion(surfaced)) {
+          const newCorrectIndices = (surfaced.correctIndices || [])
+            .map(orig => shuffledOpts.findIndex(o => o.originalIndex === orig))
+            .filter(i => i >= 0)
+            .sort((a, b) => a - b);
+          const wrongExplanations = Array.isArray(surfaced.wrongExplanations)
+            ? shuffledOpts.map(o => surfaced.wrongExplanations[o.originalIndex] || "")
+            : shuffledOpts.map(() => "");
+          return {
+            type: "selectAll",
+            topic: surfaced.topic,
+            question: surfaced.question,
+            options: shuffledOpts.map(o => o.text),
+            correctIndices: newCorrectIndices,
+            scoringRule: surfaced.scoringRule || "All-or-nothing: select every correct statement and no incorrect ones.",
+            explanation: surfaced.explanation,
+            wrongExplanations,
+            diagram: surfaced.diagram,
+            module: surfaced.module || routeQuestionToModule(surfaced)
+          };
+        }
         const newCorrect = shuffledOpts.findIndex(o => o.originalIndex === surfaced.correct);
         const wrongExplanations = Array.isArray(surfaced.wrongExplanations)
           ? shuffledOpts.map(o => surfaced.wrongExplanations[o.originalIndex] || "")
@@ -5296,12 +5453,58 @@
           options: shuffledOpts.map(o => o.text),
           correct: newCorrect,
           explanation: surfaced.explanation,
-          wrongExplanations
+          wrongExplanations,
+          diagram: surfaced.diagram,
+          module: surfaced.module || routeQuestionToModule(surfaced)
         };
       });
     }
 
     let pendingUnlockMessage = null;
+    let quizTimerInterval = null;
+    let quizDeadlineTs = null;
+
+    function clearQuizTimer() {
+      if (quizTimerInterval) clearInterval(quizTimerInterval);
+      quizTimerInterval = null;
+      quizDeadlineTs = null;
+      const el = document.getElementById("quiz-timer");
+      if (el) {
+        el.hidden = true;
+        el.textContent = "";
+        el.classList.remove("is-low");
+      }
+    }
+
+    function formatTimerRemaining(ms) {
+      const totalSec = Math.max(0, Math.ceil(ms / 1000));
+      const m = Math.floor(totalSec / 60);
+      const s = totalSec % 60;
+      return `${m}:${String(s).padStart(2, "0")} remaining`;
+    }
+
+    function startQuizTimer(minutes) {
+      clearQuizTimer();
+      if (!minutes || minutes <= 0) return;
+      const el = document.getElementById("quiz-timer");
+      if (!el) return;
+      quizDeadlineTs = Date.now() + minutes * 60 * 1000;
+      el.hidden = false;
+      const tick = () => {
+        const left = quizDeadlineTs - Date.now();
+        if (left <= 0) {
+          el.textContent = "Time expired — submit to review answers";
+          el.classList.add("is-low");
+          clearInterval(quizTimerInterval);
+          quizTimerInterval = null;
+          return;
+        }
+        el.textContent = formatTimerRemaining(left);
+        el.classList.toggle("is-low", left < 5 * 60 * 1000);
+      };
+      tick();
+      quizTimerInterval = setInterval(tick, 1000);
+    }
 
     function formatQuizMeta(quiz) {
       return quiz.meta || "";
@@ -5364,8 +5567,12 @@
             ? `<span class="lock-badge">🔒 ${q.lockHint || "Locked"}</span>`
             : passed
               ? `<span class="lock-badge" style="background:var(--correct-bg);color:var(--correct);">✓ Passed</span>`
-              : completed
+              : completed && q.writtenOnly
+                ? `<span class="lock-badge" style="background:var(--gray-100);color:var(--gray-600);">✓ Completed</span>`
+              : completed && best != null && !Number.isNaN(best)
                 ? `<span class="lock-badge" style="background:var(--gray-100);color:var(--gray-600);">Best: ${best}%</span>`
+                : completed
+                  ? `<span class="lock-badge" style="background:var(--gray-100);color:var(--gray-600);">Completed</span>`
                 : "";
           if (q.id === "dailyPop" && dailyPopDoneToday(progress)) {
             lockBadge = `<span class="lock-badge" style="background:var(--correct-bg);color:var(--correct);">✓ Done today</span>`;
@@ -5481,6 +5688,8 @@
       document.getElementById("fc-next").disabled = fcIndex === fcDeck.length - 1;
       const grade = document.getElementById("fc-grade");
       if (grade) grade.hidden = true;
+      const fb = document.getElementById("fc-srs-feedback");
+      if (fb) fb.hidden = true;
     }
 
     function flipFlashcard() {
@@ -5657,6 +5866,7 @@
 
     function pauseQuizAndExit() {
       saveQuizSession();
+      clearQuizTimer();
       renderDashboard();
       showView("dashboard");
     }
@@ -5714,6 +5924,8 @@
         titleEl.textContent = quiz.title;
       }
       updateQuizBackLabel();
+      clearQuizTimer();
+      startQuizTimer(quiz.timedMinutes);
       showView("quiz");
       renderQuestion();
       if (isPausableQuiz(quizId)) saveQuizSession();
@@ -5731,8 +5943,9 @@
       const total = shuffledQuestions.length;
       const selected = answers[currentIndex];
       const written = isWrittenQuestion(q);
+      const selectAll = isSelectAllQuestion(q);
       const revealed = hasImmediateFeedback() && isQuestionAnswered(currentIndex) && !written;
-      const isCorrect = revealed && selected === q.correct;
+      const isCorrect = revealed && (selectAll ? scoreSelectAllQuestion(q, selected) : selected === q.correct);
 
       document.getElementById("progress-fill").style.width = `${((currentIndex + 1) / total) * 100}%`;
       document.getElementById("progress-label").textContent = `${currentIndex + 1} / ${total}`;
@@ -5754,6 +5967,23 @@
           <textarea id="written-answer-input" class="written-answer-textarea" aria-label="Your written answer" placeholder="Write 2–5 sentences in your own words…">${escapeHtml(saved)}</textarea>
           <p class="written-char-hint">${len} / ${min} characters minimum</p>
         </div>`;
+      } else if (selectAll) {
+        const picked = new Set(Array.isArray(selected) ? selected : []);
+        const need = new Set(q.correctIndices || []);
+        const optionsHtml = q.options.map((opt, i) => {
+          let cls = "answer-btn";
+          const on = picked.has(i);
+          if (revealed) {
+            if (need.has(i)) cls += on ? " is-correct" : " is-incorrect";
+            else if (on) cls += " is-incorrect";
+          } else if (on) cls += " is-selected-multi";
+          const disabled = revealed ? " disabled" : "";
+          return `<button type="button" class="${cls}" data-index="${i}"${disabled} aria-pressed="${on}">
+          <span class="letter">${LETTERS[i]}</span>${fmt(opt)}
+        </button>`;
+        }).join("");
+        const rule = q.scoringRule ? `<p class="written-prompt-hint">${fmt(q.scoringRule)}</p>` : "";
+        bodyHtml = `${rule}<div class="answer-grid answer-grid--select-all" role="group" aria-label="Select all that apply">${optionsHtml}</div>`;
       } else {
         const optionsHtml = q.options.map((opt, i) => {
           let cls = "answer-btn";
@@ -5788,14 +6018,19 @@
         ${feedbackHtml}`;
       }
 
+      const diagramHtml = q.diagram
+        ? `<div class="question-diagram" role="img">${q.diagram}</div>`
+        : "";
+
       const questionCard = document.getElementById("question-card");
       questionCard.classList.toggle("question-card--written", written);
       questionCard.innerHTML = `
         <div class="question-meta-badges">
           <span class="module-badge">${moduleBadge}</span>
-          <span class="topic-badge${written ? " topic-badge--short-answer" : ""}">${written ? "Short answer — written response" : q.topic}</span>
+          <span class="topic-badge${written ? " topic-badge--short-answer" : selectAll ? " topic-badge--short-answer" : ""}">${written ? "Short answer — written response" : selectAll ? "Select all that apply" : q.topic}</span>
         </div>
         <p class="question-text">${currentIndex + 1}. ${fmt(q.question)}</p>
+        ${diagramHtml}
         ${bodyHtml}`;
 
       if (written) {
@@ -5814,12 +6049,20 @@
         document.getElementById("question-card").querySelectorAll(".answer-btn").forEach(btn => {
           btn.addEventListener("click", () => {
             const idx = parseInt(btn.dataset.index, 10);
-            answers[currentIndex] = idx;
-            if (hasImmediateFeedback()) {
+            if (selectAll) {
+              const prev = new Set(Array.isArray(answers[currentIndex]) ? answers[currentIndex] : []);
+              if (prev.has(idx)) prev.delete(idx);
+              else prev.add(idx);
+              answers[currentIndex] = [...prev].sort((a, b) => a - b);
               renderQuestion();
             } else {
-              document.querySelectorAll(".answer-btn").forEach(b => b.classList.remove("selected"));
-              btn.classList.add("selected");
+              answers[currentIndex] = idx;
+              if (hasImmediateFeedback()) {
+                renderQuestion();
+              } else {
+                document.querySelectorAll(".answer-btn").forEach(b => b.classList.remove("selected"));
+                btn.classList.add("selected");
+              }
             }
             saveQuizSession();
           });
@@ -5836,6 +6079,7 @@
     function showResults() {
       persistWrittenAnswerFromDom();
       clearQuizSession();
+      clearQuizTimer();
       const mcqQuestions = shuffledQuestions.filter(q => !isWrittenQuestion(q));
       const writtenQuestions = shuffledQuestions.filter(q => isWrittenQuestion(q));
       let correct = 0;
@@ -5860,16 +6104,33 @@
           return;
         }
 
-        const isCorrect = userAnswer === q.correct;
+        const selectAll = isSelectAllQuestion(q);
+        const isCorrect = selectAll ? scoreSelectAllQuestion(q, userAnswer) : userAnswer === q.correct;
         if (isCorrect) correct++;
 
         const card = document.createElement("div");
         card.className = `review-card ${isCorrect ? "correct" : "incorrect"}`;
 
+        const picked = new Set(Array.isArray(userAnswer) ? userAnswer : []);
+        const need = new Set(q.correctIndices || []);
+
         const optionsHtml = q.options.map((opt, j) => {
           let cls = "review-option";
           let label = "";
-          if (j === userAnswer) {
+          if (selectAll) {
+            const userOn = picked.has(j);
+            const should = need.has(j);
+            if (userOn && should) {
+              cls += " user-correct";
+              label = `<span class="review-option-label">Correct · selected</span>`;
+            } else if (userOn && !should) {
+              cls += " user-incorrect";
+              label = `<span class="review-option-label">Incorrect · selected</span>`;
+            } else if (!userOn && should) {
+              cls += " is-answer";
+              label = `<span class="review-option-label">Should have selected</span>`;
+            }
+          } else if (j === userAnswer) {
             cls += isCorrect ? " user-correct" : " user-incorrect";
             label = `<span class="review-option-label">Your answer</span>`;
           } else if (j === q.correct && !isCorrect) {
@@ -5879,12 +6140,24 @@
           return `<div class="${cls}">${label}${LETTERS[j]}. ${fmt(opt)}</div>`;
         }).join("");
 
+        const diagramBlock = q.diagram ? `<div class="question-diagram">${q.diagram}</div>` : "";
+        const scoringNote = selectAll && q.scoringRule
+          ? `<p class="review-explanation"><strong>Scoring:</strong> ${fmt(q.scoringRule)}</p>`
+          : "";
+
         card.innerHTML = `
           <span class="review-badge">${isCorrect ? "Correct" : "Incorrect"}</span>
           <p class="review-question">${i + 1}. ${fmt(q.question)}</p>
+          ${diagramBlock}
           <div class="review-options">${optionsHtml}</div>
+          ${scoringNote}
           <p class="review-explanation"><strong>Explanation:</strong> ${fmt(q.explanation)}</p>
           ${q.options.map((opt, j) => {
+            if (selectAll) {
+              if (!q.wrongExplanations?.[j]) return "";
+              if (need.has(j)) return "";
+              return `<p class="review-explanation"><strong>Why ${LETTERS[j]} is wrong:</strong> ${fmt(q.wrongExplanations[j])}</p>`;
+            }
             if (j === q.correct || !q.wrongExplanations?.[j]) return "";
             return `<p class="review-explanation"><strong>Why ${LETTERS[j]} is wrong:</strong> ${fmt(q.wrongExplanations[j])}</p>`;
           }).join("")}`;
@@ -5939,18 +6212,40 @@
 
         recordQuizAttempt(activeQuizId, shuffledQuestions, answers, quiz.writtenOnly ? 0 : pct, passed);
 
-        if (quiz && CHAPTER_IDS.includes(activeQuizId)) {
-          const missed = shuffledQuestions
-            .filter((q, i) => !isWrittenQuestion(q) && answers[i] !== q.correct)
-            .map(q => ({
+        if (quiz && FLASHCARD_MISS_QUIZ_IDS.has(activeQuizId)) {
+          const missedByChapter = { part1: [], part2: [], part3: [] };
+          shuffledQuestions.forEach((q, i) => {
+            if (isWrittenQuestion(q)) return;
+            const ok = isSelectAllQuestion(q)
+              ? scoreSelectAllQuestion(q, answers[i])
+              : answers[i] === q.correct;
+            if (ok) return;
+            const chapterId = CHAPTER_IDS.includes(activeQuizId)
+              ? activeQuizId
+              : routeQuestionToModule(q);
+            if (!CHAPTER_IDS.includes(chapterId)) return;
+            const answerText = isSelectAllQuestion(q)
+              ? (q.correctIndices || []).map(idx => q.options[idx]).join("; ")
+              : q.options[q.correct];
+            missedByChapter[chapterId].push({
               topic: q.topic,
               question: q.question,
-              answer: q.options[q.correct],
+              answer: answerText,
               explanation: q.explanation
-            }));
-          if (missed.length) {
-            saveWeaknessFlashcards(activeQuizId, missed);
-            pendingUnlockMessage = `${missed.length} weakness flashcard${missed.length > 1 ? "s" : ""} added to ${CHAPTER_META[activeQuizId].title}.`;
+            });
+          });
+          let added = 0;
+          CHAPTER_IDS.forEach(cid => {
+            if (missedByChapter[cid].length) {
+              saveWeaknessFlashcards(cid, missedByChapter[cid]);
+              added += missedByChapter[cid].length;
+            }
+          });
+          if (added) {
+            const label = CHAPTER_IDS.includes(activeQuizId)
+              ? CHAPTER_META[activeQuizId].title
+              : "module flashcard decks";
+            pendingUnlockMessage = `${added} weakness flashcard${added > 1 ? "s" : ""} added to ${label}.`;
           }
         }
 
