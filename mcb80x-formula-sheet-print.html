@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MCB80x Formula Reference · HarvardX</title>
+  <title>MCB80x Exam Formula Sheet · HarvardX</title>
   <style>
     :root {
       --crimson: #a41034;
@@ -11,19 +11,20 @@
       --ink: #1a1a1a;
       --muted: #444;
       --rule: #ccc;
-      --formula-bg: #f8f8f8;
+      --formula-bg: #fafafa;
+      --worked-bg: #fdf8f9;
     }
 
     * { box-sizing: border-box; }
 
     body {
       font-family: "Georgia", "Times New Roman", serif;
-      font-size: 10.5pt;
-      line-height: 1.4;
+      font-size: 9.5pt;
+      line-height: 1.38;
       color: var(--ink);
       max-width: 7.5in;
       margin: 0 auto;
-      padding: 0.45in 0.6in 0.65in;
+      padding: 0.4in 0.55in 0.5in;
       background: #fff;
     }
 
@@ -50,126 +51,186 @@
     header.brand {
       text-align: center;
       border-bottom: 3px solid var(--crimson);
-      padding-bottom: 0.75rem;
-      margin-bottom: 0.85rem;
+      padding-bottom: 0.65rem;
+      margin-bottom: 0.65rem;
     }
 
     .harvardx-mark {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 0.08em;
       font-family: "Helvetica Neue", Arial, sans-serif;
       font-weight: 700;
-      font-size: 1.75rem;
+      font-size: 2rem;
+      letter-spacing: -0.02em;
       color: var(--crimson);
+      line-height: 1.1;
     }
 
-    .harvardx-mark .x-logo { width: 0.88em; height: 0.88em; }
+    .harvardx-mark .x-logo {
+      width: 0.88em;
+      height: 0.88em;
+      flex-shrink: 0;
+    }
 
     .program-line {
       font-family: "Helvetica Neue", Arial, sans-serif;
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       color: var(--muted);
-      margin-top: 0.3rem;
+      margin-top: 0.35rem;
+      letter-spacing: 0.02em;
     }
 
     h1 {
       font-family: "Helvetica Neue", Arial, sans-serif;
-      font-size: 1.2rem;
+      font-size: 1.35rem;
       font-weight: 600;
-      margin: 0.4rem 0 0;
+      margin: 0.45rem 0 0;
+      color: var(--ink);
     }
 
     .intro {
-      font-size: 9.5pt;
+      font-size: 10pt;
       color: var(--muted);
-      margin: 0.65rem 0 0.85rem;
+      margin: 0.55rem 0 0.65rem;
+      text-align: center;
     }
 
     h2 {
       font-family: "Helvetica Neue", Arial, sans-serif;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       color: var(--crimson-dark);
-      margin: 1rem 0 0.4rem;
+      margin: 0.55rem 0 0.3rem;
       padding-top: 0.35rem;
       border-top: 1px solid var(--rule);
       page-break-after: avoid;
     }
 
-    h2:first-of-type { border-top: none; padding-top: 0; }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem 0.85rem;
+      align-items: start;
+    }
+
+    .grid-2 > section:first-child h2 { border-top: none; padding-top: 0; margin-top: 0; }
 
     .formula {
       font-family: "Helvetica Neue", Arial, sans-serif;
       background: var(--formula-bg);
       border-left: 3px solid var(--crimson);
-      padding: 0.45rem 0.65rem;
-      margin: 0.35rem 0 0.5rem;
-      font-size: 10pt;
-      line-height: 1.5;
+      padding: 0.35rem 0.5rem;
+      margin: 0.2rem 0 0.35rem;
+      font-size: 8.75pt;
+      line-height: 1.45;
     }
 
     .formula .name {
       font-weight: 700;
       display: block;
-      margin-bottom: 0.15rem;
-      color: var(--ink);
+      margin-bottom: 0.1rem;
+      font-size: 8.5pt;
+      color: var(--crimson-dark);
     }
 
-    .note {
+    .worked {
+      background: var(--worked-bg);
+      border: 1px solid rgba(164, 16, 52, 0.25);
+      border-radius: 4px;
+      padding: 0.45rem 0.55rem;
+      margin: 0.35rem 0 0.5rem;
+      font-size: 8.75pt;
+      line-height: 1.45;
+    }
+
+    .worked h3 {
+      font-family: "Helvetica Neue", Arial, sans-serif;
       font-size: 9pt;
-      color: var(--muted);
-      margin: 0.15rem 0 0.45rem;
+      font-weight: 700;
+      color: var(--crimson);
+      margin: 0 0 0.35rem;
+    }
+
+    .worked ol {
+      margin: 0.25rem 0 0;
+      padding-left: 1.15rem;
+    }
+
+    .worked li { margin: 0.2rem 0; }
+
+    .worked .result {
+      font-weight: 700;
+      color: var(--ink);
+      margin-top: 0.35rem;
     }
 
     table.constants {
       width: 100%;
       border-collapse: collapse;
       font-family: "Helvetica Neue", Arial, sans-serif;
-      font-size: 9.5pt;
-      margin: 0.4rem 0 0.75rem;
+      font-size: 8.25pt;
+      margin: 0.2rem 0 0.35rem;
     }
 
     table.constants th,
     table.constants td {
       border: 1px solid var(--rule);
-      padding: 0.35rem 0.5rem;
+      padding: 0.25rem 0.4rem;
       text-align: left;
     }
 
     table.constants th {
       background: var(--formula-bg);
       font-weight: 600;
+      color: var(--crimson-dark);
     }
 
     ul.compact {
-      margin: 0.2rem 0 0.5rem;
-      padding-left: 1.1rem;
-      font-size: 9.5pt;
+      margin: 0.15rem 0 0.3rem;
+      padding-left: 1rem;
+      font-size: 8.5pt;
     }
 
-    ul.compact li { margin: 0.2rem 0; }
+    ul.compact li { margin: 0.12rem 0; }
+
+    .exam-strip {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 8pt;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--crimson);
+      margin-bottom: 0.15rem;
+    }
 
     footer {
-      margin-top: 1rem;
-      padding-top: 0.5rem;
+      margin-top: 0.5rem;
+      padding-top: 0.4rem;
       border-top: 1px solid var(--rule);
-      font-size: 8.5pt;
+      font-size: 8pt;
       color: var(--muted);
       font-family: "Helvetica Neue", Arial, sans-serif;
+      text-align: center;
     }
 
     @media print {
       .no-print { display: none !important; }
-      body { padding: 0; max-width: none; font-size: 10pt; }
+      body { padding: 0; max-width: none; font-size: 9pt; }
+      .grid-2 { gap: 0.4rem 0.65rem; }
     }
 
-    @page { margin: 0.65in; }
+    @page { margin: 0.5in; }
+
+    @media (max-width: 640px) {
+      .grid-2 { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
 
   <div class="no-print">
-    <strong>Print tip:</strong> <kbd>Cmd+P</kbd> / <kbd>Ctrl+P</kbd> → Save as PDF. Keep this sheet beside the <a href="mcb80x-exam-study-guide-print.html">exam study guide</a>.
+    <strong>Print tip:</strong> Use <kbd>Cmd+P</kbd> / <kbd>Ctrl+P</kbd>, enable “Background graphics” for crimson accents, then Save as PDF (aim: <strong>one page</strong> front).
     <button type="button" onclick="window.print()">Print / Save PDF</button>
   </div>
 
@@ -183,117 +244,110 @@
         </g>
       </svg>
     </div>
-    <p class="program-line">Fundamentals of Neuroscience · MCB80x</p>
-    <h1>Formula &amp; Constants Reference</h1>
-    <p class="program-line">Quick reference for proctored-exam calculations · 37&nbsp;°C unless noted</p>
+    <p class="program-line">Fundamentals of Neuroscience · MicroBachelors<sup>®</sup> Program</p>
+    <h1>Proctored Exam — Formula Sheet</h1>
+    <p class="program-line">MCB80.1x · MCB80.2x · MCB80.3x · 37&nbsp;°C · exam calculations only</p>
   </header>
 
   <p class="intro">
-    Symbols follow course usage: V<sub>m</sub> = membrane potential; E<sub>ion</sub> = reversal (Nernst) potential for that ion;
-    g = conductance (S), R = resistance (Ω), C<sub>m</sub> = membrane capacitance. Outward current is often defined positive.
+    Symbols: V<sub>m</sub> membrane potential; E<sub>ion</sub> reversal potential; g conductance (S); outward current positive unless noted.
+    Pair with the <strong>exam study guide</strong> (concepts) and the <strong>practice app</strong> (timed MCQs).
   </p>
 
-  <h2>Constants (approximate)</h2>
+  <p class="exam-strip">Exam constants</p>
   <table class="constants">
     <thead>
-      <tr><th>Quantity</th><th>Value</th><th>Use</th></tr>
+      <tr><th>Constant</th><th>≈ Value</th><th>Exam use</th></tr>
     </thead>
     <tbody>
-      <tr><td>RT/F at 37&nbsp;°C</td><td>≈ 26.7 mV</td><td>Nernst with natural log (ln)</td></tr>
-      <tr><td>2.303·RT/F at 37&nbsp;°C</td><td>≈ 61.5 mV per 10× ratio</td><td>Nernst with log<sub>10</sub></td></tr>
-      <tr><td>Typical [K<sup>+</sup>]<sub>in</sub> / [K<sup>+</sup>]<sub>out</sub></td><td>≈ 140 / 4–5 mM</td><td>E<sub>K</sub> strongly negative</td></tr>
-      <tr><td>Typical [Na<sup>+</sup>]<sub>out</sub> / [Na<sup>+</sup>]<sub>in</sub></td><td>≈ 145 / 15 mM</td><td>E<sub>Na</sub> strongly positive</td></tr>
+      <tr><td>RT/F (37&nbsp;°C)</td><td>26.7 mV</td><td>Nernst with ln</td></tr>
+      <tr><td>61.54 mV / decade</td><td>log<sub>10</sub> Nernst</td><td>10× [out]/[in] → 61.5/z mV shift</td></tr>
+      <tr><td>2× [out] (z = 1)</td><td>+18.5 mV</td><td>E<sub>ion</sub> more positive</td></tr>
+      <tr><td>4× [out] (z = 1)</td><td>+37 mV</td><td>fourfold K<sub>out</sub> etc.</td></tr>
+      <tr><td>4× [out] (z = 2, Ca²⁺)</td><td>+18.5 mV</td><td>half slope</td></tr>
     </tbody>
   </table>
 
-  <h2>Part 1 — Electrical properties</h2>
+  <div class="grid-2">
+    <section>
+      <h2>Core equations (Part 1)</h2>
 
-  <div class="formula">
-    <span class="name">Nernst (equilibrium) potential — monovalent cation</span>
-    E<sub>ion</sub> = (RT / zF) · ln([ion]<sub>out</sub> / [ion]<sub>in</sub>)
-    <br />Log<sub>10</sub> form: E<sub>ion</sub> = (61.5 mV / z) · log<sub>10</sub>([ion]<sub>out</sub> / [ion]<sub>in</sub>) at 37&nbsp;°C
-  </div>
-  <p class="note">Anions (e.g. Cl<sup>−</sup>, z = −1): use the same magnitude with inside/outside in the log; sign follows your convention for E<sub>Cl</sub>. Divalent Ca<sup>2+</sup>: divide the 61.5 mV slope by 2. Doubling [out] shifts E by ≈ +18 mV (z = 1) or ≈ +9 mV per 2× for z = 2.</p>
+      <div class="formula">
+        <span class="name">Nernst</span>
+        E<sub>ion</sub> = (61.54 mV / z) · log<sub>10</sub>([ion]<sub>out</sub> / [ion]<sub>in</sub>)
+      </div>
 
-  <div class="formula">
-    <span class="name">Goldman (constant-field) resting potential</span>
-    V<sub>m</sub> = (RT/F) · ln( (P<sub>K</sub>[K<sup>+</sup>]<sub>out</sub> + P<sub>Na</sub>[Na<sup>+</sup>]<sub>out</sub> + …) / (P<sub>K</sub>[K<sup>+</sup>]<sub>in</sub> + P<sub>Na</sub>[Na<sup>+</sup>]<sub>in</sub> + …) )
-  </div>
-  <p class="note">With only K<sup>+</sup> and Na<sup>+</sup> and P<sub>Cl</sub> ≈ 0, compute E<sub>K</sub>, E<sub>Na</sub> first, then apply permeability weights. Resting V<sub>m</sub> lies between E<sub>K</sub> and E<sub>Na</sub>, nearer the ion with higher P.</p>
+      <div class="formula">
+        <span class="name">Goldman (K⁺ + Na⁺, ignore Cl⁻)</span>
+        V<sub>m</sub> = (RT/F) · ln( (P<sub>K</sub>[K⁺]<sub>o</sub> + P<sub>Na</sub>[Na⁺]<sub>o</sub>) / (P<sub>K</sub>[K⁺]<sub>i</sub> + P<sub>Na</sub>[Na⁺]<sub>i</sub>) )
+      </div>
 
-  <div class="formula">
-    <span class="name">Ohm’s law for an open ion channel</span>
-    I<sub>ion</sub> = g<sub>ion</sub> · (V<sub>m</sub> − E<sub>ion</sub>)
-  </div>
-  <p class="note">Driving force = (V<sub>m</sub> − E<sub>ion</sub>). At V<sub>m</sub> = E<sub>ion</sub>, net ionic current through that conductance is zero. Example: 50 nS × (−70 mV) = −3.5 nA.</p>
+      <div class="formula">
+        <span class="name">Ionic current</span>
+        I = g · (V<sub>m</sub> − E<sub>ion</sub>) &nbsp;·&nbsp; τ = R<sub>m</sub>C<sub>m</sub> &nbsp;·&nbsp; λ = √(R<sub>m</sub>/R<sub>i</sub>)
+      </div>
 
-  <div class="formula">
-    <span class="name">Membrane time constant</span>
-    τ = R<sub>m</sub> · C<sub>m</sub>
-  </div>
-  <p class="note">Larger τ → slower voltage changes for a given current. If R<sub>m</sub> doubles with fixed injected current I, steady-state V = I·R<sub>m</sub> doubles and τ doubles.</p>
+      <div class="formula">
+        <span class="name">Passive steady state</span>
+        V<sub>∞</sub> = I<sub>inject</sub> · R<sub>in</sub> &nbsp; (if R<sub>m</sub> doubles, V<sub>∞</sub> doubles for fixed I)
+      </div>
 
-  <div class="formula">
-    <span class="name">Length (space) constant</span>
-    λ = √(R<sub>m</sub> / R<sub>i</sub>) &nbsp; (units: distance along cable)
-  </div>
-  <p class="note">R<sub>m</sub> = specific membrane resistance × geometry; R<sub>i</sub> = axial resistance. Higher leak (lower R<sub>m</sub>) → shorter λ. Larger diameter → lower R<sub>i</sub> → longer λ.</p>
+      <p class="exam-strip" style="margin-top:0.35rem">Sign checks</p>
+      <ul class="compact">
+        <li>↑ K<sub>out</sub> → E<sub>K</sub> less negative → V<sub>m</sub> depolarizes.</li>
+        <li>↑ Na<sub>out</sub> → E<sub>Na</sub> more positive.</li>
+        <li>V<sub>m</sub> = E<sub>ion</sub> → zero driving force for that ion.</li>
+        <li>Na⁺/K⁺ pump: 3 Na out, 2 K in (electrogenic).</li>
+      </ul>
+    </section>
 
-  <div class="formula">
-    <span class="name">Membrane capacitance (parallel-plate model)</span>
-    C<sub>m</sub> ∝ A / d &nbsp; (area / membrane thickness)
-  </div>
-  <p class="note">Thicker membrane → lower capacitance per unit area. Myelin increases effective R<sub>m</sub> and reduces capacitive load at internodes.</p>
+    <section>
+      <h2>Quick Part 2 · minimal</h2>
+      <ul class="compact">
+        <li>Evoked PSP ≈ <strong>n · q</strong> (quanta × mini size).</li>
+        <li>EPSPs/IPSPs sum within <strong>τ</strong> (temporal) and at soma (spatial).</li>
+        <li><strong>NMDA LTP:</strong> glutamate + depolarization → Mg²⁺ unblock → Ca²⁺ in.</li>
+        <li>Shunt inhibition: ↑ g → ↓ R<sub>in</sub> → smaller EPSPs.</li>
+      </ul>
 
-  <div class="formula">
-    <span class="name">Steady-state passive response to step current</span>
-    V<sub>∞</sub> = I<sub>inject</sub> · R<sub>in</sub> &nbsp; where R<sub>in</sub> is input resistance
-  </div>
-
-  <h2>Part 1 — Sign checks (no calculator)</h2>
-  <ul class="compact">
-    <li>Raising extracellular K<sup>+</sup> → E<sub>K</sub> less negative → V<sub>m</sub> depolarizes toward new E<sub>K</sub>.</li>
-    <li>Raising extracellular Na<sup>+</sup> → E<sub>Na</sub> more positive.</li>
-    <li>At rest, V<sub>m</sub> negative: opening Na<sup>+</sup> channels → depolarization toward E<sub>Na</sub>.</li>
-    <li>Opening K<sup>+</sup> channels when V<sub>m</sub> &gt; E<sub>K</sub> → hyperpolarizing/outward K<sup>+</sup> current.</li>
-    <li>Na<sup>+</sup>/K<sup>+</sup> pump: 3 Na<sup>+</sup> out, 2 K<sup>+</sup> in per cycle → electrogenic, hyperpolarizing contribution.</li>
-  </ul>
-
-  <h2>Part 2 — Synapses &amp; integration (useful relations)</h2>
-  <div class="formula">
-    <span class="name">Quantal (mini) postsynaptic events</span>
-    Evoked PSP ≈ n · q &nbsp; (n vesicles released × mean mini amplitude q)
-  </div>
-  <p class="note">Stochastic n explains trial-to-trial variability. Facilitation/depression change effective n or release probability p.</p>
-
-  <div class="formula">
-    <span class="name">Summation (conceptual)</span>
-    V<sub>m</sub>(t) integrates EPSPs/IPSPs within τ; spatial sum at soma/AIS from multiple synapses
-  </div>
-  <p class="note">Inhibitory shunt: increased conductance lowers effective R<sub>in</sub> and attenuates EPSPs ( divisive + subtractive effects).</p>
-
-  <div class="formula">
-    <span class="name">NMDA receptor (LTP gate)</span>
-    Requires glutamate + postsynaptic depolarization to relieve Mg<sup>2+</sup> block → Ca<sup>2+</sup> entry
+      <p class="exam-strip">Units (common trap)</p>
+      <ul class="compact">
+        <li>1 nS × 1 mV = 1 pA &nbsp;|&nbsp; 50 nS × (−70 mV) = <strong>−3.5 nA</strong></li>
+        <li>I<sub>C</sub> = C<sub>m</sub> · dV<sub>m</sub>/dt at step onset</li>
+      </ul>
+    </section>
   </div>
 
-  <h2>Part 3 — Sensory &amp; misc.</h2>
-  <ul class="compact">
-    <li><strong>Weber–Fechner (concept):</strong> perceived intensity ∝ log(stimulus strength) — explains compressive coding.</li>
-    <li><strong>Cochlea:</strong> place code — basal = high f, apical = low f; not a single exam identity formula.</li>
-    <li><strong>Retina:</strong> photoreceptor dark current via cGMP-gated channels; light → ↓ cGMP → hyperpolarization.</li>
-    <li><strong>Ohm for dB (auditory):</strong> intensity level IL = 10·log<sub>10</sub>(I/I<sub>0</sub>) dB — know log-compression idea.</li>
-  </ul>
+  <h2>Worked examples (show your steps on the exam)</h2>
 
-  <h2>Unit reminders</h2>
-  <ul class="compact">
-    <li>1 S = 1 A/V; 1 nS × 1 mV = 1 pA; 1 nS × 70 mV = 70 pA = 0.07 nA.</li>
-    <li>Capacitive current I<sub>C</sub> = C<sub>m</sub> · dV<sub>m</sub>/dt (transient at step onset).</li>
-  </ul>
+  <div class="worked">
+    <h3>Example A — Nernst + Goldman resting V<sub>m</sub></h3>
+    <p>Given at 37&nbsp;°C: [K⁺]<sub>i</sub> = 140, [K⁺]<sub>o</sub> = 5, [Na⁺]<sub>i</sub> = 15, [Na⁺]<sub>o</sub> = 145 mM; P<sub>K</sub> : P<sub>Na</sub> = 1 : 0.05; ignore Cl⁻.</p>
+    <ol>
+      <li>E<sub>K</sub> = 61.54 · log<sub>10</sub>(5/140) ≈ <strong>−89.1 mV</strong></li>
+      <li>E<sub>Na</sub> = 61.54 · log<sub>10</sub>(145/15) ≈ <strong>+60.6 mV</strong></li>
+      <li>Goldman: num = 1·5 + 0.05·145 = 12.25; den = 1·140 + 0.05·15 = 140.75</li>
+      <li>V<sub>m</sub> = 61.54 · log<sub>10</sub>(12.25/140.75) ≈ <strong>−65.3 mV</strong> ( nearer E<sub>K</sub> than E<sub>Na</sub> )</li>
+    </ol>
+    <p class="result">Do not plug “average of E<sub>K</sub> and E<sub>Na</sub>” unless the question gives only permeability ratios of the E values — use concentrations in Goldman.</p>
+  </div>
+
+  <div class="worked">
+    <h3>Example B — Current from conductance</h3>
+    <p>g<sub>Na</sub> = 50 nS, V<sub>m</sub> = −10 mV, E<sub>Na</sub> = +60 mV (outward positive convention).</p>
+    <ol>
+      <li>Driving force: V<sub>m</sub> − E<sub>Na</sub> = −10 − 60 = <strong>−70 mV</strong></li>
+      <li>I = 50 × 10<sup>−9</sup> S × (−70 × 10<sup>−3</sup>) V = <strong>−3.5 × 10<sup>−9</sup> A = −3.5 nA</strong> (inward Na⁺)</li>
+    </ol>
+  </div>
+
+  <div class="worked">
+    <h3>Example C — Concentration fold-change (no calculator friendly)</h3>
+    <p>Extracellular Na⁺ doubled, intracellular unchanged → E<sub>Na</sub> shifts by 61.54·log<sub>10</sub>(2) ≈ <strong>+18.5 mV</strong> (more positive). Fourfold extracellular K⁺ → E<sub>K</sub> shifts ≈ <strong>+37 mV</strong> (less negative).</p>
+  </div>
 
   <footer>
-    Personal MCB80x study reference — pair with the exam study guide and practice quizzes on this site.
-    Not an official HarvardX/edX document. Printed: <span id="print-date"></span>
+    Personal MCB80x exam formula sheet — not an official HarvardX/edX publication. Printed: <span id="print-date"></span>
   </footer>
 
   <script>
