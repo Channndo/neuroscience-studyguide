@@ -158,6 +158,13 @@
       color: var(--gray-800);
     }
 
+    a.nav-tab--link {
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     .header-streak-wrap {
       display: flex;
       justify-content: center;
@@ -969,6 +976,63 @@
     .formula-sheet-link a {
       color: var(--crimson);
       font-weight: 600;
+    }
+
+    .sync-backup-banner {
+      margin: 0 0 1.25rem;
+      padding: 0.85rem 1rem;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(26, 82, 118, 0.35);
+      background: rgba(26, 82, 118, 0.08);
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+
+    .sync-backup-banner[hidden] {
+      display: none !important;
+    }
+
+    .sync-backup-banner .sync-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.65rem;
+    }
+
+    .header-sync-pill {
+      font-family: system-ui, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 0.25rem 0.55rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+      margin-top: 0.35rem;
+    }
+
+    .header-sync-pill.is-ok { background: rgba(76, 175, 80, 0.35); }
+    .header-sync-pill.is-warn { background: rgba(255, 193, 7, 0.35); }
+    .header-sync-pill.is-off { opacity: 0.85; }
+
+    .settings-sync-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      margin-bottom: 0.75rem;
+      max-width: 28rem;
+    }
+
+    .settings-sync-field input {
+      font: inherit;
+      padding: 0.5rem 0.65rem;
+      border: 1px solid var(--gray-200);
+      border-radius: 8px;
+    }
+
+    .settings-sync-status {
+      font-size: 0.85rem;
+      color: var(--gray-600);
+      margin: 0.5rem 0 0;
     }
 
     .answer-grid {
@@ -2111,9 +2175,11 @@
       <button type="button" class="nav-tab active" data-nav="dashboard" id="nav-dashboard">Dashboard</button>
       <button type="button" class="nav-tab" data-nav="profile" id="nav-profile">Profile &amp; Readiness</button>
       <button type="button" class="nav-tab" data-nav="settings" id="nav-settings">Settings</button>
+      <a class="nav-tab nav-tab--link" href="sign-in.html" id="nav-signin">Sign in</a>
     </nav>
     <div class="header-streak-wrap">
       <div id="header-streak-badge" class="streak-badge" role="status" aria-live="polite"></div>
+      <div id="header-sync-pill" class="header-sync-pill is-off" hidden aria-live="polite"></div>
     </div>
   </header>
 
@@ -2124,6 +2190,7 @@
         <h2>Study Dashboard</h2>
         <p>HarvardX MCB80x curriculum practice. Chapter quizzes give instant feedback; finals reveal answers at the end. Missed questions auto-generate flashcards. Ion labels use real superscripts (e.g. Na⁺); variables like E<sub>K</sub> and V<sub>m</sub> appear as subscripts, not underscores.</p>
       </div>
+      <aside id="sync-backup-banner" class="sync-backup-banner" hidden aria-live="polite"></aside>
       <aside class="study-guide-card" aria-labelledby="study-guide-heading">
         <div class="study-guide-card-text">
           <h3 id="study-guide-heading">Printable exam prep (PDF)</h3>
@@ -2131,9 +2198,9 @@
         </div>
         <div class="study-guide-card-actions">
           <a class="btn-guide-pdf" href="mcb80x-exam-study-guide.pdf" download="MCB80x-exam-study-guide.pdf">Study guide PDF</a>
-          <a class="btn-guide-print" href="mcb80x-exam-study-guide-print.html" target="_blank" rel="noopener">Study guide (print)</a>
+          <a class="btn-guide-print" href="mcb80x-exam-study-guide.docx" download="MCB80x-exam-study-guide.docx">Study guide (docx)</a>
           <a class="btn-guide-print" href="mcb80x-formula-sheet.pdf" download="MCB80x-formula-sheet.pdf">Formula sheet PDF</a>
-          <a class="btn-guide-print" href="mcb80x-formula-sheet-print.html" target="_blank" rel="noopener">Formulas (print)</a>
+          <a class="btn-guide-print" href="mcb80x-formula-sheet.docx" download="MCB80x-formula-sheet.docx">Formulas (docx)</a>
         </div>
       </aside>
       <div id="user-activity-card" class="activity-card"></div>
@@ -2259,6 +2326,9 @@
   <script src="questions-written-final.js"></script>
   <script src="questions-proctored-mock.js"></script>
   <script src="questions-formula-drills.js"></script>
+  <script src="mcb80x-cloud-config.js"></script>
+  <script src="sheets-sync.js"></script>
+  <script src="oauth-client.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" crossorigin="anonymous"></script>
   <script>
     function shuffle(array) {
@@ -3927,10 +3997,14 @@
         const raw = JSON.parse(localStorage.getItem(SETTINGS_KEY) || "{}");
         return {
           theme: raw.theme === "dark" ? "dark" : "light",
-          avatarDataUrl: typeof raw.avatarDataUrl === "string" ? raw.avatarDataUrl : null
+          avatarDataUrl: typeof raw.avatarDataUrl === "string" ? raw.avatarDataUrl : null,
+          syncEmail: typeof raw.syncEmail === "string" ? raw.syncEmail.trim().toLowerCase() : "",
+          syncPassVerifier: typeof raw.syncPassVerifier === "string" ? raw.syncPassVerifier : "",
+          googleSub: typeof raw.googleSub === "string" ? raw.googleSub : "",
+          displayName: typeof raw.displayName === "string" ? raw.displayName : ""
         };
       } catch {
-        return { theme: "light", avatarDataUrl: null };
+        return { theme: "light", avatarDataUrl: null, syncEmail: "", syncPassVerifier: "", googleSub: "", displayName: "" };
       }
     }
 
@@ -3943,7 +4017,113 @@
       }
       applyTheme(next.theme);
       refreshAvatarSurfaces();
+      if (!window._mcb80xApplyingCloud && window.MCB80XSheetSync?.schedulePush) {
+        MCB80XSheetSync.schedulePush();
+      }
       return next;
+    }
+
+    function buildLocalSyncBundle() {
+      const { syncPassVerifier, ...settingsForCloud } = getSettings();
+      return {
+        progress: getProgress(),
+        settings: settingsForCloud,
+        flashcards: getFlashcardDecks(),
+        flashcardSrs: getFlashcardSrsStore(),
+        analytics: getAnalytics()
+      };
+    }
+
+    function applyLocalSyncBundle(bundle) {
+      window._mcb80xApplyingCloud = true;
+      try {
+        if (bundle.progress) {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(bundle.progress));
+          try {
+            sessionStorage.setItem(STORAGE_KEY + "_backup", JSON.stringify(bundle.progress));
+          } catch { /* ignore */ }
+        }
+        if (bundle.settings) {
+          const cur = getSettings();
+          const mergedSettings = {
+            ...bundle.settings,
+            syncPassVerifier: cur.syncPassVerifier || bundle.settings.syncPassVerifier || ""
+          };
+          localStorage.setItem(SETTINGS_KEY, JSON.stringify(mergedSettings));
+          applyTheme(mergedSettings.theme === "dark" ? "dark" : "light");
+        }
+        if (bundle.flashcards) localStorage.setItem(FLASHCARD_KEY, JSON.stringify(bundle.flashcards));
+        if (bundle.flashcardSrs) localStorage.setItem(FLASHCARD_SRS_KEY, JSON.stringify(bundle.flashcardSrs));
+        if (bundle.analytics) localStorage.setItem(ANALYTICS_KEY, JSON.stringify(bundle.analytics));
+      } catch (err) {
+        console.error("Apply cloud bundle failed:", err);
+      } finally {
+        window._mcb80xApplyingCloud = false;
+      }
+      renderUserActivityCard();
+      renderStreakBadge();
+      renderDashboard();
+      renderSyncBanner();
+      updateSyncStatusHeader();
+    }
+
+    function updateSyncStatusHeader() {
+      const pill = document.getElementById("header-sync-pill");
+      if (!pill || !window.MCB80XSheetSync) return;
+      const st = MCB80XSheetSync.getStatus();
+      const email = getSettings().syncEmail;
+      if (!st.configured) {
+        pill.hidden = true;
+        return;
+      }
+      pill.hidden = false;
+      pill.classList.remove("is-ok", "is-warn", "is-off");
+      if (!email) {
+        pill.textContent = "Cloud: set email in Settings";
+        pill.classList.add("is-warn");
+      } else if (!st.unlocked) {
+        pill.textContent = "Cloud: unlock passphrase";
+        pill.classList.add("is-warn");
+      } else if (st.lastSyncError) {
+        pill.textContent = "Cloud sync issue";
+        pill.classList.add("is-warn");
+      } else if (st.lastSyncAt) {
+        pill.textContent = "Cloud saved";
+        pill.classList.add("is-ok");
+      } else {
+        pill.textContent = "Cloud ready";
+        pill.classList.add("is-ok");
+      }
+    }
+
+    function renderSyncBanner() {
+      const el = document.getElementById("sync-backup-banner");
+      if (!el || !window.MCB80XSheetSync) return;
+      const st = MCB80XSheetSync.getStatus();
+      const settings = getSettings();
+      if (!st.configured) {
+        el.hidden = true;
+        return;
+      }
+      el.hidden = false;
+      let body = "<strong>Cloud backup (Google Sheet)</strong> — Progress is encrypted in your browser before upload. Your sync passphrase is never stored in the sheet.";
+      if (!settings.syncEmail) {
+        body += "<p style=\"margin:0.5rem 0 0\">Add your email and sync passphrase under <strong>Settings</strong> so progress survives clearing browser data.</p>";
+      } else if (!st.unlocked) {
+        body += `<p style="margin:0.5rem 0 0">Signed in as <strong>${escapeHtml(settings.syncEmail)}</strong>. Unlock your sync passphrase in Settings to restore or auto-save.</p>`;
+        body += `<div class="sync-actions"><button type="button" class="btn-secondary" id="sync-banner-settings">Open Settings</button></div>`;
+      } else {
+        const when = st.lastSyncAt
+          ? new Date(st.lastSyncAt).toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" })
+          : "not yet";
+        body += `<p style="margin:0.5rem 0 0">Account <strong>${escapeHtml(settings.syncEmail)}</strong> · Last upload: ${when}${st.lastSyncError ? ` · <span style="color:var(--incorrect)">${escapeHtml(st.lastSyncError)}</span>` : ""}</p>`;
+      }
+      el.innerHTML = body;
+      document.getElementById("sync-banner-settings")?.addEventListener("click", () => {
+        renderSettings();
+        showView("settings");
+        setMainNav("settings");
+      });
     }
 
     function applyTheme(theme) {
@@ -4005,10 +4185,39 @@
       const el = document.getElementById("settings-content");
       if (!el) return;
       const settings = getSettings();
+      const syncSt = window.MCB80XSheetSync?.getStatus?.() || {};
+      const syncConfigured = syncSt.configured;
       el.innerHTML = `
         <div class="settings-panel">
           <h2>Settings</h2>
-          <p class="settings-lead">Saved on this device only — no account required.</p>
+          <p class="settings-lead">Local progress stays in this browser. Use cloud backup to restore after clearing site data.</p>
+          <div class="settings-block">
+            <h3>Cloud backup (Google Sheet)</h3>
+            <p>Quiz data is <strong>encrypted in your browser</strong> (AES-GCM + PBKDF2) before it reaches the sheet. We never store your sync passphrase — only a one-way verifier on this device to catch typos. Sign in with Google can be wired later; until then use your email as the account row key.</p>
+            ${syncConfigured
+              ? `<p class="settings-sync-status">Sheet endpoint: configured · Session ${syncSt.unlocked ? "unlocked" : "locked"}${syncSt.lastSyncError ? ` · ${escapeHtml(syncSt.lastSyncError)}` : ""}</p>`
+              : `<p class="settings-sync-status">Sheet endpoint not configured yet — deploy <code>google-apps-script/MCB80xSheetSync.gs</code> and set <code>sheetsWebAppUrl</code> in <code>mcb80x-cloud-config.js</code>.</p>`}
+            <label class="settings-sync-field">Account email
+              <input type="email" id="settings-sync-email" autocomplete="email" placeholder="you@example.com" value="${escapeHtml(settings.syncEmail || "")}">
+            </label>
+            <label class="settings-sync-field">Sync passphrase ${settings.syncPassVerifier ? "(set — enter to unlock)" : "(create — min 8 characters)"}
+              <input type="password" id="settings-sync-pass" autocomplete="new-password" placeholder="Not stored in plain text">
+            </label>
+            <label class="settings-sync-field">Confirm passphrase
+              <input type="password" id="settings-sync-pass-confirm" autocomplete="new-password" placeholder="Re-enter passphrase">
+            </label>
+            <div class="settings-avatar-actions" style="flex-wrap:wrap;">
+              <button type="button" class="btn-secondary" id="settings-sync-save"${syncConfigured ? "" : " disabled"}>Save account &amp; upload</button>
+              <button type="button" class="btn-secondary" id="settings-sync-unlock"${syncConfigured ? "" : " disabled"}>Unlock &amp; download merge</button>
+              <button type="button" class="btn-secondary" id="settings-sync-lock"${syncSt.unlocked ? "" : " disabled"}>Lock session</button>
+              <button type="button" class="btn-secondary" id="settings-export-backup">Export encrypted backup file</button>
+              <label class="btn-secondary" style="cursor:pointer;margin:0;">
+                Import encrypted backup
+                <input type="file" id="settings-import-backup" accept="application/json,.json" hidden>
+              </label>
+            </div>
+            <p id="settings-sync-msg" class="settings-sync-status" hidden></p>
+          </div>
           <div class="settings-block">
             <h3>Profile picture</h3>
             <p>Shows on your dashboard activity card and study profile. Stored locally in your browser.</p>
@@ -4073,6 +4282,119 @@
         if (removeBtn) removeBtn.disabled = true;
         if (msg) msg.hidden = true;
       });
+
+      const syncMsg = document.getElementById("settings-sync-msg");
+      const showSyncMsg = (text, isErr) => {
+        if (!syncMsg) return;
+        syncMsg.textContent = text;
+        syncMsg.hidden = false;
+        syncMsg.style.color = isErr ? "var(--incorrect)" : "var(--gray-600)";
+      };
+
+      async function readSyncInputs() {
+        const email = (document.getElementById("settings-sync-email")?.value || "").trim().toLowerCase();
+        const pass = document.getElementById("settings-sync-pass")?.value || "";
+        const confirm = document.getElementById("settings-sync-pass-confirm")?.value || "";
+        if (!email || !email.includes("@")) throw new Error("Enter a valid account email.");
+        if (pass.length < 8) throw new Error("Sync passphrase must be at least 8 characters.");
+        const settings = getSettings();
+        if (!settings.syncPassVerifier && pass !== confirm) {
+          throw new Error("Passphrases do not match.");
+        }
+        if (settings.syncPassVerifier) {
+          const ok = await MCB80XSheetSync.verifyPassphraseLocal(pass, settings.syncPassVerifier);
+          if (!ok) throw new Error("Incorrect sync passphrase.");
+        }
+        return { email, pass };
+      }
+
+      document.getElementById("settings-sync-save")?.addEventListener("click", async () => {
+        if (!window.MCB80XSheetSync?.isConfigured?.()) return;
+        try {
+          const { email, pass } = await readSyncInputs();
+          const settings = getSettings();
+          let verifier = settings.syncPassVerifier;
+          if (!verifier) {
+            verifier = await MCB80XSheetSync.registerPassphraseVerifier(pass);
+          }
+          saveSettings({ syncEmail: email, syncPassVerifier: verifier });
+          MCB80XSheetSync.unlockSession(pass);
+          await MCB80XSheetSync.pushNow(pass);
+          showSyncMsg("Encrypted progress uploaded to your Google Sheet.");
+          renderSettings();
+          renderSyncBanner();
+          updateSyncStatusHeader();
+        } catch (err) {
+          showSyncMsg(err.message || String(err), true);
+        }
+      });
+
+      document.getElementById("settings-sync-unlock")?.addEventListener("click", async () => {
+        if (!window.MCB80XSheetSync?.isConfigured?.()) return;
+        try {
+          const { email, pass } = await readSyncInputs();
+          saveSettings({ syncEmail: email });
+          MCB80XSheetSync.unlockSession(pass);
+          await MCB80XSheetSync.pullAndMerge(pass);
+          showSyncMsg("Downloaded and merged encrypted backup from Google Sheet.");
+          renderSettings();
+          renderSyncBanner();
+          updateSyncStatusHeader();
+        } catch (err) {
+          showSyncMsg(err.message || String(err), true);
+        }
+      });
+
+      document.getElementById("settings-sync-lock")?.addEventListener("click", () => {
+        MCB80XSheetSync.clearSessionPassphrase();
+        showSyncMsg("Sync session locked on this tab.");
+        renderSettings();
+        updateSyncStatusHeader();
+      });
+
+      document.getElementById("settings-export-backup")?.addEventListener("click", async () => {
+        try {
+          const pass = document.getElementById("settings-sync-pass")?.value || "";
+          const settings = getSettings();
+          if (pass.length < 8) throw new Error("Enter your sync passphrase to export.");
+          if (settings.syncPassVerifier) {
+            const ok = await MCB80XSheetSync.verifyPassphraseLocal(pass, settings.syncPassVerifier);
+            if (!ok) throw new Error("Incorrect sync passphrase.");
+          }
+          const envelope = await MCB80XSheetSync.encryptBundle(buildLocalSyncBundle(), pass);
+          const blob = new Blob([JSON.stringify({ email: settings.syncEmail, envelope })], { type: "application/json" });
+          const a = document.createElement("a");
+          a.href = URL.createObjectURL(blob);
+          a.download = `mcb80x-backup-${localDateKey()}.json`;
+          a.click();
+          URL.revokeObjectURL(a.href);
+          showSyncMsg("Encrypted backup file downloaded.");
+        } catch (err) {
+          showSyncMsg(err.message || String(err), true);
+        }
+      });
+
+      document.getElementById("settings-import-backup")?.addEventListener("change", async e => {
+        const file = e.target.files?.[0];
+        e.target.value = "";
+        if (!file) return;
+        try {
+          const pass = document.getElementById("settings-sync-pass")?.value || "";
+          if (pass.length < 8) throw new Error("Enter your sync passphrase to import.");
+          const text = await file.text();
+          const parsed = JSON.parse(text);
+          const remoteBundle = await MCB80XSheetSync.decryptBundle(parsed.envelope, pass);
+          delete remoteBundle.version;
+          const merged = MCB80XSheetSync.mergeBundles(buildLocalSyncBundle(), remoteBundle);
+          applyLocalSyncBundle(merged);
+          if (parsed.email) saveSettings({ syncEmail: String(parsed.email).toLowerCase() });
+          MCB80XSheetSync.unlockSession(pass);
+          showSyncMsg("Imported and merged encrypted backup.");
+          renderSettings();
+        } catch (err) {
+          showSyncMsg(err.message || String(err), true);
+        }
+      });
     }
 
     function storageAvailable() {
@@ -4124,6 +4446,9 @@
         } catch { /* ignore */ }
         renderUserActivityCard();
         renderStreakBadge();
+        if (!window._mcb80xApplyingCloud && window.MCB80XSheetSync?.schedulePush) {
+          MCB80XSheetSync.schedulePush();
+        }
         return progress;
       } catch {
         notifyStorageIssue();
@@ -4182,16 +4507,7 @@
       }
 
       best = Math.max(best, count);
-      const updates = { streakCount: count, streakLastDate: today, streakBest: best };
-      try {
-        const merged = { ...progress, ...updates };
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(merged));
-        try {
-          sessionStorage.setItem(STORAGE_KEY + "_backup", JSON.stringify(merged));
-        } catch { /* ignore */ }
-      } catch {
-        notifyStorageIssue();
-      }
+      saveProgress({ streakCount: count, streakLastDate: today, streakBest: best });
       return { count, lastDate: today, best };
     }
 
@@ -4320,6 +4636,9 @@
     function saveFlashcardSrsStore(store) {
       try {
         localStorage.setItem(FLASHCARD_SRS_KEY, JSON.stringify(store));
+        if (!window._mcb80xApplyingCloud && window.MCB80XSheetSync?.schedulePush) {
+          MCB80XSheetSync.schedulePush();
+        }
       } catch {
         notifyStorageIssue();
       }
@@ -4414,6 +4733,9 @@
       });
       decks[chapterId] = [...byQuestion.values()];
       localStorage.setItem(FLASHCARD_KEY, JSON.stringify(decks));
+      if (!window._mcb80xApplyingCloud && window.MCB80XSheetSync?.schedulePush) {
+        MCB80XSheetSync.schedulePush();
+      }
     }
 
     function getAnalytics() {
@@ -4436,6 +4758,9 @@
       try {
         data.version = 1;
         localStorage.setItem(ANALYTICS_KEY, JSON.stringify(data));
+        if (!window._mcb80xApplyingCloud && window.MCB80XSheetSync?.schedulePush) {
+          MCB80XSheetSync.schedulePush();
+        }
         return true;
       } catch {
         notifyStorageIssue();
@@ -6649,10 +6974,77 @@
     });
 
     discardNonPausableQuizSession();
+    function applyOAuthSessionToSettings(session) {
+      if (!session?.email) return;
+      saveSettings({
+        syncEmail: session.email,
+        googleSub: session.id || "",
+        displayName: session.email.split("@")[0]
+      });
+    }
+
+    function refreshOAuthNav() {
+      const link = document.getElementById("nav-signin");
+      if (!link || !window.MCB80XOAuth) return;
+      const session = MCB80XOAuth.getSession();
+      if (session?.email) {
+        link.textContent = "Sign out";
+        link.href = "#";
+        link.onclick = e => {
+          e.preventDefault();
+          MCB80XOAuth.signOut();
+          refreshOAuthNav();
+          renderSyncBanner();
+          renderSettings();
+        };
+      } else {
+        link.textContent = "Sign in";
+        link.href = "sign-in.html";
+        link.onclick = null;
+      }
+    }
+
+    try {
+      const pending = sessionStorage.getItem("mcb80x_oauth_pending_apply");
+      if (pending && window.MCB80XOAuth) {
+        sessionStorage.removeItem("mcb80x_oauth_pending_apply");
+        const session = JSON.parse(pending);
+        MCB80XOAuth.saveSession(session);
+        applyOAuthSessionToSettings(session);
+      }
+    } catch { /* ignore */ }
+
+    if (window.MCB80XSheetSync) {
+      MCB80XSheetSync.init({
+        getSyncEmail: () => getSettings().syncEmail,
+        getLocalBundle: () => buildLocalSyncBundle(),
+        applyLocalBundle: bundle => applyLocalSyncBundle(bundle),
+        getProfileMeta: () => ({
+          googleSub: getSettings().googleSub,
+          displayName: getSettings().displayName
+        }),
+        onGoogleProfile: profile => {
+          if (profile?.email) {
+            saveSettings({
+              syncEmail: profile.email.toLowerCase(),
+              googleSub: profile.sub || "",
+              displayName: profile.name || ""
+            });
+          }
+        },
+        onSyncStatus: () => {
+          updateSyncStatusHeader();
+          renderSyncBanner();
+        }
+      });
+    }
     updateStreakOnVisit();
     renderStreakBadge();
     renderUserActivityCard();
     renderDashboard();
+    renderSyncBanner();
+    updateSyncStatusHeader();
+    refreshOAuthNav();
     showView("dashboard");
   </script>
 </body>

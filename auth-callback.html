@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Signing in… · MCB80x</title>
+  <link rel="stylesheet" href="auth-cover.css" />
+  <script src="mcb80x-cloud-config.js"></script>
+  <script src="oauth-client.js"></script>
+</head>
+<body class="auth-cover-page">
+  <div class="auth-cover-wrap">
+    <div class="auth-cover-card">
+      <h1 id="title">Signing you in…</h1>
+      <p class="lede" id="subtitle">One moment while we connect your account.</p>
+      <p id="auth-error" class="auth-msg auth-msg--error" hidden role="alert"></p>
+      <a id="back-link" class="auth-btn-primary" href="sign-in.html" style="display:none;text-align:center;text-decoration:none">Back to sign in</a>
+    </div>
+  </div>
+  <script>
+    const ERRORS = {
+      cancelled: "Sign-in was cancelled.",
+      email_unverified: "Your provider email is not verified.",
+      state_mismatch: "Sign-in expired. Please try again.",
+      provider_error: "We could not complete sign-in. Try again."
+    };
+    (async () => {
+      const params = new URLSearchParams(window.location.hash.slice(1));
+      history.replaceState(null, "", "auth-callback.html");
+      const code = params.get("code");
+      const title = document.getElementById("title");
+      const subtitle = document.getElementById("subtitle");
+      const err = document.getElementById("auth-error");
+      const back = document.getElementById("back-link");
+      if (!code) {
+        const key = params.get("error") || "provider_error";
+        title.textContent = "Sign-in did not finish";
+        subtitle.textContent = ERRORS[key] || ERRORS.provider_error;
+        back.style.display = "block";
+        return;
+      }
+      try {
+        const session = await MCB80XOAuth.exchangeCode(code);
+        sessionStorage.setItem("mcb80x_oauth_pending_apply", JSON.stringify(session));
+        window.location.replace("index.html?signed_in=1");
+      } catch (e) {
+        title.textContent = "Sign-in did not finish";
+        subtitle.textContent = "";
+        err.textContent = e.message || String(e);
+        err.hidden = false;
+        back.style.display = "block";
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -24,6 +24,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Inject Google Sheet backup URL (optional)
+        if: vars.SHEETS_WEBAPP_URL != ''
+        run: |
+          cat > mcb80x-cloud-config.js <<EOF
+          window.MCB80X_CLOUD = {
+            sheetsWebAppUrl: "${{ vars.SHEETS_WEBAPP_URL }}",
+            syncSecret: "${{ secrets.SHEETS_SYNC_SECRET }}"
+          };
+          EOF
+
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:

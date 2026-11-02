@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign in · MCB80x Study Guide</title>
+  <link rel="stylesheet" href="auth-cover.css" />
+  <script src="mcb80x-cloud-config.js"></script>
+  <script src="oauth-client.js"></script>
+</head>
+<body class="auth-cover-page">
+  <div class="auth-cover-wrap">
+    <div class="auth-cover-card">
+      <div class="auth-cover-logo" aria-hidden="true">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" rx="12" fill="#a41034"/>
+          <path fill="#fff" d="M14 32V16h6.2c4.8 0 7.8 2.4 7.8 6.4 0 2.6-1.2 4.6-3.3 5.6L30 32h-6.5l-4.8-7.2H20V32H14zm6-11.6h1.1c1.8 0 2.8-.9 2.8-2.4s-1-2.3-2.8-2.3H20v4.7z"/>
+        </svg>
+      </div>
+      <h1>Sign in</h1>
+      <p class="lede">Welcome back to HarvardX MCB80x practice. Link your account to encrypted cloud backup.</p>
+      <div id="social-grid" class="auth-social-grid" hidden></div>
+      <p class="auth-legal">By continuing, you agree to use this app for personal study. Progress sync uses your email as the account key.</p>
+      <div class="auth-divider">Then set sync passphrase</div>
+      <p class="lede" style="margin-top:0">After sign-in, open <strong>Settings</strong> in the app to choose a sync passphrase (encrypted backup to Google Sheet).</p>
+      <a class="auth-btn-primary" href="index.html" style="display:block;text-align:center;text-decoration:none;line-height:1.2">Continue to dashboard</a>
+      <p id="auth-error" class="auth-msg auth-msg--error" hidden role="alert"></p>
+    </div>
+    <p class="auth-back"><a href="index.html">← Back to study dashboard</a></p>
+  </div>
+  <script>
+    const ICONS = {
+      google: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.49 12.27c0-.79-.07-1.54-.19-2.27H12v4.51h6.47c-.29 1.48-1.14 2.73-2.4 3.58v3h3.86c2.26-2.09 3.56-5.17 3.56-8.82z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.86-3c-1.08.72-2.45 1.16-4.07 1.16-3.13 0-5.78-2.11-6.73-4.96H1.29v3.09C3.26 21.3 7.31 24 12 24z"/><path fill="#FBBC05" d="M5.27 14.29c-.25-.72-.38-1.49-.38-2.29s.14-1.57.38-2.29V6.62H1.29C.47 8.24 0 10.06 0 12s.47 3.76 1.29 5.38l3.98-3.09z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.26 2.7 1.29 6.62l3.98 3.09C6.22 6.86 8.87 4.75 12 4.75z"/></svg>',
+      microsoft: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#F25022" d="M1 1h10.5v10.5H1z"/><path fill="#7FBA00" d="M12.5 1H23v10.5H12.5z"/><path fill="#00A4EF" d="M1 12.5h10.5V23H1z"/><path fill="#FFB900" d="M12.5 12.5H23V23H12.5z"/></svg>'
+    };
+    const LABELS = { google: "Google", microsoft: "Microsoft" };
+    const grid = document.getElementById("social-grid");
+    const err = document.getElementById("auth-error");
+    MCB80XOAuth.fetchProviders().then(list => {
+      const providers = list.length ? list : ["google", "microsoft"];
+      providers.forEach(p => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "auth-social-btn";
+        btn.innerHTML = (ICONS[p] || "") + "<span>" + LABELS[p] + "</span>";
+        btn.addEventListener("click", () => MCB80XOAuth.startOAuth(p));
+        grid.appendChild(btn);
+      });
+      grid.hidden = false;
+    }).catch(e => {
+      err.textContent = e.message || String(e);
+      err.hidden = false;
+    });
+    if (MCB80XOAuth.getSession()) {
+      window.location.replace("index.html");
+    }
+  </script>
+</body>
+</html>
