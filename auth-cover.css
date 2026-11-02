@@ -1,12 +1,14 @@
-/* CoverIQ-style auth shell (dark card + cyan accents) */
+/* MCB80x study guide auth — Harvard crimson on warm dark (same card pattern as sibling apps) */
 :root {
-  --auth-bg: #030712;
-  --auth-card: rgba(255, 255, 255, 0.03);
-  --auth-border: rgba(255, 255, 255, 0.1);
-  --auth-text: #f8fafc;
-  --auth-muted: #94a3b8;
-  --auth-cyan: #22d3ee;
-  --auth-teal: #2dd4bf;
+  --auth-bg: #1a1416;
+  --auth-bg-deep: #120e10;
+  --auth-card: rgba(255, 255, 255, 0.04);
+  --auth-border: rgba(165, 28, 48, 0.35);
+  --auth-text: #faf8f9;
+  --auth-muted: #b8a8ad;
+  --auth-crimson: #a51c30;
+  --auth-crimson-dark: #8b1728;
+  --auth-crimson-light: #c42a42;
 }
 
 * { box-sizing: border-box; }
@@ -16,10 +18,11 @@ body.auth-cover-page {
   min-height: 100vh;
   font-family: "Helvetica Neue", system-ui, sans-serif;
   color: var(--auth-text);
-  background: var(--auth-bg);
+  background: var(--auth-bg-deep);
   background-image:
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(34, 211, 238, 0.12), transparent),
-    radial-gradient(ellipse 60% 40% at 100% 0%, rgba(45, 212, 191, 0.08), transparent);
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(165, 28, 48, 0.18), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 100% 10%, rgba(165, 28, 48, 0.08), transparent 50%),
+    linear-gradient(180deg, var(--auth-bg) 0%, var(--auth-bg-deep) 100%);
 }
 
 .auth-cover-wrap {
@@ -38,7 +41,7 @@ body.auth-cover-page {
   border-radius: 1rem;
   border: 1px solid var(--auth-border);
   background: var(--auth-card);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(8px);
 }
 
@@ -51,6 +54,17 @@ body.auth-cover-page {
 .auth-cover-logo svg {
   width: 2.75rem;
   height: 2.75rem;
+  filter: drop-shadow(0 4px 12px rgba(165, 28, 48, 0.35));
+}
+
+.auth-cover-brand {
+  margin: 0 0 0.25rem;
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--auth-crimson-light);
 }
 
 .auth-cover-card h1 {
@@ -84,17 +98,18 @@ body.auth-cover-page {
   width: 100%;
   padding: 0.65rem 0.75rem;
   border-radius: 0.75rem;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   background: rgba(255, 255, 255, 0.04);
-  color: #f1f5f9;
+  color: #f8fafc;
   font-size: 0.875rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.15s;
+  transition: background 0.15s, border-color 0.15s;
 }
 
 .auth-social-btn:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(165, 28, 48, 0.12);
+  border-color: rgba(165, 28, 48, 0.45);
 }
 
 .auth-social-btn svg {
@@ -108,11 +123,11 @@ body.auth-cover-page {
   text-align: center;
   font-size: 0.68rem;
   line-height: 1.4;
-  color: #64748b;
+  color: #8a7a80;
 }
 
 .auth-legal a {
-  color: var(--auth-cyan);
+  color: var(--auth-crimson-light);
   text-decoration: none;
 }
 
@@ -124,7 +139,7 @@ body.auth-cover-page {
   font-size: 0.68rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #64748b;
+  color: #8a7a80;
 }
 
 .auth-divider::before,
@@ -132,7 +147,7 @@ body.auth-cover-page {
   content: "";
   flex: 1;
   height: 1px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(165, 28, 48, 0.25);
 }
 
 .auth-field {
@@ -151,15 +166,15 @@ body.auth-cover-page {
   padding: 0.65rem 0.75rem;
   border-radius: 0.65rem;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(2, 6, 23, 0.6);
+  background: rgba(18, 14, 16, 0.85);
   color: var(--auth-text);
   font: inherit;
 }
 
 .auth-field input:focus {
   outline: none;
-  border-color: rgba(34, 211, 238, 0.5);
-  box-shadow: 0 0 0 2px rgba(34, 211, 238, 0.15);
+  border-color: rgba(165, 28, 48, 0.55);
+  box-shadow: 0 0 0 2px rgba(165, 28, 48, 0.2);
 }
 
 .auth-btn-primary {
@@ -170,10 +185,10 @@ body.auth-cover-page {
   border-radius: 0.75rem;
   font-weight: 700;
   font-size: 0.95rem;
-  color: #0f172a;
+  color: #fff;
   cursor: pointer;
-  background: linear-gradient(135deg, var(--auth-cyan), var(--auth-teal));
-  box-shadow: 0 0 24px rgba(34, 211, 238, 0.25);
+  background: linear-gradient(135deg, var(--auth-crimson-light), var(--auth-crimson));
+  box-shadow: 0 0 24px rgba(165, 28, 48, 0.28);
 }
 
 .auth-btn-primary:disabled {
@@ -198,10 +213,14 @@ body.auth-cover-page {
   margin-top: 2rem;
   text-align: center;
   font-size: 0.875rem;
-  color: #64748b;
+  color: #8a7a80;
 }
 
 .auth-back a {
-  color: var(--auth-cyan);
+  color: var(--auth-crimson-light);
   text-decoration: none;
+}
+
+.auth-back a:hover {
+  color: #fff;
 }
