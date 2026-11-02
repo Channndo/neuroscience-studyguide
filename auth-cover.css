@@ -45,31 +45,39 @@ body.auth-cover-page {
   backdrop-filter: blur(8px);
 }
 
-.auth-cover-mark {
-  margin-bottom: 1.15rem;
+/* Matches mcb80x-exam-study-guide-print.html / formula sheet header */
+.auth-cover-brand {
   text-align: center;
+  border-bottom: 2px solid rgba(165, 28, 48, 0.45);
+  padding-bottom: 1rem;
+  margin-bottom: 1.15rem;
 }
 
-.auth-cover-wordmark {
-  margin: 0;
-  font-size: 1.35rem;
+.harvardx-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.08em;
+  font-family: "Helvetica Neue", Arial, sans-serif;
   font-weight: 700;
+  font-size: 1.85rem;
   letter-spacing: -0.02em;
-  line-height: 1.2;
-  color: var(--auth-text);
+  color: #e8c4ca;
+  line-height: 1.1;
 }
 
-.auth-cover-x {
-  color: var(--auth-crimson-light);
-  font-weight: 800;
+.harvardx-mark .x-logo {
+  width: 0.88em;
+  height: 0.88em;
+  flex-shrink: 0;
 }
 
 .auth-cover-course {
-  margin: 0.35rem 0 0;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  margin: 0.4rem 0 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
   color: var(--auth-muted);
 }
 
