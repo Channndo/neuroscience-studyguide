@@ -36,9 +36,11 @@ Progress is **encrypted in the browser** before upload (AES-GCM; key derived wit
 
 You can also **export / import** an encrypted JSON backup file from Settings without using the sheet.
 
-### Sign in (Google / Microsoft)
+### Sign in (Google, Microsoft, GitHub, Facebook, X, Amazon)
 
-Open **Sign in** in the app header (`sign-in.html`). OAuth runs through Syntrix (`mcb80x` site profile); after sign-in your email is linked for cloud backup. Set your **sync passphrase** under Settings to enable encrypted Sheet sync.
+Open **Sign in** in the app header (`sign-in.html`). OAuth runs through Syntrix (`mcb80x` site profile); the page lists every provider the API exposes. After sign-in your email is linked for cloud backup. Set your **sync passphrase** under Settings to enable encrypted Sheet sync.
+
+If **Amazon** is missing, add `OAUTH_AMAZON_CLIENT_ID` and `OAUTH_AMAZON_CLIENT_SECRET` on the **syntrix-scanner** Render service (same Login with Amazon app as Square1) and allow return URL `https://api.syntrix.solutions/api/auth/oauth/amazon/callback`. See `syntrix/scanner/DEPLOY.md`.
 
 ### Regenerate large expansion banks
 
