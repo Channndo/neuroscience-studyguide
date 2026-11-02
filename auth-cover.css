@@ -45,26 +45,32 @@ body.auth-cover-page {
   backdrop-filter: blur(8px);
 }
 
-.auth-cover-logo {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1.25rem;
-}
-
-.auth-cover-logo svg {
-  width: 2.75rem;
-  height: 2.75rem;
-  filter: drop-shadow(0 4px 12px rgba(165, 28, 48, 0.35));
-}
-
-.auth-cover-brand {
-  margin: 0 0 0.25rem;
+.auth-cover-mark {
+  margin-bottom: 1.15rem;
   text-align: center;
-  font-size: 0.72rem;
+}
+
+.auth-cover-wordmark {
+  margin: 0;
+  font-size: 1.35rem;
   font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--auth-text);
+}
+
+.auth-cover-x {
   color: var(--auth-crimson-light);
+  font-weight: 800;
+}
+
+.auth-cover-course {
+  margin: 0.35rem 0 0;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--auth-muted);
 }
 
 .auth-cover-card h1 {
