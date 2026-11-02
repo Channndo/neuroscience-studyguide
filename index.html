@@ -263,70 +263,78 @@
     .study-guide-card {
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-      padding: 1.1rem 1.25rem;
-      background: linear-gradient(135deg, rgba(164, 16, 52, 0.06) 0%, var(--surface) 55%);
+      gap: 0.65rem 1rem;
+      margin-bottom: 1rem;
+      max-width: 36rem;
+      padding: 0.65rem 0.85rem;
+      background: var(--surface);
       border: 1px solid var(--gray-200);
-      border-left: 4px solid var(--crimson);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-sm);
+      border-radius: var(--radius);
+      box-shadow: none;
     }
 
     .study-guide-card-text h3 {
-      margin: 0 0 0.35rem;
-      font-size: 1.05rem;
-      color: var(--gray-900);
+      margin: 0 0 0.2rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--gray-700);
+      letter-spacing: 0.01em;
     }
 
     .study-guide-card-text p {
       margin: 0;
-      font-size: 0.88rem;
-      color: var(--gray-600);
-      line-height: 1.45;
-      max-width: 42rem;
+      font-size: 0.75rem;
+      color: var(--gray-500);
+      line-height: 1.4;
+      max-width: 22rem;
     }
 
     .study-guide-card-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
+      gap: 0.35rem;
+      align-items: center;
     }
 
     .study-guide-card-actions a {
       font-family: inherit;
-      font-size: 0.88rem;
+      font-size: 0.72rem;
       font-weight: 600;
-      padding: 0.55rem 1rem;
-      border-radius: 10px;
+      padding: 0.35rem 0.55rem;
+      border-radius: 6px;
       text-decoration: none;
       white-space: nowrap;
     }
 
-    .study-guide-card-actions .btn-guide-pdf {
-      background: var(--crimson);
-      color: #fff;
-    }
-
-    .study-guide-card-actions .btn-guide-pdf:hover {
-      background: var(--crimson-dark);
-    }
-
+    .study-guide-card-actions .btn-guide-pdf,
     .study-guide-card-actions .btn-guide-print {
-      background: var(--gray-100);
-      color: var(--gray-800);
+      background: transparent;
+      color: var(--gray-700);
       border: 1px solid var(--gray-200);
     }
 
-    html[data-theme="dark"] .study-guide-card {
-      background: linear-gradient(135deg, rgba(164, 16, 52, 0.18) 0%, var(--surface) 55%);
+    .study-guide-card-actions .btn-guide-pdf:hover,
+    .study-guide-card-actions .btn-guide-print:hover {
+      border-color: var(--crimson);
+      color: var(--crimson-dark);
+      background: var(--crimson-muted);
     }
 
+    html[data-theme="dark"] .study-guide-card {
+      background: var(--surface);
+      border-color: var(--gray-600);
+    }
+
+    html[data-theme="dark"] .study-guide-card-text h3 {
+      color: var(--gray-300);
+    }
+
+    html[data-theme="dark"] .study-guide-card-actions .btn-guide-pdf,
     html[data-theme="dark"] .study-guide-card-actions .btn-guide-print {
-      background: var(--gray-800);
-      color: var(--gray-100);
+      background: transparent;
+      color: var(--gray-300);
       border-color: var(--gray-600);
     }
 
@@ -2193,14 +2201,14 @@
       <aside id="sync-backup-banner" class="sync-backup-banner" hidden aria-live="polite"></aside>
       <aside class="study-guide-card" aria-labelledby="study-guide-heading">
         <div class="study-guide-card-text">
-          <h3 id="study-guide-heading">Printable exam prep (PDF)</h3>
-          <p>Study guide: MCB80.1x / 2x / 3x review prompts with checkboxes. Formula sheet: Nernst, Goldman, τ, λ, I = g(V−E), and course constants. Use alongside quizzes and the timed mock. Personal study materials (not edX publications).</p>
+          <h3 id="study-guide-heading">Printable exam prep</h3>
+          <p>PDF or Word downloads — personal study aids, not edX publications.</p>
         </div>
         <div class="study-guide-card-actions">
-          <a class="btn-guide-pdf" href="mcb80x-exam-study-guide.pdf" download="MCB80x-exam-study-guide.pdf">Study guide PDF</a>
-          <a class="btn-guide-print" href="mcb80x-exam-study-guide.docx" download="MCB80x-exam-study-guide.docx">Study guide (docx)</a>
-          <a class="btn-guide-print" href="mcb80x-formula-sheet.pdf" download="MCB80x-formula-sheet.pdf">Formula sheet PDF</a>
-          <a class="btn-guide-print" href="mcb80x-formula-sheet.docx" download="MCB80x-formula-sheet.docx">Formulas (docx)</a>
+          <a class="btn-guide-pdf" href="mcb80x-exam-study-guide.pdf" download="MCB80x-exam-study-guide.pdf">Guide PDF</a>
+          <a class="btn-guide-print" href="mcb80x-exam-study-guide.docx" download="MCB80x-exam-study-guide.docx">Guide docx</a>
+          <a class="btn-guide-print" href="mcb80x-formula-sheet.pdf" download="MCB80x-formula-sheet.pdf">Formulas PDF</a>
+          <a class="btn-guide-print" href="mcb80x-formula-sheet.docx" download="MCB80x-formula-sheet.docx">Formulas docx</a>
         </div>
       </aside>
       <div id="user-activity-card" class="activity-card"></div>
