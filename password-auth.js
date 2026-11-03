@@ -66,10 +66,6 @@
     };
   }
 
-  function saveSession(session) {
-    localStorage.setItem(SESSION_KEY, JSON.stringify(session));
-  }
-
   function applySessionToApp(session) {
     if (window.MCB80XOAuth?.applyToApp) {
       MCB80XOAuth.applyToApp(session);
@@ -83,9 +79,19 @@
   }
 
   function finishSignIn(session) {
-    saveSession(session);
-    applySessionToApp(session);
-    sessionStorage.setItem("mcb80x_oauth_pending_apply", JSON.stringify(session));
+    const normalized = {
+      ...session,
+      email: String(session.email || "").toLowerCase(),
+      id: session.id || session.email
+    };
+    if (window.MCB80XOAuth?.saveSession) {
+      MCB80XOAuth.saveSession(normalized);
+    } else {
+      localStorage.setItem(SESSION_KEY, JSON.stringify(normalized));
+    }
+    applySessionToApp(normalized);
+    sessionStorage.setItem("mcb80x_oauth_pending_apply", JSON.stringify(normalized));
+    sessionStorage.setItem("mcb80x_force_cloud_sync", "1");
     window.location.replace("index.html?signed_in=1");
   }
 
@@ -153,7 +159,6 @@
     registerAccount,
     loginAccount,
     loginSecurity,
-    finishSignIn,
-    saveSession
+    finishSignIn
   };
 })();

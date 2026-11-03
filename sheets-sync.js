@@ -277,49 +277,144 @@
     return sha256Hex(String(passphrase));
   }
 
-  /** Deterministic sync key for OAuth sign-in (same Google account → same key on every device). */
+  function syncPepper() {
+    return String(config().syncSecret || "mcb80x-oauth-sync");
+  }
+
+  /** Same email → same sync key, regardless of sign-in provider (Google, Amazon, email/password, etc.). */
+  async function deriveEmailSyncPassphrase(email) {
+    const em = String(email || "").trim().toLowerCase();
+    if (!em || !em.includes("@")) throw new Error("Missing account email.");
+    return sha256Hex(`mcb80x-account-email-sync-v1|${syncPepper()}|${em}`);
+  }
+
+  /** Earlier builds keyed off provider account id — kept for one-time decrypt + re-upload under email key. */
+  async function deriveLegacyProviderIdSyncPassphrase(providerId) {
+    const sub = String(providerId || "").trim();
+    if (!sub) throw new Error("Missing provider account id.");
+    return sha256Hex(`mcb80x-oauth-sync-v1|${syncPepper()}|${sub}`);
+  }
+
+  async function deriveAccountSyncPassphrase(accountKey) {
+    const key = String(accountKey || "").trim().toLowerCase();
+    if (key.includes("@")) return deriveEmailSyncPassphrase(key);
+    return deriveLegacyProviderIdSyncPassphrase(accountKey);
+  }
+
   async function deriveOAuthSyncPassphrase(googleSub) {
-    const sub = String(googleSub || "").trim();
-    if (!sub) throw new Error("Missing Google account id.");
-    const pepper = String(config().syncSecret || "mcb80x-oauth-sync");
-    return sha256Hex(`mcb80x-oauth-sync-v1|${pepper}|${sub}`);
+    return deriveLegacyProviderIdSyncPassphrase(googleSub);
+  }
+
+  async function decryptEnvelopeWithCandidates(envelope, passphrases) {
+    const list = passphrases.filter(Boolean);
+    let lastErr;
+    for (const pass of list) {
+      try {
+        return { bundle: await decryptBundle(envelope, pass), passUsed: pass };
+      } catch (err) {
+        lastErr = err;
+      }
+    }
+    throw lastErr || new Error("Invalid encrypted backup.");
   }
 
   /**
-   * After Google/Microsoft OAuth, unlock cloud sync without a manual passphrase when the
-   * account has not opted into a custom sync passphrase on this device.
+   * Pull/merge using email-key first; fall back to legacy provider-id keys, then re-save with email key.
    */
-  async function bootstrapFromOAuthSession(session) {
-    if (!isConfigured() || !session?.email || !session?.id) {
+  async function pullAndMergeForAccount(primaryPass, alternatePasses, { preferRemoteIfLocalEmpty = true } = {}) {
+    if (!isConfigured()) throw new Error("Cloud save is not available.");
+    const email = hooks?.getSyncEmail?.();
+    if (!email) throw new Error("Set your account email in Settings first.");
+    if (!primaryPass) throw new Error("Enter your sync passphrase to download.");
+    applyingRemote = true;
+    notifyStatus();
+    try {
+      const resp = await pullJsonp(email);
+      if (!resp?.ok) throw new Error(resp?.error || "Pull failed.");
+      const local = hooks.getLocalBundle();
+      if (!resp.found) {
+        if (!isLocalBundleEmpty(local)) {
+          sessionPassphrase = primaryPass;
+          await pushNow(primaryPass);
+        }
+        return { merged: false, empty: true };
+      }
+      const candidates = [primaryPass, ...(alternatePasses || []).filter(p => p && p !== primaryPass)];
+      const { bundle: remoteBundle } = await decryptEnvelopeWithCandidates(resp.envelope, candidates);
+      delete remoteBundle.version;
+      let merged;
+      if (preferRemoteIfLocalEmpty && isLocalBundleEmpty(local)) {
+        merged = {
+          progress: remoteBundle.progress,
+          settings: remoteBundle.settings,
+          flashcards: remoteBundle.flashcards,
+          flashcardSrs: remoteBundle.flashcardSrs,
+          analytics: remoteBundle.analytics
+        };
+      } else {
+        merged = mergeBundles(local, remoteBundle);
+      }
+      hooks.applyLocalBundle(merged, { fromCloud: true });
+      sessionPassphrase = primaryPass;
+      await pushNow(primaryPass);
+      lastSyncAt = Date.now();
+      lastSyncError = null;
+      return { merged: true, empty: false };
+    } catch (err) {
+      lastSyncError = err?.message || String(err);
+      throw err;
+    } finally {
+      applyingRemote = false;
+      notifyStatus();
+    }
+  }
+
+  /**
+   * After sign-in (any provider), unlock cloud sync when the account has not set a custom passphrase.
+   */
+  async function bootstrapFromAccountSession(session) {
+    if (!isConfigured() || !session?.email) {
       return { ok: false, reason: "skip" };
     }
     const email = String(session.email).toLowerCase();
-    const derived = await deriveOAuthSyncPassphrase(session.id);
-    const derivedVerifier = await registerPassphraseVerifier(derived);
+    const emailPass = await deriveEmailSyncPassphrase(email);
+    const emailVerifier = await registerPassphraseVerifier(emailPass);
+
+    const legacyPasses = [];
+    const legacyVerifiers = [];
+    const providerId = session.id && session.id !== email ? String(session.id) : "";
+    if (providerId) {
+      const legacyPass = await deriveLegacyProviderIdSyncPassphrase(providerId);
+      legacyPasses.push(legacyPass);
+      legacyVerifiers.push(await registerPassphraseVerifier(legacyPass));
+    }
+
     const settings = hooks?.getSettings?.() || {};
     const existingVerifier = settings.syncPassVerifier || "";
 
-    if (existingVerifier && existingVerifier !== derivedVerifier) {
-      return { ok: false, reason: "custom-passphrase" };
+    if (existingVerifier) {
+      const ok =
+        existingVerifier === emailVerifier || legacyVerifiers.includes(existingVerifier);
+      if (!ok) return { ok: false, reason: "custom-passphrase" };
     }
 
     hooks?.applyOAuthAccount?.({
       email,
-      googleSub: session.id,
+      googleSub: session.id || "",
       displayName: settings.displayName || email.split("@")[0],
-      syncPassVerifier: derivedVerifier
+      syncPassVerifier: emailVerifier
     });
 
-    unlockSession(derived);
+    unlockSession(emailPass);
     try {
-      await pullAndMerge(derived, { preferRemoteIfLocalEmpty: true });
+      await pullAndMergeForAccount(emailPass, legacyPasses, { preferRemoteIfLocalEmpty: true });
       return { ok: true, reason: "synced" };
     } catch (err) {
       clearSessionPassphrase();
       if (!existingVerifier) {
         hooks?.applyOAuthAccount?.({
           email,
-          googleSub: session.id,
+          googleSub: session.id || "",
           syncPassVerifier: ""
         });
       }
@@ -501,8 +596,12 @@
     mergeBundles,
     registerPassphraseVerifier,
     verifyPassphraseLocal,
+    deriveEmailSyncPassphrase,
+    deriveAccountSyncPassphrase,
     deriveOAuthSyncPassphrase,
-    bootstrapFromOAuthSession,
+    pullAndMergeForAccount,
+    bootstrapFromAccountSession,
+    bootstrapFromOAuthSession: bootstrapFromAccountSession,
     applyGoogleProfile,
     getStatus: () => ({
       configured: isConfigured(),

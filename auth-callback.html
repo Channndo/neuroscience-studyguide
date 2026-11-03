@@ -36,6 +36,7 @@
       if (square1Session) {
         MCB80XOAuth.saveSession(square1Session);
         sessionStorage.setItem("mcb80x_oauth_pending_apply", JSON.stringify(square1Session));
+        sessionStorage.setItem("mcb80x_force_cloud_sync", "1");
         window.location.replace("index.html?signed_in=1");
         return;
       }
@@ -57,6 +58,7 @@
       try {
         const session = await MCB80XOAuth.exchangeCode(code);
         sessionStorage.setItem("mcb80x_oauth_pending_apply", JSON.stringify(session));
+        sessionStorage.setItem("mcb80x_force_cloud_sync", "1");
         window.location.replace("index.html?signed_in=1");
       } catch (e) {
         title.textContent = "Sign-in did not finish";

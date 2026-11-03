@@ -61,10 +61,19 @@
     try {
       const raw = JSON.parse(localStorage.getItem(SESSION_KEY) || "null");
       if (!raw?.email || !raw?.accessToken) return null;
-      return raw;
+      return {
+        ...raw,
+        email: String(raw.email).toLowerCase(),
+        id: raw.id || raw.email
+      };
     } catch {
       return null;
     }
+  }
+
+  /** Signed-in account (email/password or social) — same storage. */
+  function getAccountSession() {
+    return getSession();
   }
 
   function saveSession(session) {
@@ -198,6 +207,7 @@
       provider: "oauth"
     };
     saveSession(session);
+    sessionStorage.setItem("mcb80x_force_cloud_sync", "1");
     return session;
   }
 
@@ -224,6 +234,7 @@
     square1OAuthBase,
     authCallbackUrl,
     getSession,
+    getAccountSession,
     saveSession,
     clearSession,
     startOAuth,

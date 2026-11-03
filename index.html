@@ -4662,7 +4662,9 @@
         renderUserActivityCard();
         renderStreakBadge();
         if (!window._mcb80xApplyingCloud && window.MCB80XSheetSync?.schedulePush) {
-          MCB80XSheetSync.schedulePush();
+          ensureCloudSyncIfSignedIn().finally(() => {
+            MCB80XSheetSync.schedulePush();
+          });
         }
         return progress;
       } catch {
@@ -7212,25 +7214,42 @@
       });
     }
 
-    async function ensureOAuthCloudSync() {
-      const session = window.MCB80XOAuth?.getSession?.();
-      if (!session?.email || !window.MCB80XSheetSync?.bootstrapFromOAuthSession) return;
-      applyOAuthSessionToSettings(session);
-      const result = await MCB80XSheetSync.bootstrapFromOAuthSession(session);
-      if (result?.ok) {
-        renderDashboard();
-        renderProfile();
-        renderUserActivityCard();
-        renderStreakBadge();
-      }
-      renderSyncBanner();
-      updateSyncStatusHeader();
+    let accountCloudSyncPromise = null;
+
+    async function ensureAccountCloudSync() {
+      if (accountCloudSyncPromise) return accountCloudSyncPromise;
+      accountCloudSyncPromise = (async () => {
+        const session = window.MCB80XOAuth?.getAccountSession?.() || window.MCB80XOAuth?.getSession?.();
+        const bootstrap = window.MCB80XSheetSync?.bootstrapFromAccountSession
+          || window.MCB80XSheetSync?.bootstrapFromOAuthSession;
+        if (!session?.email || !bootstrap) return { ok: false };
+
+        applyOAuthSessionToSettings(session);
+        const result = await bootstrap(session);
+        if (result?.ok) {
+          renderDashboard();
+          renderProfile();
+          renderUserActivityCard();
+          renderStreakBadge();
+        }
+        renderSyncBanner();
+        updateSyncStatusHeader();
+        return result;
+      })();
+      return accountCloudSyncPromise;
+    }
+
+    async function ensureCloudSyncIfSignedIn() {
+      const session = window.MCB80XOAuth?.getAccountSession?.();
+      if (!session?.email) return;
+      if (window.MCB80XSheetSync?.isUnlocked?.()) return;
+      await ensureAccountCloudSync();
     }
 
     function refreshOAuthNav() {
       const link = document.getElementById("nav-signin");
       if (!link || !window.MCB80XOAuth) return;
-      const session = MCB80XOAuth.getSession();
+      const session = MCB80XOAuth.getAccountSession?.() || MCB80XOAuth.getSession();
       if (session?.email) {
         link.textContent = "Sign out";
         link.href = "#";
@@ -7301,7 +7320,7 @@
     renderSyncBanner();
     updateSyncStatusHeader();
     refreshOAuthNav();
-    ensureOAuthCloudSync().finally(() => {
+    ensureAccountCloudSync().finally(() => {
       renderSyncBanner();
       updateSyncStatusHeader();
     });
