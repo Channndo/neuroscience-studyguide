@@ -40,7 +40,13 @@ You can also **export / import** an encrypted JSON backup file from Settings wit
 
 Open **Sign in** in the app header (`sign-in.html`). OAuth runs through Syntrix (`mcb80x` site profile); the page lists every provider the API exposes. After sign-in your email is linked for cloud backup. Set your **sync passphrase** under Settings to enable encrypted Sheet sync.
 
-If **Amazon** is missing, add `OAUTH_AMAZON_CLIENT_ID` and `OAUTH_AMAZON_CLIENT_SECRET` on the **syntrix-scanner** Render service (same Login with Amazon app as Square1) and allow return URL `https://api.syntrix.solutions/api/auth/oauth/amazon/callback`. See `syntrix/scanner/DEPLOY.md`.
+If **Amazon** is missing, the API is not advertising it yet (not a front-end bug). Verify:
+
+```bash
+curl -sS "https://api.syntrix.solutions/api/auth/oauth/providers?site=mcb80x"
+```
+
+You need `"amazon"` in that JSON. Add **`OAUTH_AMAZON_CLIENT_ID`** and **`OAUTH_AMAZON_CLIENT_SECRET`** on the **syntrix-scanner** Render service (copy from Square1 Vercel), add Login with Amazon return URL `https://api.syntrix.solutions/api/auth/oauth/amazon/callback`, **redeploy**, then re-run the curl. See `syntrix/scanner/DEPLOY.md`.
 
 ### Regenerate large expansion banks
 
