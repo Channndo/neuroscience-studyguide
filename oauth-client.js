@@ -1,5 +1,9 @@
 (function () {
   const SESSION_KEY = "mcb80x_oauth_session";
+  const EXCHANGE_BASE_KEY = "mcb80x_oauth_exchange_base";
+
+  /** Providers whose OAuth app credentials live on Square1 (not Render). */
+  const SQUARE1_BRIDGE_PROVIDERS = ["amazon"];
 
   const PROVIDER_ORDER = [
     "google",
@@ -43,6 +47,11 @@
     return String(c.syntrixApiBase || "https://api.syntrix.solutions").replace(/\/$/, "");
   }
 
+  function square1OAuthBase() {
+    const c = window.MCB80X_CLOUD || {};
+    return String(c.square1OAuthBase || "https://square1dgm.com").replace(/\/$/, "");
+  }
+
   function authCallbackUrl() {
     const path = window.location.pathname.replace(/\/[^/]*$/, "/");
     return `${window.location.origin}${path}auth-callback.html`;
@@ -66,10 +75,24 @@
     localStorage.removeItem(SESSION_KEY);
   }
 
+  function usesSquare1Bridge(provider) {
+    return SQUARE1_BRIDGE_PROVIDERS.includes(provider) && !!square1OAuthBase();
+  }
+
   function startOAuth(provider) {
+    const returnTo = encodeURIComponent(authCallbackUrl());
+    if (usesSquare1Bridge(provider)) {
+      sessionStorage.setItem(EXCHANGE_BASE_KEY, square1OAuthBase());
+      const url =
+        `${square1OAuthBase()}/api/auth/oauth/${encodeURIComponent(provider)}/start` +
+        `?return_to=${returnTo}`;
+      window.location.assign(url);
+      return;
+    }
+    sessionStorage.removeItem(EXCHANGE_BASE_KEY);
     const url =
       `${apiBase()}/api/auth/oauth/${encodeURIComponent(provider)}/start` +
-      `?return_to=${encodeURIComponent(authCallbackUrl())}`;
+      `?return_to=${returnTo}`;
     window.location.assign(url);
   }
 
@@ -79,16 +102,36 @@
     return PROVIDER_ORDER.filter(p => fromApi.includes(p));
   }
 
+  async function fetchSquare1BridgeProviders() {
+    const base = square1OAuthBase();
+    if (!base) return [];
+    try {
+      const res = await fetch(`${base}/api/auth/oauth/providers`);
+      if (!res.ok) return [];
+      const data = await res.json();
+      const fromSq = Array.isArray(data.providers) ? data.providers : [];
+      return SQUARE1_BRIDGE_PROVIDERS.filter(p => fromSq.includes(p));
+    } catch {
+      return [];
+    }
+  }
+
   async function fetchProviders() {
+    let merged = [];
     try {
       const res = await fetch(`${apiBase()}/api/auth/oauth/providers?site=mcb80x`);
-      if (!res.ok) return orderProviders(["google", "microsoft"]);
-      const data = await res.json();
-      const ordered = orderProviders(data.providers);
-      return ordered.length ? ordered : orderProviders(["google", "microsoft"]);
-    } catch {
-      return orderProviders(["google", "microsoft"]);
-    }
+      if (res.ok) {
+        const data = await res.json();
+        merged = Array.isArray(data.providers) ? [...data.providers] : [];
+      }
+    } catch { /* syntrix unreachable */ }
+
+    const bridged = await fetchSquare1BridgeProviders();
+    const set = new Set(merged);
+    bridged.forEach(p => set.add(p));
+
+    const ordered = orderProviders([...set]);
+    return ordered.length ? ordered : orderProviders(["google", "microsoft"]);
   }
 
   function renderSocialGrid(container, providers) {
@@ -116,9 +159,13 @@
   }
 
   async function exchangeCode(code) {
-    const res = await fetch(`${apiBase()}/api/auth/oauth/exchange`, {
+    const exchangeBase =
+      sessionStorage.getItem(EXCHANGE_BASE_KEY) || apiBase();
+    sessionStorage.removeItem(EXCHANGE_BASE_KEY);
+
+    const res = await fetch(`${exchangeBase}/api/auth/oauth/exchange`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
       body: JSON.stringify({ code })
     });
     const data = await res.json().catch(() => ({}));
@@ -156,6 +203,7 @@
 
   window.MCB80XOAuth = {
     apiBase,
+    square1OAuthBase,
     authCallbackUrl,
     getSession,
     saveSession,
@@ -171,6 +219,7 @@
     applyToApp,
     signOut() {
       clearSession();
+      sessionStorage.removeItem(EXCHANGE_BASE_KEY);
       if (window.MCB80XSheetSync?.clearSessionPassphrase) {
         MCB80XSheetSync.clearSessionPassphrase();
       }
