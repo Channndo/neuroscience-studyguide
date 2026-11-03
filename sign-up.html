@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Create account · MCB80x Study Guide</title>
+  <link rel="stylesheet" href="auth-cover.css" />
+  <script src="mcb80x-cloud-config.js"></script>
+  <script src="oauth-client.js"></script>
+  <script src="password-auth.js"></script>
+</head>
+<body class="auth-cover-page">
+  <div class="auth-cover-wrap">
+    <div class="auth-cover-card">
+      <header class="auth-cover-brand">
+        <div class="harvardx-mark" aria-label="HarvardX">
+          Harvard
+          <svg class="x-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true">
+            <g transform="translate(16 16)">
+              <rect x="-3.25" y="-14.5" width="6.5" height="29" fill="#C4A035" transform="rotate(45)"/>
+              <rect x="-3.25" y="-14.5" width="6.5" height="29" fill="#A51C30" transform="rotate(-45)"/>
+            </g>
+          </svg>
+        </div>
+        <p class="auth-cover-course">Fundamentals of Neuroscience · MCB80x</p>
+      </header>
+      <h1>Create account</h1>
+      <p class="lede">Use your email to save progress and sync across devices.</p>
+
+      <form id="signup-form" class="auth-email-form" autocomplete="on">
+        <div class="auth-field-row">
+          <div class="auth-field">
+            <label for="first">First name <span class="auth-optional">(optional)</span></label>
+            <input id="first" name="first" type="text" autocomplete="given-name" maxlength="100" />
+          </div>
+          <div class="auth-field">
+            <label for="last">Last name <span class="auth-optional">(optional)</span></label>
+            <input id="last" name="last" type="text" autocomplete="family-name" maxlength="100" />
+          </div>
+        </div>
+        <div class="auth-field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required autocomplete="email" />
+        </div>
+        <div class="auth-field">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" required minlength="12" autocomplete="new-password" />
+          <p class="auth-hint">At least 12 characters with a letter, number, and special character.</p>
+        </div>
+        <div class="auth-field">
+          <label for="q1">Security question 1</label>
+          <select id="q1" name="q1" required></select>
+        </div>
+        <div class="auth-field">
+          <label for="a1">Answer</label>
+          <input id="a1" name="a1" type="text" required minlength="2" autocomplete="off" />
+        </div>
+        <div class="auth-field">
+          <label for="q2">Security question 2</label>
+          <select id="q2" name="q2" required></select>
+        </div>
+        <div class="auth-field">
+          <label for="a2">Answer</label>
+          <input id="a2" name="a2" type="text" required minlength="2" autocomplete="off" />
+        </div>
+        <button type="submit" class="auth-btn-primary" id="signup-submit">Create account</button>
+      </form>
+
+      <p class="auth-switch">
+        Already have an account? <a href="sign-in.html">Sign in</a>
+      </p>
+      <p id="auth-error" class="auth-msg auth-msg--error" hidden role="alert"></p>
+    </div>
+    <p class="auth-back"><a href="index.html">← Back to study dashboard</a></p>
+  </div>
+  <script>
+    const q1 = document.getElementById("q1");
+    const q2 = document.getElementById("q2");
+    MCB80XPasswordAuth.SECURITY_QUESTIONS.forEach((text, id) => {
+      const opt = (sel) => {
+        const o = document.createElement("option");
+        o.value = String(id);
+        o.textContent = text;
+        sel.appendChild(o);
+      };
+      opt(q1);
+      opt(q2);
+    });
+    q1.value = "0";
+    q2.value = "1";
+
+    if (MCB80XOAuth.getSession()) {
+      window.location.replace("index.html");
+    }
+
+    const form = document.getElementById("signup-form");
+    const err = document.getElementById("auth-error");
+    const submitBtn = document.getElementById("signup-submit");
+
+    form.addEventListener("submit", async e => {
+      e.preventDefault();
+      err.hidden = true;
+      submitBtn.disabled = true;
+      try {
+        const fd = new FormData(form);
+        const session = await MCB80XPasswordAuth.registerAccount({
+          email: fd.get("email"),
+          password: fd.get("password"),
+          first_name: String(fd.get("first") || "").trim(),
+          last_name: String(fd.get("last") || "").trim(),
+          security_q1_id: Number(fd.get("q1")),
+          security_q2_id: Number(fd.get("q2")),
+          security_answer1: String(fd.get("a1") || "").trim(),
+          security_answer2: String(fd.get("a2") || "").trim()
+        });
+        MCB80XPasswordAuth.finishSignIn(session);
+      } catch (ex) {
+        err.textContent = ex.message || String(ex);
+        err.hidden = false;
+        submitBtn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
