@@ -277,6 +277,56 @@
     return sha256Hex(String(passphrase));
   }
 
+  /** Deterministic sync key for OAuth sign-in (same Google account → same key on every device). */
+  async function deriveOAuthSyncPassphrase(googleSub) {
+    const sub = String(googleSub || "").trim();
+    if (!sub) throw new Error("Missing Google account id.");
+    const pepper = String(config().syncSecret || "mcb80x-oauth-sync");
+    return sha256Hex(`mcb80x-oauth-sync-v1|${pepper}|${sub}`);
+  }
+
+  /**
+   * After Google/Microsoft OAuth, unlock cloud sync without a manual passphrase when the
+   * account has not opted into a custom sync passphrase on this device.
+   */
+  async function bootstrapFromOAuthSession(session) {
+    if (!isConfigured() || !session?.email || !session?.id) {
+      return { ok: false, reason: "skip" };
+    }
+    const email = String(session.email).toLowerCase();
+    const derived = await deriveOAuthSyncPassphrase(session.id);
+    const derivedVerifier = await registerPassphraseVerifier(derived);
+    const settings = hooks?.getSettings?.() || {};
+    const existingVerifier = settings.syncPassVerifier || "";
+
+    if (existingVerifier && existingVerifier !== derivedVerifier) {
+      return { ok: false, reason: "custom-passphrase" };
+    }
+
+    hooks?.applyOAuthAccount?.({
+      email,
+      googleSub: session.id,
+      displayName: settings.displayName || email.split("@")[0],
+      syncPassVerifier: derivedVerifier
+    });
+
+    unlockSession(derived);
+    try {
+      await pullAndMerge(derived, { preferRemoteIfLocalEmpty: true });
+      return { ok: true, reason: "synced" };
+    } catch (err) {
+      clearSessionPassphrase();
+      if (!existingVerifier) {
+        hooks?.applyOAuthAccount?.({
+          email,
+          googleSub: session.id,
+          syncPassVerifier: ""
+        });
+      }
+      return { ok: false, reason: "pull-failed", error: err };
+    }
+  }
+
   function notifyStatus() {
     hooks?.onSyncStatus?.({
       configured: isConfigured(),
@@ -451,6 +501,8 @@
     mergeBundles,
     registerPassphraseVerifier,
     verifyPassphraseLocal,
+    deriveOAuthSyncPassphrase,
+    bootstrapFromOAuthSession,
     applyGoogleProfile,
     getStatus: () => ({
       configured: isConfigured(),

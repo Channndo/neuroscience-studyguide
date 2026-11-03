@@ -1481,7 +1481,10 @@
 
     @media (max-width: 540px) {
       .question-card { padding: 1.35rem; }
-      .nav-row { flex-direction: column; }
+      /* Phones only: stack nav with primary action (Next / Submit) on top. */
+      .nav-row {
+        flex-direction: column-reverse;
+      }
       .nav-row button { width: 100%; }
     }
 
@@ -4090,7 +4093,10 @@
         pill.textContent = "Cloud: set email in Settings";
         pill.classList.add("is-warn");
       } else if (!st.unlocked) {
-        pill.textContent = "Cloud: unlock passphrase";
+        const oauth = window.MCB80XOAuth?.getSession?.();
+        pill.textContent = oauth?.email
+          ? "Cloud: syncing…"
+          : "Cloud: unlock passphrase";
         pill.classList.add("is-warn");
       } else if (st.lastSyncError) {
         pill.textContent = "Cloud sync issue";
@@ -4118,7 +4124,12 @@
       if (!settings.syncEmail) {
         body += "<p style=\"margin:0.5rem 0 0\">Add your email and sync passphrase under <strong>Settings</strong> so progress survives clearing browser data.</p>";
       } else if (!st.unlocked) {
-        body += `<p style="margin:0.5rem 0 0">Signed in as <strong>${escapeHtml(settings.syncEmail)}</strong>. Unlock your sync passphrase in Settings to restore or auto-save.</p>`;
+        const oauth = window.MCB80XOAuth?.getSession?.();
+        if (oauth?.email) {
+          body += `<p style="margin:0.5rem 0 0">Signed in as <strong>${escapeHtml(settings.syncEmail)}</strong>. Cloud sync should start automatically — if progress is missing, open Settings and use <strong>Unlock &amp; download merge</strong> (same custom passphrase on every device).</p>`;
+        } else {
+          body += `<p style="margin:0.5rem 0 0">Signed in as <strong>${escapeHtml(settings.syncEmail)}</strong>. Unlock your sync passphrase in Settings to restore or auto-save.</p>`;
+        }
         body += `<div class="sync-actions"><button type="button" class="btn-secondary" id="sync-banner-settings">Open Settings</button></div>`;
       } else {
         const when = st.lastSyncAt
@@ -6999,6 +7010,21 @@
       });
     }
 
+    async function ensureOAuthCloudSync() {
+      const session = window.MCB80XOAuth?.getSession?.();
+      if (!session?.email || !window.MCB80XSheetSync?.bootstrapFromOAuthSession) return;
+      applyOAuthSessionToSettings(session);
+      const result = await MCB80XSheetSync.bootstrapFromOAuthSession(session);
+      if (result?.ok) {
+        renderDashboard();
+        renderProfile();
+        renderUserActivityCard();
+        renderStreakBadge();
+      }
+      renderSyncBanner();
+      updateSyncStatusHeader();
+    }
+
     function refreshOAuthNav() {
       const link = document.getElementById("nav-signin");
       if (!link || !window.MCB80XOAuth) return;
@@ -7039,6 +7065,18 @@
           googleSub: getSettings().googleSub,
           displayName: getSettings().displayName
         }),
+        getSettings: () => getSettings(),
+        applyOAuthAccount: patch => {
+          if (!patch?.email) return;
+          saveSettings({
+            syncEmail: patch.email,
+            googleSub: patch.googleSub || getSettings().googleSub,
+            displayName: patch.displayName || getSettings().displayName,
+            ...(patch.syncPassVerifier !== undefined
+              ? { syncPassVerifier: patch.syncPassVerifier }
+              : {})
+          });
+        },
         onGoogleProfile: profile => {
           if (profile?.email) {
             saveSettings({
@@ -7061,6 +7099,10 @@
     renderSyncBanner();
     updateSyncStatusHeader();
     refreshOAuthNav();
+    ensureOAuthCloudSync().finally(() => {
+      renderSyncBanner();
+      updateSyncStatusHeader();
+    });
     showView("dashboard");
   </script>
 </body>
