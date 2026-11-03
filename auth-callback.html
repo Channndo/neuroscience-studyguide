@@ -27,11 +27,20 @@
     (async () => {
       const params = new URLSearchParams(window.location.hash.slice(1));
       history.replaceState(null, "", "auth-callback.html");
-      const code = params.get("code");
       const title = document.getElementById("title");
       const subtitle = document.getElementById("subtitle");
       const err = document.getElementById("auth-error");
       const back = document.getElementById("back-link");
+
+      const square1Session = MCB80XOAuth.sessionFromSquare1Hash(params);
+      if (square1Session) {
+        MCB80XOAuth.saveSession(square1Session);
+        sessionStorage.setItem("mcb80x_oauth_pending_apply", JSON.stringify(square1Session));
+        window.location.replace("index.html?signed_in=1");
+        return;
+      }
+
+      const code = params.get("code");
       if (!code) {
         const key = params.get("error") || "provider_error";
         title.textContent = "Sign-in did not finish";
@@ -39,6 +48,12 @@
         back.style.display = "block";
         return;
       }
+
+      if (sessionStorage.getItem("mcb80x_oauth_exchange_base")) {
+        MCB80XOAuth.redirectSquare1Complete(code);
+        return;
+      }
+
       try {
         const session = await MCB80XOAuth.exchangeCode(code);
         sessionStorage.setItem("mcb80x_oauth_pending_apply", JSON.stringify(session));

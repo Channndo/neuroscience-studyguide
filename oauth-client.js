@@ -102,20 +102,6 @@
     return PROVIDER_ORDER.filter(p => fromApi.includes(p));
   }
 
-  async function fetchSquare1BridgeProviders() {
-    const base = square1OAuthBase();
-    if (!base) return [];
-    try {
-      const res = await fetch(`${base}/api/auth/oauth/providers`);
-      if (!res.ok) return [];
-      const data = await res.json();
-      const fromSq = Array.isArray(data.providers) ? data.providers : [];
-      return SQUARE1_BRIDGE_PROVIDERS.filter(p => fromSq.includes(p));
-    } catch {
-      return [];
-    }
-  }
-
   async function fetchProviders() {
     let merged = [];
     try {
@@ -126,9 +112,11 @@
       }
     } catch { /* syntrix unreachable */ }
 
-    const bridged = await fetchSquare1BridgeProviders();
     const set = new Set(merged);
-    bridged.forEach(p => set.add(p));
+    // Square1 credentials (Amazon) — do not rely on cross-origin fetch (CORS); config enables the button.
+    if (square1OAuthBase()) {
+      SQUARE1_BRIDGE_PROVIDERS.forEach(p => set.add(p));
+    }
 
     const ordered = orderProviders([...set]);
     return ordered.length ? ordered : orderProviders(["google", "microsoft"]);
@@ -158,9 +146,39 @@
     container.hidden = false;
   }
 
+  /** Top-level redirect for Square1 broker (Amazon) — no CORS. */
+  function redirectSquare1Complete(code) {
+    const exchangeBase = sessionStorage.getItem(EXCHANGE_BASE_KEY) || square1OAuthBase();
+    if (!exchangeBase) return false;
+    sessionStorage.removeItem(EXCHANGE_BASE_KEY);
+    const returnTo = authCallbackUrl();
+    const url =
+      `${exchangeBase}/api/auth/mcb80x/complete` +
+      `?code=${encodeURIComponent(code)}` +
+      `&return_to=${encodeURIComponent(returnTo)}`;
+    window.location.assign(url);
+    return true;
+  }
+
+  function sessionFromSquare1Hash(params) {
+    const accessToken = params.get("access_token");
+    const email = params.get("email");
+    if (!accessToken || !email) return null;
+    return {
+      accessToken,
+      email: String(email).toLowerCase(),
+      id: params.get("id") || "",
+      provider: "oauth"
+    };
+  }
+
   async function exchangeCode(code) {
-    const exchangeBase =
-      sessionStorage.getItem(EXCHANGE_BASE_KEY) || apiBase();
+    if (sessionStorage.getItem(EXCHANGE_BASE_KEY)) {
+      redirectSquare1Complete(code);
+      return new Promise(() => {});
+    }
+
+    const exchangeBase = apiBase();
     sessionStorage.removeItem(EXCHANGE_BASE_KEY);
 
     const res = await fetch(`${exchangeBase}/api/auth/oauth/exchange`, {
@@ -216,6 +234,8 @@
     PROVIDER_LABELS,
     PROVIDER_ICONS,
     exchangeCode,
+    redirectSquare1Complete,
+    sessionFromSquare1Hash,
     applyToApp,
     signOut() {
       clearSession();
