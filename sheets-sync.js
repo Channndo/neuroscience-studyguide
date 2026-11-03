@@ -361,7 +361,7 @@
       script.src = url.toString();
       script.onerror = () => {
         cleanup();
-        reject(new Error("Could not reach Google Sheet backup (check web app URL)."));
+        reject(new Error("Could not reach cloud save. Try again later."));
       };
       document.head.appendChild(script);
     });
@@ -401,7 +401,7 @@
   }
 
   async function pushNow(passphrase) {
-    if (!isConfigured()) throw new Error("Sheet backup URL is not configured.");
+    if (!isConfigured()) throw new Error("Cloud save is not available.");
     const email = hooks?.getSyncEmail?.();
     if (!email) throw new Error("Set your account email in Settings first.");
     const pass = passphrase || sessionPassphrase;
@@ -415,7 +415,7 @@
   }
 
   async function pullAndMerge(passphrase, { preferRemoteIfLocalEmpty = true } = {}) {
-    if (!isConfigured()) throw new Error("Sheet backup URL is not configured.");
+    if (!isConfigured()) throw new Error("Cloud save is not available.");
     const email = hooks?.getSyncEmail?.();
     if (!email) throw new Error("Set your account email in Settings first.");
     const pass = passphrase || sessionPassphrase;

@@ -4078,6 +4078,13 @@
       updateSyncStatusHeader();
     }
 
+    function friendlySyncError(message) {
+      const m = String(message || "");
+      if (/google sheet|sheet backup|web app url/i.test(m)) return "Could not reach cloud save. Try again later.";
+      if (/not configured/i.test(m)) return "Cloud save is temporarily unavailable.";
+      return m;
+    }
+
     function updateSyncStatusHeader() {
       const pill = document.getElementById("header-sync-pill");
       if (!pill || !window.MCB80XSheetSync) return;
@@ -4090,7 +4097,7 @@
       pill.hidden = false;
       pill.classList.remove("is-ok", "is-warn", "is-off");
       if (!email) {
-        pill.textContent = "Cloud: set email in Settings";
+        pill.textContent = "Sign in to sync";
         pill.classList.add("is-warn");
       } else if (!st.unlocked) {
         const oauth = window.MCB80XOAuth?.getSession?.();
@@ -4120,22 +4127,22 @@
         return;
       }
       el.hidden = false;
-      let body = "<strong>Cloud backup (Google Sheet)</strong> — Progress is encrypted in your browser before upload. Your sync passphrase is never stored in the sheet.";
+      let body = "<strong>Cloud save</strong> — Progress is encrypted in your browser before it syncs. Your optional sync passphrase is never stored in the cloud.";
       if (!settings.syncEmail) {
-        body += "<p style=\"margin:0.5rem 0 0\">Add your email and sync passphrase under <strong>Settings</strong> so progress survives clearing browser data.</p>";
+        body += "<p style=\"margin:0.5rem 0 0\"><strong>Sign in</strong> to sync across devices, or set your account under <strong>Settings</strong>.</p>";
       } else if (!st.unlocked) {
         const oauth = window.MCB80XOAuth?.getSession?.();
         if (oauth?.email) {
-          body += `<p style="margin:0.5rem 0 0">Signed in as <strong>${escapeHtml(settings.syncEmail)}</strong>. Cloud sync should start automatically — if progress is missing, open Settings and use <strong>Unlock &amp; download merge</strong> (same custom passphrase on every device).</p>`;
+          body += `<p style="margin:0.5rem 0 0">Signed in as <strong>${escapeHtml(settings.syncEmail)}</strong>. Sync should run automatically — if anything looks missing, open Settings and choose <strong>Restore from cloud</strong>.</p>`;
         } else {
-          body += `<p style="margin:0.5rem 0 0">Signed in as <strong>${escapeHtml(settings.syncEmail)}</strong>. Unlock your sync passphrase in Settings to restore or auto-save.</p>`;
+          body += `<p style="margin:0.5rem 0 0">Signed in as <strong>${escapeHtml(settings.syncEmail)}</strong>. Open Settings to unlock cloud save or restore progress.</p>`;
         }
         body += `<div class="sync-actions"><button type="button" class="btn-secondary" id="sync-banner-settings">Open Settings</button></div>`;
       } else {
         const when = st.lastSyncAt
           ? new Date(st.lastSyncAt).toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" })
           : "not yet";
-        body += `<p style="margin:0.5rem 0 0">Account <strong>${escapeHtml(settings.syncEmail)}</strong> · Last upload: ${when}${st.lastSyncError ? ` · <span style="color:var(--incorrect)">${escapeHtml(st.lastSyncError)}</span>` : ""}</p>`;
+        body += `<p style="margin:0.5rem 0 0">Account <strong>${escapeHtml(settings.syncEmail)}</strong> · Last saved: ${when}${st.lastSyncError ? ` · <span style="color:var(--incorrect)">${escapeHtml(friendlySyncError(st.lastSyncError))}</span>` : ""}</p>`;
       }
       el.innerHTML = body;
       document.getElementById("sync-banner-settings")?.addEventListener("click", () => {
@@ -4209,13 +4216,13 @@
       el.innerHTML = `
         <div class="settings-panel">
           <h2>Settings</h2>
-          <p class="settings-lead">Local progress stays in this browser. Use cloud backup to restore after clearing site data.</p>
+          <p class="settings-lead">Progress is stored on this device. Sign in to sync quizzes, scores, and flashcards across your phone, tablet, and computer.</p>
           <div class="settings-block">
-            <h3>Cloud backup (Google Sheet)</h3>
-            <p>Quiz data is <strong>encrypted in your browser</strong> (AES-GCM + PBKDF2) before it reaches the sheet. We never store your sync passphrase — only a one-way verifier on this device to catch typos. Sign in with Google can be wired later; until then use your email as the account row key.</p>
+            <h3>Cloud sync</h3>
+            <p>Your study data is <strong>encrypted in this browser</strong> before it is saved online. We never store your optional sync passphrase in the cloud — only a one-way check on this device to catch typos.</p>
             ${syncConfigured
-              ? `<p class="settings-sync-status">Sheet endpoint: configured · Session ${syncSt.unlocked ? "unlocked" : "locked"}${syncSt.lastSyncError ? ` · ${escapeHtml(syncSt.lastSyncError)}` : ""}</p>`
-              : `<p class="settings-sync-status">Sheet endpoint not configured yet — deploy <code>google-apps-script/MCB80xSheetSync.gs</code> and set <code>sheetsWebAppUrl</code> in <code>mcb80x-cloud-config.js</code>.</p>`}
+              ? `<p class="settings-sync-status">Cloud save ${syncSt.unlocked ? "active on this device" : "locked — enter your passphrase to sync"}${syncSt.lastSyncError ? ` · ${escapeHtml(friendlySyncError(syncSt.lastSyncError))}` : ""}</p>`
+              : `<p class="settings-sync-status">Sign in to link an account; cloud save runs automatically when you are signed in.</p>`}
             <label class="settings-sync-field">Account email
               <input type="email" id="settings-sync-email" autocomplete="email" placeholder="you@example.com" value="${escapeHtml(settings.syncEmail || "")}">
             </label>
@@ -4226,8 +4233,8 @@
               <input type="password" id="settings-sync-pass-confirm" autocomplete="new-password" placeholder="Re-enter passphrase">
             </label>
             <div class="settings-avatar-actions" style="flex-wrap:wrap;">
-              <button type="button" class="btn-secondary" id="settings-sync-save"${syncConfigured ? "" : " disabled"}>Save account &amp; upload</button>
-              <button type="button" class="btn-secondary" id="settings-sync-unlock"${syncConfigured ? "" : " disabled"}>Unlock &amp; download merge</button>
+              <button type="button" class="btn-secondary" id="settings-sync-save"${syncConfigured ? "" : " disabled"}>Save to cloud</button>
+              <button type="button" class="btn-secondary" id="settings-sync-unlock"${syncConfigured ? "" : " disabled"}>Restore from cloud</button>
               <button type="button" class="btn-secondary" id="settings-sync-lock"${syncSt.unlocked ? "" : " disabled"}>Lock session</button>
               <button type="button" class="btn-secondary" id="settings-export-backup">Export encrypted backup file</button>
               <label class="btn-secondary" style="cursor:pointer;margin:0;">
@@ -4339,7 +4346,7 @@
           saveSettings({ syncEmail: email, syncPassVerifier: verifier });
           MCB80XSheetSync.unlockSession(pass);
           await MCB80XSheetSync.pushNow(pass);
-          showSyncMsg("Encrypted progress uploaded to your Google Sheet.");
+          showSyncMsg("Progress saved to the cloud.");
           renderSettings();
           renderSyncBanner();
           updateSyncStatusHeader();
@@ -4355,7 +4362,7 @@
           saveSettings({ syncEmail: email });
           MCB80XSheetSync.unlockSession(pass);
           await MCB80XSheetSync.pullAndMerge(pass);
-          showSyncMsg("Downloaded and merged encrypted backup from Google Sheet.");
+          showSyncMsg("Progress restored from the cloud.");
           renderSettings();
           renderSyncBanner();
           updateSyncStatusHeader();
