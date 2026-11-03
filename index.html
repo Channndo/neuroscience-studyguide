@@ -2171,6 +2171,195 @@
       color: var(--gray-700);
     }
 
+    /* Desktop: fit active quiz / flashcard in one viewport — nav stays visible, scroll only inside content if needed */
+    @media (min-width: 901px) {
+      body {
+        height: 100dvh;
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+
+      header {
+        flex-shrink: 0;
+        padding: 0.75rem 1.25rem 0.55rem;
+      }
+
+      header h1 {
+        font-size: 1.28rem;
+        margin-bottom: 0.15rem;
+      }
+
+      header > p {
+        display: none;
+      }
+
+      .header-streak-wrap {
+        margin-top: 0.45rem;
+      }
+
+      main {
+        flex: 1;
+        min-height: 0;
+        max-width: 880px;
+        width: 100%;
+        margin-inline: auto;
+        padding: 0.65rem 1.25rem 0.5rem;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+
+      .view.active {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        min-height: 0;
+        overflow: hidden;
+      }
+
+      #view-dashboard.view.active,
+      #view-profile.view.active,
+      #view-settings.view.active,
+      #view-results.view.active {
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+
+      body.study-flow-active footer {
+        display: none;
+      }
+
+      footer {
+        flex-shrink: 0;
+        padding: 0.4rem 1rem;
+      }
+
+      #view-quiz .quiz-header {
+        margin-bottom: 0.45rem;
+        flex-shrink: 0;
+      }
+
+      #view-quiz .progress-card {
+        margin-bottom: 0.5rem;
+        padding: 0.5rem 0.85rem;
+        flex-shrink: 0;
+      }
+
+      #view-quiz .question-card {
+        flex: 1 1 auto;
+        min-height: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        margin-bottom: 0.5rem;
+        padding: 1.15rem 1.35rem;
+      }
+
+      #view-quiz .question-text {
+        font-size: 1.02rem;
+        margin-bottom: 1rem;
+      }
+
+      #view-quiz .answer-btn {
+        padding: 0.65rem 0.9rem;
+        font-size: 0.9rem;
+      }
+
+      #view-quiz .answer-grid {
+        gap: 0.45rem;
+      }
+
+      #view-quiz .nav-row {
+        flex-shrink: 0;
+        margin-top: auto;
+        padding-top: 0.15rem;
+      }
+
+      #view-flashcard .quiz-header {
+        margin-bottom: 0.35rem;
+        flex-shrink: 0;
+      }
+
+      #view-flashcard .flashcard-hint {
+        margin: 0 0 0.35rem;
+        font-size: 0.78rem;
+        flex-shrink: 0;
+      }
+
+      #view-flashcard .flashcard-area {
+        flex: 1 1 auto;
+        min-height: 0;
+        margin-bottom: 0.5rem;
+        display: flex;
+        flex-direction: column;
+      }
+
+      #view-flashcard .flashcard {
+        flex: 1 1 auto;
+        min-height: 10rem;
+        height: auto;
+      }
+
+      #view-flashcard .flashcard-face {
+        padding: 1.25rem 1.35rem;
+        overflow-y: auto;
+      }
+
+      #view-flashcard .flashcard-nav,
+      #view-flashcard .flashcard-grade {
+        flex-shrink: 0;
+      }
+
+      .dashboard-intro {
+        margin-bottom: 1rem;
+      }
+
+      .dashboard-intro p {
+        font-size: 0.88rem;
+        line-height: 1.4;
+      }
+
+      .dashboard-section {
+        margin-bottom: 1.15rem;
+      }
+
+      .quiz-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.85rem;
+      }
+
+      .quiz-card {
+        padding: 1.15rem 1.25rem;
+      }
+
+      .quiz-card-icon {
+        width: 2.1rem;
+        height: 2.1rem;
+        margin-bottom: 0.65rem;
+        font-size: 0.78rem;
+      }
+
+      .quiz-card h3 {
+        font-size: 0.98rem;
+      }
+
+      .quiz-card .subtitle {
+        font-size: 0.78rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      main {
+        max-width: 1040px;
+      }
+
+      .quiz-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       .progress-fill, .quiz-card, .flashcard, .module-bar-fill, .ring-value { transition: none; }
     }
@@ -5913,12 +6102,18 @@
       activeAppView = name;
       Object.values(views).forEach(v => v.classList.remove("active"));
       views[name].classList.add("active");
+      document.body.classList.toggle("study-flow-active", name === "quiz" || name === "flashcard");
       if (name === "dashboard" || name === "profile" || name === "settings") {
         setMainNav(name);
         if (name === "profile") renderProfile();
         if (name === "settings") renderSettings();
       }
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      const scrollTarget = views[name];
+      if (scrollTarget && (name === "dashboard" || name === "profile" || name === "settings" || name === "results")) {
+        scrollTarget.scrollTop = 0;
+      } else {
+        window.scrollTo({ top: 0, behavior: "instant" in window ? "instant" : "auto" });
+      }
     }
 
     function optionWordCount(text) {
