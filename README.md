@@ -36,9 +36,9 @@ Progress is **encrypted in the browser** before upload (AES-GCM; key derived wit
 
 You can also **export / import** an encrypted JSON backup file from Settings without using the sheet.
 
-### Sign in (Google, Microsoft, GitHub, Facebook, X, Amazon)
+### Sign in (email or social)
 
-Open **Sign in** in the app header (`sign-in.html`). OAuth runs through Syntrix (`mcb80x` site profile); the page lists every provider the API exposes. After sign-in your email is linked for cloud backup. Set your **sync passphrase** under Settings to enable encrypted Sheet sync.
+Open **Sign in** in the app header (`sign-in.html`). **Create an account** at `sign-up.html` with email and password (12+ chars with letter, number, and symbol) plus two security questions for new-device verification. Social buttons use Syntrix OAuth (`mcb80x`); Amazon uses Square1 when configured. After sign-in your email links to encrypted cloud backup and auto-sync when OAuth-derived keys apply.
 
 **Amazon** uses the same Login with Amazon app as **Square1** (`square1OAuthBase` in `mcb80x-cloud-config.js`). The study guide merges Square1’s provider list with Syntrix’s, so you do **not** need Amazon credentials on Render. Deploy the latest **Square1** site (external `return_to` + CORS for GitHub Pages) and ensure `OAUTH_AMAZON_*` remains set on Square1/Netlify.
 
