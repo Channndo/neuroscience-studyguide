@@ -252,8 +252,18 @@
     return sessionPassphrase;
   }
 
-  function unlockSession(passphrase) {
+  function unlockSession(passphrase, options) {
     sessionPassphrase = String(passphrase);
+    const persist = options?.persist === true;
+    const email = String(options?.email || hooks?.getSyncEmail?.() || "").toLowerCase();
+    try {
+      if (persist && email) {
+        sessionStorage.setItem("mcb80x_sync_session", JSON.stringify({ email, mode: "auto" }));
+      } else if (!persist) {
+        sessionStorage.removeItem("mcb80x_sync_session");
+      }
+    } catch { /* ignore */ }
+    notifyStatus();
   }
 
   function clearSessionPassphrase() {
@@ -261,6 +271,44 @@
     try {
       sessionStorage.removeItem("mcb80x_sync_session");
     } catch { /* ignore */ }
+  }
+
+  /** Re-unlock this tab after reload when using automatic account sync (no custom passphrase). */
+  async function restoreSessionUnlock() {
+    if (isUnlocked()) return true;
+    let stored;
+    try {
+      stored = JSON.parse(sessionStorage.getItem("mcb80x_sync_session") || "null");
+    } catch {
+      stored = null;
+    }
+    if (!stored || stored.mode !== "auto" || !stored.email) return false;
+    const syncEmail = String(hooks?.getSyncEmail?.() || "").toLowerCase();
+    if (!syncEmail || syncEmail !== String(stored.email).toLowerCase()) return false;
+    const settings = hooks?.getSettings?.() || {};
+    if (settings.syncPassMode === "custom") return false;
+    const emailPass = await deriveEmailSyncPassphrase(syncEmail);
+    const emailVerifier = await registerPassphraseVerifier(emailPass);
+    if (settings.syncPassVerifier && settings.syncPassVerifier !== emailVerifier) return false;
+    sessionPassphrase = emailPass;
+    notifyStatus();
+    return true;
+  }
+
+  /** Unlock immediately for signed-in accounts that use automatic sync (before cloud pull finishes). */
+  async function ensureAutoUnlockForEmail(email) {
+    if (isUnlocked()) return true;
+    const em = String(email || "").trim().toLowerCase();
+    if (!em) return false;
+    const settings = hooks?.getSettings?.() || {};
+    if (settings.syncPassMode === "custom") return false;
+    const emailPass = await deriveEmailSyncPassphrase(em);
+    const emailVerifier = await registerPassphraseVerifier(emailPass);
+    if (settings.syncPassVerifier && settings.syncPassVerifier !== emailVerifier) {
+      return false;
+    }
+    unlockSession(emailPass, { persist: true, email: em });
+    return true;
   }
 
   function isUnlocked() {
@@ -402,10 +450,11 @@
       email,
       googleSub: session.id || "",
       displayName: settings.displayName || email.split("@")[0],
-      syncPassVerifier: emailVerifier
+      syncPassVerifier: emailVerifier,
+      syncPassMode: "account"
     });
 
-    unlockSession(emailPass);
+    unlockSession(emailPass, { persist: true, email });
     try {
       await pullAndMergeForAccount(emailPass, legacyPasses, { preferRemoteIfLocalEmpty: true });
       return { ok: true, reason: "synced" };
@@ -572,7 +621,7 @@
   function init(userHooks) {
     hooks = userHooks;
     notifyStatus();
-    return Promise.resolve(isConfigured());
+    return restoreSessionUnlock().then(() => isConfigured());
   }
 
   /** For future Google Sign-In: attach profile without changing encryption. */
@@ -602,6 +651,8 @@
     pullAndMergeForAccount,
     bootstrapFromAccountSession,
     bootstrapFromOAuthSession: bootstrapFromAccountSession,
+    restoreSessionUnlock,
+    ensureAutoUnlockForEmail,
     applyGoogleProfile,
     getStatus: () => ({
       configured: isConfigured(),

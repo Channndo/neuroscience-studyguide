@@ -43,6 +43,12 @@
       --radius: 12px;
       --radius-lg: 16px;
       --font: "Segoe UI", system-ui, -apple-system, sans-serif;
+      --focus-ring: 0 0 0 3px rgba(165, 28, 48, 0.45);
+      --scrollbar-size: 7px;
+      --scrollbar-thumb-idle: transparent;
+      --scrollbar-thumb-scroll: rgba(165, 28, 48, 0.38);
+      --scrollbar-thumb-hover: rgba(165, 28, 48, 0.52);
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
     }
 
     html[data-theme="dark"] {
@@ -64,6 +70,8 @@
       --incorrect-border: rgba(252, 165, 165, 0.35);
       --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
       --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.3);
+      --scrollbar-thumb-scroll: rgba(252, 165, 165, 0.32);
+      --scrollbar-thumb-hover: rgba(252, 165, 165, 0.48);
     }
 
     html[data-theme="dark"] body {
@@ -86,13 +94,81 @@
 
     *, *::before, *::after { box-sizing: border-box; }
 
+    html {
+      scrollbar-gutter: stable;
+      scroll-behavior: smooth;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: var(--scrollbar-thumb-idle) transparent;
+    }
+
+    html.is-scrolling {
+      scrollbar-color: var(--scrollbar-thumb-scroll) transparent;
+    }
+
+    .scrollport.is-scrolling {
+      scrollbar-color: var(--scrollbar-thumb-scroll) transparent;
+    }
+
+    *::-webkit-scrollbar {
+      width: var(--scrollbar-size);
+      height: var(--scrollbar-size);
+    }
+
+    *::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    *::-webkit-scrollbar-thumb {
+      background-color: var(--scrollbar-thumb-idle);
+      border-radius: 999px;
+      border: 2px solid transparent;
+      background-clip: padding-box;
+      transition: background-color 0.4s var(--ease-out);
+    }
+
+    *::-webkit-scrollbar-corner {
+      background: transparent;
+    }
+
+    html.is-scrolling::-webkit-scrollbar-thumb,
+    .scrollport.is-scrolling::-webkit-scrollbar-thumb {
+      background-color: var(--scrollbar-thumb-scroll);
+    }
+
+    html.is-scrolling::-webkit-scrollbar-thumb:hover,
+    .scrollport.is-scrolling::-webkit-scrollbar-thumb:hover {
+      background-color: var(--scrollbar-thumb-hover);
+    }
+
     body {
       margin: 0;
       font-family: var(--font);
-      background: var(--gray-100);
+      background:
+        radial-gradient(ellipse 120% 80% at 50% -30%, rgba(165, 28, 48, 0.07), transparent 55%),
+        var(--gray-100);
       color: var(--gray-800);
       line-height: 1.6;
       min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    html[data-theme="dark"] body {
+      background:
+        radial-gradient(ellipse 120% 80% at 50% -30%, rgba(165, 28, 48, 0.12), transparent 55%),
+        #18181b;
+    }
+
+    ::selection {
+      background: rgba(165, 28, 48, 0.22);
+      color: inherit;
     }
 
     .skip-link {
@@ -106,14 +182,34 @@
       text-decoration: none;
       border-radius: 0 0 var(--radius) var(--radius);
     }
-    .skip-link:focus { left: 1rem; }
+    .skip-link:focus-visible {
+      left: 1rem;
+      outline: none;
+      box-shadow: var(--focus-ring);
+    }
+
+    .skip-link--secondary {
+      top: 2.75rem;
+      border-radius: var(--radius);
+    }
+
+    :where(a, button, input, select, textarea, [tabindex="0"]):focus-visible {
+      outline: 2px solid var(--crimson);
+      outline-offset: 2px;
+    }
+
+    :where(.nav-tab, .answer-btn, .quiz-card):focus-visible {
+      outline: 2px solid var(--crimson);
+      outline-offset: 3px;
+    }
 
     header {
-      background: var(--gray-800);
+      background: linear-gradient(180deg, #2e2e33 0%, var(--gray-800) 100%);
       color: var(--gray-50);
       padding: 2rem 1.5rem;
       text-align: center;
       border-bottom: 3px solid var(--crimson);
+      box-shadow: 0 8px 28px rgba(24, 24, 27, 0.18);
     }
 
     header h1 {
@@ -133,7 +229,10 @@
 
     .main-nav {
       display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 4px;
+      max-width: 100%;
       background: rgba(255, 255, 255, 0.08);
       border-radius: 999px;
       padding: 4px;
@@ -143,7 +242,8 @@
       font-family: inherit;
       font-size: 0.88rem;
       font-weight: 600;
-      padding: 0.5rem 1.25rem;
+      padding: 0.55rem 1.15rem;
+      min-height: 2.75rem;
       border: none;
       border-radius: 999px;
       cursor: pointer;
@@ -244,20 +344,135 @@
 
     /* ── Dashboard ── */
     .dashboard-intro {
-      text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 1.25rem;
     }
 
     .dashboard-intro h2 {
-      margin: 0 0 0.5rem;
+      margin: 0 0 0.35rem;
       font-size: 1.35rem;
       color: var(--gray-900);
     }
 
-    .dashboard-intro p {
-      margin: 0;
-      color: var(--gray-500);
+    .dashboard-intro-lede {
+      margin: 0 0 0.65rem;
+      color: var(--gray-600);
       font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .dashboard-intro-list {
+      margin: 0;
+      padding-left: 1.15rem;
+      color: var(--gray-500);
+      font-size: 0.88rem;
+      line-height: 1.55;
+    }
+
+    .dashboard-intro-list li + li {
+      margin-top: 0.25rem;
+    }
+
+    .quick-start-panel {
+      margin-bottom: 1.25rem;
+      padding: 1.15rem 1.25rem;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(165, 28, 48, 0.28);
+      background: linear-gradient(135deg, var(--crimson-light) 0%, var(--surface) 55%);
+      box-shadow: 0 12px 32px rgba(165, 28, 48, 0.08), var(--shadow-sm);
+    }
+
+    html[data-theme="dark"] .quick-start-panel {
+      background: linear-gradient(135deg, rgba(165, 28, 48, 0.22) 0%, var(--surface) 60%);
+      border-color: rgba(165, 28, 48, 0.45);
+    }
+
+    .quick-start-panel[hidden] {
+      display: none !important;
+    }
+
+    .quick-start-panel h3 {
+      margin: 0 0 0.35rem;
+      font-size: 1.05rem;
+      color: var(--gray-900);
+    }
+
+    html[data-theme="dark"] .quick-start-panel h3 {
+      color: var(--gray-700);
+    }
+
+    .quick-start-panel p {
+      margin: 0 0 0.85rem;
+      font-size: 0.9rem;
+      color: var(--gray-600);
+      line-height: 1.45;
+    }
+
+    .quick-start-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      align-items: center;
+    }
+
+    .quick-start-actions .btn-primary {
+      min-height: 2.75rem;
+      padding-inline: 1.35rem;
+    }
+
+    .quick-start-link {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--crimson-dark);
+      text-decoration: none;
+      padding: 0.45rem 0.65rem;
+      border-radius: 8px;
+    }
+
+    .quick-start-link:hover {
+      text-decoration: underline;
+      background: var(--crimson-muted);
+    }
+
+    html[data-theme="dark"] .quick-start-link {
+      color: #fca5a5;
+    }
+
+    .study-guide-details {
+      margin-bottom: 1.25rem;
+      max-width: 36rem;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      background: var(--surface);
+      padding: 0.65rem 0.85rem;
+    }
+
+    .study-guide-details summary {
+      cursor: pointer;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--gray-700);
+      list-style: none;
+    }
+
+    .study-guide-details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .study-guide-details summary::before {
+      content: "▸ ";
+      color: var(--crimson);
+    }
+
+    .study-guide-details[open] summary::before {
+      content: "▾ ";
+    }
+
+    .study-guide-details .study-guide-card {
+      margin: 0.75rem 0 0;
+      padding: 0;
+      border: none;
+      max-width: none;
+      box-shadow: none;
     }
 
     .study-guide-card {
@@ -351,19 +566,32 @@
       padding: 1.75rem;
       box-shadow: var(--shadow-sm);
       cursor: pointer;
-      transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+      transition:
+        border-color 0.25s var(--ease-out),
+        box-shadow 0.25s var(--ease-out),
+        transform 0.25s var(--ease-out);
       text-align: left;
     }
 
     .quiz-card:hover {
-      border-color: var(--crimson);
-      box-shadow: var(--shadow);
+      border-color: rgba(165, 28, 48, 0.55);
+      box-shadow: 0 10px 32px rgba(165, 28, 48, 0.1), var(--shadow-sm);
       transform: translateY(-2px);
     }
 
-    .quiz-card:focus-visible {
-      outline: 2px solid var(--crimson);
-      outline-offset: 2px;
+    .quiz-card:not(.locked) .card-start-hint {
+      display: inline-block;
+      margin-top: 0.65rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--crimson);
+      letter-spacing: 0.02em;
+    }
+
+    .quiz-card.final:not(.locked) .card-start-hint,
+    .quiz-card.elite:not(.locked) .card-start-hint,
+    .quiz-card.pinnacle:not(.locked) .card-start-hint {
+      color: #fecdd3;
     }
 
     .quiz-card.final {
@@ -494,11 +722,10 @@
 
     .section-header h3 {
       margin: 0;
-      font-size: 0.95rem;
+      font-size: 1rem;
       font-weight: 700;
-      color: var(--gray-700);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
+      color: var(--gray-800);
+      letter-spacing: 0.02em;
     }
 
     .section-hint {
@@ -569,10 +796,15 @@
 
     .activity-card {
       background: var(--surface);
-      border: 2px solid var(--crimson-muted);
+      border: 1px solid var(--gray-200);
       border-radius: var(--radius-lg);
       padding: 1.25rem 1.35rem;
       margin-bottom: 1.5rem;
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset, var(--shadow-sm);
+    }
+
+    html[data-theme="dark"] .activity-card {
+      border-color: var(--gray-200);
       box-shadow: var(--shadow-sm);
     }
 
@@ -713,9 +945,9 @@
 
     .progress-fill {
       height: 100%;
-      background: var(--crimson);
+      background: linear-gradient(90deg, var(--crimson-dark), var(--crimson));
       border-radius: 99px;
-      transition: width 0.35s ease;
+      transition: width 0.45s var(--ease-out);
       width: 0%;
     }
 
@@ -731,7 +963,7 @@
       background: var(--surface);
       border: 1px solid var(--gray-200);
       border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-sm);
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65) inset, var(--shadow-sm);
       padding: 2rem;
       margin-bottom: 1.25rem;
     }
@@ -990,14 +1222,61 @@
       margin: 0 0 1.25rem;
       padding: 0.85rem 1rem;
       border-radius: var(--radius-lg);
-      border: 1px solid rgba(26, 82, 118, 0.35);
-      background: rgba(26, 82, 118, 0.08);
+      border: 1px solid rgba(165, 28, 48, 0.18);
+      background: rgba(255, 255, 255, 0.72);
       font-size: 0.92rem;
       line-height: 1.45;
+      box-shadow: var(--shadow-sm);
+    }
+
+    html[data-theme="dark"] .sync-backup-banner {
+      background: rgba(39, 39, 42, 0.85);
+      border-color: rgba(165, 28, 48, 0.28);
     }
 
     .sync-backup-banner[hidden] {
       display: none !important;
+    }
+
+    .app-biometric-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      margin-top: 0.65rem;
+      padding: 0.55rem 0.85rem;
+      border-radius: 0.65rem;
+      border: 1px solid rgba(165, 28, 48, 0.45);
+      background: rgba(165, 28, 48, 0.1);
+      color: var(--gray-800);
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    html[data-theme="dark"] .app-biometric-btn {
+      color: var(--gray-100);
+      background: rgba(165, 28, 48, 0.22);
+    }
+
+    .app-biometric-btn:hover {
+      background: rgba(165, 28, 28, 0.18);
+    }
+
+    .app-biometric-btn:disabled {
+      opacity: 0.55;
+      cursor: wait;
+    }
+
+    .app-biometric-btn svg {
+      width: 1.1rem;
+      height: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .auth-msg--error {
+      color: var(--incorrect);
     }
 
     .sync-backup-banner .sync-actions {
@@ -1305,18 +1584,29 @@
     button:disabled { opacity: 0.4; cursor: not-allowed; }
 
     .btn-primary {
-      background: var(--crimson);
+      background: linear-gradient(180deg, #b52138 0%, var(--crimson) 45%, var(--crimson-dark) 100%);
       color: #fff;
+      min-height: 2.75rem;
+      box-shadow: 0 1px 2px rgba(24, 24, 27, 0.12);
     }
-    .btn-primary:hover:not(:disabled) { background: var(--crimson-dark); }
+    .btn-primary:hover:not(:disabled) {
+      background: linear-gradient(180deg, var(--crimson) 0%, var(--crimson-dark) 100%);
+      box-shadow: 0 4px 14px rgba(165, 28, 48, 0.28);
+    }
 
     .btn-secondary {
       background: var(--surface);
       color: var(--gray-700);
       border: 2px solid var(--gray-300);
+      min-height: 2.75rem;
     }
     .btn-secondary:hover:not(:disabled) {
       border-color: var(--gray-500);
+      background: var(--gray-50);
+    }
+
+    html[data-theme="dark"] .btn-secondary:hover:not(:disabled) {
+      background: var(--gray-800);
     }
 
     /* ── Results ── */
@@ -1467,6 +1757,7 @@
       padding: 1.5rem;
       color: var(--gray-400);
       font-size: 0.78rem;
+      opacity: 0.92;
     }
 
     footer a {
@@ -1985,6 +2276,20 @@
       margin: 0 0 1.75rem;
       color: var(--gray-500);
       font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .settings-block h3 {
+      margin: 0 0 0.45rem;
+      font-size: 1rem;
+      color: var(--gray-800);
+    }
+
+    .settings-block > p {
+      margin: 0 0 0.75rem;
+      font-size: 0.9rem;
+      color: var(--gray-600);
+      line-height: 1.5;
     }
 
     .settings-block {
@@ -2107,8 +2412,9 @@
       align-items: center;
       justify-content: center;
       padding: 1.25rem;
-      background: rgba(24, 24, 27, 0.55);
-      backdrop-filter: blur(4px);
+      background: rgba(24, 24, 27, 0.48);
+      backdrop-filter: blur(10px) saturate(1.15);
+      -webkit-backdrop-filter: blur(10px) saturate(1.15);
     }
 
     .daily-pop-modal[hidden] {
@@ -2118,7 +2424,7 @@
     .daily-pop-dialog {
       background: var(--surface);
       border-radius: var(--radius-lg);
-      box-shadow: var(--shadow);
+      box-shadow: 0 24px 48px rgba(24, 24, 27, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.06) inset;
       max-width: 420px;
       width: 100%;
       padding: 1.75rem 1.5rem;
@@ -2362,11 +2668,13 @@
 
     @media (prefers-reduced-motion: reduce) {
       .progress-fill, .quiz-card, .flashcard, .module-bar-fill, .ring-value { transition: none; }
+      *::-webkit-scrollbar-thumb { transition: none; }
     }
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#app-main">Skip to content</a>
+  <a class="skip-link" href="#app-main">Skip to main content</a>
+  <a class="skip-link skip-link--secondary" href="#dashboard-quizzes">Skip to quizzes</a>
 
   <header>
     <h1>HarvardX Introduction to Neuroscience</h1>
@@ -2379,30 +2687,14 @@
     </nav>
     <div class="header-streak-wrap">
       <div id="header-streak-badge" class="streak-badge" role="status" aria-live="polite"></div>
-      <div id="header-sync-pill" class="header-sync-pill is-off" hidden aria-live="polite"></div>
     </div>
   </header>
 
-  <main id="app-main">
+  <main id="app-main" tabindex="-1">
     <!-- Dashboard -->
-    <section id="view-dashboard" class="view active">
-      <div class="dashboard-intro">
-        <h2>Study Dashboard</h2>
-        <p>HarvardX MCB80x curriculum practice. Chapter quizzes give instant feedback; finals reveal answers at the end. Missed questions auto-generate flashcards. Ion labels use real superscripts (e.g. Na⁺); variables like E<sub>K</sub> and V<sub>m</sub> appear as subscripts, not underscores.</p>
-      </div>
-      <aside id="sync-backup-banner" class="sync-backup-banner" hidden aria-live="polite"></aside>
-      <aside class="study-guide-card" aria-labelledby="study-guide-heading">
-        <div class="study-guide-card-text">
-          <h3 id="study-guide-heading">Printable exam prep</h3>
-          <p>PDF or Word downloads — personal study aids, not edX publications.</p>
-        </div>
-        <div class="study-guide-card-actions">
-          <a class="btn-guide-pdf" href="mcb80x-exam-study-guide.pdf" download="MCB80x-exam-study-guide.pdf">Guide PDF</a>
-          <a class="btn-guide-print" href="mcb80x-exam-study-guide.docx" download="MCB80x-exam-study-guide.docx">Guide docx</a>
-          <a class="btn-guide-print" href="mcb80x-formula-sheet.pdf" download="MCB80x-formula-sheet.pdf">Formulas PDF</a>
-          <a class="btn-guide-print" href="mcb80x-formula-sheet.docx" download="MCB80x-formula-sheet.docx">Formulas docx</a>
-        </div>
-      </aside>
+    <section id="view-dashboard" class="view active scrollport" aria-labelledby="dashboard-heading">
+      <div id="dashboard-quick-start" class="quick-start-panel" hidden></div>
+      <aside id="sync-backup-banner" class="sync-backup-banner" hidden aria-live="polite" aria-hidden="true"></aside>
       <div id="user-activity-card" class="activity-card"></div>
       <div id="study-plan-dashboard" class="study-plan-panel dashboard-plan" hidden></div>
       <div id="quiz-resume-banner" class="quiz-resume-banner" hidden>
@@ -2412,35 +2704,60 @@
           <button type="button" class="btn-resume-discard" id="quiz-resume-discard">Discard</button>
         </div>
       </div>
-      <div id="progress-banner" class="progress-banner" hidden></div>
-      <div id="unlock-toast" class="unlock-toast" hidden></div>
-      <div id="dashboard-sections"></div>
+      <div id="progress-banner" class="progress-banner" hidden role="status"></div>
+      <div id="unlock-toast" class="unlock-toast" hidden role="status"></div>
+      <div class="dashboard-intro">
+        <h2 id="dashboard-heading">Study Dashboard</h2>
+        <p class="dashboard-intro-lede">HarvardX MCB80x practice — same progression and scoring as before; pick a quiz below or use <strong>Start now</strong> when it appears.</p>
+        <ul class="dashboard-intro-list">
+          <li>Chapter quizzes: instant feedback after each answer</li>
+          <li>Finals &amp; exam reviews: answers at the end</li>
+          <li>Missed items become flashcards automatically</li>
+        </ul>
+      </div>
+      <details class="study-guide-details">
+        <summary>Printable study guide &amp; formula sheet (PDF / Word)</summary>
+        <aside class="study-guide-card" aria-labelledby="study-guide-heading">
+          <div class="study-guide-card-text">
+            <h3 id="study-guide-heading">Personal downloads</h3>
+            <p>Not edX publications — for your own exam prep.</p>
+          </div>
+          <div class="study-guide-card-actions">
+            <a class="btn-guide-pdf" href="mcb80x-exam-study-guide.pdf" download="MCB80x-exam-study-guide.pdf">Guide PDF</a>
+            <a class="btn-guide-print" href="mcb80x-exam-study-guide.docx" download="MCB80x-exam-study-guide.docx">Guide docx</a>
+            <a class="btn-guide-print" href="mcb80x-formula-sheet.pdf" download="MCB80x-formula-sheet.pdf">Formulas PDF</a>
+            <a class="btn-guide-print" href="mcb80x-formula-sheet.docx" download="MCB80x-formula-sheet.docx">Formulas docx</a>
+          </div>
+        </aside>
+      </details>
+      <div id="dashboard-quizzes" tabindex="-1"></div>
+      <div id="dashboard-sections" aria-label="Quiz library"></div>
     </section>
 
     <!-- Profile -->
-    <section id="view-profile" class="view">
+    <section id="view-profile" class="view scrollport" aria-labelledby="profile-heading" aria-hidden="true">
       <div id="profile-content"></div>
     </section>
 
     <!-- Settings -->
-    <section id="view-settings" class="view">
+    <section id="view-settings" class="view scrollport" aria-labelledby="settings-heading" aria-hidden="true">
       <div id="settings-content"></div>
     </section>
 
     <!-- Quiz -->
-    <section id="view-quiz" class="view">
+    <section id="view-quiz" class="view" aria-label="Quiz" aria-hidden="true">
       <div class="quiz-header">
-        <button type="button" class="btn-back" id="btn-back">&larr; Save &amp; exit</button>
+        <button type="button" class="btn-back" id="btn-back" aria-label="Save progress and return to dashboard">&larr; Save &amp; exit</button>
         <p class="quiz-title" id="quiz-title"></p>
         <p class="quiz-timer" id="quiz-timer" hidden aria-live="polite"></p>
       </div>
-      <div class="progress-card" role="status" aria-live="polite">
-        <div class="progress-track" aria-hidden="true">
+      <div class="progress-card">
+        <div class="progress-track" id="quiz-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="1" aria-valuenow="1" aria-label="Quiz progress">
           <div class="progress-fill" id="progress-fill"></div>
         </div>
-        <span class="progress-label" id="progress-label">1 / 12</span>
+        <span class="progress-label" id="progress-label" aria-hidden="true">1 / 12</span>
       </div>
-      <div class="question-card" id="question-card"></div>
+      <div class="question-card scrollport" id="question-card"></div>
       <div class="nav-row">
         <button type="button" class="btn-secondary" id="btn-prev" disabled>Previous</button>
         <button type="button" class="btn-primary" id="btn-next">Next</button>
@@ -2448,20 +2765,20 @@
     </section>
 
     <!-- Flashcards -->
-    <section id="view-flashcard" class="view">
+    <section id="view-flashcard" class="view" aria-label="Flashcards" aria-hidden="true">
       <div class="quiz-header">
-        <button type="button" class="btn-back" id="fc-back">&larr; Save &amp; exit</button>
+        <button type="button" class="btn-back" id="fc-back" aria-label="Save and return to dashboard">&larr; Save &amp; exit</button>
         <p class="quiz-title" id="fc-title"></p>
       </div>
       <p class="flashcard-hint">Click the card to flip &middot; Generated from questions you missed</p>
       <div class="flashcard-area">
         <div class="flashcard" id="flashcard" tabindex="0" role="button" aria-label="Flashcard. Press Enter or Space to flip.">
-          <div class="flashcard-face flashcard-front">
+          <div class="flashcard-face flashcard-front scrollport">
             <span class="topic-badge" id="fc-topic"></span>
             <p class="flashcard-label">Question</p>
             <p class="flashcard-question" id="fc-question"></p>
           </div>
-          <div class="flashcard-face flashcard-back">
+          <div class="flashcard-face flashcard-back scrollport">
             <span class="topic-badge" id="fc-topic-back"></span>
             <p class="flashcard-label">Answer</p>
             <p class="flashcard-answer" id="fc-answer"></p>
@@ -2484,7 +2801,7 @@
     </section>
 
     <!-- Results -->
-    <section id="view-results" class="view">
+    <section id="view-results" class="view scrollport" aria-label="Quiz results" aria-hidden="true">
       <div class="results-header">
         <div class="score-display" id="score-pct">0%</div>
         <div class="score-fraction" id="score-fraction">0 / 0</div>
@@ -2499,6 +2816,18 @@
       <div id="review-list"></div>
     </section>
   </main>
+
+  <div id="biometric-offer-modal" class="daily-pop-modal" hidden role="dialog" aria-modal="true" aria-labelledby="biometric-offer-title">
+    <div class="daily-pop-dialog">
+      <h2 id="biometric-offer-title">Quick sign-in on this device</h2>
+      <p id="biometric-offer-lead">Use biometrics next time so you can open the study guide without typing your password.</p>
+      <div class="daily-pop-actions">
+        <button type="button" class="btn-pop-start" id="biometric-offer-enable">Enable</button>
+        <button type="button" class="btn-pop-later" id="biometric-offer-dismiss">Not now</button>
+      </div>
+      <p id="biometric-offer-error" class="auth-msg auth-msg--error" hidden role="alert" style="margin:0.75rem 0 0;font-size:0.85rem;"></p>
+    </div>
+  </div>
 
   <div id="daily-pop-modal" class="daily-pop-modal" hidden role="dialog" aria-modal="true" aria-labelledby="daily-pop-title">
     <div class="daily-pop-dialog">
@@ -2529,6 +2858,8 @@
   <script src="mcb80x-cloud-config.js"></script>
   <script src="sheets-sync.js"></script>
   <script src="oauth-client.js"></script>
+  <script src="biometric-auth.js"></script>
+  <script src="auth-biometric-ui.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" crossorigin="anonymous"></script>
   <script>
     function shuffle(array) {
@@ -4200,11 +4531,12 @@
           avatarDataUrl: typeof raw.avatarDataUrl === "string" ? raw.avatarDataUrl : null,
           syncEmail: typeof raw.syncEmail === "string" ? raw.syncEmail.trim().toLowerCase() : "",
           syncPassVerifier: typeof raw.syncPassVerifier === "string" ? raw.syncPassVerifier : "",
+          syncPassMode: raw.syncPassMode === "custom" ? "custom" : raw.syncPassMode === "account" ? "account" : "",
           googleSub: typeof raw.googleSub === "string" ? raw.googleSub : "",
           displayName: typeof raw.displayName === "string" ? raw.displayName : ""
         };
       } catch {
-        return { theme: "light", avatarDataUrl: null, syncEmail: "", syncPassVerifier: "", googleSub: "", displayName: "" };
+        return { theme: "light", avatarDataUrl: null, syncEmail: "", syncPassVerifier: "", syncPassMode: "", googleSub: "", displayName: "" };
       }
     }
 
@@ -4269,76 +4601,108 @@
 
     function friendlySyncError(message) {
       const m = String(message || "");
-      if (/google sheet|sheet backup|web app url/i.test(m)) return "Could not reach cloud save. Try again later.";
-      if (/not configured/i.test(m)) return "Cloud save is temporarily unavailable.";
-      return m;
+      if (/google sheet|sheet backup|web app url|cloud|sync/i.test(m)) {
+        return "Could not save progress online. Try again later.";
+      }
+      if (/not configured/i.test(m)) return "Online save is temporarily unavailable.";
+      return m.replace(/\bcloud\s*(save|sync(ing)?)\b/gi, "online save").replace(/\bsync(ing)?\b/gi, "save");
     }
 
     function updateSyncStatusHeader() {
-      const pill = document.getElementById("header-sync-pill");
-      if (!pill || !window.MCB80XSheetSync) return;
-      const st = MCB80XSheetSync.getStatus();
-      const email = getSettings().syncEmail;
-      if (!st.configured) {
-        pill.hidden = true;
-        return;
-      }
-      pill.hidden = false;
-      pill.classList.remove("is-ok", "is-warn", "is-off");
-      if (!email) {
-        pill.textContent = "Sign in to sync";
-        pill.classList.add("is-warn");
-      } else if (!st.unlocked) {
-        const oauth = window.MCB80XOAuth?.getSession?.();
-        pill.textContent = oauth?.email
-          ? "Cloud: syncing…"
-          : "Cloud: unlock passphrase";
-        pill.classList.add("is-warn");
-      } else if (st.lastSyncError) {
-        pill.textContent = "Cloud sync issue";
-        pill.classList.add("is-warn");
-      } else if (st.lastSyncAt) {
-        pill.textContent = "Cloud saved";
-        pill.classList.add("is-ok");
-      } else {
-        pill.textContent = "Cloud ready";
-        pill.classList.add("is-ok");
-      }
+      /* Sync runs silently — no header status pill. */
     }
 
     function renderSyncBanner() {
       const el = document.getElementById("sync-backup-banner");
-      if (!el || !window.MCB80XSheetSync) return;
-      const st = MCB80XSheetSync.getStatus();
-      const settings = getSettings();
-      if (!st.configured) {
-        el.hidden = true;
-        return;
-      }
-      el.hidden = false;
-      let body = "<strong>Cloud save</strong> — Progress is encrypted in your browser before it syncs. Your optional sync passphrase is never stored in the cloud.";
-      if (!settings.syncEmail) {
-        body += "<p style=\"margin:0.5rem 0 0\"><strong>Sign in</strong> to sync across devices, or set your account under <strong>Settings</strong>.</p>";
-      } else if (!st.unlocked) {
-        const oauth = window.MCB80XOAuth?.getSession?.();
-        if (oauth?.email) {
-          body += `<p style="margin:0.5rem 0 0">Signed in as <strong>${escapeHtml(settings.syncEmail)}</strong>. Sync should run automatically — if anything looks missing, open Settings and choose <strong>Restore from cloud</strong>.</p>`;
-        } else {
-          body += `<p style="margin:0.5rem 0 0">Signed in as <strong>${escapeHtml(settings.syncEmail)}</strong>. Open Settings to unlock cloud save or restore progress.</p>`;
+      if (!el) return;
+      el.hidden = true;
+      el.setAttribute("aria-hidden", "true");
+      el.innerHTML = "";
+    }
+
+    const BIOMETRIC_ICON_SVG =
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V8a4 4 0 1 1 8 0v2"/></svg>';
+
+    async function mountDashboardBiometricSignIn(container) {
+      if (!container || !window.MCB80XBiometricUI || !window.MCB80XBiometric) return;
+      if (!(await MCB80XBiometric.isPlatformAvailable())) return;
+      if (!(await MCB80XBiometric.hasCredentials())) return;
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "app-biometric-btn";
+      btn.innerHTML = `${BIOMETRIC_ICON_SVG}<span>Sign in with ${MCB80XBiometric.label()}</span>`;
+      btn.addEventListener("click", async () => {
+        btn.disabled = true;
+        try {
+          const session = await MCB80XBiometric.signInWithBiometric();
+          await MCB80XBiometricUI.completeSignIn(session, { inApp: true });
+        } catch (ex) {
+          btn.disabled = false;
+          alert(ex.message || String(ex));
         }
-        body += `<div class="sync-actions"><button type="button" class="btn-secondary" id="sync-banner-settings">Open Settings</button></div>`;
-      } else {
-        const when = st.lastSyncAt
-          ? new Date(st.lastSyncAt).toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" })
-          : "not yet";
-        body += `<p style="margin:0.5rem 0 0">Account <strong>${escapeHtml(settings.syncEmail)}</strong> · Last saved: ${when}${st.lastSyncError ? ` · <span style="color:var(--incorrect)">${escapeHtml(friendlySyncError(st.lastSyncError))}</span>` : ""}</p>`;
-      }
-      el.innerHTML = body;
-      document.getElementById("sync-banner-settings")?.addEventListener("click", () => {
-        renderSettings();
-        showView("settings");
-        setMainNav("settings");
       });
+      container.appendChild(btn);
+    }
+
+    function hideBiometricOfferModal() {
+      const modal = document.getElementById("biometric-offer-modal");
+      if (modal) modal.hidden = true;
+    }
+
+    async function maybeOfferBiometricSetup() {
+      const bio = window.MCB80XBiometric;
+      const ui = window.MCB80XBiometricUI;
+      if (!bio || !ui) return;
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("signed_in") !== "1") return;
+      const session = window.MCB80XOAuth?.getAccountSession?.() || window.MCB80XOAuth?.getSession?.();
+      if (!(await ui.shouldOfferSetup(session))) return;
+
+      const modal = document.getElementById("biometric-offer-modal");
+      const lead = document.getElementById("biometric-offer-lead");
+      const enableBtn = document.getElementById("biometric-offer-enable");
+      const dismissBtn = document.getElementById("biometric-offer-dismiss");
+      const errEl = document.getElementById("biometric-offer-error");
+      if (!modal || !enableBtn || !dismissBtn) return;
+
+      if (lead) {
+        lead.textContent = `Enable ${bio.label()} on this device for one-tap sign-in next time you open the study guide.`;
+      }
+      enableBtn.textContent = `Enable ${bio.label()}`;
+      if (errEl) errEl.hidden = true;
+      modal.hidden = false;
+
+      const cleanupUrl = () => {
+        params.delete("signed_in");
+        const qs = params.toString();
+        const next = `${window.location.pathname}${qs ? `?${qs}` : ""}${window.location.hash}`;
+        history.replaceState(null, "", next);
+      };
+
+      dismissBtn.onclick = () => {
+        ui.markOfferShown(session);
+        hideBiometricOfferModal();
+        cleanupUrl();
+      };
+      enableBtn.onclick = async () => {
+        enableBtn.disabled = true;
+        if (errEl) errEl.hidden = true;
+        try {
+          await bio.registerForSession(session);
+          ui.markOfferShown(session);
+          hideBiometricOfferModal();
+          cleanupUrl();
+          if (document.getElementById("view-settings")?.classList.contains("active")) {
+            MCB80XBiometricUI.refreshSettingsBiometricPanel();
+          }
+        } catch (ex) {
+          if (errEl) {
+            errEl.textContent = ex.message || String(ex);
+            errEl.hidden = false;
+          }
+          enableBtn.disabled = false;
+        }
+      };
     }
 
     function applyTheme(theme) {
@@ -4402,36 +4766,66 @@
       const settings = getSettings();
       const syncSt = window.MCB80XSheetSync?.getStatus?.() || {};
       const syncConfigured = syncSt.configured;
-      el.innerHTML = `
-        <div class="settings-panel">
-          <h2>Settings</h2>
-          <p class="settings-lead">Progress is stored on this device. Sign in to sync quizzes, scores, and flashcards across your phone, tablet, and computer.</p>
-          <div class="settings-block">
-            <h3>Cloud sync</h3>
-            <p>Your study data is <strong>encrypted in this browser</strong> before it is saved online. We never store your optional sync passphrase in the cloud — only a one-way check on this device to catch typos.</p>
-            ${syncConfigured
-              ? `<p class="settings-sync-status">Cloud save ${syncSt.unlocked ? "active on this device" : "locked — enter your passphrase to sync"}${syncSt.lastSyncError ? ` · ${escapeHtml(friendlySyncError(syncSt.lastSyncError))}` : ""}</p>`
-              : `<p class="settings-sync-status">Sign in to link an account; cloud save runs automatically when you are signed in.</p>`}
-            <label class="settings-sync-field">Account email
-              <input type="email" id="settings-sync-email" autocomplete="email" placeholder="you@example.com" value="${escapeHtml(settings.syncEmail || "")}">
-            </label>
-            <label class="settings-sync-field">Sync passphrase ${settings.syncPassVerifier ? "(set — enter to unlock)" : "(create — min 8 characters)"}
-              <input type="password" id="settings-sync-pass" autocomplete="new-password" placeholder="Not stored in plain text">
-            </label>
-            <label class="settings-sync-field">Confirm passphrase
-              <input type="password" id="settings-sync-pass-confirm" autocomplete="new-password" placeholder="Re-enter passphrase">
-            </label>
+      const sessionEmail =
+        (window.MCB80XOAuth?.getAccountSession?.() || window.MCB80XOAuth?.getSession?.())?.email || "";
+      const accountEmail = settings.syncEmail || sessionEmail;
+      const usesCustomSync = settings.syncPassMode === "custom";
+      const accountSyncBlock = syncConfigured && sessionEmail && !usesCustomSync
+        ? `<div class="settings-block">
+            <h3>Account</h3>
+            ${syncSt.lastSyncError
+              ? `<p class="settings-sync-status" style="color:var(--incorrect)">${escapeHtml(friendlySyncError(syncSt.lastSyncError))}</p>`
+              : ""}
+            <p>Signed in as <strong>${escapeHtml(accountEmail)}</strong>. Progress saves automatically.</p>
             <div class="settings-avatar-actions" style="flex-wrap:wrap;">
-              <button type="button" class="btn-secondary" id="settings-sync-save"${syncConfigured ? "" : " disabled"}>Save to cloud</button>
-              <button type="button" class="btn-secondary" id="settings-sync-unlock"${syncConfigured ? "" : " disabled"}>Restore from cloud</button>
-              <button type="button" class="btn-secondary" id="settings-sync-lock"${syncSt.unlocked ? "" : " disabled"}>Lock session</button>
-              <button type="button" class="btn-secondary" id="settings-export-backup">Export encrypted backup file</button>
+              <button type="button" class="btn-secondary" id="settings-sync-unlock"${syncConfigured ? "" : " disabled"}>Restore progress</button>
+              <button type="button" class="btn-secondary" id="settings-export-backup">Download backup file</button>
               <label class="btn-secondary" style="cursor:pointer;margin:0;">
-                Import encrypted backup
+                Import backup file
                 <input type="file" id="settings-import-backup" accept="application/json,.json" hidden>
               </label>
             </div>
             <p id="settings-sync-msg" class="settings-sync-status" hidden></p>
+          </div>`
+        : `<div class="settings-block">
+            <h3>Account</h3>
+            ${sessionEmail
+              ? `<p>Signed in as <strong>${escapeHtml(sessionEmail)}</strong>.</p>`
+              : `<p>Sign in to keep quizzes, scores, and flashcards on your account across devices.</p>
+                 <a class="btn-secondary" href="sign-in.html" style="display:inline-block;text-decoration:none;margin-top:0.35rem;">Sign in</a>`}
+            ${usesCustomSync && syncConfigured ? `<details class="settings-sync-advanced" style="margin-top:0.75rem;">
+              <summary style="cursor:pointer;font-weight:600;">Private backup passphrase</summary>
+              <p style="margin:0.5rem 0 0;font-size:0.88rem;">You set a private passphrase earlier. Enter it to save or restore.</p>
+              <label class="settings-sync-field">Account email
+                <input type="email" id="settings-sync-email" autocomplete="email" value="${escapeHtml(settings.syncEmail || "")}">
+              </label>
+              <label class="settings-sync-field">Passphrase
+                <input type="password" id="settings-sync-pass" autocomplete="current-password">
+              </label>
+              <label class="settings-sync-field">Confirm passphrase
+                <input type="password" id="settings-sync-pass-confirm" autocomplete="new-password" placeholder="Only when creating or changing">
+              </label>
+              <div class="settings-avatar-actions" style="flex-wrap:wrap;">
+                <button type="button" class="btn-secondary" id="settings-sync-save">Save progress</button>
+                <button type="button" class="btn-secondary" id="settings-sync-unlock">Restore progress</button>
+                <button type="button" class="btn-secondary" id="settings-sync-lock"${syncSt.unlocked ? "" : " disabled"}>Lock session</button>
+              </div>
+            </details>` : ""}
+            <p id="settings-sync-msg" class="settings-sync-status" hidden></p>
+          </div>`;
+      el.innerHTML = `
+        <div class="settings-panel">
+          <h2 id="settings-heading">Settings</h2>
+          <p class="settings-lead">Progress is stored on this device. Sign in to use the same account on your phone, tablet, and computer.</p>
+          ${accountSyncBlock}
+          <div class="settings-block" id="settings-biometric-block">
+            <h3>Quick sign-in</h3>
+            <p id="settings-biometric-lead">Use Face ID, Touch ID, or Windows Hello on this device after you have signed in once.</p>
+            <div class="settings-avatar-actions" style="flex-wrap:wrap;">
+              <button type="button" class="btn-secondary" id="settings-biometric-enable">Enable biometrics</button>
+              <button type="button" class="btn-secondary" id="settings-biometric-disable" disabled>Remove biometrics</button>
+            </div>
+            <p id="settings-biometric-msg" class="settings-sync-status" hidden></p>
           </div>
           <div class="settings-block">
             <h3>Profile picture</h3>
@@ -4523,6 +4917,13 @@
         return { email, pass };
       }
 
+      async function resolveAutoSyncPass(email) {
+        const em = String(email || "").trim().toLowerCase();
+        if (!em) throw new Error("Sign in to sync progress.");
+        await MCB80XSheetSync.ensureAutoUnlockForEmail(em);
+        return MCB80XSheetSync.deriveEmailSyncPassphrase(em);
+      }
+
       document.getElementById("settings-sync-save")?.addEventListener("click", async () => {
         if (!window.MCB80XSheetSync?.isConfigured?.()) return;
         try {
@@ -4532,10 +4933,10 @@
           if (!verifier) {
             verifier = await MCB80XSheetSync.registerPassphraseVerifier(pass);
           }
-          saveSettings({ syncEmail: email, syncPassVerifier: verifier });
+          saveSettings({ syncEmail: email, syncPassVerifier: verifier, syncPassMode: "custom" });
           MCB80XSheetSync.unlockSession(pass);
           await MCB80XSheetSync.pushNow(pass);
-          showSyncMsg("Progress saved to the cloud.");
+          showSyncMsg("Progress saved.");
           renderSettings();
           renderSyncBanner();
           updateSyncStatusHeader();
@@ -4547,11 +4948,23 @@
       document.getElementById("settings-sync-unlock")?.addEventListener("click", async () => {
         if (!window.MCB80XSheetSync?.isConfigured?.()) return;
         try {
-          const { email, pass } = await readSyncInputs();
-          saveSettings({ syncEmail: email });
-          MCB80XSheetSync.unlockSession(pass);
-          await MCB80XSheetSync.pullAndMerge(pass);
-          showSyncMsg("Progress restored from the cloud.");
+          const cur = getSettings();
+          if (cur.syncPassMode !== "custom" && accountEmail) {
+            const pass = await resolveAutoSyncPass(accountEmail);
+            const session = window.MCB80XOAuth?.getAccountSession?.() || window.MCB80XOAuth?.getSession?.();
+            const legacy = [];
+            if (session?.id && session.id !== accountEmail) {
+              legacy.push(await MCB80XSheetSync.deriveOAuthSyncPassphrase(session.id));
+            }
+            await MCB80XSheetSync.pullAndMergeForAccount(pass, legacy);
+            showSyncMsg("Progress restored.");
+          } else {
+            const { email, pass } = await readSyncInputs();
+            saveSettings({ syncEmail: email });
+            MCB80XSheetSync.unlockSession(pass);
+            await MCB80XSheetSync.pullAndMerge(pass);
+            showSyncMsg("Progress restored.");
+          }
           renderSettings();
           renderSyncBanner();
           updateSyncStatusHeader();
@@ -4562,17 +4975,20 @@
 
       document.getElementById("settings-sync-lock")?.addEventListener("click", () => {
         MCB80XSheetSync.clearSessionPassphrase();
-        showSyncMsg("Sync session locked on this tab.");
+        showSyncMsg("Save session locked on this tab.");
         renderSettings();
         updateSyncStatusHeader();
       });
 
       document.getElementById("settings-export-backup")?.addEventListener("click", async () => {
         try {
-          const pass = document.getElementById("settings-sync-pass")?.value || "";
           const settings = getSettings();
-          if (pass.length < 8) throw new Error("Enter your sync passphrase to export.");
-          if (settings.syncPassVerifier) {
+          let pass = document.getElementById("settings-sync-pass")?.value || "";
+          if (settings.syncPassMode !== "custom" && accountEmail) {
+            pass = await resolveAutoSyncPass(accountEmail);
+          } else if (pass.length < 8) {
+            throw new Error("Enter your sync passphrase to export.");
+          } else if (settings.syncPassVerifier) {
             const ok = await MCB80XSheetSync.verifyPassphraseLocal(pass, settings.syncPassVerifier);
             if (!ok) throw new Error("Incorrect sync passphrase.");
           }
@@ -4594,8 +5010,13 @@
         e.target.value = "";
         if (!file) return;
         try {
-          const pass = document.getElementById("settings-sync-pass")?.value || "";
-          if (pass.length < 8) throw new Error("Enter your sync passphrase to import.");
+          const settings = getSettings();
+          let pass = document.getElementById("settings-sync-pass")?.value || "";
+          if (settings.syncPassMode !== "custom" && accountEmail) {
+            pass = await resolveAutoSyncPass(accountEmail);
+          } else if (pass.length < 8) {
+            throw new Error("Enter your sync passphrase to import.");
+          }
           const text = await file.text();
           const parsed = JSON.parse(text);
           const remoteBundle = await MCB80XSheetSync.decryptBundle(parsed.envelope, pass);
@@ -4610,6 +5031,11 @@
           showSyncMsg(err.message || String(err), true);
         }
       });
+
+      if (window.MCB80XBiometricUI) {
+        MCB80XBiometricUI.wireSettingsBiometricHandlers();
+        MCB80XBiometricUI.refreshSettingsBiometricPanel();
+      }
     }
 
     function storageAvailable() {
@@ -5863,7 +6289,7 @@
         el.innerHTML = `
           <div class="profile-hero">
             <div>
-              <h2 class="profile-title">Your Study Profile</h2>
+              <h2 id="profile-heading" class="profile-title">Your Study Profile</h2>
               <p class="profile-summary">Last quiz saved: <strong>${lastFromProgress.title}</strong> (${lastFromProgress.pct}%). Detailed topic analytics will appear after your next full quiz completes on this same browser URL.</p>
             </div>
           </div>`;
@@ -5944,7 +6370,7 @@
           <div>
             <div class="profile-title-row">
               ${avatarMarkup(56)}
-              <h2 class="profile-title">Your Study Profile</h2>
+              <h2 id="profile-heading" class="profile-title">Your Study Profile</h2>
             </div>
             <span class="profile-tier">${tier.label}</span>
             <p class="profile-summary">${readiness.message}</p>
@@ -6046,8 +6472,57 @@
 
     function setMainNav(active) {
       document.querySelectorAll(".nav-tab").forEach(btn => {
-        btn.classList.toggle("active", btn.dataset.nav === active);
+        const isActive = btn.dataset.nav === active;
+        btn.classList.toggle("active", isActive);
+        if (btn.dataset.nav) {
+          if (isActive) btn.setAttribute("aria-current", "page");
+          else btn.removeAttribute("aria-current");
+        }
       });
+    }
+
+    function pickQuickStartQuiz(progress) {
+      if (!dailyPopDoneToday(progress)) {
+        const q = QUIZZES.dailyPop;
+        return q ? { id: q.id, title: "Start today’s streak quiz", desc: "Five questions with instant feedback — same set until midnight." } : null;
+      }
+      for (const section of DASHBOARD_SECTIONS) {
+        if (section.id === "flashcards") continue;
+        const quizzes = Object.values(QUIZZES).filter(qu => qu.section === section.id);
+        for (const q of quizzes) {
+          if (q.id === "dailyPop" || !isQuizUnlocked(q)) continue;
+          return {
+            id: q.id,
+            title: `Start ${q.title}`,
+            desc: q.subtitle || (q.description ? String(q.description).slice(0, 120) : "Pick up where you left off.")
+          };
+        }
+      }
+      return null;
+    }
+
+    function renderQuickStartPanel() {
+      const el = document.getElementById("dashboard-quick-start");
+      if (!el) return;
+      const resume = document.getElementById("quiz-resume-banner");
+      if (resume && !resume.hidden) {
+        el.hidden = true;
+        return;
+      }
+      const pick = pickQuickStartQuiz(getProgressWithBackup());
+      if (!pick) {
+        el.hidden = true;
+        return;
+      }
+      el.hidden = false;
+      el.innerHTML = `
+        <h3>Start now</h3>
+        <p><strong>${escapeHtml(pick.title)}</strong> — ${escapeHtml(pick.desc)}</p>
+        <div class="quick-start-actions">
+          <button type="button" class="btn-primary" id="dashboard-quick-start-btn">Start quiz</button>
+          <a class="quick-start-link" href="#dashboard-quizzes">Browse all quizzes</a>
+        </div>`;
+      document.getElementById("dashboard-quick-start-btn")?.addEventListener("click", () => startQuiz(pick.id));
     }
 
     function hasImmediateFeedback() {
@@ -6102,8 +6577,11 @@
 
     function showView(name) {
       activeAppView = name;
-      Object.values(views).forEach(v => v.classList.remove("active"));
-      views[name].classList.add("active");
+      Object.entries(views).forEach(([key, v]) => {
+        const on = key === name;
+        v.classList.toggle("active", on);
+        v.setAttribute("aria-hidden", on ? "false" : "true");
+      });
       document.body.classList.toggle("study-flow-active", name === "quiz" || name === "flashcard");
       if (name === "dashboard" || name === "profile" || name === "settings") {
         setMainNav(name);
@@ -6293,6 +6771,7 @@
                 <h3>${meta.title}</h3>
                 <p class="subtitle">${meta.subtitle}</p>
                 <span class="meta">${d.cards.length} Cards</span>
+                <span class="card-start-hint">Study deck →</span>
               </div>`;
           }).join("");
 
@@ -6336,6 +6815,7 @@
               <p class="subtitle">${q.subtitle}<br>${q.description}</p>
           <span class="meta">${formatQuizMeta(q)}</span>
           ${lockBadge}
+          ${unlocked ? `<span class="card-start-hint">Start quiz →</span>` : ""}
             </div>`;
         }).join("");
 
@@ -6384,6 +6864,7 @@
 
       maybeShowDailyPopModal(progress);
       renderResumeBanner();
+      renderQuickStartPanel();
 
       container.querySelectorAll(".quiz-card:not(.locked)").forEach(card => {
         if (card.dataset.flashcards) {
@@ -6701,8 +7182,15 @@
       const revealed = hasImmediateFeedback() && isQuestionAnswered(currentIndex) && !written;
       const isCorrect = revealed && (selectAll ? scoreSelectAllQuestion(q, selected) : selected === q.correct);
 
-      document.getElementById("progress-fill").style.width = `${((currentIndex + 1) / total) * 100}%`;
-      document.getElementById("progress-label").textContent = `${currentIndex + 1} / ${total}`;
+      const step = currentIndex + 1;
+      document.getElementById("progress-fill").style.width = `${(step / total) * 100}%`;
+      document.getElementById("progress-label").textContent = `${step} / ${total}`;
+      const bar = document.getElementById("quiz-progress-bar");
+      if (bar) {
+        bar.setAttribute("aria-valuemax", String(total));
+        bar.setAttribute("aria-valuenow", String(step));
+        bar.setAttribute("aria-label", `Question ${step} of ${total}`);
+      }
 
       const qModule = questionModule(q, activeQuizId);
       const moduleBadge = MODULE_LABELS[qModule] || qModule;
@@ -7225,7 +7713,13 @@
         if (!session?.email || !bootstrap) return { ok: false };
 
         applyOAuthSessionToSettings(session);
+        await window.MCB80XSheetSync?.ensureAutoUnlockForEmail?.(session.email);
+        renderSyncBanner();
+        updateSyncStatusHeader();
         const result = await bootstrap(session);
+        if (result?.reason === "custom-passphrase") {
+          saveSettings({ syncPassMode: "custom" });
+        }
         if (result?.ok) {
           renderDashboard();
           renderProfile();
@@ -7267,6 +7761,22 @@
       }
     }
 
+    if (window.MCB80XBiometricUI) {
+      MCB80XBiometricUI.setInAppSignInHandler(session => {
+        if (window.MCB80XOAuth?.saveSession) MCB80XOAuth.saveSession(session);
+        applyOAuthSessionToSettings(session);
+        sessionStorage.setItem("mcb80x_force_cloud_sync", "1");
+        refreshOAuthNav();
+        ensureAccountCloudSync();
+        renderDashboard();
+        renderProfile();
+        renderUserActivityCard();
+        renderStreakBadge();
+        renderSyncBanner();
+        updateSyncStatusHeader();
+      });
+    }
+
     try {
       const pending = sessionStorage.getItem("mcb80x_oauth_pending_apply");
       if (pending && window.MCB80XOAuth) {
@@ -7276,6 +7786,52 @@
         applyOAuthSessionToSettings(session);
       }
     } catch { /* ignore */ }
+
+    function initScrollbarReveal() {
+      const scrollHideMs = 750;
+      let htmlTimer;
+      const elTimers = new WeakMap();
+      document.addEventListener(
+        "scroll",
+        e => {
+          const target = e.target;
+          if (target === document || target === document.documentElement) {
+            document.documentElement.classList.add("is-scrolling");
+            clearTimeout(htmlTimer);
+            htmlTimer = setTimeout(
+              () => document.documentElement.classList.remove("is-scrolling"),
+              scrollHideMs
+            );
+            return;
+          }
+          if (!(target instanceof Element) || !target.classList.contains("scrollport")) return;
+          target.classList.add("is-scrolling");
+          clearTimeout(elTimers.get(target));
+          elTimers.set(
+            target,
+            setTimeout(() => target.classList.remove("is-scrolling"), scrollHideMs)
+          );
+        },
+        { passive: true, capture: true }
+      );
+    }
+
+    function bootAppAfterSyncInit() {
+      initScrollbarReveal();
+      updateStreakOnVisit();
+      renderStreakBadge();
+      renderUserActivityCard();
+      renderDashboard();
+      renderSyncBanner();
+      updateSyncStatusHeader();
+      refreshOAuthNav();
+      ensureAccountCloudSync().finally(() => {
+        renderSyncBanner();
+        updateSyncStatusHeader();
+        maybeOfferBiometricSetup();
+      });
+      showView("dashboard");
+    }
 
     if (window.MCB80XSheetSync) {
       MCB80XSheetSync.init({
@@ -7295,7 +7851,8 @@
             displayName: patch.displayName || getSettings().displayName,
             ...(patch.syncPassVerifier !== undefined
               ? { syncPassVerifier: patch.syncPassVerifier }
-              : {})
+              : {}),
+            ...(patch.syncPassMode !== undefined ? { syncPassMode: patch.syncPassMode } : {})
           });
         },
         onGoogleProfile: profile => {
@@ -7311,20 +7868,10 @@
           updateSyncStatusHeader();
           renderSyncBanner();
         }
-      });
+      }).then(() => bootAppAfterSyncInit());
+    } else {
+      bootAppAfterSyncInit();
     }
-    updateStreakOnVisit();
-    renderStreakBadge();
-    renderUserActivityCard();
-    renderDashboard();
-    renderSyncBanner();
-    updateSyncStatusHeader();
-    refreshOAuthNav();
-    ensureAccountCloudSync().finally(() => {
-      renderSyncBanner();
-      updateSyncStatusHeader();
-    });
-    showView("dashboard");
   </script>
 </body>
 </html>

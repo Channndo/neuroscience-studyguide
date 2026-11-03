@@ -9,15 +9,89 @@
   --auth-crimson: #a51c30;
   --auth-crimson-dark: #8b1728;
   --auth-crimson-light: #c42a42;
+  --scrollbar-size: 7px;
+  --scrollbar-thumb-idle: transparent;
+  --scrollbar-thumb-scroll: rgba(196, 42, 66, 0.42);
+  --scrollbar-thumb-hover: rgba(196, 42, 66, 0.58);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html {
+  scrollbar-gutter: stable;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb-idle) transparent;
+}
+
+html.is-scrolling {
+  scrollbar-color: var(--scrollbar-thumb-scroll) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: var(--scrollbar-size);
+  height: var(--scrollbar-size);
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-idle);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  transition: background-color 0.4s var(--ease-out);
+}
+
+html.is-scrolling::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-scroll);
+}
+
+html.is-scrolling::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover);
 }
 
 * { box-sizing: border-box; }
+
+.auth-skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0.75rem;
+  z-index: 200;
+  padding: 0.5rem 1rem;
+  border-radius: 0.65rem;
+  background: var(--auth-crimson);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth-skip-link:focus-visible {
+  left: 1rem;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+:where(.auth-cover-page a, .auth-cover-page button, .auth-cover-page input, .auth-cover-page select):focus-visible {
+  outline: 2px solid var(--auth-crimson-light);
+  outline-offset: 2px;
+}
 
 body.auth-cover-page {
   margin: 0;
   min-height: 100vh;
   font-family: "Helvetica Neue", system-ui, sans-serif;
   color: var(--auth-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   background: var(--auth-bg-deep);
   background-image:
     radial-gradient(ellipse 80% 50% at 50% -20%, rgba(165, 28, 48, 0.18), transparent 55%),
@@ -204,6 +278,7 @@ body.auth-cover-page {
 .auth-btn-primary {
   width: 100%;
   margin-top: 0.5rem;
+  min-height: 2.75rem;
   padding: 0.75rem 1rem;
   border: none;
   border-radius: 0.75rem;
@@ -323,6 +398,39 @@ body.auth-cover-page {
 .auth-btn-secondary:hover {
   border-color: rgba(165, 28, 48, 0.45);
   color: var(--auth-text);
+}
+
+.auth-biometric-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(165, 28, 48, 0.45);
+  background: rgba(165, 28, 48, 0.12);
+  color: var(--auth-text);
+  font-weight: 700;
+  font-size: 0.92rem;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.auth-biometric-btn:hover {
+  background: rgba(165, 28, 48, 0.2);
+}
+
+.auth-biometric-btn:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+
+.auth-biometric-btn svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
 }
 
 .auth-security-panel {

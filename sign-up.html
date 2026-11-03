@@ -8,8 +8,11 @@
   <script src="mcb80x-cloud-config.js"></script>
   <script src="oauth-client.js"></script>
   <script src="password-auth.js"></script>
+  <script src="biometric-auth.js"></script>
+  <script src="auth-biometric-ui.js"></script>
 </head>
 <body class="auth-cover-page">
+  <a class="auth-skip-link" href="#signup-form">Skip to sign up form</a>
   <div class="auth-cover-wrap">
     <div class="auth-cover-card">
       <header class="auth-cover-brand">
@@ -26,6 +29,16 @@
       </header>
       <h1>Create account</h1>
       <p class="lede">Use your email to save progress and sync across devices.</p>
+
+      <button type="button" class="auth-biometric-btn" id="biometric-signin" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+          <rect x="5" y="10" width="14" height="11" rx="2"/>
+          <path d="M8 10V8a4 4 0 1 1 8 0v2"/>
+        </svg>
+        <span id="biometric-signin-label">Sign in with biometrics</span>
+      </button>
+
+      <div id="signup-biometric-divider" class="auth-divider" hidden>Or create a new account</div>
 
       <form id="signup-form" class="auth-email-form" autocomplete="on">
         <div class="auth-field-row">
@@ -74,6 +87,15 @@
     <p class="auth-back"><a href="index.html">← Back to study dashboard</a></p>
   </div>
   <script>
+    (function () {
+      let t;
+      document.addEventListener("scroll", () => {
+        document.documentElement.classList.add("is-scrolling");
+        clearTimeout(t);
+        t = setTimeout(() => document.documentElement.classList.remove("is-scrolling"), 750);
+      }, { passive: true, capture: true });
+    })();
+
     const q1 = document.getElementById("q1");
     const q2 = document.getElementById("q2");
     MCB80XPasswordAuth.SECURITY_QUESTIONS.forEach((text, id) => {
@@ -96,6 +118,16 @@
     const form = document.getElementById("signup-form");
     const err = document.getElementById("auth-error");
     const submitBtn = document.getElementById("signup-submit");
+
+    (async () => {
+      const mounted = await MCB80XBiometricUI.mountSignInButton({
+        buttonEl: document.getElementById("biometric-signin"),
+        labelEl: document.getElementById("biometric-signin-label"),
+        errorEl: err
+      });
+      const divider = document.getElementById("signup-biometric-divider");
+      if (mounted && divider) divider.hidden = false;
+    })();
 
     form.addEventListener("submit", async e => {
       e.preventDefault();

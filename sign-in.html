@@ -8,8 +8,11 @@
   <script src="mcb80x-cloud-config.js"></script>
   <script src="oauth-client.js"></script>
   <script src="password-auth.js"></script>
+  <script src="biometric-auth.js"></script>
+  <script src="auth-biometric-ui.js"></script>
 </head>
 <body class="auth-cover-page">
+  <a class="auth-skip-link" href="#login-form">Skip to sign in form</a>
   <div class="auth-cover-wrap">
     <div class="auth-cover-card">
       <header class="auth-cover-brand">
@@ -26,6 +29,14 @@
       </header>
       <h1>Sign in</h1>
       <p class="lede">Welcome back. Sign in with email or a social account to sync progress across your devices.</p>
+
+      <button type="button" class="auth-biometric-btn" id="biometric-signin" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+          <rect x="5" y="10" width="14" height="11" rx="2"/>
+          <path d="M8 10V8a4 4 0 1 1 8 0v2"/>
+        </svg>
+        <span id="biometric-signin-label">Sign in with biometrics</span>
+      </button>
 
       <div id="social-grid" class="auth-social-grid" hidden></div>
 
@@ -67,6 +78,15 @@
     <p class="auth-back"><a href="index.html">← Back to study dashboard</a></p>
   </div>
   <script>
+    (function () {
+      let t;
+      document.addEventListener("scroll", () => {
+        document.documentElement.classList.add("is-scrolling");
+        clearTimeout(t);
+        t = setTimeout(() => document.documentElement.classList.remove("is-scrolling"), 750);
+      }, { passive: true, capture: true });
+    })();
+
     const grid = document.getElementById("social-grid");
     const err = document.getElementById("auth-error");
     const loginForm = document.getElementById("login-form");
@@ -84,6 +104,12 @@
     if (MCB80XOAuth.getSession()) {
       window.location.replace("index.html");
     }
+
+    MCB80XBiometricUI.mountSignInButton({
+      buttonEl: document.getElementById("biometric-signin"),
+      labelEl: document.getElementById("biometric-signin-label"),
+      errorEl: err
+    });
 
     loginForm.addEventListener("submit", async e => {
       e.preventDefault();
