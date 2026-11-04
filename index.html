@@ -590,7 +590,10 @@
 
     .quiz-card.final:not(.locked) .card-start-hint,
     .quiz-card.elite:not(.locked) .card-start-hint,
-    .quiz-card.pinnacle:not(.locked) .card-start-hint {
+    .quiz-card.pinnacle:not(.locked) .card-start-hint,
+    .quiz-card.brutal:not(.locked) .card-start-hint,
+    .quiz-card.absurd:not(.locked) .card-start-hint,
+    .quiz-card.psycho:not(.locked) .card-start-hint {
       color: #fecdd3;
     }
 
@@ -672,6 +675,38 @@
 
     .quiz-card.pinnacle .subtitle { color: rgba(255,255,255,0.75); }
     .quiz-card.pinnacle .meta { color: #fecdd3; }
+
+    .quiz-card.brutal {
+      background: linear-gradient(145deg, #1a1a1f 0%, #3f1519 100%);
+      border: 2px solid rgba(165, 28, 48, 0.65);
+      color: #fff;
+    }
+
+    .quiz-card.brutal .subtitle { color: rgba(255, 255, 255, 0.78); }
+    .quiz-card.brutal .meta { color: #fecdd3; }
+    .quiz-card.brutal .quiz-card-icon {
+      background: rgba(165, 28, 48, 0.45);
+      color: #fff;
+    }
+
+    .quiz-card.absurd {
+      background: linear-gradient(145deg, #12080c 0%, #5c1020 120%);
+      border: 2px solid #e85d6f;
+      color: #fff;
+    }
+
+    .quiz-card.absurd .subtitle { color: rgba(255, 255, 255, 0.75); }
+    .quiz-card.absurd .meta { color: #ffd4dc; }
+
+    .quiz-card.psycho {
+      background: linear-gradient(160deg, #0a0608 0%, #4a0818 50%, #1a1a1f 100%);
+      border: 3px solid #ff6b81;
+      box-shadow: 0 0 24px rgba(165, 28, 48, 0.35);
+      color: #fff;
+    }
+
+    .quiz-card.psycho .subtitle { color: rgba(255, 255, 255, 0.8); }
+    .quiz-card.psycho .meta { color: #ffe0e6; }
 
     .quiz-card.locked {
       opacity: 0.55;
@@ -1005,8 +1040,17 @@
     }
 
     .question-text sub,
+    .question-text sup,
     .answer-btn sub,
+    .answer-btn sup,
     .instant-feedback-text sub,
+    .instant-feedback-text sup,
+    .instant-feedback-wrong sub,
+    .instant-feedback-wrong sup,
+    .formula-hint-panel sub,
+    .formula-hint-panel sup,
+    .written-prompt-hint sub,
+    .written-prompt-hint sup,
     .flashcard-question sub,
     .flashcard-mechanism sub,
     .review-question sub,
@@ -1015,6 +1059,13 @@
       font-size: 0.72em;
       font-weight: 600;
       letter-spacing: 0.01em;
+    }
+
+    .question-text sup,
+    .answer-btn sup,
+    .formula-hint-panel sup {
+      font-size: 0.78em;
+      font-weight: 600;
     }
 
     .question-text {
@@ -2855,6 +2906,7 @@
   <script src="questions-written-final.js"></script>
   <script src="questions-proctored-mock.js"></script>
   <script src="questions-formula-drills.js"></script>
+  <script src="questions-pinnacle-megabank.js"></script>
   <script src="mcb80x-cloud-config.js"></script>
   <script src="sheets-sync.js"></script>
   <script src="oauth-client.js"></script>
@@ -2884,14 +2936,36 @@
     /** Turn keyboard shorthand (E_K, Na+, V_m) into readable notation with subscripts/superscripts. */
     function formatNeuroscienceText(raw) {
       if (raw == null) return "";
-      let s = escapeHtml(raw);
+      const safeTags = [];
+      let s = String(raw);
 
-      s = s.replace(/\[([A-Za-z⁺²⁻]+)\]_([a-zA-Z]+)/g, "[$1]<sub>$2</sub>");
+      s = s.replace(/<sub>([^<]*)<\/sub>/gi, (_, inner) => {
+        const id = safeTags.length;
+        safeTags.push({ tag: "sub", inner: escapeHtml(inner) });
+        return `\x00NTAG${id}\x00`;
+      });
+      s = s.replace(/<sup>([^<]*)<\/sup>/gi, (_, inner) => {
+        const id = safeTags.length;
+        safeTags.push({ tag: "sup", inner: escapeHtml(inner) });
+        return `\x00NTAG${id}\x00`;
+      });
+
+      s = escapeHtml(s);
+
+      s = s.replace(/\bGABA_A\b/g, "GABA<sub>A</sub>");
+      s = s.replace(/\bGABA_B\b/g, "GABA<sub>B</sub>");
+
+      s = s.replace(/\[([A-Za-z0-9⁺²⁻]+)\]_([a-zA-Z]+)/g, "[$1]<sub>$2</sub>");
+      s = s.replace(/E_(K|Na|Cl|Ca|ion|rev|h|LTP|EPSP|IPSP|m)(?=⁺|⁻)/g, "E<sub>$1</sub>");
       s = s.replace(/E_(K|Na|Cl|Ca|ion|rev|h|LTP|EPSP|IPSP|m)⁺/g, "E<sub>$1</sub>");
       s = s.replace(/\bE_(K|Na|Cl|Ca|ion|rev|h|LTP|EPSP|IPSP|m)\b/g, "E<sub>$1</sub>");
       s = s.replace(/\bP_(K|Na|Cl)\b/g, "P<sub>$1</sub>");
-      s = s.replace(/\bg_(K|Na|Cl)\b/g, "g<sub>$1</sub>");
-      s = s.replace(/\bI_(Na|K|ion|Cl)\b/g, "I<sub>$1</sub>");
+      s = s.replace(/\b(K|Na|Ca)_(i|o)\b/g, "$1<sub>$2</sub>");
+      s = s.replace(/\bg_(K|Na|Cl|Ca|syn)\b/g, "g<sub>$1</sub>");
+      s = s.replace(/\bI_(Na|K|ion|Cl|inj)\b/g, "I<sub>$1</sub>");
+      s = s.replace(/\blog10\b/g, "log<sub>10</sub>");
+      s = s.replace(/\blambda_m\b/g, "λ<sub>m</sub>");
+      s = s.replace(/\blambda\b/g, "λ");
       s = s.replace(/\bV_m\b/g, "V<sub>m</sub>");
       s = s.replace(/\bC_m\b/g, "C<sub>m</sub>");
       s = s.replace(/\bR_m\b/g, "R<sub>m</sub>");
@@ -2900,12 +2974,25 @@
       s = s.replace(/\bIP_3\b/g, "IP<sub>3</sub>");
       s = s.replace(/\bCa2\+\b/g, "Ca²⁺");
       s = s.replace(/\bMg2\+\b/g, "Mg²⁺");
+      s = s.replace(/Ca\^2\+/g, "Ca²⁺");
+      s = s.replace(/Mg\^2\+/g, "Mg²⁺");
+      s = s.replace(/Cl\^-/g, "Cl⁻");
+      s = s.replace(/Na\^\+/g, "Na⁺");
+      s = s.replace(/K\^\+/g, "K⁺");
+      s = s.replace(/E_(K|Na|Cl|Ca)\^-/g, "E<sub>$1</sub>⁻");
+      s = s.replace(/E_(K|Na|Cl|Ca)\^\+/g, "E<sub>$1</sub>⁺");
       s = s.replace(/\bCl-\b/g, "Cl⁻");
       s = s.replace(/\bNa\+\b/g, "Na⁺");
       s = s.replace(/\bK\+\b/g, "K⁺");
       s = s.replace(/Na\+(\/)/g, "Na⁺$1");
       s = s.replace(/\/K\+/g, "/K⁺");
       s = s.replace(/\bDelta\b/g, "Δ");
+
+      s = s.replace(/\x00NTAG(\d+)\x00/g, (_, id) => {
+        const row = safeTags[Number(id)];
+        if (!row) return "";
+        return `<${row.tag}>${row.inner}</${row.tag}>`;
+      });
 
       return s;
     }
@@ -3563,6 +3650,11 @@
           if (mod) reg.set(q.question, mod);
         });
       });
+      (typeof PINNACLE_MEGA_POOL !== "undefined" ? PINNACLE_MEGA_POOL : []).forEach(q => {
+        if (!q?.question || reg.has(q.question)) return;
+        const mod = moduleFromTopic(q.topic) || routeQuestionToModule(q);
+        if (mod) reg.set(q.question, mod);
+      });
       return reg;
     }
 
@@ -3671,6 +3763,7 @@
       assign(typeof NEW_TIER2 !== "undefined" ? NEW_TIER2 : [], 5);
       assign(typeof NEW_TIER3 !== "undefined" ? NEW_TIER3 : [], 6);
       assign(typeof NEW_TIER4 !== "undefined" ? NEW_TIER4 : [], 7);
+      assign(typeof PINNACLE_MEGA_POOL !== "undefined" ? PINNACLE_MEGA_POOL : [], 8);
       return map;
     }
 
@@ -3751,11 +3844,14 @@
       mixedReview50: 50,
       review10: 10,
       finalReview: 100,
-      final: 45,
+      final: 75,
       final100: 100,
       final150: 150,
       final200: 200,
       pinnacle300: 300,
+      pinnacle500: 500,
+      pinnacle750: 750,
+      pinnacle1000: 1000,
       writtenReview10: 10,
       proctoredMock: 46,
       formulaLabLearn: 12,
@@ -4065,10 +4161,12 @@
         ]);
       }
       if (quizId === "final") {
+        const totalMcq = QUIZ_SAMPLE_SIZES.final;
+        const [n1, n2, n3] = mixedReviewPartSplit(totalMcq);
         return attachWrittenToExamSet(shuffle([
-          ...sampleFromPool(pools.part1, 15, avoid),
-          ...sampleFromPool(pools.part2, 15, avoid),
-          ...sampleFromPool(pools.part3, 15, avoid)
+          ...sampleFromPool(pools.part1, n1, avoid),
+          ...sampleFromPool(pools.part2, n2, avoid),
+          ...sampleFromPool(pools.part3, n3, avoid)
         ]), quizId, avoid);
       }
       if (quizId === "final100") {
@@ -4080,8 +4178,8 @@
       if (quizId === "final200") {
         return attachWrittenToExamSet(sampleFromPool(pools.all, QUIZ_SAMPLE_SIZES.final200, avoid), quizId, avoid);
       }
-      if (quizId === "pinnacle300") {
-        return attachWrittenToExamSet(sampleFromPool(pools.all, QUIZ_SAMPLE_SIZES.pinnacle300, avoid), quizId, avoid);
+      if (PINNACLE_QUIZ_IDS.includes(quizId)) {
+        return drawPinnacleExamSet(quizId, progress);
       }
       if (quizId === "formulaLabLearn" || quizId === "formulaLabExam") {
         const pool = typeof FORMULA_DRILL_POOL !== "undefined" ? FORMULA_DRILL_POOL : [];
@@ -4110,15 +4208,92 @@
     const PASS_THRESHOLD = 70;
     const ADVANCED_PASS_THRESHOLD = 80;
     const PINNACLE_PASS_THRESHOLD = 90;
+    const PINNACLE_QUIZ_IDS = ["pinnacle300", "pinnacle500", "pinnacle750", "pinnacle1000"];
+    const PINNACLE_PASS = {
+      pinnacle300: 90,
+      pinnacle500: 95,
+      pinnacle750: 99,
+      pinnacle1000: 99.9
+    };
+    const PINNACLE_MIN_HARDNESS = {
+      pinnacle300: 4,
+      pinnacle500: 5,
+      pinnacle750: 6,
+      pinnacle1000: 7
+    };
     const ADVANCED_FINAL_IDS = ["final100", "final150", "final200"];
 
     function getPassThreshold(quizId) {
       const quiz = QUIZZES[quizId];
       if (quiz?.learningMode) return 0;
-      if (quizId === "pinnacle300") return PINNACLE_PASS_THRESHOLD;
+      if (PINNACLE_PASS[quizId] != null) return PINNACLE_PASS[quizId];
       if (ADVANCED_FINAL_IDS.includes(quizId)) return ADVANCED_PASS_THRESHOLD;
       if (MIXED_REVIEW_PASS[quizId] != null) return MIXED_REVIEW_PASS[quizId];
       return PASS_THRESHOLD;
+    }
+
+    function formatPassThreshold(quizId) {
+      const t = getPassThreshold(quizId);
+      return Number.isInteger(t) ? `${t}%` : `${t}%`;
+    }
+
+    function isQuizAttemptPassed(quizId, pct, correct, total) {
+      const quiz = QUIZZES[quizId];
+      if (quiz?.learningMode) return true;
+      if (quizId === "pinnacle1000") {
+        return total > 0 && correct >= Math.ceil(total * 0.999);
+      }
+      return pct >= getPassThreshold(quizId);
+    }
+
+    function buildPinnacleMegaPool(progress) {
+      const exam = buildExamReviewPools(progress);
+      const mega = typeof PINNACLE_MEGA_POOL !== "undefined" ? PINNACLE_MEGA_POOL : [];
+      const proctored = dedupeQuestions([
+        ...(typeof PROCTORED_SATA_POOL !== "undefined" ? PROCTORED_SATA_POOL : []),
+        ...(typeof PROCTORED_LESION_POOL !== "undefined" ? PROCTORED_LESION_POOL : []),
+        ...(typeof PROCTORED_CIRCUIT_POOL !== "undefined" ? PROCTORED_CIRCUIT_POOL : []),
+        ...(typeof PROCTORED_CLAMP_TRACE_POOL !== "undefined" ? PROCTORED_CLAMP_TRACE_POOL : [])
+      ]);
+      return dedupeQuestions([...exam.all, ...mega, ...proctored]);
+    }
+
+    function filterPinnacleHardPool(pool, minHardness) {
+      const filtered = pool.filter(q => questionHardness(q) >= minHardness);
+      return filtered.length >= 120 ? filtered : pool;
+    }
+
+    function drawPinnacleExamSet(quizId, progress) {
+      const avoid = lastDrawAvoidKeys(quizId, progress);
+      const count = QUIZ_SAMPLE_SIZES[quizId];
+      const minHard = PINNACLE_MIN_HARDNESS[quizId] || 4;
+      const pool = filterPinnacleHardPool(buildPinnacleMegaPool(progress), minHard);
+      const examPools = buildExamReviewPools(progress);
+      const [n1, n2, n3] = mixedReviewPartSplit(count);
+      const p1 = filterPinnacleHardPool(examPools.part1, minHard);
+      const p2 = filterPinnacleHardPool(examPools.part2, minHard);
+      const p3 = filterPinnacleHardPool(examPools.part3, minHard);
+      const megaOnly = filterPinnacleHardPool(
+        typeof PINNACLE_MEGA_POOL !== "undefined" ? PINNACLE_MEGA_POOL : [],
+        minHard
+      );
+      let mcqSet = shuffle([
+        ...sampleExamStyleFromPool(p1.length ? p1 : pool, n1, avoid),
+        ...sampleExamStyleFromPool(p2.length ? p2 : pool, n2, avoid),
+        ...sampleExamStyleFromPool(p3.length ? p3 : pool, n3, avoid)
+      ]);
+      if (mcqSet.length < count) {
+        mcqSet = sampleExamStyleFromPool(pool, count, avoid);
+      }
+      if (mcqSet.length < count && megaOnly.length) {
+        const need = count - mcqSet.length;
+        const extra = sampleExamStyleFromPool(megaOnly, need, [
+          ...avoid,
+          ...mcqSet.map(q => q.question)
+        ]);
+        mcqSet = shuffle([...mcqSet, ...extra]).slice(0, count);
+      }
+      return attachWrittenToExamSet(mcqSet.slice(0, count), quizId, avoid);
     }
     const STORAGE_KEY = "mcb80x_progress";
     const SETTINGS_KEY = "mcb80x_settings";
@@ -4129,7 +4304,11 @@
     const FLASHCARD_SESSION_KEY = "mcb80x_flashcard_session";
     const CHAPTER_IDS = ["part1", "part2", "part3"];
 
-    const EXAM_QUIZ_IDS = ["final", "final100", "final150", "final200", "pinnacle300", "proctoredMock"];
+    const EXAM_QUIZ_IDS = [
+      "final", "final100", "final150", "final200",
+      ...PINNACLE_QUIZ_IDS,
+      "proctoredMock"
+    ];
     const REVIEW10_QUIZ_IDS = ["review10P1", "review10P2", "review10P3", "review10Mix"];
     const EXAM_STYLE_QUIZ_IDS = new Set([
       ...REVIEW10_QUIZ_IDS,
@@ -4207,7 +4386,10 @@
       final100: 1.15,
       final150: 1.3,
       final200: 1.45,
-      pinnacle300: 1.6
+      pinnacle300: 1.6,
+      pinnacle500: 1.75,
+      pinnacle750: 1.9,
+      pinnacle1000: 2.05
     };
 
     const CHAPTER_META = {
@@ -4442,12 +4624,13 @@
         section: "final",
         title: "Comprehensive Final Exam",
         subtitle: "Parts 1, 2 & 3 Combined",
-        meta: "MCQ + short answer · answers at end",
-        description: "45 multiple-choice plus 5 written responses across Parts 1–3 — complete to unlock advanced finals",
+        meta: "75 MCQ + short answer · answers at end",
+        description: "75 multiple-choice (balanced across Parts 1–3) plus 5 written responses — complete to unlock advanced finals",
         icon: "FINAL",
         cardClass: "final",
         unlocksAdvanced: true,
         immediateFeedback: false,
+        timedMinutes: 105,
         requires: () => allChapterQuizzesPassed(),
         lockHint: "Pass Part 1, Part 2, and Part 3 (70%+) to unlock"
       },
@@ -4493,11 +4676,11 @@
       pinnacle300: {
         id: "pinnacle300",
         section: "pinnacle",
-        title: "Pinnacle Examination",
-        subtitle: "Ultimate MCB80x Mastery Test",
+        title: "Pinnacle: HARD",
+        subtitle: "300-question mastery gate",
         meta: "300 questions · 90% to pass · answers at end",
-        description: "300-question mastery draw from the full advanced bank — pass all three advanced finals to unlock",
-        icon: "PIN",
+        description: "Full-course hard draw — unlocks after all three Advanced Finals (80%+)",
+        icon: "H",
         cardClass: "pinnacle",
         requires: () => {
           const p = getProgress();
@@ -4505,6 +4688,45 @@
         },
         lockHint: "Pass Advanced Finals I, II, and III (80%+) to unlock",
         passKey: "pinnacle300Passed"
+      },
+      pinnacle500: {
+        id: "pinnacle500",
+        section: "pinnacle",
+        title: "Pinnacle: BRUTAL",
+        subtitle: "500-question endurance exam",
+        meta: "500 questions · 95% to pass · answers at end",
+        description: "Deeper bank, higher bar — pass HARD first",
+        icon: "B",
+        cardClass: "brutal",
+        requires: () => getProgress().pinnacle300Passed,
+        lockHint: "Pass Pinnacle: HARD (90%+) to unlock",
+        passKey: "pinnacle500Passed"
+      },
+      pinnacle750: {
+        id: "pinnacle750",
+        section: "pinnacle",
+        title: "Pinnacle: ABSURD",
+        subtitle: "750-question precision test",
+        meta: "750 questions · 99% to pass · answers at end",
+        description: "Near-perfect accuracy required — pass BRUTAL first",
+        icon: "A",
+        cardClass: "absurd",
+        requires: () => getProgress().pinnacle500Passed,
+        lockHint: "Pass Pinnacle: BRUTAL (95%+) to unlock",
+        passKey: "pinnacle750Passed"
+      },
+      pinnacle1000: {
+        id: "pinnacle1000",
+        section: "pinnacle",
+        title: "Pinnacle: PSYCHO",
+        subtitle: "1000-question final boss",
+        meta: "1000 questions · 99.9% to pass · answers at end",
+        description: "999+ MCQ correct to pass — pass ABSURD first",
+        icon: "Ψ",
+        cardClass: "psycho",
+        requires: () => getProgress().pinnacle750Passed,
+        lockHint: "Pass Pinnacle: ABSURD (99%+) to unlock",
+        passKey: "pinnacle1000Passed"
       }
     };
 
@@ -4518,7 +4740,7 @@
       { id: "flashcards", title: "Weakness Flashcards", hint: "Auto-generated after each chapter quiz" },
       { id: "final", title: "Comprehensive Final", hint: "Final Review (learn mode) then the scored exam · unlocks after passing all module quizzes" },
       { id: "advanced", title: "Advanced Finals", hint: "Unlocked after the Comprehensive Final · 80% required to pass each" },
-      { id: "pinnacle", title: "Pinnacle Exam", hint: "Unlocked after passing all three advanced finals (80%+) · 90% to pass" }
+      { id: "pinnacle", title: "Pinnacle Ladder", hint: "HARD → BRUTAL → ABSURD → PSYCHO · pass each tier to unlock the next" }
     ];
 
     let storageWarningShown = false;
@@ -5549,10 +5771,18 @@
 
     function pinnacleReadinessPoints(data) {
       if (!ADVANCED_FINAL_IDS.every(id => hasPassedQuiz(data, id))) return 0;
-      const pct = bestAttemptPct(data, "pinnacle300");
+      let bestTier = 0;
+      PINNACLE_QUIZ_IDS.forEach((id, i) => {
+        if (hasPassedQuiz(data, id)) bestTier = i + 1;
+      });
+      const pct = bestAttemptPct(data, PINNACLE_QUIZ_IDS[bestTier - 1] || "pinnacle300")
+        ?? bestAttemptPct(data, "pinnacle300");
+      if (bestTier >= 4) return READINESS_PINNACLE_MAX;
+      if (bestTier === 3 && pct != null && pct >= 99) return READINESS_PINNACLE_MAX * 0.95;
+      if (bestTier === 2 && pct != null && pct >= 95) return READINESS_PINNACLE_MAX * 0.85;
       if (pct === null) return 0;
-      if (pct >= 90) return READINESS_PINNACLE_MAX;
-      if (pct >= 80) return READINESS_PINNACLE_MAX * 0.65;
+      if (pct >= 90) return READINESS_PINNACLE_MAX * 0.72;
+      if (pct >= 80) return READINESS_PINNACLE_MAX * 0.5;
       return Math.max(0, (pct / 90) * (READINESS_PINNACLE_MAX * 0.45));
     }
 
@@ -5639,10 +5869,10 @@
         message = "Comprehensive Final on the board. Advanced Finals and broader coverage unlock the next readiness band (high 70s → 80s).";
       } else if (!ADVANCED_FINAL_IDS.every(id => hasPassedQuiz(data, id))) {
         message = "Advanced track in progress — complete all three Advanced Finals (80%+) to unlock Pinnacle credit toward the 90s.";
-      } else if (!hasPassedQuiz(data, "pinnacle300")) {
-        message = "Advanced track complete. Pinnacle (90%+) adds the last readiness slice — optional but the strictest check.";
+      } else if (!hasPassedQuiz(data, "pinnacle1000")) {
+        message = "Advanced track complete. Climb HARD → BRUTAL → ABSURD → PSYCHO for the top readiness band.";
       } else {
-        message = "Full ladder complete (foundation → comprehensive → advanced → pinnacle). Score reflects your best verified performance on each tier.";
+        message = "Full ladder complete (foundation → comprehensive → advanced → pinnacle PSYCHO). Score reflects your best verified performance on each tier.";
       }
 
       return {
@@ -5781,12 +6011,21 @@
           }
         });
 
-        if (progress.final100Passed && progress.final150Passed && progress.final200Passed && !progress.pinnacle300Passed) {
-          addStep(
-            `Pass Pinnacle Examination (${PINNACLE_PASS_THRESHOLD}%+)`,
-            "Largest draw from the full mastery bank. Aim for consistent performance across all three modules first.",
-            { quizId: "pinnacle300" }
-          );
+        const pinnacleSteps = [
+          { id: "pinnacle300", key: "pinnacle300Passed", label: "Pinnacle: HARD", thresh: "90%" },
+          { id: "pinnacle500", key: "pinnacle500Passed", label: "Pinnacle: BRUTAL", thresh: "95%" },
+          { id: "pinnacle750", key: "pinnacle750Passed", label: "Pinnacle: ABSURD", thresh: "99%" },
+          { id: "pinnacle1000", key: "pinnacle1000Passed", label: "Pinnacle: PSYCHO", thresh: "99.9%" }
+        ];
+        for (const ex of pinnacleSteps) {
+          if (!progress[ex.key] && isQuizUnlocked(QUIZZES[ex.id])) {
+            addStep(
+              `Pass ${ex.label} (${ex.thresh})`,
+              QUIZZES[ex.id].description,
+              { quizId: ex.id }
+            );
+            break;
+          }
         }
       }
 
@@ -5834,10 +6073,10 @@
         }
       }
 
-      if (progress.pinnacle300Passed) {
+      if (progress.pinnacle1000Passed) {
         addStep(
           "Maintenance: mixed review",
-          "You cleared the pinnacle track. Rotate Part 1–3 quizzes and advanced finals to keep mechanisms sharp before the real exam.",
+          "You cleared the full pinnacle ladder. Rotate Part 1–3 quizzes and advanced finals to stay sharp before the real exam.",
           { nav: "dashboard" }
         );
       }
@@ -5860,7 +6099,8 @@
       if (!allChapterQuizzesPassed(progress)) headline = "Unlock the Comprehensive Final";
       else if (progress.finalCompleted && !(progress.final100Passed && progress.final150Passed && progress.final200Passed)) {
         headline = "Advanced exam track";
-      } else if (progress.pinnacle300Passed) headline = "Mastery maintenance";
+      } else if (progress.pinnacle1000Passed) headline = "Mastery maintenance";
+      else if (progress.pinnacle300Passed) headline = "Pinnacle ladder in progress";
 
       const subline = readiness.message || "Prioritized from your scores, unlock path, and topic accuracy on this device.";
 
@@ -6233,7 +6473,7 @@
         const chapterAttempts = (data.attempts || []).filter(a => CHAPTER_IDS.includes(a.quizId)).length;
         const finalAttempts = (data.attempts || []).filter(a => a.quizId === "final").length;
         const advancedAttempts = (data.attempts || []).filter(a => /^final(100|150|200)$/.test(a.quizId)).length;
-        const pinnacleAttempts = (data.attempts || []).filter(a => a.quizId === "pinnacle300").length;
+        const pinnacleAttempts = (data.attempts || []).filter(a => PINNACLE_QUIZ_IDS.includes(a.quizId)).length;
         profileChartInstances.push(new Chart(examCanvas, {
           type: "polarArea",
           data: {
@@ -6442,7 +6682,7 @@
             <h3>Score Breakdown</h3>
             ${breakdownHtml}
             <p style="font-size:0.78rem;color:var(--gray-500);margin:1rem 0 0;line-height:1.45;">
-              Passing: module &amp; comprehensive finals ${PASS_THRESHOLD}% · advanced finals ${ADVANCED_PASS_THRESHOLD}% · pinnacle ${PINNACLE_PASS_THRESHOLD}%.
+              Passing: module &amp; comprehensive finals ${PASS_THRESHOLD}% · advanced finals ${ADVANCED_PASS_THRESHOLD}% · pinnacle HARD 90% → BRUTAL 95% → ABSURD 99% → PSYCHO 99.9%.
             </p>
           </div>
         </div>
@@ -6836,12 +7076,21 @@
         ? `<strong>Last quiz:</strong> ${last.title} — ${last.pct != null ? `${last.pct}%` : "self-review"} (${last.correct}/${last.total}) on ${new Date(last.ts).toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" })}. `
         : "";
 
-      if (progress.pinnacle300Passed) {
+      if (progress.pinnacle1000Passed) {
         banner.hidden = false;
-        banner.innerHTML = lastLine + "<strong>Pinnacle achieved!</strong> You passed the mastery examination.";
+        banner.innerHTML = lastLine + "<strong>Pinnacle ladder complete!</strong> You passed PSYCHO (99.9%).";
+      } else if (progress.pinnacle750Passed) {
+        banner.hidden = false;
+        banner.innerHTML = lastLine + "<strong>ABSURD passed.</strong> Pinnacle: PSYCHO (1000 questions · 99.9%) is unlocked.";
+      } else if (progress.pinnacle500Passed) {
+        banner.hidden = false;
+        banner.innerHTML = lastLine + "<strong>BRUTAL passed.</strong> Pinnacle: ABSURD (750 questions · 99%) is unlocked.";
+      } else if (progress.pinnacle300Passed) {
+        banner.hidden = false;
+        banner.innerHTML = lastLine + "<strong>HARD passed.</strong> Pinnacle: BRUTAL (500 questions · 95%) is unlocked.";
       } else if (progress.finalCompleted) {
         banner.hidden = false;
-        banner.innerHTML = lastLine + `<strong>Advanced track unlocked.</strong> ${advancedPassed}/3 advanced finals passed at ${ADVANCED_PASS_THRESHOLD}%+. Pass all three to unlock the Pinnacle Exam (${PINNACLE_PASS_THRESHOLD}% to pass).`;
+        banner.innerHTML = lastLine + `<strong>Advanced track unlocked.</strong> ${advancedPassed}/3 advanced finals passed at ${ADVANCED_PASS_THRESHOLD}%+. Pass all three to unlock Pinnacle: HARD (300 · 90%).`;
       } else if (!allChapterQuizzesPassed(progress)) {
         const chaptersPassed = CHAPTER_IDS.filter(id => chapterQuizPassed(id, progress)).length;
         banner.hidden = false;
@@ -7440,7 +7689,7 @@
       }
 
       const passThreshold = getPassThreshold(activeQuizId);
-      const passed = quiz?.learningMode ? true : pct >= passThreshold;
+      const passed = isQuizAttemptPassed(activeQuizId, pct, correct, mcqTotal);
       const prevProgress = getProgress();
       let progressSaveWarning = "";
 
@@ -7522,11 +7771,17 @@
               pendingUnlockMessage = "Comprehensive Final Exam unlocked — you passed all three module quizzes at 70%+.";
             }
             if (quiz.id === "pinnacle300") {
-              pendingUnlockMessage = "Pinnacle Examination passed — full MCB80x mastery achieved!";
+              pendingUnlockMessage = "Pinnacle: HARD passed — BRUTAL is unlocked.";
+            } else if (quiz.id === "pinnacle500") {
+              pendingUnlockMessage = "Pinnacle: BRUTAL passed — ABSURD is unlocked.";
+            } else if (quiz.id === "pinnacle750") {
+              pendingUnlockMessage = "Pinnacle: ABSURD passed — PSYCHO is unlocked.";
+            } else if (quiz.id === "pinnacle1000") {
+              pendingUnlockMessage = "Pinnacle: PSYCHO passed — ladder complete.";
             } else if (ADVANCED_FINAL_IDS.includes(quiz.id)) {
               const p = { ...prevProgress, ...updates };
               if (p.final100Passed && p.final150Passed && p.final200Passed && !prevProgress.pinnacle300Passed) {
-                pendingUnlockMessage = "All three Advanced Finals passed! The Pinnacle Examination is now unlocked.";
+                pendingUnlockMessage = "All three Advanced Finals passed! Pinnacle: HARD is now unlocked.";
               }
             }
           }
@@ -7554,8 +7809,13 @@
           message = `Practice complete — ${pct}%. Review explanations below.`;
         }
       } else if (passed && pct >= 90) message = "Excellent — strong mastery at proctored-exam rigor.";
-      else if (passed) message = `Passed (${passThreshold}% required). Review missed explanations below.`;
-      else if (pct >= passThreshold - 5) message = `Below passing threshold (${passThreshold}%). Review explanations and retake.`;
+      else if (passed) {
+        message = activeQuizId === "pinnacle1000"
+          ? `Passed (${Math.ceil(mcqTotal * 0.999)}+ of ${mcqTotal} MCQ required). Review missed explanations below.`
+          : `Passed (${formatPassThreshold(activeQuizId)} required). Review missed explanations below.`;
+      } else if (activeQuizId === "pinnacle1000" && pct >= 99) {
+        message = `Below PSYCHO threshold (need ${Math.ceil(mcqTotal * 0.999)}+ of ${mcqTotal} correct). Review explanations and retake.`;
+      } else if (pct >= passThreshold - 5) message = `Below passing threshold (${formatPassThreshold(activeQuizId)}). Review explanations and retake.`;
       else if (pct >= 60) message = "Fair result. Revisit curriculum sections for missed mechanisms.";
       else message = "Keep studying — use the review below to target weak areas.";
 
