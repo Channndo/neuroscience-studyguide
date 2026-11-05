@@ -1661,13 +1661,14 @@ const PROCTORED_LESION_POOL = [
       "Incorrect: Bilateral flaccid paralysis at lesion level only is inconsistent with the stated lesion site.",
       "Incorrect: Ipsilateral face weakness only (facial nucleus pattern) reflects a different pathway or syndrome."
     ]
-  },
+  }
+];
 
 const PROCTORED_CIRCUIT_POOL = [
   {
     topic: "Neural Circuits",
-    module: "part3",
-    question: "Three-neuron chain: sensory → excitatory interneuron → motor. Sensory fires; interneuron is blocked. Motor output? — expected deficit?",
+    module: "part2",
+    question: "Three-neuron chain: sensory \u2192 excitatory interneuron \u2192 motor. Sensory fires; interneuron is blocked. Motor output?",
     options: [
       "Reduced or absent excitation of motor neuron",
       "Increased motor firing",
@@ -1675,18 +1676,18 @@ const PROCTORED_CIRCUIT_POOL = [
       "Saltatory conduction in muscle"
     ],
     correct: 0,
-    explanation: "Reduced or absent excitation of motor neuron",
+    explanation: "Without the interneuron relay, the motor neuron receives little or no excitation.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Increased motor firing does not follow from the stated circuit.",
+      "Incorrect: Only neuromodulation is inconsistent with the wiring described.",
+      "Incorrect: Saltatory conduction in muscle is unrelated to this circuit."
     ]
   },
   {
     topic: "Neural Circuits",
-    module: "part3",
-    question: "Recurrent inhibition: motor neuron excites interneuron that inhibits same motor neuron. Effect? — expected deficit?",
+    module: "part2",
+    question: "Recurrent inhibition: motor neuron excites interneuron that inhibits the same motor neuron. Effect?",
     options: [
       "Negative feedback limiting firing duration",
       "Runaway excitation",
@@ -1694,202 +1695,297 @@ const PROCTORED_CIRCUIT_POOL = [
       "Myelin formation"
     ],
     correct: 0,
-    explanation: "Negative feedback limiting firing duration",
+    explanation: "Recurrent inhibition provides negative feedback on motor neuron firing.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Runaway excitation does not follow from the stated circuit.",
+      "Incorrect: Only LTP is inconsistent with the wiring described.",
+      "Incorrect: Myelin formation is unrelated to this circuit."
     ]
   },
   {
     topic: "Neural Circuits",
-    module: "part3",
-    question: "Circuit 2: excitatory + inhibitory interneurons with serotonergic modulation — expected deficit?",
+    module: "part2",
+    question: "Feedforward inhibition: sensory input excites both relay neuron and interneuron that inhibits relay. Net effect on relay timing?",
     options: [
-      "Modulation changes network gain",
-      "Only removes myelin",
-      "Blocks all Na⁺ globally",
-      "Eliminates resting potential"
+      "Narrower window for relay firing (sharper temporal filtering)",
+      "Relay fires longer without limit",
+      "Relay cannot fire at all always",
+      "Only gap junction coupling"
     ],
     correct: 0,
-    explanation: "Modulation changes gain not single synapse delay only",
+    explanation: "Feedforward inhibition curtails relay output to a brief window.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Relay fires longer without limit does not follow from the stated circuit.",
+      "Incorrect: Relay cannot fire at all always is inconsistent with the wiring described.",
+      "Incorrect: Only gap junction coupling is unrelated to this circuit."
     ]
   },
   {
     topic: "Neural Circuits",
-    module: "part3",
-    question: "Circuit 3: excitatory + inhibitory interneurons with serotonergic modulation — expected deficit?",
+    module: "part2",
+    question: "Disinhibition: inhibitory interneuron is silenced, releasing target neuron from inhibition. Target neuron activity?",
     options: [
-      "Modulation changes network gain",
-      "Only removes myelin",
-      "Blocks all Na⁺ globally",
-      "Eliminates resting potential"
+      "Increases (disinhibition)",
+      "Always decreases",
+      "Unchanged always",
+      "Only photoreceptor responds"
     ],
     correct: 0,
-    explanation: "Modulation changes gain not single synapse delay only",
+    explanation: "Removing inhibition increases target excitability.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Always decreases does not follow from the stated circuit.",
+      "Incorrect: Unchanged always is inconsistent with the wiring described.",
+      "Incorrect: Only photoreceptor responds is unrelated to this circuit."
     ]
   },
   {
     topic: "Neural Circuits",
-    module: "part3",
-    question: "Circuit 4: excitatory + inhibitory interneurons with serotonergic modulation — expected deficit?",
+    module: "part2",
+    question: "Reciprocal inhibition between two antagonist motor pools (flexor/extensor). When flexor pool is active, extensor pool?",
     options: [
-      "Modulation changes network gain",
-      "Only removes myelin",
-      "Blocks all Na⁺ globally",
-      "Eliminates resting potential"
+      "Reciprocally inhibited (reduced firing)",
+      "Co-activated equally",
+      "Unrelated",
+      "Only sensory firing"
     ],
     correct: 0,
-    explanation: "Modulation changes gain not single synapse delay only",
+    explanation: "Reciprocal inhibition prevents co-contraction of antagonists.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Co-activated equally does not follow from the stated circuit.",
+      "Incorrect: Unrelated is inconsistent with the wiring described.",
+      "Incorrect: Only sensory firing is unrelated to this circuit."
     ]
   },
   {
     topic: "Neural Circuits",
-    module: "part3",
-    question: "Circuit 5: excitatory + inhibitory interneurons with serotonergic modulation — expected deficit?",
+    module: "part2",
+    question: "Central pattern generator (CPG) for locomotion: rhythmic output persists after sensory input ends. This implies?",
     options: [
-      "Modulation changes network gain",
-      "Only removes myelin",
-      "Blocks all Na⁺ globally",
-      "Eliminates resting potential"
+      "Recurrent excitatory/inhibitory loops can sustain rhythm intrinsically",
+      "Sensory input required every cycle always",
+      "Only myelin generates rhythm",
+      "Only cortex required each step"
     ],
     correct: 0,
-    explanation: "Modulation changes gain not single synapse delay only",
+    explanation: "CPGs use local circuit dynamics to maintain rhythmic motor patterns.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Sensory input required every cycle always does not follow from the stated circuit.",
+      "Incorrect: Only myelin generates rhythm is inconsistent with the wiring described.",
+      "Incorrect: Only cortex required each step is unrelated to this circuit."
     ]
   },
   {
     topic: "Neural Circuits",
-    module: "part3",
-    question: "Circuit 6: excitatory + inhibitory interneurons with serotonergic modulation — expected deficit?",
+    module: "part2",
+    question: "Aplysia siphon withdrawal: strong tail shock sensitizes siphon response via serotonin on sensory terminals. Mechanism?",
     options: [
-      "Modulation changes network gain",
-      "Only removes myelin",
-      "Blocks all Na⁺ globally",
-      "Eliminates resting potential"
+      "Serotonin increases cAMP/PKA and broadens sensory terminal excitability (sensitization)",
+      "Only postsynaptic K\u207a block always",
+      "Only long-term depression",
+      "Only gap junction opening"
     ],
     correct: 0,
-    explanation: "Modulation changes gain not single synapse delay only",
+    explanation: "Serotonin modulates presynaptic release in Aplysia sensitization.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Only postsynaptic K\u207a block always does not follow from the stated circuit.",
+      "Incorrect: Only long-term depression is inconsistent with the wiring described.",
+      "Incorrect: Only gap junction opening is unrelated to this circuit."
     ]
   },
   {
     topic: "Neural Circuits",
-    module: "part3",
-    question: "Circuit 7: excitatory + inhibitory interneurons with serotonergic modulation — expected deficit?",
+    module: "part2",
+    question: "Summation: EPSP +5 mV and IPSP \u22123 mV arrive simultaneously at soma (linear range). Approximate net change?",
     options: [
-      "Modulation changes network gain",
-      "Only removes myelin",
-      "Blocks all Na⁺ globally",
-      "Eliminates resting potential"
+      "+2 mV toward threshold",
+      "+8 mV always",
+      "\u22128 mV always",
+      "0 mV always"
     ],
     correct: 0,
-    explanation: "Modulation changes gain not single synapse delay only",
+    explanation: "Subthreshold linear summation: +5 + (\u22123) \u2248 +2 mV.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: +8 mV always does not follow from the stated circuit.",
+      "Incorrect: \u22128 mV always is inconsistent with the wiring described.",
+      "Incorrect: 0 mV always is unrelated to this circuit."
     ]
   },
   {
     topic: "Neural Circuits",
-    module: "part3",
-    question: "Circuit 8: excitatory + inhibitory interneurons with serotonergic modulation — expected deficit?",
+    module: "part2",
+    question: "Two EPSPs +3 mV each arrive 2 ms apart within \u03c4_m. Compared with one EPSP, somatic depolarization?",
     options: [
-      "Modulation changes network gain",
-      "Only removes myelin",
-      "Blocks all Na⁺ globally",
-      "Eliminates resting potential"
+      "Greater peak (temporal summation)",
+      "Same peak always",
+      "Zero always",
+      "Only inhibition results"
     ],
     correct: 0,
-    explanation: "Modulation changes gain not single synapse delay only",
+    explanation: "Temporal summation within \u03c4 increases peak depolarization.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Same peak always does not follow from the stated circuit.",
+      "Incorrect: Zero always is inconsistent with the wiring described.",
+      "Incorrect: Only inhibition results is unrelated to this circuit."
     ]
   },
   {
     topic: "Neural Circuits",
-    module: "part3",
-    question: "Circuit 9: excitatory + inhibitory interneurons with serotonergic modulation — expected deficit?",
+    module: "part2",
+    question: "Feedback inhibition in cortex: pyramidal cell activates interneuron that inhibits same pyramidal cell. Function?",
     options: [
-      "Modulation changes network gain",
-      "Only removes myelin",
-      "Blocks all Na⁺ globally",
-      "Eliminates resting potential"
+      "Gain control and stabilization of firing rate",
+      "Guaranteed runaway activity",
+      "Only LTP induction",
+      "Only myelin repair"
     ],
     correct: 0,
-    explanation: "Modulation changes gain not single synapse delay only",
+    explanation: "Feedback inhibition stabilizes cortical firing.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Guaranteed runaway activity does not follow from the stated circuit.",
+      "Incorrect: Only LTP induction is inconsistent with the wiring described.",
+      "Incorrect: Only myelin repair is unrelated to this circuit."
     ]
   },
   {
     topic: "Neural Circuits",
-    module: "part3",
-    question: "Circuit 10: excitatory + inhibitory interneurons with serotonergic modulation — expected deficit?",
+    module: "part2",
+    question: "Lateral inhibition in retina: surround inhibits center. Visual edge enhancement occurs because?",
     options: [
-      "Modulation changes network gain",
-      "Only removes myelin",
-      "Blocks all Na⁺ globally",
-      "Eliminates resting potential"
+      "Contrast at borders increases due to differential center vs surround firing",
+      "All pixels fire equally",
+      "Only photoreceptors spike",
+      "Only cochlea tuned"
     ],
     correct: 0,
-    explanation: "Modulation changes gain not single synapse delay only",
+    explanation: "Lateral inhibition enhances contrast at edges.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: All pixels fire equally does not follow from the stated circuit.",
+      "Incorrect: Only photoreceptors spike is inconsistent with the wiring described.",
+      "Incorrect: Only cochlea tuned is unrelated to this circuit."
     ]
   },
   {
     topic: "Neural Circuits",
-    module: "part3",
-    question: "Circuit 11: excitatory + inhibitory interneurons with serotonergic modulation — expected deficit?",
+    module: "part2",
+    question: "Inhibitory interneuron (PV+) provides perisomatic inhibition on pyramidal cell. Effect on spike timing?",
     options: [
-      "Modulation changes network gain",
-      "Only removes myelin",
-      "Blocks all Na⁺ globally",
-      "Eliminates resting potential"
+      "Precise control of spike timing and synchrony",
+      "Only increases firing rate without bound",
+      "Only blocks all input permanently",
+      "Only affects glomeruli"
     ],
     correct: 0,
-    explanation: "Modulation changes gain not single synapse delay only",
+    explanation: "Perisomatic inhibition strongly regulates spike timing.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Only increases firing rate without bound does not follow from the stated circuit.",
+      "Incorrect: Only blocks all input permanently is inconsistent with the wiring described.",
+      "Incorrect: Only affects glomeruli is unrelated to this circuit."
+    ]
+  },
+  {
+    topic: "Neural Circuits",
+    module: "part2",
+    question: "Excitatory drive to motor neuron with concurrent shunting inhibition (open Cl\u207b channels). EPSP amplitude at soma?",
+    options: [
+      "Reduced (shunting) even if E_Cl near rest",
+      "Always increased",
+      "Unchanged always",
+      "Only Na\u207a blocked"
+    ],
+    correct: 0,
+    explanation: "Increased conductance shunts EPSPs.",
+    wrongExplanations: [
+      "",
+      "Incorrect: Always increased does not follow from the stated circuit.",
+      "Incorrect: Unchanged always is inconsistent with the wiring described.",
+      "Incorrect: Only Na\u207a blocked is unrelated to this circuit."
+    ]
+  },
+  {
+    topic: "Neural Circuits",
+    module: "part2",
+    question: "Divergent excitatory circuit: one sensory neuron drives many motor neurons. Effect?",
+    options: [
+      "Amplification/spread of signal to multiple outputs",
+      "Only one motor neuron can ever fire",
+      "Only inhibition spreads",
+      "Only photoreceptor signal"
+    ],
+    correct: 0,
+    explanation: "Divergence distributes input to many targets.",
+    wrongExplanations: [
+      "",
+      "Incorrect: Only one motor neuron can ever fire does not follow from the stated circuit.",
+      "Incorrect: Only inhibition spreads is inconsistent with the wiring described.",
+      "Incorrect: Only photoreceptor signal is unrelated to this circuit."
+    ]
+  },
+  {
+    topic: "Neural Circuits",
+    module: "part2",
+    question: "Convergent excitatory circuit: many sensory neurons onto one motor neuron. Effect?",
+    options: [
+      "Spatial summation can reach threshold more easily",
+      "Motor neuron cannot integrate inputs",
+      "Only one synapse matters always",
+      "Only gap junctions converge"
+    ],
+    correct: 0,
+    explanation: "Convergence allows spatial summation.",
+    wrongExplanations: [
+      "",
+      "Incorrect: Motor neuron cannot integrate inputs does not follow from the stated circuit.",
+      "Incorrect: Only one synapse matters always is inconsistent with the wiring described.",
+      "Incorrect: Only gap junctions converge is unrelated to this circuit."
+    ]
+  },
+  {
+    topic: "Neural Circuits",
+    module: "part2",
+    question: "Renshaw cell recurrent inhibition on alpha motor neuron after firing. Purpose?",
+    options: [
+      "Limits firing rate and prevents over-excitation",
+      "Increases firing without limit",
+      "Only LTP at NMJ",
+      "Only cerebellar learning"
+    ],
+    correct: 0,
+    explanation: "Renshaw cells provide recurrent inhibition to motor neurons.",
+    wrongExplanations: [
+      "",
+      "Incorrect: Increases firing without limit does not follow from the stated circuit.",
+      "Incorrect: Only LTP at NMJ is inconsistent with the wiring described.",
+      "Incorrect: Only cerebellar learning is unrelated to this circuit."
+    ]
+  },
+  {
+    topic: "Neural Circuits",
+    module: "part2",
+    question: "Mutual excitation between two neurons with slow synapses. Possible circuit behavior?",
+    options: [
+      "Sustained co-activation or oscillations depending on kinetics",
+      "Immediate silence always",
+      "Only photopigment bleaching",
+      "Only DCML loss"
+    ],
+    correct: 0,
+    explanation: "Mutual excitation can sustain activity or oscillate.",
+    wrongExplanations: [
+      "",
+      "Incorrect: Immediate silence always does not follow from the stated circuit.",
+      "Incorrect: Only photopigment bleaching is inconsistent with the wiring described.",
+      "Incorrect: Only DCML loss is unrelated to this circuit."
     ]
   }
 ];
@@ -1898,94 +1994,145 @@ const PROCTORED_CLAMP_TRACE_POOL = [
   {
     topic: "Voltage Clamp",
     module: "part1",
-    question: "The clamp trace shows a step to 0 mV with early inward then late outward current. Which currents dominate each phase?",
-    diagram: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 120\" role=\"img\" aria-label=\"Voltage clamp trace\"><rect width=\"320\" height=\"120\" fill=\"#fafafa\"/><polyline fill=\"none\" stroke=\"#a41034\" stroke-width=\"2\" points=\"10,60 80,60 80,30 200,30 200,90 300,90\"/></svg>",
+    question: "The clamp trace shows a depolarizing step to 0 mV with early inward then late outward current (squid axon). Which currents dominate each phase?",
     options: [
-      "Early inward Na⁺; later outward K⁺",
-      "Only K⁺ throughout",
+      "Early inward Na\u207a; later outward K\u207a",
+      "Only K\u207a throughout",
       "Only leak current",
-      "Ca²⁺ only inward at all times"
+      "Ca\u00b2\u207a only inward at all times"
     ],
     correct: 0,
-    explanation: "Depolarizing clamp activates Na⁺ first, then delayed K⁺ repolarizes the command.",
-    wrongExplanations: ["", "K⁺ alone cannot explain early inward current at 0 mV from rest.", "Leak alone does not reproduce Hodgkin–Huxley sequence.", "Ca²⁺ is not the primary squid axon clamp inward at this step."]
+    diagram: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 160\" role=\"img\" aria-label=\"HH step clamp\"><rect width=\"340\" height=\"160\" fill=\"#fafafa\"/><text x=\"170\" y=\"14\" text-anchor=\"middle\" font-size=\"10\">I (nA) vs time</text><line x1=\"30\" y1=\"130\" x2=\"310\" y2=\"130\" stroke=\"#333\"/><polyline fill=\"none\" stroke=\"#a41034\" stroke-width=\"2\" points=\"30,90 100,90 100,95 250,95\"/></svg>",
+    explanation: "Depolarizing clamp activates Na\u207a first, then delayed K\u207a.",
+    wrongExplanations: [
+      "",
+      "K\u207a alone cannot explain early inward current at 0 mV from rest.",
+      "Leak alone does not reproduce Hodgkin\u2013Huxley sequence.",
+      "Ca\u00b2\u207a is not the primary squid axon clamp inward at this step."
+    ]
   },
   {
     topic: "Voltage Clamp",
     module: "part1",
-    question: "The clamp trace shows a step to 0 mV with early inward then late outward current. Which currents dominate each phase?",
-    diagram: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 120\" role=\"img\" aria-label=\"Voltage clamp trace\"><rect width=\"320\" height=\"120\" fill=\"#fafafa\"/><polyline fill=\"none\" stroke=\"#a41034\" stroke-width=\"2\" points=\"10,60 80,60 80,30 200,30 200,90 300,90\"/></svg>",
+    question: "After TTX, the same voltage step shows only late outward current. This outward current is primarily:",
     options: [
-      "Early inward Na⁺; later outward K⁺",
-      "Only K⁺ throughout",
-      "Only leak current",
-      "Ca²⁺ only inward at all times"
+      "Voltage-gated K\u207a",
+      "Na\u207a influx",
+      "Photopigment current",
+      "Glomerular odor current"
     ],
     correct: 0,
-    explanation: "Depolarizing clamp activates Na⁺ first, then delayed K⁺ repolarizes the command.",
-    wrongExplanations: ["", "K⁺ alone cannot explain early inward current at 0 mV from rest.", "Leak alone does not reproduce Hodgkin–Huxley sequence.", "Ca²⁺ is not the primary squid axon clamp inward at this step."]
+    diagram: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 160\" role=\"img\" aria-label=\"TTX clamp\"><rect width=\"340\" height=\"160\" fill=\"#fafafa\"/><text x=\"170\" y=\"14\" text-anchor=\"middle\" font-size=\"10\">I (nA) vs time</text><line x1=\"30\" y1=\"130\" x2=\"310\" y2=\"130\" stroke=\"#333\"/><polyline fill=\"none\" stroke=\"#a41034\" stroke-width=\"2\" points=\"30,90 100,90 100,95 250,95\"/></svg>",
+    explanation: "TTX blocks Na\u207a; remaining outward current is primarily K\u207a.",
+    wrongExplanations: [
+      "",
+      "Na\u207a is blocked by TTX in this condition.",
+      "Not a photoreceptor recording.",
+      "Not olfactory epithelium."
+    ]
   },
   {
     topic: "Voltage Clamp",
     module: "part1",
-    question: "The clamp trace shows a step to 0 mV with early inward then late outward current. Which currents dominate each phase?",
-    diagram: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 120\" role=\"img\" aria-label=\"Voltage clamp trace\"><rect width=\"320\" height=\"120\" fill=\"#fafafa\"/><polyline fill=\"none\" stroke=\"#a41034\" stroke-width=\"2\" points=\"10,60 80,60 80,30 200,30 200,90 300,90\"/></svg>",
+    question: "After TEA, the early inward current remains but repolarizing outward current is reduced. Early inward is:",
     options: [
-      "Early inward Na⁺; later outward K⁺",
-      "Only K⁺ throughout",
-      "Only leak current",
-      "Ca²⁺ only inward at all times"
+      "Na\u207a current (TEA blocks K\u207a)",
+      "Only Cl\u207b",
+      "Only pump current",
+      "Only gap junction"
     ],
     correct: 0,
-    explanation: "Depolarizing clamp activates Na⁺ first, then delayed K⁺ repolarizes the command.",
-    wrongExplanations: ["", "K⁺ alone cannot explain early inward current at 0 mV from rest.", "Leak alone does not reproduce Hodgkin–Huxley sequence.", "Ca²⁺ is not the primary squid axon clamp inward at this step."]
+    diagram: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 160\" role=\"img\" aria-label=\"TEA clamp\"><rect width=\"340\" height=\"160\" fill=\"#fafafa\"/><text x=\"170\" y=\"14\" text-anchor=\"middle\" font-size=\"10\">I (nA) vs time</text><polyline fill=\"none\" stroke=\"#a41034\" stroke-width=\"2\" points=\"30,90 100,90 100,40 250,40 250,70 300,70\"/></svg>",
+    explanation: "TEA blocks K\u207a channels; inward Na\u207a remains on depolarizing steps.",
+    wrongExplanations: [
+      "",
+      "Cl\u207b is not the early inward at 0 mV here.",
+      "Pump current is negligible at ms scale.",
+      "Gap junctions are not the clamp signal."
+    ]
   },
   {
     topic: "Voltage Clamp",
     module: "part1",
-    question: "The clamp trace shows a step to 0 mV with early inward then late outward current. Which currents dominate each phase?",
-    diagram: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 120\" role=\"img\" aria-label=\"Voltage clamp trace\"><rect width=\"320\" height=\"120\" fill=\"#fafafa\"/><polyline fill=\"none\" stroke=\"#a41034\" stroke-width=\"2\" points=\"10,60 80,60 80,30 200,30 200,90 300,90\"/></svg>",
+    question: "K\u207a-only condition (Na\u207a blocked): step to \u221240 mV produces sustained outward current. This indicates:",
     options: [
-      "Early inward Na⁺; later outward K⁺",
-      "Only K⁺ throughout",
-      "Only leak current",
-      "Ca²⁺ only inward at all times"
+      "K\u207a channels open at depolarized command",
+      "Na\u207a regenerative spike",
+      "Only photopigment",
+      "Only muscle spindle"
     ],
     correct: 0,
-    explanation: "Depolarizing clamp activates Na⁺ first, then delayed K⁺ repolarizes the command.",
-    wrongExplanations: ["", "K⁺ alone cannot explain early inward current at 0 mV from rest.", "Leak alone does not reproduce Hodgkin–Huxley sequence.", "Ca²⁺ is not the primary squid axon clamp inward at this step."]
+    diagram: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 160\" role=\"img\" aria-label=\"K only\"><rect width=\"340\" height=\"160\" fill=\"#fafafa\"/><text x=\"170\" y=\"14\" text-anchor=\"middle\" font-size=\"10\">I_K (nA)</text><polyline fill=\"none\" stroke=\"#a41034\" stroke-width=\"2\" points=\"30,100 100,100 100,120 250,120\"/></svg>",
+    explanation: "With Na\u207a blocked, outward K\u207a follows depolarizing command.",
+    wrongExplanations: [
+      "",
+      "Na\u207a is pharmacologically blocked.",
+      "Not phototransduction.",
+      "Not spindle stretch."
+    ]
   },
   {
     topic: "Voltage Clamp",
     module: "part1",
-    question: "The clamp trace shows a step to 0 mV with early inward then late outward current. Which currents dominate each phase?",
-    diagram: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 120\" role=\"img\" aria-label=\"Voltage clamp trace\"><rect width=\"320\" height=\"120\" fill=\"#fafafa\"/><polyline fill=\"none\" stroke=\"#a41034\" stroke-width=\"2\" points=\"10,60 80,60 80,30 200,30 200,90 300,90\"/></svg>",
+    question: "I\u2013V plot shows inward current at depolarized potentials crossing zero near +55 mV. This reversal near +55 mV suggests:",
     options: [
-      "Early inward Na⁺; later outward K⁺",
-      "Only K⁺ throughout",
-      "Only leak current",
-      "Ca²⁺ only inward at all times"
+      "Predominantly Na\u207a current under these conditions",
+      "Predominantly K\u207a only at all voltages",
+      "No ionic currents",
+      "Only Cl\u207b at all voltages"
     ],
     correct: 0,
-    explanation: "Depolarizing clamp activates Na⁺ first, then delayed K⁺ repolarizes the command.",
-    wrongExplanations: ["", "K⁺ alone cannot explain early inward current at 0 mV from rest.", "Leak alone does not reproduce Hodgkin–Huxley sequence.", "Ca²⁺ is not the primary squid axon clamp inward at this step."]
+    diagram: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 160\" role=\"img\" aria-label=\"I-V curve\"><rect width=\"340\" height=\"160\" fill=\"#fafafa\"/><text x=\"170\" y=\"14\" text-anchor=\"middle\" font-size=\"10\">I (nA)</text><text x=\"8\" y=\"80\" font-size=\"10\" transform=\"rotate(-90 8 80)\">V_m (mV)</text><line x1=\"40\" y1=\"140\" x2=\"300\" y2=\"140\" stroke=\"#333\"/><line x1=\"40\" y1=\"20\" x2=\"40\" y2=\"140\" stroke=\"#333\"/><polyline fill=\"none\" stroke=\"#a41034\" stroke-width=\"2\" points=\"40,100 120,100 200,40 280,120\"/></svg>",
+    explanation: "Na\u207a reversal near +55 mV matches inward current reversing there.",
+    wrongExplanations: [
+      "",
+      "K\u207a reversal is near E_K (~\u221290 mV).",
+      "Ionic currents are present.",
+      "Cl\u207b reversal is typically negative to rest."
+    ]
   },
   {
     topic: "Voltage Clamp",
     module: "part1",
-    question: "The clamp trace shows a step to 0 mV with early inward then late outward current. Which currents dominate each phase?",
-    diagram: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 120\" role=\"img\" aria-label=\"Voltage clamp trace\"><rect width=\"320\" height=\"120\" fill=\"#fafafa\"/><polyline fill=\"none\" stroke=\"#a41034\" stroke-width=\"2\" points=\"10,60 80,60 80,30 200,30 200,90 300,90\"/></svg>",
+    question: "Current-clamp: brief hyperpolarizing current step produces exponential return with time constant \u03c4. \u03c4 primarily reflects:",
     options: [
-      "Early inward Na⁺; later outward K⁺",
-      "Only K⁺ throughout",
-      "Only leak current",
-      "Ca²⁺ only inward at all times"
+      "R_m \u00d7 C_m membrane properties",
+      "Axon diameter only",
+      "Only synaptic quanta",
+      "Only myelin thickness without R_m"
     ],
     correct: 0,
-    explanation: "Depolarizing clamp activates Na⁺ first, then delayed K⁺ repolarizes the command.",
-    wrongExplanations: ["", "K⁺ alone cannot explain early inward current at 0 mV from rest.", "Leak alone does not reproduce Hodgkin–Huxley sequence.", "Ca²⁺ is not the primary squid axon clamp inward at this step."]
+    diagram: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 160\" role=\"img\" aria-label=\"current clamp\"><rect width=\"340\" height=\"160\" fill=\"#fafafa\"/><text x=\"170\" y=\"14\" text-anchor=\"middle\" font-size=\"10\">V_m (mV) vs time</text><polyline fill=\"none\" stroke=\"#a41034\" stroke-width=\"2\" points=\"30,110 100,110 100,70 220,70 220,85 300,85\"/></svg>",
+    explanation: "Passive \u03c4 = R_m C_m.",
+    wrongExplanations: [
+      "",
+      "Diameter affects R_a and \u03bb, not \u03c4 alone directly.",
+      "Synaptic quanta are not the passive \u03c4 here.",
+      "Myelin affects \u03bb and conduction, not this passive \u03c4 definition."
+    ]
+  },
+  {
+    topic: "Voltage Clamp",
+    module: "part1",
+    question: "Subthreshold current-clamp step produces graded depolarization without spikes. The trace shows:",
+    options: [
+      "Passive/subthreshold response without regenerative Na\u207a activation",
+      "Full action potential train",
+      "Only synaptic vesicle fusion",
+      "Only cochlear tuning"
+    ],
+    correct: 0,
+    diagram: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 160\" role=\"img\" aria-label=\"subthreshold\"><rect width=\"340\" height=\"160\" fill=\"#fafafa\"/><text x=\"170\" y=\"14\" text-anchor=\"middle\" font-size=\"10\">V_m (mV)</text><polyline fill=\"none\" stroke=\"#a41034\" stroke-width=\"2\" points=\"30,100 100,100 100,85 250,85\"/></svg>",
+    explanation: "Subthreshold steps do not trigger regenerative spikes.",
+    wrongExplanations: [
+      "",
+      "No Na\u207a regenerative upstroke is shown.",
+      "Vesicle fusion is not the plotted V_m.",
+      "Not basilar membrane tuning."
+    ]
   }
 ];
+
 
 const PROCTORED_MOCK_POOL = [
   ...PROCTORED_SATA_POOL,
