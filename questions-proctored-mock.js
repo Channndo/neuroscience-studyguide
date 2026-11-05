@@ -54,12 +54,12 @@ const PROCTORED_SATA_POOL = [
       "Higher leak conductance tends to shorten λ",
       "τ sets how fast voltage changes for a given current"
     ],
-    correctIndices: [0, 2, 3],
+    correctIndices: [0, 1, 2, 3],
     scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
-    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    explanation: "τ = R_m C_m; λ = √(R_m/R_i) so λ rises if R_m rises with R_i fixed; higher leak (lower R_m) shortens λ; τ sets voltage change speed for a given current.",
     wrongExplanations: [
       "",
-      "Selecting this contradicts the keyed mechanism for statement 2.",
+      "",
       "",
       ""
     ]
@@ -427,7 +427,7 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Visual System",
     module: "part3",
-    question: "Left optic tract lesion — expected deficit?",
+    question: "Left optic tract lesion.",
     options: [
       "Left monocular blindness",
       "Right homonymous hemianopia",
@@ -446,7 +446,7 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Visual System",
     module: "part3",
-    question: "Optic chiasm compression (pituitary) — expected deficit?",
+    question: "Optic chiasm compression (pituitary).",
     options: [
       "Bitemporal hemianopia",
       "Right homonymous hemianopia",
@@ -465,7 +465,7 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Visual System",
     module: "part3",
-    question: "Right Meyer's loop (temporal) damage — expected deficit?",
+    question: "Right Meyer's loop (temporal) damage.",
     options: [
       "Left superior quadrantanopia",
       "Right inferior quadrantanopia",
@@ -484,7 +484,7 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Motor Systems",
     module: "part3",
-    question: "Left lateral corticospinal tract in medulla — expected deficit?",
+    question: "Left medullary pyramid (corticospinal fibers before decussation). Most likely deficit:",
     options: [
       "Right limb weakness (UMN)",
       "Left limb weakness",
@@ -503,7 +503,7 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Motor Systems",
     module: "part3",
-    question: "Complete spinal hemisection at T10 (Brown-Séquard) — expected deficit?",
+    question: "Complete spinal hemisection at T10 (Brown-Séquard).",
     options: [
       "Ipsilateral UMN weakness and DCML loss; contralateral spinothalamic loss",
       "Only pain loss bilaterally",
@@ -522,7 +522,7 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Motor Systems",
     module: "part3",
-    question: "Anterior spinal artery syndrome at thoracic level — expected deficit?",
+    question: "Anterior spinal artery syndrome at thoracic level.",
     options: [
       "Bilateral motor and pain/temp loss with spared dorsal columns",
       "Isolated proprioception loss only",
@@ -541,15 +541,15 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Neuroanatomy",
     module: "part3",
-    question: "Right middle cerebral artery stroke (dominant hemisphere) — expected deficit?",
+    question: "Right middle cerebral artery stroke (non-dominant hemisphere). Most likely deficit:",
     options: [
-      "Contralateral face/arm weakness; language deficit if dominant",
+      "Contralateral (left) face/arm weakness; spatial neglect possible; aphasia unlikely",
       "Ipsilateral weakness only",
       "Pure vision loss only",
       "Only cerebellar signs"
     ],
     correct: 0,
-    explanation: "Left hemiparesis and aphasia if dominant",
+    explanation: "Right MCA supplies left body motor cortex; non-dominant right hemisphere → left hemiparesis without classic aphasia.",
     wrongExplanations: [
       "",
       "This pattern does not match the anatomy of the stated lesion.",
@@ -560,7 +560,7 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Neuroanatomy",
     module: "part3",
-    question: "Broca area (left frontal) lesion — expected deficit?",
+    question: "Broca area (left frontal) lesion.",
     options: [
       "Nonfluent aphasia with relatively preserved comprehension",
       "Fluent nonsense speech (Wernicke)",
@@ -579,7 +579,7 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Neuroanatomy",
     module: "part3",
-    question: "Wernicke area lesion — expected deficit?",
+    question: "Wernicke area lesion.",
     options: [
       "Fluent aphasia with poor comprehension",
       "Broca nonfluent aphasia",
@@ -598,7 +598,7 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Learning & Memory",
     module: "part3",
-    question: "Bilateral hippocampal damage — expected deficit?",
+    question: "Bilateral hippocampal damage.",
     options: [
       "Anterograde declarative amnesia",
       "Loss of all procedural skills instantly",
@@ -617,7 +617,7 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Motor Systems",
     module: "part3",
-    question: "Cerebellar hemisphere lesion — expected deficit?",
+    question: "Cerebellar hemisphere lesion.",
     options: [
       "Ipsilateral limb ataxia/dysmetria",
       "Contralateral hemiparesis",
@@ -636,7 +636,7 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Motor Systems",
     module: "part3",
-    question: "Basal ganglia dopamine loss (Parkinson) — expected deficit?",
+    question: "Basal ganglia dopamine loss (Parkinson).",
     options: [
       "Bradykinesia, rigidity, resting tremor",
       "Hyperkinetic chorea",
@@ -655,7 +655,7 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Auditory System",
     module: "part3",
-    question: "Unilateral cochlear nerve section — expected deficit?",
+    question: "Unilateral cochlear nerve section.",
     options: [
       "Ipsilateral SNHL",
       "Conductive loss only",
@@ -674,7 +674,7 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Somatosensation",
     module: "part3",
-    question: "Right dorsal column lesion at C5 — expected deficit?",
+    question: "Right dorsal column lesion at C5.",
     options: [
       "Ipsilateral DCML loss below lesion",
       "Contralateral pain loss only",
@@ -693,7 +693,7 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Somatosensation",
     module: "part3",
-    question: "Left spinothalamic tract lesion at T6 — expected deficit?",
+    question: "Left spinothalamic tract lesion at T6.",
     options: [
       "Contralateral pain/temp loss below lesion",
       "Ipsilateral proprioception loss",
@@ -712,669 +712,956 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Visual System",
     module: "part3",
-    question: "Clinical vignette 1: focal CNS lesion — expected deficit?",
+  {
+    topic: "Clinical Neuroanatomy",
+    module: "part3",
+    question: "Lesion: Left optic nerve. Most likely deficit:",
     options: [
-      "Deficit matches stated pathway",
-      "Unrelated sensory modality loss only",
-      "Global coma from single cranial nerve",
-      "Purely metabolic with no localization"
+      "Total blindness in the left eye",
+      "Right homonymous hemianopia",
+      "Bitemporal hemianopia",
+      "Left superior quadrantanopia"
     ],
     correct: 0,
-    explanation: "Deficit matches stated pathway",
+    explanation: "Left optic nerve \u2192 Total blindness in the left eye.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Right homonymous hemianopia does not follow from a left optic nerve lesion.",
+      "Incorrect: Bitemporal hemianopia is inconsistent with the stated lesion site.",
+      "Incorrect: Left superior quadrantanopia reflects a different pathway or syndrome."
     ]
   },
   {
-    topic: "Motor Systems",
+    topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Clinical vignette 2: focal CNS lesion — expected deficit?",
+    question: "Lesion: Right optic nerve. Most likely deficit:",
     options: [
-      "Deficit matches stated pathway",
-      "Unrelated sensory modality loss only",
-      "Global coma from single cranial nerve",
-      "Purely metabolic with no localization"
+      "Total blindness in the right eye",
+      "Left monocular blindness",
+      "Bitemporal hemianopia",
+      "Right homonymous hemianopia"
     ],
     correct: 0,
-    explanation: "Deficit matches stated pathway",
+    explanation: "Right optic nerve \u2192 Total blindness in the right eye.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Left monocular blindness does not follow from a right optic nerve lesion.",
+      "Incorrect: Bitemporal hemianopia is inconsistent with the stated lesion site.",
+      "Incorrect: Right homonymous hemianopia reflects a different pathway or syndrome."
     ]
   },
   {
-    topic: "Neuroanatomy",
+    topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Clinical vignette 3: focal CNS lesion — expected deficit?",
+    question: "Lesion: Optic chiasm (pituitary adenoma). Most likely deficit:",
     options: [
-      "Deficit matches stated pathway",
-      "Unrelated sensory modality loss only",
-      "Global coma from single cranial nerve",
-      "Purely metabolic with no localization"
+      "Bitemporal hemianopia",
+      "Right homonymous hemianopia",
+      "Left monocular blindness",
+      "Macular sparing only"
     ],
     correct: 0,
-    explanation: "Deficit matches stated pathway",
+    explanation: "Optic chiasm (pituitary adenoma) \u2192 Bitemporal hemianopia.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Right homonymous hemianopia does not follow from a optic chiasm (pituitary adenoma) lesion.",
+      "Incorrect: Left monocular blindness is inconsistent with the stated lesion site.",
+      "Incorrect: Macular sparing only reflects a different pathway or syndrome."
     ]
   },
   {
-    topic: "Auditory System",
+    topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Clinical vignette 4: focal CNS lesion — expected deficit?",
+    question: "Lesion: Right optic tract. Most likely deficit:",
     options: [
-      "Deficit matches stated pathway",
-      "Unrelated sensory modality loss only",
-      "Global coma from single cranial nerve",
-      "Purely metabolic with no localization"
+      "Left homonymous hemianopia",
+      "Right monocular blindness",
+      "Bitemporal hemianopia",
+      "Left superior quadrantanopia"
     ],
     correct: 0,
-    explanation: "Deficit matches stated pathway",
+    explanation: "Right optic tract \u2192 Left homonymous hemianopia.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Right monocular blindness does not follow from a right optic tract lesion.",
+      "Incorrect: Bitemporal hemianopia is inconsistent with the stated lesion site.",
+      "Incorrect: Left superior quadrantanopia reflects a different pathway or syndrome."
     ]
   },
   {
-    topic: "Somatosensation",
+    topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Clinical vignette 5: focal CNS lesion — expected deficit?",
+    question: "Lesion: Left optic tract. Most likely deficit:",
     options: [
-      "Deficit matches stated pathway",
-      "Unrelated sensory modality loss only",
-      "Global coma from single cranial nerve",
-      "Purely metabolic with no localization"
+      "Right homonymous hemianopia",
+      "Left monocular blindness",
+      "Bitemporal hemianopia",
+      "Right inferior quadrantanopia"
     ],
     correct: 0,
-    explanation: "Deficit matches stated pathway",
+    explanation: "Left optic tract \u2192 Right homonymous hemianopia.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Left monocular blindness does not follow from a left optic tract lesion.",
+      "Incorrect: Bitemporal hemianopia is inconsistent with the stated lesion site.",
+      "Incorrect: Right inferior quadrantanopia reflects a different pathway or syndrome."
     ]
   },
   {
-    topic: "Vestibular System",
+    topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Clinical vignette 6: focal CNS lesion — expected deficit?",
+    question: "Lesion: Right Meyer's loop (temporal lobe). Most likely deficit:",
     options: [
-      "Deficit matches stated pathway",
-      "Unrelated sensory modality loss only",
-      "Global coma from single cranial nerve",
-      "Purely metabolic with no localization"
+      "Left superior quadrantanopia ('pie in the sky')",
+      "Right superior quadrantanopia",
+      "Bitemporal hemianopia",
+      "Left monocular blindness"
     ],
     correct: 0,
-    explanation: "Deficit matches stated pathway",
+    explanation: "Right Meyer's loop (temporal lobe) \u2192 Left superior quadrantanopia ('pie in the sky').",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Right superior quadrantanopia does not follow from a right meyer's loop (temporal lobe) lesion.",
+      "Incorrect: Bitemporal hemianopia is inconsistent with the stated lesion site.",
+      "Incorrect: Left monocular blindness reflects a different pathway or syndrome."
     ]
   },
   {
-    topic: "Cranial Nerves",
+    topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Clinical vignette 7: focal CNS lesion — expected deficit?",
+    question: "Lesion: Left Meyer's loop (temporal lobe). Most likely deficit:",
     options: [
-      "Deficit matches stated pathway",
-      "Unrelated sensory modality loss only",
-      "Global coma from single cranial nerve",
-      "Purely metabolic with no localization"
+      "Right superior quadrantanopia",
+      "Left superior quadrantanopia",
+      "Right homonymous hemianopia",
+      "Bitemporal hemianopia"
     ],
     correct: 0,
-    explanation: "Deficit matches stated pathway",
+    explanation: "Left Meyer's loop (temporal lobe) \u2192 Right superior quadrantanopia.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Left superior quadrantanopia does not follow from a left meyer's loop (temporal lobe) lesion.",
+      "Incorrect: Right homonymous hemianopia is inconsistent with the stated lesion site.",
+      "Incorrect: Bitemporal hemianopia reflects a different pathway or syndrome."
     ]
   },
   {
-    topic: "Taste",
+    topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Clinical vignette 8: focal CNS lesion — expected deficit?",
+    question: "Lesion: Right occipital lobe (V1). Most likely deficit:",
     options: [
-      "Deficit matches stated pathway",
-      "Unrelated sensory modality loss only",
-      "Global coma from single cranial nerve",
-      "Purely metabolic with no localization"
+      "Left homonymous hemianopia with macular involvement",
+      "Right monocular blindness",
+      "Bitemporal hemianopia",
+      "Pure word deafness"
     ],
     correct: 0,
-    explanation: "Deficit matches stated pathway",
+    explanation: "Right occipital lobe (V1) \u2192 Left homonymous hemianopia with macular involvement.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Right monocular blindness does not follow from a right occipital lobe (v1) lesion.",
+      "Incorrect: Bitemporal hemianopia is inconsistent with the stated lesion site.",
+      "Incorrect: Pure word deafness reflects a different pathway or syndrome."
     ]
   },
   {
-    topic: "Visual System",
+    topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Clinical vignette 9: focal CNS lesion — expected deficit?",
+    question: "Lesion: Left occipital lobe (V1). Most likely deficit:",
     options: [
-      "Deficit matches stated pathway",
-      "Unrelated sensory modality loss only",
-      "Global coma from single cranial nerve",
-      "Purely metabolic with no localization"
+      "Right homonymous hemianopia",
+      "Left monocular blindness",
+      "Right superior quadrantanopia only",
+      "Broca aphasia"
     ],
     correct: 0,
-    explanation: "Deficit matches stated pathway",
+    explanation: "Left occipital lobe (V1) \u2192 Right homonymous hemianopia.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Left monocular blindness does not follow from a left occipital lobe (v1) lesion.",
+      "Incorrect: Right superior quadrantanopia only is inconsistent with the stated lesion site.",
+      "Incorrect: Broca aphasia reflects a different pathway or syndrome."
     ]
   },
   {
-    topic: "Motor Systems",
+    topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Clinical vignette 10: focal CNS lesion — expected deficit?",
+    question: "Lesion: Right lateral geniculate nucleus. Most likely deficit:",
     options: [
-      "Deficit matches stated pathway",
-      "Unrelated sensory modality loss only",
-      "Global coma from single cranial nerve",
-      "Purely metabolic with no localization"
+      "Contralateral homonymous visual field defect",
+      "Ipsilateral monocular blindness",
+      "Bitemporal hemianopia",
+      "Pure alexia without field loss"
     ],
     correct: 0,
-    explanation: "Deficit matches stated pathway",
+    explanation: "Right lateral geniculate nucleus \u2192 Contralateral homonymous visual field defect.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Ipsilateral monocular blindness does not follow from a right lateral geniculate nucleus lesion.",
+      "Incorrect: Bitemporal hemianopia is inconsistent with the stated lesion site.",
+      "Incorrect: Pure alexia without field loss reflects a different pathway or syndrome."
     ]
   },
   {
-    topic: "Neuroanatomy",
+    topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Clinical vignette 11: focal CNS lesion — expected deficit?",
+    question: "Lesion: Left medial longitudinal fasciculus (MLF). Most likely deficit:",
     options: [
-      "Deficit matches stated pathway",
-      "Unrelated sensory modality loss only",
-      "Global coma from single cranial nerve",
-      "Purely metabolic with no localization"
+      "Internuclear ophthalmoplegia (impaired adduction + abduction nystagmus)",
+      "Monocular blindness",
+      "Bitemporal hemianopia",
+      "Facial paralysis only"
     ],
     correct: 0,
-    explanation: "Deficit matches stated pathway",
+    explanation: "Left medial longitudinal fasciculus (MLF) \u2192 Internuclear ophthalmoplegia (impaired adduction + abduction nystagmus).",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Monocular blindness does not follow from a left medial longitudinal fasciculus (mlf) lesion.",
+      "Incorrect: Bitemporal hemianopia is inconsistent with the stated lesion site.",
+      "Incorrect: Facial paralysis only reflects a different pathway or syndrome."
     ]
   },
   {
-    topic: "Auditory System",
+    topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Clinical vignette 12: focal CNS lesion — expected deficit?",
+    question: "Lesion: Right abducens (CN VI) nucleus. Most likely deficit:",
     options: [
-      "Deficit matches stated pathway",
-      "Unrelated sensory modality loss only",
-      "Global coma from single cranial nerve",
-      "Purely metabolic with no localization"
+      "Horizontal gaze palsy toward lesion; ipsilateral abduction weakness",
+      "Optic chiasm syndrome",
+      "Pure aphasia",
+      "Only hearing loss"
     ],
     correct: 0,
-    explanation: "Deficit matches stated pathway",
+    explanation: "Right abducens (CN VI) nucleus \u2192 Horizontal gaze palsy toward lesion; ipsilateral abduction weakness.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Optic chiasm syndrome does not follow from a right abducens (cn vi) nucleus lesion.",
+      "Incorrect: Pure aphasia is inconsistent with the stated lesion site.",
+      "Incorrect: Only hearing loss reflects a different pathway or syndrome."
     ]
   },
   {
-    topic: "Somatosensation",
+    topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Clinical vignette 13: focal CNS lesion — expected deficit?",
+    question: "Lesion: Left facial nerve (CN VII) peripheral lesion. Most likely deficit:",
     options: [
-      "Deficit matches stated pathway",
-      "Unrelated sensory modality loss only",
-      "Global coma from single cranial nerve",
-      "Purely metabolic with no localization"
+      "Ipsilateral lower face weakness; forehead often spared if UMN spared",
+      "Contralateral arm weakness only",
+      "Homonymous hemianopia",
+      "Deafness only"
     ],
     correct: 0,
-    explanation: "Deficit matches stated pathway",
+    explanation: "Left facial nerve (CN VII) peripheral lesion \u2192 Ipsilateral lower face weakness; forehead often spared if UMN spared.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Contralateral arm weakness only does not follow from a left facial nerve (cn vii) peripheral lesion lesion.",
+      "Incorrect: Homonymous hemianopia is inconsistent with the stated lesion site.",
+      "Incorrect: Deafness only reflects a different pathway or syndrome."
     ]
   },
   {
-    topic: "Vestibular System",
+    topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Clinical vignette 14: focal CNS lesion — expected deficit?",
+    question: "Lesion: Right hypoglossal (CN XII) nerve. Most likely deficit:",
     options: [
-      "Deficit matches stated pathway",
-      "Unrelated sensory modality loss only",
-      "Global coma from single cranial nerve",
-      "Purely metabolic with no localization"
+      "Tongue deviates to the right on protrusion",
+      "Tongue deviates left",
+      "Bitemporal hemianopia",
+      "Pure ataxia only"
     ],
     correct: 0,
-    explanation: "Deficit matches stated pathway",
+    explanation: "Right hypoglossal (CN XII) nerve \u2192 Tongue deviates to the right on protrusion.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Tongue deviates left does not follow from a right hypoglossal (cn xii) nerve lesion.",
+      "Incorrect: Bitemporal hemianopia is inconsistent with the stated lesion site.",
+      "Incorrect: Pure ataxia only reflects a different pathway or syndrome."
     ]
   },
   {
-    topic: "Cranial Nerves",
+    topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Clinical vignette 15: focal CNS lesion — expected deficit?",
+    question: "Lesion: Unilateral vestibular nerve lesion. Most likely deficit:",
     options: [
-      "Deficit matches stated pathway",
-      "Unrelated sensory modality loss only",
-      "Global coma from single cranial nerve",
-      "Purely metabolic with no localization"
+      "Vertigo, imbalance, nystagmus toward lesion",
+      "Homonymous hemianopia",
+      "Spastic quadriplegia",
+      "Broca aphasia"
     ],
     correct: 0,
-    explanation: "Deficit matches stated pathway",
+    explanation: "Unilateral vestibular nerve lesion \u2192 Vertigo, imbalance, nystagmus toward lesion.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Homonymous hemianopia does not follow from a unilateral vestibular nerve lesion lesion.",
+      "Incorrect: Spastic quadriplegia is inconsistent with the stated lesion site.",
+      "Incorrect: Broca aphasia reflects a different pathway or syndrome."
     ]
   },
   {
-    topic: "Taste",
+    topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Clinical vignette 16: focal CNS lesion — expected deficit?",
+    question: "Lesion: Right medial lemniscus in medulla. Most likely deficit:",
     options: [
-      "Deficit matches stated pathway",
-      "Unrelated sensory modality loss only",
-      "Global coma from single cranial nerve",
-      "Purely metabolic with no localization"
+      "Contralateral loss of touch, vibration, proprioception",
+      "Ipsilateral face pain loss",
+      "Bitemporal hemianopia",
+      "Pure aphasia"
     ],
     correct: 0,
-    explanation: "Deficit matches stated pathway",
+    explanation: "Right medial lemniscus in medulla \u2192 Contralateral loss of touch, vibration, proprioception.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Ipsilateral face pain loss does not follow from a right medial lemniscus in medulla lesion.",
+      "Incorrect: Bitemporal hemianopia is inconsistent with the stated lesion site.",
+      "Incorrect: Pure aphasia reflects a different pathway or syndrome."
     ]
   },
   {
-    topic: "Visual System",
+    topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Clinical vignette 17: focal CNS lesion — expected deficit?",
+    question: "Lesion: Left spinothalamic tract at T6. Most likely deficit:",
     options: [
-      "Deficit matches stated pathway",
-      "Unrelated sensory modality loss only",
-      "Global coma from single cranial nerve",
-      "Purely metabolic with no localization"
+      "Contralateral pain and temperature loss below T6",
+      "Ipsilateral proprioception loss below T6",
+      "Bilateral blindness",
+      "Only autonomic loss"
     ],
     correct: 0,
-    explanation: "Deficit matches stated pathway",
+    explanation: "Left spinothalamic tract at T6 \u2192 Contralateral pain and temperature loss below T6.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Ipsilateral proprioception loss below T6 does not follow from a left spinothalamic tract at t6 lesion.",
+      "Incorrect: Bilateral blindness is inconsistent with the stated lesion site.",
+      "Incorrect: Only autonomic loss reflects a different pathway or syndrome."
     ]
   },
   {
-    topic: "Motor Systems",
+    topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Clinical vignette 18: focal CNS lesion — expected deficit?",
+    question: "Lesion: Right dorsal column at C5. Most likely deficit:",
     options: [
-      "Deficit matches stated pathway",
-      "Unrelated sensory modality loss only",
-      "Global coma from single cranial nerve",
-      "Purely metabolic with no localization"
+      "Ipsilateral loss of fine touch/proprioception below C5",
+      "Contralateral pain loss only",
+      "Bitemporal hemianopia",
+      "Broca aphasia"
     ],
     correct: 0,
-    explanation: "Deficit matches stated pathway",
+    explanation: "Right dorsal column at C5 \u2192 Ipsilateral loss of fine touch/proprioception below C5.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Contralateral pain loss only does not follow from a right dorsal column at c5 lesion.",
+      "Incorrect: Bitemporal hemianopia is inconsistent with the stated lesion site.",
+      "Incorrect: Broca aphasia reflects a different pathway or syndrome."
     ]
   },
   {
-    topic: "Neuroanatomy",
+    topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Clinical vignette 19: focal CNS lesion — expected deficit?",
+    question: "Lesion: Complete spinal hemisection at T10 (Brown-S\u00e9quard). Most likely deficit:",
     options: [
-      "Deficit matches stated pathway",
-      "Unrelated sensory modality loss only",
-      "Global coma from single cranial nerve",
-      "Purely metabolic with no localization"
+      "Ipsilateral UMN weakness and DCML loss; contralateral spinothalamic loss below lesion",
+      "Bilateral flaccid paralysis only",
+      "Only autonomic symptoms",
+      "Pure cerebellar ataxia"
     ],
     correct: 0,
-    explanation: "Deficit matches stated pathway",
+    explanation: "Complete spinal hemisection at T10 (Brown-S\u00e9quard) \u2192 Ipsilateral UMN weakness and DCML loss; contralateral spinothalamic loss below lesion.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Bilateral flaccid paralysis only does not follow from a complete spinal hemisection at t10 (brown-s\u00e9quard) lesion.",
+      "Incorrect: Only autonomic symptoms is inconsistent with the stated lesion site.",
+      "Incorrect: Pure cerebellar ataxia reflects a different pathway or syndrome."
     ]
   },
   {
-    topic: "Auditory System",
+    topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Clinical vignette 20: focal CNS lesion — expected deficit?",
+    question: "Lesion: Anterior spinal artery syndrome (thoracic). Most likely deficit:",
     options: [
-      "Deficit matches stated pathway",
-      "Unrelated sensory modality loss only",
-      "Global coma from single cranial nerve",
-      "Purely metabolic with no localization"
+      "Bilateral motor weakness and spinothalamic loss; dorsal columns spared",
+      "Isolated proprioception loss only",
+      "Pure ataxia",
+      "Monocular blindness"
     ],
     correct: 0,
-    explanation: "Deficit matches stated pathway",
+    explanation: "Anterior spinal artery syndrome (thoracic) \u2192 Bilateral motor weakness and spinothalamic loss; dorsal columns spared.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Isolated proprioception loss only does not follow from a anterior spinal artery syndrome (thoracic) lesion.",
+      "Incorrect: Pure ataxia is inconsistent with the stated lesion site.",
+      "Incorrect: Monocular blindness reflects a different pathway or syndrome."
     ]
   },
   {
-    topic: "Somatosensation",
+    topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Clinical vignette 21: focal CNS lesion — expected deficit?",
+    question: "Lesion: Central cord syndrome (cervical). Most likely deficit:",
     options: [
-      "Deficit matches stated pathway",
-      "Unrelated sensory modality loss only",
-      "Global coma from single cranial nerve",
-      "Purely metabolic with no localization"
+      "Greater weakness in upper limbs than lower; variable sensory loss",
+      "Only lower limb weakness with intact arms",
+      "Homonymous hemianopia",
+      "Deafness"
     ],
     correct: 0,
-    explanation: "Deficit matches stated pathway",
+    explanation: "Central cord syndrome (cervical) \u2192 Greater weakness in upper limbs than lower; variable sensory loss.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Only lower limb weakness with intact arms does not follow from a central cord syndrome (cervical) lesion.",
+      "Incorrect: Homonymous hemianopia is inconsistent with the stated lesion site.",
+      "Incorrect: Deafness reflects a different pathway or syndrome."
     ]
   },
   {
-    topic: "Vestibular System",
+    topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Clinical vignette 22: focal CNS lesion — expected deficit?",
+    question: "Lesion: Cauda equina compression. Most likely deficit:",
     options: [
-      "Deficit matches stated pathway",
-      "Unrelated sensory modality loss only",
-      "Global coma from single cranial nerve",
-      "Purely metabolic with no localization"
+      "Lower motor neuron signs in legs; saddle anesthesia; bowel/bladder issues",
+      "Upper motor neuron spasticity only above lesion",
+      "Bitemporal hemianopia",
+      "Broca aphasia"
     ],
     correct: 0,
-    explanation: "Deficit matches stated pathway",
+    explanation: "Cauda equina compression \u2192 Lower motor neuron signs in legs; saddle anesthesia; bowel/bladder issues.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Upper motor neuron spasticity only above lesion does not follow from a cauda equina compression lesion.",
+      "Incorrect: Bitemporal hemianopia is inconsistent with the stated lesion site.",
+      "Incorrect: Broca aphasia reflects a different pathway or syndrome."
     ]
   },
   {
-    topic: "Cranial Nerves",
+    topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Clinical vignette 23: focal CNS lesion — expected deficit?",
+    question: "Lesion: Right cerebellar hemisphere. Most likely deficit:",
     options: [
-      "Deficit matches stated pathway",
-      "Unrelated sensory modality loss only",
-      "Global coma from single cranial nerve",
-      "Purely metabolic with no localization"
+      "Ipsilateral limb ataxia and dysmetria",
+      "Contralateral hemiparesis",
+      "Homonymous hemianopia",
+      "Nonfluent aphasia"
     ],
     correct: 0,
-    explanation: "Deficit matches stated pathway",
+    explanation: "Right cerebellar hemisphere \u2192 Ipsilateral limb ataxia and dysmetria.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Contralateral hemiparesis does not follow from a right cerebellar hemisphere lesion.",
+      "Incorrect: Homonymous hemianopia is inconsistent with the stated lesion site.",
+      "Incorrect: Nonfluent aphasia reflects a different pathway or syndrome."
     ]
   },
   {
-    topic: "Taste",
+    topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Clinical vignette 24: focal CNS lesion — expected deficit?",
+    question: "Lesion: Cerebellar vermis. Most likely deficit:",
     options: [
-      "Deficit matches stated pathway",
-      "Unrelated sensory modality loss only",
-      "Global coma from single cranial nerve",
-      "Purely metabolic with no localization"
+      "Truncal and gait ataxia",
+      "Ipsilateral arm intention tremor only",
+      "Homonymous hemianopia",
+      "Hyperreflexia with Babinski"
     ],
     correct: 0,
-    explanation: "Deficit matches stated pathway",
+    explanation: "Cerebellar vermis \u2192 Truncal and gait ataxia.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Ipsilateral arm intention tremor only does not follow from a cerebellar vermis lesion.",
+      "Incorrect: Homonymous hemianopia is inconsistent with the stated lesion site.",
+      "Incorrect: Hyperreflexia with Babinski reflects a different pathway or syndrome."
     ]
   },
   {
-    topic: "Visual System",
+    topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Clinical vignette 25: focal CNS lesion — expected deficit?",
+    question: "Lesion: Left basal ganglia (Parkinsonian pattern). Most likely deficit:",
     options: [
-      "Deficit matches stated pathway",
-      "Unrelated sensory modality loss only",
-      "Global coma from single cranial nerve",
-      "Purely metabolic with no localization"
+      "Bradykinesia and rigidity (often right body if left hemisphere motor loop)",
+      "Flaccid paralysis only",
+      "Bitemporal hemianopia",
+      "Pure alexia"
     ],
     correct: 0,
-    explanation: "Deficit matches stated pathway",
+    explanation: "Left basal ganglia (Parkinsonian pattern) \u2192 Bradykinesia and rigidity (often right body if left hemisphere motor loop).",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Flaccid paralysis only does not follow from a left basal ganglia (parkinsonian pattern) lesion.",
+      "Incorrect: Bitemporal hemianopia is inconsistent with the stated lesion site.",
+      "Incorrect: Pure alexia reflects a different pathway or syndrome."
     ]
   },
   {
-    topic: "Motor Systems",
+    topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Clinical vignette 26: focal CNS lesion — expected deficit?",
+    question: "Lesion: Right thalamic VPL nucleus. Most likely deficit:",
     options: [
-      "Deficit matches stated pathway",
-      "Unrelated sensory modality loss only",
-      "Global coma from single cranial nerve",
-      "Purely metabolic with no localization"
+      "Contralateral hemibody sensory loss",
+      "Ipsilateral sensory loss",
+      "Bitemporal hemianopia",
+      "Broca aphasia only"
     ],
     correct: 0,
-    explanation: "Deficit matches stated pathway",
+    explanation: "Right thalamic VPL nucleus \u2192 Contralateral hemibody sensory loss.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Ipsilateral sensory loss does not follow from a right thalamic vpl nucleus lesion.",
+      "Incorrect: Bitemporal hemianopia is inconsistent with the stated lesion site.",
+      "Incorrect: Broca aphasia only reflects a different pathway or syndrome."
     ]
   },
   {
-    topic: "Neuroanatomy",
+    topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Clinical vignette 27: focal CNS lesion — expected deficit?",
+    question: "Lesion: Left thalamic language-related nuclei (dominant). Most likely deficit:",
     options: [
-      "Deficit matches stated pathway",
-      "Unrelated sensory modality loss only",
-      "Global coma from single cranial nerve",
-      "Purely metabolic with no localization"
+      "Thalamic aphasia or dysfluency with possible memory issues",
+      "Pure deafness",
+      "Homonymous hemianopia only",
+      "Only cerebellar ataxia"
     ],
     correct: 0,
-    explanation: "Deficit matches stated pathway",
+    explanation: "Left thalamic language-related nuclei (dominant) \u2192 Thalamic aphasia or dysfluency with possible memory issues.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Pure deafness does not follow from a left thalamic language-related nuclei (dominant) lesion.",
+      "Incorrect: Homonymous hemianopia only is inconsistent with the stated lesion site.",
+      "Incorrect: Only cerebellar ataxia reflects a different pathway or syndrome."
     ]
   },
   {
-    topic: "Auditory System",
+    topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Clinical vignette 28: focal CNS lesion — expected deficit?",
+    question: "Lesion: Bilateral hippocampal damage. Most likely deficit:",
     options: [
-      "Deficit matches stated pathway",
-      "Unrelated sensory modality loss only",
-      "Global coma from single cranial nerve",
-      "Purely metabolic with no localization"
+      "Profound anterograde declarative memory impairment",
+      "Pure motor weakness",
+      "Color blindness only",
+      "Deafness"
     ],
     correct: 0,
-    explanation: "Deficit matches stated pathway",
+    explanation: "Bilateral hippocampal damage \u2192 Profound anterograde declarative memory impairment.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Pure motor weakness does not follow from a bilateral hippocampal damage lesion.",
+      "Incorrect: Color blindness only is inconsistent with the stated lesion site.",
+      "Incorrect: Deafness reflects a different pathway or syndrome."
     ]
   },
   {
-    topic: "Somatosensation",
+    topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Clinical vignette 29: focal CNS lesion — expected deficit?",
+    question: "Lesion: Bilateral amygdala (selective). Most likely deficit:",
     options: [
-      "Deficit matches stated pathway",
-      "Unrelated sensory modality loss only",
-      "Global coma from single cranial nerve",
-      "Purely metabolic with no localization"
+      "Impaired fear conditioning; altered social fear processing",
+      "Homonymous hemianopia",
+      "Pure motor weakness",
+      "Deafness"
     ],
     correct: 0,
-    explanation: "Deficit matches stated pathway",
+    explanation: "Bilateral amygdala (selective) \u2192 Impaired fear conditioning; altered social fear processing.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Homonymous hemianopia does not follow from a bilateral amygdala (selective) lesion.",
+      "Incorrect: Pure motor weakness is inconsistent with the stated lesion site.",
+      "Incorrect: Deafness reflects a different pathway or syndrome."
     ]
   },
   {
-    topic: "Vestibular System",
+    topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Clinical vignette 30: focal CNS lesion — expected deficit?",
+    question: "Lesion: Left Broca area. Most likely deficit:",
     options: [
-      "Deficit matches stated pathway",
-      "Unrelated sensory modality loss only",
-      "Global coma from single cranial nerve",
-      "Purely metabolic with no localization"
+      "Nonfluent aphasia with relatively preserved comprehension",
+      "Fluent nonsense speech (Wernicke pattern)",
+      "Pure alexia without language loss",
+      "Deafness"
     ],
     correct: 0,
-    explanation: "Deficit matches stated pathway",
+    explanation: "Left Broca area \u2192 Nonfluent aphasia with relatively preserved comprehension.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Fluent nonsense speech (Wernicke pattern) does not follow from a left broca area lesion.",
+      "Incorrect: Pure alexia without language loss is inconsistent with the stated lesion site.",
+      "Incorrect: Deafness reflects a different pathway or syndrome."
     ]
   },
   {
-    topic: "Cranial Nerves",
+    topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Clinical vignette 31: focal CNS lesion — expected deficit?",
+    question: "Lesion: Left Wernicke area. Most likely deficit:",
     options: [
-      "Deficit matches stated pathway",
-      "Unrelated sensory modality loss only",
-      "Global coma from single cranial nerve",
-      "Purely metabolic with no localization"
+      "Fluent but impaired comprehension (receptive aphasia)",
+      "Nonfluent speech with good comprehension",
+      "Pure motor neglect only",
+      "Monocular blindness"
     ],
     correct: 0,
-    explanation: "Deficit matches stated pathway",
+    explanation: "Left Wernicke area \u2192 Fluent but impaired comprehension (receptive aphasia).",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Nonfluent speech with good comprehension does not follow from a left wernicke area lesion.",
+      "Incorrect: Pure motor neglect only is inconsistent with the stated lesion site.",
+      "Incorrect: Monocular blindness reflects a different pathway or syndrome."
     ]
   },
   {
-    topic: "Taste",
+    topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Clinical vignette 32: focal CNS lesion — expected deficit?",
+    question: "Lesion: Arcuate fasciculus (dominant hemisphere). Most likely deficit:",
     options: [
-      "Deficit matches stated pathway",
-      "Unrelated sensory modality loss only",
-      "Global coma from single cranial nerve",
-      "Purely metabolic with no localization"
+      "Conduction aphasia: poor repetition with fluent speech",
+      "Pure deafness",
+      "Homonymous hemianopia",
+      "Only ataxia"
     ],
     correct: 0,
-    explanation: "Deficit matches stated pathway",
+    explanation: "Arcuate fasciculus (dominant hemisphere) \u2192 Conduction aphasia: poor repetition with fluent speech.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Pure deafness does not follow from a arcuate fasciculus (dominant hemisphere) lesion.",
+      "Incorrect: Homonymous hemianopia is inconsistent with the stated lesion site.",
+      "Incorrect: Only ataxia reflects a different pathway or syndrome."
     ]
   },
   {
-    topic: "Visual System",
+    topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Clinical vignette 33: focal CNS lesion — expected deficit?",
+    question: "Lesion: Right parietal neglect syndrome. Most likely deficit:",
     options: [
-      "Deficit matches stated pathway",
-      "Unrelated sensory modality loss only",
-      "Global coma from single cranial nerve",
-      "Purely metabolic with no localization"
+      "Left spatial neglect and anosognosia",
+      "Right neglect",
+      "Bitemporal hemianopia",
+      "Broca aphasia"
     ],
     correct: 0,
-    explanation: "Deficit matches stated pathway",
+    explanation: "Right parietal neglect syndrome \u2192 Left spatial neglect and anosognosia.",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Right neglect does not follow from a right parietal neglect syndrome lesion.",
+      "Incorrect: Bitemporal hemianopia is inconsistent with the stated lesion site.",
+      "Incorrect: Broca aphasia reflects a different pathway or syndrome."
     ]
   },
   {
-    topic: "Motor Systems",
+    topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Clinical vignette 34: focal CNS lesion — expected deficit?",
+    question: "Lesion: Left primary motor cortex (hand area). Most likely deficit:",
     options: [
-      "Deficit matches stated pathway",
-      "Unrelated sensory modality loss only",
-      "Global coma from single cranial nerve",
-      "Purely metabolic with no localization"
+      "Contralateral hand/upper limb weakness (UMN)",
+      "Ipsilateral hand weakness",
+      "Bitemporal hemianopia",
+      "Pure alexia"
     ],
     correct: 0,
-    explanation: "Deficit matches stated pathway",
+    explanation: "Left primary motor cortex (hand area) \u2192 Contralateral hand/upper limb weakness (UMN).",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Ipsilateral hand weakness does not follow from a left primary motor cortex (hand area) lesion.",
+      "Incorrect: Bitemporal hemianopia is inconsistent with the stated lesion site.",
+      "Incorrect: Pure alexia reflects a different pathway or syndrome."
     ]
   },
   {
-    topic: "Neuroanatomy",
+    topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Clinical vignette 35: focal CNS lesion — expected deficit?",
+    question: "Lesion: Right primary motor cortex (leg area). Most likely deficit:",
     options: [
-      "Deficit matches stated pathway",
-      "Unrelated sensory modality loss only",
-      "Global coma from single cranial nerve",
-      "Purely metabolic with no localization"
+      "Contralateral leg weakness (UMN)",
+      "Ipsilateral leg weakness only",
+      "Homonymous hemianopia",
+      "Deafness"
     ],
     correct: 0,
-    explanation: "Deficit matches stated pathway",
+    explanation: "Right primary motor cortex (leg area) \u2192 Contralateral leg weakness (UMN).",
     wrongExplanations: [
       "",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion.",
-      "This pattern does not match the anatomy of the stated lesion."
+      "Incorrect: Ipsilateral leg weakness only does not follow from a right primary motor cortex (leg area) lesion.",
+      "Incorrect: Homonymous hemianopia is inconsistent with the stated lesion site.",
+      "Incorrect: Deafness reflects a different pathway or syndrome."
     ]
-  }
-];
+  },
+  {
+    topic: "Clinical Neuroanatomy",
+    module: "part3",
+    question: "Lesion: Left lateral pontine (AICA) syndrome. Most likely deficit:",
+    options: [
+      "Ipsilateral face pain/temp + cerebellar signs; contralateral body pain/temp loss",
+      "Pure motor weakness only",
+      "Bitemporal hemianopia",
+      "Broca aphasia"
+    ],
+    correct: 0,
+    explanation: "Left lateral pontine (AICA) syndrome \u2192 Ipsilateral face pain/temp + cerebellar signs; contralateral body pain/temp loss.",
+    wrongExplanations: [
+      "",
+      "Incorrect: Pure motor weakness only does not follow from a left lateral pontine (aica) syndrome lesion.",
+      "Incorrect: Bitemporal hemianopia is inconsistent with the stated lesion site.",
+      "Incorrect: Broca aphasia reflects a different pathway or syndrome."
+    ]
+  },
+  {
+    topic: "Clinical Neuroanatomy",
+    module: "part3",
+    question: "Lesion: Right lateral medullary (PICA) syndrome. Most likely deficit:",
+    options: [
+      "Ipsilateral face pain/temp loss; contralateral body pain/temp loss; ataxia; Horner possible",
+      "Bilateral blindness",
+      "Pure aphasia",
+      "Only deafness"
+    ],
+    correct: 0,
+    explanation: "Right lateral medullary (PICA) syndrome \u2192 Ipsilateral face pain/temp loss; contralateral body pain/temp loss; ataxia; Horner possible.",
+    wrongExplanations: [
+      "",
+      "Incorrect: Bilateral blindness does not follow from a right lateral medullary (pica) syndrome lesion.",
+      "Incorrect: Pure aphasia is inconsistent with the stated lesion site.",
+      "Incorrect: Only deafness reflects a different pathway or syndrome."
+    ]
+  },
+  {
+    topic: "Clinical Neuroanatomy",
+    module: "part3",
+    question: "Lesion: Medial medullary syndrome. Most likely deficit:",
+    options: [
+      "Ipsilateral tongue weakness; contralateral UMN weakness; contralateral DCML loss",
+      "Bitemporal hemianopia",
+      "Only cerebellar ataxia",
+      "Pure alexia"
+    ],
+    correct: 0,
+    explanation: "Medial medullary syndrome \u2192 Ipsilateral tongue weakness; contralateral UMN weakness; contralateral DCML loss.",
+    wrongExplanations: [
+      "",
+      "Incorrect: Bitemporal hemianopia does not follow from a medial medullary syndrome lesion.",
+      "Incorrect: Only cerebellar ataxia is inconsistent with the stated lesion site.",
+      "Incorrect: Pure alexia reflects a different pathway or syndrome."
+    ]
+  },
+  {
+    topic: "Clinical Neuroanatomy",
+    module: "part3",
+    question: "Lesion: Right internal capsule (posterior limb). Most likely deficit:",
+    options: [
+      "Contralateral hemiparesis (face/arm>leg depending on fibers)",
+      "Ipsilateral weakness",
+      "Bitemporal hemianopia",
+      "Deafness"
+    ],
+    correct: 0,
+    explanation: "Right internal capsule (posterior limb) \u2192 Contralateral hemiparesis (face/arm>leg depending on fibers).",
+    wrongExplanations: [
+      "",
+      "Incorrect: Ipsilateral weakness does not follow from a right internal capsule (posterior limb) lesion.",
+      "Incorrect: Bitemporal hemianopia is inconsistent with the stated lesion site.",
+      "Incorrect: Deafness reflects a different pathway or syndrome."
+    ]
+  },
+  {
+    topic: "Clinical Neuroanatomy",
+    module: "part3",
+    question: "Lesion: Left prefrontal orbitofrontal lesion. Most likely deficit:",
+    options: [
+      "Disinhibition and personality change (varies)",
+      "Homonymous hemianopia",
+      "Pure deafness",
+      "Only ataxia"
+    ],
+    correct: 0,
+    explanation: "Left prefrontal orbitofrontal lesion \u2192 Disinhibition and personality change (varies).",
+    wrongExplanations: [
+      "",
+      "Incorrect: Homonymous hemianopia does not follow from a left prefrontal orbitofrontal lesion lesion.",
+      "Incorrect: Pure deafness is inconsistent with the stated lesion site.",
+      "Incorrect: Only ataxia reflects a different pathway or syndrome."
+    ]
+  },
+  {
+    topic: "Clinical Neuroanatomy",
+    module: "part3",
+    question: "Lesion: Bilateral auditory cortex (Heschl's). Most likely deficit:",
+    options: [
+      "Cortical deafness or profound auditory processing deficit",
+      "Monocular blindness",
+      "Bitemporal hemianopia",
+      "Broca aphasia"
+    ],
+    correct: 0,
+    explanation: "Bilateral auditory cortex (Heschl's) \u2192 Cortical deafness or profound auditory processing deficit.",
+    wrongExplanations: [
+      "",
+      "Incorrect: Monocular blindness does not follow from a bilateral auditory cortex (heschl's) lesion.",
+      "Incorrect: Bitemporal hemianopia is inconsistent with the stated lesion site.",
+      "Incorrect: Broca aphasia reflects a different pathway or syndrome."
+    ]
+  },
+  {
+    topic: "Clinical Neuroanatomy",
+    module: "part3",
+    question: "Lesion: Unilateral cochlear nerve section. Most likely deficit:",
+    options: [
+      "Profound unilateral sensorineural hearing loss",
+      "Bilateral deafness from cortex only",
+      "Homonymous hemianopia",
+      "Pure aphasia"
+    ],
+    correct: 0,
+    explanation: "Unilateral cochlear nerve section \u2192 Profound unilateral sensorineural hearing loss.",
+    wrongExplanations: [
+      "",
+      "Incorrect: Bilateral deafness from cortex only does not follow from a unilateral cochlear nerve section lesion.",
+      "Incorrect: Homonymous hemianopia is inconsistent with the stated lesion site.",
+      "Incorrect: Pure aphasia reflects a different pathway or syndrome."
+    ]
+  },
+  {
+    topic: "Clinical Neuroanatomy",
+    module: "part3",
+    question: "Lesion: Right superior colliculus lesion. Most likely deficit:",
+    options: [
+      "Contralateral visual neglect for orienting; saccade deficits possible",
+      "Bitemporal hemianopia",
+      "Broca aphasia",
+      "Only DCML loss"
+    ],
+    correct: 0,
+    explanation: "Right superior colliculus lesion \u2192 Contralateral visual neglect for orienting; saccade deficits possible.",
+    wrongExplanations: [
+      "",
+      "Incorrect: Bitemporal hemianopia does not follow from a right superior colliculus lesion lesion.",
+      "Incorrect: Broca aphasia is inconsistent with the stated lesion site.",
+      "Incorrect: Only DCML loss reflects a different pathway or syndrome."
+    ]
+  },
+  {
+    topic: "Clinical Neuroanatomy",
+    module: "part3",
+    question: "Lesion: Left red nucleus (combined with nearby pathways). Most likely deficit:",
+    options: [
+      "Tremor and motor coordination issues; pattern depends on adjacent damage",
+      "Pure blindness",
+      "Only deafness",
+      "Only aphasia without motor signs"
+    ],
+    correct: 0,
+    explanation: "Left red nucleus (combined with nearby pathways) \u2192 Tremor and motor coordination issues; pattern depends on adjacent damage.",
+    wrongExplanations: [
+      "",
+      "Incorrect: Pure blindness does not follow from a left red nucleus (combined with nearby pathways) lesion.",
+      "Incorrect: Only deafness is inconsistent with the stated lesion site.",
+      "Incorrect: Only aphasia without motor signs reflects a different pathway or syndrome."
+    ]
+  },
+  {
+    topic: "Clinical Neuroanatomy",
+    module: "part3",
+    question: "Lesion: Cervical cord syrinx expanding centrally. Most likely deficit:",
+    options: [
+      "Cape-like loss of pain/temp in upper limbs; later motor signs",
+      "Only DCML loss in legs first always",
+      "Bitemporal hemianopia",
+      "Broca aphasia"
+    ],
+    correct: 0,
+    explanation: "Cervical cord syrinx expanding centrally \u2192 Cape-like loss of pain/temp in upper limbs; later motor signs.",
+    wrongExplanations: [
+      "",
+      "Incorrect: Only DCML loss in legs first always does not follow from a cervical cord syrinx expanding centrally lesion.",
+      "Incorrect: Bitemporal hemianopia is inconsistent with the stated lesion site.",
+      "Incorrect: Broca aphasia reflects a different pathway or syndrome."
+    ]
+  },
+  {
+    topic: "Clinical Neuroanatomy",
+    module: "part3",
+    question: "Lesion: Tabes dorsalis (dorsal columns). Most likely deficit:",
+    options: [
+      "Loss of proprioception/vibration; sensory ataxia; lancinating pains",
+      "Pure motor UMN only",
+      "Homonymous hemianopia",
+      "Deafness only"
+    ],
+    correct: 0,
+    explanation: "Tabes dorsalis (dorsal columns) \u2192 Loss of proprioception/vibration; sensory ataxia; lancinating pains.",
+    wrongExplanations: [
+      "",
+      "Incorrect: Pure motor UMN only does not follow from a tabes dorsalis (dorsal columns) lesion.",
+      "Incorrect: Homonymous hemianopia is inconsistent with the stated lesion site.",
+      "Incorrect: Deafness only reflects a different pathway or syndrome."
+    ]
+  },
+  {
+    topic: "Clinical Neuroanatomy",
+    module: "part3",
+    question: "Lesion: Right middle cerebral artery stroke (left dominant hemisphere). Most likely deficit:",
+    options: [
+      "Right face/arm weakness; aphasia if language dominant left",
+      "Left hemiparesis with aphasia on right dominant side",
+      "Pure vision loss only",
+      "Only cerebellar signs"
+    ],
+    correct: 0,
+    explanation: "Right middle cerebral artery stroke (left dominant hemisphere) \u2192 Right face/arm weakness; aphasia if language dominant left.",
+    wrongExplanations: [
+      "",
+      "Incorrect: Left hemiparesis with aphasia on right dominant side does not follow from a right middle cerebral artery stroke (left dominant hemisphere) lesion.",
+      "Incorrect: Pure vision loss only is inconsistent with the stated lesion site.",
+      "Incorrect: Only cerebellar signs reflects a different pathway or syndrome."
+    ]
+  },
+  {
+    topic: "Clinical Neuroanatomy",
+    module: "part3",
+    question: "Lesion: Left middle cerebral artery stroke (left dominant hemisphere). Most likely deficit:",
+    options: [
+      "Left face/arm weakness; aphasia (dominant hemisphere language)",
+      "Right hemiparesis with aphasia",
+      "Bitemporal hemianopia",
+      "Only deafness"
+    ],
+    correct: 0,
+    explanation: "Left middle cerebral artery stroke (left dominant hemisphere) \u2192 Left face/arm weakness; aphasia (dominant hemisphere language).",
+    wrongExplanations: [
+      "",
+      "Incorrect: Right hemiparesis with aphasia does not follow from a left middle cerebral artery stroke (left dominant hemisphere) lesion.",
+      "Incorrect: Bitemporal hemianopia is inconsistent with the stated lesion site.",
+      "Incorrect: Only deafness reflects a different pathway or syndrome."
+    ]
+  },
+  {
+    topic: "Clinical Neuroanatomy",
+    module: "part3",
+    question: "Lesion: Right middle cerebral artery stroke (right non-dominant hemisphere). Most likely deficit:",
+    options: [
+      "Left face/arm weakness; possible neglect; typically no aphasia",
+      "Aphasia with intact comprehension",
+      "Bitemporal hemianopia",
+      "Broca-type fluent nonsense speech"
+    ],
+    correct: 0,
+    explanation: "Right middle cerebral artery stroke (right non-dominant hemisphere) \u2192 Left face/arm weakness; possible neglect; typically no aphasia.",
+    wrongExplanations: [
+      "",
+      "Incorrect: Aphasia with intact comprehension does not follow from a right middle cerebral artery stroke (right non-dominant hemisphere) lesion.",
+      "Incorrect: Bitemporal hemianopia is inconsistent with the stated lesion site.",
+      "Incorrect: Broca-type fluent nonsense speech reflects a different pathway or syndrome."
+    ]
+  },
+  {
+    topic: "Clinical Neuroanatomy",
+    module: "part3",
+    question: "Lesion: Left pyramid (medulla) corticospinal lesion before decussation. Most likely deficit:",
+    options: [
+      "Contralateral limb weakness (UMN) below lesion",
+      "Ipsilateral limb weakness below lesion",
+      "Bilateral flaccid paralysis at lesion level only",
+      "Ipsilateral face weakness only (facial nucleus pattern)"
+    ],
+    correct: 0,
+    explanation: "Left pyramid (medulla) corticospinal lesion before decussation \u2192 Contralateral limb weakness (UMN) below lesion.",
+    wrongExplanations: [
+      "",
+      "Incorrect: Ipsilateral limb weakness below lesion does not follow from a left pyramid (medulla) corticospinal lesion before decussation lesion.",
+      "Incorrect: Bilateral flaccid paralysis at lesion level only is inconsistent with the stated lesion site.",
+      "Incorrect: Ipsilateral face weakness only (facial nucleus pattern) reflects a different pathway or syndrome."
+    ]
+  },
 
 const PROCTORED_CIRCUIT_POOL = [
   {
