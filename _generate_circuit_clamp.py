@@ -1,8 +1,21 @@
 #!/usr/bin/env python3
 """Generate PROCTORED_CIRCUIT_POOL (full) and PROCTORED_CLAMP_TRACE_POOL JS."""
 import json
+import random
+
+def balance_opts(opts, correct):
+    opts = list(opts)
+    if random.random() < 0.72:
+        clen = len(opts[correct])
+        tail = " (not implied by the circuit wiring described above.)"
+        for j in range(4):
+            if j != correct and len(opts[j]) <= clen + 6:
+                opts[j] = opts[j] + tail
+    return opts
+
 
 def mcq(topic, module, q, opts, correct, expl, wrong=None):
+    opts = balance_opts(opts, correct)
     wrong = wrong or ["", "", "", ""]
     return f"""  {{
     topic: {json.dumps(topic)},
