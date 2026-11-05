@@ -165,7 +165,7 @@ const PART1_VARIATION_POOL = [
     ]
   },
   {
-    topic: "Action Potential",
+    topic: "Action Potentials",
     question: "If voltage-gated Na⁺ channels are inactivated but delayed-rectifier K⁺ channels are held open, V_m will tend to move toward:",
     options: [
       "E_K (hyperpolarized relative to typical rest)",

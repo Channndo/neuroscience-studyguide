@@ -1496,7 +1496,7 @@ const PART1_EXPANSION_POOL = [
     ]
   },
   {
-    topic: "Action Potential",
+    topic: "Action Potentials",
     question: "In Hodgkin–Huxley kinetics, the m gate primarily controls:",
     options: [
       "Activation (opening) of voltage-gated Na⁺ channels",
@@ -1514,7 +1514,7 @@ const PART1_EXPANSION_POOL = [
     ]
   },
   {
-    topic: "Action Potential",
+    topic: "Action Potentials",
     question: "During a voltage-clamp step from −70 mV to 0 mV in a squid axon, the initial inward current followed by outward current reflects:",
     options: [
       "Early Na⁺ influx (inward) then delayed K⁺ efflux (outward)",
@@ -3734,7 +3734,7 @@ const PART3_EXPANSION_POOL = [
     ]
   },
   {
-    topic: "Olfaction",
+    topic: "Olfactory System",
     question: "One olfactory receptor neuron in many species typically:",
     options: [
       "Expresses one receptor type and projects to specific glomeruli",
@@ -4112,7 +4112,7 @@ const PART3_EXPANSION_POOL = [
     ]
   },
   {
-    topic: "Olfaction",
+    topic: "Olfactory System",
     question: "Mitral cells in olfactory bulb:",
     options: [
       "Project output to higher olfactory areas",

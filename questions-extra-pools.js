@@ -2060,7 +2060,7 @@ const PART3_EXTRA_POOL = [
     ]
   },
   {
-    topic: "Olfaction",
+    topic: "Olfactory System",
     question: "Mitral/tufted cells in the bulb send output to:",
     options: [
       "Olfactory cortex (piriform and related areas)",
@@ -2078,7 +2078,7 @@ const PART3_EXTRA_POOL = [
     ]
   },
   {
-    topic: "Taste",
+    topic: "Gustation",
     question: "Umami taste is transduced largely through:",
     options: [
       "T1R1/T1R3 heterodimer taste GPCRs on taste receptor cells",

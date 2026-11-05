@@ -2015,7 +2015,7 @@ const PART3_FRESH_POOL_2 = [
     ]
   },
   {
-    topic: "Olfaction",
+    topic: "Olfactory System",
     question: "Odor identity is encoded by:",
     options: [
       "Combinatorial receptor activation across glomeruli",
@@ -2033,7 +2033,7 @@ const PART3_FRESH_POOL_2 = [
     ]
   },
   {
-    topic: "Taste",
+    topic: "Gustation",
     question: "Sour taste often involves:",
     options: [
       "Acid sensing (H+ permeation or acid-sensitive channels)",
