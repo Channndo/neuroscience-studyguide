@@ -929,6 +929,58 @@
       background: var(--gray-50);
     }
 
+    .question-diagram.brain-anatomy {
+      padding: 0.75rem 1rem;
+      background: var(--gray-50);
+    }
+
+    .question-diagram.brain-anatomy .brain-anatomy-figure {
+      margin: 0;
+    }
+
+    .question-diagram.brain-anatomy svg {
+      display: block;
+      width: 100%;
+      max-width: 480px;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    .question-diagram.brain-anatomy figcaption {
+      margin: 0.5rem 0 0;
+      font-size: 0.78rem;
+      line-height: 1.35;
+      color: var(--gray-500);
+      text-align: center;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    html[data-theme="dark"] .question-diagram.brain-anatomy {
+      background: var(--gray-800);
+      border-color: var(--gray-700);
+    }
+
+    html[data-theme="dark"] .question-diagram.brain-anatomy figcaption {
+      color: var(--gray-400);
+    }
+
+    .quiz-card.anatomy-lab {
+      border-color: #0d9488;
+      background: linear-gradient(145deg, #f0fdfa 0%, #fff 55%);
+    }
+
+    html[data-theme="dark"] .quiz-card.anatomy-lab {
+      background: linear-gradient(145deg, #134e4a 0%, var(--gray-900) 55%);
+      border-color: #2dd4bf;
+    }
+
+    .quiz-card.anatomy-lab .quiz-card-icon {
+      background: #0d9488;
+      color: #fff;
+    }
+
     .answer-grid--select-all .answer-btn {
       text-align: left;
     }
@@ -2966,6 +3018,8 @@
   <script src="questions-proctored-mock.js"></script>
   <script src="questions-formula-drills.js"></script>
   <script src="questions-pinnacle-megabank.js"></script>
+  <script src="brain-anatomy-diagrams.js"></script>
+  <script src="questions-brain-anatomy.js"></script>
   <script src="mcb80x-cloud-config.js"></script>
   <script src="sheets-sync.js"></script>
   <script src="oauth-client.js"></script>
@@ -3914,7 +3968,9 @@
       writtenReview10: 10,
       proctoredMock: 50,
       formulaLabLearn: 12,
-      formulaLabExam: 12
+      formulaLabExam: 12,
+      brainAnatomy: 18,
+      brainAnatomyExam: 18
     };
 
     function getProgressiveTierQuestions(progress) {
@@ -4248,6 +4304,10 @@
         const examPool = typeof PROCTORED_MOCK_EXAM_POOL !== "undefined" ? PROCTORED_MOCK_EXAM_POOL : [];
         return shuffle(examPool).slice(0, QUIZ_SAMPLE_SIZES.proctoredMock || 50);
       }
+      if (quizId === "brainAnatomy" || quizId === "brainAnatomyExam") {
+        const pool = typeof BRAIN_ANATOMY_POOL !== "undefined" ? BRAIN_ANATOMY_POOL : [];
+        return sampleFromPool(pool, QUIZ_SAMPLE_SIZES[quizId], avoid);
+      }
       return [];
     }
 
@@ -4483,6 +4543,32 @@
         icon: "P3",
         immediateFeedback: true,
         passKey: "part3Passed"
+      },
+      brainAnatomy: {
+        id: "brainAnatomy",
+        section: "anatomy",
+        title: "Brain Anatomy — Learn",
+        subtitle: "Name the highlighted structure",
+        meta: "18 questions · 50-item pool · instant feedback · 70% to unlock exam mode",
+        description: "Midsagittal, lateral, and coronal schematics with orientation labels — thalamus, ventricles, brainstem, lobes, sulci, basal ganglia, limbic structures, and sensory cortex.",
+        icon: "🧠",
+        cardClass: "anatomy-lab",
+        immediateFeedback: true,
+        passKey: "brainAnatomyPassed"
+      },
+      brainAnatomyExam: {
+        id: "brainAnatomyExam",
+        section: "anatomy",
+        title: "Brain Anatomy — Exam",
+        subtitle: "Same pool · no instant feedback",
+        meta: "18 questions · answers at end · 70% to pass",
+        description: "Same 50-item pool as Learn mode — identify highlighted structures with no instant feedback until review.",
+        icon: "🧠×",
+        cardClass: "anatomy-lab",
+        immediateFeedback: false,
+        requires: () => getProgress().brainAnatomyPassed,
+        lockHint: "Score 70%+ on Brain Anatomy — Learn to unlock",
+        passKey: "brainAnatomyExamPassed"
       },
       mixedReview20: {
         id: "mixedReview20",
@@ -4782,6 +4868,7 @@
     const DASHBOARD_SECTIONS = [
       { id: "daily", title: "Daily Streak", hint: "Five questions · new mix every calendar day at local midnight" },
       { id: "core", title: "Core Modules", hint: "Part 1 · Part 2 · Part 3 — instant feedback on each answer" },
+      { id: "anatomy", title: "Brain Anatomy Lab", hint: "Identify highlighted structures on midsagittal, lateral, and coronal schematics · Part 3" },
       { id: "mixedReview", title: "Mixed Chapter Reviews", hint: "20 → 50 questions · all parts · instant feedback · difficulty rises each tier" },
       { id: "review10", title: "10-Question Exam Reviews", hint: "HarvardX-style MCQs · topic spread · answers revealed at the end" },
       { id: "written", title: "Short Answer Drills", hint: "10 per quiz from a 30-item pool · shuffled each attempt · model answers at the end" },
@@ -6970,6 +7057,7 @@
           explanation: surfaced.explanation,
           wrongExplanations,
           diagram: surfaced.diagram,
+          anatomyDiagram: surfaced.anatomyDiagram,
           module: surfaced.module || routeQuestionToModule(surfaced),
           formulaHint: surfaced.formulaHint,
           formulaSteps: surfaced.formulaSteps,
@@ -7568,7 +7656,7 @@
       }
 
       const diagramHtml = q.diagram
-        ? `<div class="question-diagram" role="img">${q.diagram}</div>`
+        ? `<div class="question-diagram${q.anatomyDiagram ? " brain-anatomy" : ""}" role="img">${q.diagram}</div>`
         : "";
 
       const quizDef = QUIZZES[activeQuizId];
@@ -7711,7 +7799,9 @@
           return `<div class="${cls}">${label}${LETTERS[j]}. ${fmt(opt)}</div>`;
         }).join("");
 
-        const diagramBlock = q.diagram ? `<div class="question-diagram">${q.diagram}</div>` : "";
+        const diagramBlock = q.diagram
+          ? `<div class="question-diagram${q.anatomyDiagram ? " brain-anatomy" : ""}">${q.diagram}</div>`
+          : "";
         const scoringNote = selectAll && q.scoringRule
           ? `<p class="review-explanation"><strong>Scoring:</strong> ${fmt(q.scoringRule)}</p>`
           : "";
