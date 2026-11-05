@@ -638,7 +638,7 @@ const PART3_VARIANTS = [
     ]
   },
   {
-    topic: "Olfaction",
+    topic: "Olfactory System",
     question: "Combinatorial odor coding in the olfactory bulb relies on:",
     options: [
       "Every sensory neuron expressing all receptor types (does not follow from the mechanism implied in the stem)",
@@ -1235,7 +1235,7 @@ const NEW_TIER1 = [
     ]
   },
   {
-    topic: "Olfaction",
+    topic: "Olfactory System",
     question: "Olfactory sensory neurons regenerate throughout life in mammals because:",
     options: [
       "They are continually replaced from basal stem cells in the epithelium",
@@ -1559,7 +1559,7 @@ const NEW_TIER1 = [
     ]
   },
   {
-    topic: "Olfaction",
+    topic: "Olfactory System",
     question: "Each olfactory sensory neuron typically expresses:",
     options: [
       "One functional odor receptor type",
@@ -1835,7 +1835,7 @@ const NEW_TIER2 = [
     topic: "Nernst Equation",
     question: "If intracellular K⁺ is 140 mM and extracellular K⁺ is 4 mM, E_K is approximately:",
     options: [
-      "−96 mV (negative inside)",
+      "−95 mV (negative inside)",
       "+60 mV (positive inside)",
       "0 mV",
       "+120 mV"
@@ -1844,9 +1844,9 @@ const NEW_TIER2 = [
     explanation: "A large inward K⁺ gradient yields a strongly negative E_K.",
     wrongExplanations: [
       "",
-      "This option is inconsistent with the stem; the keyed answer (−96 mV (negative inside)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (−96 mV (negative inside)) matches the underlying mechanism.",
-      "This option is inconsistent with the stem; the keyed answer (−96 mV (negative inside)) matches the underlying mechanism."
+      "This option is inconsistent with the stem; the keyed answer (−95 mV (negative inside)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (−95 mV (negative inside)) matches the underlying mechanism.",
+      "This option is inconsistent with the stem; the keyed answer (−95 mV (negative inside)) matches the underlying mechanism."
     ]
   },
   {
@@ -2174,7 +2174,7 @@ const NEW_TIER2 = [
     ]
   },
   {
-    topic: "Olfaction",
+    topic: "Olfactory System",
     question: "Glomeruli in the olfactory bulb represent:",
     options: [
       "Convergence of OSNs expressing the same receptor type",
@@ -2534,7 +2534,7 @@ const NEW_TIER2 = [
     ]
   },
   {
-    topic: "Olfaction",
+    topic: "Olfactory System",
     question: "Mitral cells in the olfactory bulb receive input from:",
     options: [
       "Olfactory sensory neuron axons in glomeruli",
@@ -3113,7 +3113,7 @@ const NEW_TIER3 = [
     ]
   },
   {
-    topic: "Olfaction",
+    topic: "Olfactory System",
     question: "Mitral/tufted cells in the olfactory bulb:",
     options: [
       "Project olfactory information to higher brain areas",
@@ -3437,7 +3437,7 @@ const NEW_TIER3 = [
     ]
   },
   {
-    topic: "Olfaction",
+    topic: "Olfactory System",
     question: "Granule cells in the olfactory bulb provide:",
     options: [
       "Recurrent inhibition onto mitral cells via dendrodendritic synapses",
@@ -4538,7 +4538,7 @@ const NEW_TIER4 = [
     ]
   },
   {
-    topic: "Olfaction",
+    topic: "Olfactory System",
     question: "Adaptation in olfactory receptor neurons reduces response to:",
     options: [
       "Prolonged constant odorant exposure",
@@ -4556,7 +4556,7 @@ const NEW_TIER4 = [
     ]
   },
   {
-    topic: "Olfaction",
+    topic: "Olfactory System",
     question: "Enantiomers (mirror-image odor molecules) can smell different because:",
     options: [
       "Receptor binding geometry is stereoselective",
@@ -4574,7 +4574,7 @@ const NEW_TIER4 = [
     ]
   },
   {
-    topic: "Olfaction",
+    topic: "Olfactory System",
     question: "Pheromone detection in many mammals involves:",
     options: [
       "The vomeronasal organ projecting to accessory olfactory bulb",
@@ -4970,7 +4970,7 @@ const NEW_TIER4 = [
     ]
   },
   {
-    topic: "Olfaction",
+    topic: "Olfactory System",
     question: "Sparse coding in piriform cortex means:",
     options: [
       "Only a small fraction of neurons fire strongly for a given odor",
@@ -5366,7 +5366,7 @@ const NEW_TIER4 = [
     ]
   },
   {
-    topic: "Olfaction",
+    topic: "Olfactory System",
     question: "Enantiomers can smell different because:",
     options: [
       "Receptor binding geometry differs despite identical chemical formula",

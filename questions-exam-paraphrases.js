@@ -194,7 +194,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     explanation: "Free nerve endings are nociceptors and thermoreceptors for pain and temperature."
   },
   {
-    topic: "Olfaction",
+    topic: "Olfactory System",
     question: "Each olfactory sensory neuron usually expresses:",
     options: [
       "One functional odor receptor type",
@@ -332,7 +332,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
       "Depolarize V_m toward E_Na",
       "Hyperpolarize to E_K instantly",
       "Fix V_m at 0 mV always",
-      "Stop the Na+/K+ pump"
+      "Stop the Na⁺/K⁺ pump"
     ],
     correct: 0,
     explanation: "Goldman weighting shifts V_m toward newly permeant ions."
@@ -860,7 +860,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     topic: "Nernst Equation",
     question: "Suppose that intracellular K⁺ is 140 mM and extracellular K⁺ is 4 mM, E_K is approximately:",
     options: [
-      "−96 mV (negative inside)",
+      "−95 mV (negative inside)",
       "+60 mV (positive inside)",
       "0 mV",
       "+120 mV"
@@ -1004,7 +1004,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
 
 const PART3_EXAM_PARAPHRASE_POOL = [
   {
-    topic: "Olfaction",
+    topic: "Olfactory System",
     question: "In the olfactory system, each olfactory sensory neuron usually expresses:",
     options: [
       "All olfactory receptor genes simultaneously (does not follow from the mechanism implied in the stem)",
