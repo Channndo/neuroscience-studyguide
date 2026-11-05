@@ -946,6 +946,15 @@
       margin: 0.5rem 0 0;
     }
 
+    .quiz-flag-wrap {
+      font-size: 0.82rem;
+      color: var(--gray-600);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      margin: 0;
+    }
+
     .quiz-header {
       display: flex;
       align-items: center;
@@ -2848,6 +2857,9 @@
         <button type="button" class="btn-back" id="btn-back" aria-label="Save progress and return to dashboard">&larr; Save &amp; exit</button>
         <p class="quiz-title" id="quiz-title"></p>
         <p class="quiz-timer" id="quiz-timer" hidden aria-live="polite"></p>
+        <label id="quiz-flag-wrap" class="quiz-flag-wrap" hidden>
+          <input type="checkbox" id="quiz-flag" /> Flag for review
+        </label>
       </div>
       <div class="progress-card">
         <div class="progress-track" id="quiz-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="1" aria-valuenow="1" aria-label="Quiz progress">
@@ -3900,7 +3912,7 @@
       pinnacle750: 750,
       pinnacle1000: 1000,
       writtenReview10: 10,
-      proctoredMock: 46,
+      proctoredMock: 50,
       formulaLabLearn: 12,
       formulaLabExam: 12
     };
@@ -4233,21 +4245,8 @@
         return sampleFromPool(pool, QUIZ_SAMPLE_SIZES[quizId], avoid);
       }
       if (quizId === "proctoredMock") {
-        const sataPool = typeof PROCTORED_SATA_POOL !== "undefined" ? PROCTORED_SATA_POOL : [];
-        const lesionPool = typeof PROCTORED_LESION_POOL !== "undefined" ? PROCTORED_LESION_POOL : [];
-        const circuitPool = typeof PROCTORED_CIRCUIT_POOL !== "undefined" ? PROCTORED_CIRCUIT_POOL : [];
-        const clampPool = typeof PROCTORED_CLAMP_TRACE_POOL !== "undefined" ? PROCTORED_CLAMP_TRACE_POOL : [];
-        const sataCount = 12;
-        const sata = sampleFromPool(sataPool, sataCount, avoid);
-        const mcq = shuffle([
-          ...sampleFromPool(pools.part1, 12, avoid),
-          ...sampleFromPool(pools.part2, 12, avoid),
-          ...sampleFromPool(pools.part3, 8, avoid),
-          ...sampleFromPool(lesionPool, 6, avoid),
-          ...sampleFromPool(circuitPool, 4, avoid),
-          ...sampleFromPool(clampPool, 2, avoid)
-        ]);
-        return shuffle([...sata, ...mcq]);
+        const examPool = typeof PROCTORED_MOCK_EXAM_POOL !== "undefined" ? PROCTORED_MOCK_EXAM_POOL : [];
+        return shuffle(examPool).slice(0, QUIZ_SAMPLE_SIZES.proctoredMock || 50);
       }
       return [];
     }
@@ -4658,7 +4657,7 @@
         title: "Proctored Mock Exam (Timed)",
         subtitle: "Mixed Parts 1–3 · select-all items · 90 minutes",
         meta: "70% to pass · answers at end · all-or-nothing SATA scoring",
-        description: "50-question mixed exam with visible timer, checkbox items (~20% select-all), lesion/circuit/clamp items — mimics proctored format.",
+        description: "50-question timed mixed exam (~25% select-all, lesion/circuit/clamp/calculation items) — unique draw each attempt.",
         icon: "⏱",
         cardClass: "final",
         immediateFeedback: false,
@@ -4716,8 +4715,11 @@
         description: "Broader coverage with rigorous single-variable mechanism testing",
         icon: "III",
         cardClass: "elite",
-        requires: () => getProgress().final100Passed,
-        lockHint: "Pass Advanced Final I (80%+) to unlock",
+        requires: () => {
+          const p = getProgress();
+          return p.final100Passed && p.final150Passed;
+        },
+        lockHint: "Pass Advanced Final I and II (80%+) to unlock",
         passKey: "final200Passed"
       },
       pinnacle300: {
@@ -6845,6 +6847,7 @@
 
     let activeQuizId = null;
     let shuffledQuestions = [];
+    let flaggedQuestions = new Set();
     let currentIndex = 0;
     let answers = {};
     /** Only persist pause/resume while the live quiz screen is active (not after Submit). */
@@ -7008,10 +7011,13 @@
       const tick = () => {
         const left = quizDeadlineTs - Date.now();
         if (left <= 0) {
-          el.textContent = "Time expired — submit to review answers";
+          el.textContent = "Time expired — submitting…";
           el.classList.add("is-low");
           clearInterval(quizTimerInterval);
           quizTimerInterval = null;
+          if (activeQuizId && QUIZZES[activeQuizId]?.timedMinutes) {
+            showResults();
+          }
           return;
         }
         el.textContent = formatTimerRemaining(left);
@@ -7456,6 +7462,11 @@
       }
       updateQuizBackLabel();
       clearQuizTimer();
+      flaggedQuestions = new Set();
+      const flagWrap = document.getElementById("quiz-flag-wrap");
+      const flagInput = document.getElementById("quiz-flag");
+      if (flagWrap) flagWrap.hidden = quizId !== "proctoredMock";
+      if (flagInput) flagInput.checked = false;
       startQuizTimer(quiz.timedMinutes);
       showView("quiz");
       renderQuestion();
@@ -7624,6 +7635,14 @@
       document.getElementById("btn-next").disabled = nextButtonNeedsAnswer(currentIndex);
       document.getElementById("btn-next").textContent =
         currentIndex === total - 1 ? "Submit Quiz" : "Next";
+      const flagInput = document.getElementById("quiz-flag");
+      if (flagInput && activeQuizId === "proctoredMock") {
+        flagInput.checked = flaggedQuestions.has(currentIndex);
+        flagInput.onchange = () => {
+          if (flagInput.checked) flaggedQuestions.add(currentIndex);
+          else flaggedQuestions.delete(currentIndex);
+        };
+      }
       saveQuizSession();
     }
 
