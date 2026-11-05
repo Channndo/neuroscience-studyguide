@@ -228,28 +228,41 @@
     }
 
     .main-nav {
-      display: inline-flex;
-      flex-wrap: wrap;
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
       justify-content: center;
-      gap: 4px;
+      gap: 2px;
+      width: 100%;
       max-width: 100%;
+      margin-inline: auto;
       background: rgba(255, 255, 255, 0.08);
       border-radius: 999px;
-      padding: 4px;
+      padding: 3px;
+      overflow-x: auto;
+      overscroll-behavior-x: contain;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .main-nav::-webkit-scrollbar {
+      display: none;
     }
 
     .nav-tab {
       font-family: inherit;
-      font-size: 0.88rem;
+      font-size: 0.82rem;
       font-weight: 600;
-      padding: 0.55rem 1.15rem;
-      min-height: 2.75rem;
+      padding: 0.5rem 0.85rem;
+      min-height: 2.5rem;
       border: none;
       border-radius: 999px;
       cursor: pointer;
       background: transparent;
       color: rgba(255, 255, 255, 0.7);
       transition: background 0.2s, color 0.2s;
+      white-space: nowrap;
+      flex: 0 0 auto;
     }
 
     .nav-tab:hover { color: #fff; background: rgba(255, 255, 255, 0.1); }
@@ -263,6 +276,8 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      flex: 0 0 auto;
+      line-height: 1.2;
     }
 
     .header-streak-wrap {
@@ -1823,6 +1838,15 @@
 
     @media (max-width: 540px) {
       .question-card { padding: 1.35rem; }
+      .main-nav {
+        justify-content: flex-start;
+        padding: 2px;
+      }
+      .nav-tab {
+        font-size: 0.76rem;
+        padding: 0.42rem 0.65rem;
+        min-height: 2.25rem;
+      }
       /* Phones only: stack nav with primary action (Next / Submit) on top. */
       .nav-row {
         flex-direction: column-reverse;
@@ -2732,7 +2756,7 @@
     <p>MCB80x Practice Quiz Suite &mdash; Electrical Properties &middot; Neurons &amp; Networks &middot; The Brain</p>
     <nav class="main-nav" aria-label="Main">
       <button type="button" class="nav-tab active" data-nav="dashboard" id="nav-dashboard">Dashboard</button>
-      <button type="button" class="nav-tab" data-nav="profile" id="nav-profile">Profile &amp; Readiness</button>
+      <button type="button" class="nav-tab" data-nav="profile" id="nav-profile">Profile</button>
       <button type="button" class="nav-tab" data-nav="settings" id="nav-settings">Settings</button>
       <a class="nav-tab nav-tab--link" href="sign-in.html" id="nav-signin">Sign in</a>
     </nav>
