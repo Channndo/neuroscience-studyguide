@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import math
+import random
 import re
 from pathlib import Path
 
@@ -41,10 +42,24 @@ def nernst_mv(out_mM: float, in_mM: float, z: int = 1) -> float:
     return (61.54 / z) * math.log10(out_mM / in_mM)
 
 
+def balance_lengths(opts: list[str], correct: int) -> None:
+    """Pad distractors so the keyed option is longest in ~30% of items, not ~90%."""
+    if random.random() > 0.68:
+        return
+    clen = len(opts[correct])
+    suffix = " — inconsistent with the mechanism in the stem."
+    for j in range(4):
+        if j == correct:
+            continue
+        if len(opts[j]) <= clen + 4:
+            opts[j] = opts[j] + suffix
+
+
 def mk_mcq(topic, stem, correct_text, wrong_triple, explanation):
     opts = [correct_text, wrong_triple[0], wrong_triple[1], wrong_triple[2]]
-    # vary correct index ~30%
-    correct = 0
+    random.shuffle(opts)
+    correct = opts.index(correct_text)
+    balance_lengths(opts, correct)
     return Q(topic, stem, opts, correct, explanation)
 
 
