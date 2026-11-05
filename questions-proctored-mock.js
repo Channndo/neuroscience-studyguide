@@ -33,7 +33,7 @@ const PROCTORED_SATA_POOL = [
       "Resting potential is set only by the Na⁺ Nernst potential",
       "Myelin is required for any spike"
     ],
-    correctIndices: [0, 1],
+    correctIndices: [0],
     scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
     explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
     wrongExplanations: [
@@ -75,7 +75,7 @@ const PROCTORED_SATA_POOL = [
       "Ignores ion concentrations",
       "Can lie between individual E_ion values"
     ],
-    correctIndices: [0, 1, 3],
+    correctIndices: [1],
     scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
     explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
     wrongExplanations: [
@@ -96,7 +96,7 @@ const PROCTORED_SATA_POOL = [
       "All synapses release exactly one vesicle per spike",
       "Ca²⁺ triggers SNARE-mediated fusion"
     ],
-    correctIndices: [0, 1, 3],
+    correctIndices: [0],
     scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
     explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
     wrongExplanations: [
@@ -117,7 +117,7 @@ const PROCTORED_SATA_POOL = [
       "Inhibition cannot affect temporal summation",
       "AIS is a common spike initiation site"
     ],
-    correctIndices: [0, 1, 3],
+    correctIndices: [0, 1],
     scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
     explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
     wrongExplanations: [
@@ -360,7 +360,7 @@ const PROCTORED_SATA_POOL = [
   },
   {
     type: "selectAll",
-    topic: "Taste",
+    topic: "Gustation",
     module: "part3",
     question: "Taste transduction: select all.",
     options: [
@@ -411,7 +411,7 @@ const PROCTORED_SATA_POOL = [
       "Is identical to recurrent excitation only",
       "Common in sensory circuits"
     ],
-    correctIndices: [0, 1, 3],
+    correctIndices: [0, 1],
     scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
     explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
     wrongExplanations: [
@@ -421,7 +421,637 @@ const PROCTORED_SATA_POOL = [
       ""
     ]
   }
-];
+,
+  {
+    type: "selectAll",
+    topic: "Ion Channels",
+    module: "part1",
+    question: "Voltage-gated Na⁺ channel gating: select all that apply.",
+    options: [
+      "Activation opens the pore on depolarization",
+      "Inactivation can close the pore during sustained depolarization",
+      "They are equally permeable to Ca²⁺ and Na⁺ at peak open probability",
+      "Tetrodotoxin blocks many neuronal isoforms from the extracellular side"
+    ],
+    correctIndices: [0, 1, 3],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "Peak Na⁺ selectivity excludes meaningful Ca²⁺ flux through these channels.",
+      ""
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Passive Properties",
+    module: "part1",
+    question: "Cable equation / length constant: select all correct.",
+    options: [
+      "λ = √(R_m / R_i)",
+      "Doubling R_m with fixed R_i increases λ",
+      "λ is unchanged if only C_m changes",
+      "Distal synaptic EPSPs decay more when λ is short"
+    ],
+    correctIndices: [0, 1, 2, 3],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Synaptic Plasticity",
+    module: "part2",
+    question: "Hebbian LTP at CA3–CA1 synapses: select all supported statements.",
+    options: [
+      "Coincident pre- and postsynaptic activity can strengthen AMPA responses",
+      "NMDA receptors act as coincidence detectors via voltage-dependent Mg²⁺ block",
+      "LTP requires immediate permanent silencing of all inhibitory interneurons",
+      "Ca²⁺ entry through NMDA receptors can trigger kinase cascades"
+    ],
+    correctIndices: [0, 1, 3],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "Inhibition modulates induction but is not abolished globally for LTP.",
+      ""
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Sensory Transduction",
+    module: "part3",
+    question: "Photoreceptor responses to light: select all true.",
+    options: [
+      "Rods hyperpolarize because light closes cGMP-gated channels",
+      "Reduced glutamate release from photoreceptors depolarizes ON bipolar cells",
+      "Light increases cGMP in the outer segment",
+      "Dark current is carried partly by Na⁺ and Ca²⁺ influx"
+    ],
+    correctIndices: [0, 3],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "ON bipolars depolarize when glutamate falls; that statement alone is false as written.",
+      "Light lowers, not raises, cGMP.",
+      ""
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Motor Systems",
+    module: "part3",
+    question: "Upper vs lower motor neuron signs: select all correct pairings.",
+    options: [
+      "UMN lesion → increased deep tendon reflexes",
+      "LMN lesion → flaccid weakness with atrophy",
+      "UMN lesion → fasciculations as the primary sign",
+      "LMN lesion → reduced tone early"
+    ],
+    correctIndices: [0, 1, 3],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "Fasciculations point to LMN or anterior horn pathology, not classic UMN lesions.",
+      ""
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Basal Ganglia",
+    module: "part3",
+    question: "Direct vs indirect pathway (simplified): select all accurate.",
+    options: [
+      "Direct pathway striatal cells are D1-like and facilitate thalamocortical drive",
+      "Indirect pathway striatal cells are D2-like and tend to suppress movement",
+      "Substantia nigra pars compacta dopamine loss favors indirect pathway activity in Parkinsonism",
+      "Globus pallidus interna inhibition of thalamus is the only output of basal ganglia"
+    ],
+    correctIndices: [0, 1, 2],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "",
+      "GPi and SNr both provide inhibitory output; GPi is not the sole output nucleus."
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Autonomic Neuroscience",
+    module: "part2",
+    question: "Sympathetic vs parasympathetic ganglia: select all true.",
+    options: [
+      "Preganglionic sympathetic fibers can be myelinated and relatively short to the chain ganglia",
+      "Parasympathetic preganglionic fibers are long and synapse near or in target organs",
+      "All autonomic postganglionic neurons release ACh onto smooth muscle",
+      "Nicotinic receptors mediate fast EPSPs in autonomic ganglia"
+    ],
+    correctIndices: [0, 1, 3],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "Most sympathetic postganglionic neurons release norepinephrine, not ACh (exceptions exist).",
+      ""
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Neurotransmitters",
+    module: "part2",
+    question: "GABAergic signaling: select all correct.",
+    options: [
+      "GABA_A receptors are ligand-gated Cl⁻ channels",
+      "GABA_B receptors are metabotropic and can open K⁺ channels",
+      "GABA always depolarizes mature CNS neurons because E_Cl is above rest",
+      "Benzodiazepines positive-modulate many GABA_A receptors"
+    ],
+    correctIndices: [0, 1, 3],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "In many mature neurons E_Cl is below rest, so GABA_A activation hyperpolarizes.",
+      ""
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Development",
+    module: "part2",
+    question: "Activity-dependent refinement: select all that apply.",
+    options: [
+      "Binocular competition shapes ocular dominance columns",
+      "Spontaneous retinal waves can drive wiring before vision",
+      "Critical periods never close in sensory cortex",
+      "Myelination timing can influence conduction delays in circuits"
+    ],
+    correctIndices: [0, 1, 3],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "Critical periods close or narrow for many sensory systems after experience.",
+      ""
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Methods",
+    module: "part3",
+    question: "fMRI BOLD signal basics: select all accurate.",
+    options: [
+      "BOLD reflects blood oxygenation changes coupled to metabolism",
+      "Increased neural activity locally can increase oxygenated hemoglobin relative to deoxyhemoglobin",
+      "BOLD directly counts action potentials one-for-one",
+      "Vascular dynamics blur temporal resolution compared to electrophysiology"
+    ],
+    correctIndices: [0, 1, 3],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "BOLD is hemodynamic and indirect, not a spike counter.",
+      ""
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Hearing",
+    module: "part3",
+    question: "Cochlear tuning: select all true.",
+    options: [
+      "Basilar membrane is stiffer at the base (high-frequency place)",
+      "Outer hair cells provide active amplification",
+      "All frequencies map to the apex only",
+      "Inner hair cells primarily synapse onto afferents"
+    ],
+    correctIndices: [0, 1, 3],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "Tonotopy maps low frequencies to the apex and high to the base.",
+      ""
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Sleep",
+    module: "part3",
+    question: "REM vs NREM physiology: select all correct.",
+    options: [
+      "REM shows muscle atonia in normal subjects",
+      "NREM slow-wave sleep shows large-amplitude delta EEG",
+      "REM EEG resembles quiet wakefulness in some bands",
+      "Dreaming occurs exclusively in NREM stage 3"
+    ],
+    correctIndices: [0, 1, 2],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "",
+      "Vivid dreaming is classically linked to REM, not exclusively to NREM3."
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Pain",
+    module: "part3",
+    question: "Nociceptive pathways: select all accurate.",
+    options: [
+      "First-order nociceptors can synapse in dorsal horn laminae I–II",
+      "Spinothalamic tract carries pain and temperature",
+      "All fast touch and pain share identical thickly myelinated fibers",
+      "Central sensitization can widen receptive fields after injury"
+    ],
+    correctIndices: [0, 1, 3],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "Fast touch uses Aβ fibers; pain uses Aδ and C fibers.",
+      ""
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Cerebellum",
+    module: "part3",
+    question: "Cerebellar motor learning signs: select all that apply.",
+    options: [
+      "Lateral cerebellar lesions can cause intention tremor",
+      "Medial vermis lesions relate to truncal ataxia",
+      "Cerebellar output is exclusively excitatory to spinal motor neurons",
+      "Purkinje cells inhibit deep nuclei"
+    ],
+    correctIndices: [0, 1, 3],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "Deep nuclei are inhibited by Purkinje cells; final output is disynaptic and not direct excitation of LMNs.",
+      ""
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Memory",
+    module: "part3",
+    question: "Hippocampal role in memory: select all supported.",
+    options: [
+      "Declarative/episodic encoding depends on hippocampal circuits",
+      "Procedural skills like riding a bike rely primarily on hippocampus alone",
+      "Bilateral medial temporal damage can cause anterograde amnesia",
+      "Place cells fire when an animal occupies specific locations"
+    ],
+    correctIndices: [0, 2, 3],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "Procedural memory involves striatum/cerebellum among other structures, not hippocampus alone.",
+      "",
+      ""
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Neuroendocrine",
+    module: "part3",
+    question: "Hypothalamic–pituitary control: select all true.",
+    options: [
+      "Oxytocin is synthesized in hypothalamic neurons and released from posterior pituitary",
+      "CRH from hypothalamus drives ACTH release from anterior pituitary",
+      "Posterior pituitary secretes peptide hormones made locally in the gland",
+      "Dopamine from hypothalamus inhibits prolactin release"
+    ],
+    correctIndices: [0, 1, 3],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "Posterior pituitary stores and releases hypothalamic peptides; it does not synthesize them.",
+      ""
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Glial Cells",
+    module: "part2",
+    question: "Astrocyte functions: select all that apply.",
+    options: [
+      "K⁺ spatial buffering after neuronal firing",
+      "Uptake of glutamate from synaptic cleft",
+      "Generation of action potentials for long-range signaling like axons",
+      "Formation of the glial limitans at the blood–brain barrier"
+    ],
+    correctIndices: [0, 1, 3],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "Astrocytes use graded calcium waves, not classic long-range APs in axons.",
+      ""
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Retina",
+    module: "part3",
+    question: "Retinal circuitry: select all correct.",
+    options: [
+      "Horizontal cells provide lateral inhibition in the outer plexiform layer",
+      "Amacrine cells modulate bipolar–ganglion synapses",
+      "Ganglion cells are the output neurons of the retina",
+      "Rods and cones both depolarize strongly to light"
+    ],
+    correctIndices: [0, 1, 2],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "",
+      "Photoreceptors hyperpolarize to light; the statement reverses their response."
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Epilepsy",
+    module: "part3",
+    question: "Seizure mechanisms (conceptual): select all accurate.",
+    options: [
+      "Imbalance of excitation and inhibition can promote hypersynchrony",
+      "Spread can involve thalamocortical loops",
+      "All seizures require visible tonic–clonic movements",
+      "Gap junction coupling can contribute to synchrony in some models"
+    ],
+    correctIndices: [0, 1, 3],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "Absence and focal impaired-awareness seizures may lack dramatic motor signs.",
+      ""
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Neurodegeneration",
+    module: "part3",
+    question: "Alzheimer disease pathology: select all true.",
+    options: [
+      "Extracellular amyloid-β plaques are a hallmark",
+      "Intracellular neurofibrillary tangles contain hyperphosphorylated tau",
+      "Cholinergic basal forebrain neurons are vulnerable early",
+      "Motor neuron loss in anterior horn is the primary lesion"
+    ],
+    correctIndices: [0, 1, 2],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "",
+      "Anterior horn motor neuron loss defines ALS, not typical Alzheimer pathology."
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Language",
+    module: "part3",
+    question: "Aphasia profiles: select all correct pairings.",
+    options: [
+      "Broca → nonfluent speech with relatively preserved comprehension",
+      "Wernicke → fluent but paraphasic speech with poor comprehension",
+      "Conduction aphasia → impaired repetition with fluent speech",
+      "Global aphasia → isolated dysarthria only"
+    ],
+    correctIndices: [0, 1, 2],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "",
+      "Global aphasia affects fluency and comprehension broadly, not dysarthria alone."
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Vestibular",
+    module: "part3",
+    question: "Semicircular canal physiology: select all true.",
+    options: [
+      "Endolymph displacement deflects cupula and hair bundles",
+      "Horizontal canal pairs detect yaw head rotation",
+      "Canals directly measure linear translation like otolith organs",
+      "Canal plane aligns with complementary contralateral canal"
+    ],
+    correctIndices: [0, 1, 3],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "Otolith organs detect linear acceleration and head tilt; canals detect angular acceleration.",
+      ""
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Spinal Cord",
+    module: "part3",
+    question: "Brown-Séquard hemisection: select all expected below the lesion.",
+    options: [
+      "Ipsilateral loss of proprioception/vibration (dorsal columns)",
+      "Contralateral loss of pain/temperature (spinothalamic)",
+      "Ipsilateral UMN weakness",
+      "Contralateral dorsal column loss"
+    ],
+    correctIndices: [0, 1, 2],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "",
+      "Dorsal column fibers decussate in the medulla; loss is ipsilateral to the cord lesion."
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Neuromuscular",
+    module: "part2",
+    question: "Neuromuscular junction pharmacology: select all accurate.",
+    options: [
+      "Botulinum toxin cleaves SNARE proteins reducing ACh release",
+      "Neostigmine inhibits acetylcholinesterase",
+      "Curare-like agents block postsynaptic nicotinic receptors",
+      "Lambert–Eaton syndrome increases quantal release via presynaptic Ca²⁺ channel antibodies"
+    ],
+    correctIndices: [0, 1, 2],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "",
+      "Lambert–Eaton reduces release; myasthenia targets postsynaptic receptors."
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Rhythmic Motor",
+    module: "part2",
+    question: "Central pattern generators: select all true.",
+    options: [
+      "Can produce locomotor rhythms without sensory feedback",
+      "Reciprocal inhibition helps alternate flexor/extensor bursts",
+      "Require continuous cortical spiking for each muscle twitch in all species",
+      "Can be modulated by descending and sensory inputs"
+    ],
+    correctIndices: [0, 1, 3],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "CPGs can run subcortically; cortex modulates but does not drive every twitch.",
+      ""
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Ion Homeostasis",
+    module: "part1",
+    question: "Na⁺/K⁺-ATPase: select all correct.",
+    options: [
+      "Exports 3 Na⁺ and imports 2 K⁺ per ATP hydrolyzed cycle (classic stoichiometry)",
+      "Is electrogenic and contributes to resting potential",
+      "Is the sole determinant of action potential peak amplitude",
+      "Can be inhibited by cardiac glycosides like ouabain"
+    ],
+    correctIndices: [0, 1, 3],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "Peak amplitude is set mainly by Na⁺ channel gating and Na⁺ driving force, not pump stoichiometry alone.",
+      ""
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Receptors",
+    module: "part2",
+    question: "Metabotropic glutamate receptors (group I example): select all true.",
+    options: [
+      "Often couple to Gq and can raise postsynaptic Ca²⁺",
+      "Can modulate ionotropic receptor function",
+      "Are always ligand-gated ion channels like AMPA",
+      "Slow EPSPs/IPSPs can outlast fast ionotropic events"
+    ],
+    correctIndices: [0, 1, 3],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "Group I mGluRs are GPCRs, not ionotropic AMPA-like channels.",
+      ""
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Olfactory System",
+    module: "part3",
+    question: "Olfactory transduction: select all accurate.",
+    options: [
+      "Odorants bind receptors on cilia of olfactory sensory neurons",
+      "Golf activates adenylyl cyclase raising cAMP",
+      "All olfactory receptor neurons express the same single receptor gene",
+      "CNG channels admit Na⁺ and Ca²⁺ depolarizing the neuron"
+    ],
+    correctIndices: [0, 1, 3],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "Each OSN typically expresses one receptor type from a large gene family.",
+      ""
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Gustation",
+    module: "part3",
+    question: "Taste coding: select all true.",
+    options: [
+      "Different taste qualities engage partially overlapping peripheral pathways",
+      "Umami is often signaled by glutamate binding metabotropic receptors",
+      "Sweet and bitter always share identical labeled lines with no overlap",
+      "Brainstem gustatory nuclei receive primary afferents from VII, IX, and X"
+    ],
+    correctIndices: [0, 1, 3],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "Peripheral and central populations show overlap and combinatorial coding.",
+      ""
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Computational",
+    module: "part1",
+    question: "Integrate-and-fire simplifications: select all that apply.",
+    options: [
+      "Threshold crossing triggers a stereotyped spike event",
+      "Subthreshold dynamics often follow RC membrane properties",
+      "Every dendritic branch is modeled with full Hodgkin–Huxley kinetics always",
+      "Refractory period limits maximal firing rate"
+    ],
+    correctIndices: [0, 1, 3],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "Integrate-and-fire models deliberately omit full HH kinetics in dendrites.",
+      ""
+    ]
+  }];
 
 const PROCTORED_LESION_POOL = [
   {
@@ -709,9 +1339,6 @@ const PROCTORED_LESION_POOL = [
       "This pattern does not match the anatomy of the stated lesion."
     ]
   },
-  {
-    topic: "Visual System",
-    module: "part3",
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
@@ -1671,9 +2298,9 @@ const PROCTORED_CIRCUIT_POOL = [
     question: "Three-neuron chain: sensory \u2192 excitatory interneuron \u2192 motor. Sensory fires; interneuron is blocked. Motor output?",
     options: [
       "Reduced or absent excitation of motor neuron",
-      "Increased motor firing",
-      "Only neuromodulation",
-      "Saltatory conduction in muscle"
+      "Increased motor firing (not implied by the circuit wiring described above.)",
+      "Only neuromodulation (not implied by the circuit wiring described above.)",
+      "Saltatory conduction in muscle (not implied by the circuit wiring described above.)"
     ],
     correct: 0,
     explanation: "Without the interneuron relay, the motor neuron receives little or no excitation.",
@@ -1728,9 +2355,9 @@ const PROCTORED_CIRCUIT_POOL = [
     question: "Disinhibition: inhibitory interneuron is silenced, releasing target neuron from inhibition. Target neuron activity?",
     options: [
       "Increases (disinhibition)",
-      "Always decreases",
-      "Unchanged always",
-      "Only photoreceptor responds"
+      "Always decreases (not implied by the circuit wiring described above.)",
+      "Unchanged always (not implied by the circuit wiring described above.)",
+      "Only photoreceptor responds (not implied by the circuit wiring described above.)"
     ],
     correct: 0,
     explanation: "Removing inhibition increases target excitability.",
@@ -1747,9 +2374,9 @@ const PROCTORED_CIRCUIT_POOL = [
     question: "Reciprocal inhibition between two antagonist motor pools (flexor/extensor). When flexor pool is active, extensor pool?",
     options: [
       "Reciprocally inhibited (reduced firing)",
-      "Co-activated equally",
-      "Unrelated",
-      "Only sensory firing"
+      "Co-activated equally (not implied by the circuit wiring described above.)",
+      "Unrelated (not implied by the circuit wiring described above.)",
+      "Only sensory firing (not implied by the circuit wiring described above.)"
     ],
     correct: 0,
     explanation: "Reciprocal inhibition prevents co-contraction of antagonists.",
@@ -1766,9 +2393,9 @@ const PROCTORED_CIRCUIT_POOL = [
     question: "Central pattern generator (CPG) for locomotion: rhythmic output persists after sensory input ends. This implies?",
     options: [
       "Recurrent excitatory/inhibitory loops can sustain rhythm intrinsically",
-      "Sensory input required every cycle always",
-      "Only myelin generates rhythm",
-      "Only cortex required each step"
+      "Sensory input required every cycle always (not implied by the circuit wiring described above.)",
+      "Only myelin generates rhythm (not implied by the circuit wiring described above.)",
+      "Only cortex required each step (not implied by the circuit wiring described above.)"
     ],
     correct: 0,
     explanation: "CPGs use local circuit dynamics to maintain rhythmic motor patterns.",
@@ -1785,9 +2412,9 @@ const PROCTORED_CIRCUIT_POOL = [
     question: "Aplysia siphon withdrawal: strong tail shock sensitizes siphon response via serotonin on sensory terminals. Mechanism?",
     options: [
       "Serotonin increases cAMP/PKA and broadens sensory terminal excitability (sensitization)",
-      "Only postsynaptic K\u207a block always",
-      "Only long-term depression",
-      "Only gap junction opening"
+      "Only postsynaptic K\u207a block always (not implied by the circuit wiring described above.)",
+      "Only long-term depression (not implied by the circuit wiring described above.)",
+      "Only gap junction opening (not implied by the circuit wiring described above.)"
     ],
     correct: 0,
     explanation: "Serotonin modulates presynaptic release in Aplysia sensitization.",
@@ -1804,9 +2431,9 @@ const PROCTORED_CIRCUIT_POOL = [
     question: "Summation: EPSP +5 mV and IPSP \u22123 mV arrive simultaneously at soma (linear range). Approximate net change?",
     options: [
       "+2 mV toward threshold",
-      "+8 mV always",
-      "\u22128 mV always",
-      "0 mV always"
+      "+8 mV always (not implied by the circuit wiring described above.)",
+      "\u22128 mV always (not implied by the circuit wiring described above.)",
+      "0 mV always (not implied by the circuit wiring described above.)"
     ],
     correct: 0,
     explanation: "Subthreshold linear summation: +5 + (\u22123) \u2248 +2 mV.",
@@ -1823,9 +2450,9 @@ const PROCTORED_CIRCUIT_POOL = [
     question: "Two EPSPs +3 mV each arrive 2 ms apart within \u03c4_m. Compared with one EPSP, somatic depolarization?",
     options: [
       "Greater peak (temporal summation)",
-      "Same peak always",
-      "Zero always",
-      "Only inhibition results"
+      "Same peak always (not implied by the circuit wiring described above.)",
+      "Zero always (not implied by the circuit wiring described above.)",
+      "Only inhibition results (not implied by the circuit wiring described above.)"
     ],
     correct: 0,
     explanation: "Temporal summation within \u03c4 increases peak depolarization.",
@@ -1842,9 +2469,9 @@ const PROCTORED_CIRCUIT_POOL = [
     question: "Feedback inhibition in cortex: pyramidal cell activates interneuron that inhibits same pyramidal cell. Function?",
     options: [
       "Gain control and stabilization of firing rate",
-      "Guaranteed runaway activity",
-      "Only LTP induction",
-      "Only myelin repair"
+      "Guaranteed runaway activity (not implied by the circuit wiring described above.)",
+      "Only LTP induction (not implied by the circuit wiring described above.)",
+      "Only myelin repair (not implied by the circuit wiring described above.)"
     ],
     correct: 0,
     explanation: "Feedback inhibition stabilizes cortical firing.",
@@ -1861,9 +2488,9 @@ const PROCTORED_CIRCUIT_POOL = [
     question: "Lateral inhibition in retina: surround inhibits center. Visual edge enhancement occurs because?",
     options: [
       "Contrast at borders increases due to differential center vs surround firing",
-      "All pixels fire equally",
-      "Only photoreceptors spike",
-      "Only cochlea tuned"
+      "All pixels fire equally (not implied by the circuit wiring described above.)",
+      "Only photoreceptors spike (not implied by the circuit wiring described above.)",
+      "Only cochlea tuned (not implied by the circuit wiring described above.)"
     ],
     correct: 0,
     explanation: "Lateral inhibition enhances contrast at edges.",
@@ -1880,9 +2507,9 @@ const PROCTORED_CIRCUIT_POOL = [
     question: "Inhibitory interneuron (PV+) provides perisomatic inhibition on pyramidal cell. Effect on spike timing?",
     options: [
       "Precise control of spike timing and synchrony",
-      "Only increases firing rate without bound",
-      "Only blocks all input permanently",
-      "Only affects glomeruli"
+      "Only increases firing rate without bound (not implied by the circuit wiring described above.)",
+      "Only blocks all input permanently (not implied by the circuit wiring described above.)",
+      "Only affects glomeruli (not implied by the circuit wiring described above.)"
     ],
     correct: 0,
     explanation: "Perisomatic inhibition strongly regulates spike timing.",
@@ -1918,9 +2545,9 @@ const PROCTORED_CIRCUIT_POOL = [
     question: "Divergent excitatory circuit: one sensory neuron drives many motor neurons. Effect?",
     options: [
       "Amplification/spread of signal to multiple outputs",
-      "Only one motor neuron can ever fire",
-      "Only inhibition spreads",
-      "Only photoreceptor signal"
+      "Only one motor neuron can ever fire (not implied by the circuit wiring described above.)",
+      "Only inhibition spreads (not implied by the circuit wiring described above.)",
+      "Only photoreceptor signal (not implied by the circuit wiring described above.)"
     ],
     correct: 0,
     explanation: "Divergence distributes input to many targets.",
@@ -1937,9 +2564,9 @@ const PROCTORED_CIRCUIT_POOL = [
     question: "Convergent excitatory circuit: many sensory neurons onto one motor neuron. Effect?",
     options: [
       "Spatial summation can reach threshold more easily",
-      "Motor neuron cannot integrate inputs",
-      "Only one synapse matters always",
-      "Only gap junctions converge"
+      "Motor neuron cannot integrate inputs (not implied by the circuit wiring described above.)",
+      "Only one synapse matters always (not implied by the circuit wiring described above.)",
+      "Only gap junctions converge (not implied by the circuit wiring described above.)"
     ],
     correct: 0,
     explanation: "Convergence allows spatial summation.",
@@ -2037,9 +2664,9 @@ const PROCTORED_CLAMP_TRACE_POOL = [
     question: "After TEA, the early inward current remains but repolarizing outward current is reduced. Early inward is:",
     options: [
       "Na\u207a current (TEA blocks K\u207a)",
-      "Only Cl\u207b",
-      "Only pump current",
-      "Only gap junction"
+      "Only Cl\u207b (not implied by the circuit wiring described above.)",
+      "Only pump current (not implied by the circuit wiring described above.)",
+      "Only gap junction (not implied by the circuit wiring described above.)"
     ],
     correct: 0,
     diagram: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 160\" role=\"img\" aria-label=\"TEA clamp\"><rect width=\"340\" height=\"160\" fill=\"#fafafa\"/><text x=\"170\" y=\"14\" text-anchor=\"middle\" font-size=\"10\">I (nA) vs time</text><polyline fill=\"none\" stroke=\"#a41034\" stroke-width=\"2\" points=\"30,90 100,90 100,40 250,40 250,70 300,70\"/></svg>",
@@ -2077,9 +2704,9 @@ const PROCTORED_CLAMP_TRACE_POOL = [
     question: "I\u2013V plot shows inward current at depolarized potentials crossing zero near +55 mV. This reversal near +55 mV suggests:",
     options: [
       "Predominantly Na\u207a current under these conditions",
-      "Predominantly K\u207a only at all voltages",
-      "No ionic currents",
-      "Only Cl\u207b at all voltages"
+      "Predominantly K\u207a only at all voltages (not implied by the circuit wiring described above.)",
+      "No ionic currents (not implied by the circuit wiring described above.)",
+      "Only Cl\u207b at all voltages (not implied by the circuit wiring described above.)"
     ],
     correct: 0,
     diagram: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 160\" role=\"img\" aria-label=\"I-V curve\"><rect width=\"340\" height=\"160\" fill=\"#fafafa\"/><text x=\"170\" y=\"14\" text-anchor=\"middle\" font-size=\"10\">I (nA)</text><text x=\"8\" y=\"80\" font-size=\"10\" transform=\"rotate(-90 8 80)\">V_m (mV)</text><line x1=\"40\" y1=\"140\" x2=\"300\" y2=\"140\" stroke=\"#333\"/><line x1=\"40\" y1=\"20\" x2=\"40\" y2=\"140\" stroke=\"#333\"/><polyline fill=\"none\" stroke=\"#a41034\" stroke-width=\"2\" points=\"40,100 120,100 200,40 280,120\"/></svg>",
@@ -2097,9 +2724,9 @@ const PROCTORED_CLAMP_TRACE_POOL = [
     question: "Current-clamp: brief hyperpolarizing current step produces exponential return with time constant \u03c4. \u03c4 primarily reflects:",
     options: [
       "R_m \u00d7 C_m membrane properties",
-      "Axon diameter only",
-      "Only synaptic quanta",
-      "Only myelin thickness without R_m"
+      "Axon diameter only (not implied by the circuit wiring described above.)",
+      "Only synaptic quanta (not implied by the circuit wiring described above.)",
+      "Only myelin thickness without R_m (not implied by the circuit wiring described above.)"
     ],
     correct: 0,
     diagram: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 160\" role=\"img\" aria-label=\"current clamp\"><rect width=\"340\" height=\"160\" fill=\"#fafafa\"/><text x=\"170\" y=\"14\" text-anchor=\"middle\" font-size=\"10\">V_m (mV) vs time</text><polyline fill=\"none\" stroke=\"#a41034\" stroke-width=\"2\" points=\"30,110 100,110 100,70 220,70 220,85 300,85\"/></svg>",
@@ -2117,9 +2744,9 @@ const PROCTORED_CLAMP_TRACE_POOL = [
     question: "Subthreshold current-clamp step produces graded depolarization without spikes. The trace shows:",
     options: [
       "Passive/subthreshold response without regenerative Na\u207a activation",
-      "Full action potential train",
-      "Only synaptic vesicle fusion",
-      "Only cochlear tuning"
+      "Full action potential train (not implied by the circuit wiring described above.)",
+      "Only synaptic vesicle fusion (not implied by the circuit wiring described above.)",
+      "Only cochlear tuning (not implied by the circuit wiring described above.)"
     ],
     correct: 0,
     diagram: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 160\" role=\"img\" aria-label=\"subthreshold\"><rect width=\"340\" height=\"160\" fill=\"#fafafa\"/><text x=\"170\" y=\"14\" text-anchor=\"middle\" font-size=\"10\">V_m (mV)</text><polyline fill=\"none\" stroke=\"#a41034\" stroke-width=\"2\" points=\"30,100 100,100 100,85 250,85\"/></svg>",
@@ -2134,9 +2761,981 @@ const PROCTORED_CLAMP_TRACE_POOL = [
 ];
 
 
-const PROCTORED_MOCK_POOL = [
-  ...PROCTORED_SATA_POOL,
-  ...PROCTORED_LESION_POOL,
-  ...PROCTORED_CIRCUIT_POOL,
-  ...PROCTORED_CLAMP_TRACE_POOL
+const PROCTORED_MOCK_EXAM_POOL = [
+  {
+    type: "selectAll",
+    topic: "Nernst Equation",
+    module: "part1",
+    question: "Proctored mock — Nernst at 37°C (61.54 mV/decade): select all true.",
+    options: [
+      "Raising external K⁺ makes E_K less negative",
+      "E_Cl sign in the Nernst equation uses valence in the denominator",
+      "Reversal potential is where net current for that ion is zero",
+      "E_Na is always below rest in every cell type"
+    ],
+    correctIndices: [0, 1, 2],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "",
+      "E_Na is typically well above rest in neurons."
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Passive Properties",
+    module: "part1",
+    question: "Proctored mock — τ and λ: select all correct.",
+    options: [
+      "τ = R_m C_m",
+      "λ increases if R_m rises with R_i fixed",
+      "Higher leak conductance lengthens λ",
+      "Shorter τ speeds voltage equilibration for a given current"
+    ],
+    correctIndices: [0, 1, 3],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "Higher leak lowers R_m and shortens λ.",
+      ""
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Action Potentials",
+    module: "part1",
+    question: "Proctored mock — spike phases: select all accurate.",
+    options: [
+      "Na⁺ activation drives rapid depolarization",
+      "Na⁺ inactivation contributes to repolarization",
+      "K⁺ activation typically follows Na⁺ activation",
+      "Resting potential is set solely by E_Na"
+    ],
+    correctIndices: [0, 1, 2],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "",
+      "Resting is dominated by K⁺ leak and pump activity, not E_Na alone."
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Synaptic Transmission",
+    module: "part2",
+    question: "Proctored mock — quantal release: select all true.",
+    options: [
+      "Miniature events reflect single vesicles",
+      "Evoked release is probabilistic",
+      "Every active zone fuses exactly one vesicle per spike",
+      "Ca²⁺ couples action potential to fusion"
+    ],
+    correctIndices: [0, 1, 3],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "Release probability and vesicle number vary; not exactly one.",
+      ""
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Plasticity",
+    module: "part2",
+    question: "Proctored mock — LTD/LTP: select all supported.",
+    options: [
+      "Low-frequency pairing can weaken synapses (LTD)",
+      "NMDA receptors detect coincident pre/post activity",
+      "LTP never requires postsynaptic Ca²⁺",
+      "Endocannabinoids can mediate some forms of retrograde signaling"
+    ],
+    correctIndices: [0, 1, 3],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "Postsynaptic Ca²⁺ rise is central to many LTP induction protocols.",
+      ""
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Visual System",
+    module: "part3",
+    question: "Proctored mock — geniculate layers: select all true.",
+    options: [
+      "M and P streams remain partially segregated in LGN",
+      "Contralateral eye layers alternate in cats/primates",
+      "LGN receives only retinal input with no cortical feedback",
+      "Magnocellular layers favor motion/transient responses"
+    ],
+    correctIndices: [0, 1, 3],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "Cortico-thalamic feedback modulates LGN relay cells.",
+      ""
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Motor Systems",
+    module: "part3",
+    question: "Proctored mock — corticospinal tract: select all accurate.",
+    options: [
+      "Most fibers decussate in the medullary pyramids",
+      "Lateral corticospinal tract controls skilled distal movement",
+      "All corticospinal fibers remain ipsilateral without decussation",
+      "Upper motor neuron lesions can increase reflex tone"
+    ],
+    correctIndices: [0, 1, 3],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "A minority (ventral corticospinal) remains ipsilateral.",
+      ""
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Basal Ganglia",
+    module: "part3",
+    question: "Proctored mock — Parkinsonism: select all true.",
+    options: [
+      "Dopamine loss in substantia nigra pars compacta is central",
+      "Bradykinesia and rigidity are common",
+      "Chorea is the hallmark of untreated Parkinson disease",
+      "L-DOPA replaces a dopamine precursor"
+    ],
+    correctIndices: [0, 1, 3],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "Chorea links more to Huntington and other disorders.",
+      ""
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Autonomic",
+    module: "part2",
+    question: "Proctored mock — autonomic outflow: select all correct.",
+    options: [
+      "Sympathetic chain ganglia lie paravertebrally",
+      "Parasympathetic preganglionic fibers are long",
+      "All postganglionic fibers release ACh on vascular smooth muscle",
+      "Sacral outflow contributes to pelvic parasympathetic functions"
+    ],
+    correctIndices: [0, 1, 3],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "Most vascular smooth muscle gets NE from sympathetic fibers.",
+      ""
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Methods",
+    module: "part3",
+    question: "Proctored mock — EEG vs unit recording: select all true.",
+    options: [
+      "Scalp EEG reflects synchronized population activity",
+      "Single-unit recording resolves individual spike waveforms",
+      "EEG has finer spatial resolution than fMRI always",
+      "Local field potentials sit between single units and EEG"
+    ],
+    correctIndices: [0, 1, 3],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "EEG is coarse spatially; fMRI can localize better at millimeter scale.",
+      ""
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Hearing",
+    module: "part3",
+    question: "Proctored mock — auditory brainstem: select all accurate.",
+    options: [
+      "Cochlear nuclei are the first CNS relay for audition",
+      "Superior olivary complex computes interaural time differences",
+      "Inferior colliculus is part of the tectum in midbrain",
+      "Primary auditory cortex is in occipital lobe"
+    ],
+    correctIndices: [0, 1, 2],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "",
+      "Primary auditory cortex is temporal (Heschl gyrus), not occipital."
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Sleep",
+    module: "part3",
+    question: "Proctored mock — orexin/hypocretin: select all true.",
+    options: [
+      "Loss of orexin neurons links to narcolepsy with cataplexy",
+      "Orexin stabilizes wakefulness",
+      "Orexin is identical to melatonin",
+      "Lateral hypothalamus contains orexin-producing neurons"
+    ],
+    correctIndices: [0, 1, 3],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "Melatonin is a pineal hormone with different receptors.",
+      ""
+    ]
+  },
+  {
+    type: "selectAll",
+    topic: "Pain",
+    module: "part3",
+    question: "Proctored mock — gate control (conceptual): select all supported.",
+    options: [
+      "Non-nociceptive input can modulate pain transmission",
+      "Substantia gelatinosa involves interneurons in dorsal horn",
+      "Pain is immutable once peripheral nociceptors fire",
+      "Descending pathways can inhibit dorsal horn neurons"
+    ],
+    correctIndices: [0, 1, 3],
+    scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
+    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    wrongExplanations: [
+      "",
+      "",
+      "Central and descending modulation strongly shape pain.",
+      ""
+    ]
+  },
+  {
+    topic: "Clinical Neuroanatomy",
+    module: "part3",
+    question: "Proctored mock — Right optic tract compression. Expected visual field defect:",
+    options: [
+      "Bitemporal hemianopia — not the best match to the stem.",
+      "Left monocular blindness — not the best match to the stem.",
+      "Right superior quadrantanopia — not the best match to the stem.",
+      "Left homonymous hemianopia"
+    ],
+    correct: 3,
+    explanation: "Optic tract carries contralateral visual field information.",
+    wrongExplanations: [
+      "This choice (Bitemporal hemianopia) does not follow from the stem.",
+      "This choice (Left monocular blindness) does not follow from the stem.",
+      "This choice (Right superior quadrantanopia) does not follow from the stem.",
+      ""
+    ]
+  },
+  {
+    topic: "Clinical Neuroanatomy",
+    module: "part3",
+    question: "Proctored mock — Pituitary adenoma compressing optic chiasm.",
+    options: [
+      "Left inferior quadrantanopia",
+      "Bitemporal hemianopia",
+      "Left monocular blindness",
+      "Right homonymous hemianopia"
+    ],
+    correct: 1,
+    explanation: "Nasal retinal fibers cross in chiasm; compression knocks out temporal fields.",
+    wrongExplanations: [
+      "This choice (Left inferior quadrantanopia) does not follow from the stem.",
+      "",
+      "This choice (Left monocular blindness) does not follow from the stem.",
+      "This choice (Right homonymous hemianopia) does not follow from the stem."
+    ]
+  },
+  {
+    topic: "Clinical Neuroanatomy",
+    module: "part3",
+    question: "Proctored mock — Right Meyer's loop (temporal lobe) destroyed.",
+    options: [
+      "Left monocular blindness — not the best match to the stem.",
+      "Right homonymous hemianopia — not the best match to the stem.",
+      "Bitemporal loss — not the best match to the stem.",
+      "Left superior quadrantanopia"
+    ],
+    correct: 3,
+    explanation: "Meyer's loop carries upper quadrant fibers; temporal lesion → contralateral superior quadrantanopia.",
+    wrongExplanations: [
+      "This choice (Left monocular blindness) does not follow from the stem.",
+      "This choice (Right homonymous hemianopia) does not follow from the stem.",
+      "This choice (Bitemporal loss) does not follow from the stem.",
+      ""
+    ]
+  },
+  {
+    topic: "Clinical Neuroanatomy",
+    module: "part3",
+    question: "Proctored mock — Left medial lemniscus in pons.",
+    options: [
+      "Left hemiparesis only — not the best match to the stem.",
+      "Right hemianopia — not the best match to the stem.",
+      "Global aphasia — not the best match to the stem.",
+      "Right loss of vibration/proprioception"
+    ],
+    correct: 3,
+    explanation: "Medial lemniscus carries dorsal column information already decussated.",
+    wrongExplanations: [
+      "This choice (Left hemiparesis only) does not follow from the stem.",
+      "This choice (Right hemianopia) does not follow from the stem.",
+      "This choice (Global aphasia) does not follow from the stem.",
+      ""
+    ]
+  },
+  {
+    topic: "Clinical Neuroanatomy",
+    module: "part3",
+    question: "Proctored mock — Right lateral medulla (PICA) syndrome.",
+    options: [
+      "Pure motor hemiplegia only",
+      "Broca aphasia",
+      "Bitemporal hemianopia",
+      "Right Horner + ataxia + pain/temp loss on right face and left body"
+    ],
+    correct: 3,
+    explanation: "Classic lateral medullary pattern mixes cranial nerve, cerebellar, and crossed spinothalamic findings.",
+    wrongExplanations: [
+      "This choice (Pure motor hemiplegia only) does not follow from the stem.",
+      "This choice (Broca aphasia) does not follow from the stem.",
+      "This choice (Bitemporal hemianopia) does not follow from the stem.",
+      ""
+    ]
+  },
+  {
+    topic: "Clinical Neuroanatomy",
+    module: "part3",
+    question: "Proctored mock — Anterior spinal artery infarct at thoracic level.",
+    options: [
+      "Pure cerebellar ataxia — not the best match to the stem.",
+      "Isolated dorsal column loss only — not the best match to the stem.",
+      "Bilateral motor weakness with dissociated sensory loss (pain/temp) below lesion",
+      "Third nerve palsy — not the best match to the stem."
+    ],
+    correct: 2,
+    explanation: "ASA supplies anterior cord; motor and spinothalamic tracts affected bilaterally.",
+    wrongExplanations: [
+      "This choice (Pure cerebellar ataxia) does not follow from the stem.",
+      "This choice (Isolated dorsal column loss only) does not follow from the stem.",
+      "",
+      "This choice (Third nerve palsy) does not follow from the stem."
+    ]
+  },
+  {
+    topic: "Clinical Neuroanatomy",
+    module: "part3",
+    question: "Proctored mock — Left cerebellar hemisphere stroke.",
+    options: [
+      "Left-sided UMN spasticity pattern — not the best match to the stem.",
+      "Right hemianopia — not the best match to the stem.",
+      "Bitemporal hemianopia — not the best match to the stem.",
+      "Left limb intention tremor and dysmetria"
+    ],
+    correct: 3,
+    explanation: "Lateral cerebellum coordinates ipsilateral limb movement.",
+    wrongExplanations: [
+      "This choice (Left-sided UMN spasticity pattern) does not follow from the stem.",
+      "This choice (Right hemianopia) does not follow from the stem.",
+      "This choice (Bitemporal hemianopia) does not follow from the stem.",
+      ""
+    ]
+  },
+  {
+    topic: "Clinical Neuroanatomy",
+    module: "part3",
+    question: "Proctored mock — Left Broca area infarct in dominant hemisphere.",
+    options: [
+      "Pure alexia without motor deficit — not the best match to the stem.",
+      "Bilateral deafness — not the best match to the stem.",
+      "Nonfluent aphasia with relatively preserved comprehension",
+      "Fluent paraphasic speech with poor comprehension — not the best match to the stem."
+    ],
+    correct: 2,
+    explanation: "Broca area lesions impair speech production more than comprehension.",
+    wrongExplanations: [
+      "This choice (Pure alexia without motor deficit) does not follow from the stem.",
+      "This choice (Bilateral deafness) does not follow from the stem.",
+      "",
+      "This choice (Fluent paraphasic speech with poor comprehension) does not follow from the stem."
+    ]
+  },
+  {
+    topic: "Neural Circuits",
+    module: "part2",
+    question: "Proctored mock — Feedforward inhibition: interneuron I inhibits principal P while both receive excitation. Net effect on P spike timing?",
+    options: [
+      "Identical to removing I",
+      "Always prevents P from firing",
+      "Narrows timing window for P to fire",
+      "Forces P to fire before input arrives"
+    ],
+    correct: 2,
+    explanation: "Feedforward inhibition delays or suppresses P unless excitation is strong and well timed.",
+    wrongExplanations: [
+      "This choice (Identical to removing I) does not follow from the stem.",
+      "This choice (Always prevents P from firing) does not follow from the stem.",
+      "",
+      "This choice (Forces P to fire before input arrives) does not follow from the stem."
+    ]
+  },
+  {
+    topic: "Neural Circuits",
+    module: "part2",
+    question: "Proctored mock — Reciprocal inhibition between flexor and extensor CPG half-centers produces:",
+    options: [
+      "Random Poisson spikes only — not the best match to the stem.",
+      "Simultaneous flexor/extensor co-contraction always",
+      "Alternating burst patterns",
+      "Complete silence — not the best match to the stem."
+    ],
+    correct: 2,
+    explanation: "Reciprocal inhibition enforces alternation in many CPG models.",
+    wrongExplanations: [
+      "This choice (Random Poisson spikes only) does not follow from the stem.",
+      "This choice (Simultaneous flexor/extensor co-contraction always) does not follow from the stem.",
+      "",
+      "This choice (Complete silence) does not follow from the stem."
+    ]
+  },
+  {
+    topic: "Neural Circuits",
+    module: "part2",
+    question: "Proctored mock — Disinhibition: inhibitory interneuron stops another inhibitor targeting P. P becomes:",
+    options: [
+      "Uncoupled from all synaptic input",
+      "Hyperpolarized below rest always",
+      "More likely to fire (disinhibited)",
+      "Unable to integrate EPSPs"
+    ],
+    correct: 2,
+    explanation: "Removing inhibition from P is disinhibition and can facilitate firing.",
+    wrongExplanations: [
+      "This choice (Uncoupled from all synaptic input) does not follow from the stem.",
+      "This choice (Hyperpolarized below rest always) does not follow from the stem.",
+      "",
+      "This choice (Unable to integrate EPSPs) does not follow from the stem."
+    ]
+  },
+  {
+    topic: "Electrophysiology",
+    module: "part1",
+    question: "Proctored mock — TTX applied during current-clamp recording of action potential. Expected change?",
+    options: [
+      "Blocks only afterhyperpolarization",
+      "Abolishes the Na⁺-dependent upstroke",
+      "Converts spikes to calcium-only plateaus unchanged",
+      "Increases peak amplitude"
+    ],
+    correct: 1,
+    explanation: "TTX blocks voltage-gated Na⁺ channels required for the upstroke.",
+    wrongExplanations: [
+      "This choice (Blocks only afterhyperpolarization) does not follow from the stem.",
+      "",
+      "This choice (Converts spikes to calcium-only plateaus unchanged) does not follow from the stem.",
+      "This choice (Increases peak amplitude) does not follow from the stem."
+    ]
+  },
+  {
+    topic: "Electrophysiology",
+    module: "part1",
+    question: "Proctored mock — Voltage clamp at 0 mV with normal gradients. Dominant inward current at peak of voltage step mimicking spike?",
+    options: [
+      "Sustained K⁺ current only",
+      "Exclusive Cl⁻ current",
+      "No currents because 0 mV is rest",
+      "Large transient Na⁺ current"
+    ],
+    correct: 3,
+    explanation: "At 0 mV, Na⁺ channels open producing inward current before K⁺ dominates repolarization.",
+    wrongExplanations: [
+      "This choice (Sustained K⁺ current only) does not follow from the stem.",
+      "This choice (Exclusive Cl⁻ current) does not follow from the stem.",
+      "This choice (No currents because 0 mV is rest) does not follow from the stem.",
+      ""
+    ]
+  },
+  {
+    topic: "Nernst Equation",
+    module: "part1",
+    question: "Proctored mock — [K⁺]o/[K⁺]i = 0.25 at 37°C. E_K is about:",
+    options: [
+      "+37 mV — not the best match to the stem.",
+      "0 mV — not the best match to the stem.",
+      "−90 mV — not the best match to the stem.",
+      "−37 mV"
+    ],
+    correct: 3,
+    explanation: "One decade ratio → ~61.5 mV; 0.25 outside/inside yields less negative than 140/4.",
+    wrongExplanations: [
+      "This choice (+37 mV) does not follow from the stem.",
+      "This choice (0 mV) does not follow from the stem.",
+      "This choice (−90 mV) does not follow from the stem.",
+      ""
+    ]
+  },
+  {
+    topic: "Nernst Equation",
+    module: "part1",
+    question: "Proctored mock — If E_K = −80 mV and V_m = −65 mV, opening K⁺ channels tends to:",
+    options: [
+      "Hyperpolarize toward E_K",
+      "Depolarize toward 0 mV always",
+      "Have no effect on V_m — not the best match to the stem.",
+      "Clamp V_m to E_Na — not the best match to the stem."
+    ],
+    correct: 0,
+    explanation: "Driving force moves V_m toward E_K when K⁺ conductance rises.",
+    wrongExplanations: [
+      "",
+      "This choice (Depolarize toward 0 mV always) does not follow from the stem.",
+      "This choice (Have no effect on V_m) does not follow from the stem.",
+      "This choice (Clamp V_m to E_Na) does not follow from the stem."
+    ]
+  },
+  {
+    topic: "Goldman Equation",
+    module: "part1",
+    question: "Proctored mock — Only K⁺ permeant. V_m equals:",
+    options: [
+      "Always 0 mV",
+      "E_Na",
+      "E_K",
+      "Average of all ions"
+    ],
+    correct: 2,
+    explanation: "Goldman reduces to Nernst for a single permeant ion.",
+    wrongExplanations: [
+      "This choice (Always 0 mV) does not follow from the stem.",
+      "This choice (E_Na) does not follow from the stem.",
+      "",
+      "This choice (Average of all ions) does not follow from the stem."
+    ]
+  },
+  {
+    topic: "Passive Properties",
+    module: "part1",
+    question: "Proctored mock — R_m doubles, C_m unchanged. τ:",
+    options: [
+      "Halves — not the best match to the stem.",
+      "Quarters — not the best match to the stem.",
+      "Unchanged — not the best match to the stem.",
+      "Doubles"
+    ],
+    correct: 3,
+    explanation: "τ = R_m C_m.",
+    wrongExplanations: [
+      "This choice (Halves) does not follow from the stem.",
+      "This choice (Quarters) does not follow from the stem.",
+      "This choice (Unchanged) does not follow from the stem.",
+      ""
+    ]
+  },
+  {
+    topic: "Passive Properties",
+    module: "part1",
+    question: "Proctored mock — EPSP 5 mV at soma, threshold −50 mV, rest −65 mV. Subthreshold?",
+    options: [
+      "Cannot tell — not the best match to the stem.",
+      "Always triggers spike — not the best match to the stem.",
+      "Yes — peak −60 mV",
+      "No — exceeds threshold"
+    ],
+    correct: 2,
+    explanation: "−65 + 5 = −60 mV, still above threshold −50.",
+    wrongExplanations: [
+      "This choice (Cannot tell) does not follow from the stem.",
+      "This choice (Always triggers spike) does not follow from the stem.",
+      "",
+      "This choice (No) does not follow from the stem."
+    ]
+  },
+  {
+    topic: "Synaptic Transmission",
+    module: "part2",
+    question: "Proctored mock — Mini amplitude 1 mV; 100 quanta released synchronously (linear sum). Peak EPSP ~",
+    options: [
+      "100 mV (unrealistic saturation ignored)",
+      "0 mV",
+      "10 mV",
+      "1 mV"
+    ],
+    correct: 0,
+    explanation: "Linear summation of 100 × 1 mV quanta in this idealized stem.",
+    wrongExplanations: [
+      "",
+      "This choice (0 mV) does not follow from the stem.",
+      "This choice (10 mV) does not follow from the stem.",
+      "This choice (1 mV) does not follow from the stem."
+    ]
+  },
+  {
+    topic: "Synaptic Transmission",
+    module: "part2",
+    question: "Proctored mock — Botulinum at NMJ reduces:",
+    options: [
+      "Postsynaptic nicotinic receptors",
+      "Muscle AChE only",
+      "Muscle action potential voltage-gated Na⁺",
+      "Quantal ACh release"
+    ],
+    correct: 3,
+    explanation: "Botulinum cleaves SNAREs presynaptically.",
+    wrongExplanations: [
+      "This choice (Postsynaptic nicotinic receptors) does not follow from the stem.",
+      "This choice (Muscle AChE only) does not follow from the stem.",
+      "This choice (Muscle action potential voltage-gated Na⁺) does not follow from the stem.",
+      ""
+    ]
+  },
+  {
+    topic: "Plasticity",
+    module: "part2",
+    question: "Proctored mock — Blocking NMDA receptors during high-frequency pairing most directly prevents:",
+    options: [
+      "Resting K⁺ leak — not the best match to the stem.",
+      "LTP induction",
+      "Retrograde endocannabinoid release only",
+      "Rod phototransduction"
+    ],
+    correct: 1,
+    explanation: "NMDA coincidence detection is required for many LTP protocols.",
+    wrongExplanations: [
+      "This choice (Resting K⁺ leak) does not follow from the stem.",
+      "",
+      "This choice (Retrograde endocannabinoid release only) does not follow from the stem.",
+      "This choice (Rod phototransduction) does not follow from the stem."
+    ]
+  },
+  {
+    topic: "Sensory Systems",
+    module: "part3",
+    question: "Proctored mock — Photoreceptor in dark is:",
+    options: [
+      "Spiking at 100 Hz — not the best match to the stem.",
+      "Hyperpolarized below −80 mV always — not the best match to the stem.",
+      "Depolarized with steady dark current",
+      "Silent electrically — not the best match to the stem."
+    ],
+    correct: 2,
+    explanation: "Dark current through cGMP-gated channels depolarizes photoreceptors.",
+    wrongExplanations: [
+      "This choice (Spiking at 100 Hz) does not follow from the stem.",
+      "This choice (Hyperpolarized below −80 mV always) does not follow from the stem.",
+      "",
+      "This choice (Silent electrically) does not follow from the stem."
+    ]
+  },
+  {
+    topic: "Motor Systems",
+    module: "part3",
+    question: "Proctored mock — Lower motor neuron lesion causes:",
+    options: [
+      "Homonymous hemianopia — not the best match to the stem.",
+      "Spasticity and hyperreflexia — not the best match to the stem.",
+      "Flaccid weakness and hyporeflexia",
+      "Bitemporal hemianopia — not the best match to the stem."
+    ],
+    correct: 2,
+    explanation: "LMN loss reduces tone and reflexes locally.",
+    wrongExplanations: [
+      "This choice (Homonymous hemianopia) does not follow from the stem.",
+      "This choice (Spasticity and hyperreflexia) does not follow from the stem.",
+      "",
+      "This choice (Bitemporal hemianopia) does not follow from the stem."
+    ]
+  },
+  {
+    topic: "Language",
+    module: "part3",
+    question: "Proctored mock — Wernicke area lesion in dominant hemisphere:",
+    options: [
+      "Fluent speech with poor comprehension",
+      "Nonfluent speech",
+      "Deafness",
+      "Pure motor hemiplegia only"
+    ],
+    correct: 0,
+    explanation: "Wernicke aphasia is fluent but incomprehensible with poor comprehension.",
+    wrongExplanations: [
+      "",
+      "This choice (Nonfluent speech) does not follow from the stem.",
+      "This choice (Deafness) does not follow from the stem.",
+      "This choice (Pure motor hemiplegia only) does not follow from the stem."
+    ]
+  },
+  {
+    topic: "Vestibular",
+    module: "part3",
+    question: "Proctored mock — Horizontal canal excitatory ampullopetal cupula deflection:",
+    options: [
+      "Activates photoreceptors",
+      "Increases afferent firing rate",
+      "Silences all afferents permanently",
+      "Opens blood–brain barrier"
+    ],
+    correct: 1,
+    explanation: "Cupula deflection modulates hair cell transmitter release to vestibular nerve.",
+    wrongExplanations: [
+      "This choice (Activates photoreceptors) does not follow from the stem.",
+      "",
+      "This choice (Silences all afferents permanently) does not follow from the stem.",
+      "This choice (Opens blood–brain barrier) does not follow from the stem."
+    ]
+  },
+  {
+    topic: "Neuroendocrine",
+    module: "part3",
+    question: "Proctored mock — ADH release site:",
+    options: [
+      "Posterior pituitary (from hypothalamic axons)",
+      "Pineal gland — not the best match to the stem.",
+      "Adrenal medulla — not the best match to the stem.",
+      "Anterior pituitary somatotropes — not the best match to the stem."
+    ],
+    correct: 0,
+    explanation: "ADH is made in hypothalamus and released neurohypophysis.",
+    wrongExplanations: [
+      "",
+      "This choice (Pineal gland) does not follow from the stem.",
+      "This choice (Adrenal medulla) does not follow from the stem.",
+      "This choice (Anterior pituitary somatotropes) does not follow from the stem."
+    ]
+  },
+  {
+    topic: "Glial Cells",
+    module: "part2",
+    question: "Proctored mock — Myelin produced by oligodendrocytes in CNS:",
+    options: [
+      "Shortens λ in axons always — not the best match to the stem.",
+      "Is identical to Schwann cell myelin functionally",
+      "Prevents all K⁺ leak — not the best match to the stem.",
+      "Speeds saltatory conduction"
+    ],
+    correct: 3,
+    explanation: "Myelin increases effective membrane resistance and enables saltatory conduction.",
+    wrongExplanations: [
+      "This choice (Shortens λ in axons always) does not follow from the stem.",
+      "This choice (Is identical to Schwann cell myelin functionally) does not follow from the stem.",
+      "This choice (Prevents all K⁺ leak) does not follow from the stem.",
+      ""
+    ]
+  },
+  {
+    topic: "Rhythmic Motor",
+    module: "part2",
+    question: "Proctored mock — Central pattern generator for walking can:",
+    options: [
+      "Require continuous conscious control for each step always — not the best match to the stem.",
+      "Produce alternating left/right bursts without sensory feedback",
+      "Only operate in REM sleep — not the best match to the stem.",
+      "Not be modulated by brainstem — not the best match to the stem."
+    ],
+    correct: 1,
+    explanation: "CPGs generate basic rhythms; descending input modulates them.",
+    wrongExplanations: [
+      "This choice (Require continuous conscious control for each step always) does not follow from the stem.",
+      "",
+      "This choice (Only operate in REM sleep) does not follow from the stem.",
+      "This choice (Not be modulated by brainstem) does not follow from the stem."
+    ]
+  },
+  {
+    topic: "Integrative",
+    module: "part2",
+    question: "Proctored mock — Opening GABA_A channels at rest when E_Cl is below V_m tends to:",
+    options: [
+      "Hyperpolarize or stabilize V_m",
+      "Depolarize toward E_Na",
+      "Abolish all synaptic release",
+      "Block the Na⁺/K⁺ pump only"
+    ],
+    correct: 0,
+    explanation: "Inhibitory chloride conductance pulls V_m toward E_Cl.",
+    wrongExplanations: [
+      "",
+      "This choice (Depolarize toward E_Na) does not follow from the stem.",
+      "This choice (Abolish all synaptic release) does not follow from the stem.",
+      "This choice (Block the Na⁺/K⁺ pump only) does not follow from the stem."
+    ]
+  },
+  {
+    topic: "Integrative",
+    module: "part1",
+    question: "Proctored mock — Increasing membrane capacitance with fixed R_m changes τ by:",
+    options: [
+      "Decreasing τ",
+      "Eliminating λ entirely",
+      "Leaving τ unchanged always",
+      "Increasing τ (τ = R_m C_m)"
+    ],
+    correct: 3,
+    explanation: "τ scales with C_m.",
+    wrongExplanations: [
+      "This choice (Decreasing τ) does not follow from the stem.",
+      "This choice (Eliminating λ entirely) does not follow from the stem.",
+      "This choice (Leaving τ unchanged always) does not follow from the stem.",
+      ""
+    ]
+  },
+  {
+    topic: "Integrative",
+    module: "part2",
+    question: "Proctored mock — Presynaptic metabotropic autoreceptors typically:",
+    options: [
+      "Reduce transmitter release when activated",
+      "Guarantee maximal release — not the best match to the stem.",
+      "Convert EPSPs to action potentials in glia — not the best match to the stem.",
+      "Open voltage-gated Na⁺ in postsynaptic spine always"
+    ],
+    correct: 0,
+    explanation: "Autoreceptors provide negative feedback on release.",
+    wrongExplanations: [
+      "",
+      "This choice (Guarantee maximal release) does not follow from the stem.",
+      "This choice (Convert EPSPs to action potentials in glia) does not follow from the stem.",
+      "This choice (Open voltage-gated Na⁺ in postsynaptic spine always) does not follow from the stem."
+    ]
+  },
+  {
+    topic: "Integrative",
+    module: "part3",
+    question: "Proctored mock — Unilateral labyrinthectomy acutely causes:",
+    options: [
+      "Broca aphasia — not the best match to the stem.",
+      "Bitemporal hemianopia — not the best match to the stem.",
+      "Vertigo and nystagmus toward the lesioned side (acute)",
+      "Flaccid paralysis of contralateral face only — not the best match to the stem."
+    ],
+    correct: 2,
+    explanation: "Acute vestibular deafferentation produces vertigo and nystagmus.",
+    wrongExplanations: [
+      "This choice (Broca aphasia) does not follow from the stem.",
+      "This choice (Bitemporal hemianopia) does not follow from the stem.",
+      "",
+      "This choice (Flaccid paralysis of contralateral face only) does not follow from the stem."
+    ]
+  },
+  {
+    topic: "Integrative",
+    module: "part3",
+    question: "Proctored mock — Hippocampal place fields fire when:",
+    options: [
+      "Light hits photoreceptors — not the best match to the stem.",
+      "The animal occupies a preferred location in an environment",
+      "Odorants bind only in glomeruli of cerebellum — not the best match to the stem.",
+      "Muscle spindles stretch only — not the best match to the stem."
+    ],
+    correct: 1,
+    explanation: "Place cells encode spatial location.",
+    wrongExplanations: [
+      "This choice (Light hits photoreceptors) does not follow from the stem.",
+      "",
+      "This choice (Odorants bind only in glomeruli of cerebellum) does not follow from the stem.",
+      "This choice (Muscle spindles stretch only) does not follow from the stem."
+    ]
+  },
+  {
+    topic: "Integrative",
+    module: "part2",
+    question: "Proctored mock — Electrical synapses (gap junctions) allow:",
+    options: [
+      "Only Cl⁻ extrusion by NKCC",
+      "Only retrograde peptide signaling",
+      "Only myelination of axons",
+      "Bidirectional ion flow and fast coupling"
+    ],
+    correct: 3,
+    explanation: "Gap junctions couple cells electrically.",
+    wrongExplanations: [
+      "This choice (Only Cl⁻ extrusion by NKCC) does not follow from the stem.",
+      "This choice (Only retrograde peptide signaling) does not follow from the stem.",
+      "This choice (Only myelination of axons) does not follow from the stem.",
+      ""
+    ]
+  },
+  {
+    topic: "Integrative",
+    module: "part1",
+    question: "Proctored mock — In voltage clamp, holding potential is:",
+    options: [
+      "The same as spike threshold always",
+      "Measured only in muscle spindles",
+      "The command potential the amplifier enforces across the membrane",
+      "Always +40 mV only"
+    ],
+    correct: 2,
+    explanation: "The clamp holds V_m at the command potential.",
+    wrongExplanations: [
+      "This choice (The same as spike threshold always) does not follow from the stem.",
+      "This choice (Measured only in muscle spindles) does not follow from the stem.",
+      "",
+      "This choice (Always +40 mV only) does not follow from the stem."
+    ]
+  },
+  {
+    topic: "Integrative",
+    module: "part3",
+    question: "Proctored mock — Contralateral hemiparesis with UMN signs suggests:",
+    options: [
+      "Cochlear nucleus infarct only — not the best match to the stem.",
+      "Lesion of optic nerve only — not the best match to the stem.",
+      "Pure LMN anterior horn loss only — not the best match to the stem.",
+      "Lesion in corticospinal tract above the spinal segment"
+    ],
+    correct: 3,
+    explanation: "UMN weakness is contralateral to corticospinal tract lesions rostral to decussation.",
+    wrongExplanations: [
+      "This choice (Cochlear nucleus infarct only) does not follow from the stem.",
+      "This choice (Lesion of optic nerve only) does not follow from the stem.",
+      "This choice (Pure LMN anterior horn loss only) does not follow from the stem.",
+      ""
+    ]
+  },
+  {
+    topic: "Integrative",
+    module: "part2",
+    question: "Proctored mock — End-plate potential at NMJ is:",
+    options: [
+      "Generated by rods and cones — not the best match to the stem.",
+      "Identical to inhibitory IPSP in spinal neuron — not the best match to the stem.",
+      "All-or-none in the muscle membrane always before initiation — not the best match to the stem.",
+      "Graded and suprathreshold for muscle fiber in normal conditions"
+    ],
+    correct: 3,
+    explanation: "EPP is graded but typically triggers muscle AP.",
+    wrongExplanations: [
+      "This choice (Generated by rods and cones) does not follow from the stem.",
+      "This choice (Identical to inhibitory IPSP in spinal neuron) does not follow from the stem.",
+      "This choice (All-or-none in the muscle membrane always before initiation) does not follow from the stem.",
+      ""
+    ]
+  }
 ];
