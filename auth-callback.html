@@ -34,7 +34,9 @@
 
       const square1Session = MCB80XOAuth.sessionFromSquare1Hash(params);
       if (square1Session) {
-        MCB80XOAuth.saveSession(square1Session);
+        MCB80XOAuth.saveSession(square1Session, {
+          persist: MCB80XOAuth.consumeKeepSignedInPending()
+        });
         sessionStorage.setItem("mcb80x_oauth_pending_apply", JSON.stringify(square1Session));
         sessionStorage.setItem("mcb80x_force_cloud_sync", "1");
         window.location.replace("index.html?signed_in=1");

@@ -1,6 +1,8 @@
 (function () {
   const SESSION_KEY = "mcb80x_oauth_session";
   const EXCHANGE_BASE_KEY = "mcb80x_oauth_exchange_base";
+  const REMEMBER_PREF_KEY = "mcb80x_keep_signed_in";
+  const REMEMBER_PENDING_KEY = "mcb80x_keep_signed_in_pending";
 
   /** Providers whose OAuth app credentials live on Square1 (not Render). */
   const SQUARE1_BRIDGE_PROVIDERS = ["amazon"];
@@ -57,18 +59,47 @@
     return `${window.location.origin}${path}auth-callback.html`;
   }
 
-  function getSession() {
+  function parseStoredSession(raw) {
+    if (!raw?.email || !raw?.accessToken) return null;
+    return {
+      ...raw,
+      email: String(raw.email).toLowerCase(),
+      id: raw.id || raw.email
+    };
+  }
+
+  function readSessionFrom(storage) {
     try {
-      const raw = JSON.parse(localStorage.getItem(SESSION_KEY) || "null");
-      if (!raw?.email || !raw?.accessToken) return null;
-      return {
-        ...raw,
-        email: String(raw.email).toLowerCase(),
-        id: raw.id || raw.email
-      };
+      return parseStoredSession(JSON.parse(storage.getItem(SESSION_KEY) || "null"));
     } catch {
       return null;
     }
+  }
+
+  function getSession() {
+    return readSessionFrom(localStorage) || readSessionFrom(sessionStorage);
+  }
+
+  function getKeepSignedInPreference() {
+    return localStorage.getItem(REMEMBER_PREF_KEY) !== "0";
+  }
+
+  function setKeepSignedInPending(keepSignedIn) {
+    sessionStorage.setItem(REMEMBER_PENDING_KEY, keepSignedIn ? "1" : "0");
+  }
+
+  function consumeKeepSignedInPending() {
+    const pending = sessionStorage.getItem(REMEMBER_PENDING_KEY);
+    sessionStorage.removeItem(REMEMBER_PENDING_KEY);
+    if (pending === "1") return true;
+    if (pending === "0") return false;
+    return getKeepSignedInPreference();
+  }
+
+  function readKeepSignedInFromPage() {
+    const el = document.getElementById("keep-signed-in");
+    if (el && "checked" in el) return !!el.checked;
+    return getKeepSignedInPreference();
   }
 
   /** Signed-in account (email/password or social) — same storage. */
@@ -76,12 +107,24 @@
     return getSession();
   }
 
-  function saveSession(session) {
-    localStorage.setItem(SESSION_KEY, JSON.stringify(session));
+  function saveSession(session, options) {
+    const persist =
+      options && "persist" in options ? options.persist === true : getKeepSignedInPreference();
+    const payload = JSON.stringify(session);
+    if (persist) {
+      localStorage.setItem(SESSION_KEY, payload);
+      sessionStorage.removeItem(SESSION_KEY);
+      localStorage.setItem(REMEMBER_PREF_KEY, "1");
+    } else {
+      sessionStorage.setItem(SESSION_KEY, payload);
+      localStorage.removeItem(SESSION_KEY);
+      localStorage.setItem(REMEMBER_PREF_KEY, "0");
+    }
   }
 
   function clearSession() {
     localStorage.removeItem(SESSION_KEY);
+    sessionStorage.removeItem(SESSION_KEY);
   }
 
   function usesSquare1Bridge(provider) {
@@ -89,6 +132,7 @@
   }
 
   function startOAuth(provider) {
+    setKeepSignedInPending(readKeepSignedInFromPage());
     const returnTo = encodeURIComponent(authCallbackUrl());
     if (usesSquare1Bridge(provider)) {
       sessionStorage.setItem(EXCHANGE_BASE_KEY, square1OAuthBase());
@@ -206,7 +250,7 @@
       id: user.id || "",
       provider: "oauth"
     };
-    saveSession(session);
+    saveSession(session, { persist: consumeKeepSignedInPending() });
     sessionStorage.setItem("mcb80x_force_cloud_sync", "1");
     return session;
   }
@@ -237,6 +281,9 @@
     getAccountSession,
     saveSession,
     clearSession,
+    getKeepSignedInPreference,
+    setKeepSignedInPending,
+    consumeKeepSignedInPending,
     startOAuth,
     fetchProviders,
     orderProviders,

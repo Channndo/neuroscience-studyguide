@@ -17,7 +17,11 @@
     sessionStorage.setItem("mcb80x_oauth_pending_apply", JSON.stringify(normalized));
     sessionStorage.setItem("mcb80x_force_cloud_sync", "1");
     if (window.MCB80XOAuth?.saveSession) {
-      MCB80XOAuth.saveSession(normalized);
+      const keepEl = document.getElementById("keep-signed-in");
+      const persist = keepEl
+        ? keepEl.checked
+        : (window.MCB80XOAuth.getKeepSignedInPreference?.() ?? true);
+      MCB80XOAuth.saveSession(normalized, { persist });
     }
     window.location.replace("index.html?signed_in=1");
   }

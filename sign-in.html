@@ -51,6 +51,11 @@
           <label for="password">Password</label>
           <input id="password" name="password" type="password" required minlength="8" autocomplete="current-password" />
         </div>
+        <label class="auth-remember" for="keep-signed-in">
+          <input id="keep-signed-in" name="keep-signed-in" type="checkbox" checked />
+          <span>Keep me signed in</span>
+        </label>
+        <p class="auth-hint auth-remember-hint">When checked, you stay signed in on this device until you sign out or clear browser data.</p>
         <button type="submit" class="auth-btn-primary" id="login-submit">Sign in</button>
       </form>
 
@@ -93,6 +98,13 @@
     const securityPanel = document.getElementById("security-panel");
     const loginSubmit = document.getElementById("login-submit");
     let challengeToken = "";
+    let keepSignedInChoice = true;
+
+    const keepSignedInEl = document.getElementById("keep-signed-in");
+    if (keepSignedInEl && window.MCB80XOAuth?.getKeepSignedInPreference) {
+      keepSignedInEl.checked = MCB80XOAuth.getKeepSignedInPreference();
+    }
+    keepSignedInChoice = keepSignedInEl?.checked !== false;
 
     MCB80XOAuth.fetchProviders()
       .then(list => MCB80XOAuth.renderSocialGrid(grid, list))
@@ -117,6 +129,7 @@
       loginSubmit.disabled = true;
       try {
         const fd = new FormData(loginForm);
+        keepSignedInChoice = document.getElementById("keep-signed-in")?.checked !== false;
         const result = await MCB80XPasswordAuth.loginAccount(fd.get("email"), fd.get("password"));
         if (result.requiresSecurity) {
           challengeToken = result.challengeToken;
@@ -128,7 +141,7 @@
           loginSubmit.disabled = false;
           return;
         }
-        MCB80XPasswordAuth.finishSignIn(result.session);
+        MCB80XPasswordAuth.finishSignIn(result.session, { keepSignedIn: keepSignedInChoice });
       } catch (ex) {
         err.textContent = ex.message || String(ex);
         err.hidden = false;
@@ -144,7 +157,7 @@
           document.getElementById("sq1-answer").value,
           document.getElementById("sq2-answer").value
         );
-        MCB80XPasswordAuth.finishSignIn(session);
+        MCB80XPasswordAuth.finishSignIn(session, { keepSignedIn: keepSignedInChoice });
       } catch (ex) {
         err.textContent = ex.message || String(ex);
         err.hidden = false;

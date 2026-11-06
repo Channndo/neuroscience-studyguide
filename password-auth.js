@@ -78,16 +78,20 @@
     }
   }
 
-  function finishSignIn(session) {
+  function finishSignIn(session, options) {
     const normalized = {
       ...session,
       email: String(session.email || "").toLowerCase(),
       id: session.id || session.email
     };
+    const persist = options?.keepSignedIn !== false;
     if (window.MCB80XOAuth?.saveSession) {
-      MCB80XOAuth.saveSession(normalized);
-    } else {
+      MCB80XOAuth.saveSession(normalized, { persist });
+    } else if (persist) {
       localStorage.setItem(SESSION_KEY, JSON.stringify(normalized));
+    } else {
+      sessionStorage.setItem(SESSION_KEY, JSON.stringify(normalized));
+      localStorage.removeItem(SESSION_KEY);
     }
     applySessionToApp(normalized);
     sessionStorage.setItem("mcb80x_oauth_pending_apply", JSON.stringify(normalized));
