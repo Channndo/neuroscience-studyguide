@@ -1092,12 +1092,16 @@
 
     .brain-anatomy-stack {
       position: relative;
-      max-width: 520px;
+      max-width: min(100%, 560px);
       margin: 0 auto;
       border-radius: 8px;
       overflow: hidden;
       box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
       background: #fff;
+    }
+
+    .brain-anatomy-sagittal .brain-anatomy-stack {
+      background: #000;
     }
 
     .brain-anatomy-base {
@@ -3272,8 +3276,8 @@
   <script src="questions-proctored-mock.js"></script>
   <script src="questions-formula-drills.js"></script>
   <script src="questions-pinnacle-megabank.js"></script>
-  <script src="brain-anatomy-diagrams.js?v=3"></script>
-  <script src="questions-brain-anatomy.js?v=3"></script>
+  <script src="brain-anatomy-diagrams.js?v=5"></script>
+  <script src="questions-brain-anatomy.js?v=5"></script>
   <script src="mcb80x-cloud-config.js"></script>
   <script src="sheets-sync.js"></script>
   <script src="oauth-client.js"></script>
@@ -4885,7 +4889,7 @@
         title: "Brain Anatomy I — Learn",
         subtitle: "Foundation structures only",
         meta: "15 questions · difficulty 1 · instant feedback · 75% to pass",
-        description: "Major lobes, thalamus, brainstem segments, cerebellum, and other tier-1 landmarks on schematic figures.",
+        description: "Chart pack midsagittal figure — same art as Downloads → MCB80x chart pack.",
         icon: "🧠",
         cardClass: "anatomy-lab",
         immediateFeedback: true,
@@ -4911,7 +4915,7 @@
         title: "Brain Anatomy — Flashcards",
         subtitle: "Figure on front · name on back",
         meta: "Full 50-card deck · spaced repetition",
-        description: "Same schematic figures as the quizzes. Rate each card (Again / Good / Easy) to schedule reviews. Missed quiz items are added here too.",
+        description: "Chart pack figures (midsagittal + lateral). Rate each card for spaced repetition. Missed quiz items are added here too.",
         icon: "🃏",
         cardClass: "anatomy-lab flashcards",
         flashcardDeck: true,
