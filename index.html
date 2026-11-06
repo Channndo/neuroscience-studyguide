@@ -1090,9 +1090,33 @@
       margin: 0 auto;
     }
 
-    .question-diagram.brain-anatomy .brain-anatomy-raster svg {
+    .brain-anatomy-stack {
+      position: relative;
+      max-width: 520px;
+      margin: 0 auto;
       border-radius: 8px;
+      overflow: hidden;
       box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+      background: #fff;
+    }
+
+    .brain-anatomy-base {
+      display: block;
+      width: 100%;
+      height: auto;
+      vertical-align: middle;
+    }
+
+    .brain-anatomy-overlay {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    #fc-diagram-wrap.fc-diagram-wrap .brain-anatomy-stack {
+      max-width: 100%;
     }
 
     .question-diagram.brain-anatomy figcaption {
@@ -3248,8 +3272,8 @@
   <script src="questions-proctored-mock.js"></script>
   <script src="questions-formula-drills.js"></script>
   <script src="questions-pinnacle-megabank.js"></script>
-  <script src="brain-anatomy-diagrams.js"></script>
-  <script src="questions-brain-anatomy.js"></script>
+  <script src="brain-anatomy-diagrams.js?v=3"></script>
+  <script src="questions-brain-anatomy.js?v=3"></script>
   <script src="mcb80x-cloud-config.js"></script>
   <script src="sheets-sync.js"></script>
   <script src="oauth-client.js"></script>
@@ -4615,8 +4639,9 @@
         question: "Name the highlighted structure.",
         answer: q.options[q.correct],
         explanation: q.explanation,
-        diagram: q.diagram,
         anatomyDiagram: true,
+        anatomyView: q.anatomyView,
+        highlightKey: q.highlightKey,
         cardKey: `${q.anatomyView || "v"}:${q.highlightKey || q.question}`
       }));
     }
@@ -7410,6 +7435,15 @@
                 ? ""
                 : `This choice does not match the mechanism in the keyed answer (${surfaced.options[surfaced.correct]}).`
             );
+        let diagramHtml = surfaced.diagram;
+        if (
+          surfaced.anatomyDiagram &&
+          surfaced.anatomyView &&
+          surfaced.highlightKey &&
+          typeof BRAIN_ANATOMY_DIAGRAM !== "undefined"
+        ) {
+          diagramHtml = BRAIN_ANATOMY_DIAGRAM.diagram(surfaced.anatomyView, surfaced.highlightKey);
+        }
         return {
           topic: surfaced.topic,
           question: surfaced.question,
@@ -7417,7 +7451,7 @@
           correct: newCorrect,
           explanation: surfaced.explanation,
           wrongExplanations,
-          diagram: surfaced.diagram,
+          diagram: diagramHtml,
           anatomyDiagram: surfaced.anatomyDiagram,
           anatomyView: surfaced.anatomyView,
           highlightKey: surfaced.highlightKey,
@@ -7688,9 +7722,17 @@
       document.getElementById("fc-topic-back").textContent = card.topic;
       const fcDiag = document.getElementById("fc-diagram-wrap");
       if (fcDiag) {
-        if (card.diagram) {
+        let diagramHtml = card.diagram;
+        if (
+          card.anatomyView &&
+          card.highlightKey &&
+          typeof BRAIN_ANATOMY_DIAGRAM !== "undefined"
+        ) {
+          diagramHtml = BRAIN_ANATOMY_DIAGRAM.diagram(card.anatomyView, card.highlightKey);
+        }
+        if (diagramHtml) {
           fcDiag.hidden = false;
-          fcDiag.innerHTML = card.diagram;
+          fcDiag.innerHTML = diagramHtml;
         } else {
           fcDiag.hidden = true;
           fcDiag.innerHTML = "";
@@ -8287,8 +8329,9 @@
                 question: "Name the highlighted structure.",
                 answer: answerText,
                 explanation: q.explanation,
-                diagram: q.diagram,
                 anatomyDiagram: true,
+                anatomyView: q.anatomyView,
+                highlightKey: q.highlightKey,
                 cardKey: q.highlightKey
                   ? `${q.anatomyView || "v"}:${q.highlightKey}`
                   : `miss:${String(q.question).slice(0, 40)}`

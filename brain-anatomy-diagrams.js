@@ -181,10 +181,19 @@
       <text x="340" y="178" font-size="11" fill="#555">Left</text>`;
   }
 
+  function resolveAssetUrl(relativePath) {
+    if (typeof window === "undefined" || !window.location?.origin) return relativePath;
+    const pathname = window.location.pathname || "/";
+    const basePath = pathname.replace(/[^/]*$/, "");
+    const base = basePath.endsWith("/") ? basePath : `${basePath}/`;
+    return `${window.location.origin}${base}${relativePath.replace(/^\//, "")}`;
+  }
+
   function diagramFromImage(view, highlight) {
     const meta = IMAGE_VIEWS[view];
     const map = HIGHLIGHTS[view] || {};
     const title = VIEW_TITLES[view];
+    const imgSrc = resolveAssetUrl(meta.src);
     let overlay = "";
     for (const key of keysForView(view, highlight)) {
       const shape = map[key];
@@ -194,7 +203,7 @@
       view === "sagittal"
         ? "Midsagittal · anterior left · highlight = structure to name (from chart pack)."
         : "Left lateral hemisphere · highlight = structure to name (from chart pack).";
-    return `<figure class="brain-anatomy-figure brain-anatomy-raster"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="${meta.viewBox}" role="img" aria-label="${title}"><title>${title}</title><rect x="0" y="0" width="100" height="100" fill="#fff"/><image href="${meta.src}" xlink:href="${meta.src}" x="0" y="0" width="100" height="100" preserveAspectRatio="xMidYMid meet"/>${overlay}${orientationLabels(view)}</svg><figcaption>${cap}</figcaption></figure>`;
+    return `<figure class="brain-anatomy-figure brain-anatomy-raster"><div class="brain-anatomy-stack" role="img" aria-label="${title}"><img class="brain-anatomy-base" src="${imgSrc}" alt="${title}" width="520" height="506" decoding="async" loading="eager"/><svg class="brain-anatomy-overlay" xmlns="http://www.w3.org/2000/svg" viewBox="${meta.viewBox}" aria-hidden="true"><title>${title}</title>${overlay}${orientationLabels(view)}</svg></div><figcaption>${cap}</figcaption></figure>`;
   }
 
   function renderCoronalRegion(key, reg, highlight, fills) {
@@ -225,5 +234,5 @@
   }
 
   global.BRAIN_ANATOMY_VIEW_TITLES = VIEW_TITLES;
-  global.BRAIN_ANATOMY_DIAGRAM = { diagram, HIGHLIGHTS, CORONAL };
+  global.BRAIN_ANATOMY_DIAGRAM = { diagram, HIGHLIGHTS, CORONAL, resolveAssetUrl };
 })(typeof window !== "undefined" ? window : globalThis);
