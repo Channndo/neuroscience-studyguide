@@ -3276,8 +3276,8 @@
   <script src="questions-proctored-mock.js"></script>
   <script src="questions-formula-drills.js"></script>
   <script src="questions-pinnacle-megabank.js"></script>
-  <script src="brain-anatomy-diagrams.js?v=5"></script>
-  <script src="questions-brain-anatomy.js?v=5"></script>
+  <script src="brain-anatomy-diagrams.js?v=6"></script>
+  <script src="questions-brain-anatomy.js?v=6"></script>
   <script src="mcb80x-cloud-config.js"></script>
   <script src="sheets-sync.js"></script>
   <script src="oauth-client.js"></script>
@@ -7440,13 +7440,10 @@
                 : `This choice does not match the mechanism in the keyed answer (${surfaced.options[surfaced.correct]}).`
             );
         let diagramHtml = surfaced.diagram;
-        if (
-          surfaced.anatomyDiagram &&
-          surfaced.anatomyView &&
-          surfaced.highlightKey &&
-          typeof BRAIN_ANATOMY_DIAGRAM !== "undefined"
-        ) {
-          diagramHtml = BRAIN_ANATOMY_DIAGRAM.diagram(surfaced.anatomyView, surfaced.highlightKey);
+        let anatomyView = surfaced.anatomyView;
+        if (surfaced.anatomyDiagram && surfaced.highlightKey && typeof BRAIN_ANATOMY_DIAGRAM !== "undefined") {
+          diagramHtml = BRAIN_ANATOMY_DIAGRAM.diagramForHighlight(surfaced.highlightKey);
+          anatomyView = BRAIN_ANATOMY_DIAGRAM.anatomyViewForHighlight(surfaced.highlightKey);
         }
         return {
           topic: surfaced.topic,
@@ -7457,7 +7454,7 @@
           wrongExplanations,
           diagram: diagramHtml,
           anatomyDiagram: surfaced.anatomyDiagram,
-          anatomyView: surfaced.anatomyView,
+          anatomyView,
           highlightKey: surfaced.highlightKey,
           difficulty: surfaced.difficulty,
           module: surfaced.module || routeQuestionToModule(surfaced),
@@ -7727,12 +7724,8 @@
       const fcDiag = document.getElementById("fc-diagram-wrap");
       if (fcDiag) {
         let diagramHtml = card.diagram;
-        if (
-          card.anatomyView &&
-          card.highlightKey &&
-          typeof BRAIN_ANATOMY_DIAGRAM !== "undefined"
-        ) {
-          diagramHtml = BRAIN_ANATOMY_DIAGRAM.diagram(card.anatomyView, card.highlightKey);
+        if (card.highlightKey && typeof BRAIN_ANATOMY_DIAGRAM !== "undefined") {
+          diagramHtml = BRAIN_ANATOMY_DIAGRAM.diagramForHighlight(card.highlightKey);
         }
         if (diagramHtml) {
           fcDiag.hidden = false;

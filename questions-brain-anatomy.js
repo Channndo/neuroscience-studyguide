@@ -22,15 +22,16 @@
     return 2;
   }
 
-  function mk(view, highlight, question, options, correct, explanation, wrongExplanations) {
+  function mk(_view, highlight, question, options, correct, explanation, wrongExplanations) {
+    const anatomyView = D ? D.anatomyViewForHighlight(highlight) : _view;
     return {
       topic: "Neuroanatomy",
       module: "part3",
       anatomyDiagram: true,
-      anatomyView: view,
+      anatomyView,
       highlightKey: highlight,
       difficulty: difficultyFor(highlight),
-      diagram: D ? D.diagram(view, highlight) : "",
+      diagram: D ? D.diagramForHighlight(highlight) : "",
       question,
       options,
       correct,
@@ -62,10 +63,6 @@
     ["sagittal", "hippocampus", "The highlighted seahorse-shaped medial temporal gray matter is the:", ["Hippocampus", "Caudate nucleus", "Thalamus", "Putamen"], 0, "The hippocampus supports declarative/episodic memory formation.", ["", "Caudate is striatum adjacent to lateral ventricle on coronal cuts.", "Thalamus is diencephalon.", "Putamen is lateral striatum."],],
     ["sagittal", "amygdala", "The highlighted anteromedial temporal lobe gray matter (emotion/salience) is the:", ["Amygdala", "Cerebellum", "Pineal gland", "Medulla oblongata"], 0, "The amygdala is almond-shaped limbic gray matter rostral to the hippocampus.", ["", "Cerebellum is hindbrain.", "Pineal is dorsal midbrain.", "Medulla is caudal brainstem."],],
     ["sagittal", "spinal_cord", "The highlighted structure continuing caudally from the medulla through the foramen magnum is the:", ["Spinal cord", "Corpus callosum", "Fornix", "Optic nerve (CN II)"], 0, "The spinal cord begins where the medulla transitions at the foramen magnum.", ["", "Corpus callosum is supratentorial.", "Fornix is limbic tract.", "Optic nerve is rostral visual pathway."],],
-    ["sagittal", "frontal_cortex", "The highlighted rostral dorsal cerebrum is the:", ["Frontal lobe (frontal cortex)", "Occipital lobe", "Cerebellum", "Medulla oblongata"], 0, "The frontal lobe includes primary motor cortex and executive areas — rostral in sagittal view.", ["", "Occipital lobe is caudal.", "Cerebellum is hindbrain.", "Medulla is brainstem caudal."],],
-    ["sagittal", "parietal_cortex", "The highlighted cortex between frontal and occipital lobes (dorsal) is the:", ["Parietal lobe", "Temporal lobe", "Pons", "Amygdala"], 0, "The parietal lobe integrates somatosensation and spatial processing.", ["", "Temporal lobe is ventral.", "Pons is brainstem.", "Amygdala is medial temporal deep gray."],],
-    ["sagittal", "occipital_cortex", "The highlighted caudal cerebrum (primary visual cortex location) is the:", ["Occipital lobe", "Frontal lobe", "Hypothalamus", "Pons"], 0, "Primary visual (striate) cortex lies in the occipital lobe at the caudal pole.", ["", "Frontal lobe is rostral.", "Hypothalamus is ventral diencephalon.", "Pons is brainstem."],],
-    ["sagittal", "temporal_cortex", "The highlighted ventral cerebrum inferior to the sylvian region is the:", ["Temporal lobe", "Parietal lobe", "Corpus callosum", "Superior colliculus"], 0, "The temporal lobe includes auditory cortex and medial limbic structures.", ["", "Parietal lobe is dorsal.", "Corpus callosum is midline white matter.", "Superior colliculus is midbrain tectum."],],
 
     ["lateral", "frontal_lobe", "On this left lateral view, the highlighted rostral lobe is the:", ["Frontal lobe", "Occipital lobe", "Cerebellum", "Medulla oblongata"], 0, "The frontal lobe lies rostral to the central sulcus.", ["", "Occipital lobe is caudal.", "Cerebellum is infratentorial posterior.", "Medulla is not this expansive cortical lobe."],],
     ["lateral", "parietal_lobe", "The highlighted lobe between the central sulcus and occipital lobe (dorsal surface) is the:", ["Parietal lobe", "Temporal lobe", "Olfactory bulb", "Spinal cord"], 0, "The parietal lobe is posterior to the central sulcus on the lateral convexity.", ["", "Temporal lobe is ventral.", "Olfactory bulb is small rostral ventral structure.", "Spinal cord is not shown as a cortical lobe."],],
@@ -78,10 +75,6 @@
     ["lateral", "primary_auditory_cortex", "The highlighted cortex on the superior temporal gyrus (Heschl region) is primary:", ["Auditory cortex", "Visual cortex", "Motor cortex", "Olfactory cortex"], 0, "Primary auditory cortex lies on the superior temporal gyrus (transverse temporal gyrus of Heschl).", ["", "Visual cortex is occipital.", "Motor cortex is precentral.", "Primary olfactory cortex is medial temporal/ventral (piriform), not this lateral STG highlight."],],
     ["lateral", "primary_visual_cortex", "The highlighted occipital cortex at the pole corresponds to primary:", ["Visual cortex (striate cortex, area 17)", "Auditory cortex", "Somatosensory cortex", "Motor cortex"], 0, "Primary visual cortex occupies the occipital pole (calcarine/striate region).", ["", "Auditory cortex is temporal.", "Somatosensory is postcentral.", "Motor is precentral."],],
     ["lateral", "olfactory_bulb", "The highlighted rostral ventral structure processing smell is the:", ["Olfactory bulb", "Optic chiasm", "Pituitary gland", "Cerebellum"], 0, "Olfactory bulb receives olfactory receptor neuron input (cranial nerve I).", ["", "Optic chiasm is CN II pathway.", "Pituitary is ventral diencephalon.", "Cerebellum is caudal hindbrain."],],
-    ["lateral", "cerebellum", "The highlighted infratentorial structure caudal to the cerebrum is the:", ["Cerebellum", "Frontal lobe", "Thalamus", "Corpus callosum"], 0, "The cerebellum is visible inferior/posterior to the occipital/temporal lobes.", ["", "Frontal lobe is rostral.", "Thalamus is deep diencephalon.", "Corpus callosum is midline white matter."],],
-    ["lateral", "midbrain", "The highlighted rostral brainstem segment beneath the thalamus is the:", ["Midbrain", "Pons", "Medulla oblongata", "Corpus callosum"], 0, "Midbrain connects diencephalon to pons on lateral brainstem profile.", ["", "Pons is caudal to midbrain.", "Medulla is most caudal.", "Corpus callosum is dorsal cerebrum."],],
-    ["lateral", "pons", "The highlighted brainstem bulge caudal to the midbrain is the:", ["Pons", "Midbrain", "Thalamus", "Hippocampus"], 0, "The pons is the prominent ventral bulge of the hindbrain.", ["", "Midbrain is rostral.", "Thalamus is forebrain.", "Hippocampus is medial temporal."],],
-    ["lateral", "medulla", "The highlighted caudal brainstem tapering toward the spinal cord is the:", ["Medulla oblongata", "Pons", "Midbrain", "Caudate nucleus"], 0, "Medulla oblongata is continuous with the spinal cord caudally.", ["", "Pons is rostral.", "Midbrain is more rostral.", "Caudate is striatum."],],
   ];
 
   const BRAIN_ANATOMY_POOL = SPECS.map(([view, highlight, question, options, correct, explanation, wrongExplanations]) =>

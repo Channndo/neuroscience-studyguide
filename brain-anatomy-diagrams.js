@@ -8,6 +8,33 @@
     lateral: "Cerebral Cortex — Lobes & Functional Areas (lateral)"
   };
 
+  /** Chart pack page 2 — lobes, sulci, and cortical areas only. */
+  const LATERAL_HIGHLIGHTS = new Set([
+    "frontal_lobe",
+    "parietal_lobe",
+    "temporal_lobe",
+    "occipital_lobe",
+    "frontal_cortex",
+    "parietal_cortex",
+    "temporal_cortex",
+    "occipital_cortex",
+    "central_sulcus",
+    "lateral_sulcus",
+    "precentral_gyrus",
+    "postcentral_gyrus",
+    "primary_auditory_cortex",
+    "primary_visual_cortex",
+    "olfactory_bulb"
+  ]);
+
+  /** Midsagittal lobe labels map to lateral lobe rings on the cortex chart. */
+  const CORTEX_TO_LOBE = {
+    frontal_cortex: "frontal_lobe",
+    parietal_cortex: "parietal_lobe",
+    temporal_cortex: "temporal_lobe",
+    occipital_cortex: "occipital_lobe"
+  };
+
   /** Exact raster crops from chart pack; coordinates are in native pixels. */
   const VIEWS = {
     sagittal: {
@@ -73,14 +100,26 @@
       },
       primary_auditory_cortex: { kind: "circle", cx: 1055, cy: 985, r: 58 },
       primary_visual_cortex: { kind: "circle", cx: 1325, cy: 575, r: 58 },
-      olfactory_bulb: { kind: "circle", cx: 115, cy: 815, r: 42 },
-      cerebellum: { kind: "ellipse", cx: 1385, cy: 1215, rx: 145, ry: 95 },
-      midbrain: { kind: "circle", cx: 915, cy: 1075, r: 42 },
-      pons: { kind: "circle", cx: 875, cy: 1155, r: 48 },
-      medulla: { kind: "circle", cx: 835, cy: 1235, r: 42 },
-      brainstem: { kind: "ellipse", cx: 875, cy: 1165, rx: 62, ry: 125 }
+      olfactory_bulb: { kind: "circle", cx: 115, cy: 815, r: 42 }
     }
   };
+
+  function anatomyViewForHighlight(highlightKey) {
+    return LATERAL_HIGHLIGHTS.has(highlightKey) ? "lateral" : "sagittal";
+  }
+
+  function ringKeyForHighlight(highlightKey, view) {
+    if (view === "lateral" && CORTEX_TO_LOBE[highlightKey]) {
+      return CORTEX_TO_LOBE[highlightKey];
+    }
+    return highlightKey;
+  }
+
+  function diagramForHighlight(highlightKey) {
+    const view = anatomyViewForHighlight(highlightKey);
+    const ringKey = ringKeyForHighlight(highlightKey, view);
+    return diagram(view, ringKey);
+  }
 
   function resolveAssetUrl(relativePath) {
     if (typeof window === "undefined" || !window.location?.origin) return relativePath;
@@ -156,5 +195,13 @@
   }
 
   global.BRAIN_ANATOMY_VIEW_TITLES = VIEW_TITLES;
-  global.BRAIN_ANATOMY_DIAGRAM = { diagram, QUIZ_RINGS, VIEWS, resolveAssetUrl };
+  global.BRAIN_ANATOMY_DIAGRAM = {
+    diagram,
+    diagramForHighlight,
+    anatomyViewForHighlight,
+    ringKeyForHighlight,
+    QUIZ_RINGS,
+    VIEWS,
+    resolveAssetUrl
+  };
 })(typeof window !== "undefined" ? window : globalThis);
