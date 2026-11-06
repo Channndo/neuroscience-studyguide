@@ -73,10 +73,8 @@ function padWrong(opt, topic) {
   if (JOKE_RE.test(t)) {
     return "Assigns an unrelated sensory or synaptic mechanism to this context";
   }
-  const pad = TOPIC_PAD[topic] || TOPIC_PAD.default;
-  if (len(t) >= 55) return t;
-  if (t.endsWith(".") || t.endsWith(")")) return `${t} — ${pad}.`;
-  return `${t} (${pad})`;
+  void topic;
+  return t;
 }
 
 function rebalanceQuestion(q) {

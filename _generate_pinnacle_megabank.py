@@ -13,6 +13,8 @@ ROOT = Path(__file__).parent
 OUT = ROOT / "questions-pinnacle-megabank.js"
 TARGET = 300
 
+from _concept_pool_snippet import CONCEPT_POOL  # noqa: E402
+
 
 def skeleton(stem: str) -> str:
     s = re.sub(r"\d+", "", stem).replace("#", "")
@@ -42,24 +44,10 @@ def nernst_mv(out_mM: float, in_mM: float, z: int = 1) -> float:
     return (61.54 / z) * math.log10(out_mM / in_mM)
 
 
-def balance_lengths(opts: list[str], correct: int) -> None:
-    """Pad distractors so the keyed option is longest in ~30% of items, not ~90%."""
-    if random.random() > 0.68:
-        return
-    clen = len(opts[correct])
-    suffix = " — inconsistent with the mechanism in the stem."
-    for j in range(4):
-        if j == correct:
-            continue
-        if len(opts[j]) <= clen + 4:
-            opts[j] = opts[j] + suffix
-
-
 def mk_mcq(topic, stem, correct_text, wrong_triple, explanation):
     opts = [correct_text, wrong_triple[0], wrong_triple[1], wrong_triple[2]]
     random.shuffle(opts)
     correct = opts.index(correct_text)
-    balance_lengths(opts, correct)
     return Q(topic, stem, opts, correct, explanation)
 
 
@@ -117,14 +105,56 @@ def generate() -> list[dict]:
         )
 
     goldman_scenarios = [
-        ("P_K:P_Na = 1:0.05", "Near E_K (≈ −85 mV)", "Closer to E_Na (+60 mV)", "Exactly 0 mV", "Fixed at E_Cl only"),
-        ("P_K:P_Na = 1:0.15", "Between E_K and E_Na, biased negative", "Equal to E_Na", "Equal to E_K always", "Independent of permeability"),
-        ("P_K:P_Na = 1:0.02", "Very close to E_K", "Dominated by E_Na", "At +40 mV always", "Undefined"),
-        ("P_K:P_Na = 1:0.08", "Closer to E_K than E_Na", "At E_Na exactly", "At +40 mV always", "Independent of ions"),
-        ("P_K:P_Na = 1:0.25", "Depolarized relative to high K⁺ permeability alone", "Hyperpolarized to E_K only", "Fixed at 0 mV", "Only Cl⁻ sets V_m"),
-        ("P_Cl equals P_K with E_Cl negative to rest", "V_m pulled toward E_Cl if P_Cl high", "V_m equals E_Na always", "V_m undefined", "Only gap junctions set V_m"),
+        (
+            "P_K:P_Na = 1:0.05",
+            "Near −65 mV (between E_K and E_Na, K⁺-weighted)",
+            "At E_K (≈ −90 mV) exactly",
+            "Closer to E_Na (+60 mV)",
+            "Exactly 0 mV",
+            "With typical [K⁺]i/o and [Na⁺]i/o, Goldman at high P_K but finite P_Na gives V_m ≈ −65 mV—not the full Nernst E_K.",
+        ),
+        (
+            "P_K:P_Na = 1:0.15",
+            "Between E_K and E_Na, biased negative",
+            "Equal to E_Na",
+            "Equal to E_K always",
+            "Independent of permeability",
+            "Goldman equation weights ions by permeability.",
+        ),
+        (
+            "P_K:P_Na = 1:0.02",
+            "Very close to E_K",
+            "Dominated by E_Na",
+            "At +40 mV always",
+            "Undefined",
+            "Goldman equation weights ions by permeability.",
+        ),
+        (
+            "P_K:P_Na = 1:0.08",
+            "Closer to E_K than E_Na",
+            "At E_Na exactly",
+            "At +40 mV always",
+            "Independent of ions",
+            "Goldman equation weights ions by permeability.",
+        ),
+        (
+            "P_K:P_Na = 1:0.25",
+            "Depolarized relative to high K⁺ permeability alone",
+            "Hyperpolarized to E_K only",
+            "Fixed at 0 mV",
+            "Only Cl⁻ sets V_m",
+            "Goldman equation weights ions by permeability.",
+        ),
+        (
+            "P_Cl equals P_K with E_Cl negative to rest",
+            "V_m pulled toward E_Cl if P_Cl high",
+            "V_m equals E_Na always",
+            "V_m undefined",
+            "Only gap junctions set V_m",
+            "Goldman equation weights ions by permeability.",
+        ),
     ]
-    for label, ans, w1, w2, w3 in goldman_scenarios:
+    for label, ans, w1, w2, w3, expl in goldman_scenarios:
         add(
             items,
             seen_sk,
@@ -133,7 +163,7 @@ def generate() -> list[dict]:
                 f"With standard K⁺/Na⁺ concentrations and {label}, resting V_m is best described as:",
                 ans,
                 (w1, w2, w3),
-                "Goldman equation weights ions by permeability.",
+                expl,
             ),
         )
 
@@ -252,43 +282,6 @@ def generate() -> list[dict]:
             mk_mcq("Sensory Systems", stem + ":", ans, (w1, w2, w3), ans),
         )
 
-    regions = [
-        "S1 barrel cortex", "CA1 hippocampus", "V1 layer IV", "M1 forelimb area", "A1 primary auditory cortex",
-        "dorsal striatum", "substantia nigra pars compacta", "cerebellar Purkinje layer", "inferior colliculus",
-        "olfactory bulb glomerular layer", "retinal ganglion cell layer", "spinal dorsal horn lamina II",
-        "hypothalamic SCN", "amygdala lateral nucleus", "thalamic LGN", "brainstem vestibular nucleus",
-        "hippocampal dentate gyrus", "prefrontal cortex", "brainstem locus coeruleus", "spinal ventral horn",
-        "entorhinal cortex layer II", "superior colliculus", "nucleus accumbens core", "trigeminal spinal nucleus",
-        "area postrema", "raphe magnus", "red nucleus", "subthalamic nucleus", "globus pallidus external segment",
-    ]
-    manipulations = [
-        ("extracellular K⁺ is raised acutely", "Depolarization toward threshold; E_K less negative", "Hyperpolarization to E_Na", "No change in V_m", "Only synaptic vesicles swell"),
-        ("AMPA receptors are blocked", "EPSPs reduced; NMDA-only subthreshold may remain weak", "Spikes enlarge", "Myelin thickens", "Only photopigment bleaches"),
-        ("voltage-gated Na⁺ is blocked", "Action potentials fail; passive responses remain", "Only K⁺ blocked", "Only Cl⁻ rises in nucleus", "Gap junctions close permanently"),
-        ("GABAergic shunting increases", "EPSP amplitude at soma decreases", "EPSPs always increase", "Only presynaptic Ca²⁺ rises", "Only LTP without change"),
-        ("presynaptic release probability falls", "Smaller evoked EPSCs; same quantal size", "Quantal size doubles always", "Only postsynaptic Na⁺ rises", "Only muscle spindle fires"),
-        ("myelin is stripped but nodes remain", "Conduction velocity falls sharply", "Conduction doubles", "Resting potential becomes +60 mV", "Only retina affected"),
-        ("NMDA-dependent Ca²⁺ entry is blocked during pairing", "LTP induction is impaired", "LTD impossible always", "Only GABAergic LTP", "Only cochlear tuning shifts"),
-        ("afterhyperpolarization K⁺ current is enhanced", "Spike frequency adaptation increases", "Neuron fires faster without limit", "Only Na⁺ channels open", "Only glomeruli shrink"),
-    ]
-    for region in regions:
-        for manip, ans, w1, w2, w3 in manipulations:
-            if len(items) >= TARGET:
-                break
-            add(
-                items,
-                seen_sk,
-                mk_mcq(
-                    "Integrative Neuroscience",
-                    f"In {region}, if {manip}, the best prediction is:",
-                    ans,
-                    (w1, w2, w3),
-                    ans,
-                ),
-            )
-        if len(items) >= TARGET:
-            break
-
     clamp = [
         ("Voltage clamp at −40 mV with TTX and K⁺ channels available", "Mostly K⁺ current isolated if Na⁺ blocked", "Only capacitive current forever", "Only Cl⁻ without gradient", "Photoreceptor current only"),
         ("Current clamp with brief hyperpolarizing step", "Subthreshold voltage change without spikes", "Always full AP train", "Only synaptic vesicle fusion", "Only cochlear amplification"),
@@ -317,9 +310,15 @@ def generate() -> list[dict]:
         ("Ephaptic coupling between unmyelinated fibers", "Extracellular fields can influence neighbors weakly", "Stronger than gap junctions always", "Only in cerebellum exclusively", "Only in retina exclusively"),
     ]
     for stem, ans, w1, w2, w3 in ap_prop:
+        add(items, seen_sk, mk_mcq("Action Potentials", stem + ":", ans, (w1, w2, w3), ans))
+
+    for topic, stem, ans, w1, w2, w3, expl in CONCEPT_POOL:
         if len(items) >= TARGET:
             break
-        add(items, seen_sk, mk_mcq("Action Potentials", stem + ":", ans, (w1, w2, w3), ans))
+        add(items, seen_sk, mk_mcq(topic, stem, ans, (w1, w2, w3), expl))
+
+    if len(items) < TARGET:
+        raise SystemExit(f"Only {len(items)} unique items; need {TARGET}. Add more CONCEPT_POOL entries.")
 
     return items[:TARGET]
 

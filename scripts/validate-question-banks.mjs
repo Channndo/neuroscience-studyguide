@@ -14,10 +14,13 @@ const POOL_FILES = fs
   .sort();
 
 const BANNED = /variant|placeholder|Clinical vignette \d|Pinnacle calc|Pinnacle gating|mastery variant/i;
-const NERNST_K = (out, inn) => 61.54 * Math.log10(out / inn);
+const FILLER =
+  /\(does not follow|inconsistent with the mechanism|not the best match|wrong visual pathway stage|wrong … stage|— inconsistent with the mechanism|does not follow from the mechanism implied/i;
+const RT_F_LOG10 = 61.54;
 
 function skeleton(stem) {
   return String(stem)
+    .replace(/\b(cortex|hippocampus|amygdala|thalamus|cerebellum|brainstem|pons|medulla|temporal|parietal|frontal|occipital)\b/gi, "")
     .replace(/\d+/g, "")
     .replace(/#/g, "")
     .replace(/\s+/g, " ")
@@ -48,6 +51,47 @@ function loadPoolsFromFile(basename) {
   }
 }
 
+function nernstMv(out, inn, z = 1) {
+  if (!out || !inn || out <= 0 || inn <= 0) return null;
+  return (RT_F_LOG10 / Math.abs(z)) * Math.log10(out / inn);
+}
+
+function parseConcentrations(stem) {
+  const out = {};
+  const kin = stem.match(/\[K(?:\+|\u207a)?\]_?(?:in|i)\s*=\s*(\d+(?:\.\d+)?)/i);
+  const kout = stem.match(/\[K(?:\+|\u207a)?\]_?(?:out|o)\s*=\s*(\d+(?:\.\d+)?)/i);
+  const nain = stem.match(/\[Na(?:\+|\u207a)?\]_?(?:in|i)\s*=\s*(\d+(?:\.\d+)?)/i);
+  const naout = stem.match(/\[Na(?:\+|\u207a)?\]_?(?:out|o)\s*=\s*(\d+(?:\.\d+)?)/i);
+  if (kin && kout) out.K = { in: parseFloat(kin[1]), out: parseFloat(kout[1]) };
+  if (nain && naout) out.Na = { in: parseFloat(nain[1]), out: parseFloat(naout[1]) };
+  const k140 = stem.match(/140 mM.*4 mM|140\/4|\[K[^\]]*\]_?in=140[^;]*4 mM/i);
+  if (k140 && !out.K) out.K = { in: 140, out: 4 };
+  return out;
+}
+
+function parsePermRatio(stem) {
+  const m = stem.match(/P_K\s*:\s*P_Na\s*=\s*(\d+(?:\.\d+)?)\s*:\s*(\d+(?:\.\d+)?)/i);
+  if (m) return { pK: parseFloat(m[1]), pNa: parseFloat(m[2]) };
+  return null;
+}
+
+function goldmanVm(conc, pK, pNa) {
+  if (!conc.K || !conc.Na) return null;
+  const { out: ko, in: ki } = conc.K;
+  const { out: no, in: ni } = conc.Na;
+  const num = pK * ko + pNa * no;
+  const den = pK * ki + pNa * ni;
+  if (!den) return null;
+  return RT_F_LOG10 * Math.log10(num / den);
+}
+
+function parseOptionMv(opt) {
+  const s = String(opt).replace(/\u2212/g, "-").replace(/−/g, "-");
+  const m = s.match(/(-?\s*~?\s*(\d+(?:\.\d+)?))\s*mV/i);
+  if (!m) return null;
+  return parseFloat(m[2].replace(/\s/g, "")) * (m[1].includes("-") ? -1 : 1);
+}
+
 let failed = false;
 const report = [];
 
@@ -68,35 +112,26 @@ for (const [name, arr] of Object.entries(allPools)) {
 const pin = allPools["questions-pinnacle-megabank.js:PINNACLE_MEGA_POOL"];
 if (pin) {
   const sk = pin.map(q => skeleton(q.question));
-  if (new Set(sk).size !== sk.length) {
+  const uniq = new Set(sk);
+  if (uniq.size < 250) {
+    failed = true;
+    report.push(`FAIL: PINNACLE_MEGA_POOL has only ${uniq.size} unique skeletons (need ≥250)`);
+  }
+  if (uniq.size !== sk.length) {
     failed = true;
     report.push("FAIL: PINNACLE_MEGA_POOL has duplicate skeletons");
   }
 }
 
-const globalSk = new Map();
 for (const [name, arr] of Object.entries(allPools)) {
   if (!Array.isArray(arr)) continue;
   for (const q of arr) {
-    if (!q?.question) continue;
-    const sk = skeleton(q.question);
-    if (!globalSk.has(sk)) globalSk.set(sk, []);
-    globalSk.get(sk).push(name);
-  }
-}
-const nearDupes = [...globalSk.entries()].filter(([, locs]) => locs.length > 1);
-if (nearDupes.length) {
-  report.push(`WARN: ${nearDupes.length} skeleton collisions across pools (first: ${nearDupes[0][0].slice(0, 50)}…)`);
-}
-
-for (const [name, arr] of Object.entries(allPools)) {
-  if (!Array.isArray(arr)) continue;
-  for (const q of arr) {
-    const blob = [q.question, ...(q.options || [])].filter(Boolean).join(" ");
-    if (BANNED.test(blob)) {
-      failed = true;
-      report.push(`FAIL: banned placeholder text in ${name}: ${String(q.question).slice(0, 60)}…`);
-      break;
+    for (const opt of q.options || []) {
+      if (FILLER.test(String(opt))) {
+        failed = true;
+        report.push(`FAIL: filler suffix in ${name} option: ${String(opt).slice(0, 70)}…`);
+        break;
+      }
     }
   }
 }
@@ -116,38 +151,24 @@ for (const [name, arr] of Object.entries(allPools)) {
   if (n >= 10) {
     const rate = longestCorrect / n;
     report.push(`${name} longest-correct rate: ${(rate * 100).toFixed(1)}% (n=${n})`);
-    if ((name.includes("PINNACLE") || name.includes("CIRCUIT") || name.includes("CLAMP")) && rate > 0.45) {
+    if (rate > 0.4) {
       failed = true;
-      report.push(`FAIL: ${name} longest-correct ${(rate * 100).toFixed(1)}% > 45%`);
+      report.push(`FAIL: ${name} longest-correct ${(rate * 100).toFixed(1)}% > 40%`);
     }
   }
 }
 
-function simShuffleCorrectPosition(options, correct) {
-  const indexed = options.map((text, i) => ({ text, originalIndex: i }));
-  const shuffled = shuffle(indexed);
-  return shuffled.findIndex(o => o.originalIndex === correct);
-}
-
-const posHist = [0, 0, 0, 0];
-let simN = 0;
-for (const arr of Object.values(allPools)) {
-  if (!Array.isArray(arr)) continue;
-  for (const q of arr) {
-    if (!q?.options || q.options.length !== 4 || typeof q.correct !== "number") continue;
-    for (let t = 0; t < 50; t++) {
-      const pos = simShuffleCorrectPosition(q.options, q.correct);
-      if (pos >= 0 && pos < 4) posHist[pos]++;
-      simN++;
-    }
+const sata = allPools["questions-proctored-mock.js:PROCTORED_SATA_POOL"];
+if (sata) {
+  const dist = {};
+  for (const q of sata) {
+    const n = (q.correctIndices || []).length;
+    dist[n] = (dist[n] || 0) + 1;
   }
-}
-if (simN) {
-  const max = Math.max(...posHist);
-  report.push(`Shuffle sim positions A-D counts: ${posHist.join(", ")} (trials=${simN})`);
-  if (max / simN > 0.4) {
+  report.push(`PROCTORED_SATA_POOL correct-count distribution: ${JSON.stringify(dist)}`);
+  if ((dist[3] || 0) > 20) {
     failed = true;
-    report.push("FAIL: shuffle simulation skewed (>40% in one position)");
+    report.push("FAIL: too many SATA items with exactly 3 correct statements");
   }
 }
 
@@ -155,12 +176,39 @@ for (const [name, arr] of Object.entries(allPools)) {
   if (!Array.isArray(arr)) continue;
   for (const q of arr) {
     const stem = String(q?.question || "");
-    if (!/140.*4.*E_K|140 mM.*4 mM.*E_K/i.test(stem)) continue;
-    if (/inverted|perfus/i.test(stem)) continue;
+    if (!/Nernst|Goldman|E_K|E_Na|37°C.*mM|\[K/i.test(stem)) continue;
+    const conc = parseConcentrations(stem);
     const keyed = q.options?.[q.correct];
-    if (keyed && /96/.test(String(keyed)) && !/95/.test(String(keyed))) {
+    const keyedMv = keyed ? parseOptionMv(keyed) : null;
+    const asksEk =
+      /\bE_K\b|equilibrium potential for K|Nernst.*K⁺|K⁺.*Nernst/i.test(stem) &&
+      !/Goldman|constant-field|resting V_m|P_K/i.test(stem);
+    if (asksEk && conc.K && keyedMv != null) {
+      const ek = nernstMv(conc.K.out, conc.K.in, 1);
+      if (ek != null && Math.abs(keyedMv - ek) > 4) {
+        failed = true;
+        report.push(`FAIL: ${name} E_K key ${keyedMv} vs computed ${ek.toFixed(1)}: ${stem.slice(0, 55)}…`);
+      }
+    }
+    const pr = parsePermRatio(stem);
+    if (pr && conc.K && conc.Na && keyedMv != null && /Goldman|constant-field|P_K/i.test(stem)) {
+      const vm = goldmanVm(conc, pr.pK, pr.pNa);
+      if (vm != null && Math.abs(keyedMv - vm) > 8) {
+        failed = true;
+        report.push(`FAIL: ${name} Goldman key ${keyedMv} vs computed ${vm.toFixed(1)}`);
+      }
+    }
+  }
+}
+
+for (const [name, arr] of Object.entries(allPools)) {
+  if (!Array.isArray(arr)) continue;
+  for (const q of arr) {
+    const blob = [q.question, ...(q.options || [])].filter(Boolean).join(" ");
+    if (BANNED.test(blob)) {
       failed = true;
-      report.push(`FAIL: ${name} E_K 140/4 should be ~-95 mV, not -96: ${stem.slice(0, 50)}`);
+      report.push(`FAIL: banned placeholder text in ${name}: ${String(q.question).slice(0, 60)}…`);
+      break;
     }
   }
 }

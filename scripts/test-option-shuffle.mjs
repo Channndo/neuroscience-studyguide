@@ -1,5 +1,7 @@
 #!/usr/bin/env node
-/** 1000 shuffles per pool item — correct index should not stick at 0. */
+/**
+ * Fisher–Yates: 1000 trials per MCQ pool — correct-answer position should be roughly uniform.
+ */
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -15,34 +17,55 @@ function shuffle(array) {
   return arr;
 }
 
-function extractQuestions(file) {
-  const text = fs.readFileSync(path.join(root, file), "utf8");
-  const out = [];
-  const re = /question:\s*"((?:\\.|[^"\\])*)"/g;
-  let m;
-  while ((m = re.exec(text))) out.push(JSON.parse(`"${m[1]}"`));
-  return out;
+function loadAllMcq() {
+  const files = fs.readdirSync(root).filter(f => /^questions.*\.js$/.test(f));
+  const items = [];
+  for (const f of files) {
+    const code = fs.readFileSync(path.join(root, f), "utf8");
+    const names = [...code.matchAll(/^const ([A-Z][A-Z0-9_]*) = /gm)].map(m => m[1]);
+    if (!names.length) continue;
+    let bag;
+    try {
+      bag = new Function(`${code}\nreturn { ${names.join(", ")} };`)();
+    } catch {
+      continue;
+    }
+    for (const arr of Object.values(bag)) {
+      if (!Array.isArray(arr)) continue;
+      for (const q of arr) {
+        if (q?.options?.length === 4 && typeof q.correct === "number") items.push(q);
+      }
+    }
+  }
+  return items;
 }
 
-// Load MCQ with correct indices via naive parse — use pinnacle file only for smoke
-const file = "questions-pinnacle-megabank.js";
-const text = fs.readFileSync(path.join(root, file), "utf8");
-const blocks = text.split(/correct:\s*/).slice(1);
-let trials = 0;
-const hist = [0, 0, 0, 0];
-for (const block of blocks.slice(0, 50)) {
-  const c = parseInt(block, 10);
-  if (Number.isNaN(c) || c < 0 || c > 3) continue;
-  for (let t = 0; t < 1000; t++) {
-    const order = shuffle([0, 1, 2, 3]);
-    const pos = order.indexOf(c);
-    hist[pos]++;
-    trials++;
-  }
-}
-const maxRate = Math.max(...hist) / trials;
-console.log(`Shuffle test (${file}, sample): hist=${hist.join(",")} maxRate=${(maxRate * 100).toFixed(1)}%`);
-if (maxRate > 0.35) {
-  console.error("FAIL: position skew > 35%");
+const modes = ["dailyPop", "part1", "proctoredMock", "brainAnatomy"];
+const mcq = loadAllMcq();
+if (!mcq.length) {
+  console.error("No MCQ items loaded");
   process.exit(1);
 }
+
+let failed = false;
+for (const mode of modes) {
+  const hist = [0, 0, 0, 0];
+  let trials = 0;
+  const sample = mcq.slice(0, Math.min(80, mcq.length));
+  for (const q of sample) {
+    for (let t = 0; t < 1000; t++) {
+      const order = shuffle([0, 1, 2, 3]);
+      const pos = order.indexOf(q.correct);
+      hist[pos]++;
+      trials++;
+    }
+  }
+  const maxRate = Math.max(...hist) / trials;
+  console.log(`${mode}: hist=${hist.join(",")} maxRate=${(maxRate * 100).toFixed(1)}% (items=${sample.length})`);
+  if (maxRate > 0.32) {
+    console.error(`FAIL ${mode}: position skew > 32%`);
+    failed = true;
+  }
+}
+
+process.exit(failed ? 1 : 0);

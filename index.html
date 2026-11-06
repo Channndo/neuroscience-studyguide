@@ -2838,6 +2838,61 @@
       color: #fff;
     }
 
+    .daily-pop-close {
+      position: absolute;
+      top: 0.65rem;
+      right: 0.75rem;
+      border: none;
+      background: transparent;
+      font-size: 1.5rem;
+      line-height: 1;
+      cursor: pointer;
+      color: var(--gray-600);
+    }
+
+    .daily-pop-dialog {
+      position: relative;
+    }
+
+    .mock-exam-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin: 0.75rem 0 0;
+      padding: 0.5rem 0;
+    }
+
+    .mock-q-cell {
+      min-width: 2rem;
+      height: 2rem;
+      border-radius: 6px;
+      border: 1px solid var(--gray-300);
+      background: #fff;
+      font-size: 0.8rem;
+      cursor: pointer;
+    }
+
+    .mock-q-cell.current {
+      border-color: var(--crimson);
+      font-weight: 700;
+    }
+
+    .mock-q-cell.answered {
+      background: var(--gray-100);
+    }
+
+    .mock-q-cell.flagged {
+      box-shadow: inset 0 0 0 2px #f59e0b;
+    }
+
+    .nav-row-mock {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
     .daily-pop-actions .btn-pop-later {
       background: var(--gray-100);
       color: var(--gray-700);
@@ -3267,9 +3322,11 @@
         </div>
         <span class="progress-label" id="progress-label" aria-hidden="true">1 / 12</span>
       </div>
+      <div id="mock-exam-nav" class="mock-exam-nav" hidden aria-label="Question number grid"></div>
       <div class="question-card scrollport" id="question-card"></div>
-      <div class="nav-row">
+      <div class="nav-row nav-row-mock">
         <button type="button" class="btn-secondary" id="btn-prev" disabled>Previous</button>
+        <button type="button" class="btn-primary" id="btn-submit-mock" hidden>Submit exam</button>
         <button type="button" class="btn-primary" id="btn-next">Next</button>
       </div>
     </section>
@@ -3343,6 +3400,7 @@
   <div id="daily-pop-modal" class="daily-pop-modal" hidden role="dialog" aria-modal="true" aria-labelledby="daily-pop-title">
     <div class="daily-pop-dialog">
       <div class="pop-flame" aria-hidden="true">🔥</div>
+      <button type="button" class="daily-pop-close" id="daily-pop-close" aria-label="Dismiss daily quiz reminder">&times;</button>
       <h2 id="daily-pop-title">Keep your streak alive</h2>
       <p>Five quick questions for today — same set until local midnight. Instant answers and explanations after each choice.</p>
       <div class="daily-pop-actions">
@@ -7394,11 +7452,67 @@
     }
 
     /** When Next/Submit stays disabled until the current item is complete. */
+    function isProctoredMockQuiz() {
+      return activeQuizId === "proctoredMock";
+    }
+
+    function unansweredQuestionIndices() {
+      const out = [];
+      for (let i = 0; i < shuffledQuestions.length; i++) {
+        if (!isQuestionAnswered(i)) out.push(i);
+      }
+      return out;
+    }
+
     function nextButtonNeedsAnswer(index) {
       const q = shuffledQuestions[index];
       if (!q) return true;
+      if (isProctoredMockQuiz()) return false;
       if (isWrittenQuestion(q)) return !isQuestionAnswered(index);
       return hasImmediateFeedback() && !isQuestionAnswered(index);
+    }
+
+    function renderMockExamNav() {
+      const wrap = document.getElementById("mock-exam-nav");
+      if (!wrap) return;
+      if (!isProctoredMockQuiz()) {
+        wrap.hidden = true;
+        wrap.innerHTML = "";
+        return;
+      }
+      wrap.hidden = false;
+      wrap.innerHTML = shuffledQuestions
+        .map((_, i) => {
+          const answered = isQuestionAnswered(i);
+          const flagged = flaggedQuestions.has(i);
+          let cls = "mock-q-cell";
+          if (i === currentIndex) cls += " current";
+          if (answered) cls += " answered";
+          if (flagged) cls += " flagged";
+          return `<button type="button" class="${cls}" data-mock-index="${i}">${i + 1}</button>`;
+        })
+        .join("");
+      wrap.querySelectorAll("[data-mock-index]").forEach(btn => {
+        btn.addEventListener("click", () => {
+          persistWrittenAnswerFromDom();
+          currentIndex = parseInt(btn.dataset.mockIndex, 10);
+          renderQuestion();
+          saveQuizSession();
+        });
+      });
+    }
+
+    function submitMockExamWithWarning() {
+      persistWrittenAnswerFromDom();
+      const missing = unansweredQuestionIndices();
+      if (missing.length) {
+        const list = missing.map(i => i + 1).join(", ");
+        const ok = window.confirm(
+          `You have ${missing.length} unanswered question(s): ${list}.\n\nSubmit the exam anyway?`
+        );
+        if (!ok) return;
+      }
+      showResults();
     }
 
     /* ═══════════════════════════════════════════════════════════
@@ -7484,7 +7598,8 @@
     }
 
     function prepareQuestions(source, quizId) {
-      const ordered = quizId === "dailyPop" ? source.slice() : shuffle(source);
+      void quizId;
+      const ordered = shuffle(source);
       return ordered.map(q => {
         if (isWrittenQuestion(q)) {
           return {
@@ -7524,11 +7639,7 @@
         const newCorrect = shuffledOpts.findIndex(o => o.originalIndex === surfaced.correct);
         const wrongExplanations = Array.isArray(surfaced.wrongExplanations)
           ? shuffledOpts.map(o => surfaced.wrongExplanations[o.originalIndex] || "")
-          : shuffledOpts.map(o =>
-              o.originalIndex === surfaced.correct
-                ? ""
-                : `This choice does not match the mechanism in the keyed answer (${surfaced.options[surfaced.correct]}).`
-            );
+          : shuffledOpts.map(o => (o.originalIndex === surfaced.correct ? "" : ""));
         let diagramHtml = surfaced.diagram;
         let anatomyView = surfaced.anatomyView;
         if (surfaced.anatomyDiagram && surfaced.highlightKey && typeof BRAIN_ANATOMY_DIAGRAM !== "undefined") {
@@ -8080,6 +8191,8 @@
       const flagInput = document.getElementById("quiz-flag");
       if (flagWrap) flagWrap.hidden = quizId !== "proctoredMock";
       if (flagInput) flagInput.checked = false;
+      const submitMock = document.getElementById("btn-submit-mock");
+      if (submitMock) submitMock.hidden = quizId !== "proctoredMock";
       startQuizTimer(quiz.timedMinutes);
       showView("quiz");
       renderQuestion();
@@ -8247,15 +8360,17 @@
       document.getElementById("btn-prev").disabled = currentIndex === 0;
       document.getElementById("btn-next").disabled = nextButtonNeedsAnswer(currentIndex);
       document.getElementById("btn-next").textContent =
-        currentIndex === total - 1 ? "Submit Quiz" : "Next";
+        isProctoredMockQuiz() ? (currentIndex === total - 1 ? "Next" : "Next") : currentIndex === total - 1 ? "Submit Quiz" : "Next";
       const flagInput = document.getElementById("quiz-flag");
       if (flagInput && activeQuizId === "proctoredMock") {
         flagInput.checked = flaggedQuestions.has(currentIndex);
         flagInput.onchange = () => {
           if (flagInput.checked) flaggedQuestions.add(currentIndex);
           else flaggedQuestions.delete(currentIndex);
+          renderMockExamNav();
         };
       }
+      renderMockExamNav();
       saveQuizSession();
     }
 
@@ -8552,14 +8667,23 @@
 
     document.getElementById("btn-next").addEventListener("click", () => {
       persistWrittenAnswerFromDom();
-      if (!isQuestionAnswered(currentIndex)) return;
+      if (!isProctoredMockQuiz() && !isQuestionAnswered(currentIndex)) return;
       if (currentIndex < shuffledQuestions.length - 1) {
         currentIndex++;
         renderQuestion();
         saveQuizSession();
-      } else {
+      } else if (!isProctoredMockQuiz()) {
         showResults();
       }
+    });
+
+    document.getElementById("btn-submit-mock")?.addEventListener("click", () => {
+      submitMockExamWithWarning();
+    });
+
+    document.getElementById("daily-pop-close")?.addEventListener("click", () => {
+      hideDailyPopModal();
+      saveProgress({ dailyPopDismissedDate: localDateKey() });
     });
 
     document.getElementById("btn-retake").addEventListener("click", () => {
