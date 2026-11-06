@@ -1786,6 +1786,17 @@
       margin: 0;
     }
 
+    #fc-diagram-wrap.fc-diagram-wrap {
+      margin: 0.5rem 0 0.75rem;
+      max-width: 100%;
+    }
+
+    #fc-diagram-wrap.fc-diagram-wrap svg {
+      max-width: min(100%, 420px);
+      margin: 0 auto;
+      display: block;
+    }
+
     .flashcard-answer {
       font-size: 1.02rem;
       font-weight: 600;
@@ -3146,11 +3157,12 @@
         <button type="button" class="btn-back" id="fc-back" aria-label="Save and return to dashboard">&larr; Save &amp; exit</button>
         <p class="quiz-title" id="fc-title"></p>
       </div>
-      <p class="flashcard-hint">Click the card to flip &middot; Generated from questions you missed</p>
+      <p class="flashcard-hint" id="fc-hint">Click the card to flip &middot; Generated from questions you missed</p>
       <div class="flashcard-area">
         <div class="flashcard" id="flashcard" tabindex="0" role="button" aria-label="Flashcard. Press Enter or Space to flip.">
           <div class="flashcard-face flashcard-front scrollport">
             <span class="topic-badge" id="fc-topic"></span>
+            <div id="fc-diagram-wrap" class="question-diagram brain-anatomy fc-diagram-wrap" hidden></div>
             <p class="flashcard-label">Question</p>
             <p class="flashcard-question" id="fc-question"></p>
           </div>
@@ -4182,8 +4194,30 @@
       proctoredMock: 50,
       formulaLabLearn: 12,
       formulaLabExam: 12,
-      brainAnatomy: 18,
-      brainAnatomyExam: 18
+      brainAnatomy: 15,
+      brainAnatomyExam: 18,
+      brainAnatomyAdvanced: 22,
+      brainAnatomyMaster: 25
+    };
+
+    const BRAIN_ANATOMY_QUIZ_IDS = new Set([
+      "brainAnatomy",
+      "brainAnatomyExam",
+      "brainAnatomyAdvanced",
+      "brainAnatomyMaster"
+    ]);
+    const BRAIN_ANATOMY_FLASH_DECK = "brainAnatomy";
+    const BRAIN_ANATOMY_PASS = {
+      brainAnatomy: 75,
+      brainAnatomyExam: 82,
+      brainAnatomyAdvanced: 88,
+      brainAnatomyMaster: 92
+    };
+    const BRAIN_ANATOMY_DRAW = {
+      brainAnatomy: { size: 15, maxDifficulty: 1 },
+      brainAnatomyExam: { size: 18, maxDifficulty: 2 },
+      brainAnatomyAdvanced: { size: 22, minDifficulty: 2 },
+      brainAnatomyMaster: { size: 25, minDifficulty: 3 }
     };
 
     function getProgressiveTierQuestions(progress) {
@@ -4517,9 +4551,8 @@
         const examPool = typeof PROCTORED_MOCK_EXAM_POOL !== "undefined" ? PROCTORED_MOCK_EXAM_POOL : [];
         return shuffle(examPool).slice(0, QUIZ_SAMPLE_SIZES.proctoredMock || 50);
       }
-      if (quizId === "brainAnatomy" || quizId === "brainAnatomyExam") {
-        const pool = typeof BRAIN_ANATOMY_POOL !== "undefined" ? BRAIN_ANATOMY_POOL : [];
-        return sampleFromPool(pool, QUIZ_SAMPLE_SIZES[quizId], avoid);
+      if (BRAIN_ANATOMY_QUIZ_IDS.has(quizId)) {
+        return drawBrainAnatomySet(quizId, avoid);
       }
       return [];
     }
@@ -4545,10 +4578,68 @@
     function getPassThreshold(quizId) {
       const quiz = QUIZZES[quizId];
       if (quiz?.learningMode) return 0;
+      if (BRAIN_ANATOMY_PASS[quizId] != null) return BRAIN_ANATOMY_PASS[quizId];
       if (PINNACLE_PASS[quizId] != null) return PINNACLE_PASS[quizId];
       if (ADVANCED_FINAL_IDS.includes(quizId)) return ADVANCED_PASS_THRESHOLD;
       if (MIXED_REVIEW_PASS[quizId] != null) return MIXED_REVIEW_PASS[quizId];
       return PASS_THRESHOLD;
+    }
+
+    function filterBrainAnatomyPool(pool, cfg) {
+      const filtered = pool.filter(q => {
+        const d = q.difficulty || 2;
+        if (cfg.maxDifficulty != null && d > cfg.maxDifficulty) return false;
+        if (cfg.minDifficulty != null && d < cfg.minDifficulty) return false;
+        return true;
+      });
+      return filtered.length ? filtered : pool;
+    }
+
+    function drawBrainAnatomySet(quizId, avoid) {
+      const pool = typeof BRAIN_ANATOMY_POOL !== "undefined" ? BRAIN_ANATOMY_POOL : [];
+      const cfg = BRAIN_ANATOMY_DRAW[quizId];
+      if (!cfg) return [];
+      const subset = filterBrainAnatomyPool(pool, cfg);
+      return sampleFromPool(subset, cfg.size, avoid);
+    }
+
+    function buildBrainAnatomyFlashcardsFromPool() {
+      const pool = typeof BRAIN_ANATOMY_POOL !== "undefined" ? BRAIN_ANATOMY_POOL : [];
+      return pool.map(q => ({
+        topic: `Neuroanatomy · ${q.anatomyView || "structure"}`,
+        question: "Name the highlighted structure.",
+        answer: q.options[q.correct],
+        explanation: q.explanation,
+        diagram: q.diagram,
+        anatomyDiagram: true,
+        cardKey: `${q.anatomyView || "v"}:${q.highlightKey || q.question}`
+      }));
+    }
+
+    function ensureBrainAnatomyFlashcardDeck() {
+      const built = buildBrainAnatomyFlashcardsFromPool();
+      if (!built.length) return;
+      const decks = getFlashcardDecks();
+      const byKey = new Map();
+      built.forEach(c => byKey.set(c.cardKey, c));
+      (decks[BRAIN_ANATOMY_FLASH_DECK] || []).forEach(c => {
+        const key = c.cardKey || `${c.question}::${c.answer}`;
+        if (!byKey.has(key)) byKey.set(key, c);
+      });
+      decks[BRAIN_ANATOMY_FLASH_DECK] = [...byKey.values()];
+      try {
+        localStorage.setItem(FLASHCARD_KEY, JSON.stringify(decks));
+      } catch {
+        notifyStorageIssue();
+      }
+      decks[BRAIN_ANATOMY_FLASH_DECK].forEach(c => ensureFlashcardSrs(BRAIN_ANATOMY_FLASH_DECK, c));
+    }
+
+    function flashcardDeckTitle(deckId) {
+      if (deckId === BRAIN_ANATOMY_FLASH_DECK) {
+        return "Brain Anatomy Flashcards";
+      }
+      return CHAPTER_META[deckId]?.title || "Flashcards";
     }
 
     function formatPassThreshold(quizId) {
@@ -4641,6 +4732,7 @@
       ...MIXED_REVIEW_IDS,
       "formulaLabLearn",
       "formulaLabExam",
+      ...BRAIN_ANATOMY_QUIZ_IDS,
       ...EXAM_QUIZ_IDS.filter(id => id !== "proctoredMock")
     ]);
 
@@ -4760,10 +4852,10 @@
       brainAnatomy: {
         id: "brainAnatomy",
         section: "anatomy",
-        title: "Brain Anatomy — Learn",
-        subtitle: "Name the highlighted structure",
-        meta: "18 questions · 50-item pool · instant feedback · 70% to unlock exam mode",
-        description: "Midsagittal, lateral, and coronal schematics with orientation labels — thalamus, ventricles, brainstem, lobes, sulci, basal ganglia, limbic structures, and sensory cortex.",
+        title: "Brain Anatomy I — Learn",
+        subtitle: "Foundation structures only",
+        meta: "15 questions · difficulty 1 · instant feedback · 75% to pass",
+        description: "Major lobes, thalamus, brainstem segments, cerebellum, and other tier-1 landmarks on schematic figures.",
         icon: "🧠",
         cardClass: "anatomy-lab",
         immediateFeedback: true,
@@ -4772,16 +4864,58 @@
       brainAnatomyExam: {
         id: "brainAnatomyExam",
         section: "anatomy",
-        title: "Brain Anatomy — Exam",
-        subtitle: "Same pool · no instant feedback",
-        meta: "18 questions · answers at end · 70% to pass",
-        description: "Same 50-item pool as Learn mode — identify highlighted structures with no instant feedback until review.",
-        icon: "🧠×",
+        title: "Brain Anatomy II — Exam",
+        subtitle: "Tiers 1–2 · answers at end",
+        meta: "18 questions · 82% to pass",
+        description: "Adds intermediate structures (gyri, ventricles, colliculi) — no instant feedback until review.",
+        icon: "🧠Ⅱ",
         cardClass: "anatomy-lab",
         immediateFeedback: false,
         requires: () => getProgress().brainAnatomyPassed,
-        lockHint: "Score 70%+ on Brain Anatomy — Learn to unlock",
+        lockHint: "Score 75%+ on Brain Anatomy I to unlock",
         passKey: "brainAnatomyExamPassed"
+      },
+      brainAnatomyFlash: {
+        id: "brainAnatomyFlash",
+        section: "anatomy",
+        title: "Brain Anatomy — Flashcards",
+        subtitle: "Figure on front · name on back",
+        meta: "Full 50-card deck · spaced repetition",
+        description: "Same schematic figures as the quizzes. Rate each card (Again / Good / Easy) to schedule reviews. Missed quiz items are added here too.",
+        icon: "🃏",
+        cardClass: "anatomy-lab flashcards",
+        flashcardDeck: true,
+        requires: () => getProgress().brainAnatomyPassed,
+        lockHint: "Score 75%+ on Brain Anatomy I to unlock",
+        learningMode: true
+      },
+      brainAnatomyAdvanced: {
+        id: "brainAnatomyAdvanced",
+        section: "anatomy",
+        title: "Brain Anatomy III — Advanced",
+        subtitle: "Tiers 2–3 · harder distractors",
+        meta: "22 questions · 88% to pass",
+        description: "Coronal basal ganglia, limbic nuclei, sulci, and brainstem subregions — exam-style timing of answers at end.",
+        icon: "🧠Ⅲ",
+        cardClass: "anatomy-lab",
+        immediateFeedback: false,
+        requires: () => getProgress().brainAnatomyExamPassed,
+        lockHint: "Score 82%+ on Brain Anatomy II to unlock",
+        passKey: "brainAnatomyAdvancedPassed"
+      },
+      brainAnatomyMaster: {
+        id: "brainAnatomyMaster",
+        section: "anatomy",
+        title: "Brain Anatomy IV — Master",
+        subtitle: "Hardest tier only",
+        meta: "25 questions · 92% to pass",
+        description: "Only difficulty-3 items: internal capsule, fornix, mammillary bodies, auditory/visual cortex, and fine brainstem/diencephalon landmarks.",
+        icon: "🧠Ⅳ",
+        cardClass: "anatomy-lab",
+        immediateFeedback: false,
+        requires: () => getProgress().brainAnatomyAdvancedPassed,
+        lockHint: "Score 88%+ on Brain Anatomy III to unlock",
+        passKey: "brainAnatomyMasterPassed"
       },
       mixedReview20: {
         id: "mixedReview20",
@@ -5081,7 +5215,7 @@
     const DASHBOARD_SECTIONS = [
       { id: "daily", title: "Daily Streak", hint: "Five questions · new mix every calendar day at local midnight" },
       { id: "core", title: "Core Modules", hint: "Part 1 · Part 2 · Part 3 — instant feedback on each answer" },
-      { id: "anatomy", title: "Brain Anatomy Lab", hint: "Identify highlighted structures on midsagittal, lateral, and coronal schematics · Part 3" },
+      { id: "anatomy", title: "Brain Anatomy Lab", hint: "I → II → flashcards → III → IV (75% / 82% / 88% / 92%) · schematic figures · Part 3" },
       { id: "mixedReview", title: "Mixed Chapter Reviews", hint: "20 → 50 questions · all parts · instant feedback · difficulty rises each tier" },
       { id: "review10", title: "10-Question Exam Reviews", hint: "HarvardX-style MCQs · topic spread · answers revealed at the end" },
       { id: "written", title: "Short Answer Drills", hint: "10 per quiz from a 30-item pool · shuffled each attempt · model answers at the end" },
@@ -5836,6 +5970,7 @@
     }
 
     function flashcardSrsKey(chapterId, card) {
+      if (card?.cardKey) return `${chapterId}::${card.cardKey}`;
       return `${chapterId}::${String(card?.question || "").trim()}`;
     }
 
@@ -5942,7 +6077,8 @@
       const existing = decks[chapterId] || [];
       const byQuestion = new Map();
       [...existing, ...missedQuestions].forEach(card => {
-        byQuestion.set(card.question, card);
+        const mapKey = card.cardKey || card.question;
+        byQuestion.set(mapKey, card);
         ensureFlashcardSrs(chapterId, card);
       });
       decks[chapterId] = [...byQuestion.values()];
@@ -7278,6 +7414,9 @@
           wrongExplanations,
           diagram: surfaced.diagram,
           anatomyDiagram: surfaced.anatomyDiagram,
+          anatomyView: surfaced.anatomyView,
+          highlightKey: surfaced.highlightKey,
+          difficulty: surfaced.difficulty,
           module: surfaced.module || routeQuestionToModule(surfaced),
           formulaHint: surfaced.formulaHint,
           formulaSteps: surfaced.formulaSteps,
@@ -7340,6 +7479,7 @@
     }
 
     function renderDashboard() {
+      ensureBrainAnatomyFlashcardDeck();
       const container = document.getElementById("dashboard-sections");
       const progress = getProgressWithBackup();
       const flashcardDecks = getFlashcardDecks();
@@ -7408,13 +7548,20 @@
             lockBadge = `<span class="lock-badge" style="background:var(--correct-bg);color:var(--correct);">✓ Done today</span>`;
           }
 
+          let metaLine = formatQuizMeta(q);
+          if (q.flashcardDeck && q.id === "brainAnatomyFlash") {
+            ensureBrainAnatomyFlashcardDeck();
+            const n = (getFlashcardDecks()[BRAIN_ANATOMY_FLASH_DECK] || []).length;
+            metaLine = `${n} cards · spaced repetition · figure on front`;
+          }
+
           return `
             <div class="quiz-card ${cardClass}${unlocked ? "" : " locked"}"
                  ${unlocked ? `tabindex="0" role="button" aria-label="Start ${q.title}" data-quiz="${q.id}"` : `aria-disabled="true"`}>
               <div class="quiz-card-icon">${q.icon}</div>
               <h3>${q.title}</h3>
               <p class="subtitle">${q.subtitle}<br>${q.description}</p>
-          <span class="meta">${formatQuizMeta(q)}</span>
+          <span class="meta">${metaLine}</span>
           ${lockBadge}
           ${unlocked ? `<span class="card-start-hint">Start quiz →</span>` : ""}
             </div>`;
@@ -7485,7 +7632,15 @@
           });
           return;
         }
-        const start = () => startQuiz(card.dataset.quiz);
+        const start = () => {
+          const quiz = QUIZZES[card.dataset.quiz];
+          if (quiz?.flashcardDeck) {
+            ensureBrainAnatomyFlashcardDeck();
+            startFlashcards(BRAIN_ANATOMY_FLASH_DECK);
+            return;
+          }
+          startQuiz(card.dataset.quiz);
+        };
         card.addEventListener("click", start);
         card.addEventListener("keydown", e => {
           if (e.key === "Enter" || e.key === " ") {
@@ -7510,7 +7665,13 @@
       activeFlashcardChapter = chapterId;
       fcDeck = deck;
       fcIndex = 0;
-      document.getElementById("fc-title").textContent = CHAPTER_META[chapterId].title;
+      document.getElementById("fc-title").textContent = flashcardDeckTitle(chapterId);
+      const hintEl = document.getElementById("fc-hint");
+      if (hintEl) {
+        hintEl.textContent = chapterId === BRAIN_ANATOMY_FLASH_DECK
+          ? "Click the card to flip · Name the highlighted structure · Rate cards when flipped for spaced repetition"
+          : "Click the card to flip · Generated from questions you missed";
+      }
       showView("flashcard");
       renderFlashcard();
       saveFlashcardSession();
@@ -7520,6 +7681,16 @@
       const card = fcDeck[fcIndex];
       document.getElementById("fc-topic").textContent = card.topic;
       document.getElementById("fc-topic-back").textContent = card.topic;
+      const fcDiag = document.getElementById("fc-diagram-wrap");
+      if (fcDiag) {
+        if (card.diagram) {
+          fcDiag.hidden = false;
+          fcDiag.innerHTML = card.diagram;
+        } else {
+          fcDiag.hidden = true;
+          fcDiag.innerHTML = "";
+        }
+      }
       document.getElementById("fc-question").innerHTML = fmt(card.question);
       document.getElementById("fc-answer").innerHTML = fmt(card.answer);
       document.getElementById("fc-mechanism").innerHTML = fmt(card.explanation);
@@ -8095,19 +8266,34 @@
 
         if (quiz && FLASHCARD_MISS_QUIZ_IDS.has(activeQuizId)) {
           const missedByChapter = { part1: [], part2: [], part3: [] };
+          const missedBrainAnatomy = [];
           shuffledQuestions.forEach((q, i) => {
             if (isWrittenQuestion(q)) return;
             const ok = isSelectAllQuestion(q)
               ? scoreSelectAllQuestion(q, answers[i])
               : answers[i] === q.correct;
             if (ok) return;
+            const answerText = isSelectAllQuestion(q)
+              ? (q.correctIndices || []).map(idx => q.options[idx]).join("; ")
+              : q.options[q.correct];
+            if (BRAIN_ANATOMY_QUIZ_IDS.has(activeQuizId) || q.anatomyDiagram) {
+              missedBrainAnatomy.push({
+                topic: q.topic,
+                question: "Name the highlighted structure.",
+                answer: answerText,
+                explanation: q.explanation,
+                diagram: q.diagram,
+                anatomyDiagram: true,
+                cardKey: q.highlightKey
+                  ? `${q.anatomyView || "v"}:${q.highlightKey}`
+                  : `miss:${String(q.question).slice(0, 40)}`
+              });
+              return;
+            }
             const chapterId = CHAPTER_IDS.includes(activeQuizId)
               ? activeQuizId
               : routeQuestionToModule(q);
             if (!CHAPTER_IDS.includes(chapterId)) return;
-            const answerText = isSelectAllQuestion(q)
-              ? (q.correctIndices || []).map(idx => q.options[idx]).join("; ")
-              : q.options[q.correct];
             missedByChapter[chapterId].push({
               topic: q.topic,
               question: q.question,
@@ -8122,10 +8308,17 @@
               added += missedByChapter[cid].length;
             }
           });
+          if (missedBrainAnatomy.length) {
+            ensureBrainAnatomyFlashcardDeck();
+            saveWeaknessFlashcards(BRAIN_ANATOMY_FLASH_DECK, missedBrainAnatomy);
+            added += missedBrainAnatomy.length;
+          }
           if (added) {
-            const label = CHAPTER_IDS.includes(activeQuizId)
-              ? CHAPTER_META[activeQuizId].title
-              : "module flashcard decks";
+            const label = BRAIN_ANATOMY_QUIZ_IDS.has(activeQuizId)
+              ? "Brain Anatomy flashcards"
+              : CHAPTER_IDS.includes(activeQuizId)
+                ? CHAPTER_META[activeQuizId].title
+                : "module flashcard decks";
             pendingUnlockMessage = `${added} weakness flashcard${added > 1 ? "s" : ""} added to ${label}.`;
           }
         }

@@ -3,11 +3,33 @@
 (function () {
   const D = typeof BRAIN_ANATOMY_DIAGRAM !== "undefined" ? BRAIN_ANATOMY_DIAGRAM : null;
 
+  const BRAIN_DIFFICULTY_1 = new Set([
+    "thalamus", "hypothalamus", "corpus_callosum", "cerebellum", "pons", "medulla", "midbrain",
+    "frontal_cortex", "occipital_cortex", "parietal_cortex", "temporal_cortex",
+    "frontal_lobe", "parietal_lobe", "temporal_lobe", "occipital_lobe",
+    "brainstem", "spinal_cord", "pituitary"
+  ]);
+  const BRAIN_DIFFICULTY_3 = new Set([
+    "fornix", "third_ventricle", "mammillary_bodies", "optic_chiasm", "superior_colliculus",
+    "cerebral_peduncle", "fourth_ventricle", "central_sulcus", "lateral_sulcus",
+    "globus_pallidus", "internal_capsule", "pineal_gland", "primary_auditory_cortex",
+    "primary_visual_cortex", "amygdala", "hippocampus", "lateral_ventricle"
+  ]);
+
+  function difficultyFor(highlight) {
+    if (BRAIN_DIFFICULTY_1.has(highlight)) return 1;
+    if (BRAIN_DIFFICULTY_3.has(highlight)) return 3;
+    return 2;
+  }
+
   function mk(view, highlight, question, options, correct, explanation, wrongExplanations) {
     return {
       topic: "Neuroanatomy",
       module: "part3",
       anatomyDiagram: true,
+      anatomyView: view,
+      highlightKey: highlight,
+      difficulty: difficultyFor(highlight),
       diagram: D ? D.diagram(view, highlight) : "",
       question,
       options,
