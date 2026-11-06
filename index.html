@@ -1085,9 +1085,14 @@
     .question-diagram.brain-anatomy svg {
       display: block;
       width: 100%;
-      max-width: 480px;
+      max-width: 520px;
       height: auto;
       margin: 0 auto;
+    }
+
+    .question-diagram.brain-anatomy .brain-anatomy-raster svg {
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
     }
 
     .question-diagram.brain-anatomy figcaption {
@@ -5215,7 +5220,7 @@
     const DASHBOARD_SECTIONS = [
       { id: "daily", title: "Daily Streak", hint: "Five questions · new mix every calendar day at local midnight" },
       { id: "core", title: "Core Modules", hint: "Part 1 · Part 2 · Part 3 — instant feedback on each answer" },
-      { id: "anatomy", title: "Brain Anatomy Lab", hint: "I → II → flashcards → III → IV (75% / 82% / 88% / 92%) · schematic figures · Part 3" },
+      { id: "anatomy", title: "Brain Anatomy Lab", hint: "I → II → flashcards → III → IV (75% / 82% / 88% / 92%) · figures match chart pack · Part 3" },
       { id: "mixedReview", title: "Mixed Chapter Reviews", hint: "20 → 50 questions · all parts · instant feedback · difficulty rises each tier" },
       { id: "review10", title: "10-Question Exam Reviews", hint: "HarvardX-style MCQs · topic spread · answers revealed at the end" },
       { id: "written", title: "Short Answer Drills", hint: "10 per quiz from a 30-item pool · shuffled each attempt · model answers at the end" },

@@ -1,109 +1,123 @@
-// Schematic neuroanatomy for identification quizzes (standard orientation: dorsal up; sagittal = anterior left).
+// Neuroanatomy figures for identification quizzes — bases match MCB80x chart pack (midsagittal + lateral).
 (function (global) {
-  const STROKE = "#2a2a2a";
-  const FILL = "#ddd6cc";
-  const HI = "rgba(164, 16, 52, 0.62)";
+  const HI = "rgba(164, 16, 52, 0.55)";
   const HI_STROKE = "#8b0a2a";
-  const CSF = "#b8d4e8";
+  const STROKE = "#1a1a1a";
 
   const VIEW_TITLES = {
-    sagittal: "Midsagittal section (schematic)",
-    lateral: "Lateral view (left hemisphere, schematic)",
-    coronal: "Coronal section (through diencephalon & basal ganglia)"
+    sagittal: "Midsagittal section (MCB80x chart reference)",
+    lateral: "Left hemisphere, lateral view (MCB80x chart reference)",
+    coronal: "Coronal section (through thalamus & basal ganglia)"
   };
 
-  /** @type {Record<string, Record<string, { d: string, kind?: string }>>} */
-  const REGIONS = {
+  /** Raster bases extracted from mcb80x-chart-pack.pdf */
+  const IMAGE_VIEWS = {
     sagittal: {
-      frontal_cortex: { d: "M 52 92 C 52 42 118 22 198 28 C 258 30 292 52 298 92 L 282 128 L 118 122 Z" },
-      parietal_cortex: { d: "M 118 122 L 282 128 L 298 92 C 312 118 318 152 278 172 L 198 165 Z" },
-      occipital_cortex: { d: "M 198 165 L 278 172 C 298 192 292 228 248 242 L 212 232 Z" },
-      temporal_cortex: { d: "M 118 122 L 198 165 L 212 232 L 168 248 L 92 208 L 98 152 Z" },
-      corpus_callosum: { d: "M 128 132 Q 198 112 268 132 Q 198 152 128 132 Z" },
-      fornix: { d: "M 148 148 Q 168 128 188 142 Q 178 158 158 162 Q 148 155 148 148 Z" },
-      lateral_ventricle: { d: "M 142 142 Q 198 132 254 142 Q 198 152 142 142 Z", kind: "csf" },
-      third_ventricle: { d: "M 196 168 L 204 168 L 203 202 L 197 202 Z", kind: "csf" },
-      thalamus: { d: "M 172 172 L 228 172 L 232 204 L 168 204 Z" },
-      hypothalamus: { d: "M 174 206 L 224 206 L 220 226 L 178 226 Z" },
-      mammillary_bodies: { d: "M 182 224 a 6 5 0 1 1 12 0 a 6 5 0 1 1 -12 0 M 206 224 a 6 5 0 1 1 12 0 a 6 5 0 1 1 -12 0" },
-      optic_chiasm: { d: "M 168 228 L 232 228 L 228 238 L 172 238 Z" },
-      pituitary: { d: "M 192 238 a 9 11 0 1 1 18 0 a 9 11 0 1 1 -18 0" },
-      superior_colliculus: { d: "M 188 232 L 212 232 L 210 248 L 186 246 Z" },
-      cerebral_peduncle: { d: "M 178 248 L 222 248 L 220 268 L 180 268 Z" },
-      midbrain: { d: "M 182 232 L 218 232 L 216 268 L 184 268 Z" },
-      pons: { d: "M 162 268 Q 200 284 238 268 L 232 298 L 168 298 Z" },
-      medulla: { d: "M 176 298 L 224 298 L 220 334 L 180 334 Z" },
-      fourth_ventricle: { d: "M 198 274 L 214 280 L 198 286 L 182 280 Z", kind: "csf" },
-      cerebellum: { d: "M 232 258 C 278 242 338 262 352 302 C 362 332 318 348 268 338 C 242 322 228 288 232 258 Z" },
-      hippocampus: { d: "M 152 208 Q 172 222 192 212 Q 172 198 152 208 Z" },
-      amygdala: { d: "M 162 196 a 11 9 0 1 1 22 0 a 11 9 0 1 1 -22 0" },
-      pineal_gland: { d: "M 194 218 a 7 6 0 1 1 14 0 a 7 6 0 1 1 -14 0" },
-      spinal_cord: { d: "M 192 334 L 208 334 L 206 352 L 194 352 Z" },
-      brainstem: { d: "M 160 232 L 240 232 L 232 334 L 168 334 Z" }
+      src: "assets/brain-anatomy/sagittal-base.png",
+      viewBox: "0 0 100 100"
     },
     lateral: {
-      frontal_lobe: { d: "M 42 68 C 48 28 128 18 208 32 C 242 40 258 68 252 108 L 228 138 L 88 128 Z" },
-      parietal_lobe: { d: "M 88 128 L 228 138 L 252 108 C 266 138 262 172 218 188 L 128 182 Z" },
-      occipital_lobe: { d: "M 128 182 L 218 188 C 232 212 222 248 182 258 L 142 242 Z" },
-      temporal_lobe: { d: "M 88 128 L 128 182 L 142 242 L 92 252 L 52 198 L 58 148 Z" },
-      lateral_sulcus: { d: "M 118 148 Q 155 168 175 210 Q 140 175 105 165 Z", kind: "sulcus" },
-      precentral_gyrus: { d: "M 92 92 L 112 92 L 115 168 L 95 168 Z" },
-      postcentral_gyrus: { d: "M 115 92 L 135 92 L 132 168 L 112 168 Z" },
-      central_sulcus: { d: "M 106 86 L 110 172", kind: "sulcus" },
-      primary_auditory_cortex: { d: "M 168 218 L 198 218 L 195 248 L 165 245 Z" },
-      primary_visual_cortex: { d: "M 152 228 L 188 232 L 182 258 L 148 252 Z" },
-      olfactory_bulb: { d: "M 32 112 a 14 18 0 1 1 28 0 a 14 18 0 1 1 -28 0" },
-      cerebellum: { d: "M 252 208 C 298 192 352 218 362 262 C 368 298 328 318 282 308 C 258 292 246 238 252 208 Z" },
-      midbrain: { d: "M 228 198 L 252 198 L 248 228 L 226 228 Z" },
-      pons: { d: "M 224 228 L 256 228 L 252 258 L 222 258 Z" },
-      medulla: { d: "M 226 258 L 252 258 L 248 288 L 224 288 Z" },
-      brainstem: { d: "M 222 198 L 258 198 L 252 288 L 220 288 Z" }
-    },
-    coronal: {
-      corpus_callosum: { d: "M 128 92 L 272 92 L 268 112 L 132 112 Z" },
-      lateral_ventricle: { d: "M 118 78 Q 200 58 282 78 Q 200 98 118 78 Z", kind: "csf" },
-      caudate: { d: "M 152 112 L 192 112 L 188 172 L 148 168 Z" },
-      putamen: { d: "M 208 128 L 258 128 L 252 198 L 202 192 Z" },
-      globus_pallidus: { d: "M 192 148 L 208 148 L 206 188 L 190 186 Z" },
-      internal_capsule: { d: "M 198 112 L 208 112 L 203 248 L 193 248 Z" },
-      thalamus: { d: "M 162 182 L 238 182 L 232 248 L 168 248 Z" },
-      third_ventricle: { d: "M 196 168 L 204 168 L 203 192 L 197 192 Z", kind: "csf" },
-      amygdala: { d: "M 148 228 L 172 228 L 168 252 L 144 248 Z" },
-      hippocampus: { d: "M 118 248 Q 138 268 158 252 Q 138 238 118 248 Z" }
+      src: "assets/brain-anatomy/lateral-base.png",
+      viewBox: "0 0 100 100"
     }
   };
 
-  function orientationLabels(view) {
-    if (view === "sagittal") {
-      return `<text x="28" y="200" font-size="10" fill="#666" font-family="system-ui,sans-serif">Anterior</text>
-        <text x="330" y="200" font-size="10" fill="#666" font-family="system-ui,sans-serif">Posterior</text>
-        <text x="200" y="42" text-anchor="middle" font-size="10" fill="#666">Dorsal</text>
-        <text x="200" y="348" text-anchor="middle" font-size="10" fill="#666">Ventral</text>`;
+  /**
+   * Highlight regions in 0–100 coords (same space as viewBox).
+   * @type {Record<string, Record<string, { type: string, [k: string]: number | string }>>}
+   */
+  const HIGHLIGHTS = {
+    sagittal: {
+      frontal_cortex: { type: "ellipse", cx: 21, cy: 24, rx: 16, ry: 19 },
+      parietal_cortex: { type: "ellipse", cx: 39, cy: 19, rx: 14, ry: 16 },
+      occipital_cortex: { type: "ellipse", cx: 57, cy: 21, rx: 13, ry: 15 },
+      temporal_cortex: { type: "ellipse", cx: 31, cy: 47, rx: 17, ry: 14 },
+      corpus_callosum: {
+        type: "path",
+        d: "M 28 36 Q 48 28 68 36 Q 48 42 28 36 Z"
+      },
+      fornix: { type: "ellipse", cx: 41, cy: 44, rx: 4.5, ry: 5 },
+      lateral_ventricle: { type: "ellipse", cx: 41, cy: 35, rx: 11, ry: 4.5 },
+      third_ventricle: { type: "ellipse", cx: 48, cy: 45, rx: 2.2, ry: 4 },
+      thalamus: { type: "ellipse", cx: 48, cy: 42, rx: 7, ry: 8.5 },
+      hypothalamus: { type: "ellipse", cx: 47, cy: 51, rx: 6, ry: 5 },
+      mammillary_bodies: { type: "ellipse", cx: 44, cy: 53, rx: 4, ry: 2.5 },
+      optic_chiasm: { type: "ellipse", cx: 46, cy: 54, rx: 5, ry: 2 },
+      pituitary: { type: "ellipse", cx: 46, cy: 58, rx: 3.5, ry: 4.5 },
+      pineal_gland: { type: "ellipse", cx: 54, cy: 40, rx: 3, ry: 3 },
+      hippocampus: { type: "ellipse", cx: 39, cy: 46, rx: 6, ry: 6 },
+      amygdala: { type: "ellipse", cx: 35, cy: 49, rx: 5, ry: 5 },
+      superior_colliculus: { type: "ellipse", cx: 50, cy: 59, rx: 4, ry: 3 },
+      cerebral_peduncle: { type: "ellipse", cx: 50, cy: 62, rx: 6, ry: 4 },
+      midbrain: { type: "ellipse", cx: 50, cy: 60, rx: 8, ry: 5.5 },
+      pons: { type: "ellipse", cx: 50, cy: 67, rx: 10, ry: 5 },
+      medulla: { type: "ellipse", cx: 50, cy: 73, rx: 8, ry: 5 },
+      fourth_ventricle: { type: "ellipse", cx: 52, cy: 65, rx: 3, ry: 2.5 },
+      brainstem: { type: "ellipse", cx: 50, cy: 66, rx: 11, ry: 14 },
+      cerebellum: { type: "ellipse", cx: 67, cy: 57, rx: 19, ry: 15 },
+      spinal_cord: { type: "ellipse", cx: 50, cy: 83, rx: 4, ry: 6 }
+    },
+    lateral: {
+      frontal_lobe: { type: "ellipse", cx: 30, cy: 36, rx: 25, ry: 30 },
+      parietal_lobe: { type: "ellipse", cx: 52, cy: 28, rx: 21, ry: 25 },
+      temporal_lobe: { type: "ellipse", cx: 47, cy: 57, rx: 23, ry: 19 },
+      occipital_lobe: { type: "ellipse", cx: 73, cy: 35, rx: 15, ry: 23 },
+      central_sulcus: { type: "path", d: "M 43.5 16 L 44.5 64", strokeOnly: true },
+      lateral_sulcus: {
+        type: "path",
+        d: "M 22 50 Q 48 58 82 48",
+        strokeOnly: true
+      },
+      precentral_gyrus: { type: "ellipse", cx: 38, cy: 36, rx: 5, ry: 27 },
+      postcentral_gyrus: { type: "ellipse", cx: 46, cy: 36, rx: 5, ry: 27 },
+      primary_auditory_cortex: { type: "ellipse", cx: 58, cy: 53, rx: 7, ry: 7 },
+      primary_visual_cortex: { type: "ellipse", cx: 78, cy: 39, rx: 7, ry: 9 },
+      olfactory_bulb: { type: "ellipse", cx: 16, cy: 45, rx: 5, ry: 7 },
+      cerebellum: { type: "ellipse", cx: 77, cy: 73, rx: 13, ry: 11 },
+      midbrain: { type: "ellipse", cx: 58, cy: 66, rx: 5, ry: 4 },
+      pons: { type: "ellipse", cx: 56, cy: 72, rx: 6, ry: 4 },
+      medulla: { type: "ellipse", cx: 54, cy: 78, rx: 5, ry: 4 },
+      brainstem: { type: "ellipse", cx: 56, cy: 71, rx: 7, ry: 12 }
     }
-    if (view === "lateral") {
-      return `<text x="28" y="200" font-size="10" fill="#666">Rostral (anterior)</text>
-        <text x="300" y="200" font-size="10" fill="#666">Caudal</text>
-        <text x="200" y="42" text-anchor="middle" font-size="10" fill="#666">Dorsal</text>
-        <text x="200" y="348" text-anchor="middle" font-size="10" fill="#666">Ventral</text>`;
-    }
-    return `<text x="200" y="42" text-anchor="middle" font-size="10" fill="#666">Dorsal (superior)</text>
-      <text x="200" y="348" text-anchor="middle" font-size="10" fill="#666">Ventral (inferior)</text>
-      <text x="36" y="200" font-size="10" fill="#666">Right hemisphere</text>
-      <text x="300" y="200" font-size="10" fill="#666">Left hemisphere</text>`;
-  }
+  };
 
-  function outlineForView(view) {
-    if (view === "sagittal") {
-      return `<path d="M 48 88 C 42 38 128 12 208 18 C 308 22 338 68 332 128 C 326 198 296 258 246 278 L 236 338 L 208 352 L 188 338 L 178 278 C 118 258 68 198 52 128 Z" fill="none" stroke="${STROKE}" stroke-width="2"/>`;
-    }
-    if (view === "lateral") {
-      return `<path d="M 38 62 C 32 22 118 8 208 22 C 278 36 298 78 292 128 C 286 198 256 258 206 272 C 166 282 126 268 96 228 C 66 188 42 128 38 62 Z" fill="none" stroke="${STROKE}" stroke-width="2"/>`;
-    }
-    return `<ellipse cx="200" cy="178" rx="168" ry="158" fill="none" stroke="${STROKE}" stroke-width="2"/>`;
-  }
+  /** Coronal schematic (chart-pack style colors) — vector only */
+  const CORONAL = {
+    FILL: {
+      cortex: "#e8b4bc",
+      csf: "#b8d4e8",
+      cc: "#e8d878",
+      caudate: "#c4a882",
+      putamen: "#98c888",
+      gp: "#6d9a58",
+      capsule: "#f0ebe3",
+      thalamus: "#88aac8",
+      hippocampus: "#d4a574",
+      amygdala: "#c9926a"
+    },
+    regions: {
+      lateral_ventricle: {
+        d: "M 118 72 Q 200 52 282 72 Q 200 92 118 72 Z",
+        kind: "csf"
+      },
+      corpus_callosum: { d: "M 118 88 L 282 88 L 278 108 L 122 108 Z", kind: "cc" },
+      caudate: { d: "M 148 108 L 192 108 L 188 178 L 142 172 Z", kind: "caudate" },
+      putamen: { d: "M 208 122 L 262 122 L 256 202 L 202 196 Z", kind: "putamen" },
+      globus_pallidus: { d: "M 192 142 L 208 142 L 206 188 L 188 186 Z", kind: "gp" },
+      internal_capsule: { d: "M 198 108 L 208 108 L 203 252 L 193 252 Z", kind: "capsule" },
+      thalamus: { d: "M 158 182 L 242 182 L 236 252 L 164 252 Z", kind: "thalamus" },
+      third_ventricle: { d: "M 196 162 L 204 162 L 203 188 L 197 188 Z", kind: "csf" },
+      amygdala: { d: "M 142 228 L 172 228 L 168 254 L 138 248 Z", kind: "amygdala" },
+      hippocampus: { d: "M 108 248 Q 132 272 158 252 Q 132 232 108 248 Z", kind: "hippocampus" }
+    },
+    outline:
+      "M 48 118 C 32 78 88 42 200 38 C 312 42 368 78 352 118 C 368 168 368 228 352 268 C 312 308 248 318 200 318 C 152 318 88 308 48 268 C 32 228 32 168 48 118 Z"
+  };
 
   function keysForView(view, highlight) {
-    const all = Object.keys(REGIONS[view] || {});
+    const all = Object.keys(
+      view === "coronal" ? CORONAL.regions : HIGHLIGHTS[view] || {}
+    );
     const skip = new Set();
 
     if (view === "sagittal" || view === "lateral") {
@@ -129,37 +143,87 @@
     }
 
     const keys = all.filter(k => !skip.has(k));
-    const rest = keys.filter(k => k !== highlight);
-    if (highlight && keys.includes(highlight)) return [...rest, highlight];
+    if (highlight && keys.includes(highlight)) {
+      return [...keys.filter(k => k !== highlight), highlight];
+    }
     return keys;
   }
 
-  function renderRegion(key, reg, highlight) {
-    const on = key === highlight;
-    if (reg.kind === "sulcus") {
-      return `<path d="${reg.d}" fill="none" stroke="${on ? HI_STROKE : "#777"}" stroke-width="${on ? 4 : 2}" stroke-dasharray="${on ? "none" : "5 4"}"/>`;
+  function renderHighlightShape(shape, active) {
+    if (shape.strokeOnly) {
+      return `<path d="${shape.d}" fill="none" stroke="${active ? HI_STROKE : "transparent"}" stroke-width="${active ? 1.8 : 0}" stroke-linecap="round"/>`;
     }
-    const fill = reg.kind === "csf" ? (on ? "rgba(164,16,52,0.35)" : CSF) : on ? HI : FILL;
-    return `<path d="${reg.d}" fill="${fill}" stroke="${on ? HI_STROKE : STROKE}" stroke-width="${on ? 2.5 : 1}"/>`;
+    if (shape.type === "path") {
+      return `<path d="${shape.d}" fill="${active ? HI : "transparent"}" stroke="${active ? HI_STROKE : "transparent"}" stroke-width="${active ? 1.2 : 0}"/>`;
+    }
+    if (shape.type === "ellipse") {
+      return `<ellipse cx="${shape.cx}" cy="${shape.cy}" rx="${shape.rx}" ry="${shape.ry}" fill="${active ? HI : "transparent"}" stroke="${active ? HI_STROKE : "transparent"}" stroke-width="${active ? 1.2 : 0}"/>`;
+    }
+    return "";
   }
 
-  function diagram(view, highlight) {
-    const regions = REGIONS[view] || REGIONS.sagittal;
-    const title = VIEW_TITLES[view] || VIEW_TITLES.sagittal;
-    let paths = outlineForView(view);
+  function orientationLabels(view) {
+    if (view === "sagittal") {
+      return `<text x="4" y="50" font-size="3.2" fill="#555" font-family="system-ui,sans-serif">Anterior</text>
+        <text x="88" y="50" font-size="3.2" fill="#555" font-family="system-ui,sans-serif">Posterior</text>
+        <text x="50" y="6" text-anchor="middle" font-size="3.2" fill="#555">Dorsal</text>
+        <text x="50" y="97" text-anchor="middle" font-size="3.2" fill="#555">Ventral</text>`;
+    }
+    if (view === "lateral") {
+      return `<text x="4" y="50" font-size="3.2" fill="#555">Anterior</text>
+        <text x="86" y="50" font-size="3.2" fill="#555">Posterior</text>
+        <text x="50" y="6" text-anchor="middle" font-size="3.2" fill="#555">Dorsal</text>
+        <text x="50" y="97" text-anchor="middle" font-size="3.2" fill="#555">Ventral</text>`;
+    }
+    return `<text x="200" y="28" text-anchor="middle" font-size="11" fill="#555">Dorsal</text>
+      <text x="200" y="338" text-anchor="middle" font-size="11" fill="#555">Ventral</text>
+      <text x="28" y="178" font-size="11" fill="#555">Right</text>
+      <text x="340" y="178" font-size="11" fill="#555">Left</text>`;
+  }
+
+  function diagramFromImage(view, highlight) {
+    const meta = IMAGE_VIEWS[view];
+    const map = HIGHLIGHTS[view] || {};
+    const title = VIEW_TITLES[view];
+    let overlay = "";
     for (const key of keysForView(view, highlight)) {
-      const reg = regions[key];
-      if (reg) paths += renderRegion(key, reg, highlight);
+      const shape = map[key];
+      if (shape) overlay += renderHighlightShape(shape, key === highlight);
     }
     const cap =
       view === "sagittal"
-        ? "Midsagittal schematic · anterior left, posterior right, dorsal up. Highlight = structure to name."
-        : view === "lateral"
-          ? "Left lateral surface · rostral left, caudal right. Highlight = structure to name."
-          : "Coronal section at level of thalamus & basal ganglia. Highlight = structure to name.";
-    return `<figure class="brain-anatomy-figure"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 360" role="img" aria-label="${title}"><title>${title}</title>${paths}${orientationLabels(view)}<text x="200" y="24" text-anchor="middle" font-size="11" fill="#444" font-family="system-ui,sans-serif">${title}</text></svg><figcaption>${cap}</figcaption></figure>`;
+        ? "Midsagittal · anterior left · highlight = structure to name (from chart pack)."
+        : "Left lateral hemisphere · highlight = structure to name (from chart pack).";
+    return `<figure class="brain-anatomy-figure brain-anatomy-raster"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="${meta.viewBox}" role="img" aria-label="${title}"><title>${title}</title><rect x="0" y="0" width="100" height="100" fill="#fff"/><image href="${meta.src}" xlink:href="${meta.src}" x="0" y="0" width="100" height="100" preserveAspectRatio="xMidYMid meet"/>${overlay}${orientationLabels(view)}</svg><figcaption>${cap}</figcaption></figure>`;
+  }
+
+  function renderCoronalRegion(key, reg, highlight, fills) {
+    const on = key === highlight;
+    const base = fills[reg.kind] || fills.cortex;
+    const fill = on ? HI : base;
+    return `<path d="${reg.d}" fill="${fill}" stroke="${on ? HI_STROKE : STROKE}" stroke-width="${on ? 2 : 0.9}"/>`;
+  }
+
+  function diagramCoronal(highlight) {
+    const title = VIEW_TITLES.coronal;
+    const fills = CORONAL.FILL;
+    let paths = `<path d="${CORONAL.outline}" fill="${fills.cortex}" stroke="${STROKE}" stroke-width="1.8"/>`;
+    paths += `<path d="M 72 118 C 98 98 128 92 200 90 C 272 92 302 98 328 118 C 302 148 272 158 200 160 C 128 158 98 148 72 118 Z" fill="#f5eef0" stroke="${STROKE}" stroke-width="0.6" opacity="0.85"/>`;
+    for (const key of keysForView("coronal", highlight)) {
+      const reg = CORONAL.regions[key];
+      if (reg) paths += renderCoronalRegion(key, reg, highlight, fills);
+    }
+    const cap =
+      "Coronal section at thalamus & basal ganglia · highlight = structure to name (schematic, chart-pack colors).";
+    return `<figure class="brain-anatomy-figure"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 360" role="img" aria-label="${title}"><title>${title}</title>${paths}${orientationLabels("coronal")}<text x="200" y="18" text-anchor="middle" font-size="11" fill="#444" font-family="system-ui,sans-serif">${title}</text></svg><figcaption>${cap}</figcaption></figure>`;
+  }
+
+  function diagram(view, highlight) {
+    if (view === "coronal") return diagramCoronal(highlight);
+    if (IMAGE_VIEWS[view]) return diagramFromImage(view, highlight);
+    return diagramFromImage("sagittal", highlight);
   }
 
   global.BRAIN_ANATOMY_VIEW_TITLES = VIEW_TITLES;
-  global.BRAIN_ANATOMY_DIAGRAM = { diagram, REGIONS };
+  global.BRAIN_ANATOMY_DIAGRAM = { diagram, HIGHLIGHTS, CORONAL };
 })(typeof window !== "undefined" ? window : globalThis);
