@@ -217,6 +217,25 @@
       font-size: clamp(1.3rem, 4vw, 1.85rem);
       font-weight: 700;
       letter-spacing: -0.02em;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35em;
+      line-height: 1.15;
+    }
+
+    header .harvardx-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.06em;
+      color: inherit;
+    }
+
+    header .harvardx-mark .x-logo {
+      width: 0.82em;
+      height: 0.82em;
+      flex-shrink: 0;
     }
 
     header p {
@@ -3025,7 +3044,18 @@
   <a class="skip-link skip-link--secondary" href="#dashboard-quizzes">Skip to quizzes</a>
 
   <header>
-    <h1>HarvardX Introduction to Neuroscience</h1>
+    <h1>
+      <span class="harvardx-mark" aria-label="HarvardX">
+        Harvard
+        <svg class="x-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true">
+          <g transform="translate(16 16)">
+            <rect x="-3.25" y="-14.5" width="6.5" height="29" fill="#C4A035" transform="rotate(45)"/>
+            <rect x="-3.25" y="-14.5" width="6.5" height="29" fill="#A51C30" transform="rotate(-45)"/>
+          </g>
+        </svg>
+      </span>
+      <span>Introduction to Neuroscience</span>
+    </h1>
     <p>MCB80x Practice Quiz Suite &mdash; Electrical Properties &middot; Neurons &amp; Networks &middot; The Brain</p>
     <nav class="main-nav" aria-label="Main">
       <button type="button" class="nav-tab active" data-nav="dashboard" id="nav-dashboard">Dashboard</button>
