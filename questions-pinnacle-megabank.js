@@ -6,7 +6,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Nernst Equation",
     question: "At 37°C, [K⁺]i = 140 mM and [K⁺]o = 5 mM. E_K is closest to:",
     options: [
-
       "-89 mV",
       "-49 mV",
       "+60 mV",
@@ -19,7 +18,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Nernst Equation",
     question: "At 37°C, [K⁺]i = 140 mM and [K⁺]o = 2.5 mM. E_K is closest to:",
     options: [
-
       "0 mV",
       "-68 mV when temperature is near 37 °C.",
       "-108 mV",
@@ -32,7 +30,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Nernst Equation",
     question: "At 37°C, [Na⁺]i = 15 mM and [Na⁺]o = 145 mM. E_Na is closest to:",
     options: [
-
       "31 mV",
       "+61 mV",
       "−70 mV",
@@ -45,7 +42,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Nernst Equation",
     question: "At 37°C (z=2), [Ca²⁺]i = 0.10 µM and [Ca²⁺]o = 2 mM. E_Ca is closest to:",
     options: [
-
       "+30 mV when temperature is near 37 °C.",
       "+132 mV",
       "0 mV",
@@ -58,7 +54,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Nernst Equation",
     question: "At 37°C (z=2), [Ca²⁺]i = 0.05 µM and [Ca²⁺]o = 1.5 mM. E_Ca is closest to:",
     options: [
-
       "+30 mV when temperature is near 37 °C.",
       "−70 mV when temperature is near 37 °C.",
       "0 mV",
@@ -71,7 +66,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Goldman Equation",
     question: "With standard K⁺/Na⁺ concentrations and P_K:P_Na = 1:0.05, resting V_m is best described as:",
     options: [
-
       "Near −65 mV",
       "At E_K (≈ −90 mV) exactly",
       "Exactly 0 mV",
@@ -84,7 +78,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Goldman Equation",
     question: "With standard K⁺/Na⁺ concentrations and P_Cl equals P_K with E_Cl negative to rest, resting V_m is best described as:",
     options: [
-
       "V_m undefined",
       "V_m pulled toward E_Cl if P_Cl high",
       "V_m equals E_Na always",
@@ -97,7 +90,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Cable Properties",
     question: "Passive cable: Doubling R_m with R_i fixed. The expected effect is:",
     options: [
-
       "τ equals λ when temperature is near 37 °C.",
       "λ halves",
       "λ unchanged during normal resting permeability conditions.",
@@ -110,7 +102,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Cable Properties",
     question: "Passive cable: Doubling C_m with fixed g_leak. The expected effect is:",
     options: [
-
       "No effect on τ when temperature is near 37 °C.",
       "τ halves",
       "λ doubles always",
@@ -123,7 +114,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Cable Properties",
     question: "Passive cable: Increased axial resistance R_a. The expected effect is:",
     options: [
-
       "λ increases",
       "Only τ changes",
       "λ decreases",
@@ -136,7 +126,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Application of TTX on squid giant axon produces which outcome?",
     options: [
-
       "Blocks voltage-gated Na⁺; no action potentials",
       "Depolarizes to +60 mV in a typical mammalian central neuron.",
       "Blocks K⁺ only when temperature is near 37 °C.",
@@ -149,7 +138,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Application of TEA during an action potential produces which outcome?",
     options: [
-
       "Slows repolarization; broadens spike",
       "Hyperpolarizes to E_K instantly during normal resting permeability conditions.",
       "Blocks Na⁺ inactivation during normal resting permeability conditions.",
@@ -162,7 +150,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Application of Ouabain on a neuron produces which outcome?",
     options: [
-
       "Instant hyperpolarization in a typical mammalian central neuron.",
       "Selective GABA block",
       "Blocks synaptic vesicle fusion when temperature is near 37 °C.",
@@ -175,7 +162,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Application of 4-AP (K⁺ channel blocker) produces which outcome?",
     options: [
-
       "Eliminates EPSPs",
       "Mimics myelin in a typical mammalian central neuron.",
       "Blocks Na⁺ entry",
@@ -188,7 +174,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Synaptic Transmission",
     question: "In AMPA receptor activation at rest Mg²⁺, the best description is:",
     options: [
-
       "Requires presynaptic effect exclusively in this context",
       "Ionotropic Cl⁻ influx in a typical mammalian central neuron.",
       "Fast EPSC; NMDA still blocked by Mg²⁺",
@@ -201,7 +186,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Synaptic Transmission",
     question: "In NMDA receptor with strong depolarization, the best description is:",
     options: [
-
       "Always closed at rest in a typical mammalian central neuron.",
       "Requires metabotropic exclusively in this context",
       "Blocks all LTP when temperature is near 37 °C.",
@@ -214,11 +198,10 @@ const PINNACLE_MEGA_POOL = [
     topic: "Synaptic Transmission",
     question: "In GABA<sub>A</sub> at rest when E_Cl ≈ −70 mV, the best description is:",
     options: [
-
       "Cl⁻ influx; inhibition/shunting",
       "Always excitatory in a typical mammalian central neuron.",
       "Requires presynaptic exclusively in this context",
-      "",
+      "Light raises cGMP and keeps CNG channels open",
     ],
     correct: 0,
     explanation: "Cl⁻ influx; inhibition/shunting",
@@ -227,7 +210,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Synaptic Transmission",
     question: "In GABA<sub>B</sub> receptor activation, the best description is:",
     options: [
-
       "G-protein; often opens K⁺ / closes Ca²⁺",
       "Requires in retina exclusively in this context",
       "Fast ionotropic Cl⁻ during normal resting permeability conditions.",
@@ -240,7 +222,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Synaptic Transmission",
     question: "In Nicotinic ACh at NMJ, the best description is:",
     options: [
-
       "Fast cationic EPSP leading to endplate potential",
       "Glutamate release only when temperature is near 37 °C.",
       "Metabotropic only in a typical mammalian central neuron.",
@@ -253,7 +234,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Synaptic Transmission",
     question: "In Botulinum toxin at motor synapse, the best description is:",
     options: [
-
       "Postsynaptic receptor block during normal resting permeability conditions.",
       "Myelin damage in a typical mammalian central neuron.",
       "Cleaves SNAREs; blocks vesicle fusion",
@@ -266,7 +246,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Synaptic Transmission",
     question: "In α-Latrotoxin (excess release), the best description is:",
     options: [
-
       "Requires inhibits GABA exclusively in this context",
       "Blocks Ca²⁺ channels",
       "Massive vesicle release; depletion possible",
@@ -279,10 +258,9 @@ const PINNACLE_MEGA_POOL = [
     topic: "Synaptic Transmission",
     question: "In Strengthening an synapse via LTP protocol, the best description is:",
     options: [
-
       "Requires in photoreceptors exclusively in this context",
       "Requires presynaptic Na⁺ increase exclusively in this context",
-      "",
+      "Light raises cGMP and keeps CNG channels open",
       "Postsynaptic Ca²⁺ via NMDA + AMPA cooperation",
     ],
     correct: 3,
@@ -292,7 +270,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Synaptic Integration",
     question: "Two EPSPs 5 ms apart at one synapse:",
     options: [
-
       "Requires inhibition possible exclusively in this context",
       "No summation ever in a typical mammalian central neuron.",
       "Temporal summation if within τ",
@@ -305,7 +282,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Synaptic Integration",
     question: "EPSP at dendrite vs soma (same amplitude locally):",
     options: [
-
       "Distal EPSP smaller at soma (cable filter)",
       "Distal always larger",
       "Identical at AIS always during normal resting permeability conditions.",
@@ -318,7 +294,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Synaptic Integration",
     question: "Shunting inhibition during an EPSP:",
     options: [
-
       "Increased EPSP always",
       "Reduced EPSP amplitude via increased conductance",
       "Only hyperpolarization without conductance change",
@@ -331,7 +306,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Clinical Neuroanatomy",
     question: "Lesion: Left optic nerve transection. Expected deficit:",
     options: [
-
       "Blindness in left eye",
       "Bitemporal hemianopia",
       "Right homonymous hemianopia",
@@ -344,7 +318,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Clinical Neuroanatomy",
     question: "Lesion: Optic chiasm midline compression. Expected deficit:",
     options: [
-
       "Right homonymous hemianopia",
       "Bitemporal hemianopia",
       "Macular sparing only",
@@ -357,7 +330,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Clinical Neuroanatomy",
     question: "Lesion: Right optic tract lesion. Expected deficit:",
     options: [
-
       "Ipsilateral quadrantanopia",
       "Right monocular blindness",
       "Bitemporal loss",
@@ -370,7 +342,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Clinical Neuroanatomy",
     question: "Lesion: Left Meyer's loop (temporal lobe) damage. Expected deficit:",
     options: [
-
       "Bitemporal hemianopia",
       "Left superior quadrantanopia",
       "Right monocular blindness",
@@ -383,7 +354,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Clinical Neuroanatomy",
     question: "Lesion: Right occipital lobe (V1) lesion. Expected deficit:",
     options: [
-
       "Pure alexia only",
       "Right monocular blindness",
       "Left homonymous hemianopia",
@@ -396,7 +366,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Clinical Neuroanatomy",
     question: "Lesion: Complete left medial lemniscus in medulla. Expected deficit:",
     options: [
-
       "Contralateral loss of touch/proprioception",
       "Bilateral blindness",
       "Ipsilateral face pain loss",
@@ -409,7 +378,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Clinical Neuroanatomy",
     question: "Lesion: Left spinothalamic tract at T8. Expected deficit:",
     options: [
-
       "Deafness",
       "Ipsilateral proprioception loss",
       "Bilateral UMN weakness only",
@@ -422,7 +390,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Clinical Neuroanatomy",
     question: "Lesion: Brown-Séquard hemisection at T10 (right). Expected deficit:",
     options: [
-
       "Ipsilateral UMN weakness + DCML loss",
       "Pure cerebellar ataxia",
       "Requires autonomic loss exclusively in this context",
@@ -435,7 +402,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Clinical Neuroanatomy",
     question: "Lesion: Anterior spinal artery infarct. Expected deficit:",
     options: [
-
       "Isolated proprioception loss only",
       "Pure ataxia",
       "Requires autonomic symptoms exclusively in this context",
@@ -448,7 +414,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Clinical Neuroanatomy",
     question: "Lesion: Right cerebellar hemisphere lesion. Expected deficit:",
     options: [
-
       "Contralateral hemiparesis",
       "Bitemporal hemianopia",
       "Ipsilateral limb ataxia (planning/timing)",
@@ -461,7 +426,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Clinical Neuroanatomy",
     question: "Lesion: Cerebellar vermis lesion. Expected deficit:",
     options: [
-
       "Truncal/gait ataxia",
       "Ipsilateral arm intention tremor only",
       "Homonymous hemianopia",
@@ -474,7 +438,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Clinical Neuroanatomy",
     question: "Lesion: Bilateral hippocampal damage. Expected deficit:",
     options: [
-
       "Deafness",
       "Anterograde declarative memory impairment",
       "Color blindness",
@@ -487,7 +450,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Clinical Neuroanatomy",
     question: "Lesion: Substantia nigra dopamine loss. Expected deficit:",
     options: [
-
       "Pure sensory neglect",
       "Bradykinesia and rigidity",
       "Hyperreflexia only",
@@ -500,7 +462,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Clinical Neuroanatomy",
     question: "Lesion: Left Broca area damage. Expected deficit:",
     options: [
-
       "Pure alexia",
       "Nonfluent aphasia; comprehension relatively spared",
       "Fluent nonsense speech",
@@ -513,7 +474,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Clinical Neuroanatomy",
     question: "Lesion: Left Wernicke area damage. Expected deficit:",
     options: [
-
       "Deafness",
       "Pure motor neglect",
       "Nonfluent speech",
@@ -526,7 +486,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Clinical Neuroanatomy",
     question: "Lesion: MLF lesion (left). Expected deficit:",
     options: [
-
       "Monocular blindness",
       "Internuclear ophthalmoplegia",
       "Facial paralysis only",
@@ -539,7 +498,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Clinical Neuroanatomy",
     question: "Lesion: Right CN VI nucleus lesion. Expected deficit:",
     options: [
-
       "Optic chiasm syndrome",
       "Pure aphasia",
       "Horizontal gaze palsy toward lesion side / ipsilateral abduction deficit",
@@ -552,7 +510,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Clinical Neuroanatomy",
     question: "Lesion: Unilateral vestibular nerve lesion. Expected deficit:",
     options: [
-
       "Vertigo and imbalance toward lesion",
       "Homonymous hemianopia",
       "Spastic paralysis only",
@@ -565,7 +522,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Clinical Neuroanatomy",
     question: "Lesion: Left lateral pontine syndrome (AICA). Expected deficit:",
     options: [
-
       "Ipsilateral face pain/temp + cerebellar signs",
       "Pure motor weakness only",
       "Bitemporal hemianopia",
@@ -578,7 +534,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Photoreceptor in darkness:",
     options: [
-
       "Spiking at 100 Hz in a typical mammalian central neuron.",
       "Releases ACh only in a typical mammalian central neuron.",
       "Hyperpolarized like bipolar ON cells always during normal resting permeability conditions.",
@@ -591,7 +546,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Hair cell stereocilia deflection toward tallest row:",
     options: [
-
       "Complete silence always during normal resting permeability conditions.",
       "Increased firing rate in auditory nerve",
       "Requires na⁺ pump stops exclusively in this context",
@@ -604,7 +558,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Olfactory receptor binding odorant:",
     options: [
-
       "Requires electrical synapse exclusively in this context",
       "Requires in cerebellum exclusively in this context",
       "G-protein cascade → cAMP → channel opening",
@@ -617,7 +570,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Pacinian corpuscle high-frequency vibration:",
     options: [
-
       "Slow adaptation only",
       "Requires in retina exclusively in this context",
       "Requires nociceptor response exclusively in this context",
@@ -630,7 +582,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Methods",
     question: "Voltage clamp at −40 mV with TTX and K⁺ channels available:",
     options: [
-
       "Mostly K⁺ current isolated if Na⁺ blocked",
       "Photoreceptor current only when temperature is near 37 °C.",
       "Requires capacitive current forever exclusively in this context",
@@ -643,7 +594,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Methods",
     question: "Current clamp with brief hyperpolarizing step:",
     options: [
-
       "Subthreshold voltage change without spikes",
       "Requires cochlear amplification exclusively in this context",
       "Requires synaptic vesicle fusion exclusively in this context",
@@ -656,7 +606,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Methods",
     question: "Dual whole-cell recording of connected cells:",
     options: [
-
       "Can measure gap junction coupling or monosynaptic latency",
       "Requires measures bone density exclusively in this context",
       "Requires measures myelin thickness exclusively in this context",
@@ -669,7 +618,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Action Potentials",
     question: "Inactivation of Na⁺ channels during a long train:",
     options: [
-
       "Spike amplitude may decline; frequency adaptation",
       "Resting potential becomes +60 mV",
       "Requires photoreceptors fire exclusively in this context",
@@ -682,7 +630,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Action Potentials",
     question: "Hyperpolarized resting V_m near E_K:",
     options: [
-
       "More Na⁺ channels always open in a typical mammalian central neuron.",
       "Requires k⁺ channels disappear exclusively in this context",
       "Fewer Na⁺ channels available from closed state",
@@ -695,7 +642,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Action Potentials",
     question: "Ectopic spike initiation in demyelinated axon:",
     options: [
-
       "Requires in dendrites always exclusively in this context",
       "Requires in glomeruli exclusively in this context",
       "Impossible without nodes",
@@ -708,7 +654,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Action Potentials",
     question: "Antidromic vs orthodromic propagation:",
     options: [
-
       "Same biophysics; direction follows refractory tail",
       "Orthodromic only in retina when temperature is near 37 °C.",
       "Antidromic",
@@ -721,7 +666,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Action Potentials",
     question: "Absolute refractory period primarily reflects:",
     options: [
-
       "Requires photopigment recovery exclusively in this context",
       "Na⁺ inactivation preventing immediate re-firing",
       "Requires synaptic depression exclusively in this context",
@@ -734,7 +678,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Action Potentials",
     question: "Relative refractory period:",
     options: [
-
       "Requires muscle spindle stretch exclusively in this context",
       "No stimulus can fire cell in a typical mammalian central neuron.",
       "Requires cl⁻ influx exclusively in this context",
@@ -747,7 +690,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Action Potentials",
     question: "Anode break excitation after hyperpolarization:",
     options: [
-
       "Requires gABA release exclusively in this context",
       "Requires cochlear tuning exclusively in this context",
       "Permanent silence in a typical mammalian central neuron.",
@@ -760,10 +702,9 @@ const PINNACLE_MEGA_POOL = [
     topic: "Action Potentials",
     question: "Threshold is best defined as:",
     options: [
-
       "Voltage where net inward current triggers regenerative Na⁺ activation",
       "Fixed at 0 mV always",
-      "",
+      "Rod outer segments generate all-or-none spikes in darkness",
       "Same as E_K always when temperature is near 37 °C. during normal resting permeability conditions.",
     ],
     correct: 0,
@@ -773,7 +714,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Action Potentials",
     question: "Safety factor for propagation in myelinated axon:",
     options: [
-
       "Myelin blocks all current in a typical mammalian central neuron.",
       "Requires dendrites propagate exclusively in this context",
       "Exactly one node required always",
@@ -786,7 +726,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Action Potentials",
     question: "Temperature increase on squid axon:",
     options: [
-
       "Resting potential fixed at 0 mV during normal resting permeability conditions.",
       "Kinetics faster; shorter AP width often",
       "Requires photoreceptors change exclusively in this context",
@@ -799,8 +738,7 @@ const PINNACLE_MEGA_POOL = [
     topic: "Action Potentials",
     question: "Local anesthetic block of small vs large fibers:",
     options: [
-
-      "",
+      "Dopamine from amacrine cells opens CNG channels in the dark",
       "Large fibers always blocked first in a typical mammalian central neuron.",
       "Small myelinated/C fibers often blocked at lower exposure (use-dependent)",
       "No use dependence in a typical mammalian central neuron. when temperature is near 37 °C.",
@@ -812,7 +750,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Action Potentials",
     question: "Accommodation during slow depolarizing ramp:",
     options: [
-
       "Requires affects cochlea basilar membrane exclusively in this context",
       "Requires affects glomeruli exclusively in this context",
       "Inactivation reduces firing despite depolarization",
@@ -825,7 +762,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Action Potentials",
     question: "Post-tetanic potentiation (short-term):",
     options: [
-
       "Requires gap junction opening exclusively in this context",
       "Postsynaptic Na⁺ deletion in a typical mammalian central neuron.",
       "Presynaptic Ca²⁺ buildup increases release briefly",
@@ -838,7 +774,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Action Potentials",
     question: "Synaptic fatigue after high-frequency stimulation:",
     options: [
-
       "Depletion of readily releasable vesicles",
       "Requires myelin loss exclusively in this context",
       "Unlimited vesicle supply always during normal resting permeability conditions.",
@@ -851,7 +786,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Action Potentials",
     question: "Dendritic Na⁺ spike in some pyramidal neurons:",
     options: [
-
       "Can boost distal signal toward soma",
       "Never occurs in CNS during normal resting permeability conditions.",
       "Requires in olfactory bulb exclusively in this context",
@@ -864,7 +798,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Action Potentials",
     question: "Backpropagating action potential into dendrites:",
     options: [
-
       "Blocked by myelin on dendrites when temperature is near 37 °C.",
       "Requires in muscle spindles exclusively in this context",
       "Requires in photoreceptors exclusively in this context",
@@ -877,7 +810,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Action Potentials",
     question: "Ephaptic coupling between unmyelinated fibers:",
     options: [
-
       "Requires in retina exclusively exclusively in this context",
       "Requires in cerebellum exclusively exclusively in this context",
       "Extracellular fields can influence neighbors weakly",
@@ -890,7 +822,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Bicuculline applied to a CNS slice blocks which effect?",
     options: [
-
       "Myelin compaction",
       "GABA_A-mediated fast IPSPs",
       "Voltage-gated Na⁺ inactivation",
@@ -903,7 +834,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Picrotoxin and bicuculline both disrupt inhibition primarily by targeting:",
     options: [
-
       "Glutamate transporters when temperature is near 37 °C.",
       "GABA_A receptor–channel function",
       "Voltage-gated Ca²⁺ channels during normal resting permeability conditions.",
@@ -916,7 +846,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Strychnine causes convulsions mainly by blocking:",
     options: [
-
       "Glycine receptors in spinal cord",
       "Dopamine reuptake transporters when temperature is near 37 °C.",
       "Muscarinic receptors in heart in a typical mammalian central neuron.",
@@ -929,7 +858,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Benzodiazepines enhance GABAergic inhibition by:",
     options: [
-
       "Inactivating Na⁺ channels irreversibly when temperature is near 37 °C.",
       "Increasing GABA_A channel open frequency (allosteric)",
       "Opening KCNQ channels directly when temperature is near 37 °C.",
@@ -942,7 +870,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Barbiturates at anesthetic doses differ from benzodiazepines because they can:",
     options: [
-
       "Selectively block NMDA only at all doses",
       "Activate dopamine D1 receptors when temperature is near 37 °C.",
       "Prolong GABA_A channel open time directly at high dose",
@@ -955,7 +882,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Atropine blocks muscarinic receptors; expected peripheral effect includes:",
     options: [
-
       "Bradycardia and miosis when temperature is near 37 °C.",
       "Tachycardia and reduced salivation",
       "Bronchoconstriction during normal resting permeability conditions.",
@@ -968,7 +894,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Neostigmine reverses neuromuscular blockade by:",
     options: [
-
       "Blocking nicotinic receptors",
       "Opening voltage-gated K⁺ channels in a typical mammalian central neuron.",
       "Cleaving SNARE proteins during normal resting permeability conditions.",
@@ -981,7 +906,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Succinylcholine produces initial fasciculations because it:",
     options: [
-
       "Hyperpolarizes muscle to E_K",
       "Depolarizes the motor endplate (nicotinic agonist)",
       "Inhibits ryanodine receptors only in a typical mammalian central neuron.",
@@ -994,7 +918,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Dantrolene treats malignant hyperthermia by reducing:",
     options: [
-
       "Central dopamine synthesis when temperature is near 37 °C.",
       "Na⁺ channel density in neurons when temperature is near 37 °C.",
       "Ca²⁺ release from sarcoplasmic reticulum in muscle",
@@ -1007,7 +930,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Reserpine depletes monoamine stores by inhibiting:",
     options: [
-
       "COMT in synaptic cleft when temperature is near 37 °C.",
       "Dopamine β-hydroxylase only during normal resting permeability conditions.",
       "MAO-A in mitochondria only when temperature is near 37 °C.",
@@ -1020,7 +942,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Amphetamine increases synaptic catecholamines primarily by:",
     options: [
-
       "Reversing DAT/NET transporters and promoting release",
       "Blocking all voltage-gated Na⁺ channels during normal resting permeability conditions.",
       "Opening GABA_A receptors",
@@ -1033,7 +954,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Cocaine's acute psychoactive motor effect is linked most to:",
     options: [
-
       "GABA_B activation in striatum in a typical mammalian central neuron.",
       "Blockade of dopamine reuptake (DAT)",
       "Permanent Na⁺ channel destruction",
@@ -1046,7 +966,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Haloperidol treats psychosis mainly through:",
     options: [
-
       "D2 dopamine receptor antagonism",
       "Nicotinic agonism in cortex during normal resting permeability conditions.",
       "Glycine transporter blockade",
@@ -1059,7 +978,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "L-DOPA helps Parkinsonism because it:",
     options: [
-
       "Blocks subthalamic nucleus firing permanently in a typical mammalian central neuron.",
       "Directly activates all serotonin receptors when temperature is near 37 °C.",
       "Replaces lost acetylcholine at NMJ when temperature is near 37 °C.",
@@ -1072,7 +990,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Carbidopa is co-administered with L-DOPA to:",
     options: [
-
       "Inhibit peripheral DOPA decarboxylase",
       "Cross the BBB faster than L-DOPA",
       "Open K_ATP channels in pancreas during normal resting permeability conditions.",
@@ -1085,7 +1002,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Selegiline (low dose) can augment L-DOPA by inhibiting:",
     options: [
-
       "Acetylcholinesterase at NMJ during normal resting permeability conditions.",
       "GABA transaminase in a typical mammalian central neuron.",
       "VMAT2 in all neurons",
@@ -1098,7 +1014,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "SSRIs increase serotonin signaling chiefly by:",
     options: [
-
       "Opening 5-HT3 channels directly",
       "Blocking SERT reuptake",
       "Blocking all dopamine receptors",
@@ -1111,7 +1026,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Ketamine's rapid antidepressant actions are often attributed to:",
     options: [
-
       "Requires mu-opioid receptor agonism exclusively in this context",
       "Permanent GABA_A blockade in a typical mammalian central neuron.",
       "Irreversible MAO inhibition during normal resting permeability conditions.",
@@ -1124,7 +1038,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Morphine analgesia in the spinal dorsal horn involves:",
     options: [
-
       "Blocking all K⁺ channels in DRG during normal resting permeability conditions.",
       "AMPA receptor potentiation on nociceptors in a typical mammalian central neuron.",
       "Mu-opioid receptor–mediated inhibition of pain transmission",
@@ -1137,7 +1050,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Naloxone reverses opioid overdose by:",
     options: [
-
       "Inhibiting COX enzymes when temperature is near 37 °C.",
       "Activating GABA_B in VTA",
       "Blocking Na⁺ channels like TTX when temperature is near 37 °C.",
@@ -1150,7 +1062,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Caffeine opposes sleepiness largely by antagonizing:",
     options: [
-
       "Nicotinic receptors at NMJ",
       "Adenosine A1/A2A receptors",
       "Voltage-gated Ca²⁺ channels in SNARE release",
@@ -1163,7 +1074,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Ethanol potentiates GABA_A and inhibits NMDA; at high dose this tends to:",
     options: [
-
       "Cause generalized seizures via NMDA potentiation",
       "Depress CNS function (sedation, ataxia)",
       "Selectively enhance dopamine only in cortex",
@@ -1176,7 +1086,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Phenylephrine as an alpha-1 agonist typically causes:",
     options: [
-
       "Hyperpolarization of all neurons to E_K during normal resting permeability conditions.",
       "Bronchodilation via β2 receptors",
       "Bradycardia via M2 receptors",
@@ -1189,7 +1098,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Propranolol reduces tremor and tachycardia by blocking:",
     options: [
-
       "Alpha-1 receptors exclusively",
       "D2 receptors in striatum",
       "Beta-adrenergic receptors",
@@ -1202,7 +1110,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Nifedipine lowers blood pressure primarily by blocking:",
     options: [
-
       "Kir channels in glia only in a typical mammalian central neuron.",
       "T-type Ca²⁺ in thalamus only",
       "L-type voltage-gated Ca²⁺ channels in vascular smooth muscle",
@@ -1215,7 +1122,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Verapamil differs from nifedipine partly because verapamil also:",
     options: [
-
       "Blocks all glutamate receptors",
       "Activates VMAT",
       "Slows AV conduction",
@@ -1228,7 +1134,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Zolpidem aids sleep mainly through:",
     options: [
-
       "Irreversible NMDA blockade when temperature is near 37 °C.",
       "Serotonin reuptake inhibition in a typical mammalian central neuron.",
       "GABA_A α1-subunit–preferring positive modulation",
@@ -1241,7 +1146,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Memantine in Alzheimer's disease is thought to act by:",
     options: [
-
       "Depleting acetylcholine stores when temperature is near 37 °C.",
       "Blocking all AMPA receptors during normal resting permeability conditions.",
       "Opening L-type Ca²⁺ channels",
@@ -1254,7 +1158,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Donepezil improves cognition in Alzheimer's by inhibiting:",
     options: [
-
       "Butyrylcholinesterase only in muscle",
       "VMAT2",
       "Acetylcholinesterase",
@@ -1267,7 +1170,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Riluzole in ALS may prolong survival partly by reducing:",
     options: [
-
       "Myelin basic protein expression",
       "Cochlear outer hair cell motility",
       "Glutamate excitotoxicity",
@@ -1280,7 +1182,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Tetrabenazine reduces chorea in Huntington's by depleting:",
     options: [
-
       "Monoamines via VMAT2 inhibition",
       "GABA via GAD blockade",
       "Glutamate via EAAT overactivation",
@@ -1293,7 +1194,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Levetiracetam binds SV2A; this antiseizure action likely alters:",
     options: [
-
       "Muscarinic M1 exclusively in heart",
       "Synaptic vesicle release probability",
       "GABA_A benzodiazepine site only during normal resting permeability conditions.",
@@ -1306,7 +1206,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Carbamazepine treats trigeminal neuralgia partly by:",
     options: [
-
       "Stabilizing inactivated Na⁺ channels (use-dependent block)",
       "Opening KCNQ channels irreversibly when temperature is near 37 °C.",
       "Blocking all Ca²⁺ channels equally when temperature is near 37 °C.",
@@ -1319,7 +1218,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Phenytoin reduces seizure spread primarily through:",
     options: [
-
       "Permanent NMDA removal when temperature is near 37 °C.",
       "GABA transporter inhibition only",
       "Na⁺ channel block limiting high-frequency firing",
@@ -1332,7 +1230,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Valproate has multiple mechanisms including:",
     options: [
-
       "Increased GABA tone and Na⁺/Ca²⁺ channel effects",
       "Requires dopamine reuptake blockade exclusively in this context",
       "Irreversible VMAT blockade only during normal resting permeability conditions.",
@@ -1345,7 +1242,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Baclofen reduces spasticity mainly by activating:",
     options: [
-
       "GABA_B receptors (Gi/o) in spinal cord",
       "AMPA on Ia afferents exclusively",
       "Nicotinic receptors on interneurons",
@@ -1358,7 +1254,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Gabapentinoids bind alpha-2-delta subunits of:",
     options: [
-
       "Ryanodine receptor when temperature is near 37 °C.",
       "Voltage-gated Ca²⁺ channels (modulating release)",
       "D2 receptor during normal resting permeability conditions.",
@@ -1371,7 +1266,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Local anesthetic use-dependence means block is stronger when:",
     options: [
-
       "Channels open frequently during firing",
       "Only glial K⁺ channels open",
       "Myelin thickness doubles",
@@ -1384,7 +1278,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Capsaicin desensitization reduces pain by:",
     options: [
-
       "Overactivating TRPV1 leading to nociceptor defunctionalization",
       "Blocking all Na⁺ channels permanently in a typical mammalian central neuron.",
       "Opening GABA_A on muscle spindles in a typical mammalian central neuron.",
@@ -1397,7 +1290,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Tetrodotoxin and saxitoxin both block:",
     options: [
-
       "GABA transporters",
       "Voltage-gated Na⁺ channels",
       "Nicotinic receptors at NMJ only",
@@ -1410,7 +1302,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Apamin blocks SK channels; expected neuronal effect:",
     options: [
-
       "Increased excitability and altered spike timing",
       "Requires photoreceptor hyperpolarization exclusively in this context",
       "Requires myelination loss exclusively in this context",
@@ -1423,7 +1314,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "D-AP5 blocks NMDA receptors; pairing-induced hippocampal LTP is:",
     options: [
-
       "Enhanced regardless of voltage when temperature is near 37 °C.",
       "Blocked only in cerebellum when temperature is near 37 °C.",
       "Impaired when NMDA-dependent Ca²⁺ influx is required",
@@ -1436,7 +1326,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "CNQX blocks AMPA/kainate; fast EPSCs at many glutamatergic synapses:",
     options: [
-
       "Are unchanged because NMDA carries all fast current",
       "Are greatly reduced or abolished",
       "Depend on gap junctions only",
@@ -1449,7 +1338,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Diazoxide opens K_ATP channels in beta cells, causing:",
     options: [
-
       "Requires glucagon release exclusively in this context",
       "Depolarization and insulin surge",
       "Permanent Na⁺ channel opening in a typical mammalian central neuron.",
@@ -1462,7 +1350,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Pharmacology",
     question: "Sulfonylureas stimulate insulin release by:",
     options: [
-
       "Opening all GABA_A channels in pancreas during normal resting permeability conditions.",
       "Activating D2 receptors in liver",
       "Closing K_ATP → beta-cell depolarization → Ca²⁺ influx",
@@ -1475,7 +1362,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "In the direct pathway of basal ganglia, striatal D1 MSNs tend to:",
     options: [
-
       "Hyperpolarize motor cortex directly",
       "Excite STN to increase GPi output in a typical mammalian central neuron.",
       "Block all cerebellar output during normal resting permeability conditions.",
@@ -1488,7 +1374,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "The indirect pathway (D2 MSNs) promotes motor suppression by:",
     options: [
-
       "Eliminating dopamine release permanently",
       "Directly opening Na⁺ channels in muscle during normal resting permeability conditions.",
       "Disinhibiting STN → increased GPi/SNr inhibition of thalamus",
@@ -1501,7 +1386,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "Dopamine loss in Parkinson's shifts basal ganglia balance toward:",
     options: [
-
       "Pure cerebellar ataxia only",
       "Complete loss of thalamus in a typical mammalian central neuron.",
       "Enhanced direct pathway only",
@@ -1514,7 +1398,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "STN deep brain stimulation often improves Parkinsonian symptoms by:",
     options: [
-
       "Replacing lost dopamine in substantia nigra during normal resting permeability conditions.",
       "Blocking all sensory input to M1",
       "Myelinating corticospinal axons during normal resting permeability conditions.",
@@ -1527,7 +1410,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "Climbing fiber input to Purkinje cells primarily:",
     options: [
-
       "Carries proprioception from muscle spindles only",
       "Is the sole driver of simple spikes always when temperature is near 37 °C.",
       "Releases dopamine in deep nuclei",
@@ -1540,7 +1422,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "Mossy fiber input to cerebellum carries:",
     options: [
-
       "Requires retinal ON/OFF channels exclusively in this context",
       "Diverse sensory and motor-related information to granule cells",
       "Requires pain from spinothalamic tract exclusively in this context",
@@ -1553,7 +1434,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "Purkinje cell simple spikes are driven mainly by:",
     options: [
-
       "Parallel fiber synaptic input",
       "Dopamine from VTA only",
       "Direct monosynaptic Ia afferents only",
@@ -1566,7 +1446,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "Cerebellar deep nuclei are the primary output because:",
     options: [
-
       "Climbing fibers bypass Purkinje cells entirely when temperature is near 37 °C.",
       "Vestibular nuclei have no connection",
       "Purkinje cells inhibit deep nuclei, gating cerebellar output",
@@ -1579,7 +1458,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "The trisynaptic hippocampal circuit order is:",
     options: [
-
       "CA1 → dentate → subiculum → thalamus only",
       "Entorhinal cortex → dentate gyrus → CA3 → CA1",
       "Cerebellum → M1 → CA3 in a typical mammalian central neuron.",
@@ -1592,7 +1470,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "Place cells in CA1 fire maximally when:",
     options: [
-
       "Muscle spindle is silent only",
       "Basilar membrane is at cochlear apex only",
       "The animal occupies a specific location",
@@ -1605,7 +1482,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "Grid cells in entorhinal cortex show:",
     options: [
-
       "Periodic firing fields tiling space hexagonally",
       "Orientation tuning like V1 simple cells only",
       "Pure frequency tuning like A1 only when temperature is near 37 °C.",
@@ -1618,7 +1494,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "LGN relay cells carry:",
     options: [
-
       "Requires olfactory glomerular maps exclusively in this context",
       "Visual information to primary visual cortex",
       "Requires nMJ endplate potentials exclusively in this context",
@@ -1631,7 +1506,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "Thalamic reticular nucleus (TRN) provides:",
     options: [
-
       "Myelin to optic nerve in a typical mammalian central neuron.",
       "Direct dopamine to striatum during normal resting permeability conditions.",
       "Excitatory drive to ventral horn only in a typical mammalian central neuron.",
@@ -1644,7 +1518,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "Corticothalamic feedback to sensory thalamus can:",
     options: [
-
       "Replace all peripheral transduction during normal resting permeability conditions.",
       "Eliminate need for Na⁺ channels during normal resting permeability conditions.",
       "Modulate relay gain and receptive fields",
@@ -1657,7 +1530,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "Superior colliculus deep layers are important for:",
     options: [
-
       "Orienting eye/head movements toward stimuli",
       "Glomerular odor discrimination only during normal resting permeability conditions.",
       "Cochlear amplification only during normal resting permeability conditions.",
@@ -1670,7 +1542,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "Default mode network is most active during:",
     options: [
-
       "Maximal stretch reflex activation",
       "Pure photoreceptor transduction during normal resting permeability conditions.",
       "NMJ blockade",
@@ -1683,7 +1554,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "Layer 5 pyramidal neurons often:",
     options: [
-
       "Project subcortically and intracortically",
       "Fire only at 200 Hz without adaptation",
       "Are the only cells with gap junctions",
@@ -1696,7 +1566,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "Parvalbumin interneurons in cortex typically:",
     options: [
-
       "Are identical to Purkinje cells during normal resting permeability conditions.",
       "Carry proprioception to DCML",
       "Release glutamate at NMJ",
@@ -1709,7 +1578,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "VTA → nucleus accumbens dopamine mediates:",
     options: [
-
       "Reward prediction and motivational salience",
       "Cochlear tuning only",
       "Purely conjugate eye movements only during normal resting permeability conditions.",
@@ -1722,7 +1590,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "Hypothalamic PVN neurons:",
     options: [
-
       "Release oxytocin/vasopressin and regulate autonomic/endocrine function",
       "Generate otoacoustic emissions when temperature is near 37 °C. during normal resting permeability conditions.",
       "Are sole source of NMJ acetylcholine",
@@ -1735,7 +1602,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "SCN circadian pacemaker synchronizes via:",
     options: [
-
       "Requires olfactory bulb oscillations exclusively in this context",
       "Retinohypothalamic light input and internal gene loops",
       "Direct muscle spindle afferents during normal resting permeability conditions.",
@@ -1748,7 +1614,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "Amygdala lateral nucleus is critical for:",
     options: [
-
       "Generating AIS spikes exclusively in a typical mammalian central neuron.",
       "Associating sensory cues with emotional significance",
       "Motor unit recruitment order only",
@@ -1761,7 +1626,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "Cerebellar flocculus is involved in:",
     options: [
-
       "Pain crossing in cord only",
       "VOR adaptation",
       "NMJ ACh packaging only",
@@ -1774,7 +1638,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "Inferior olive climbing fibers are linked to:",
     options: [
-
       "Timing errors and cerebellar motor learning",
       "Photoreceptor bleaching only",
       "Requires glomerular OR binding exclusively in this context",
@@ -1787,7 +1650,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "Red nucleus participates in:",
     options: [
-
       "Rubrospinal influence on limb flexor tone",
       "Purely visual stereopsis only",
       "Adult hippocampal neurogenesis always",
@@ -1800,7 +1662,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "Raphe serotonergic projections modulate:",
     options: [
-
       "Mood, sleep, and sensory gain broadly",
       "Requires rod disk shedding exclusively in this context",
       "Requires outer hair cell length exclusively in this context",
@@ -1813,7 +1674,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "Locus coeruleus norepinephrine increases:",
     options: [
-
       "Only photoreceptor dark current elimination",
       "Arousal and signal-to-noise in many circuits",
       "Only glycine at NMJ",
@@ -1826,7 +1686,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "Basal forebrain cholinergic neurons promote:",
     options: [
-
       "Requires spinal reflex reversal exclusively in this context",
       "Cochlear map inversion when temperature is near 37 °C.",
       "Cortical arousal and attention",
@@ -1839,7 +1698,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "Internal capsule corticospinal lesion causes:",
     options: [
-
       "Pure Wernicke aphasia always",
       "Bitemporal hemianopia",
       "Ipsilateral proprioception loss only",
@@ -1852,7 +1710,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "DCML pathway carries:",
     options: [
-
       "Fine touch, vibration, and proprioception to S1",
       "Requires nMJ EPSPs exclusively in this context",
       "Pain and temperature only in a typical mammalian central neuron.",
@@ -1865,7 +1722,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "Spinoreticular tract contributes to:",
     options: [
-
       "Arousal and affective aspects of pain",
       "Fine two-point discrimination in a typical mammalian central neuron.",
       "VOR slow phase only during normal resting permeability conditions.",
@@ -1878,7 +1734,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "Cuneate vs gracile nuclei divide:",
     options: [
-
       "High vs low sound frequency only",
       "Left vs right visual hemifields",
       "D1 vs D2 receptors when temperature is near 37 °C.",
@@ -1891,7 +1746,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "Trigeminal lemniscus carries:",
     options: [
-
       "Ia afferents to motor neurons only",
       "Olfactory axons to cortex directly when temperature is near 37 °C.",
       "Retinal axons to LGN",
@@ -1904,7 +1758,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "Hypoglossal nucleus damage causes:",
     options: [
-
       "Pure ataxia without weakness",
       "Contralateral hemianopia",
       "Deafness",
@@ -1917,7 +1770,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "Facial nerve lesion with forehead sparing suggests:",
     options: [
-
       "Peripheral Bell's palsy whole hemiface",
       "Complete DCML loss",
       "Central (UMN) facial weakness",
@@ -1930,7 +1782,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "Medial longitudinal fasciculus coordinates:",
     options: [
-
       "Requires ia discharge exclusively in this context",
       "Cochlear amplification only during normal resting permeability conditions.",
       "Horizontal eye movements linking CN VI and III",
@@ -1943,7 +1794,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "Nucleus ambiguus motor fibers innervate:",
     options: [
-
       "Dorsal root ganglion only in a typical mammalian central neuron.",
       "Corticospinal tract only",
       "Pharynx/larynx via CN IX, X (XI component)",
@@ -1956,7 +1806,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "Area postrema detects emetic toxins because it:",
     options: [
-
       "Has no synapses during normal resting permeability conditions.",
       "Is sole site of Na⁺ pump",
       "Lacks a complete blood–brain barrier",
@@ -1969,7 +1818,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "Nucleus tractus solitarius receives:",
     options: [
-
       "Requires motor cortex commands exclusively in this context",
       "Requires ia fibers directly exclusively in this context",
       "Requires oN bipolar input exclusively in this context",
@@ -1982,7 +1830,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "PAG stimulation can produce:",
     options: [
-
       "Analgesia via descending pain-modulation",
       "Pure cerebellar intention tremor",
       "Complete loss of K⁺ channels",
@@ -1995,7 +1842,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "Rostral ventrolateral medulla is important for:",
     options: [
-
       "Sympathetic vasomotor tone",
       "Color opponency only",
       "Cochlear map only",
@@ -2008,7 +1854,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "Solitary nucleus baroreceptor afferents regulate:",
     options: [
-
       "NMJ quantal content only",
       "Photopigment regeneration in a typical mammalian central neuron.",
       "Blood pressure via brainstem autonomic centers",
@@ -2021,7 +1866,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "Cortico-pontine-cerebellar pathway carries:",
     options: [
-
       "Requires lamina I pain exclusively in this context",
       "Efference copy of planned motor signals",
       "Requires renshaw glycine to muscle exclusively in this context",
@@ -2034,7 +1878,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "Cerebello-thalamo-cortical loop returns to:",
     options: [
-
       "NMJ only",
       "Olfactory epithelium only in a typical mammalian central neuron.",
       "Retinal bipolar cells only when temperature is near 37 °C.",
@@ -2047,7 +1890,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Neural Circuits",
     question: "CA3 recurrent collaterals support:",
     options: [
-
       "Pattern completion and autoassociation",
       "Otoacoustic emissions in a typical mammalian central neuron.",
       "Photoreceptor dark current when temperature is near 37 °C.",
@@ -2060,10 +1902,9 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Photoreceptors hyperpolarize to light because:",
     options: [
-
       "Glutamate release increases in light always during normal resting permeability conditions.",
       "cGMP-gated channels close → photoreceptor depolarization in dark reverses",
-      "",
+      "Action potentials propagate along the photoreceptor outer segment",
       "Na⁺ channels open maximally in light",
     ],
     correct: 1,
@@ -2073,7 +1914,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "ON bipolar cells depolarize to light via:",
     options: [
-
       "ON pathway sign inversion (e.g., mGluR6 cascade)",
       "Requires muscarinic receptors exclusively in this context",
       "Requires na⁺ spikes in bipolar axons always exclusively in this context",
@@ -2086,7 +1926,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Horizontal cells contribute to center-surround by:",
     options: [
-
       "Generating cochlear traveling wave",
       "Releasing ACh at NMJ",
       "Lateral inhibition in outer retina",
@@ -2099,7 +1938,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Ganglion cell receptive fields often show center-surround because:",
     options: [
-
       "Bipolar/amacrine circuits create antagonistic surrounds",
       "Requires muscle spindles create surround exclusively in this context",
       "Requires olfactory glomeruli create surround exclusively in this context",
@@ -2112,7 +1950,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "M pathway (parvocellular) vs P pathway (magnocellular) in primates:",
     options: [
-
       "M: only smell; P: only proprioception in a typical mammalian central neuron.",
       "P carries only pain from cord in a typical mammalian central neuron.",
       "M: motion/depth transient; P: color/fine detail (classic division)",
@@ -2125,7 +1962,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Cochlear tonotopy maps frequency because:",
     options: [
-
       "Requires outer hair cells encode frequency exclusively in this context",
       "All hair cells identical tuning during normal resting permeability conditions.",
       "Basilar membrane stiffness varies along length (high at base)",
@@ -2138,7 +1974,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Outer hair cell electromotility contributes to:",
     options: [
-
       "Requires dCML vibration sense exclusively in this context",
       "Cochlear amplification and sharp tuning",
       "Photoreceptor dark current when temperature is near 37 °C.",
@@ -2151,7 +1986,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Tip links in hair cells transduce sound by:",
     options: [
-
       "Requires gap junction coupling exclusively in this context",
       "Opening mechanotransduction channels when stereocilia shear",
       "Releasing dopamine in cochlear nucleus when temperature is near 37 °C.",
@@ -2164,7 +1998,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Semicircular canals detect:",
     options: [
-
       "Angular acceleration of the head",
       "Skin vibration only",
       "Retinal image slip only",
@@ -2177,7 +2010,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Utricle and saccule detect:",
     options: [
-
       "Linear acceleration and head tilt (gravity)",
       "Color opponency during normal resting permeability conditions.",
       "Olfactory concentration only",
@@ -2190,7 +2022,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "VOR stabilizes gaze by:",
     options: [
-
       "Blocking all CN III output when temperature is near 37 °C.",
       "Generating eye movements opposite to head movement",
       "Requires hippocampal place fields exclusively in this context",
@@ -2203,7 +2034,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Two-point discrimination is finest on fingertips because:",
     options: [
-
       "Requires spinothalamic input is used exclusively in this context",
       "High receptor density and large cortical representation",
       "No cortical map exists for fingers when temperature is near 37 °C.",
@@ -2216,7 +2046,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Merkel discs are well suited for:",
     options: [
-
       "Fine texture and sustained touch (SA I)",
       "Proprioception from muscle spindles only",
       "Pain temperature only",
@@ -2229,7 +2058,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Pacinian corpuscles encode:",
     options: [
-
       "Retinal contrast only in a typical mammalian central neuron.",
       "Olfactory identity only during normal resting permeability conditions.",
       "Sustained pressure only during normal resting permeability conditions.",
@@ -2242,7 +2070,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Ruffini endings detect:",
     options: [
-
       "Sound frequency at cochlear apex only",
       "Skin stretch and sustained deformation",
       "Photons in rods only",
@@ -2255,7 +2082,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Free nerve endings often mediate:",
     options: [
-
       "Requires cochlear tuning exclusively in this context",
       "Pain and temperature (among other signals)",
       "Requires proprioception to DCML exclusively in this context",
@@ -2268,9 +2094,8 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Gate control theory of pain emphasizes:",
     options: [
-
       "Requires photoreceptor bleaching exclusively in this context",
-      "",
+      "Only horizontal cells hyperpolarize rods when cGMP is high",
       "Spinal modulation where touch and pain pathways interact",
       "Requires cortical blindness exclusively in this context",
     ],
@@ -2281,7 +2106,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Referred pain from heart is often felt in left arm because:",
     options: [
-
       "Requires cochlear nucleus convergence exclusively in this context",
       "Convergence of visceral and somatic pain pathways in CNS",
       "Requires retina maps heart exclusively in this context",
@@ -2294,7 +2118,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Capsaicin activates TRPV1 on:",
     options: [
-
       "Nociceptors sensing noxious heat/pH",
       "Alpha motor neurons only",
       "Photoreceptors in fovea only",
@@ -2307,7 +2130,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Cooling menthol sensation uses:",
     options: [
-
       "Rod cGMP channels in a typical mammalian central neuron.",
       "TRPM8 channels on cold-sensitive fibers",
       "Nicotinic NMJ receptors during normal resting permeability conditions.",
@@ -2320,7 +2142,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Olfactory receptor neurons use:",
     options: [
-
       "Only cerebellar parallel fibers",
       "Direct gap junctions to cortex only",
       "G-protein / cAMP cascade to open cation channels",
@@ -2333,7 +2154,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Glomeruli in olfactory bulb represent:",
     options: [
-
       "Inputs from ORNs expressing the same receptor type (roughly)",
       "Single retinal photoreceptors only when temperature is near 37 °C.",
       "Single cochlear frequencies only",
@@ -2346,7 +2166,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Taste sweet stimuli often act through:",
     options: [
-
       "T1R2/T1R3 G-protein coupled receptors",
       "Only NMDA on CN VII",
       "Only TRPV1 on fungiform papillae exclusively",
@@ -2359,7 +2178,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Umami taste is primarily:",
     options: [
-
       "Only NaCl epithelial sodium channels",
       "Only sour proton block of K⁺ always",
       "Only bitter T2R always",
@@ -2372,7 +2190,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Bitter taste uses T2R receptors to:",
     options: [
-
       "Encode sound localization only",
       "Detect potentially toxic compounds",
       "Encode retinal direction selectivity",
@@ -2385,7 +2202,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Sour taste transduction often involves:",
     options: [
-
       "Requires cochlear tip links exclusively in this context",
       "Proton entry/acid sensing depolarizing taste cells",
       "Requires ia afferents exclusively in this context",
@@ -2398,7 +2214,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Primary somatosensory cortex (S1) is organized:",
     options: [
-
       "Without any spatial map",
       "Somatotopically (homunculus)",
       "Retinotopically like V1 only",
@@ -2411,7 +2226,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Receptive field size in S1 is smaller for:",
     options: [
-
       "Trunk vs fingers always larger on fingers",
       "Only vestibular nuclei",
       "Only olfactory bulb",
@@ -2424,7 +2238,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Cortical blindness with V1 damage occurs because:",
     options: [
-
       "Optic nerve transection always when temperature is near 37 °C.",
       "No conscious visual perception despite intact eyes",
       "Requires nMJ block exclusively in this context",
@@ -2437,7 +2250,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Blindsight suggests:",
     options: [
-
       "Complete loss of all retina function",
       "Requires proprioception remains exclusively in this context",
       "Some visual processing without conscious V1 perception",
@@ -2450,7 +2262,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Prosopagnosia typically reflects:",
     options: [
-
       "Requires alpha motor neuron loss exclusively in this context",
       "Pure cochlear apex lesion",
       "Requires dCML lesion exclusively in this context",
@@ -2463,7 +2274,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Akinetopsia (motion blindness) links to:",
     options: [
-
       "Requires nMJ myasthenia exclusively in this context",
       "Requires spinal shock exclusively in this context",
       "MT/V5 or dorsal stream motion processing lesions",
@@ -2476,7 +2286,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Stereopsis depends on:",
     options: [
-
       "Requires muscle spindle Ia exclusively in this context",
       "Requires vestibular otoliths exclusively in this context",
       "Binocular disparity processed in visual cortex",
@@ -2489,7 +2298,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Color opponency (red-green) arises partly from:",
     options: [
-
       "Requires cochlear outer hair cells exclusively in this context",
       "Requires spinothalamic lamina I exclusively in this context",
       "Requires cerebellar climbing fibers exclusively in this context",
@@ -2502,7 +2310,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Auditory brainstem response (ABR) reflects:",
     options: [
-
       "Requires hippocampal theta only exclusively in this context",
       "Synchronized activity in auditory nerve/brainstem nuclei",
       "Requires cortical alpha rhythm exclusively in this context",
@@ -2515,7 +2322,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Interaural time differences localize:",
     options: [
-
       "Only visual bars in V1",
       "Only olfactory glomeruli",
       "Low-frequency sounds (phase timing)",
@@ -2528,7 +2334,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Interaural level differences localize:",
     options: [
-
       "Requires retinal rods exclusively in this context",
       "Requires nMJ quanta exclusively in this context",
       "Requires dCML vibration exclusively in this context",
@@ -2541,7 +2346,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Visual afterimages relate to:",
     options: [
-
       "Photopigment/bleaching and adaptation in retina",
       "Requires lTP in CA3 exclusively exclusively in this context",
       "Requires cochlear amplification exclusively in this context",
@@ -2554,7 +2358,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Dark adaptation curve inflection reflects:",
     options: [
-
       "Requires olfactory fatigue only exclusively in this context",
       "Rod system taking over from cones in dim light",
       "Requires muscle spindle adaptation exclusively in this context",
@@ -2567,7 +2370,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Sensory Systems",
     question: "Conduction aphasia (arcuate) often shows:",
     options: [
-
       "Nonfluent Broca speech only always when temperature is near 37 °C.",
       "Impaired repetition with fluent speech/comprehension relatively spared",
       "Bitemporal hemianopia",
@@ -2580,7 +2382,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Alpha motor neurons innervate:",
     options: [
-
       "Extrafusal skeletal muscle fibers",
       "All smooth muscle in gut",
       "Photoreceptors",
@@ -2593,7 +2394,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Gamma motor neurons adjust:",
     options: [
-
       "Retinal gain only",
       "Requires nMJ acetylcholinesterase exclusively in this context",
       "Cochlear tuning only",
@@ -2606,7 +2406,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Coactivation of alpha and gamma during contraction:",
     options: [
-
       "Maintains spindle sensitivity during muscle shortening",
       "Requires affects cerebellum exclusively in this context",
       "Requires affects olfactory bulb exclusively in this context",
@@ -2619,7 +2418,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Stretch reflex (myotatic) is:",
     options: [
-
       "Polysynaptic pain withdrawal always",
       "Monosynaptic Ia → alpha motor neuron excitation",
       "Requires corticospinal volitional exclusively in this context",
@@ -2632,7 +2430,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Golgi tendon organ Ib afferents mediate:",
     options: [
-
       "Photoreceptor transduction",
       "Cochlear amplification",
       "Stretch reflex facilitation always",
@@ -2645,7 +2442,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Reciprocal inhibition during stretch reflex:",
     options: [
-
       "Requires occurs in retina exclusively in this context",
       "Excites antagonist always",
       "Inhibits antagonist alpha motor neurons via Ia interneurons",
@@ -2658,7 +2454,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Renshaw cells provide:",
     options: [
-
       "Requires dopamine to striatum exclusively in this context",
       "Requires cerebellar climbing input exclusively in this context",
       "Recurrent inhibition of alpha motor neurons",
@@ -2671,7 +2466,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Upper motor neuron lesion signs include:",
     options: [
-
       "Flaccid paralysis with fasciculations typically",
       "Blindness always",
       "Immediate muscle atrophy within hours only",
@@ -2684,7 +2478,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Lower motor neuron lesion signs include:",
     options: [
-
       "Homonymous hemianopia",
       "Hyperreflexia always",
       "Babinski positive always",
@@ -2697,7 +2490,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Decorticate posturing (flexor arms) suggests:",
     options: [
-
       "Requires cochlear lesion exclusively in this context",
       "Damage above red nucleus (cortex/thalamus)",
       "Requires peripheral nerve cut exclusively in this context",
@@ -2710,7 +2502,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Decerebrate posturing (extensor) suggests:",
     options: [
-
       "Requires retinal detachment exclusively in this context",
       "Brainstem lesion below red nucleus level",
       "Requires hippocampal lesion exclusively in this context",
@@ -2723,7 +2514,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Corticospinal tract primarily decussates in:",
     options: [
-
       "Optic chiasm",
       "Pyramids of medulla (most fibers)",
       "Requires cerebellar vermis exclusively in this context",
@@ -2736,7 +2526,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Voluntary fine finger movement relies heavily on:",
     options: [
-
       "Requires photoreceptors exclusively in this context",
       "Requires autonomic ganglia exclusively in this context",
       "Requires olfactory receptor neurons exclusively in this context",
@@ -2749,7 +2538,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Basal ganglia motor role is often described as:",
     options: [
-
       "Transducing odorants",
       "Generating cochlear traveling waves",
       "Computing retinal receptive fields only",
@@ -2762,7 +2550,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Cerebellar motor role emphasizes:",
     options: [
-
       "Requires hormone release from PVN exclusively in this context",
       "Requires pain/temperature crossing exclusively in this context",
       "Error correction, timing, and coordination",
@@ -2775,7 +2562,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Intention tremor suggests:",
     options: [
-
       "Pure UMN corticospinal lesion only",
       "Cerebellar or cerebellar outflow dysfunction",
       "Requires amygdala lesion exclusively in this context",
@@ -2788,7 +2574,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Dysmetria on finger-nose testing indicates:",
     options: [
-
       "Requires dCML loss exclusively in this context",
       "Requires blindness exclusively in this context",
       "Cerebellar inaccuracy of movement endpoint",
@@ -2801,7 +2586,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Chorea (Huntington's) reflects:",
     options: [
-
       "Requires spinal shock exclusively in this context",
       "Dysregulated basal ganglia leading to random movements",
       "Pure cerebellar vermis agenesis only",
@@ -2814,7 +2598,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Dystonia involves:",
     options: [
-
       "Requires nMJ blockade always exclusively in this context",
       "Requires hippocampal place cells exclusively in this context",
       "Sustained abnormal postures from motor program dysfunction",
@@ -2827,7 +2610,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Myasthenia gravis fatigability is due to:",
     options: [
-
       "Requires retinal bipolar dysfunction exclusively in this context",
       "Autoimmune reduction of functional nicotinic receptors at NMJ",
       "Dopamine loss in SNc",
@@ -2840,7 +2622,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Lambert-Eaton syndrome differs from myasthenia because:",
     options: [
-
       "Postsynaptic AChR destruction always",
       "Presynaptic Ca²⁺ channel autoimmunity reduces ACh release",
       "Requires muscle spindle Ia loss exclusively in this context",
@@ -2853,7 +2634,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Botulism causes weakness by:",
     options: [
-
       "Opening all Na⁺ channels",
       "Destroying cerebellar Purkinje cells",
       "Blocking all K⁺ channels",
@@ -2866,7 +2646,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "End-plate potential is graded because:",
     options: [
-
       "Only photoreceptor response",
       "Always regenerative Na⁺ along entire muscle instantly",
       "Only olfactory cAMP",
@@ -2879,7 +2658,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Muscle fiber types (slow vs fast) differ partly in:",
     options: [
-
       "Requires cochlear position exclusively in this context",
       "Requires glomerular OR type exclusively in this context",
       "Requires retinal opsin type exclusively in this context",
@@ -2892,7 +2670,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Motor unit size is larger in:",
     options: [
-
       "Retina vs cochlea",
       "Proximal muscles vs small hand muscles typically",
       "Fingers vs back always smaller in back",
@@ -2905,7 +2682,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Size principle of motor unit recruitment:",
     options: [
-
       "Smaller units recruited before larger units for graded force",
       "Random order always",
       "Requires applies to photoreceptors exclusively in this context",
@@ -2918,7 +2694,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Spinal shock after transection initially shows:",
     options: [
-
       "Pure aphasia",
       "Flaccid paralysis and areflexia below lesion",
       "Bitemporal hemianopia",
@@ -2931,7 +2706,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "After spinal shock, chronic SCI often shows:",
     options: [
-
       "Spasticity and hyperreflexia below lesion",
       "Only deafness",
       "Permanent flaccidity without change always",
@@ -2944,7 +2718,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Central pattern generators in spinal cord can:",
     options: [
-
       "Only compute Goldman equation",
       "Produce rhythmic locomotor-like activity",
       "Only encode color opponency",
@@ -2957,7 +2730,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Rubrospinal tract generally facilitates:",
     options: [
-
       "Flexor muscle tone in upper limb (with other pathways)",
       "Requires retinal ON bipolar cells exclusively in this context",
       "Requires hypothalamic SCN exclusively in this context",
@@ -2970,7 +2742,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Reticulospinal pathways influence:",
     options: [
-
       "Requires hippocampal grids exclusively exclusively in this context",
       "Posture, locomotion, and autonomic-motor integration",
       "Requires photopigment bleaching exclusively in this context",
@@ -2983,7 +2754,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Vestibulospinal tract helps:",
     options: [
-
       "Postural adjustments to maintain balance",
       "Requires lTP induction exclusively in this context",
       "Color vision only",
@@ -2996,7 +2766,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Tectospinal tract contributes to:",
     options: [
-
       "Requires dCML fine touch exclusively in this context",
       "Requires insulin release exclusively in this context",
       "Requires pain gate control exclusively in this context",
@@ -3009,7 +2778,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "ALS typically involves:",
     options: [
-
       "Only Wernicke aphasia",
       "Combined UMN and LMN degeneration",
       "Only retinal detachment",
@@ -3022,7 +2790,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Multiple sclerosis motor signs can include:",
     options: [
-
       "Requires pure agnosia always exclusively in this context",
       "Requires peripheral LMN pattern always exclusively in this context",
       "UMN weakness/spasticity from demyelination",
@@ -3035,7 +2802,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Parkinsonian rigidity is often:",
     options: [
-
       "Only NMJ fatigability",
       "Lead-pipe or cogwheel",
       "Flaccid with fasciculations always",
@@ -3048,7 +2814,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Essential tremor often improves with:",
     options: [
-
       "Requires tTX exclusively in this context",
       "Requires strychnine exclusively in this context",
       "Requires l-DOPA always required exclusively in this context",
@@ -3061,7 +2826,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Hemiballismus classically follows:",
     options: [
-
       "Optic chiasm compression",
       "Only cochlear nucleus lesion",
       "Only olfactory bulb lesion",
@@ -3074,7 +2838,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Focal dystonia in musicians may relate to:",
     options: [
-
       "Maladaptive cortical sensorimotor plasticity",
       "Requires hippocampal sclerosis always exclusively in this context",
       "Requires photoreceptor loss exclusively in this context",
@@ -3087,7 +2850,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Motor Systems",
     question: "Mirror neurons (premotor/parietal) fire when:",
     options: [
-
       "Performing or observing similar actions",
       "Requires in photoreceptors exclusively in this context",
       "Requires during REM sleep exclusively exclusively in this context",
@@ -3100,7 +2862,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Memory & Learning",
     question: "Declarative memory depends critically on:",
     options: [
-
       "Medial temporal lobe structures (hippocampus and related)",
       "Requires cerebellar cortex exclusively exclusively in this context",
       "Requires cochlear nucleus exclusively in this context",
@@ -3113,7 +2874,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Memory & Learning",
     question: "Procedural memory (skills/habits) involves:",
     options: [
-
       "Requires spinal lamina I exclusively exclusively in this context",
       "Basal ganglia and cerebellum among other circuits",
       "Requires hippocampus CA1 exclusively always exclusively in this context",
@@ -3126,7 +2886,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Memory & Learning",
     question: "Patient H.M. after bilateral hippocampal damage showed:",
     options: [
-
       "Loss of pain sensation only during normal resting permeability conditions.",
       "Severe anterograde declarative amnesia",
       "Loss of all motor skills immediately",
@@ -3139,7 +2898,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Memory & Learning",
     question: "Consolidation of declarative memories is thought to require:",
     options: [
-
       "Hippocampal-cortical dialogue over time",
       "Requires photoreceptor bleaching exclusively in this context",
       "Requires nMJ facilitation exclusively in this context",
@@ -3152,7 +2910,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Memory & Learning",
     question: "Systems consolidation proposes:",
     options: [
-
       "Requires cochlea stores facts exclusively in this context",
       "All memories stay only in DG forever",
       "Gradual redistribution of memory traces to cortex",
@@ -3165,7 +2922,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Memory & Learning",
     question: "Working memory prefrontal activity often shows:",
     options: [
-
       "Requires ia afferent silence exclusively in this context",
       "Sustained delay-period firing for held information",
       "Requires insulin pulses exclusively in this context",
@@ -3178,7 +2934,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Memory & Learning",
     question: "NMDA receptor-dependent LTP at CA3–CA1 Schaffer collateral synapses requires:",
     options: [
-
       "under standard whole-cell recording conditions. in a typical mammalian central neuron.",
       "under standard whole-cell recording conditions. in a typical mammalian central neuron.",
       "Requires presynaptic Na⁺ increase exclusively in this context",
@@ -3191,7 +2946,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Memory & Learning",
     question: "LTD at cerebellar parallel fiber–Purkinje synapses is often:",
     options: [
-
       "Only at NMJ",
       "Climbing fiber–dependent",
       "Identical to hippocampal NMDA LTP always",
@@ -3204,7 +2958,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Memory & Learning",
     question: "Differential conditioning requires:",
     options: [
-
       "Requires one stimulus ever presented exclusively in this context",
       "Requires muscle spindle stretch exclusively in this context",
       "Requires photoreceptor adaptation exclusively in this context",
@@ -3217,9 +2970,8 @@ const PINNACLE_MEGA_POOL = [
     topic: "Memory & Learning",
     question: "Extinction of conditioned response involves:",
     options: [
-
       "Permanent deletion of all hippocampal neurons in a typical mammalian central neuron.",
-      "",
+      "Nernst potential is independent of ion concentration gradients",
       "Requires cochlear damage exclusively in this context",
       "New inhibitory learning, not erasure of original trace always",
     ],
@@ -3230,7 +2982,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Memory & Learning",
     question: "Kandel Aplysia sensitization involves:",
     options: [
-
       "Requires photoreceptors exclusively in this context",
       "Requires nMDA LTP in CA1 always exclusively in this context",
       "Presynaptic facilitation via serotonin and cAMP/PKA",
@@ -3243,7 +2994,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Memory & Learning",
     question: "Hebbian plasticity is summarized as:",
     options: [
-
       "Only myelin thickness determines synapses",
       "Only olfactory OR choice",
       "Cells that fire together wire together",
@@ -3256,7 +3006,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Memory & Learning",
     question: "Spike-timing-dependent plasticity (STDP) depends on:",
     options: [
-
       "Requires cochlear frequency alone exclusively in this context",
       "Requires retinal luminance alone exclusively in this context",
       "Requires muscle length exclusively in this context",
@@ -3269,7 +3018,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Memory & Learning",
     question: "Reconsolidation theory suggests retrieved memories:",
     options: [
-
       "Can become labile and require restabilization",
       "Exist only in muscle spindles in a typical mammalian central neuron.",
       "Exist only in rods when temperature is near 37 °C.",
@@ -3282,7 +3030,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Memory & Learning",
     question: "Morris water maze tests:",
     options: [
-
       "Spatial learning dependent on hippocampus (in rodents)",
       "Requires color vision in V1 exclusively in this context",
       "Requires nMJ quantal content exclusively in this context",
@@ -3295,7 +3042,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Memory & Learning",
     question: "Eyeblink classical conditioning in rabbits involves:",
     options: [
-
       "Requires dCML nuclei exclusively exclusively in this context",
       "Requires primary visual cortex exclusively in this context",
       "Requires hypothalamic SCN exclusively in this context",
@@ -3308,7 +3054,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Memory & Learning",
     question: "Fear conditioning to tone often requires:",
     options: [
-
       "Amygdala (lateral/basal nuclei) for acquisition",
       "Requires alpha motor neurons exclusively in this context",
       "Requires cochlear outer hair cells exclusively in this context",
@@ -3321,11 +3066,10 @@ const PINNACLE_MEGA_POOL = [
     topic: "Memory & Learning",
     question: "Contextual fear conditioning to chamber requires:",
     options: [
-
       "Requires proprioception loss exclusively in this context",
       "Requires wernicke area exclusively in this context",
       "Hippocampus for context representation with amygdala",
-      "",
+      "Rod outer segments generate all-or-none spikes in darkness",
     ],
     correct: 2,
     explanation: "Hippocampus for context representation with amygdala",
@@ -3334,7 +3078,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Memory & Learning",
     question: "Retrograde amnesia after hippocampal damage is often:",
     options: [
-
       "Only for motor skills",
       "Only for pain",
       "Temporally graded (recent > remote)",
@@ -3347,7 +3090,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Memory & Learning",
     question: "Semantic vs episodic memory distinction:",
     options: [
-
       "Both identical to procedural always during normal resting permeability conditions.",
       "Both require NMJ",
       "Both stored only in cochlea during normal resting permeability conditions.",
@@ -3360,7 +3102,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Memory & Learning",
     question: "Priming is a form of:",
     options: [
-
       "Only photoreceptor adaptation",
       "Implicit memory",
       "Only stretch reflex",
@@ -3373,10 +3114,9 @@ const PINNACLE_MEGA_POOL = [
     topic: "Memory & Learning",
     question: "Korsakoff syndrome memory deficits link to:",
     options: [
-
       "Requires peripheral neuropathy only always exclusively in this context",
       "Thiamine deficiency affecting diencephalon (mammillary bodies etc.)",
-      "",
+      "Only Müller glia pass inward cation current in darkness",
       "Requires cochlear lesion exclusively in this context",
     ],
     correct: 1,
@@ -3386,7 +3126,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Memory & Learning",
     question: "Alzheimer's early hippocampal involvement explains:",
     options: [
-
       "Deafness always during normal resting permeability conditions.",
       "Early episodic memory impairment",
       "Pure motor flaccidity always",
@@ -3399,7 +3138,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Memory & Learning",
     question: "Long-term potentiation maintenance phases may involve:",
     options: [
-
       "Structural synaptic changes and protein synthesis",
       "Requires golgi tendon silence exclusively in this context",
       "Requires photopigment regeneration exclusively in this context",
@@ -3412,7 +3150,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Memory & Learning",
     question: "Sharp-wave ripples in hippocampus are associated with:",
     options: [
-
       "Cochlear otoacoustic emissions when temperature is near 37 °C.",
       "NMJ endplate only in a typical mammalian central neuron.",
       "Requires retinal ON responses exclusively in this context",
@@ -3425,7 +3162,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Memory & Learning",
     question: "Place field remapping occurs when:",
     options: [
-
       "Requires muscle spindle length changes exclusively in this context",
       "Requires cN VI fires once exclusively in this context",
       "Requires insulin is released exclusively in this context",
@@ -3438,7 +3174,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Memory & Learning",
     question: "Object recognition memory (perirhinal cortex) tests:",
     options: [
-
       "Requires pain withdrawal latency only exclusively in this context",
       "Only sound frequency discrimination",
       "Requires vestibular nystagmus exclusively in this context",
@@ -3451,10 +3186,9 @@ const PINNACLE_MEGA_POOL = [
     topic: "Memory & Learning",
     question: "Delayed non-match to sample tasks probe:",
     options: [
-
       "Requires photoreceptor bleaching rate exclusively in this context",
       "Working memory and recognition in prefrontal/temporal networks",
-      "",
+      "Gap junctions relay dark current from cones to rods exclusively",
       "Requires ia afferent frequency exclusively in this context",
     ],
     correct: 1,
@@ -3464,7 +3198,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Memory & Learning",
     question: "Medial temporal lobe amnesia spares:",
     options: [
-
       "Requires vision always lost exclusively in this context",
       "Often procedural and priming (depending on lesion)",
       "Requires hearing always lost exclusively in this context",
@@ -3477,7 +3210,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Memory & Learning",
     question: "Cognitive map concept (Tolman) refers to:",
     options: [
-
       "Requires motor unit map in muscle exclusively in this context",
       "Requires cochlear frequency map exclusively in this context",
       "Only retinotopic map exclusively same thing",
@@ -3490,7 +3222,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Memory & Learning",
     question: "Engram cells refer to:",
     options: [
-
       "Requires muscle fibers always exclusively in this context",
       "Requires photoreceptors always exclusively in this context",
       "Requires glial cells always exclusively in this context",
@@ -3503,7 +3234,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Memory & Learning",
     question: "Optogenetic reactivation of engram cells can:",
     options: [
-
       "Only silence cochlea always",
       "Only block NMJ always",
       "Evoke memory-associated behavior in rodents",
@@ -3516,7 +3246,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Memory & Learning",
     question: "Sleep slow-wave activity supports memory by:",
     options: [
-
       "under standard whole-cell recording conditions. in a typical mammalian central neuron.",
       "under standard whole-cell recording conditions. in a typical mammalian central neuron.",
       "Facilitating hippocampal-cortical transfer and synaptic homeostasis theories",
@@ -3529,7 +3258,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Memory & Learning",
     question: "REM sleep is associated with:",
     options: [
-
       "Vivid dreaming and cortical activation with muscle atonia",
       "Requires cochlear amplification exclusively exclusively in this context",
       "Requires spinal monosynaptic reflex exclusively exclusively in this context",
@@ -3542,7 +3270,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Memory & Learning",
     question: "Transcranial magnetic stimulation (TMS) can:",
     options: [
-
       "Measure E_K directly in vivo always without electrodes",
       "Replace all fMRI always",
       "Transiently disrupt or facilitate focal cortical processing",
@@ -3555,11 +3282,10 @@ const PINNACLE_MEGA_POOL = [
     topic: "Methods",
     question: "Patch-clamp gigaohm seal enables:",
     options: [
-
       "Requires eEG scalp averaging without contact exclusively in this context",
       "High-resolution measurement of single-channel or whole-cell currents",
       "Requires mRI BOLD without magnet exclusively in this context",
-      "",
+      "Glutamate release dominates in the dark in all vertebrate photoreceptors",
     ],
     correct: 1,
     explanation: "High-resolution measurement of single-channel or whole-cell currents",
@@ -3568,7 +3294,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Methods",
     question: "Voltage-clamp mode holds membrane potential fixed to:",
     options: [
-
       "Measure unlimited action potentials freely when temperature is near 37 °C.",
       "Requires measure olfactory OR mRNA only exclusively in this context",
       "Measure currents required to maintain command voltage",
@@ -3581,7 +3306,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Methods",
     question: "Current-clamp records:",
     options: [
-
       "Only insulin in blood only always",
       "Only cochlear basilar stiffness directly always",
       "Only magnetic field of Earth",
@@ -3594,7 +3318,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Methods",
     question: "Whole-cell patch clamp dialyzes cytoplasm, which can:",
     options: [
-
       "Wash out second messengers over time (run-down concern)",
       "Increase seal resistance to infinity always harmful zero",
       "Only record from extracellular space",
@@ -3607,7 +3330,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Methods",
     question: "Cell-attached patch can record:",
     options: [
-
       "Only population spikes from whole brain always without electrodes",
       "Only EM synapse count only always",
       "Only fMRI signal",
@@ -3620,7 +3342,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Methods",
     question: "Sharp electrode intracellular recording differs from patch in:",
     options: [
-
       "Higher access resistance; can impale without seal",
       "Only measures LFP always",
       "Always requires TTX",
@@ -3633,7 +3354,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Methods",
     question: "Local field potential (LFP) reflects:",
     options: [
-
       "Single Na⁺ channel openings only always isolated",
       "Summed synaptic currents near electrode",
       "Only DCML fiber conduction only",
@@ -3646,7 +3366,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Methods",
     question: "Multi-unit activity is:",
     options: [
-
       "Only olfactory OR binding",
       "Identical to patch clamp single channel always",
       "Only EEG alpha always",
@@ -3659,7 +3378,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Methods",
     question: "Calcium imaging with GCaMP reports:",
     options: [
-
       "Fluorescence changes tied to calcium influx/activity",
       "Permanent membrane voltage without indicator change always",
       "Only myelin thickness",
@@ -3672,7 +3390,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Methods",
     question: "Optogenetics Channelrhodopsin-2 typically:",
     options: [
-
       "Hyperpolarizes always with any opsin",
       "Requires works without light if ATP high exclusively in this context",
       "Requires works in glia exclusively always exclusively in this context",
@@ -3685,7 +3402,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Methods",
     question: "Halorhodopsin or archaerhodopsin often:",
     options: [
-
       "Requires binds glutamate exclusively in this context",
       "Hyperpolarizes/inhibits neurons with light",
       "Always excites like ChR2",
@@ -3698,7 +3414,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Methods",
     question: "DREADDs (hM3Dq) activate neurons when exposed to:",
     options: [
-
       "under standard whole-cell recording conditions. in a typical mammalian central neuron.",
       "under standard whole-cell recording conditions. in a typical mammalian central neuron.",
       "Requires tTX exclusively in this context",
@@ -3711,7 +3426,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Methods",
     question: "Chemogenetic silencing Gi DREADDs typically:",
     options: [
-
       "Always cause LTP",
       "Always bleach photopigment when temperature is near 37 °C.",
       "Open all Na⁺ channels in a typical mammalian central neuron.",
@@ -3724,7 +3438,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Methods",
     question: "fMRI BOLD signal is best interpreted as:",
     options: [
-
       "Direct measure of each synaptic vesicle fusion",
       "Measure of E_K precisely",
       "Measure of NMJ quantal size directly always during normal resting permeability conditions.",
@@ -3737,7 +3450,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Methods",
     question: "EEG alpha rhythm (8–13 Hz) prominent when:",
     options: [
-
       "Only during cochlear damage always",
       "Only during maximal pain always",
       "Deep anesthesia stage with burst suppression only always",
@@ -3750,7 +3462,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Methods",
     question: "MEG primarily detects:",
     options: [
-
       "Magnetic fields from synchronized post-synaptic currents",
       "Requires photopigment bleaching exclusively in this context",
       "Requires muscle spindle length directly exclusively in this context",
@@ -3763,7 +3474,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Methods",
     question: "Event-related potential (ERP) P300 often relates to:",
     options: [
-
       "Requires ia afferent silence exclusively in this context",
       "Requires rod dark current exclusively in this context",
       "Attention/target detection in oddball paradigms",
@@ -3776,7 +3486,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Methods",
     question: "Two-photon microscopy advantage in brain:",
     options: [
-
       "Only measures BOLD",
       "Deep scattering tissue imaging with localized excitation",
       "Non-invasive whole human brain without skull always clinically routine",
@@ -3789,7 +3498,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Methods",
     question: "Optical intrinsic signal imaging maps:",
     options: [
-
       "Activity-related changes in light reflectance/absorption",
       "Requires olfactory OR gene sequences exclusively in this context",
       "Requires single ion channel conductance directly always exclusively in this context",
@@ -3802,7 +3510,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Methods",
     question: "Unit recording with tetrodes helps:",
     options: [
-
       "Replace all behavior experiments always",
       "Sort spikes from multiple nearby neurons",
       "Only measure EEG without scalp contact",
@@ -3815,7 +3522,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Methods",
     question: "Antidromic activation in tract tracing stimulation means:",
     options: [
-
       "Action potential propagated toward axon terminals from stimulation site",
       "under standard whole-cell recording conditions. in a typical mammalian central neuron.",
       "under standard whole-cell recording conditions. in a typical mammalian central neuron.",
@@ -3828,7 +3534,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Methods",
     question: "Retrograde tracer (e.g., cholera toxin B) labels:",
     options: [
-
       "Neurons projecting to injection site",
       "Only glia always",
       "Only muscle spindles",
@@ -3841,7 +3546,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Methods",
     question: "Anterograde tracer (e.g., Phaseolus) labels:",
     options: [
-
       "Only cerebrospinal fluid only",
       "Only blood vessels always",
       "Only cell bodies at injection exclusively always",
@@ -3854,7 +3558,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Methods",
     question: "Lesion study limitation includes:",
     options: [
-
       "Lack of specificity and compensation over time",
       "Requires affects glia never neurons exclusively in this context",
       "No plasticity ever after lesion",
@@ -3867,7 +3570,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Methods",
     question: "Transcranial electrical stimulation (tES) modulates:",
     options: [
-
       "Only myelin gene expression always permanently in one session",
       "Only cochlear fluids always",
       "Only photoreceptors exclusively",
@@ -3880,7 +3582,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Methods",
     question: "Brain-computer interface decode algorithms often use:",
     options: [
-
       "Population activity patterns from motor cortex (e.g., for prosthetics)",
       "under standard whole-cell recording conditions. in a typical mammalian central neuron.",
       "under standard whole-cell recording conditions. in a typical mammalian central neuron.",
@@ -3893,7 +3594,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Methods",
     question: "Miniscope calcium imaging in freely moving rodents allows:",
     options: [
-
       "Only measures blood pressure",
       "Mobile neural activity imaging",
       "Only human clinical diagnosis standard always",

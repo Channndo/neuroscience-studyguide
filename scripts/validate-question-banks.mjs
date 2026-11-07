@@ -127,6 +127,13 @@ for (const [name, arr] of Object.entries(allPools)) {
   if (!Array.isArray(arr)) continue;
   for (const q of arr) {
     for (const opt of q.options || []) {
+      if (opt != null && !String(opt).trim()) {
+        failed = true;
+        report.push(`FAIL: empty option in ${name}: ${String(q.question).slice(0, 55)}…`);
+        break;
+      }
+    }
+    for (const opt of q.options || []) {
       if (FILLER.test(String(opt))) {
         failed = true;
         report.push(`FAIL: filler suffix in ${name} option: ${String(opt).slice(0, 70)}…`);

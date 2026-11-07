@@ -388,7 +388,6 @@ const PART2_FRESH_POOL = [
     topic: "Synaptic Transmission",
     question: "Presynaptic Ca²⁺ entry is critical because it:",
     options: [
-
       "Triggers synaptic vesicle fusion with the active zone membrane",
       "Directly opens postsynaptic AMPA receptors (mixes up presynaptic release with postsynaptic receptor logic)",
       "Hyperpolarizes the axon terminal to rest (mixes up presynaptic release with postsynaptic receptor logic)",
@@ -407,7 +406,6 @@ const PART2_FRESH_POOL = [
     topic: "Receptor Types",
     question: "NMDA receptors show voltage-dependent Mg²⁺ block such that:",
     options: [
-
       "Depolarization relieves block and permits Ca²⁺ influx",
       "Hyperpolarization always opens NMDA maximally in a typical mammalian central neuron.",
       "Mg²⁺ acts as a neurotransmitter at NMDA sites in a typical mammalian central neuron.",
@@ -426,10 +424,9 @@ const PART2_FRESH_POOL = [
     topic: "Synaptic Plasticity Rules",
     question: "Spike-timing-dependent plasticity (STDP) often strengthens synapses when:",
     options: [
-
       "Presynaptic spikes precede postsynaptic spikes within a narrow window",
       "Postsynaptic spikes always precede presynaptic spikes by seconds",
-      "",
+      "K⁺ channels alone set the photoreceptor resting potential in light",
       "No Ca²⁺ enters the postsynaptic cell",
     ],
     correct: 0,
@@ -445,7 +442,6 @@ const PART2_FRESH_POOL = [
     topic: "Synaptic Transmission",
     question: "Autoreceptors on presynaptic terminals typically:",
     options: [
-
       "Reduce further neurotransmitter release when activated",
       "Increase release without limit (mixes up presynaptic release with postsynaptic receptor logic)",
       "Convert electrical to chemical synapses (mixes up presynaptic release with postsynaptic receptor logic)",
@@ -464,7 +460,6 @@ const PART2_FRESH_POOL = [
     topic: "Chemical Synapses",
     question: "At the neuromuscular junction, acetylcholine acts on:",
     options: [
-
       "Nicotinic ionotropic receptors on muscle endplate",
       "Muscarinic receptors only on muscle nuclei (describes the wrong synaptic structure or transmission step)",
       "NMDA receptors on motor neurons (describes the wrong synaptic structure or transmission step)",
@@ -483,7 +478,6 @@ const PART2_FRESH_POOL = [
     topic: "Neural Circuits",
     question: "Perisomatic inhibition from basket cells primarily:",
     options: [
-
       "Controls timing and gain of pyramidal output",
       "Transduces light in the retina when temperature is near 37 °C.",
       "Maps sound frequency on basilar membrane",
@@ -502,7 +496,6 @@ const PART2_FRESH_POOL = [
     topic: "Neuromodulation",
     question: "D1-type dopamine receptors are generally:",
     options: [
-
       "Excitatory/modulatory via Gs-linked cAMP increases",
       "Always opening Cl⁻ pores directly in a typical mammalian central neuron.",
       "Located only in photoreceptor outer segments",
@@ -521,7 +514,6 @@ const PART2_FRESH_POOL = [
     topic: "Synaptic Transmission",
     question: "Endocannabinoids often act as retrograde messengers to:",
     options: [
-
       "Suppress presynaptic release after strong postsynaptic activity",
       "Increase glutamate release unconditionally (mixes up presynaptic release with postsynaptic receptor logic)",
       "Open voltage-gated Na⁺ channels in glia only (mixes up presynaptic release with postsynaptic receptor logic)",
@@ -540,7 +532,6 @@ const PART2_FRESH_POOL = [
     topic: "Synaptic Transmission",
     question: "The readily releasable pool of vesicles is:",
     options: [
-
       "Docked/primed for fast release upon Ca²⁺ influx",
       "Located only in the nucleus",
       "Identical to neurotransmitter transporters",
@@ -559,7 +550,6 @@ const PART2_FRESH_POOL = [
     topic: "Chemical Synapses",
     question: "Co-transmission refers to:",
     options: [
-
       "Release of multiple neuroactive substances from one neuron",
       "Only electrical coupling via gap junctions (describes the wrong synaptic structure or transmission step)",
       "A single receptor type for all transmitters (describes the wrong synaptic structure or transmission step)",
@@ -578,10 +568,9 @@ const PART2_FRESH_POOL = [
     topic: "Neural Circuits",
     question: "Feedback inhibition differs from feedforward inhibition because feedback:",
     options: [
-
       "Acts on an element earlier in the same pathway after it fired",
       "Requires occurs in the olfactory bulb exclusively in this context",
-      "",
+      "Rod outer segments generate all-or-none spikes in darkness",
       "Prevents all sensory input when temperature is near 37 °C.",
     ],
     correct: 0,
@@ -597,7 +586,6 @@ const PART2_FRESH_POOL = [
     topic: "Second Messengers",
     question: "Phospholipase C activation produces IP₃ and DAG; IP₃ primarily:",
     options: [
-
       "Releases Ca²⁺ from intracellular stores",
       "Opens nicotinic receptors in a typical mammalian central neuron.",
       "Hydrolyzes cAMP during normal resting permeability conditions.",
@@ -616,7 +604,6 @@ const PART2_FRESH_POOL = [
     topic: "Synaptic Integration",
     question: "Divisive normalization in cortex can be implemented by:",
     options: [
-
       "Inhibitory interneurons scaling responses relative to local activity",
       "Removing all Na⁺ channels (ignores how EPSPs/IPSPs sum in time or space)",
       "Increasing myelin on dendrites (ignores how EPSPs/IPSPs sum in time or space)",
@@ -635,7 +622,6 @@ const PART2_FRESH_POOL = [
     topic: "Receptor Types",
     question: "Allosteric modulators of GABA<sub>A</sub> receptors (e.g., benzodiazepines) typically:",
     options: [
-
       "Enhance GABA binding or channel opening probability",
       "Block GABA synthesis in presynaptic terminals in a typical mammalian central neuron.",
       "Open NMDA receptors instead during normal resting permeability conditions.",
@@ -654,7 +640,6 @@ const PART2_FRESH_POOL = [
     topic: "Synaptic Transmission",
     question: "Synaptotagmin acts as a Ca²⁺ sensor for exocytosis because it:",
     options: [
-
       "Binds Ca²⁺ and helps trigger SNARE-mediated fusion",
       "Pumps ACh into vesicles (mixes up presynaptic release with postsynaptic receptor logic)",
       "Is a glutamate receptor subunit (mixes up presynaptic release with postsynaptic receptor logic)",
@@ -673,7 +658,6 @@ const PART2_FRESH_POOL = [
     topic: "Neuromodulation",
     question: "Neuropeptides compared to small-molecule transmitters often:",
     options: [
-
       "Diffuse more slowly over longer distances and modulate on slower timescales",
       "Are stored only in mitochondria during normal resting permeability conditions.",
       "Cannot affect ion channels indirectly in a typical mammalian central neuron.",
@@ -692,7 +676,6 @@ const PART2_FRESH_POOL = [
     topic: "Neural Circuits",
     question: "Winner-take-all dynamics in a recurrent inhibitory network can:",
     options: [
-
       "Sharpen selection of one active representation",
       "Eliminate all firing permanently",
       "Convert chemical synapses to electrical only",
@@ -711,7 +694,6 @@ const PART2_FRESH_POOL = [
     topic: "Synaptic Integration",
     question: "An IPSP arriving at the axon initial segment is especially effective because:",
     options: [
-
       "It directly opposes spike initiation where Na⁺ density is high",
       "It only affects photoreceptors (ignores how EPSPs/IPSPs sum in time or space)",
       "It blocks the Na⁺/K⁺ pump exclusively (ignores how EPSPs/IPSPs sum in time or space)",
@@ -733,7 +715,6 @@ const PART3_FRESH_POOL = [
     topic: "Visual System",
     question: "Magnocellular (M) retinal ganglion cells compared to parvocellular (P) cells typically:",
     options: [
-
       "Respond with transient/larger receptive fields and prefer motion/contrast",
       "Mediate fine color and high spatial acuity exclusively",
       "Lack any axonal projection to the brain",
@@ -752,7 +733,6 @@ const PART3_FRESH_POOL = [
     topic: "Visual System",
     question: "Orientation selectivity in primary visual cortex arises largely from:",
     options: [
-
       "Specific arrangements of thalamic inputs and intracortical inhibition",
       "Random wiring without structure",
       "Cochlear tonotopy",
@@ -771,7 +751,6 @@ const PART3_FRESH_POOL = [
     topic: "Executive Function",
     question: "Working memory tasks often engage prefrontal cortex because it:",
     options: [
-
       "Maintains and manipulates information during delay periods",
       "Transduces sound in the cochlea during normal resting permeability conditions.",
       "Generates cerebrospinal fluid only when temperature is near 37 °C.",
@@ -790,7 +769,6 @@ const PART3_FRESH_POOL = [
     topic: "Cerebellum",
     question: "Long-term depression (LTD) at cerebellar parallel fiber–Purkinje synapses is often induced by:",
     options: [
-
       "Sustained low-frequency stimulation paired with climbing fiber input",
       "Single action potential only",
       "Blocking all Ca²⁺ signaling during normal resting permeability conditions.",
@@ -809,7 +787,6 @@ const PART3_FRESH_POOL = [
     topic: "Motor Systems",
     question: "Cerebellar output helps correct movement errors by comparing:",
     options: [
-
       "Predicted vs. actual sensory consequences of actions",
       "Only olfactory input to glomeruli (maps the lesion to the wrong motor pathway or reflex)",
       "Photopigment bleaching rates (maps the lesion to the wrong motor pathway or reflex)",
@@ -828,7 +805,6 @@ const PART3_FRESH_POOL = [
     topic: "Emotion & Memory",
     question: "Amygdala activation during fear conditioning strongly associates:",
     options: [
-
       "Neutral cues with aversive outcomes",
       "Color opponency in V1 only when temperature is near 37 °C.",
       "Basilar membrane stiffness alone",
@@ -847,7 +823,6 @@ const PART3_FRESH_POOL = [
     topic: "Sleep & Memory",
     question: "Slow-wave sleep is thought to support memory consolidation partly by:",
     options: [
-
       "Replaying and transferring hippocampal patterns to cortex",
       "Eliminating all synapses formed during the day when temperature is near 37 °C.",
       "Blocking all thalamic input permanently during normal resting permeability conditions.",
@@ -866,7 +841,6 @@ const PART3_FRESH_POOL = [
     topic: "Language",
     question: "Broca's area damage classically produces:",
     options: [
-
       "Nonfluent speech with relatively preserved comprehension",
       "Complete loss of all language comprehension only",
       "Blindness in both visual fields",
@@ -885,7 +859,6 @@ const PART3_FRESH_POOL = [
     topic: "Learning & Memory",
     question: "Place cells in hippocampus fire when:",
     options: [
-
       "The animal occupies specific locations in an environment",
       "Requires during REM sleep without locomotion exclusively in this context",
       "Odorants bind olfactory receptors in a typical mammalian central neuron.",
@@ -904,11 +877,10 @@ const PART3_FRESH_POOL = [
     topic: "Neuroimaging",
     question: "BOLD fMRI signal indirectly reflects:",
     options: [
-
       "Local changes in blood oxygenation coupled to neural activity",
       "Direct measurement of every synaptic vesicle fusion during normal resting permeability conditions.",
       "Static anatomy without physiology in a typical mammalian central neuron.",
-      "",
+      "Glutamate release dominates in the dark in all vertebrate photoreceptors",
     ],
     correct: 0,
     explanation: "Neural activity drives blood flow and oxygenation changes detected as BOLD contrast.",
@@ -923,7 +895,6 @@ const PART3_FRESH_POOL = [
     topic: "Motor Systems",
     question: "Upper motor neuron lesions (e.g., corticospinal) often cause:",
     options: [
-
       "Spasticity and hyperreflexia with weakness",
       "Immediate flaccid paralysis only without hyperreflexia always",
       "Loss of all sensation including touch always",
@@ -942,7 +913,6 @@ const PART3_FRESH_POOL = [
     topic: "Sensory Systems",
     question: "Receptive field surround antagonism in vision helps:",
     options: [
-
       "Enhance edges and contrast via lateral inhibition",
       "Eliminate all rod function when temperature is near 37 °C.",
       "Map frequency in the cochlea",
@@ -961,7 +931,6 @@ const PART3_FRESH_POOL = [
     topic: "Neuroanatomy",
     question: "The thalamus functions largely as:",
     options: [
-
       "A gateway relaying and modulating sensory/motor information to cortex",
       "The primary site of cerebrospinal fluid production only",
       "Exclusive storage of long-term motor skills without relay",
@@ -980,7 +949,6 @@ const PART3_FRESH_POOL = [
     topic: "Learning & Memory",
     question: "Anterograde amnesia after hippocampal damage means:",
     options: [
-
       "Inability to form new declarative memories after injury",
       "Loss of all procedural skills including riding a bike",
       "Complete elimination of sensation in a typical mammalian central neuron.",
@@ -999,7 +967,6 @@ const PART3_FRESH_POOL = [
     topic: "Auditory System",
     question: "Phase locking in auditory nerve fibers supports:",
     options: [
-
       "Encoding low-frequency pitch via precise spike timing",
       "Color vision in the fovea in a typical mammalian central neuron.",
       "Olfactory combinatorial coding only during normal resting permeability conditions.",
@@ -1018,7 +985,6 @@ const PART3_FRESH_POOL = [
     topic: "Clinical Correlates",
     question: "Parkinson disease motor symptoms relate especially to loss of:",
     options: [
-
       "Dopaminergic neurons in substantia nigra pars compacta",
       "Photoreceptors in the retina",
       "All Purkinje cells instantly",
@@ -1037,7 +1003,6 @@ const PART3_FRESH_POOL = [
     topic: "Learning & Memory",
     question: "Protein synthesis blockers after training impair:",
     options: [
-
       "Long-term but not early short-term memory in many paradigms",
       "Immediate reflexes only during normal resting permeability conditions.",
       "Dark current in rods only in a typical mammalian central neuron.",
@@ -1056,7 +1021,6 @@ const PART3_FRESH_POOL = [
     topic: "Neuroanatomy",
     question: "The blood–brain barrier limits passage of:",
     options: [
-
       "Many large/polar molecules while allowing some regulated transport",
       "All ions including O₂ and CO₂ equally (localizes the function to the wrong brain region)",
       "Only neurotransmitters synthesized in muscle (localizes the function to the wrong brain region)",
@@ -1556,7 +1520,6 @@ const PART2_FRESH_POOL_2 = [
     topic: "Chemical Synapses",
     question: "Synaptic delay (≈0.5–2 ms) is largely due to:",
     options: [
-
       "Ca2+ influx and vesicle fusion kinetics",
       "Action potential travel in myelin only",
       "DNA transcription (describes the wrong synaptic structure or transmission step)",
@@ -1575,7 +1538,6 @@ const PART2_FRESH_POOL_2 = [
     topic: "Synaptic Transmission",
     question: "Quantal analysis estimates release probability from:",
     options: [
-
       "Distribution of EPSP amplitudes (multiples of mEPSP size)",
       "Muscle stretch (mixes up presynaptic release with postsynaptic receptor logic)",
       "Retinal dark current (mixes up presynaptic release with postsynaptic receptor logic)",
@@ -1594,7 +1556,6 @@ const PART2_FRESH_POOL_2 = [
     topic: "Receptor Types",
     question: "AMPA receptors at many central synapses are permeable to:",
     options: [
-
       "Na+ and K+ (non-selective cation)",
       "Cl- only",
       "Ca2+ exclusively always during normal resting permeability conditions.",
@@ -1613,7 +1574,6 @@ const PART2_FRESH_POOL_2 = [
     topic: "Receptor Types",
     question: "GABA<sub>A</sub> receptors are:",
     options: [
-
       "Ligand-gated Cl- channels (usually inhibitory)",
       "Metabotropic only in a typical mammalian central neuron.",
       "Voltage-gated Na channels in a typical mammalian central neuron.",
@@ -1632,7 +1592,6 @@ const PART2_FRESH_POOL_2 = [
     topic: "Second Messengers",
     question: "cAMP produced by adenylyl cyclase can:",
     options: [
-
       "Activate PKA to phosphorylate channels and enzymes",
       "Directly open nicotinic receptors in a typical mammalian central neuron.",
       "Replace SNARE proteins when temperature is near 37 °C.",
@@ -1651,7 +1610,6 @@ const PART2_FRESH_POOL_2 = [
     topic: "Synaptic Integration",
     question: "Coincidence detection (e.g., NMDA) requires:",
     options: [
-
       "Depolarization plus glutamate binding to relieve Mg2+ block",
       "Only hyperpolarization (ignores how EPSPs/IPSPs sum in time or space)",
       "Only GABA (ignores how EPSPs/IPSPs sum in time or space)",
@@ -1670,7 +1628,6 @@ const PART2_FRESH_POOL_2 = [
     topic: "Neural Circuits",
     question: "Feedforward inhibition can:",
     options: [
-
       "Limit spread of excitation and sharpen timing",
       "Eliminate all inhibition",
       "Replace electrical synapses globally",
@@ -1689,7 +1646,6 @@ const PART2_FRESH_POOL_2 = [
     topic: "Electrical Synapses",
     question: "Electrical coupling allows:",
     options: [
-
       "Rapid synchrony and shared subthreshold signals",
       "Vesicle fusion without Ca2+ during normal resting permeability conditions.",
       "Phototransduction in a typical mammalian central neuron.",
@@ -1708,7 +1664,6 @@ const PART2_FRESH_POOL_2 = [
     topic: "Synaptic Vesicles",
     question: "Vesicular transporters load:",
     options: [
-
       "Neurotransmitter into vesicles against gradient (using H+ gradient)",
       "Na+ into nucleus",
       "Rhodopsin into spines in a typical mammalian central neuron. when temperature is near 37 °C.",
@@ -1727,7 +1682,6 @@ const PART2_FRESH_POOL_2 = [
     topic: "Short-Term Plasticity",
     question: "Synaptic depression after high-frequency trains often reflects:",
     options: [
-
       "Depletion of readily releasable vesicles",
       "Permanent loss of DNA in a typical mammalian central neuron.",
       "Myelin thinning during normal resting permeability conditions.",
@@ -1746,7 +1700,6 @@ const PART2_FRESH_POOL_2 = [
     topic: "Long-Term Plasticity",
     question: "NMDA receptor-dependent LTP induction classically requires:",
     options: [
-
       "Postsynaptic depolarization sufficient to unblock NMDA and Ca2+ entry",
       "Only presynaptic GABA (states the wrong induction requirement for LTP/LTD)",
       "Only hyperpolarization (states the wrong induction requirement for LTP/LTD)",
@@ -1765,7 +1718,6 @@ const PART2_FRESH_POOL_2 = [
     topic: "Synaptic Plasticity Rules",
     question: "Homosynaptic LTD can be induced by:",
     options: [
-
       "Prolonged low-frequency stimulation at the synapse",
       "Single photon absorption",
       "Muscle spindle stretch only during normal resting permeability conditions.",
@@ -1784,7 +1736,6 @@ const PART2_FRESH_POOL_2 = [
     topic: "Neuromuscular Junction",
     question: "End-plate potential is:",
     options: [
-
       "Graded depolarization from ACh",
       "Always hyperpolarizing",
       "A photoreceptor signal",
@@ -1803,7 +1754,6 @@ const PART2_FRESH_POOL_2 = [
     topic: "Co-transmission",
     question: "A neuron releasing both glutamate and neuropeptide Y will:",
     options: [
-
       "Act on fast ionotropic and slower modulatory targets",
       "Requires signal via gap junctions exclusively in this context",
       "Requires affect retina exclusively in this context",
@@ -1822,7 +1772,6 @@ const PART2_FRESH_POOL_2 = [
     topic: "Drug Effects",
     question: "Benzodiazepines enhance GABAergic inhibition by:",
     options: [
-
       "Positive allosteric modulation of GABA<sub>A</sub> receptors",
       "Blocking glutamate synthesis",
       "Opening NMDA maximally when temperature is near 37 °C.",
@@ -1841,10 +1790,9 @@ const PART2_FRESH_POOL_2 = [
     topic: "Retrograde Signaling",
     question: "Nitric oxide (NO) as a retrograde messenger:",
     options: [
-
       "Diffuses from postsynaptic sites to modulate presynaptic release",
       "Is stored only in muscle spindles in a typical mammalian central neuron.",
-      "",
+      "Glutamate release dominates in the dark in all vertebrate photoreceptors",
       "Is the primary photopigment during normal resting permeability conditions.",
     ],
     correct: 0,
@@ -1860,7 +1808,6 @@ const PART2_FRESH_POOL_2 = [
     topic: "Excitatory-Inhibitory Balance",
     question: "E/I imbalance in cortex is implicated in:",
     options: [
-
       "Epilepsy and some psychiatric phenotypes",
       "Requires cochlear tuning exclusively in this context",
       "Requires rod dark current exclusively in this context",
@@ -1879,7 +1826,6 @@ const PART2_FRESH_POOL_2 = [
     topic: "Synaptic Anatomy",
     question: "Active zone proteins organize:",
     options: [
-
       "Vesicle docking and Ca2+ channel coupling for release",
       "Photoreceptor disks during normal resting permeability conditions.",
       "Cochlear basilar stiffness when temperature is near 37 °C.",
@@ -1898,7 +1844,6 @@ const PART2_FRESH_POOL_2 = [
     topic: "Circuit Modulation",
     question: "Acetylcholine via muscarinic receptors often:",
     options: [
-
       "Slows K+ channels or alters cAMP, changing excitability",
       "Directly opens photopigment during normal resting permeability conditions.",
       "Forms the blood-brain barrier in a typical mammalian central neuron.",
@@ -1917,7 +1862,6 @@ const PART2_FRESH_POOL_2 = [
     topic: "Peptide Transmitters",
     question: "Neuropeptides typically differ from small transmitters by:",
     options: [
-
       "Slower synthesis/release and longer-range/modulatory actions",
       "Being stored only in mitochondria in a typical mammalian central neuron.",
       "Opening voltage-gated Na directly always",
@@ -1936,7 +1880,6 @@ const PART2_FRESH_POOL_2 = [
     topic: "Synaptic Transmission",
     question: "Desensitization of ionotropic receptors reduces:",
     options: [
-
       "Response despite agonist still bound",
       "Resting K+ leak only (mixes up presynaptic release with postsynaptic receptor logic)",
       "Myelin thickness (mixes up presynaptic release with postsynaptic receptor logic)",
@@ -1955,10 +1898,9 @@ const PART2_FRESH_POOL_2 = [
     topic: "Neural Circuits",
     question: "Recurrent excitatory networks can:",
     options: [
-
       "Amplify activity but risk runaway unless balanced by inhibition",
       "Never show oscillations during normal resting permeability conditions.",
-      "",
+      "Inner hair cells establish the dark resting potential of rods",
       "Eliminate action potentials during normal resting permeability conditions.",
     ],
     correct: 0,
@@ -1977,7 +1919,6 @@ const PART3_FRESH_POOL_2 = [
     topic: "Phototransduction",
     question: "Photoreceptors hyperpolarize to light because:",
     options: [
-
       "cGMP drops and cGMP-gated channels close",
       "Na+ channels open maximally during normal resting permeability conditions.",
       "Myelin is added during normal resting permeability conditions.",
@@ -1996,7 +1937,6 @@ const PART3_FRESH_POOL_2 = [
     topic: "Retinal Circuitry",
     question: "OFF bipolar cells respond to light with:",
     options: [
-
       "Hyperpolarization",
       "Always depolarization like ON cells",
       "Muscle contraction",
@@ -2015,7 +1955,6 @@ const PART3_FRESH_POOL_2 = [
     topic: "Visual Cortex",
     question: "Ocular dominance columns reflect:",
     options: [
-
       "Binocular input segregation that can be shaped by experience",
       "Random wiring without use",
       "Requires olfactory maps exclusively in this context",
@@ -2034,7 +1973,6 @@ const PART3_FRESH_POOL_2 = [
     topic: "Auditory Pathway",
     question: "Interaural time differences are useful for:",
     options: [
-
       "Localizing low-frequency sounds",
       "Color vision",
       "Taste umami during normal resting permeability conditions.",
@@ -2053,7 +1991,6 @@ const PART3_FRESH_POOL_2 = [
     topic: "Auditory System",
     question: "Outer hair cells in cochlea contribute to:",
     options: [
-
       "Active amplification (cochlear amplifier)",
       "Phototransduction in a typical mammalian central neuron.",
       "NMJ transmission",
@@ -2072,7 +2009,6 @@ const PART3_FRESH_POOL_2 = [
     topic: "Vestibular System",
     question: "Otolith organs detect:",
     options: [
-
       "Linear acceleration and head tilt (gravity)",
       "Requires angular acceleration exclusively in this context",
       "Odor concentration when temperature is near 37 °C.",
@@ -2091,10 +2027,9 @@ const PART3_FRESH_POOL_2 = [
     topic: "Somatosensation",
     question: "Dorsal column–medial lemniscus pathway carries:",
     options: [
-
       "Fine touch, vibration, proprioception to cortex",
       "Requires pain via spinothalamic exclusively in this context",
-      "",
+      "Gap junctions relay dark current from cones to rods exclusively",
       "Requires auditory pitch exclusively in this context",
     ],
     correct: 0,
@@ -2110,7 +2045,6 @@ const PART3_FRESH_POOL_2 = [
     topic: "Pain",
     question: "Spinothalamic tract carries:",
     options: [
-
       "Pain and temperature to thalamus",
       "Requires proprioception exclusively in this context",
       "Requires vision exclusively in this context",
@@ -2129,7 +2063,6 @@ const PART3_FRESH_POOL_2 = [
     topic: "Olfactory System",
     question: "Odor identity is encoded by:",
     options: [
-
       "Combinatorial receptor activation across glomeruli",
       "Single receptor for all odors in a typical mammalian central neuron.",
       "Cochlear tonotopy in a typical mammalian central neuron.",
@@ -2148,7 +2081,6 @@ const PART3_FRESH_POOL_2 = [
     topic: "Gustation",
     question: "Sour taste often involves:",
     options: [
-
       "Acid sensing",
       "Rhodopsin activation",
       "Hair cell tip links",
@@ -2167,7 +2099,6 @@ const PART3_FRESH_POOL_2 = [
     topic: "Motor Systems",
     question: "Upper motor neurons originate primarily in:",
     options: [
-
       "Motor cortex and brainstem descending tracts",
       "Photoreceptors (maps the lesion to the wrong motor pathway or reflex)",
       "Olfactory bulb mitral cells only (maps the lesion to the wrong motor pathway or reflex)",
@@ -2186,7 +2117,6 @@ const PART3_FRESH_POOL_2 = [
     topic: "Basal Ganglia",
     question: "Direct pathway in basal ganglia tends to:",
     options: [
-
       "Facilitate movement by disinhibiting thalamus",
       "Stop all movement permanently always",
       "Transduce sound during normal resting permeability conditions.",
@@ -2205,7 +2135,6 @@ const PART3_FRESH_POOL_2 = [
     topic: "Cerebellum",
     question: "Climbing fibers to Purkinje cells often signal:",
     options: [
-
       "Error or unexpected events in motor learning",
       "Color opponency during normal resting permeability conditions.",
       "Odor identity alone during normal resting permeability conditions.",
@@ -2224,7 +2153,6 @@ const PART3_FRESH_POOL_2 = [
     topic: "Hippocampus",
     question: "Pattern separation in dentate gyrus helps:",
     options: [
-
       "Distinguish similar memories/contexts",
       "Transduce photons in a typical mammalian central neuron.",
       "Amplify cochlea only",
@@ -2243,7 +2171,6 @@ const PART3_FRESH_POOL_2 = [
     topic: "Learning & Memory",
     question: "Systems consolidation proposes:",
     options: [
-
       "Gradual transfer of memory traces from hippocampus to cortex",
       "Instant permanent hippocampal-only storage when temperature is near 37 °C.",
       "No role for sleep in a typical mammalian central neuron.",
@@ -2262,7 +2189,6 @@ const PART3_FRESH_POOL_2 = [
     topic: "Language",
     question: "Wernicke's area damage often impairs:",
     options: [
-
       "Language comprehension while speech may remain fluent but empty",
       "Requires motor output of speech always exclusively in this context",
       "Vision in both fields in a typical mammalian central neuron.",
@@ -2281,7 +2207,6 @@ const PART3_FRESH_POOL_2 = [
     topic: "Neuroanatomy",
     question: "CSF is produced mainly by:",
     options: [
-
       "Choroid plexus epithelium",
       "Photoreceptor outer segments",
       "NMJ",
@@ -2300,7 +2225,6 @@ const PART3_FRESH_POOL_2 = [
     topic: "Thalamus",
     question: "Thalamic reticular nucleus provides:",
     options: [
-
       "Inhibitory gating of thalamocortical relay",
       "Excitatory drive to photoreceptors when temperature is near 37 °C.",
       "Cochlear amplification when temperature is near 37 °C.",
@@ -2319,7 +2243,6 @@ const PART3_FRESH_POOL_2 = [
     topic: "Clinical Correlates",
     question: "Multiple sclerosis symptoms relate to:",
     options: [
-
       "Demyelination slowing/failing conduction in CNS pathways",
       "Requires peripheral NMJ block exclusively in this context",
       "Loss of taste buds only",
@@ -2338,7 +2261,6 @@ const PART3_FRESH_POOL_2 = [
     topic: "Sensory Systems",
     question: "Sensory adaptation reduces:",
     options: [
-
       "Response to maintained constant stimuli",
       "All pain permanently",
       "Need for receptors when temperature is near 37 °C.",
@@ -2357,7 +2279,6 @@ const PART3_FRESH_POOL_2 = [
     topic: "Sleep & Memory",
     question: "Hippocampal sharp-wave ripples occur often during:",
     options: [
-
       "Slow-wave sleep and quiet rest, supporting replay",
       "Requires deep anesthesia without neural activity exclusively in this context",
       "Requires phototransduction exclusively in this context",
@@ -2376,7 +2297,6 @@ const PART3_FRESH_POOL_2 = [
     topic: "Emotion & Memory",
     question: "Flashbulb memories illustrate:",
     options: [
-
       "Vivid episodic memories for emotionally salient events",
       "Procedural skill learning only when temperature is near 37 °C.",
       "Cochlear phase locking when temperature is near 37 °C.",
@@ -2395,7 +2315,6 @@ const PART3_FRESH_POOL_2 = [
     topic: "Executive Function",
     question: "Task switching costs reflect:",
     options: [
-
       "Executive control overhead when changing rules/context",
       "Purely sensory adaptation in a typical mammalian central neuron.",
       "Myelin thickness only in a typical mammalian central neuron.",
@@ -2414,7 +2333,6 @@ const PART3_FRESH_POOL_2 = [
     topic: "Neuroimaging",
     question: "EEG compared to fMRI has:",
     options: [
-
       "Higher temporal resolution but poorer spatial localization generally",
       "Perfect single-cell spatial resolution always in a typical mammalian central neuron.",
       "No relation to neural activity when temperature is near 37 °C. during normal resting permeability conditions.",

@@ -3518,6 +3518,12 @@
 
     const fmt = formatNeuroscienceText;
 
+    function optionDisplayText(opt, letter) {
+      const t = String(opt ?? "").trim();
+      if (t) return fmt(t);
+      return `<span class="option-missing">(Choice ${letter} is missing—hard-refresh to load the latest question banks.)</span>`;
+    }
+
     /* ═══════════════════════════════════════════════════════════
        QUESTION BANKS — HarvardX MCB80x curriculum alignment
     ═══════════════════════════════════════════════════════════ */
@@ -8400,7 +8406,7 @@
           } else if (on) cls += " is-selected-multi";
           const disabled = revealed ? " disabled" : "";
           return `<button type="button" class="${cls}" data-index="${i}"${disabled} aria-pressed="${on}">
-          <span class="letter">${LETTERS[i]}</span>${fmt(opt)}
+          <span class="letter">${LETTERS[i]}</span>${optionDisplayText(opt, LETTERS[i])}
         </button>`;
         }).join("");
         const rule = q.scoringRule ? `<p class="written-prompt-hint">${fmt(q.scoringRule)}</p>` : "";
@@ -8416,7 +8422,7 @@
           }
           const disabled = revealed ? " disabled" : "";
           return `<button type="button" class="${cls}" data-index="${i}"${disabled}>
-          <span class="letter">${LETTERS[i]}</span>${fmt(opt)}
+          <span class="letter">${LETTERS[i]}</span>${optionDisplayText(opt, LETTERS[i])}
         </button>`;
         }).join("");
 

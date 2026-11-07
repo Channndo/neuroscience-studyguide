@@ -88,13 +88,14 @@ function swapCorrectWithShorterDistractor(q) {
   let minL = Infinity;
   for (let i = 0; i < q.options.length; i++) {
     if (i === q.correct) continue;
+    if (!String(q.options[i] || "").trim()) continue;
     const l = len(q.options[i]);
     if (l < minL) {
       minL = l;
       minI = i;
     }
   }
-  if (minI < 0) return false;
+  if (minI < 0 || minL < 8) return false;
   const ci = q.correct;
   [q.options[ci], q.options[minI]] = [q.options[minI], q.options[ci]];
   q.correct = minI;

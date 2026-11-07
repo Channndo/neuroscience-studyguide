@@ -48,6 +48,7 @@ function cleanOptionString(s) {
   for (const re of STRIP_RES) t = t.replace(re, "");
   t = t.replace(/\s{2,}/g, " ").trim();
   if (t.endsWith("—")) t = t.slice(0, -1).trim();
+  if (!t && typeof s === "string" && s.trim()) return s.trim();
   return t;
 }
 
