@@ -18,6 +18,9 @@ const FILLER =
   /\(does not follow|inconsistent with the mechanism|not the best match|wrong visual pathway stage|wrong … stage|— inconsistent with the mechanism|does not follow from the mechanism implied/i;
 const JUNK_OPTION =
   /37\s*°?C|typical mammalian central neuron|during normal resting permeability|gap junctions relay dark current|depolarize rods in darkness|bleaching photopigment|glutamate release dominates.*dark|gap junction coupling in a typical/i;
+const ABS_GIVEAWAY =
+  /\b(always|never|exclusively|in all cases|without exception|cannot occur)\b/i;
+const ABS_SOFT = /\b(only|every)\b/i;
 const RT_F_LOG10 = 61.54;
 
 function skeleton(stem) {
@@ -128,10 +131,28 @@ if (pin) {
 for (const [name, arr] of Object.entries(allPools)) {
   if (!Array.isArray(arr)) continue;
   for (const q of arr) {
-    for (const opt of q.options || []) {
+    const correctText = q.options?.[q.correct] != null ? String(q.options[q.correct]) : "";
+    const correctHasHardAbs = ABS_GIVEAWAY.test(correctText);
+    for (let oi = 0; oi < (q.options || []).length; oi++) {
+      const opt = q.options[oi];
       if (opt != null && !String(opt).trim()) {
         failed = true;
         report.push(`FAIL: empty option in ${name}: ${String(q.question).slice(0, 55)}…`);
+        break;
+      }
+      if (oi === q.correct) continue;
+      const s = String(opt);
+      if (
+        (ABS_GIVEAWAY.test(s) || ABS_SOFT.test(s)) &&
+        !correctHasHardAbs &&
+        !ABS_GIVEAWAY.test(correctText) &&
+        !ABS_SOFT.test(correctText) &&
+        !/^≈?\s*[−-]?\d/.test(s.trim())
+      ) {
+        failed = true;
+        report.push(
+          `FAIL: giveaway absolutist wrong option in ${name}: …${s.slice(0, 55)}… (stem: ${String(q.question).slice(0, 40)}…)`
+        );
         break;
       }
     }

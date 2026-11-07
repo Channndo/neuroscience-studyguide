@@ -9,6 +9,7 @@ const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const steps = [
   "scripts/strip-filler-suffixes.mjs",
   "scripts/purge-junk-distractors.mjs",
+  "scripts/soften-absolutist-options.mjs",
   "scripts/fix-blank-options.mjs",
 ];
 

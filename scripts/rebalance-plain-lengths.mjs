@@ -52,8 +52,8 @@ function padWrongPlain(opt, topic, targetLen) {
   let t = String(opt).trim();
   if (len(t) >= targetLen) return t;
   if (/^Only /i.test(t)) {
-    t = t.replace(/^Only /i, "").replace(/\.$/, "");
-    t = `Requires ${t.charAt(0).toLowerCase()}${t.slice(1)} exclusively in this context`;
+    const rest = t.replace(/^Only /i, "").replace(/\.$/, "").trim();
+    t = rest ? `Main mechanism: ${rest.charAt(0).toLowerCase()}${rest.slice(1)}` : t;
   }
   const pads = /lesion|stroke|weakness|aphasia|hemianopia|ataxia|Motor|Visual|Neuroanatomy|Clinical/i.test(
     `${topic} ${opt}`
