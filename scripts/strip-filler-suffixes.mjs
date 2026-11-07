@@ -44,7 +44,16 @@ const STRIP_RES = [
   /\s+in a typical mammalian[^.]*\.?/gi,
   /\s+typical mammalian[^.]*\.?/gi,
   /\s+during normal resting permeability conditions\.?/gi,
+  /^during normal resting permeability conditions\.?$/gi,
   /\s+exclusively in this context\.?/gi,
+  /\s*\([^)]*ignores which ion dominates resting permeability[^)]*\)/gi,
+  /\s*\([^)]*ignores which ion dominates[^)]*\)/gi,
+  /\s*\([^)]*misstates how R_m[^)]*\)/gi,
+  /\s*\([^)]*misapplies how active propagation[^)]*\)/gi,
+  /\s*\([^)]*mixes up presynaptic release[^)]*\)/gi,
+  /\s*\([^)]*contradicts the Nernst dependence[^)]*\)/gi,
+  /\s*\([^)]*confuses channel gating timing[^)]*\)/gi,
+  /\s*\([^)]*uses the wrong sign or driving force[^)]*\)/gi,
 ];
 
 function cleanOptionString(s) {

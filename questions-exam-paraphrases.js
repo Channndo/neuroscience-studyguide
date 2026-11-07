@@ -5,6 +5,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Action Potentials",
     question: "In the phase associated with the rising phase of an action potential, which event primarily drives depolarization?",
     options: [
+
       "Efflux of K⁺ through voltage-gated potassium channels",
       "Influx of Na⁺ through voltage-gated sodium channels",
       "Influx of Cl⁻ through ligand-gated channels",
@@ -23,6 +24,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Action Potentials",
     question: "In the phase associated with the falling phase of an action potential, which ionic current dominates?",
     options: [
+
       "Na⁺ influx through open sodium channels",
       "K⁺ efflux through voltage-gated potassium channels",
       "Ca²⁺ influx through N-type channels",
@@ -41,6 +43,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Action Potential Propagation",
     question: "Myelination of an axon mainly increases:",
     options: [
+
       "The resting membrane potential",
       "The speed of action potential propagation",
       "The number of synaptic vesicles released",
@@ -59,6 +62,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Resting Potential",
     question: "If a neuron has high K⁺ leak conductance and only minimal Na⁺ leak conductance, its resting membrane potential would be expected to lie closest to:",
     options: [
+
       "The Na⁺ equilibrium potential",
       "The K⁺ equilibrium potential",
       "0 mV exactly",
@@ -77,6 +81,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Nernst Equation",
     question: "Suppose that extracellular K⁺ concentration is increased while intracellular K⁺ is held constant, the K⁺ equilibrium potential (E_K):",
     options: [
+
       "Becomes more negative",
       "Becomes less negative (moves toward 0 mV)",
       "Becomes exactly 0 mV regardless of concentration",
@@ -95,6 +100,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Action Potentials",
     question: "In the phase associated with the relative refractory period, a larger-than-normal depolarizing stimulus may still trigger a spike because:",
     options: [
+
       "Inactivated Na⁺ channels are recovering and fewer channels are available",
       "Most K⁺ channels are permanently closed",
       "Myelin is absent at the axon hillock",
@@ -113,6 +119,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Action Potentials",
     question: "The falling phase of the action potential is driven mainly by delayed-rectifier K⁺ channels because they:",
     options: [
+
       "Open with slower kinetics than the initial Na⁺ surge and carry outward current",
       "Permit massive Na⁺ influx",
       "Block all Cl⁻ conductance permanently",
@@ -131,6 +138,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Action Potential Propagation",
     question: "Myelin increases conduction velocity mainly by:",
     options: [
+
       "Increasing the number of voltage-gated channels per unit length",
       "Reducing effective membrane capacitance and limiting active regeneration to nodes",
       "Raising the resting membrane potential above 0 mV",
@@ -149,6 +157,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Electrical Signaling",
     question: "The Goldman equation predicts that if membrane permeability to Na⁺ greatly exceeds permeability to K⁺, V_m would be expected to approach:",
     options: [
+
       "The potassium reversal potential (E_K), as if K⁺ were the dominant permeant ion",
       "The sodium reversal potential (E_Na), weighted by high relative Na⁺ permeability",
       "0 mV as the primary route if all monovalent gradients were abolished and Cl⁻ is impermeant",
@@ -167,6 +176,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Passive Membrane Properties",
     question: "For a given constant current injection, a neuron with a larger membrane time constant would be expected to show:",
     options: [
+
       "A faster rise to steady-state voltage",
       "A slower rise to steady-state voltage",
       "No change in voltage over time",
@@ -185,6 +195,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Resting Potential",
     question: "What mainly sets the ion concentration gradients that establish the resting potential?",
     options: [
+
       "The Na⁺/K⁺ ATPase maintaining Na⁺ and K⁺ gradients",
       "Voltage-gated channels at the axon hillock as the primary route",
       "Synaptic vesicle recycling",
@@ -203,6 +214,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Neuromodulation",
     question: "Dopamine modulates striatal circuits mainly through:",
     options: [
+
       "Metabotropic D1 and D2 receptors altering cAMP and channel activity",
       "Direct ionotropic pores with millisecond kinetics as the primary route",
       "Gap junctions between photoreceptors",
@@ -221,6 +233,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Visual System",
     question: "Rods are more sensitive than cones mainly because:",
     options: [
+
       "They express higher levels of photopigment and converge on bipolar cells",
       "They respond as the primary route to bright daylight",
       "They lack cGMP-gated channels",
@@ -239,6 +252,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Neuroanatomy",
     question: "Gray matter consists mainly of:",
     options: [
+
       "Neuronal cell bodies, dendrites, and synapses",
       "Myelinated axon tracts as the primary route",
       "Cerebrospinal fluid in the ventricles primarily",
@@ -257,6 +271,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Synaptic Integration",
     question: "Shunting inhibition reduces EPSP amplitude mainly by:",
     options: [
+
       "Lowering input resistance and diverting current",
       "Opening Na⁺ channels at the axon hillock",
       "Increasing length constant indefinitely",
@@ -275,6 +290,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Somatosensation",
     question: "Free nerve endings in skin mainly detect:",
     options: [
+
       "Pain and temperature",
       "High-frequency vibration at Pacinian frequency",
       "Sustained pressure with Merkel-like precision",
@@ -293,6 +309,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Olfactory System",
     question: "Each olfactory sensory neuron usually expresses:",
     options: [
+
       "One functional odor receptor type",
       "Most receptor genes simultaneously",
       "Main mechanism: photopigment genes",
@@ -311,6 +328,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Neuroanatomy",
     question: "White matter tracts consist mainly of:",
     options: [
+
       "Myelinated axons",
       "Neuronal cell bodies and dendrites",
       "Synaptic cleft fluid",
@@ -329,6 +347,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Neuroanatomy",
     question: "The blood-brain barrier restricts passage of many substances mainly at:",
     options: [
+
       "CNS capillary endothelial tight junctions",
       "Nodes of Ranvier in peripheral nerve (localizes the function to the wrong brain region)",
       "Synaptic clefts of all chemical synapses",
@@ -347,6 +366,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Current Clamp",
     question: "During a current-clamp experiment, injecting steady hyperpolarizing current would be expected to typically:",
     options: [
+
       "Move V_m away from threshold",
       "Open voltage-gated Na⁺ channels",
       "Eliminate K⁺ leak conductance",
@@ -365,6 +385,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Pharmacology",
     question: "Tetrodotoxin (TTX) applied to an axon prevents action potentials mainly by:",
     options: [
+
       "Blocking voltage-gated Na⁺ channels",
       "Blocking voltage-gated K⁺ channels",
       "Inhibiting the Na⁺/K⁺ ATPase",
@@ -383,6 +404,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Nernst Equation",
     question: "Suppose that extracellular K⁺ is raised fourfold while intracellular K⁺ is unchanged, E_K shifts approximately:",
     options: [
+
       "~37 mV toward 0 mV (less negative)",
       "~37 mV more negative",
       "To exactly +58 mV",
@@ -401,10 +423,11 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Passive Membrane Properties",
     question: "Suppose that τ increases but λ is unchanged, subthreshold signals at the soma will:",
     options: [
+
       "Reach steady deflection more slowly but spread the same distance",
-      "Spread farther along dendrites (misstates how R_m, C_m, or geometry set τ or λ)",
-      "Often trigger full spikes (misstates how R_m, C_m, or geometry set τ or λ)",
-      "No longer decay passively (misstates how R_m, C_m, or geometry set τ or λ)",
+      "Spread farther along dendrites",
+      "Often trigger full spikes",
+      "No longer decay passively",
     ],
     correct: 0,
     explanation: "τ = R_m C_m sets temporal filtering; λ sets spatial spread independently in idealized cable theory.",
@@ -419,6 +442,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Goldman Equation",
     question: "Suppose that P_Cl becomes significant at rest and E_Cl is more negative than V_m, adding Cl⁻ conductance will:",
     options: [
+
       "Tend to hyperpolarize or stabilize V_m toward E_Cl",
       "Often depolarize to E_Na",
       "Have no effect because Cl⁻ is not charged",
@@ -437,6 +461,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Action Potentials",
     question: "In the phase associated with the relative refractory period, a second stimulus must be:",
     options: [
+
       "Stronger to reach threshold because many Na⁺ channels remain inactivated",
       "Weaker because K⁺ channels are closed",
       "Identical in strength often",
@@ -455,6 +480,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Resting Potential",
     question: "Suppose that the cell is permeable only to K⁺ at rest, V_m equals E_K. Adding a small Na⁺ leak without changing pump activity will:",
     options: [
+
       "Make V_m less negative (depolarized relative to E_K)",
       "Make V_m equal E_Na instantly",
       "Hyperpolarize below E_K often",
@@ -473,6 +499,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Action Potentials",
     question: "Cooling an axon usually slows conduction because:",
     options: [
+
       "Channel kinetics and ion mobility slow",
       "Myelin is converted to cerebrospinal fluid",
       "Resting potential becomes +40 mV",
@@ -491,6 +518,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Goldman Equation",
     question: "Suppose that P_K >> P_Na at rest and P_Cl is negligible, increasing P_Na slightly will:",
     options: [
+
       "Depolarize V_m toward E_Na",
       "Hyperpolarize to E_K instantly",
       "Fix V_m at 0 mV often",
@@ -509,6 +537,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Quantitative Physiology",
     question: "Suppose that E_K = -80 mV and E_Na = +60 mV, V_m at rest near -65 mV implies:",
     options: [
+
       "Resting permeability is dominated by K+ with some Na+ leak",
       "Requires na+ channels are open",
       "V_m equals E_Na",
@@ -527,9 +556,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Passive Membrane Properties",
     question: "Suppose that membrane leak conductance increases by ~10% (R_m falls) with unchanged geometry, the length constant λ typically:",
     options: [
+
       "Becomes shorter (less spatial spread)",
-      "Becomes infinitely long (misstates how R_m, C_m, or geometry set τ or λ)",
-      "Does not change ever (misstates how R_m, C_m, or geometry set τ or λ)",
+      "Becomes infinitely long",
+      "Does not change ever",
       "Converts dendrites to photoreceptors",
     ],
     correct: 0,
@@ -545,6 +575,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Action Potentials",
     question: "In the phase associated with the threshold period/mechanism:",
     options: [
+
       "Net inward current exceeds outward current initiating regenerative Na⁺ entry",
       "Myelin is synthesized in the soma",
       "Describes presynaptic vesicle release instead of postsynaptic integration",
@@ -563,6 +594,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Action Potentials",
     question: "In the phase associated with the absolute refractory period/mechanism:",
     options: [
+
       "Many Na⁺ channels inactivated",
       "Myelin is synthesized in the soma",
       "Main mechanism: gABA is released globally",
@@ -581,6 +613,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Action Potentials",
     question: "In the phase associated with the relative refractory period/mechanism:",
     options: [
+
       "Partial recovery requires stronger stimulus",
       "Myelin is synthesized in the soma",
       "Requires gABA is released globally",
@@ -599,6 +632,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Action Potentials",
     question: "In the phase associated with the afterhyperpolarization period/mechanism:",
     options: [
+
       "Delayed K⁺ (and sometimes Ca²⁺-activated K⁺) drives V_m below rest",
       "Myelin is synthesized in the soma",
       "Requires gABA is released globally",
@@ -617,6 +651,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Action Potential Propagation",
     question: "Structure/condition: Unmyelinated axon. Key process and outcome:",
     options: [
+
       "Active regeneration along membrane; Non-decremental propagation",
       "Main mechanism: passive spread forever",
       "Main mechanism: cochlear tuning",
@@ -635,6 +670,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Action Potential Propagation",
     question: "Structure/condition: Myelinated axon. Key process and outcome:",
     options: [
+
       "Nodes of Ranvier concentrate Na⁺ channels; Saltatory conduction",
       "Main mechanism: passive spread forever",
       "Main mechanism: cochlear tuning",
@@ -653,6 +689,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Action Potential Propagation",
     question: "Structure/condition: Cold temperature. Key process and outcome:",
     options: [
+
       "Slower channel kinetics; Reduced conduction velocity",
       "Main mechanism: passive spread forever",
       "Main mechanism: cochlear tuning",
@@ -671,6 +708,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Action Potential Propagation",
     question: "Structure/condition: Local anesthetic. Key process and outcome:",
     options: [
+
       "Na⁺ block in pain fibers; Loss of sensation in region",
       "Main mechanism: passive spread forever",
       "Main mechanism: cochlear tuning",
@@ -689,10 +727,11 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Passive Membrane Properties",
     question: "Suppose that leak conductance rises by 12% (R_m falls) with geometry unchanged, the length constant λ compared with baseline is:",
     options: [
+
       "Shorter — signals attenuate faster with distance",
-      "Longer — signals spread farther often (misstates how R_m, C_m, or geometry set τ or λ)",
-      "Unchanged — λ seldom depends on R_m (misstates how R_m, C_m, or geometry set τ or λ)",
-      "Infinite — passive spread without limit (misstates how R_m, C_m, or geometry set τ or λ)",
+      "Longer — signals spread farther often",
+      "Unchanged — λ seldom depends on R_m",
+      "Infinite — passive spread without limit",
     ],
     correct: 0,
     explanation: "Higher leak (lower R_m) shortens λ in passive cable models.",
@@ -707,6 +746,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Passive Membrane Properties",
     question: "Suppose that membrane capacitance increases by 15% while R_m is held fixed, the time constant τ is:",
     options: [
+
       "~115% of baseline (τ = R_m C_m)",
       "Zero — voltage changes instantly often",
       "Independent of C_m often",
@@ -725,6 +765,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Nernst Equation",
     question: "Suppose that intracellular Na⁺ rises while extracellular Na⁺ is fixed, E_Na shifts:",
     options: [
+
       "Less positive (toward 0 mV)",
       "More positive beyond +100 mV",
       "To match E_K",
@@ -743,10 +784,11 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Passive Membrane Properties",
     question: "Myelin on an axon mainly increases effective R_m locally, which:",
     options: [
+
       "Lengthens λ and reduces current leak per unit length",
-      "Shortens λ by increasing capacitance as the primary route (misstates how R_m, C_m, or geometry set τ or λ)",
-      "Prevents all ion flow at nodes (misstates how R_m, C_m, or geometry set τ or λ)",
-      "Converts active to purely graded signals forever (misstates how R_m, C_m, or geometry set τ or λ)",
+      "Shortens λ by increasing capacitance as the primary route",
+      "Prevents all ion flow at nodes",
+      "Converts active to purely graded signals forever",
     ],
     correct: 0,
     explanation: "Myelin reduces membrane leak between nodes, improving passive spread to the next node.",
@@ -761,6 +803,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Action Potentials",
     question: "In the phase associated with the rising phase of a squid-giant-axon spike, the dominant current is:",
     options: [
+
       "Inward Na⁺ through voltage-gated channels",
       "Outward K⁺ through leak channels as the primary route",
       "Inward Cl⁻ through GABA receptors",
@@ -779,6 +822,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Action Potentials",
     question: "Suppose that voltage-gated K⁺ channels are blocked during a spike, you expect:",
     options: [
+
       "Prolonged repolarization and broader spikes",
       "No change in spike width",
       "Immediate loss of resting potential",
@@ -797,6 +841,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Patch Clamp",
     question: "Whole-cell patch clamp relative to cell-attached recording:",
     options: [
+
       "Controls V_m or I_m across the entire cell interior",
       "Samples as the primary route one ion species with no pipette access",
       "Measures muscle force transduction",
@@ -815,6 +860,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Pharmacology",
     question: "A drug that selectively increases K⁺ leak conductance at rest would be expected to tend to:",
     options: [
+
       "Hyperpolarize the cell and shorten λ",
       "Depolarize toward E_Na",
       "Block all synaptic vesicle fusion",
@@ -833,6 +879,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Voltage Clamp",
     question: "In voltage clamp, a downward step in command potential usually produces:",
     options: [
+
       "Inward (negative) clamp current if channels open during the step",
       "Zero current because voltage is clamped",
       "Requires mechanical cochlear motion",
@@ -851,6 +898,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Goldman Equation",
     question: "Suppose that Cl⁻ channels open with E_Cl below rest, net Cl⁻ current at rest will:",
     options: [
+
       "Be inward (hyperpolarizing) until V_m approaches E_Cl",
       "Often be outward",
       "Be zero because Cl⁻ is impermeant",
@@ -869,6 +917,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Action Potentials",
     question: "Afterhyperpolarization following a spike is mainly due to:",
     options: [
+
       "Continued/outlasting K⁺ conductance",
       "Reopening of all Na⁺ channels",
       "Cl⁻ influx through AMPA receptors",
@@ -887,6 +936,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Goldman Equation",
     question: "Increasing extracellular Na⁺ while holding intracellular Na⁺ fixed would be expected to shift the Goldman resting potential:",
     options: [
+
       "Toward E_Na (less negative)",
       "Toward E_K as the primary route",
       "To exactly +60 mV often",
@@ -905,6 +955,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Resting Potential",
     question: "Suppose K⁺ leak conductance is blocked but the Na⁺/K⁺ pump keeps gradients intact and a small resting Na⁺ leak remains. V_m will tend to move:",
     options: [
+
       "Toward E_Na (depolarized relative to normal K⁺-dominated rest)",
       "Toward E_K as if K⁺ leak were unchanged",
       "To 0 mV instantly regardless of gradients",
@@ -923,6 +974,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Nernst Equation",
     question: "Suppose that [K⁺]_out equals [K⁺]_in, the Nernst equilibrium potential for K⁺ is:",
     options: [
+
       "0 mV",
       "−90 mV",
       "+60 mV",
@@ -941,6 +993,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Electrical Signaling",
     question: "Suppose that V_m is held at E_K, the driving force on K⁺ is:",
     options: [
+
       "Zero",
       "Maximal outward",
       "Maximal inward",
@@ -959,10 +1012,11 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Passive Membrane Properties",
     question: "Membrane capacitance arises mainly because:",
     options: [
+
       "The lipid bilayer stores charge separated across a thin dielectric",
-      "Myelin increases ion channel density (misstates how R_m, C_m, or geometry set τ or λ)",
-      "Na⁺ channels pump charge into the ER (misstates how R_m, C_m, or geometry set τ or λ)",
-      "Dendrites lack any resistance (misstates how R_m, C_m, or geometry set τ or λ)",
+      "Myelin increases ion channel density",
+      "Na⁺ channels pump charge into the ER",
+      "Dendrites lack any resistance",
     ],
     correct: 0,
     explanation: "The bilayer acts as a capacitor; charge accumulates on inner and outer leaflets.",
@@ -977,10 +1031,11 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Passive Membrane Properties",
     question: "An EPSP recorded at the soma from a distal synapse is usually smaller and slower because of:",
     options: [
+
       "Cable filtering (attenuation and low-pass filtering)",
-      "Complete absence of ionotropic receptors (misstates how R_m, C_m, or geometry set τ or λ)",
-      "Myelin on dendrites (misstates how R_m, C_m, or geometry set τ or λ)",
-      "Main mechanism: electrical synapses distally (misstates how R_m, C_m, or geometry set τ or λ)",
+      "Complete absence of ionotropic receptors",
+      "Myelin on dendrites",
+      "Main mechanism: electrical synapses distally",
     ],
     correct: 0,
     explanation: "Passive spread along dendrites attenuates amplitude and spreads rise time.",
@@ -995,6 +1050,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Action Potentials",
     question: "Tetrodotoxin (TTX) blocks action potentials mainly by binding:",
     options: [
+
       "Voltage-gated Na⁺ channel pore",
       "Voltage-gated K⁺ channels",
       "The Na⁺/K⁺ pump",
@@ -1013,6 +1069,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Action Potentials",
     question: "Tetraethylammonium (TEA) applied to axons usually prolongs spikes by blocking:",
     options: [
+
       "Certain voltage-gated K⁺ channels",
       "Voltage-gated Na⁺ channels",
       "Glutamate receptors",
@@ -1031,6 +1088,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Action Potentials",
     question: "Suppose that voltage-gated Na⁺ channels are held in the inactivated state, the neuron:",
     options: [
+
       "Cannot fire another action potential until recovery",
       "Fires at higher frequency",
       "Depolarizes to E_Na permanently",
@@ -1049,6 +1107,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Experimental Methods",
     question: "Voltage clamp was developed mainly to:",
     options: [
+
       "Hold membrane voltage constant and measure the currents required",
       "Measure as the primary route resting potential without perturbation",
       "Visualize myelin with light microscopy alone",
@@ -1067,6 +1126,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Ion Selectivity",
     question: "Suppose that E_Na is +60 mV and V_m is −65 mV, the electrochemical driving force on Na⁺ favors:",
     options: [
+
       "Inward Na⁺ movement (into the cell)",
       "Outward Na⁺ as the primary route",
       "No movement regardless of channels",
@@ -1085,6 +1145,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Pharmacology",
     question: "A drug that increases K⁺ conductance at rest would be expected to generally:",
     options: [
+
       "Hyperpolarize or stabilize V_m nearer E_K",
       "Depolarize toward E_Na",
       "Block all spikes by removing Na⁺ channels from membrane",
@@ -1103,6 +1164,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     topic: "Quantitative Physiology",
     question: "Suppose that g_Na increases transiently during a spike while g_K rises later, the sequence reflects:",
     options: [
+
       "Hodgkin–Huxley separation of Na⁺ activation and K⁺ delayed activation",
       "Goldman equation for multi-ion resting potential as the primary route (not time-varying spike conductances)",
       "Capacitive charging of the membrane with no voltage-gated conductance changes",
@@ -1124,6 +1186,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     topic: "Synaptic Transmission",
     question: "An excitatory postsynaptic potential (EPSP) can be described as a postsynaptic depolarization that:",
     options: [
+
       "Often prevents action potential generation",
       "Brings the membrane closer to threshold for firing",
       "Often hyperpolarizes the postsynaptic cell",
@@ -1142,6 +1205,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     topic: "Synaptic Transmission",
     question: "An inhibitory postsynaptic potential (IPSP) can be described as a postsynaptic change that:",
     options: [
+
       "Depolarizes the membrane toward threshold",
       "Hyperpolarizes the membrane or stabilizes it away from threshold",
       "Often opens voltage-gated Na⁺ channels",
@@ -1160,6 +1224,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     topic: "Receptor Types",
     question: "Metabotropic receptors usually act by:",
     options: [
+
       "Opening an ion channel pore directly upon binding",
       "Activating G-proteins that modulate ion channels or second-messenger systems",
       "Blocking all synaptic transmission permanently",
@@ -1178,6 +1243,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     topic: "Second Messengers",
     question: "IP₃ (inositol trisphosphate) produced during metabotropic signaling mainly causes:",
     options: [
+
       "Direct opening of voltage-gated Na⁺ channels",
       "Release of Ca²⁺ from intracellular stores in the endoplasmic reticulum",
       "Immediate repolarization of the axon",
@@ -1196,6 +1262,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     topic: "Receptor Types",
     question: "Metabotropic receptor signaling is usually slower than ionotropic signaling because it involves:",
     options: [
+
       "Direct ion flux through the receptor pore",
       "G-protein activation and second-messenger cascades before channel modulation",
       "Immediate fusion of synaptic vesicles",
@@ -1214,6 +1281,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     topic: "Second Messengers",
     question: "IP₃ signaling raises cytosolic Ca²⁺ mainly by:",
     options: [
+
       "Opening plasmalemmal Na⁺ channels",
       "Releasing Ca²⁺ from endoplasmic reticulum stores",
       "Blocking all K⁺ channels permanently",
@@ -1232,6 +1300,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     topic: "Synaptic Transmission",
     question: "AMPA receptors mediate fast EPSCs at glutamatergic synapses mainly by passing:",
     options: [
+
       "Na⁺ and some K⁺ at resting potentials",
       "Cl⁻ as the primary route",
       "Mg²⁺ out of the cell",
@@ -1250,6 +1319,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     topic: "Synaptic Transmission",
     question: "GABA<sub>A</sub> receptor activation usually produces inhibition by:",
     options: [
+
       "Increasing Cl⁻ conductance when E_Cl⁻ is below rest",
       "Opening Na⁺ channels at the axon hillock",
       "Blocking all metabotropic signaling permanently",
@@ -1268,6 +1338,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     topic: "Resting Potential",
     question: "Suppose that the Na⁺/K⁺ pump is blocked, over time the resting potential will:",
     options: [
+
       "Move toward 0 mV as gradients collapse",
       "Become more negative indefinitely without limit",
       "Lock at the Nernst potential for Cl⁻ as the primary route",
@@ -1286,6 +1357,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     topic: "Nernst Equation",
     question: "Suppose that intracellular K⁺ is 140 mM and extracellular K⁺ is 4 mM, E_K is approximately:",
     options: [
+
       "−95 mV (negative inside)",
       "+60 mV (positive inside)",
       "0 mV",
@@ -1304,6 +1376,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     topic: "Chemical Synapses",
     question: "Blocking presynaptic voltage-gated Ca²⁺ channels would be expected to most directly reduce:",
     options: [
+
       "Neurotransmitter release probability",
       "Postsynaptic AMPA receptor density (describes the wrong synaptic structure or transmission step)",
       "Axonal myelin thickness (describes the wrong synaptic structure or transmission step)",
@@ -1322,6 +1395,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     topic: "Somatosensation",
     question: "Free nerve endings in skin mainly signal:",
     options: [
+
       "Pain and temperature",
       "Main mechanism: fine discriminative touch on glabrous skin",
       "Auditory frequency place coding",
@@ -1340,6 +1414,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     topic: "Resting Potential",
     question: "If E_K = −90 mV and E_Na = +60 mV, increasing P_Na/P_K at rest would be expected to shift V_m:",
     options: [
+
       "Toward E_Na (less negative)",
       "Toward E_K (more negative)",
       "To exactly the arithmetic mean (−15 mV) often",
@@ -1358,6 +1433,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     topic: "Nernst Equation",
     question: "Raising intracellular Na⁺ concentration while extracellular Na⁺ is fixed would be expected to make E_Na:",
     options: [
+
       "Less positive (closer to 0 mV)",
       "More positive",
       "Equal to E_K",
@@ -1376,6 +1452,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     topic: "Electrical Signaling",
     question: "Suppose that g_Na increases while V_m is held fixed, the Na⁺ equilibrium current (I_Na) according to I = g(V_m − E_ion) will:",
     options: [
+
       "Increase in magnitude if V_m ≠ E_Na",
       "Often become zero regardless of V_m",
       "Reverse sign without changing magnitude",
@@ -1394,6 +1471,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     topic: "Synaptic Transmission",
     question: "Suppose that presynaptic Ca²⁺ influx is reduced, one expects:",
     options: [
+
       "Lower probability of vesicle release",
       "Larger quantal size per vesicle often",
       "Postsynaptic receptor number to increase instantly",
@@ -1412,6 +1490,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     topic: "Auditory System",
     question: "Auditory nerve fibers encode sound intensity mainly by:",
     options: [
+
       "Increasing firing rate with louder stimuli",
       "Changing the wavelength of basilar membrane resonance as the primary route",
       "Switching from rods to cones",
@@ -1430,6 +1509,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     topic: "Peptide Transmitters",
     question: "Neuropeptides usually differ from small transmitters by:",
     options: [
+
       "Slower synthesis/release and longer-range/modulatory actions",
       "Being stored mainly in mitochondria",
       "Opening voltage-gated Na directly often",
@@ -1448,6 +1528,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     topic: "Synaptic Integration",
     question: "Suppose that E_rev for a GABA<sub>A</sub> synapse is near −70 mV at rest, GABA at rest:",
     options: [
+
       "Produces little change in V_m (shunting may still occur)",
       "Often massive hyperpolarization to −90 mV",
       "Depolarizes to E_Na",
@@ -1466,6 +1547,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     topic: "Neuromodulation",
     question: "Dopamine depletion in Parkinson disease mainly affects:",
     options: [
+
       "Basal ganglia circuits for movement initiation and selection",
       "Cochlear inner hair cell transduction",
       "Assigns an unrelated sensory or synaptic mechanism to this context",
@@ -1484,6 +1566,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     topic: "Receptor Types",
     question: "AMPA receptors on hippocampal pyramidal cells usually mediate:",
     options: [
+
       "Fast excitatory postsynaptic currents at many glutamatergic synapses",
       "Slow G-protein inhibitory currents as the primary route",
       "Direct opening of voltage-gated Na⁺ in myelin",
@@ -1505,6 +1588,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Olfactory System",
     question: "In the olfactory system, each olfactory sensory neuron usually expresses:",
     options: [
+
       "Most olfactory receptor genes simultaneously",
       "One functional olfactory receptor gene",
       "Main mechanism: voltage-gated Na⁺ channels and no receptors",
@@ -1523,6 +1607,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Neuroanatomy",
     question: "The corpus callosum mainly connects:",
     options: [
+
       "The spinal cord to the cerebellum (localizes the function to the wrong brain region)",
       "Homologous regions of the left and right cerebral hemispheres",
       "The hippocampus to the hypothalamus as the primary route (localizes the function to the wrong brain region)",
@@ -1541,6 +1626,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Resting Potential",
     question: "At rest, if K⁺ leak conductance dominates, increasing Na⁺ leak conductance would be expected to shift V_m:",
     options: [
+
       "Toward E_Na (less negative)",
       "Toward E_K (more negative)",
       "To exactly 0 mV instantly",
@@ -1559,6 +1645,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Passive Membrane Properties",
     question: "Suppose that λ is short, EPSPs from distal synapses at the axon hillock will be:",
     options: [
+
       "Smaller due to greater attenuation",
       "Larger than proximal EPSPs often",
       "Unchanged regardless of distance",
@@ -1577,10 +1664,11 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Electrical Signaling",
     question: "Suppose that E_ion for a permeant cation is +50 mV and V_m is −70 mV, the driving force for that ion is:",
     options: [
+
       "120 mV inward (V_m − E_ion = −120 mV)",
-      "20 mV outward as the primary route (uses the wrong sign or driving force for ionic current)",
-      "Zero because the cell is at rest (uses the wrong sign or driving force for ionic current)",
-      "50 mV with no direction (uses the wrong sign or driving force for ionic current)",
+      "20 mV outward as the primary route",
+      "Zero because the cell is at rest",
+      "50 mV with no direction",
     ],
     correct: 0,
     explanation: "Driving force is V_m − E_ion; negative values indicate inward current for cations.",
@@ -1595,6 +1683,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Synaptic Integration",
     question: "EPSP amplitude at the soma is reduced for distal synapses mainly due to:",
     options: [
+
       "Passive cable attenuation along dendrites",
       "Complete absence of receptors at distal sites often",
       "Saltatory conduction in dendrites",
@@ -1613,6 +1702,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Auditory System",
     question: "Auditory nerve fibers encode sound intensity mainly through:",
     options: [
+
       "Increased action potential firing rate",
       "Changing the amino acid sequence of rhodopsin",
       "Shifting the visual receptive field center",
@@ -1631,6 +1721,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Resting Potential",
     question: "Suppose that the Na⁺/K⁺ pump rate doubles but relative leak conductances are unchanged, the immediate effect on V_m is:",
     options: [
+
       "Slight hyperpolarization due to electrogenic 3Na⁺/2K⁺ exchange",
       "Immediate depolarization to E_Na",
       "No change because pumps do not affect voltage",
@@ -1649,10 +1740,11 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Passive Membrane Properties",
     question: "Suppose that both R_m and R_i double while C_m is constant, the length constant λ:",
     options: [
+
       "Remains unchanged because λ = √(R_m/R_i)",
-      "Doubles (misstates how R_m, C_m, or geometry set τ or λ)",
-      "Halves (misstates how R_m, C_m, or geometry set τ or λ)",
-      "Becomes zero (misstates how R_m, C_m, or geometry set τ or λ)",
+      "Doubles",
+      "Halves",
+      "Becomes zero",
     ],
     correct: 0,
     explanation: "Proportional changes in R_m and R_i cancel in the ratio under the square root.",
@@ -1667,6 +1759,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Action Potential Propagation",
     question: "Cooling an axon reduces conduction velocity mainly by:",
     options: [
+
       "Slowing voltage-gated channel kinetics and ion diffusion",
       "Increasing myelin thickness",
       "Raising E_Na above +100 mV",
@@ -1685,10 +1778,11 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Electrical Signaling",
     question: "Suppose that V_m is clamped at E_K, the driving force on K⁺ ions is:",
     options: [
+
       "Zero (no net electrochemical driving force)",
-      "Maximal inward (uses the wrong sign or driving force for ionic current)",
-      "Maximal outward often (uses the wrong sign or driving force for ionic current)",
-      "Determined as the primary route by the Na⁺/K⁺ pump (uses the wrong sign or driving force for ionic current)",
+      "Maximal inward",
+      "Maximal outward often",
+      "Determined as the primary route by the Na⁺/K⁺ pump",
     ],
     correct: 0,
     explanation: "When V_m equals E_ion, (V_m − E_ion) = 0 and net ion flux at equilibrium is zero.",
@@ -1703,6 +1797,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Receptor Types",
     question: "GABA<sub>B</sub> receptors inhibit neurons mainly by:",
     options: [
+
       "Opening K⁺ channels via G-proteins and reducing Ca²⁺ channel activity",
       "Producing fast Cl⁻ influx through the same pore as GABA<sub>A</sub> receptors",
       "Opening voltage-gated Na⁺ channels to trigger regenerative spikes",
@@ -1721,6 +1816,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Motor Systems",
     question: "The cerebellum contributes to motor control mainly by:",
     options: [
+
       "Error correction and timing of movements via mossy and climbing fiber input",
       "Transducing odorants in glomeruli (maps the lesion to the wrong motor pathway or reflex)",
       "Encoding color opponency in blobs (maps the lesion to the wrong motor pathway or reflex)",
@@ -1739,6 +1835,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Action Potentials",
     question: "A neuron with reduced Na⁺ channel density would be expected to likely show:",
     options: [
+
       "Higher threshold and slower rising phase",
       "Lower threshold and faster rising phase",
       "No change in excitability",
@@ -1757,6 +1854,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Resting Potential",
     question: "Suppose that a drug doubles K⁺ leak conductance without changing the pump, the new resting potential will:",
     options: [
+
       "Move closer to E_K",
       "Move closer to E_Na",
       "Remain unchanged because the pump sets voltage directly",
@@ -1775,6 +1873,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Resting Potential",
     question: "Suppose that P_Cl increases while E_Cl remains −70 mV and rest is −65 mV, V_m will shift toward:",
     options: [
+
       "E_Cl (more negative)",
       "E_Na primarily",
       "0 mV often",
@@ -1793,6 +1892,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Nernst Equation",
     question: "Halving intracellular Na⁺ while keeping extracellular Na⁺ constant would be expected to make E_Na:",
     options: [
+
       "More positive",
       "More negative (closer to 0 mV)",
       "Exactly 0 mV often",
@@ -1811,6 +1911,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Action Potentials",
     question: "Suppose that voltage-gated K⁺ channels are pharmacologically blocked during a spike, repolarization will:",
     options: [
+
       "Be slowed and the action potential may broaden",
       "Complete instantly with no change",
       "Prevent all Na⁺ channel opening permanently",
@@ -1829,6 +1930,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Action Potential Propagation",
     question: "Suppose that nodes of Ranvier are spaced farther apart in a myelinated axon, conduction velocity typically:",
     options: [
+
       "Increases up to a point because fewer regenerative steps are needed",
       "Decreases to zero often",
       "Is unaffected by internode distance",
@@ -1847,6 +1949,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Synaptic Integration",
     question: "Suppose that EPSPs and IPSPs arrive simultaneously at the axon hillock, the net effect depends on:",
     options: [
+
       "The algebraic sum of depolarizing and hyperpolarizing inputs weighted by timing and location",
       "Main mechanism: the largest EPSP regardless of IPSPs",
       "The myelin thickness primarily",
@@ -1865,6 +1968,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Somatosensation",
     question: "C fibers usually convey:",
     options: [
+
       "Slow pain and temperature (unmyelinated)",
       "Fine discriminative touch with highest conduction velocity",
       "Photons to retinal ganglion cells",
@@ -1883,6 +1987,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Motor Systems",
     question: "Corticospinal tract lesions usually produce:",
     options: [
+
       "Contralateral weakness or paralysis of voluntary movement",
       "Loss of olfactory receptor gene expression",
       "Elimination of all photoreceptor responses",
@@ -1901,6 +2006,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Nernst Equation",
     question: "Suppose that z = +2 for Ca²⁺, a fourfold increase in external Ca²⁺ (fixed internal) changes E_Ca by approximately:",
     options: [
+
       "Applies a peripheral sensory transduction step to unrelated central circuitry",
       "+61 mV",
       "0 mV",
@@ -1919,6 +2025,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Action Potential Propagation",
     question: "Suppose that nodal Na⁺ channel density is halved in a myelinated axon, conduction failure is most likely when:",
     options: [
+
       "Internodal distance is long and passive decay is large",
       "Internodal distance is very short with strong passive spread",
       "The axon is unmyelinated",
@@ -1937,6 +2044,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Synaptic Transmission",
     question: "Suppose that release probability p approaches 1, the coefficient of variation (CV) of EPSC amplitude across trials:",
     options: [
+
       "Decreases toward zero (less trial-to-trial variability)",
       "Increases without bound",
       "Equals p independent of quantal size",
@@ -1955,6 +2063,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Electrical Synapses",
     question: "Suppose that two neurons are coupled by gap junctions, injecting hyperpolarizing current into one will:",
     options: [
+
       "Hyperpolarize the coupled partner (if junction is open)",
       "Depolarize the partner often regardless of polarity",
       "Have no effect because gap junctions are rectifying often",
@@ -1973,6 +2082,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Electrical Signaling",
     question: "Suppose that E_K is −90 mV and V_m is −60 mV, net K⁺ current through open K⁺ channels is:",
     options: [
+
       "Outward (efflux)",
       "Inward (influx)",
       "Zero",
@@ -1991,6 +2101,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Auditory System",
     question: "The lateral superior olive uses interaural level differences mainly for:",
     options: [
+
       "High-frequency localization via intensity cues",
       "Low-frequency phase locking without level",
       "Color processing in V1",
@@ -2009,6 +2120,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Motor Systems",
     question: "Upper motor neurons originate mainly in:",
     options: [
+
       "Motor cortex and brainstem descending tracts",
       "Photoreceptors (maps the lesion to the wrong motor pathway or reflex)",
       "Olfactory bulb mitral cells as the primary route (maps the lesion to the wrong motor pathway or reflex)",
@@ -2027,6 +2139,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Learning & Memory",
     question: "Medial temporal lobe damage producing anterograde amnesia mainly disrupts:",
     options: [
+
       "Forming new declarative/episodic memories",
       "Most procedural skills such as riding a bike",
       "Most sensation including touch",
@@ -2045,6 +2158,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Visual System",
     question: "Retinal ganglion cells encode visual information mainly as:",
     options: [
+
       "Patterns of action potentials sent to the brain",
       "Graded muscle contractions",
       "Continuous DC without spikes",
@@ -2063,6 +2177,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Clinical Correlates",
     question: "Damage to primary visual cortex (V1) usually causes:",
     options: [
+
       "Cortical blindness in corresponding visual field regions",
       "Complete loss of all sensation including touch",
       "Deafness for all frequencies",
@@ -2081,6 +2196,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Visual System",
     question: "Ganglion cells encode visual information mainly as:",
     options: [
+
       "Patterns of action potentials (rate and timing)",
       "Graded muscle contractions",
       "Direct myelin thickness changes",
@@ -2099,6 +2215,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Neuroanatomy",
     question: "White matter mainly contains:",
     options: [
+
       "Myelinated axon tracts",
       "Neuronal cell bodies as the primary route",
       "Photoreceptor layers",
@@ -2117,6 +2234,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Learning & Memory",
     question: "Declarative memory is usually associated with:",
     options: [
+
       "Hippocampus and medial temporal lobe structures",
       "Cerebellar cortex for all memories",
       "Cochlear nucleus primarily",
@@ -2135,6 +2253,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Clinical Correlates",
     question: "Prosopagnosia usually reflects dysfunction in:",
     options: [
+
       "Fusiform face area / ventral visual stream",
       "Cochlear nucleus as the primary route",
       "Stretch reflex arc primarily",

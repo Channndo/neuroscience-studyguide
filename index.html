@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="mcb80x-bank-build" content="20251107i">
+  <meta name="mcb80x-bank-build" content="20251107j">
   <link rel="icon" href="favicon.svg" type="image/svg+xml" sizes="any">
   <link rel="alternate icon" href="favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -3418,22 +3418,22 @@
   </div>
 
   <footer>
-    Fisher-Yates shuffle on every quiz start &middot; HarvardX MCB80x curriculum alignment &middot; bank build 20251107i
+    Fisher-Yates shuffle on every quiz start &middot; HarvardX MCB80x curriculum alignment &middot; bank build 20251107j
     &middot; <button type="button" class="footer-link-btn" id="footer-go-downloads">Downloads</button>
   </footer>
 
-  <script src="explanation-feedback.js?v=20251107i"></script>
-  <script src="questions-bank.js?v=20251107i"></script>
-  <script src="questions-extra-pools.js?v=20251107i"></script>
-  <script src="questions-fresh-pools.js?v=20251107i"></script>
-  <script src="questions-expansion.js?v=20251107i"></script>
-  <script src="questions-exam-paraphrases.js?v=20251107i"></script>
-  <script src="questions-written-final.js?v=20251107i"></script>
-  <script src="questions-proctored-mock.js?v=20251107i"></script>
-  <script src="questions-formula-drills.js?v=20251107i"></script>
-  <script src="questions-pinnacle-megabank.js?v=20251107i"></script>
-  <script src="brain-anatomy-diagrams.js?v=20251107i"></script>
-  <script src="questions-brain-anatomy.js?v=20251107i"></script>
+  <script src="explanation-feedback.js?v=20251107j"></script>
+  <script src="questions-bank.js?v=20251107j"></script>
+  <script src="questions-extra-pools.js?v=20251107j"></script>
+  <script src="questions-fresh-pools.js?v=20251107j"></script>
+  <script src="questions-expansion.js?v=20251107j"></script>
+  <script src="questions-exam-paraphrases.js?v=20251107j"></script>
+  <script src="questions-written-final.js?v=20251107j"></script>
+  <script src="questions-proctored-mock.js?v=20251107j"></script>
+  <script src="questions-formula-drills.js?v=20251107j"></script>
+  <script src="questions-pinnacle-megabank.js?v=20251107j"></script>
+  <script src="brain-anatomy-diagrams.js?v=20251107j"></script>
+  <script src="questions-brain-anatomy.js?v=20251107j"></script>
   <script src="mcb80x-cloud-config.js"></script>
   <script src="sheets-sync.js"></script>
   <script src="oauth-client.js"></script>
@@ -3555,9 +3555,14 @@
       /\s+typical mammalian[^.]*\.?/gi,
       /\s+when temperature is near 37\s*°?C\.?/gi,
       /\s+during normal resting permeability conditions\.?/gi,
+      /^during normal resting permeability conditions\.?$/gi,
+      /\s*\([^)]*ignores which ion dominates[^)]*\)/gi,
+      /\s*\([^)]*misstates how R_m[^)]*\)/gi,
+      /\s*\([^)]*misapplies how active propagation[^)]*\)/gi,
+      /\s*\([^)]*mixes up presynaptic release[^)]*\)/gi,
     ];
     const GIVEAWAY_OPTION_JUNK_RE =
-      /typical mammalian|37\s*°?C|during normal resting permeability|gap junction coupling in a typical/i;
+      /typical mammalian|37\s*°?C|during normal resting permeability|resting permeability conditions|gap junction coupling in a typical|\(ignores which ion dominates/i;
 
     function sanitizeMcqOptionText(opt) {
       let t = String(opt ?? "").trim();

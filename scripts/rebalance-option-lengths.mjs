@@ -34,7 +34,7 @@ const TOPIC_PAD = {
   "Action Potential": "confuses channel gating timing during spike phases",
   "Action Potential Propagation": "misapplies how active propagation uses local circuit currents",
   "Electrical Signaling": "uses the wrong sign or driving force for ionic current",
-  "Resting Potential": "ignores which ion dominates resting permeability",
+  "Resting Potential": "confuses pump maintenance of gradients with instantaneous V_m clamping",
   "Chemical Synapses": "describes the wrong synaptic structure or transmission step",
   "Synaptic Transmission": "mixes up presynaptic release with postsynaptic receptor logic",
   "Synaptic Integration": "ignores how EPSPs/IPSPs sum in time or space",

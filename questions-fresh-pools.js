@@ -5,6 +5,7 @@ const PART1_FRESH_POOL = [
     topic: "Current Clamp",
     question: "During a current-clamp experiment, injecting steady hyperpolarizing current will typically:",
     options: [
+
       "Move V_m away from threshold",
       "Open voltage-gated Na⁺ channels",
       "Eliminate K⁺ leak conductance",
@@ -23,6 +24,7 @@ const PART1_FRESH_POOL = [
     topic: "Pharmacology",
     question: "Tetrodotoxin (TTX) applied to an axon prevents action potentials primarily by:",
     options: [
+
       "Blocking voltage-gated Na⁺ channels",
       "Blocking voltage-gated K⁺ channels",
       "Inhibiting the Na⁺/K⁺ ATPase",
@@ -41,6 +43,7 @@ const PART1_FRESH_POOL = [
     topic: "Nernst Equation",
     question: "If extracellular K⁺ is raised fourfold while intracellular K⁺ is unchanged, E_K shifts approximately:",
     options: [
+
       "~37 mV toward 0 mV (less negative)",
       "~37 mV more negative",
       "To exactly +58 mV",
@@ -59,6 +62,7 @@ const PART1_FRESH_POOL = [
     topic: "Action Potential Propagation",
     question: "Decreasing axon diameter (with myelin unchanged) generally:",
     options: [
+
       "Slows conduction by increasing internal axial resistance",
       "Speeds conduction by shortening λ",
       "Eliminates the need for Na⁺ channels",
@@ -77,10 +81,11 @@ const PART1_FRESH_POOL = [
     topic: "Passive Membrane Properties",
     question: "If τ increases but λ is unchanged, subthreshold signals at the soma will:",
     options: [
+
       "Reach steady deflection more slowly but spread the same distance",
-      "Spread farther along dendrites (misstates how R_m, C_m, or geometry set τ or λ)",
-      "Often trigger full spikes (misstates how R_m, C_m, or geometry set τ or λ)",
-      "No longer decay passively (misstates how R_m, C_m, or geometry set τ or λ)",
+      "Spread farther along dendrites",
+      "Often trigger full spikes",
+      "No longer decay passively",
     ],
     correct: 0,
     explanation: "τ = R_m C_m sets temporal filtering; λ sets spatial spread independently in idealized cable theory.",
@@ -95,6 +100,7 @@ const PART1_FRESH_POOL = [
     topic: "Pharmacology",
     question: "Tetraethylammonium (TEA) is classically used to probe:",
     options: [
+
       "Voltage-gated K⁺ channels",
       "Voltage-gated Na⁺ channels",
       "Nicotinic receptors as the primary route",
@@ -113,6 +119,7 @@ const PART1_FRESH_POOL = [
     topic: "Resting Potential",
     question: "Ouabain inhibits the Na⁺/K⁺ ATPase. Over time this tends to:",
     options: [
+
       "Depolarize the cell as Na⁺ accumulates and K⁺ is lost",
       "Hyperpolarize the cell instantly to E_K",
       "Block all chemical synapses",
@@ -131,6 +138,7 @@ const PART1_FRESH_POOL = [
     topic: "Goldman Equation",
     question: "If P_Cl becomes significant at rest and E_Cl is more negative than V_m, adding Cl⁻ conductance will:",
     options: [
+
       "Tend to hyperpolarize or stabilize V_m toward E_Cl",
       "Often depolarize to E_Na",
       "Have no effect because Cl⁻ is not charged",
@@ -149,6 +157,7 @@ const PART1_FRESH_POOL = [
     topic: "Action Potentials",
     question: "During the relative refractory period, a second stimulus must be:",
     options: [
+
       "Stronger to reach threshold because many Na⁺ channels remain inactivated",
       "Weaker because K⁺ channels are closed",
       "Identical in strength often",
@@ -167,10 +176,11 @@ const PART1_FRESH_POOL = [
     topic: "Electrical Signaling",
     question: "Subthreshold EPSPs decay as they travel toward the soma mainly because of:",
     options: [
+
       "Passive cable properties (leak and axial resistance)",
-      "Active regeneration at many micron (uses the wrong sign or driving force for ionic current)",
-      "Myelin along dendrites (uses the wrong sign or driving force for ionic current)",
-      "Exclusive Na⁺ pump activity (uses the wrong sign or driving force for ionic current)",
+      "Active regeneration at many micron",
+      "Myelin along dendrites",
+      "Exclusive Na⁺ pump activity",
     ],
     correct: 0,
     explanation: "Dendrites lack dense voltage-gated Na⁺ for regeneration; passive decay dominates.",
@@ -185,6 +195,7 @@ const PART1_FRESH_POOL = [
     topic: "Patch Clamp",
     question: "In voltage-clamp mode, the amplifier injects current to:",
     options: [
+
       "Hold membrane voltage at a commanded value",
       "Measure as the primary route resting potential without feedback",
       "Clamp extracellular K⁺ concentration",
@@ -203,6 +214,7 @@ const PART1_FRESH_POOL = [
     topic: "Action Potential Propagation",
     question: "Local anesthetics such as lidocaine block:",
     options: [
+
       "Voltage-gated Na⁺ channels in axons",
       "Metabotropic GABA<sub>B</sub> receptors",
       "Photopigment isomerization",
@@ -221,10 +233,11 @@ const PART1_FRESH_POOL = [
     topic: "Passive Membrane Properties",
     question: "Increasing membrane thickness (more lipid) without changing channel density would tend to:",
     options: [
+
       "Lower capacitance per unit area (C ∝ 1/d) and alter τ depending on R_m",
       "Increase capacitance per unit area and slow voltage responses",
-      "Decrease τ to zero (misstates how R_m, C_m, or geometry set τ or λ)",
-      "Make λ infinite (misstates how R_m, C_m, or geometry set τ or λ)",
+      "Decrease τ to zero",
+      "Make λ infinite",
     ],
     correct: 0,
     explanation: "In the parallel-plate model, thicker membrane (larger d) lowers C per unit area; τ = R_m C_m changes with both R_m and C_m.",
@@ -239,10 +252,11 @@ const PART1_FRESH_POOL = [
     topic: "Electrical Signaling",
     question: "The rheobase of a neuron is:",
     options: [
+
       "The minimum current amplitude needed to reach threshold",
-      "The maximum firing rate in Hz (uses the wrong sign or driving force for ionic current)",
-      "The equilibrium potential for Ca²⁺ (uses the wrong sign or driving force for ionic current)",
-      "The synaptic delay at one synapse (uses the wrong sign or driving force for ionic current)",
+      "The maximum firing rate in Hz",
+      "The equilibrium potential for Ca²⁺",
+      "The synaptic delay at one synapse",
     ],
     correct: 0,
     explanation: "Rheobase quantifies excitability: smallest sustained stimulus that elicits a response.",
@@ -257,6 +271,7 @@ const PART1_FRESH_POOL = [
     topic: "Resting Potential",
     question: "If the cell is permeable only to K⁺ at rest, V_m equals E_K. Adding a small Na⁺ leak without changing pump activity will:",
     options: [
+
       "Make V_m less negative (depolarized relative to E_K)",
       "Make V_m equal E_Na instantly",
       "Hyperpolarize below E_K often",
@@ -275,6 +290,7 @@ const PART1_FRESH_POOL = [
     topic: "Action Potentials",
     question: "After a spike, slow after-hyperpolarization (AHP) is often mediated by:",
     options: [
+
       "Ca²⁺-activated K⁺ channels",
       "Opening of voltage-gated Na⁺ channels",
       "Closing of all leak channels",
@@ -293,10 +309,11 @@ const PART1_FRESH_POOL = [
     topic: "Electrical Signaling",
     question: "An integrator neuron (high τ, high input resistance) is specialized to:",
     options: [
+
       "Sum many small inputs over time before firing",
-      "Fire at maximal rate to every input (uses the wrong sign or driving force for ionic current)",
-      "Conduct saltatory spikes in PNS as the primary route (uses the wrong sign or driving force for ionic current)",
-      "Transduce odorants (uses the wrong sign or driving force for ionic current)",
+      "Fire at maximal rate to every input",
+      "Conduct saltatory spikes in PNS as the primary route",
+      "Transduce odorants",
     ],
     correct: 0,
     explanation: "Long τ and high R_in favor temporal summation of subthreshold inputs.",
@@ -311,6 +328,7 @@ const PART1_FRESH_POOL = [
     topic: "Goldman Equation",
     question: "At a synapse, if only Na⁺ channels open transiently, V_m moves toward:",
     options: [
+
       "The sodium reversal potential (E_Na) while Na⁺ conductance dominates",
       "The potassium reversal potential (E_K) as if K⁺ leak were unchanged",
       "The chloride reversal potential (E_Cl) primarily, ignoring cations",
@@ -329,10 +347,11 @@ const PART1_FRESH_POOL = [
     topic: "Passive Membrane Properties",
     question: "Doubling both R_m and R_i while keeping geometry fixed changes λ such that:",
     options: [
+
       "λ is unchanged (√(R_m/R_i) ratio preserved)",
-      "λ doubles (misstates how R_m, C_m, or geometry set τ or λ)",
-      "λ halves (misstates how R_m, C_m, or geometry set τ or λ)",
-      "λ becomes zero (misstates how R_m, C_m, or geometry set τ or λ)",
+      "λ doubles",
+      "λ halves",
+      "λ becomes zero",
     ],
     correct: 0,
     explanation: "λ = √(R_m/R_i); scaling both by the same factor leaves λ the same.",
@@ -347,6 +366,7 @@ const PART1_FRESH_POOL = [
     topic: "Action Potentials",
     question: "Cooling an axon typically slows conduction because:",
     options: [
+
       "Channel kinetics and ion mobility slow",
       "Myelin is converted to cerebrospinal fluid",
       "Resting potential becomes +40 mV",
@@ -368,6 +388,7 @@ const PART2_FRESH_POOL = [
     topic: "Synaptic Transmission",
     question: "Presynaptic Ca²⁺ entry is critical because it:",
     options: [
+
       "Triggers synaptic vesicle fusion with the active zone membrane",
       "Directly opens postsynaptic AMPA receptors",
       "Hyperpolarizes the axon terminal to rest",
@@ -386,6 +407,7 @@ const PART2_FRESH_POOL = [
     topic: "Receptor Types",
     question: "NMDA receptors show voltage-dependent Mg²⁺ block such that:",
     options: [
+
       "Depolarization relieves block and permits Ca²⁺ influx",
       "Hyperpolarization often opens NMDA maximally",
       "Mg²⁺ acts as a neurotransmitter at NMDA sites",
@@ -404,6 +426,7 @@ const PART2_FRESH_POOL = [
     topic: "Synaptic Plasticity Rules",
     question: "Spike-timing-dependent plasticity (STDP) often strengthens synapses when:",
     options: [
+
       "Presynaptic spikes precede postsynaptic spikes within a narrow window",
       "Postsynaptic spikes often precede presynaptic spikes by seconds",
       "K⁺ channels alone set the photoreceptor resting potential in light",
@@ -422,6 +445,7 @@ const PART2_FRESH_POOL = [
     topic: "Synaptic Transmission",
     question: "Autoreceptors on presynaptic terminals typically:",
     options: [
+
       "Reduce further neurotransmitter release when activated",
       "Increase release without limit",
       "Convert electrical to chemical synapses",
@@ -440,6 +464,7 @@ const PART2_FRESH_POOL = [
     topic: "Chemical Synapses",
     question: "At the neuromuscular junction, acetylcholine acts on:",
     options: [
+
       "Nicotinic ionotropic receptors on muscle endplate",
       "Muscarinic receptors as the primary route on muscle nuclei (describes the wrong synaptic structure or transmission step)",
       "NMDA receptors on motor neurons (describes the wrong synaptic structure or transmission step)",
@@ -458,6 +483,7 @@ const PART2_FRESH_POOL = [
     topic: "Neural Circuits",
     question: "Perisomatic inhibition from basket cells primarily:",
     options: [
+
       "Controls timing and gain of pyramidal output",
       "Transduces light in the retina",
       "Maps sound frequency on basilar membrane",
@@ -476,6 +502,7 @@ const PART2_FRESH_POOL = [
     topic: "Neuromodulation",
     question: "D1-type dopamine receptors are generally:",
     options: [
+
       "Excitatory/modulatory via Gs-linked cAMP increases",
       "Often opening Cl⁻ pores directly",
       "Located mainly in photoreceptor outer segments",
@@ -494,6 +521,7 @@ const PART2_FRESH_POOL = [
     topic: "Synaptic Transmission",
     question: "Endocannabinoids often act as retrograde messengers to:",
     options: [
+
       "Suppress presynaptic release after strong postsynaptic activity",
       "Increase glutamate release unconditionally",
       "Open voltage-gated Na⁺ channels in glia as the primary route",
@@ -512,6 +540,7 @@ const PART2_FRESH_POOL = [
     topic: "Synaptic Transmission",
     question: "The readily releasable pool of vesicles is:",
     options: [
+
       "Docked/primed for fast release upon Ca²⁺ influx",
       "Located mainly in the nucleus",
       "Identical to neurotransmitter transporters",
@@ -530,6 +559,7 @@ const PART2_FRESH_POOL = [
     topic: "Chemical Synapses",
     question: "Co-transmission refers to:",
     options: [
+
       "Release of multiple neuroactive substances from one neuron",
       "Main mechanism: electrical coupling via gap junctions (describes the wrong synaptic structure or transmission step)",
       "A single receptor type for all transmitters (describes the wrong synaptic structure or transmission step)",
@@ -548,6 +578,7 @@ const PART2_FRESH_POOL = [
     topic: "Neural Circuits",
     question: "Feedback inhibition differs from feedforward inhibition because feedback:",
     options: [
+
       "Acts on an element earlier in the same pathway after it fired",
       "Requires occurs in the olfactory bulb",
       "Rod outer segments generate all-or-none spikes in darkness",
@@ -566,6 +597,7 @@ const PART2_FRESH_POOL = [
     topic: "Second Messengers",
     question: "Phospholipase C activation produces IP₃ and DAG; IP₃ primarily:",
     options: [
+
       "Releases Ca²⁺ from intracellular stores",
       "Opens nicotinic receptors",
       "Hydrolyzes cAMP",
@@ -584,6 +616,7 @@ const PART2_FRESH_POOL = [
     topic: "Synaptic Integration",
     question: "Divisive normalization in cortex can be implemented by:",
     options: [
+
       "Inhibitory interneurons scaling responses relative to local activity",
       "Removing all Na⁺ channels",
       "Increasing myelin on dendrites",
@@ -602,6 +635,7 @@ const PART2_FRESH_POOL = [
     topic: "Receptor Types",
     question: "Allosteric modulators of GABA<sub>A</sub> receptors (e.g., benzodiazepines) typically:",
     options: [
+
       "Enhance GABA binding or channel opening probability",
       "Block GABA synthesis in presynaptic terminals",
       "Open NMDA receptors instead",
@@ -620,6 +654,7 @@ const PART2_FRESH_POOL = [
     topic: "Synaptic Transmission",
     question: "Synaptotagmin acts as a Ca²⁺ sensor for exocytosis because it:",
     options: [
+
       "Binds Ca²⁺ and helps trigger SNARE-mediated fusion",
       "Pumps ACh into vesicles",
       "Is a glutamate receptor subunit",
@@ -638,6 +673,7 @@ const PART2_FRESH_POOL = [
     topic: "Neuromodulation",
     question: "Neuropeptides compared to small-molecule transmitters often:",
     options: [
+
       "Diffuse more slowly over longer distances and modulate on slower timescales",
       "Are stored mainly in mitochondria",
       "Cannot affect ion channels indirectly",
@@ -656,6 +692,7 @@ const PART2_FRESH_POOL = [
     topic: "Neural Circuits",
     question: "Winner-take-all dynamics in a recurrent inhibitory network can:",
     options: [
+
       "Sharpen selection of one active representation",
       "Eliminate all firing permanently",
       "Convert chemical synapses to electrical as the primary route",
@@ -674,6 +711,7 @@ const PART2_FRESH_POOL = [
     topic: "Synaptic Integration",
     question: "An IPSP arriving at the axon initial segment is especially effective because:",
     options: [
+
       "It directly opposes spike initiation where Na⁺ density is high",
       "It as the primary route affects photoreceptors",
       "It blocks the Na⁺/K⁺ pump primarily",
@@ -695,6 +733,7 @@ const PART3_FRESH_POOL = [
     topic: "Visual System",
     question: "Magnocellular (M) retinal ganglion cells compared to parvocellular (P) cells typically:",
     options: [
+
       "Respond with transient/larger receptive fields and prefer motion/contrast",
       "Mediate fine color and high spatial acuity primarily",
       "Lack any axonal projection to the brain",
@@ -713,6 +752,7 @@ const PART3_FRESH_POOL = [
     topic: "Visual System",
     question: "Orientation selectivity in primary visual cortex arises largely from:",
     options: [
+
       "Specific arrangements of thalamic inputs and intracortical inhibition",
       "Random wiring without structure",
       "Cochlear tonotopy",
@@ -731,6 +771,7 @@ const PART3_FRESH_POOL = [
     topic: "Executive Function",
     question: "Working memory tasks often engage prefrontal cortex because it:",
     options: [
+
       "Maintains and manipulates information during delay periods",
       "Transduces sound in the cochlea",
       "Generates cerebrospinal fluid as the primary route",
@@ -749,6 +790,7 @@ const PART3_FRESH_POOL = [
     topic: "Cerebellum",
     question: "Long-term depression (LTD) at cerebellar parallel fiber–Purkinje synapses is often induced by:",
     options: [
+
       "Sustained low-frequency stimulation paired with climbing fiber input",
       "Single action potential as the primary route",
       "Blocking all Ca²⁺ signaling",
@@ -767,6 +809,7 @@ const PART3_FRESH_POOL = [
     topic: "Motor Systems",
     question: "Cerebellar output helps correct movement errors by comparing:",
     options: [
+
       "Predicted vs. actual sensory consequences of actions",
       "Main mechanism: olfactory input to glomeruli (maps the lesion to the wrong motor pathway or reflex)",
       "Photopigment bleaching rates (maps the lesion to the wrong motor pathway or reflex)",
@@ -785,6 +828,7 @@ const PART3_FRESH_POOL = [
     topic: "Emotion & Memory",
     question: "Amygdala activation during fear conditioning strongly associates:",
     options: [
+
       "Neutral cues with aversive outcomes",
       "Color opponency in V1 as the primary route",
       "Basilar membrane stiffness alone",
@@ -803,6 +847,7 @@ const PART3_FRESH_POOL = [
     topic: "Sleep & Memory",
     question: "Slow-wave sleep is thought to support memory consolidation partly by:",
     options: [
+
       "Replaying and transferring hippocampal patterns to cortex",
       "Eliminating Many synapses formed during the day",
       "Blocking all thalamic input permanently",
@@ -821,6 +866,7 @@ const PART3_FRESH_POOL = [
     topic: "Language",
     question: "Broca's area damage classically produces:",
     options: [
+
       "Nonfluent speech with relatively preserved comprehension",
       "Complete loss of all language comprehension as the primary route",
       "Blindness in both visual fields",
@@ -839,6 +885,7 @@ const PART3_FRESH_POOL = [
     topic: "Learning & Memory",
     question: "Place cells in hippocampus fire when:",
     options: [
+
       "The animal occupies specific locations in an environment",
       "Requires during REM sleep without locomotion",
       "Odorants bind olfactory receptors",
@@ -857,6 +904,7 @@ const PART3_FRESH_POOL = [
     topic: "Neuroimaging",
     question: "BOLD fMRI signal indirectly reflects:",
     options: [
+
       "Local changes in blood oxygenation coupled to neural activity",
       "Direct measurement of every synaptic vesicle fusion",
       "Static anatomy without physiology",
@@ -875,6 +923,7 @@ const PART3_FRESH_POOL = [
     topic: "Motor Systems",
     question: "Upper motor neuron lesions (e.g., corticospinal) often cause:",
     options: [
+
       "Spasticity and hyperreflexia with weakness",
       "Immediate flaccid paralysis as the primary route without hyperreflexia often",
       "Loss of all sensation including touch often",
@@ -893,6 +942,7 @@ const PART3_FRESH_POOL = [
     topic: "Sensory Systems",
     question: "Receptive field surround antagonism in vision helps:",
     options: [
+
       "Enhance edges and contrast via lateral inhibition",
       "Eliminate all rod function",
       "Map frequency in the cochlea",
@@ -911,6 +961,7 @@ const PART3_FRESH_POOL = [
     topic: "Neuroanatomy",
     question: "The thalamus functions largely as:",
     options: [
+
       "A gateway relaying and modulating sensory/motor information to cortex",
       "The primary site of cerebrospinal fluid production as the primary route",
       "Exclusive storage of long-term motor skills without relay",
@@ -929,6 +980,7 @@ const PART3_FRESH_POOL = [
     topic: "Learning & Memory",
     question: "Anterograde amnesia after hippocampal damage means:",
     options: [
+
       "Inability to form new declarative memories after injury",
       "Loss of all procedural skills including riding a bike",
       "Complete elimination of sensation",
@@ -947,6 +999,7 @@ const PART3_FRESH_POOL = [
     topic: "Auditory System",
     question: "Phase locking in auditory nerve fibers supports:",
     options: [
+
       "Encoding low-frequency pitch via precise spike timing",
       "Color vision in the fovea",
       "Olfactory combinatorial coding as the primary route",
@@ -965,6 +1018,7 @@ const PART3_FRESH_POOL = [
     topic: "Clinical Correlates",
     question: "Parkinson disease motor symptoms relate especially to loss of:",
     options: [
+
       "Dopaminergic neurons in substantia nigra pars compacta",
       "Photoreceptors in the retina",
       "Most Purkinje cells instantly",
@@ -983,6 +1037,7 @@ const PART3_FRESH_POOL = [
     topic: "Learning & Memory",
     question: "Protein synthesis blockers after training impair:",
     options: [
+
       "Long-term but not early short-term memory in many paradigms",
       "Immediate reflexes as the primary route",
       "Dark current in rods as the primary route",
@@ -1001,6 +1056,7 @@ const PART3_FRESH_POOL = [
     topic: "Neuroanatomy",
     question: "The blood–brain barrier limits passage of:",
     options: [
+
       "Many large/polar molecules while allowing some regulated transport",
       "Most ions including O₂ and CO₂ equally (localizes the function to the wrong brain region)",
       "Main mechanism: neurotransmitters synthesized in muscle (localizes the function to the wrong brain region)",
@@ -1022,6 +1078,7 @@ const PART1_FRESH_POOL_2 = [
     topic: "Goldman Equation",
     question: "If P_K >> P_Na at rest and P_Cl is negligible, increasing P_Na slightly will:",
     options: [
+
       "Depolarize V_m toward E_Na",
       "Hyperpolarize to E_K instantly",
       "Fix V_m at 0 mV often",
@@ -1040,6 +1097,7 @@ const PART1_FRESH_POOL_2 = [
     topic: "Nernst Equation",
     question: "For a cation with higher concentration inside than outside, E_ion is typically:",
     options: [
+
       "Negative (inside negative relative to outside at equilibrium)",
       "Often +60 mV",
       "Zero regardless of charge",
@@ -1058,6 +1116,7 @@ const PART1_FRESH_POOL_2 = [
     topic: "Passive Membrane Properties",
     question: "Increasing membrane leak conductance (lower R_m) while C_m is fixed:",
     options: [
+
       "Decreases τ and shortens λ",
       "Increases τ and λ without limit",
       "Blocks action potentials by opening Na channels",
@@ -1076,6 +1135,7 @@ const PART1_FRESH_POOL_2 = [
     topic: "Action Potentials",
     question: "The upstroke threshold is reached when:",
     options: [
+
       "Inward current exceeds outward current net positive feedback",
       "K⁺ channels fully close permanently",
       "Myelin is removed",
@@ -1094,6 +1154,7 @@ const PART1_FRESH_POOL_2 = [
     topic: "Action Potential Propagation",
     question: "In unmyelinated axons, conduction velocity increases with:",
     options: [
+
       "Larger diameter (lower internal resistance)",
       "Smaller diameter often",
       "Removing all Na⁺ channels",
@@ -1112,6 +1173,7 @@ const PART1_FRESH_POOL_2 = [
     topic: "Electrical Signaling",
     question: "An EPSP recorded at the soma from a distal dendrite is smaller than at the site of input because of:",
     options: [
+
       "Passive attenuation along dendrites",
       "Active amplification at many spine",
       "Saltatory conduction in dendrites",
@@ -1130,6 +1192,7 @@ const PART1_FRESH_POOL_2 = [
     topic: "Resting Potential",
     question: "The Na⁺/K⁺ pump is electrogenic because it:",
     options: [
+
       "Transports unequal charge (3 Na⁺ out, 2 K⁺ in per cycle)",
       "Opens voltage-gated channels",
       "Is the sole determinant of V_m without leaks",
@@ -1148,6 +1211,7 @@ const PART1_FRESH_POOL_2 = [
     topic: "Channel Gating",
     question: "Voltage-gated Na⁺ channel inactivation gates close during:",
     options: [
+
       "The peak/plateau of the spike",
       "Rest as the primary route",
       "Hyperpolarization below E_K as the primary route",
@@ -1166,6 +1230,7 @@ const PART1_FRESH_POOL_2 = [
     topic: "Pharmacology",
     question: "TTX sensitivity indicates dependence on:",
     options: [
+
       "Voltage-gated Na⁺ channels",
       "Nicotinic ACh receptors",
       "Photopigment activation",
@@ -1184,6 +1249,7 @@ const PART1_FRESH_POOL_2 = [
     topic: "Patch Clamp",
     question: "Whole-cell patch clamp dialyzes the interior of the cell, which can:",
     options: [
+
       "Wash out second messengers and dialyzable factors over time",
       "Permanently myelinate the axon",
       "Replace synaptic vesicles",
@@ -1202,6 +1268,7 @@ const PART1_FRESH_POOL_2 = [
     topic: "Quantitative Physiology",
     question: "If E_K = -80 mV and E_Na = +60 mV, V_m at rest near -65 mV implies:",
     options: [
+
       "Resting permeability is dominated by K⁺ with some Na⁺ leak",
       "Requires na⁺ channels are open",
       "V_m equals E_Na",
@@ -1220,6 +1287,7 @@ const PART1_FRESH_POOL_2 = [
     topic: "Ion Selectivity",
     question: "The Na⁺ channel selectivity filter favors Na⁺ over K⁺ partly because:",
     options: [
+
       "Smaller dehydrated Na⁺ fits the pore geometry better than K⁺",
       "Na⁺ is negatively charged",
       "K⁺ is impermeant in all channels",
@@ -1238,6 +1306,7 @@ const PART1_FRESH_POOL_2 = [
     topic: "Equilibrium vs Steady State",
     question: "At the ion equilibrium potential, net electrodiffusive flux of that ion is:",
     options: [
+
       "Zero",
       "Maximal outward often",
       "Equal to pump flux often",
@@ -1256,6 +1325,7 @@ const PART1_FRESH_POOL_2 = [
     topic: "Axon Initial Segment",
     question: "High density of voltage-gated Na⁺ at the AIS serves to:",
     options: [
+
       "Lower threshold for spike initiation and regulate backpropagation",
       "Transduce odorants",
       "Generate EPSPs as the primary route",
@@ -1274,6 +1344,7 @@ const PART1_FRESH_POOL_2 = [
     topic: "Experimental Methods",
     question: "Replacing extracellular Na⁺ with impermeant cation during voltage clamp typically:",
     options: [
+
       "Reduces inward Na⁺ current during depolarizing steps",
       "Increases Na⁺ current",
       "Blocks K⁺ leak as the primary route",
@@ -1292,6 +1363,7 @@ const PART1_FRESH_POOL_2 = [
     topic: "Dendritic Integration",
     question: "Passive dendrites act as:",
     options: [
+
       "Low-pass filters attenuating high-frequency inputs",
       "Perfect amplifiers of all frequencies",
       "Myelinated conductors as the primary route",
@@ -1310,6 +1382,7 @@ const PART1_FRESH_POOL_2 = [
     topic: "Membrane Biophysics",
     question: "Specific membrane resistance R_m has units conceptually of:",
     options: [
+
       "Ohm·cm² (resistance times area)",
       "Farads per second as the primary route",
       "Meters per volt",
@@ -1328,6 +1401,7 @@ const PART1_FRESH_POOL_2 = [
     topic: "Action Potentials",
     question: "Afterchannel block of delayed rectifier K⁺ would:",
     options: [
+
       "Prolong repolarization and broaden spikes",
       "Prevent Na⁺ influx",
       "Eliminate resting potential",
@@ -1346,6 +1420,7 @@ const PART1_FRESH_POOL_2 = [
     topic: "Action Potential Propagation",
     question: "When an action potential reaches a cut axon terminal (open end), active propagation:",
     options: [
+
       "Fails at the discontinuity; the spike does not reflect back along the axon",
       "Reflects like a cable and travels backward with full amplitude",
       "Jumps to dendrites without voltage-gated channels",
@@ -1364,10 +1439,11 @@ const PART1_FRESH_POOL_2 = [
     topic: "Electrical Signaling",
     question: "Current divided between capacitive and resistive paths at step onset reflects:",
     options: [
+
       "I_C = C dV/dt charging the membrane",
-      "Main mechanism: pump activity (uses the wrong sign or driving force for ionic current)",
-      "Saltatory conduction (uses the wrong sign or driving force for ionic current)",
-      "Glial phagocytosis (uses the wrong sign or driving force for ionic current)",
+      "Main mechanism: pump activity",
+      "Saltatory conduction",
+      "Glial phagocytosis",
     ],
     correct: 0,
     explanation: "Early current charges C_m before steady leak dominates.",
@@ -1382,6 +1458,7 @@ const PART1_FRESH_POOL_2 = [
     topic: "Goldman Equation",
     question: "Adding Cl- conductance when E_Cl is below V_m tends to:",
     options: [
+
       "Hyperpolarize or stabilize V_m toward E_Cl",
       "Depolarize to E_Na often",
       "Have no effect",
@@ -1400,6 +1477,7 @@ const PART1_FRESH_POOL_2 = [
     topic: "Nernst Equation",
     question: "Temperature increase in the Nernst relation (other factors fixed) changes E_ion magnitude:",
     options: [
+
       "Slightly (proportionally to absolute temperature in RT/F)",
       "Not at all",
       "Often to zero",
@@ -1418,10 +1496,11 @@ const PART1_FRESH_POOL_2 = [
     topic: "Passive Membrane Properties",
     question: "Space clamp in experiments aims to:",
     options: [
+
       "Make V_m uniform along a long process for accurate voltage clamp",
-      "Increase λ indefinitely (misstates how R_m, C_m, or geometry set τ or λ)",
-      "Block synapses as the primary route (misstates how R_m, C_m, or geometry set τ or λ)",
-      "Measure smell intensity (misstates how R_m, C_m, or geometry set τ or λ)",
+      "Increase λ indefinitely",
+      "Block synapses as the primary route",
+      "Measure smell intensity",
     ],
     correct: 0,
     explanation: "Space clamp reduces axial voltage gradients.",
@@ -1436,6 +1515,7 @@ const PART1_FRESH_POOL_2 = [
     topic: "Pharmacology",
     question: "Lidocaine use-dependence means block is stronger when:",
     options: [
+
       "Channels open frequently during firing",
       "Cell is hyperpolarized at rest as the primary route",
       "Myelin is thick",
@@ -1454,6 +1534,7 @@ const PART1_FRESH_POOL_2 = [
     topic: "Current Clamp",
     question: "Zero net current injection in current clamp at rest records:",
     options: [
+
       "Resting potential",
       "E_Na directly",
       "Synaptic cleft width",
@@ -1475,6 +1556,7 @@ const PART2_FRESH_POOL_2 = [
     topic: "Chemical Synapses",
     question: "Synaptic delay (≈0.5–2 ms) is largely due to:",
     options: [
+
       "Ca2+ influx and vesicle fusion kinetics",
       "Action potential travel in myelin as the primary route",
       "DNA transcription (describes the wrong synaptic structure or transmission step)",
@@ -1493,6 +1575,7 @@ const PART2_FRESH_POOL_2 = [
     topic: "Synaptic Transmission",
     question: "Quantal analysis estimates release probability from:",
     options: [
+
       "Distribution of EPSP amplitudes (multiples of mEPSP size)",
       "Muscle stretch",
       "Retinal dark current",
@@ -1511,6 +1594,7 @@ const PART2_FRESH_POOL_2 = [
     topic: "Receptor Types",
     question: "AMPA receptors at many central synapses are permeable to:",
     options: [
+
       "Na+ and K+ (non-selective cation)",
       "Cl- as the primary route",
       "Ca2+ primarily often",
@@ -1529,6 +1613,7 @@ const PART2_FRESH_POOL_2 = [
     topic: "Receptor Types",
     question: "GABA<sub>A</sub> receptors are:",
     options: [
+
       "Ligand-gated Cl- channels (usually inhibitory)",
       "Metabotropic as the primary route",
       "Voltage-gated Na channels",
@@ -1547,6 +1632,7 @@ const PART2_FRESH_POOL_2 = [
     topic: "Second Messengers",
     question: "cAMP produced by adenylyl cyclase can:",
     options: [
+
       "Activate PKA to phosphorylate channels and enzymes",
       "Directly open nicotinic receptors",
       "Replace SNARE proteins",
@@ -1565,6 +1651,7 @@ const PART2_FRESH_POOL_2 = [
     topic: "Synaptic Integration",
     question: "Coincidence detection (e.g., NMDA) requires:",
     options: [
+
       "Depolarization plus glutamate binding to relieve Mg2+ block",
       "Main mechanism: hyperpolarization",
       "Main mechanism: gABA",
@@ -1583,6 +1670,7 @@ const PART2_FRESH_POOL_2 = [
     topic: "Neural Circuits",
     question: "Feedforward inhibition can:",
     options: [
+
       "Limit spread of excitation and sharpen timing",
       "Eliminate all inhibition",
       "Replace electrical synapses globally",
@@ -1601,6 +1689,7 @@ const PART2_FRESH_POOL_2 = [
     topic: "Electrical Synapses",
     question: "Electrical coupling allows:",
     options: [
+
       "Rapid synchrony and shared subthreshold signals",
       "Vesicle fusion without Ca2+",
       "Phototransduction",
@@ -1619,6 +1708,7 @@ const PART2_FRESH_POOL_2 = [
     topic: "Synaptic Vesicles",
     question: "Vesicular transporters load:",
     options: [
+
       "Neurotransmitter into vesicles against gradient (using H+ gradient)",
       "Na+ into nucleus",
       "Rhodopsin into spines",
@@ -1637,6 +1727,7 @@ const PART2_FRESH_POOL_2 = [
     topic: "Short-Term Plasticity",
     question: "Synaptic depression after high-frequency trains often reflects:",
     options: [
+
       "Depletion of readily releasable vesicles",
       "Persistent loss of DNA",
       "Myelin thinning",
@@ -1655,6 +1746,7 @@ const PART2_FRESH_POOL_2 = [
     topic: "Long-Term Plasticity",
     question: "NMDA receptor-dependent LTP induction classically requires:",
     options: [
+
       "Postsynaptic depolarization sufficient to unblock NMDA and Ca2+ entry",
       "Main mechanism: presynaptic GABA (states the wrong induction requirement for LTP/LTD)",
       "Main mechanism: hyperpolarization (states the wrong induction requirement for LTP/LTD)",
@@ -1673,6 +1765,7 @@ const PART2_FRESH_POOL_2 = [
     topic: "Synaptic Plasticity Rules",
     question: "Homosynaptic LTD can be induced by:",
     options: [
+
       "Prolonged low-frequency stimulation at the synapse",
       "Single photon absorption",
       "Muscle spindle stretch as the primary route",
@@ -1691,6 +1784,7 @@ const PART2_FRESH_POOL_2 = [
     topic: "Neuromuscular Junction",
     question: "End-plate potential is:",
     options: [
+
       "Graded depolarization from ACh",
       "Often hyperpolarizing",
       "A photoreceptor signal",
@@ -1709,6 +1803,7 @@ const PART2_FRESH_POOL_2 = [
     topic: "Co-transmission",
     question: "A neuron releasing both glutamate and neuropeptide Y will:",
     options: [
+
       "Act on fast ionotropic and slower modulatory targets",
       "Requires signal via gap junctions",
       "Requires affect retina",
@@ -1727,6 +1822,7 @@ const PART2_FRESH_POOL_2 = [
     topic: "Drug Effects",
     question: "Benzodiazepines enhance GABAergic inhibition by:",
     options: [
+
       "Positive allosteric modulation of GABA<sub>A</sub> receptors",
       "Blocking glutamate synthesis",
       "Opening NMDA maximally",
@@ -1745,6 +1841,7 @@ const PART2_FRESH_POOL_2 = [
     topic: "Retrograde Signaling",
     question: "Nitric oxide (NO) as a retrograde messenger:",
     options: [
+
       "Diffuses from postsynaptic sites to modulate presynaptic release",
       "Is stored mainly in muscle spindles",
       "Uses steady-state Nernst for one ion while multiple conductances change in time",
@@ -1763,6 +1860,7 @@ const PART2_FRESH_POOL_2 = [
     topic: "Excitatory-Inhibitory Balance",
     question: "E/I imbalance in cortex is implicated in:",
     options: [
+
       "Epilepsy and some psychiatric phenotypes",
       "Requires cochlear tuning",
       "Requires rod dark current",
@@ -1781,6 +1879,7 @@ const PART2_FRESH_POOL_2 = [
     topic: "Synaptic Anatomy",
     question: "Active zone proteins organize:",
     options: [
+
       "Vesicle docking and Ca2+ channel coupling for release",
       "Photoreceptor disks",
       "Cochlear basilar stiffness",
@@ -1799,6 +1898,7 @@ const PART2_FRESH_POOL_2 = [
     topic: "Circuit Modulation",
     question: "Acetylcholine via muscarinic receptors often:",
     options: [
+
       "Slows K+ channels or alters cAMP, changing excitability",
       "Directly opens photopigment",
       "Forms the blood-brain barrier",
@@ -1817,6 +1917,7 @@ const PART2_FRESH_POOL_2 = [
     topic: "Peptide Transmitters",
     question: "Neuropeptides typically differ from small transmitters by:",
     options: [
+
       "Slower synthesis/release and longer-range/modulatory actions",
       "Being stored mainly in mitochondria",
       "Opening voltage-gated Na directly often",
@@ -1835,6 +1936,7 @@ const PART2_FRESH_POOL_2 = [
     topic: "Synaptic Transmission",
     question: "Desensitization of ionotropic receptors reduces:",
     options: [
+
       "Response despite agonist still bound",
       "Resting K+ leak as the primary route",
       "Myelin thickness",
@@ -1853,6 +1955,7 @@ const PART2_FRESH_POOL_2 = [
     topic: "Neural Circuits",
     question: "Recurrent excitatory networks can:",
     options: [
+
       "Amplify activity but risk runaway unless balanced by inhibition",
       "Seldom show oscillations",
       "Uses steady-state Nernst for one ion while multiple conductances change in time",
@@ -1874,6 +1977,7 @@ const PART3_FRESH_POOL_2 = [
     topic: "Phototransduction",
     question: "Photoreceptors hyperpolarize to light because:",
     options: [
+
       "cGMP drops and cGMP-gated channels close",
       "Na+ channels open maximally",
       "Myelin is added",
@@ -1892,6 +1996,7 @@ const PART3_FRESH_POOL_2 = [
     topic: "Retinal Circuitry",
     question: "OFF bipolar cells respond to light with:",
     options: [
+
       "Hyperpolarization",
       "Often depolarization like ON cells",
       "Muscle contraction",
@@ -1910,6 +2015,7 @@ const PART3_FRESH_POOL_2 = [
     topic: "Visual Cortex",
     question: "Ocular dominance columns reflect:",
     options: [
+
       "Binocular input segregation that can be shaped by experience",
       "Random wiring without use",
       "Requires olfactory maps",
@@ -1928,6 +2034,7 @@ const PART3_FRESH_POOL_2 = [
     topic: "Auditory Pathway",
     question: "Interaural time differences are useful for:",
     options: [
+
       "Localizing low-frequency sounds",
       "Color vision",
       "Taste umami",
@@ -1946,6 +2053,7 @@ const PART3_FRESH_POOL_2 = [
     topic: "Auditory System",
     question: "Outer hair cells in cochlea contribute to:",
     options: [
+
       "Active amplification (cochlear amplifier)",
       "Phototransduction",
       "NMJ transmission",
@@ -1964,6 +2072,7 @@ const PART3_FRESH_POOL_2 = [
     topic: "Vestibular System",
     question: "Otolith organs detect:",
     options: [
+
       "Linear acceleration and head tilt (gravity)",
       "Requires angular acceleration",
       "Odor concentration",
@@ -1982,6 +2091,7 @@ const PART3_FRESH_POOL_2 = [
     topic: "Somatosensation",
     question: "Dorsal column–medial lemniscus pathway carries:",
     options: [
+
       "Fine touch, vibration, proprioception to cortex",
       "Requires pain via spinothalamic",
       "Implies myelin alone sets spike threshold without voltage-gated channels",
@@ -2000,6 +2110,7 @@ const PART3_FRESH_POOL_2 = [
     topic: "Pain",
     question: "Spinothalamic tract carries:",
     options: [
+
       "Pain and temperature to thalamus",
       "Requires proprioception",
       "Requires vision",
@@ -2018,6 +2129,7 @@ const PART3_FRESH_POOL_2 = [
     topic: "Olfactory System",
     question: "Odor identity is encoded by:",
     options: [
+
       "Combinatorial receptor activation across glomeruli",
       "Single receptor for all odors",
       "Cochlear tonotopy",
@@ -2036,6 +2148,7 @@ const PART3_FRESH_POOL_2 = [
     topic: "Gustation",
     question: "Sour taste often involves:",
     options: [
+
       "Acid sensing",
       "Rhodopsin activation",
       "Hair cell tip links",
@@ -2054,6 +2167,7 @@ const PART3_FRESH_POOL_2 = [
     topic: "Motor Systems",
     question: "Upper motor neurons originate primarily in:",
     options: [
+
       "Motor cortex and brainstem descending tracts",
       "Photoreceptors (maps the lesion to the wrong motor pathway or reflex)",
       "Olfactory bulb mitral cells as the primary route (maps the lesion to the wrong motor pathway or reflex)",
@@ -2072,6 +2186,7 @@ const PART3_FRESH_POOL_2 = [
     topic: "Basal Ganglia",
     question: "Direct pathway in basal ganglia tends to:",
     options: [
+
       "Facilitate movement by disinhibiting thalamus",
       "Stop all movement permanently often",
       "Transduce sound",
@@ -2090,6 +2205,7 @@ const PART3_FRESH_POOL_2 = [
     topic: "Cerebellum",
     question: "Climbing fibers to Purkinje cells often signal:",
     options: [
+
       "Error or unexpected events in motor learning",
       "Color opponency",
       "Odor identity alone",
@@ -2108,6 +2224,7 @@ const PART3_FRESH_POOL_2 = [
     topic: "Hippocampus",
     question: "Pattern separation in dentate gyrus helps:",
     options: [
+
       "Distinguish similar memories/contexts",
       "Transduce photons",
       "Amplify cochlea as the primary route",
@@ -2126,6 +2243,7 @@ const PART3_FRESH_POOL_2 = [
     topic: "Learning & Memory",
     question: "Systems consolidation proposes:",
     options: [
+
       "Gradual transfer of memory traces from hippocampus to cortex",
       "Instant permanent hippocampal-dominated storage",
       "No role for sleep",
@@ -2144,6 +2262,7 @@ const PART3_FRESH_POOL_2 = [
     topic: "Language",
     question: "Wernicke's area damage often impairs:",
     options: [
+
       "Language comprehension while speech may remain fluent but empty",
       "Motor output of speech often",
       "Vision in both fields",
@@ -2162,6 +2281,7 @@ const PART3_FRESH_POOL_2 = [
     topic: "Neuroanatomy",
     question: "CSF is produced mainly by:",
     options: [
+
       "Choroid plexus epithelium",
       "Photoreceptor outer segments",
       "NMJ",
@@ -2180,6 +2300,7 @@ const PART3_FRESH_POOL_2 = [
     topic: "Thalamus",
     question: "Thalamic reticular nucleus provides:",
     options: [
+
       "Inhibitory gating of thalamocortical relay",
       "Excitatory drive to photoreceptors",
       "Cochlear amplification",
@@ -2198,6 +2319,7 @@ const PART3_FRESH_POOL_2 = [
     topic: "Clinical Correlates",
     question: "Multiple sclerosis symptoms relate to:",
     options: [
+
       "Demyelination slowing/failing conduction in CNS pathways",
       "Requires peripheral NMJ block",
       "Loss of taste buds as the primary route",
@@ -2216,6 +2338,7 @@ const PART3_FRESH_POOL_2 = [
     topic: "Sensory Systems",
     question: "Sensory adaptation reduces:",
     options: [
+
       "Response to maintained constant stimuli",
       "Most pain permanently",
       "Need for receptors",
@@ -2234,6 +2357,7 @@ const PART3_FRESH_POOL_2 = [
     topic: "Sleep & Memory",
     question: "Hippocampal sharp-wave ripples occur often during:",
     options: [
+
       "Slow-wave sleep and quiet rest, supporting replay",
       "Requires deep anesthesia without neural activity",
       "Requires phototransduction",
@@ -2252,6 +2376,7 @@ const PART3_FRESH_POOL_2 = [
     topic: "Emotion & Memory",
     question: "Flashbulb memories illustrate:",
     options: [
+
       "Vivid episodic memories for emotionally salient events",
       "Procedural skill learning as the primary route",
       "Cochlear phase locking",
@@ -2270,6 +2395,7 @@ const PART3_FRESH_POOL_2 = [
     topic: "Executive Function",
     question: "Task switching costs reflect:",
     options: [
+
       "Executive control overhead when changing rules/context",
       "Purely sensory adaptation",
       "Myelin thickness as the primary route",
@@ -2288,6 +2414,7 @@ const PART3_FRESH_POOL_2 = [
     topic: "Neuroimaging",
     question: "EEG compared to fMRI has:",
     options: [
+
       "Higher temporal resolution but poorer spatial localization generally",
       "Perfect single-cell spatial resolution often",
       "No relation to neural activity",
