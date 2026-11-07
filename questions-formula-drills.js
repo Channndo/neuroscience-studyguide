@@ -586,7 +586,7 @@ const FORMULA_DRILL_POOL = [
     correct: 0,
     formulaHint: "Use: τ = R_m · C_m  and  steady V = I · R_in",
     formulaSteps: [
-      "Use τ = R_m C_m, V = I R, or λ = √(R_m/R_i).",
+      "Use τ = R_m · C_m, steady V = I · R, and λ = √(R_m / R_i).",
       "Track which parameter changed."
     ],
     explanation: "Doubles.",
@@ -610,7 +610,7 @@ const FORMULA_DRILL_POOL = [
     correct: 0,
     formulaHint: "Use: τ = R_m · C_m  and  steady V = I · R_in",
     formulaSteps: [
-      "Use τ = R_m C_m, V = I R, or λ = √(R_m/R_i).",
+      "Use τ = R_m · C_m, steady V = I · R, and λ = √(R_m / R_i).",
       "Track which parameter changed."
     ],
     explanation: "Doubles.",
@@ -634,7 +634,7 @@ const FORMULA_DRILL_POOL = [
     correct: 0,
     formulaHint: "Use: λ = √(R_m / R_i)",
     formulaSteps: [
-      "Use τ = R_m C_m, V = I R, or λ = √(R_m/R_i).",
+      "Use τ = R_m · C_m, steady V = I · R, and λ = √(R_m / R_i).",
       "Track which parameter changed."
     ],
     explanation: "Becomes shorter.",
@@ -658,7 +658,7 @@ const FORMULA_DRILL_POOL = [
     correct: 0,
     formulaHint: "Use: λ = √(R_m / R_i)",
     formulaSteps: [
-      "Use τ = R_m C_m, V = I R, or λ = √(R_m/R_i).",
+      "Use τ = R_m · C_m, steady V = I · R, and λ = √(R_m / R_i).",
       "Track which parameter changed."
     ],
     explanation: "Increases.",
@@ -682,7 +682,7 @@ const FORMULA_DRILL_POOL = [
     correct: 0,
     formulaHint: "Use: λ = √(R_m / R_i)",
     formulaSteps: [
-      "Use τ = R_m C_m, V = I R, or λ = √(R_m/R_i).",
+      "Use τ = R_m · C_m, steady V = I · R, and λ = √(R_m / R_i).",
       "Track which parameter changed."
     ],
     explanation: "Increases.",

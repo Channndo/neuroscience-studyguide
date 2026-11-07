@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="mcb80x-bank-build" content="20251107k">
+  <meta name="mcb80x-bank-build" content="20251107l">
   <link rel="icon" href="favicon.svg" type="image/svg+xml" sizes="any">
   <link rel="alternate icon" href="favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -1565,6 +1565,25 @@
       border-top: 1.5px solid currentColor;
       margin: 1px 0.05em;
       min-width: 100%;
+    }
+
+    .math-sqrt {
+      display: inline-flex;
+      align-items: flex-start;
+      vertical-align: middle;
+      margin: 0 0.1em;
+    }
+
+    .math-sqrt-sign {
+      font-size: 1.12em;
+      line-height: 1;
+      margin-right: 1px;
+    }
+
+    .math-sqrt-over {
+      border-top: 1.5px solid currentColor;
+      padding: 0.05em 0.25em 0;
+      margin-top: 0.12em;
     }
 
     .formula-sheet-link {
@@ -3447,22 +3466,22 @@
   </div>
 
   <footer>
-    Fisher-Yates shuffle on every quiz start &middot; HarvardX MCB80x curriculum alignment &middot; bank build 20251107k
+    Fisher-Yates shuffle on every quiz start &middot; HarvardX MCB80x curriculum alignment &middot; bank build 20251107l
     &middot; <button type="button" class="footer-link-btn" id="footer-go-downloads">Downloads</button>
   </footer>
 
-  <script src="explanation-feedback.js?v=20251107k"></script>
-  <script src="questions-bank.js?v=20251107k"></script>
-  <script src="questions-extra-pools.js?v=20251107k"></script>
-  <script src="questions-fresh-pools.js?v=20251107k"></script>
-  <script src="questions-expansion.js?v=20251107k"></script>
-  <script src="questions-exam-paraphrases.js?v=20251107k"></script>
-  <script src="questions-written-final.js?v=20251107k"></script>
-  <script src="questions-proctored-mock.js?v=20251107k"></script>
-  <script src="questions-formula-drills.js?v=20251107k"></script>
-  <script src="questions-pinnacle-megabank.js?v=20251107k"></script>
-  <script src="brain-anatomy-diagrams.js?v=20251107k"></script>
-  <script src="questions-brain-anatomy.js?v=20251107k"></script>
+  <script src="explanation-feedback.js?v=20251107l"></script>
+  <script src="questions-bank.js?v=20251107l"></script>
+  <script src="questions-extra-pools.js?v=20251107l"></script>
+  <script src="questions-fresh-pools.js?v=20251107l"></script>
+  <script src="questions-expansion.js?v=20251107l"></script>
+  <script src="questions-exam-paraphrases.js?v=20251107l"></script>
+  <script src="questions-written-final.js?v=20251107l"></script>
+  <script src="questions-proctored-mock.js?v=20251107l"></script>
+  <script src="questions-formula-drills.js?v=20251107l"></script>
+  <script src="questions-pinnacle-megabank.js?v=20251107l"></script>
+  <script src="brain-anatomy-diagrams.js?v=20251107l"></script>
+  <script src="questions-brain-anatomy.js?v=20251107l"></script>
   <script src="mcb80x-cloud-config.js"></script>
   <script src="sheets-sync.js"></script>
   <script src="oauth-client.js"></script>
@@ -3532,7 +3551,13 @@
       const safeTags = [];
       let s = String(raw);
       let fracQueue = [];
+      const sqrtQueue = [];
       if (enableFractions !== false) {
+        s = s.replace(/√\s*\(([^)]+)\)/g, (_, inner) => {
+          const id = sqrtQueue.length;
+          sqrtQueue.push(inner.trim());
+          return `\x00SQRT${id}\x00`;
+        });
         const marked = markMathFractions(s);
         s = marked.text;
         fracQueue = marked.queue;
@@ -3573,8 +3598,14 @@
       s = s.replace(/\bV_m\b/g, "V<sub>m</sub>");
       s = s.replace(/\bC_m\b/g, "C<sub>m</sub>");
       s = s.replace(/\bR_m\b/g, "R<sub>m</sub>");
+      s = s.replace(/\bR_i\b/g, "R<sub>i</sub>");
       s = s.replace(/\bR_in\b/g, "R<sub>in</sub>");
+      s = s.replace(/\bR_a\b/g, "R<sub>a</sub>");
+      s = s.replace(/\btau\b/gi, "τ");
       s = s.replace(/\btau_m\b/g, "τ<sub>m</sub>");
+      s = s.replace(/\bE_([A-Za-z]+)\b/g, "E<sub>$1</sub>");
+      s = s.replace(/\bg_([A-Za-z0-9]+)\b/g, "g<sub>$1</sub>");
+      s = s.replace(/([A-Za-zλτΔ])_([a-z0-9]{1,6})\b/g, "$1<sub>$2</sub>");
       s = s.replace(/\bIP_3\b/g, "IP<sub>3</sub>");
       s = s.replace(/\bCa2\+\b/g, "Ca²⁺");
       s = s.replace(/\bMg2\+\b/g, "Mg²⁺");
@@ -3602,6 +3633,17 @@
         const pair = fracQueue[Number(id)];
         if (!pair) return "";
         return renderMathFraction(pair[0], pair[1]);
+      });
+
+      s = s.replace(/\x00SQRT(\d+)\x00/g, (_, id) => {
+        const inner = sqrtQueue[Number(id)];
+        if (inner == null) return "";
+        const body = applyNeuroFormatting(inner, true);
+        return (
+          `<span class="math-sqrt" role="math">` +
+          `<span class="math-sqrt-sign">√</span>` +
+          `<span class="math-sqrt-over">${body}</span></span>`
+        );
       });
 
       return s;
