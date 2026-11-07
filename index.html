@@ -5499,12 +5499,98 @@
       /* Sync runs silently — no header status pill. */
     }
 
+    function formatSyncTime(ts) {
+      if (!ts) return "";
+      try {
+        return new Date(ts).toLocaleString(undefined, {
+          month: "short",
+          day: "numeric",
+          hour: "numeric",
+          minute: "2-digit"
+        });
+      } catch {
+        return "";
+      }
+    }
+
+    async function runSaveProgressNow() {
+      const session =
+        window.MCB80XOAuth?.getAccountSession?.() || window.MCB80XOAuth?.getSession?.();
+      if (!session?.email || !window.MCB80XSheetSync?.pushNow) {
+        alert("Sign in to save progress online.");
+        return;
+      }
+      try {
+        applyOAuthSessionToSettings(session);
+        await window.MCB80XSheetSync.ensureAutoUnlockForEmail?.(session.email);
+        const pass = await MCB80XSheetSync.deriveEmailSyncPassphrase(session.email);
+        await MCB80XSheetSync.pushNow(pass);
+        renderSyncBanner();
+        alert("Progress saved to your account. Open the other device and tap Restore progress in Settings.");
+      } catch (err) {
+        alert(friendlySyncError(err?.message || String(err)));
+        renderSyncBanner();
+      }
+    }
+
+    async function runRestoreProgressNow() {
+      const session =
+        window.MCB80XOAuth?.getAccountSession?.() || window.MCB80XOAuth?.getSession?.();
+      if (!session?.email) {
+        alert("Sign in first.");
+        return;
+      }
+      try {
+        await ensureAccountCloudSync();
+        const pass = await MCB80XSheetSync.deriveEmailSyncPassphrase(session.email);
+        const legacy = [];
+        if (session.id && session.id !== session.email) {
+          legacy.push(await MCB80XSheetSync.deriveOAuthSyncPassphrase(session.id));
+        }
+        await MCB80XSheetSync.pullAndMergeForAccount(pass, legacy);
+        renderDashboard();
+        renderProfile();
+        renderUserActivityCard();
+        renderStreakBadge();
+        renderSyncBanner();
+        alert("Progress restored.");
+      } catch (err) {
+        alert(friendlySyncError(err?.message || String(err)));
+        renderSyncBanner();
+      }
+    }
+
     function renderSyncBanner() {
       const el = document.getElementById("sync-backup-banner");
       if (!el) return;
-      el.hidden = true;
-      el.setAttribute("aria-hidden", "true");
-      el.innerHTML = "";
+      const session =
+        window.MCB80XOAuth?.getAccountSession?.() || window.MCB80XOAuth?.getSession?.();
+      const syncSt = window.MCB80XSheetSync?.getStatus?.() || {};
+      const signedIn = !!session?.email;
+      const configured = syncSt.configured;
+      if (!signedIn || !configured) {
+        el.hidden = true;
+        el.setAttribute("aria-hidden", "true");
+        el.innerHTML = "";
+        return;
+      }
+      const when = formatSyncTime(syncSt.lastSyncAt);
+      const err = syncSt.lastSyncError ? friendlySyncError(syncSt.lastSyncError) : "";
+      const statusLine = err
+        ? `<p style="margin:0;color:var(--incorrect);"><strong>Online save issue:</strong> ${escapeHtml(err)}</p>`
+        : when
+          ? `<p style="margin:0;">Last saved online: <strong>${escapeHtml(when)}</strong></p>`
+          : `<p style="margin:0;">Your progress on this device has not been saved online yet.</p>`;
+      el.innerHTML = `${statusLine}
+        <p style="margin:0.35rem 0 0;font-size:0.85rem;color:var(--gray-600);">Quizzes stay on each device until you save—sign-in alone does not move them.</p>
+        <div class="sync-actions">
+          <button type="button" class="btn-secondary" id="sync-banner-save">Save progress now</button>
+          <button type="button" class="btn-secondary" id="sync-banner-restore">Restore from account</button>
+        </div>`;
+      el.hidden = false;
+      el.setAttribute("aria-hidden", "false");
+      document.getElementById("sync-banner-save")?.addEventListener("click", () => runSaveProgressNow());
+      document.getElementById("sync-banner-restore")?.addEventListener("click", () => runRestoreProgressNow());
     }
 
     const BIOMETRIC_ICON_SVG =
@@ -8925,17 +9011,33 @@
       renderSyncBanner();
       updateSyncStatusHeader();
       refreshOAuthNav();
+      const forceSync = sessionStorage.getItem("mcb80x_force_cloud_sync");
+      if (forceSync) sessionStorage.removeItem("mcb80x_force_cloud_sync");
       ensureAccountCloudSync().finally(() => {
+        if (forceSync && window.MCB80XSheetSync?.schedulePush) {
+          MCB80XSheetSync.schedulePush();
+        }
         renderSyncBanner();
         updateSyncStatusHeader();
         maybeOfferBiometricSetup();
+      });
+      document.addEventListener("visibilitychange", () => {
+        if (document.visibilityState === "hidden" && window.MCB80XSheetSync?.schedulePush) {
+          MCB80XSheetSync.schedulePush();
+        }
       });
       showView("dashboard");
     }
 
     if (window.MCB80XSheetSync) {
       MCB80XSheetSync.init({
-        getSyncEmail: () => getSettings().syncEmail,
+        getSyncEmail: () => {
+          const fromSettings = String(getSettings().syncEmail || "").trim().toLowerCase();
+          if (fromSettings) return fromSettings;
+          const session =
+            window.MCB80XOAuth?.getAccountSession?.() || window.MCB80XOAuth?.getSession?.();
+          return session?.email ? String(session.email).toLowerCase() : "";
+        },
         getLocalBundle: () => buildLocalSyncBundle(),
         applyLocalBundle: bundle => applyLocalSyncBundle(bundle),
         getProfileMeta: () => ({

@@ -459,13 +459,29 @@
       await pullAndMergeForAccount(emailPass, legacyPasses, { preferRemoteIfLocalEmpty: true });
       return { ok: true, reason: "synced" };
     } catch (err) {
-      clearSessionPassphrase();
-      if (!existingVerifier) {
-        hooks?.applyOAuthAccount?.({
-          email,
-          googleSub: session.id || "",
-          syncPassVerifier: ""
-        });
+      lastSyncError = err?.message || String(err);
+      notifyStatus();
+      const local = hooks?.getLocalBundle?.();
+      if (local && !isLocalBundleEmpty(local)) {
+        unlockSession(emailPass, { persist: true, email });
+        try {
+          await pushNow(emailPass);
+          lastSyncError = null;
+          notifyStatus();
+          return { ok: true, reason: "pushed-local", pullError: err };
+        } catch (pushErr) {
+          lastSyncError = pushErr?.message || String(pushErr);
+          notifyStatus();
+        }
+      } else {
+        clearSessionPassphrase();
+        if (!existingVerifier) {
+          hooks?.applyOAuthAccount?.({
+            email,
+            googleSub: session.id || "",
+            syncPassVerifier: ""
+          });
+        }
       }
       return { ok: false, reason: "pull-failed", error: err };
     }
@@ -605,9 +621,26 @@
     }
   }
 
+  async function ensureUnlockedForPush() {
+    if (isUnlocked()) return true;
+    const email = String(hooks?.getSyncEmail?.() || "").toLowerCase();
+    if (!email || !email.includes("@")) return false;
+    try {
+      return await ensureAutoUnlockForEmail(email);
+    } catch {
+      return false;
+    }
+  }
+
   function schedulePush() {
-    if (!isConfigured() || !sessionPassphrase || applyingRemote) return;
+    if (!isConfigured() || applyingRemote) return;
     if (!hooks?.getSyncEmail?.()) return;
+    if (!sessionPassphrase) {
+      ensureUnlockedForPush().then(ok => {
+        if (ok) schedulePush();
+      });
+      return;
+    }
     if (pushTimer) clearTimeout(pushTimer);
     pushTimer = setTimeout(() => {
       pushTimer = null;
