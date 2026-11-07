@@ -437,7 +437,7 @@ const PROCTORED_SATA_POOL = [
 
 
       "DCML carries fine touch/proprioception",
-      "Spinothalamic carries pain and temperature",
+      "Spinothalamic carries pain/temp",
       "Both are purely motor",
       "Second-order neurons cross at different levels",
     ],
@@ -977,7 +977,7 @@ const PROCTORED_SATA_POOL = [
 
 
       "First-order nociceptors can synapse in dorsal horn laminae I–II",
-      "Spinothalamic tract carries pain and temperature",
+      "Spinothalamic tract carries pain/temp",
       "All fast touch and pain share identical thickly myelinated fibers",
       "Central sensitization can widen receptive fields after injury",
     ],
@@ -1337,7 +1337,7 @@ const PROCTORED_SATA_POOL = [
 
 
       "Can produce locomotor rhythms without sensory feedback",
-      "Reciprocal inhibition helps alternate flexor and extensor bursts",
+      "Reciprocal inhibition helps alternate flexor/extensor bursts",
       "Require continuous cortical spiking for each muscle twitch in all species",
       "Can be modulated by descending and sensory inputs",
     ],
@@ -1634,7 +1634,7 @@ const PROCTORED_LESION_POOL = [
 
 
 
-      "Bilateral motor and pain and temperature loss with spared dorsal columns",
+      "Bilateral motor and pain/temp loss with spared dorsal columns",
       "Isolated proprioception loss",
       "Autonomic symptoms",
       "Pure cerebellar ataxia",
@@ -1850,7 +1850,7 @@ const PROCTORED_LESION_POOL = [
 
 
 
-      "Contralateral pain and temperature loss below lesion",
+      "Contralateral pain/temp loss below lesion",
       "Ipsilateral proprioception loss",
       "Bilateral weakness",
       "Blindness",
@@ -2258,13 +2258,13 @@ const PROCTORED_LESION_POOL = [
 
 
 
-      "Contralateral pain and temperature loss below T6",
+      "Contralateral pain/temp loss below T6",
       "Ipsilateral proprioception loss below T6",
       "Bilateral blindness",
       "Autonomic loss",
     ],
     correct: 0,
-    explanation: "Left spinothalamic tract at T6 → Contralateral pain and temperature loss below T6.",
+    explanation: "Left spinothalamic tract at T6 → Contralateral pain/temp loss below T6.",
     wrongExplanations: [
       "",
       "That pattern fits a different lesion site or pathway than the one named in the stem.",
@@ -2714,7 +2714,7 @@ const PROCTORED_LESION_POOL = [
 
 
 
-      "Ipsilateral face pain and temperature, cerebellar signs",
+      "Ipsilateral face pain/temp, cerebellar signs",
       "Pure motor weakness",
       "Bitemporal hemianopia",
       "Broca aphasia",
@@ -2738,7 +2738,7 @@ const PROCTORED_LESION_POOL = [
 
 
 
-      "Ipsilateral face pain and temperature loss",
+      "Ipsilateral face pain/temp loss",
       "Bilateral blindness",
       "Pure aphasia",
       "Deafness",
@@ -2930,7 +2930,7 @@ const PROCTORED_LESION_POOL = [
 
 
 
-      "Cape-like loss of pain and temperature in upper limbs",
+      "Cape-like loss of pain/temp in upper limbs",
       "DCML loss in legs first",
       "Bitemporal hemianopia",
       "Broca aphasia",
@@ -4080,7 +4080,7 @@ const PROCTORED_MOCK_EXAM_POOL = [
       "Left hemiparesis",
       "Right homonymous hemianopia",
       "Global aphasia",
-      "Right loss of vibration and proprioception",
+      "Right loss of vibration/proprioception",
     ],
     correct: 3,
     explanation: "Medial lemniscus carries dorsal column information already decussated.",
@@ -4104,7 +4104,7 @@ const PROCTORED_MOCK_EXAM_POOL = [
       "Pure motor hemiplegia",
       "Broca aphasia",
       "Bitemporal hemianopia",
-      "Right Horner, ataxia, pain and temperature loss on right face and left body",
+      "Right Horner, ataxia, pain/temp loss on right face and left body",
     ],
     correct: 3,
     explanation: "Classic lateral medullary pattern mixes cranial nerve, cerebellar, and crossed spinothalamic findings.",
@@ -4127,7 +4127,7 @@ const PROCTORED_MOCK_EXAM_POOL = [
 
       "Pure cerebellar ataxia",
       "Isolated dorsal column loss",
-      "Bilateral motor weakness with dissociated sensory loss (pain and temperature) below lesion",
+      "Bilateral motor weakness with dissociated sensory loss (pain/temp) below lesion",
       "Third nerve palsy",
     ],
     correct: 2,
@@ -4214,7 +4214,7 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Neural Circuits",
     module: "part2",
-    question: "What does Reciprocal inhibition between flexor and extensor CPG half-centers produce?",
+    question: "What does Reciprocal inhibition between flexor/extensor CPG half-centers produce?",
     options: [
 
 
@@ -4222,7 +4222,7 @@ const PROCTORED_MOCK_EXAM_POOL = [
 
 
       "Random Poisson spikes",
-      "Simultaneous flexor and extensor co-contraction",
+      "Simultaneous flexor/extensor co-contraction",
       "Alternating burst patterns",
       "Complete silence",
     ],

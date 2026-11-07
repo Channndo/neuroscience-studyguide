@@ -670,7 +670,7 @@ const PART3_VARIATION_POOL = [
   },
   {
     topic: "Clinical Correlates",
-    question: "Which description best applies to A patient reports numbness and loss of fine touch/vibration on the right body below the neck, with no facial weakness. Pain and temperature on the right are intact. The most likely lesion?",
+    question: "Which description best applies to A patient reports numbness and loss of fine touch/vibration on the right body below the neck, with no facial weakness. pain/temp on the right are intact. The most likely lesion?",
     options: [
 
 

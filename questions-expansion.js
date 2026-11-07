@@ -3689,18 +3689,18 @@ const PART3_EXPANSION_POOL = [
 
 
 
-      "Pain and temperature",
+      "pain/temp",
       "Color opponency",
       "Saltatory node formation",
       "Main mechanism: declarative memory storage",
     ],
     correct: 0,
-    explanation: "Spinothalamic tract signals Pain and temperature.",
+    explanation: "Spinothalamic tract signals pain/temp.",
     wrongExplanations: [
       "",
-      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Spinothalamic tract signals Pain and temperature.",
-      "“Saltatory node formation” does not match the mechanism (topic: Pain). Spinothalamic tract signals Pain and temperature. The correct choice—“Pain and temperature”—fits that description.",
-      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Spinothalamic tract signals Pain and temperature.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Spinothalamic tract signals pain/temp.",
+      "“Saltatory node formation” does not match the mechanism (topic: Pain). Spinothalamic tract signals pain/temp. The correct choice—“pain/temp”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Spinothalamic tract signals pain/temp.",
     ]
   },
   {
@@ -4373,7 +4373,7 @@ const PART3_EXPANSION_POOL = [
 
       "Orientation and spatial frequency selectivity",
       "Pure tone frequency tuning like cochlea",
-      "Requires pain and temperature maps",
+      "Requires pain/temp maps",
       "No receptive fields",
     ],
     correct: 0,
@@ -4381,7 +4381,7 @@ const PART3_EXPANSION_POOL = [
     wrongExplanations: [
       "",
       "This mechanism belongs to a different sensory or synaptic system than the stem describes.",
-      "“Requires pain and temperature maps” does not match the mechanism (topic: Visual System). V1 simple/complex cells filter orientation and spatial structure. The correct choice—“Orientation and spatial frequency selectivity”—fits that description.",
+      "“Requires pain/temp maps” does not match the mechanism (topic: Visual System). V1 simple/complex cells filter orientation and spatial structure. The correct choice—“Orientation and spatial frequency selectivity”—fits that description.",
       "“No receptive fields” does not match the mechanism (topic: Visual System). V1 simple/complex cells filter orientation and spatial structure. The correct choice—“Orientation and spatial frequency selectivity”—fits that description.",
     ]
   },
@@ -4525,7 +4525,7 @@ const PART3_EXPANSION_POOL = [
 
 
 
-      "Pain and temperature",
+      "pain/temp",
       "Fine vibration at 200 Hz",
       "Sound frequency",
       "Face identity in fusiform gyrus directly",
@@ -4535,8 +4535,8 @@ const PART3_EXPANSION_POOL = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Polymodal nociceptors and thermoreceptors use free nerve endings.",
-      "“Sound frequency” does not match the mechanism (topic: Somatosensation). Polymodal nociceptors and thermoreceptors use free nerve endings. The correct choice—“Pain and temperature”—fits that description.",
-      "“Face identity in fusiform gyrus directly” does not match the mechanism (topic: Somatosensation). Polymodal nociceptors and thermoreceptors use free nerve endings. The correct choice—“Pain and temperature”—fits that description.",
+      "“Sound frequency” does not match the mechanism (topic: Somatosensation). Polymodal nociceptors and thermoreceptors use free nerve endings. The correct choice—“pain/temp”—fits that description.",
+      "“Face identity in fusiform gyrus directly” does not match the mechanism (topic: Somatosensation). Polymodal nociceptors and thermoreceptors use free nerve endings. The correct choice—“pain/temp”—fits that description.",
     ]
   },
   {
@@ -4905,11 +4905,11 @@ const PART3_EXPANSION_POOL = [
       "Main mechanism: cochlear phase locking",
     ],
     correct: 0,
-    explanation: "Anterolateral system includes pain and temperature.",
+    explanation: "Anterolateral system includes pain/temp.",
     wrongExplanations: [
       "",
-      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Anterolateral system includes pain and temperature.",
-      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Anterolateral system includes pain and temperature.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Anterolateral system includes pain/temp.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Anterolateral system includes pain/temp.",
       "This mechanism belongs to a different sensory or synaptic system than the stem describes.",
     ]
   },

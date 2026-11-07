@@ -19,10 +19,8 @@
     t = t.replace(/\s+as the primary route\b/gi, "");
     t = t.replace(/\s+as the primary pathway\b/gi, "");
     t = t.replace(/\s*\(same units as E_ion\)/gi, "");
-    t = t.replace(/\bpain\/temp\b/gi, "pain and temperature");
-    t = t.replace(/\bvibration\/proprioception\b/gi, "vibration and proprioception");
-    t = t.replace(/\bflexor\/extensor\b/gi, "flexor and extensor");
-    t = t.replace(/\s*\+\s*/g, ", ");
+    // Keep MCB80x course shorthand (outside/inside, pain/temp) — do not expand slashes here.
+    t = t.replace(/\s*\+\s*/g, "; ");
     t = t.replace(/,\s*,/g, ",");
     t = t.replace(/\s+often\s*$/i, "");
     t = t.replace(/\s+often\b/gi, "");

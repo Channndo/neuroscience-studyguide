@@ -2444,7 +2444,7 @@ const PART3_FRESH_POOL_2 = [
 
 
 
-      "Pain and temperature to thalamus",
+      "pain/temp to thalamus",
       "Requires proprioception",
       "Requires vision",
       "Requires nMJ signals",
@@ -2453,9 +2453,9 @@ const PART3_FRESH_POOL_2 = [
     explanation: "Anterolateral system for nociception and thermal sense.",
     wrongExplanations: [
       "",
-      "“Requires proprioception” does not match the mechanism (topic: Pain). Anterolateral system for nociception and thermal sense. The correct choice—“Pain and temperature to thalamus”—fits that description.",
-      "“Requires vision” does not match the mechanism (topic: Pain). Anterolateral system for nociception and thermal sense. The correct choice—“Pain and temperature to thalamus”—fits that description.",
-      "“Requires nMJ signals” does not match the mechanism (topic: Pain). Anterolateral system for nociception and thermal sense. The correct choice—“Pain and temperature to thalamus”—fits that description.",
+      "“Requires proprioception” does not match the mechanism (topic: Pain). Anterolateral system for nociception and thermal sense. The correct choice—“pain/temp to thalamus”—fits that description.",
+      "“Requires vision” does not match the mechanism (topic: Pain). Anterolateral system for nociception and thermal sense. The correct choice—“pain/temp to thalamus”—fits that description.",
+      "“Requires nMJ signals” does not match the mechanism (topic: Pain). Anterolateral system for nociception and thermal sense. The correct choice—“pain/temp to thalamus”—fits that description.",
     ]
   },
   {

@@ -2435,7 +2435,7 @@ const PART3_EXTRA_POOL = [
 
 
 
-      "Pain and temperature sensation",
+      "pain/temp sensation",
       "Main mechanism: proprioception from muscle spindles",
       "Phototransduction",
       "Cochlear amplification",
@@ -2445,7 +2445,7 @@ const PART3_EXTRA_POOL = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Nociceptors and thermoreceptors are unencapsulated endings.",
-      "“Phototransduction” does not match the mechanism (topic: Somatosensation). Nociceptors and thermoreceptors are unencapsulated endings. The correct choice—“Pain and temperature sensation”—fits that description.",
+      "“Phototransduction” does not match the mechanism (topic: Somatosensation). Nociceptors and thermoreceptors are unencapsulated endings. The correct choice—“pain/temp sensation”—fits that description.",
       "This mechanism belongs to a different sensory or synaptic system than the stem describes.",
     ]
   },

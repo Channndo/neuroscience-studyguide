@@ -339,18 +339,18 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
-      "Pain and temperature",
+      "pain/temp",
       "High-frequency vibration at Pacinian frequency",
       "Sustained pressure with Merkel-like precision",
       "Photons of visible light",
     ],
     correct: 0,
-    explanation: "Free nerve endings are nociceptors and thermoreceptors for pain and temperature.",
+    explanation: "Free nerve endings are nociceptors and thermoreceptors for pain/temp.",
     wrongExplanations: [
       "",
-      "“High-frequency vibration at Pacinian frequency” does not match the mechanism (topic: Somatosensation). Free nerve endings are nociceptors and thermoreceptors for pain and temperature. The correct choice—“Pain and temperature”—fits that description.",
-      "“Sustained pressure with Merkel-like precision” does not match the mechanism (topic: Somatosensation). Free nerve endings are nociceptors and thermoreceptors for pain and temperature. The correct choice—“Pain and temperature”—fits that description.",
-      "“Photons of visible light” does not match the mechanism (topic: Somatosensation). Free nerve endings are nociceptors and thermoreceptors for pain and temperature. The correct choice—“Pain and temperature”—fits that description.",
+      "“High-frequency vibration at Pacinian frequency” does not match the mechanism (topic: Somatosensation). Free nerve endings are nociceptors and thermoreceptors for pain/temp. The correct choice—“pain/temp”—fits that description.",
+      "“Sustained pressure with Merkel-like precision” does not match the mechanism (topic: Somatosensation). Free nerve endings are nociceptors and thermoreceptors for pain/temp. The correct choice—“pain/temp”—fits that description.",
+      "“Photons of visible light” does not match the mechanism (topic: Somatosensation). Free nerve endings are nociceptors and thermoreceptors for pain/temp. The correct choice—“pain/temp”—fits that description.",
     ]
   },
   {
@@ -1618,7 +1618,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
 
 
 
-      "Pain and temperature",
+      "pain/temp",
       "Main mechanism: fine discriminative touch on glabrous skin",
       "Auditory frequency place coding",
       "Declarative memory consolidation",
@@ -1628,8 +1628,8 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Polymodal nociceptors and thermoreceptors use free nerve endings.",
-      "“Auditory frequency place coding” does not match the mechanism (topic: Somatosensation). Polymodal nociceptors and thermoreceptors use free nerve endings. The correct choice—“Pain and temperature”—fits that description.",
-      "“Declarative memory consolidation” does not match the mechanism (topic: Somatosensation). Polymodal nociceptors and thermoreceptors use free nerve endings. The correct choice—“Pain and temperature”—fits that description.",
+      "“Auditory frequency place coding” does not match the mechanism (topic: Somatosensation). Polymodal nociceptors and thermoreceptors use free nerve endings. The correct choice—“pain/temp”—fits that description.",
+      "“Declarative memory consolidation” does not match the mechanism (topic: Somatosensation). Polymodal nociceptors and thermoreceptors use free nerve endings. The correct choice—“pain/temp”—fits that description.",
     ]
   },
   {
@@ -2281,7 +2281,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
 
 
 
-      "Slow pain and temperature (unmyelinated)",
+      "Slow pain/temp (unmyelinated)",
       "Fine discriminative touch with highest conduction velocity",
       "Photons to retinal ganglion cells",
       "Dopamine to the striatum",
@@ -2290,9 +2290,9 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     explanation: "Thin unmyelinated C fibers mediate slow nociceptive and thermal signals.",
     wrongExplanations: [
       "",
-      "“Fine discriminative touch with highest conduction velocity” does not match the mechanism (topic: Somatosensation). Thin unmyelinated C fibers mediate slow nociceptive and thermal signals. The correct choice—“Slow pain and temperature (unmyelinated)”—fits that description.",
-      "“Photons to retinal ganglion cells” does not match the mechanism (topic: Somatosensation). Thin unmyelinated C fibers mediate slow nociceptive and thermal signals. The correct choice—“Slow pain and temperature (unmyelinated)”—fits that description.",
-      "“Dopamine to the striatum” does not match the mechanism (topic: Somatosensation). Thin unmyelinated C fibers mediate slow nociceptive and thermal signals. The correct choice—“Slow pain and temperature (unmyelinated)”—fits that description.",
+      "“Fine discriminative touch with highest conduction velocity” does not match the mechanism (topic: Somatosensation). Thin unmyelinated C fibers mediate slow nociceptive and thermal signals. The correct choice—“Slow pain/temp (unmyelinated)”—fits that description.",
+      "“Photons to retinal ganglion cells” does not match the mechanism (topic: Somatosensation). Thin unmyelinated C fibers mediate slow nociceptive and thermal signals. The correct choice—“Slow pain/temp (unmyelinated)”—fits that description.",
+      "“Dopamine to the striatum” does not match the mechanism (topic: Somatosensation). Thin unmyelinated C fibers mediate slow nociceptive and thermal signals. The correct choice—“Slow pain/temp (unmyelinated)”—fits that description.",
     ]
   },
   {

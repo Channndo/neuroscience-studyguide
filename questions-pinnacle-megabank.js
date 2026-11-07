@@ -912,7 +912,7 @@ const PINNACLE_MEGA_POOL = [
 
 
 
-      "Ipsilateral face pain and temperature, cerebellar signs",
+      "Ipsilateral face pain/temp, cerebellar signs",
       "Pure motor weakness",
       "Bitemporal hemianopia",
       "Broca aphasia",
@@ -2993,7 +2993,7 @@ const PINNACLE_MEGA_POOL = [
 
       "Fine touch, vibration, and proprioception to S1",
       "Requires nMJ EPSPs",
-      "Pain and temperature",
+      "pain/temp",
       "Requires smell to amygdala",
     ],
     correct: 0,
@@ -3643,17 +3643,17 @@ const PINNACLE_MEGA_POOL = [
 
 
       "Requires cochlear tuning",
-      "Pain and temperature (among other signals)",
+      "pain/temp (among other signals)",
       "Requires proprioception to DCML",
       "Requires nMJ transmission",
     ],
     correct: 1,
-    explanation: "Pain and temperature (among other signals)",
+    explanation: "pain/temp (among other signals)",
     wrongExplanations: [
-      "“Requires cochlear tuning” does not match the mechanism (topic: Sensory Systems). Pain and temperature (among other signals) The correct choice—“Pain and temperature (among other signals)”—fits that description.",
+      "“Requires cochlear tuning” does not match the mechanism (topic: Sensory Systems). pain/temp (among other signals) The correct choice—“pain/temp (among other signals)”—fits that description.",
       "",
-      "“Requires proprioception to DCML” does not match the mechanism (topic: Sensory Systems). Pain and temperature (among other signals) The correct choice—“Pain and temperature (among other signals)”—fits that description.",
-      "“Requires nMJ transmission” does not match the mechanism (topic: Sensory Systems). Pain and temperature (among other signals) The correct choice—“Pain and temperature (among other signals)”—fits that description.",
+      "“Requires proprioception to DCML” does not match the mechanism (topic: Sensory Systems). pain/temp (among other signals) The correct choice—“pain/temp (among other signals)”—fits that description.",
+      "“Requires nMJ transmission” does not match the mechanism (topic: Sensory Systems). pain/temp (among other signals) The correct choice—“pain/temp (among other signals)”—fits that description.",
     ]
   },
   {

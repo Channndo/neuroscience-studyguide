@@ -118,7 +118,7 @@ const WRITTEN_EXAM_POOL = [
     topic: "Somatosensation",
     module: "part3",
     question: "Which answer best matches this scenario: Contrast the dorsal column–medial lemniscus pathway with the spinothalamic pathway in terms of modality?",
-    modelAnswer: "DCML: discriminative touch, vibration, proprioception. Spinothalamic: pain and temperature. Both reach thalamus/cortex but serve different modalities.",
+    modelAnswer: "DCML: discriminative touch, vibration, proprioception. Spinothalamic: pain/temp. Both reach thalamus/cortex but serve different modalities.",
     minChars: 40
   },
   {

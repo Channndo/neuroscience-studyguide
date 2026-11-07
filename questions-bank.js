@@ -1888,18 +1888,18 @@ const NEW_TIER1 = [
 
 
 
-      "Pain and temperature",
+      "pain/temp",
       "High-frequency vibration at Pacinian frequency",
       "Sustained pressure with Merkel-like precision",
       "Photons of visible light",
     ],
     correct: 0,
-    explanation: "Free nerve endings are nociceptors and thermoreceptors for pain and temperature.",
+    explanation: "Free nerve endings are nociceptors and thermoreceptors for pain/temp.",
     wrongExplanations: [
       "",
-      "“High-frequency vibration at Pacinian frequency” does not match the mechanism (topic: Somatosensation). Free nerve endings are nociceptors and thermoreceptors for pain and temperature. The correct choice—“Pain and temperature”—fits that description.",
-      "“Sustained pressure with Merkel-like precision” does not match the mechanism (topic: Somatosensation). Free nerve endings are nociceptors and thermoreceptors for pain and temperature. The correct choice—“Pain and temperature”—fits that description.",
-      "“Photons of visible light” does not match the mechanism (topic: Somatosensation). Free nerve endings are nociceptors and thermoreceptors for pain and temperature. The correct choice—“Pain and temperature”—fits that description.",
+      "“High-frequency vibration at Pacinian frequency” does not match the mechanism (topic: Somatosensation). Free nerve endings are nociceptors and thermoreceptors for pain/temp. The correct choice—“pain/temp”—fits that description.",
+      "“Sustained pressure with Merkel-like precision” does not match the mechanism (topic: Somatosensation). Free nerve endings are nociceptors and thermoreceptors for pain/temp. The correct choice—“pain/temp”—fits that description.",
+      "“Photons of visible light” does not match the mechanism (topic: Somatosensation). Free nerve endings are nociceptors and thermoreceptors for pain/temp. The correct choice—“pain/temp”—fits that description.",
     ]
   },
   {
@@ -2573,7 +2573,7 @@ const NEW_TIER2 = [
 
 
 
-      "Pain and temperature",
+      "pain/temp",
       "Main mechanism: fine discriminative touch on glabrous skin",
       "Auditory frequency place coding",
       "Declarative memory consolidation",
@@ -2583,8 +2583,8 @@ const NEW_TIER2 = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Polymodal nociceptors and thermoreceptors use free nerve endings.",
-      "“Auditory frequency place coding” does not match the mechanism (topic: Somatosensation). Polymodal nociceptors and thermoreceptors use free nerve endings. The correct choice—“Pain and temperature”—fits that description.",
-      "“Declarative memory consolidation” does not match the mechanism (topic: Somatosensation). Polymodal nociceptors and thermoreceptors use free nerve endings. The correct choice—“Pain and temperature”—fits that description.",
+      "“Auditory frequency place coding” does not match the mechanism (topic: Somatosensation). Polymodal nociceptors and thermoreceptors use free nerve endings. The correct choice—“pain/temp”—fits that description.",
+      "“Declarative memory consolidation” does not match the mechanism (topic: Somatosensation). Polymodal nociceptors and thermoreceptors use free nerve endings. The correct choice—“pain/temp”—fits that description.",
     ]
   },
   {
@@ -2595,7 +2595,7 @@ const NEW_TIER2 = [
 
 
 
-      "Pain and temperature to the thalamus",
+      "pain/temp to the thalamus",
       "Main mechanism: fine touch via dorsal columns",
       "Visual information from retina",
       "Dopamine from substantia nigra to striatum",
@@ -2605,8 +2605,8 @@ const NEW_TIER2 = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Anterolateral pathways convey nociceptive and thermal information.",
-      "“Visual information from retina” does not match the mechanism (topic: Somatosensation). Anterolateral pathways convey nociceptive and thermal information. The correct choice—“Pain and temperature to the thalamus”—fits that description.",
-      "“Dopamine from substantia nigra to striatum” does not match the mechanism (topic: Somatosensation). Anterolateral pathways convey nociceptive and thermal information. The correct choice—“Pain and temperature to the thalamus”—fits that description.",
+      "“Visual information from retina” does not match the mechanism (topic: Somatosensation). Anterolateral pathways convey nociceptive and thermal information. The correct choice—“pain/temp to the thalamus”—fits that description.",
+      "“Dopamine from substantia nigra to striatum” does not match the mechanism (topic: Somatosensation). Anterolateral pathways convey nociceptive and thermal information. The correct choice—“pain/temp to the thalamus”—fits that description.",
     ]
   },
   {
@@ -3699,7 +3699,7 @@ const NEW_TIER3 = [
 
 
       "Fine touch and proprioceptive information to the thalamus",
-      "Main mechanism: pain and temperature via spinothalamic tract",
+      "Main mechanism: pain/temp via spinothalamic tract",
       "Visual information from retina to V1",
       "Olfactory signals from bulb to cortex directly without relay",
     ],
@@ -5395,7 +5395,7 @@ const NEW_TIER4 = [
 
 
 
-      "Slow pain and temperature (unmyelinated)",
+      "Slow pain/temp (unmyelinated)",
       "Fine discriminative touch with highest conduction velocity",
       "Photons to retinal ganglion cells",
       "Dopamine to the striatum",
@@ -5404,9 +5404,9 @@ const NEW_TIER4 = [
     explanation: "Thin unmyelinated C fibers mediate slow nociceptive and thermal signals.",
     wrongExplanations: [
       "",
-      "“Fine discriminative touch with highest conduction velocity” does not match the mechanism (topic: Somatosensation). Thin unmyelinated C fibers mediate slow nociceptive and thermal signals. The correct choice—“Slow pain and temperature (unmyelinated)”—fits that description.",
-      "“Photons to retinal ganglion cells” does not match the mechanism (topic: Somatosensation). Thin unmyelinated C fibers mediate slow nociceptive and thermal signals. The correct choice—“Slow pain and temperature (unmyelinated)”—fits that description.",
-      "“Dopamine to the striatum” does not match the mechanism (topic: Somatosensation). Thin unmyelinated C fibers mediate slow nociceptive and thermal signals. The correct choice—“Slow pain and temperature (unmyelinated)”—fits that description.",
+      "“Fine discriminative touch with highest conduction velocity” does not match the mechanism (topic: Somatosensation). Thin unmyelinated C fibers mediate slow nociceptive and thermal signals. The correct choice—“Slow pain/temp (unmyelinated)”—fits that description.",
+      "“Photons to retinal ganglion cells” does not match the mechanism (topic: Somatosensation). Thin unmyelinated C fibers mediate slow nociceptive and thermal signals. The correct choice—“Slow pain/temp (unmyelinated)”—fits that description.",
+      "“Dopamine to the striatum” does not match the mechanism (topic: Somatosensation). Thin unmyelinated C fibers mediate slow nociceptive and thermal signals. The correct choice—“Slow pain/temp (unmyelinated)”—fits that description.",
     ]
   },
   {
@@ -6545,12 +6545,12 @@ const NEW_TIER4 = [
       "High-frequency auditory pitch via phase locking",
     ],
     correct: 0,
-    explanation: "Unmyelinated C fibers convey slow pain and temperature.",
+    explanation: "Unmyelinated C fibers convey slow pain/temp.",
     wrongExplanations: [
       "",
-      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Unmyelinated C fibers convey slow pain and temperature.",
-      "“Photopic color vision” does not match the mechanism (topic: Somatosensation). Unmyelinated C fibers convey slow pain and temperature. The correct choice—“Slow, dull pain and warm/cold sensations”—fits that description.",
-      "“High-frequency auditory pitch via phase locking” does not match the mechanism (topic: Somatosensation). Unmyelinated C fibers convey slow pain and temperature. The correct choice—“Slow, dull pain and warm/cold sensations”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Unmyelinated C fibers convey slow pain/temp.",
+      "“Photopic color vision” does not match the mechanism (topic: Somatosensation). Unmyelinated C fibers convey slow pain/temp. The correct choice—“Slow, dull pain and warm/cold sensations”—fits that description.",
+      "“High-frequency auditory pitch via phase locking” does not match the mechanism (topic: Somatosensation). Unmyelinated C fibers convey slow pain/temp. The correct choice—“Slow, dull pain and warm/cold sensations”—fits that description.",
     ]
   },
   {
