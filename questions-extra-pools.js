@@ -1307,7 +1307,7 @@ const PART2_EXTRA_POOL = [
       "Act on longer timescales and often via second messengers / volume transmission",
       "Always use electrical synapses",
       "Never affect ion channels",
-      "Only Müller glia pass inward cation current in darkness",
+      "Equates electrical synapses with chemical quantal transmission at the NMJ",
     ],
     correct: 0,
     explanation: "Modulators reshape network state over seconds to minutes.",
@@ -2442,17 +2442,17 @@ const PART3_EXTRA_POOL = [
     question: "Multisensory integration in superior colliculus can produce:",
     options: [
       "Enhanced responses when auditory and visual stimuli coincide spatially",
-      "Loss of all retinal ON/OFF pathways",
-      "IPSPs from bipolar cells depolarize rods in darkness",
-      "Exclusive GABA<sub>B</sub> signaling in muscle",
+      "Weaker colliculus responses when auditory and visual cues align in space",
+      "Multisensory integration confined to primary visual cortex (V1) only",
+      "Superior colliculus processing of vision and sound without any orienting output",
     ],
     correct: 0,
-    explanation: "Cross-modal alignment can super-additive boost orienting responses.",
+    explanation: "Superior colliculus neurons combine auditory, visual, and somatosensory maps. When stimuli fall in aligned spatial locations, responses can be super-additive (greater than the sum of unimodal inputs), supporting orienting and eye–head movements toward salient events.",
     wrongExplanations: [
       "",
-      "“Loss of all retinal ON/OFF pathways” does not match the mechanism (topic: Sensory Integration). Cross-modal alignment can super-additive boost orienting responses. The correct choice—“Enhanced responses when auditory and visual stimuli coincide spatially”—fits that description.",
-      "“IPSPs from bipolar cells depolarize rods in darkness” does not match the mechanism (topic: Sensory Integration). Cross-modal alignment can super-additive boost orienting responses. The correct choice—“Enhanced responses when auditory and visual stimuli coincide spatially”—fits that description.",
-      "“Exclusive GABAB signaling in muscle” does not match the mechanism (topic: Sensory Integration). Cross-modal alignment can super-additive boost orienting responses. The correct choice—“Enhanced responses when auditory and visual stimuli coincide spatially”—fits that description.",
+      "Spatial alignment of cross-modal inputs in the colliculus typically facilitates detection and orienting, not suppression. Suppression is more relevant when cues are misaligned or compete.",
+      "V1 is critical for visual perception, but the superior colliculus is a midbrain hub for sensorimotor integration and orienting—not a structure whose multisensory enhancement is replaced by cortex-only processing.",
+      "The colliculus drives orienting (saccades, head turns) via brainstem and basal ganglia circuitry. Multisensory integration there directly shapes those motor outputs.",
     ]
   },
   {

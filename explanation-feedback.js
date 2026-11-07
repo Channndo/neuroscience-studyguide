@@ -159,6 +159,13 @@
           `Spatial summation integrates EPSPs/IPSPs from multiple synapses at once. Temporal summation is sequential input at a single synapse—different mechanism. ${c.main}`,
       },
       {
+        when: () =>
+          /superior colliculus|multisensory integration|cross-modal/i.test(c.stemTopic) &&
+          (/weaker|suppress|loss of all retinal|v1 only|no orienting/i.test(c.w)),
+        text: () =>
+          `In the superior colliculus, aligned auditory and visual (and other) cues often increase neuronal firing super-additively to support orienting. Options that describe suppression, retinal pathway loss, or cortex-only integration misstate colliculus multisensory enhancement. ${c.main}`,
+      },
+      {
         when: () => /lateral geniculate|lgn|v1|striate|optic tract|retinotopic/i.test(c.stemTopic) && /cochlea|hair cell|basilar|auditory nerve/i.test(c.w),
         text: () =>
           `These are visual pathway structures (retina → LGN → cortex). Cochlear and auditory nerve mechanisms belong to hearing, not the visual question in the stem. ${c.main}`,

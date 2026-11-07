@@ -53,7 +53,16 @@ function cleanOptionString(s) {
   for (const re of STRIP_RES) t = t.replace(re, "");
   t = t.replace(/\s{2,}/g, " ").trim();
   if (t.endsWith("—")) t = t.slice(0, -1).trim();
-  if (!t && typeof s === "string" && s.trim()) return s.trim();
+  if (!t && typeof s === "string" && s.trim()) {
+    const fallback = s
+      .trim()
+      .replace(/\s+during normal resting permeability conditions\.?/gi, "")
+      .replace(/\s+when temperature is near 37\s*°?C\.?/gi, "")
+      .replace(/\s+in a typical mammalian central neuron\.?/gi, "")
+      .trim();
+    if (fallback) return fallback;
+    return "Mechanism that does not apply to the process described in the stem";
+  }
   return t;
 }
 
@@ -109,8 +118,7 @@ for (const file of files) {
 }
 console.log("total option cleanups:", total);
 
-const fix = spawnSync(process.execPath, ["scripts/fix-blank-options.mjs"], {
-  cwd: root,
-  stdio: "inherit",
-});
-if (fix.status !== 0) process.exit(fix.status ?? 1);
+for (const script of ["scripts/purge-junk-distractors.mjs", "scripts/fix-blank-options.mjs"]) {
+  const fix = spawnSync(process.execPath, [script], { cwd: root, stdio: "inherit" });
+  if (fix.status !== 0) process.exit(fix.status ?? 1);
+}

@@ -303,10 +303,9 @@ const PART2_VARIATION_POOL = [
     topic: "Neural Circuits",
     question: "Circuit A: neuron R excites neuron T, and T inhibits neuron S (feedforward inhibition). Circuit B: R excites both T and S directly, and T also inhibits S (same net inhibition on S). If R fires briefly, S typically receives:",
     options: [
-
       "In both designs, delayed disynaptic inhibition from T can sharpen timing of S output relative to direct excitation alone",
       "No inhibition in either design because T is excitatory",
-      "Inner hair cells establish the dark resting potential of rods",
+      "Uses steady-state Nernst for one ion while multiple conductances change in time",
       "Identical firing rates in S regardless of wiring",
     ],
     correct: 0,
@@ -322,7 +321,6 @@ const PART2_VARIATION_POOL = [
     topic: "Neural Circuits",
     question: "A reciprocal inhibitory circuit alternates activity between pool A and pool B (each excites the other’s inhibitor). Swapping to mutual excitation between A and B with no inhibition would most likely:",
     options: [
-
       "Allow simultaneous high activity in both pools instead of alternating suppression",
       "Guarantee silence in both pools",
       "Convert the circuit into a pure feedforward chain",
@@ -341,7 +339,6 @@ const PART2_VARIATION_POOL = [
     topic: "Synaptic Integration",
     question: "A neuron receives EPSPs from pathway X and IPSPs from pathway Y onto the same soma. If inhibitory interneurons in Y are silenced (disinhibition), somatic firing rate will:",
     options: [
-
       "Increase if net excitation from X was previously suppressed by Y",
       "Always decrease because inhibition was removed (ignores how EPSPs/IPSPs sum in time or space)",
       "Stay fixed because IPSPs do not affect rate (ignores how EPSPs/IPSPs sum in time or space)",
@@ -360,7 +357,6 @@ const PART2_VARIATION_POOL = [
     topic: "Chemical Synapses",
     question: "Presynaptic voltage-gated Ca²⁺ channels are blocked, but action potentials still invade the terminal. Quantal release will:",
     options: [
-
       "Fail or drop drastically because Ca²⁺ influx triggers vesicle fusion",
       "Increase because Na⁺ replaces Ca²⁺ in fusion (describes the wrong synaptic structure or transmission step)",
       "Continue unchanged via SNARE activation alone (describes the wrong synaptic structure or transmission step)",
@@ -379,7 +375,6 @@ const PART2_VARIATION_POOL = [
     topic: "Synaptic Transmission",
     question: "Postsynaptic NMDA receptors are blocked with Mg²⁺ clamp maintained, but AMPA receptors remain functional. Typical consequence for LTP induction protocols:",
     options: [
-
       "LTP induction is impaired because NMDA coincidence detection and Ca²⁺ entry are blocked",
       "LTP strengthens immediately via AMPA alone (mixes up presynaptic release with postsynaptic receptor logic)",
       "Only short-term facilitation is blocked, LTP unchanged (mixes up presynaptic release with postsynaptic receptor logic)",
@@ -398,7 +393,6 @@ const PART2_VARIATION_POOL = [
     topic: "Inhibitory Circuits",
     question: "A feedforward inhibitory interneuron is converted in silico to feedforward excitatory onto the same principal cell (same input timing). Threshold crossing for the principal cell will generally:",
     options: [
-
       "Become easier (lower threshold effective) because inhibition is replaced by excitation",
       "Become harder because excitation is slower than inhibition",
       "Be unchanged because excitation and inhibition are equivalent",
@@ -417,7 +411,6 @@ const PART2_VARIATION_POOL = [
     topic: "Short-Term Plasticity",
     question: "Presynaptic residual Ca²⁺ after one spike normally facilitates release. If Ca²⁺ buffers in the terminal are increased (faster Ca²⁺ clearance), paired-pulse facilitation will:",
     options: [
-
       "Decrease because less Ca²⁺ remains to boost the second spike’s release",
       "Increase because buffering adds more Ca²⁺",
       "Convert immediately to LTP",
@@ -436,7 +429,6 @@ const PART2_VARIATION_POOL = [
     topic: "Synaptic Integration",
     question: "Two excitatory inputs A and B each alone produce 3 mV EPSPs at the soma. If B is replaced by an inhibitory input of equal conductance magnitude with E_rev = −75 mV at rest V_m = −65 mV, simultaneous A+B will:",
     options: [
-
       "Produce less somatic depolarization than A alone (subtractive/shunting effect)",
       "Always sum to 6 mV depolarization (ignores how EPSPs/IPSPs sum in time or space)",
       "Hyperpolarize to −90 mV regardless of A (ignores how EPSPs/IPSPs sum in time or space)",
@@ -455,7 +447,6 @@ const PART2_VARIATION_POOL = [
     topic: "Neuromodulation",
     question: "A circuit has excitatory drive to a motor pool. Adding neuromodulator that closes K⁺ leak channels on those motor neurons will:",
     options: [
-
       "Increase excitability (depolarize toward threshold) and often increase firing for the same synaptic input",
       "Decrease firing by hyperpolarizing toward E_K",
       "Block all voltage-gated Na⁺ channels",
@@ -474,7 +465,6 @@ const PART2_VARIATION_POOL = [
     topic: "Chemical Synapses",
     question: "Botulinum toxin cleaves SNARE proteins presynaptically. The immediate physiological consequence is:",
     options: [
-
       "Reduced or abolished quantal transmitter release despite intact action potentials",
       "Enhanced release because SNAREs are activated (describes the wrong synaptic structure or transmission step)",
       "Block of postsynaptic GABA<sub>A</sub> receptors (describes the wrong synaptic structure or transmission step)",
@@ -493,7 +483,6 @@ const PART2_VARIATION_POOL = [
     topic: "Synaptic Plasticity Rules",
     question: "In a Hebbian STDP rule, presynaptic spike 10 ms before postsynaptic spike strengthens the synapse. If the order is reversed (post before pre), the same rule typically:",
     options: [
-
       "Weakens the synapse",
       "Strengthens the synapse equally",
       "Has no effect because timing is irrelevant",
@@ -512,7 +501,6 @@ const PART2_VARIATION_POOL = [
     topic: "Neural Circuits",
     question: "A central pattern generator normally produces alternating left/right bursts via reciprocal inhibition. If reciprocal inhibitory synapses are blocked but excitatory coupling remains, the pattern will most likely:",
     options: [
-
       "Lose strict alternation and may show synchronous or irregular co-activation",
       "Speed up perfect alternation",
       "Stop all rhythmic output permanently",
@@ -531,7 +519,6 @@ const PART2_VARIATION_POOL = [
     topic: "Receptor Types",
     question: "A metabotropic GABA<sub>B</sub> agonist is applied. Compared with GABA<sub>A</sub> activation, the effect on postsynaptic V_m is typically:",
     options: [
-
       "Slower onset with longer-lasting modulation via G-protein coupled K⁺ or Ca²⁺ channel changes",
       "Instantaneous large depolarization identical to AMPA",
       "Permanent block of all synaptic release",
@@ -550,7 +537,6 @@ const PART2_VARIATION_POOL = [
     topic: "Synaptic Integration",
     question: "An inhibitory interneuron makes perisomatic synapses onto a pyramidal cell. Moving the same synapses to distal dendrites (same strength) will usually:",
     options: [
-
       "Reduce the inhibitory impact on somatic spike generation (location-dependent attenuation)",
       "Increase somatic inhibition because dendrites amplify IPSPs",
       "Have identical somatic effect regardless of location (ignores how EPSPs/IPSPs sum in time or space)",

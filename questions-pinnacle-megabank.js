@@ -3139,7 +3139,7 @@ const PINNACLE_MEGA_POOL = [
     question: "Gate control theory of pain emphasizes:",
     options: [
       "Requires photoreceptor bleaching",
-      "Only horizontal cells hyperpolarize rods when cGMP is high",
+      "Mixes up temporal versus spatial summation at the postsynaptic membrane",
       "Spinal modulation where touch and pain pathways interact",
       "Requires cortical blindness",
     ],
@@ -4670,7 +4670,7 @@ const PINNACLE_MEGA_POOL = [
     options: [
       "Requires peripheral neuropathy only always",
       "Thiamine deficiency affecting diencephalon (mammillary bodies etc.)",
-      "Only Müller glia pass inward cation current in darkness",
+      "Mixes up temporal versus spatial summation at the postsynaptic membrane",
       "Requires cochlear lesion",
     ],
     correct: 1,
@@ -4778,7 +4778,7 @@ const PINNACLE_MEGA_POOL = [
     options: [
       "Requires photoreceptor bleaching rate",
       "Working memory and recognition in prefrontal/temporal networks",
-      "Gap junctions relay dark current from cones to rods exclusively",
+      "Describes presynaptic vesicle release instead of postsynaptic integration",
       "Requires ia afferent frequency",
     ],
     correct: 1,
@@ -4923,7 +4923,7 @@ const PINNACLE_MEGA_POOL = [
       "Requires eEG scalp averaging without contact",
       "High-resolution measurement of single-channel or whole-cell currents",
       "Requires mRI BOLD without magnet",
-      "Glutamate release dominates in the dark in all vertebrate photoreceptors",
+      "Confuses resting multi-ion equilibrium with time-varying spike conductances",
     ],
     correct: 1,
     explanation: "High-resolution measurement of single-channel or whole-cell currents",

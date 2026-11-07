@@ -860,7 +860,7 @@ const PART3_FRESH_POOL = [
       "Local changes in blood oxygenation coupled to neural activity",
       "Direct measurement of every synaptic vesicle fusion",
       "Static anatomy without physiology",
-      "Glutamate release dominates in the dark in all vertebrate photoreceptors",
+      "Uses steady-state Nernst for one ion while multiple conductances change in time",
     ],
     correct: 0,
     explanation: "Neural activity drives blood flow and oxygenation changes detected as BOLD contrast.",
@@ -1747,7 +1747,7 @@ const PART2_FRESH_POOL_2 = [
     options: [
       "Diffuses from postsynaptic sites to modulate presynaptic release",
       "Is stored only in muscle spindles",
-      "Glutamate release dominates in the dark in all vertebrate photoreceptors",
+      "Uses steady-state Nernst for one ion while multiple conductances change in time",
       "Is the primary photopigment",
     ],
     correct: 0,
@@ -1855,7 +1855,7 @@ const PART2_FRESH_POOL_2 = [
     options: [
       "Amplify activity but risk runaway unless balanced by inhibition",
       "Never show oscillations",
-      "Inner hair cells establish the dark resting potential of rods",
+      "Uses steady-state Nernst for one ion while multiple conductances change in time",
       "Eliminate action potentials",
     ],
     correct: 0,
@@ -1984,7 +1984,7 @@ const PART3_FRESH_POOL_2 = [
     options: [
       "Fine touch, vibration, proprioception to cortex",
       "Requires pain via spinothalamic",
-      "Gap junctions relay dark current from cones to rods exclusively",
+      "Implies myelin alone sets spike threshold without voltage-gated channels",
       "Requires auditory pitch",
     ],
     correct: 0,

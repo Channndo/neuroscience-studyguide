@@ -16,6 +16,8 @@ const POOL_FILES = fs
 const BANNED = /variant|placeholder|Clinical vignette \d|Pinnacle calc|Pinnacle gating|mastery variant/i;
 const FILLER =
   /\(does not follow|inconsistent with the mechanism|not the best match|wrong visual pathway stage|wrong … stage|— inconsistent with the mechanism|does not follow from the mechanism implied/i;
+const JUNK_OPTION =
+  /37\s*°?C|typical mammalian central neuron|during normal resting permeability|gap junctions relay dark current|depolarize rods in darkness|bleaching photopigment|glutamate release dominates.*dark|gap junction coupling in a typical/i;
 const RT_F_LOG10 = 61.54;
 
 function skeleton(stem) {
@@ -137,6 +139,11 @@ for (const [name, arr] of Object.entries(allPools)) {
       if (FILLER.test(String(opt))) {
         failed = true;
         report.push(`FAIL: filler suffix in ${name} option: ${String(opt).slice(0, 70)}…`);
+        break;
+      }
+      if (JUNK_OPTION.test(String(opt))) {
+        failed = true;
+        report.push(`FAIL: junk/padding distractor in ${name}: ${String(opt).slice(0, 70)}…`);
         break;
       }
     }

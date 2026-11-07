@@ -23,7 +23,7 @@ const PART1_EXPANSION_POOL = [
     topic: "Nernst Equation",
     question: "Nernst scenario: extracellular Na⁺ is doubled. Expected change in equilibrium potential:",
     options: [
-      "E_Na becomes more positive (about +18 mV at 37°C)",
+      "Equates electrical synapses with chemical quantal transmission at the NMJ",
       "E_Na becomes less positive (toward 0 mV) — contradicts the Nernst dependence on inside/outside concentrations.",
       "Mixes up temporal order of channel activation during signaling",
       "Shifts by exactly −61 mV regardless of ion (contradicts the Nernst dependence on inside/outside concentrations)",
@@ -3992,7 +3992,7 @@ const PART3_EXPANSION_POOL = [
       "Hair cells and supporting cells transducing mechanical vibration",
       "Requires photoreceptors and bipolar cells",
       "Delayed K⁺ channels are closed throughout the entire action potential",
-      "Only Müller glia pass inward cation current in darkness",
+      "Implies myelin alone sets spike threshold without voltage-gated channels",
     ],
     correct: 0,
     explanation: "Cochlear hair cells transduce fluid–membrane motion.",

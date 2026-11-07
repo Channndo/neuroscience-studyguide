@@ -547,7 +547,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     options: [
       "Net inward current exceeds outward current initiating regenerative Na⁺ entry",
       "Myelin is synthesized in the soma",
-      "Gap junctions relay dark current from cones to rods exclusively",
+      "Describes presynaptic vesicle release instead of postsynaptic integration",
       "Photoreceptors depolarize to light",
     ],
     correct: 0,
@@ -1901,7 +1901,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     topic: "Nernst Equation",
     question: "Suppose that z = +2 for Ca²⁺, a fourfold increase in external Ca²⁺ (fixed internal) changes E_Ca by approximately:",
     options: [
-      "+18.5 mV at 37°C (more positive)",
+      "Applies a peripheral sensory transduction step to unrelated central circuitry",
       "+61 mV (contradicts the Nernst dependence on inside/outside concentrations)",
       "0 mV (contradicts the Nernst dependence on inside/outside concentrations)",
       "−61 mV (contradicts the Nernst dependence on inside/outside concentrations)",

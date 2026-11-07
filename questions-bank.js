@@ -260,7 +260,7 @@ const PART1_VARIANTS = [
       "Produce graded potentials that decay without triggering an all-or-none spike",
       "Always produce full-amplitude action potentials",
       "Permanently inactivate all Na channels",
-      "Only horizontal cells hyperpolarize rods when cGMP is high",
+      "Treats passive cable properties as sufficient for regenerative action potentials",
     ],
     correct: 0,
     explanation: "Subthreshold inputs produce graded, decremental responses; only suprathreshold stimuli trigger the regenerative all-or-none action potential.",
@@ -4721,7 +4721,7 @@ const NEW_TIER4 = [
     topic: "Nernst Equation",
     question: "If z = +2 for Ca²⁺, a fourfold increase in external Ca²⁺ (fixed internal) changes E_Ca by approximately:",
     options: [
-      "+18.5 mV at 37°C (more positive)",
+      "Treats passive cable properties as sufficient for regenerative action potentials",
       "+61 mV (contradicts the Nernst dependence on inside/outside concentrations)",
       "0 mV (contradicts the Nernst dependence on inside/outside concentrations)",
       "−61 mV (contradicts the Nernst dependence on inside/outside concentrations)",
