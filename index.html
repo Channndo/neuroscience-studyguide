@@ -1759,6 +1759,12 @@
     .instant-feedback.correct .instant-feedback-label { color: var(--correct); }
     .instant-feedback.incorrect .instant-feedback-label { color: var(--incorrect); }
 
+    .instant-feedback-wrong--picked {
+      border-left: 3px solid var(--incorrect);
+      padding-left: 0.65rem;
+      margin-left: 0.15rem;
+    }
+
     .instant-feedback-wrong {
       margin: 0.5rem 0 0;
       font-size: 0.88rem;
@@ -3415,15 +3421,16 @@
     &middot; <button type="button" class="footer-link-btn" id="footer-go-downloads">Downloads</button>
   </footer>
 
-  <script src="questions-bank.js?v=20251107b"></script>
-  <script src="questions-extra-pools.js?v=20251107b"></script>
-  <script src="questions-fresh-pools.js?v=20251107b"></script>
-  <script src="questions-expansion.js?v=20251107b"></script>
-  <script src="questions-exam-paraphrases.js?v=20251107b"></script>
-  <script src="questions-written-final.js?v=20251107b"></script>
-  <script src="questions-proctored-mock.js?v=20251107b"></script>
-  <script src="questions-formula-drills.js?v=20251107b"></script>
-  <script src="questions-pinnacle-megabank.js?v=20251107b"></script>
+  <script src="explanation-feedback.js?v=20251107c"></script>
+  <script src="questions-bank.js?v=20251107c"></script>
+  <script src="questions-extra-pools.js?v=20251107c"></script>
+  <script src="questions-fresh-pools.js?v=20251107c"></script>
+  <script src="questions-expansion.js?v=20251107c"></script>
+  <script src="questions-exam-paraphrases.js?v=20251107c"></script>
+  <script src="questions-written-final.js?v=20251107c"></script>
+  <script src="questions-proctored-mock.js?v=20251107c"></script>
+  <script src="questions-formula-drills.js?v=20251107c"></script>
+  <script src="questions-pinnacle-megabank.js?v=20251107c"></script>
   <script src="brain-anatomy-diagrams.js?v=6"></script>
   <script src="questions-brain-anatomy.js?v=6"></script>
   <script src="mcb80x-cloud-config.js"></script>
@@ -3558,6 +3565,20 @@
       const t = String(opt ?? "").trim();
       if (t) return fmt(t);
       return `<span class="option-missing">(Choice ${letter} is missing—hard-refresh to load the latest question banks.)</span>`;
+    }
+
+    function mcqWrongExplanation(q, optionIndex) {
+      if (typeof ExplanationFeedback !== "undefined") {
+        return ExplanationFeedback.resolveWrong(q, optionIndex);
+      }
+      return q.wrongExplanations?.[optionIndex] || "";
+    }
+
+    function mcqMainExplanation(q, isCorrect) {
+      if (typeof ExplanationFeedback !== "undefined") {
+        return isCorrect ? ExplanationFeedback.resolveWhyCorrect(q) : ExplanationFeedback.resolveMain(q);
+      }
+      return q.explanation || "";
     }
 
     /* ═══════════════════════════════════════════════════════════
@@ -8463,19 +8484,27 @@
         }).join("");
 
         const wrongNotesHtml = revealed
-          ? q.options.map((opt, i) => {
-              if (i === q.correct) return "";
-              const note = q.wrongExplanations?.[i];
-              if (!note) return "";
-              return `<p class="instant-feedback-wrong"><strong>Why ${LETTERS[i]} is wrong:</strong> ${fmt(note)}</p>`;
-            }).join("")
+          ? q.options
+              .map((opt, i) => {
+                if (i === q.correct) return "";
+                const note = mcqWrongExplanation(q, i);
+                if (!note) return "";
+                const emphasis =
+                  !isCorrect && i === selected
+                    ? " instant-feedback-wrong--picked"
+                    : "";
+                return `<p class="instant-feedback-wrong${emphasis}"><strong>Why ${LETTERS[i]} is wrong:</strong> ${fmt(note)}</p>`;
+              })
+              .join("")
           : "";
-        const feedbackHtml = revealed ? `
+        const feedbackHtml = revealed
+          ? `
         <div class="instant-feedback ${isCorrect ? "correct" : "incorrect"}" role="status">
           <p class="instant-feedback-label">${isCorrect ? "Correct" : "Incorrect"}</p>
-          <p class="instant-feedback-text"><strong>Explanation:</strong> ${fmt(q.explanation)}</p>
+          <p class="instant-feedback-text"><strong>${isCorrect ? "Why this is right:" : "Explanation:"}</strong> ${fmt(mcqMainExplanation(q, isCorrect))}</p>
           ${wrongNotesHtml}
-        </div>` : "";
+        </div>`
+          : "";
         bodyHtml = `
         <div class="answer-grid" role="radiogroup" aria-label="Answer choices">${optionsHtml}</div>
         ${feedbackHtml}`;
@@ -8640,15 +8669,18 @@
           ${diagramBlock}
           <div class="review-options">${optionsHtml}</div>
           ${scoringNote}
-          <p class="review-explanation"><strong>Explanation:</strong> ${fmt(q.explanation)}</p>
+          <p class="review-explanation"><strong>${isCorrect ? "Why this is right:" : "Explanation:"}</strong> ${fmt(mcqMainExplanation(q, isCorrect))}</p>
           ${q.options.map((opt, j) => {
             if (selectAll) {
-              if (!q.wrongExplanations?.[j]) return "";
+              const note = mcqWrongExplanation(q, j);
+              if (!note) return "";
               if (need.has(j)) return "";
-              return `<p class="review-explanation"><strong>Why ${LETTERS[j]} is wrong:</strong> ${fmt(q.wrongExplanations[j])}</p>`;
+              return `<p class="review-explanation"><strong>Why ${LETTERS[j]} is wrong:</strong> ${fmt(note)}</p>`;
             }
-            if (j === q.correct || !q.wrongExplanations?.[j]) return "";
-            return `<p class="review-explanation"><strong>Why ${LETTERS[j]} is wrong:</strong> ${fmt(q.wrongExplanations[j])}</p>`;
+            if (j === q.correct) return "";
+            const note = mcqWrongExplanation(q, j);
+            if (!note) return "";
+            return `<p class="review-explanation"><strong>Why ${LETTERS[j]} is wrong:</strong> ${fmt(note)}</p>`;
           }).join("")}`;
 
         reviewList.appendChild(card);

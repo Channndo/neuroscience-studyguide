@@ -6,7 +6,6 @@ const PINNACLE_MEGA_POOL = [
     topic: "Nernst Equation",
     question: "At 37°C, [K⁺]i = 140 mM and [K⁺]o = 5 mM. E_K is closest to:",
     options: [
-
       "-89 mV",
       "-49 mV",
       "+60 mV",
@@ -14,12 +13,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "E_K = 61.54·log10(5/140) ≈ -89.1 mV.",
+    wrongExplanations: [
+      "",
+      "“-49 mV” does not match the mechanism (topic: Nernst Equation). E_K = 61.54·log10(5/140) ≈ -89.1 mV. The correct choice—“-89 mV”—fits that description.",
+      "“+60 mV” does not match the mechanism (topic: Nernst Equation). E_K = 61.54·log10(5/140) ≈ -89.1 mV. The correct choice—“-89 mV”—fits that description.",
+      "“0 mV” does not match the mechanism (topic: Nernst Equation). E_K = 61.54·log10(5/140) ≈ -89.1 mV. The correct choice—“-89 mV”—fits that description.",
+    ]
   },
   {
     topic: "Nernst Equation",
     question: "At 37°C, [K⁺]i = 140 mM and [K⁺]o = 2.5 mM. E_K is closest to:",
     options: [
-
       "0 mV",
       "-68 mV",
       "-108 mV",
@@ -27,12 +31,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "E_K = 61.54·log10(2.5/140) ≈ -107.6 mV.",
+    wrongExplanations: [
+      "“0 mV” does not match the mechanism (topic: Nernst Equation). E_K = 61.54·log10(2.5/140) ≈ -107.6 mV. The correct choice—“-108 mV”—fits that description.",
+      "“-68 mV” does not match the mechanism (topic: Nernst Equation). E_K = 61.54·log10(2.5/140) ≈ -107.6 mV. The correct choice—“-108 mV”—fits that description.",
+      "",
+      "“+60 mV” does not match the mechanism (topic: Nernst Equation). E_K = 61.54·log10(2.5/140) ≈ -107.6 mV. The correct choice—“-108 mV”—fits that description.",
+    ]
   },
   {
     topic: "Nernst Equation",
     question: "At 37°C, [Na⁺]i = 15 mM and [Na⁺]o = 145 mM. E_Na is closest to:",
     options: [
-
       "31 mV",
       "+61 mV",
       "−70 mV",
@@ -40,12 +49,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "E_Na ≈ +60.6 mV.",
+    wrongExplanations: [
+      "“31 mV” is not the best match for the stem (topic: Nernst Equation). The keyed answer—“+61 mV”—reflects the underlying neuroscience described in the course.",
+      "",
+      "“−70 mV” is not the best match for the stem (topic: Nernst Equation). The keyed answer—“+61 mV”—reflects the underlying neuroscience described in the course.",
+      "“+10 mV” is not the best match for the stem (topic: Nernst Equation). The keyed answer—“+61 mV”—reflects the underlying neuroscience described in the course.",
+    ]
   },
   {
     topic: "Nernst Equation",
     question: "At 37°C (z=2), [Ca²⁺]i = 0.10 µM and [Ca²⁺]o = 2 mM. E_Ca is closest to:",
     options: [
-
       "+30 mV",
       "+132 mV",
       "0 mV",
@@ -53,12 +67,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "E_Ca ≈ +132.3 mV.",
+    wrongExplanations: [
+      "“+30 mV” is not the best match for the stem (topic: Nernst Equation). The keyed answer—“+132 mV”—reflects the underlying neuroscience described in the course.",
+      "",
+      "“0 mV” is not the best match for the stem (topic: Nernst Equation). The keyed answer—“+132 mV”—reflects the underlying neuroscience described in the course.",
+      "“−70 mV” is not the best match for the stem (topic: Nernst Equation). The keyed answer—“+132 mV”—reflects the underlying neuroscience described in the course.",
+    ]
   },
   {
     topic: "Nernst Equation",
     question: "At 37°C (z=2), [Ca²⁺]i = 0.05 µM and [Ca²⁺]o = 1.5 mM. E_Ca is closest to:",
     options: [
-
       "+30 mV",
       "−70 mV",
       "0 mV",
@@ -66,12 +85,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "E_Ca ≈ +137.8 mV.",
+    wrongExplanations: [
+      "“+30 mV” is not the best match for the stem (topic: Nernst Equation). The keyed answer—“+138 mV”—reflects the underlying neuroscience described in the course.",
+      "“−70 mV” is not the best match for the stem (topic: Nernst Equation). The keyed answer—“+138 mV”—reflects the underlying neuroscience described in the course.",
+      "“0 mV” is not the best match for the stem (topic: Nernst Equation). The keyed answer—“+138 mV”—reflects the underlying neuroscience described in the course.",
+      "",
+    ]
   },
   {
     topic: "Goldman Equation",
     question: "With standard K⁺/Na⁺ concentrations and P_K:P_Na = 1:0.05, resting V_m is best described as:",
     options: [
-
       "Near −65 mV",
       "At E_K (≈ −90 mV) exactly",
       "Exactly 0 mV",
@@ -79,12 +103,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "With typical [K⁺]i/o and [Na⁺]i/o, Goldman at high P_K but finite P_Na gives V_m ≈ −65 mV—not the full Nernst E_K.",
+    wrongExplanations: [
+      "",
+      "“At E_K (≈ −90 mV) exactly” does not match the mechanism (topic: Goldman Equation). With typical [K⁺]i/o and [Na⁺]i/o, Goldman at high P_K but finite P_Na gives V_m ≈ −65 mV—not the full Nernst E_K. The correct choice—“Near −65 mV”—fits that description.",
+      "“Exactly 0 mV” does not match the mechanism (topic: Goldman Equation). With typical [K⁺]i/o and [Na⁺]i/o, Goldman at high P_K but finite P_Na gives V_m ≈ −65 mV—not the full Nernst E_K. The correct choice—“Near −65 mV”—fits that description.",
+      "“Closer to E_Na (+60 mV)” does not match the mechanism (topic: Goldman Equation). With typical [K⁺]i/o and [Na⁺]i/o, Goldman at high P_K but finite P_Na gives V_m ≈ −65 mV—not the full Nernst E_K. The correct choice—“Near −65 mV”—fits that description.",
+    ]
   },
   {
     topic: "Goldman Equation",
     question: "With standard K⁺/Na⁺ concentrations and P_Cl equals P_K with E_Cl negative to rest, resting V_m is best described as:",
     options: [
-
       "V_m undefined",
       "V_m pulled toward E_Cl if P_Cl high",
       "V_m equals E_Na always",
@@ -92,12 +121,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Goldman equation weights ions by permeability.",
+    wrongExplanations: [
+      "“V_m undefined” does not match the mechanism (topic: Goldman Equation). Goldman equation weights ions by permeability. The correct choice—“V_m pulled toward E_Cl if P_Cl high”—fits that description.",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Goldman equation weights ions by permeability.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Goldman equation weights ions by permeability.",
+    ]
   },
   {
     topic: "Cable Properties",
     question: "Passive cable: Doubling R_m with R_i fixed. The expected effect is:",
     options: [
-
       "τ equals λ",
       "λ halves",
       "λ unchanged",
@@ -105,12 +139,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "λ increases (√(R_m/R_i))",
+    wrongExplanations: [
+      "“τ equals λ” does not match the mechanism (topic: Cable Properties). λ increases (√(R_m/R_i)) The correct choice—“λ increases (√(R_m/R_i))”—fits that description.",
+      "“λ halves” does not match the mechanism (topic: Cable Properties). λ increases (√(R_m/R_i)) The correct choice—“λ increases (√(R_m/R_i))”—fits that description.",
+      "“λ unchanged” does not match the mechanism (topic: Cable Properties). λ increases (√(R_m/R_i)) The correct choice—“λ increases (√(R_m/R_i))”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Cable Properties",
     question: "Passive cable: Doubling C_m with fixed g_leak. The expected effect is:",
     options: [
-
       "No effect on τ",
       "τ halves",
       "λ doubles always",
@@ -118,12 +157,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "τ = R_m C_m doubles",
+    wrongExplanations: [
+      "“No effect on τ” is not the best match for the stem (topic: Cable Properties). The keyed answer—“τ = R_m C_m doubles”—reflects the underlying neuroscience described in the course.",
+      "“τ halves” is not the best match for the stem (topic: Cable Properties). The keyed answer—“τ = R_m C_m doubles”—reflects the underlying neuroscience described in the course.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: τ = R_m C_m doubles",
+      "",
+    ]
   },
   {
     topic: "Cable Properties",
     question: "Passive cable: Increased axial resistance R_a. The expected effect is:",
     options: [
-
       "λ increases",
       "Only τ changes",
       "λ decreases",
@@ -131,12 +175,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "λ decreases",
+    wrongExplanations: [
+      "“λ increases” is not the best match for the stem (topic: Cable Properties). The keyed answer—“λ decreases”—reflects the underlying neuroscience described in the course.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: λ decreases",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: λ decreases",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Application of TTX on squid giant axon produces which outcome?",
     options: [
-
       "Blocks voltage-gated Na⁺; no action potentials",
       "Depolarizes to +60 mV",
       "Blocks K⁺ only",
@@ -144,12 +193,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Blocks voltage-gated Na⁺; no action potentials",
+    wrongExplanations: [
+      "",
+      "“Depolarizes to +60 mV” does not match the mechanism (topic: Pharmacology). Blocks voltage-gated Na⁺; no action potentials The correct choice—“Blocks voltage-gated Na⁺; no action potentials”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Blocks voltage-gated Na⁺; no action potentials",
+      "“Opens Cl⁻ channels” does not match the mechanism (topic: Pharmacology). Blocks voltage-gated Na⁺; no action potentials The correct choice—“Blocks voltage-gated Na⁺; no action potentials”—fits that description.",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Application of TEA during an action potential produces which outcome?",
     options: [
-
       "Slows repolarization; broadens spike",
       "Hyperpolarizes to E_K instantly",
       "Blocks Na⁺ inactivation",
@@ -157,12 +211,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Slows repolarization; broadens spike",
+    wrongExplanations: [
+      "",
+      "“Hyperpolarizes to E_K instantly” does not match the mechanism (topic: Pharmacology). Slows repolarization; broadens spike The correct choice—“Slows repolarization; broadens spike”—fits that description.",
+      "“Blocks Na⁺ inactivation” does not match the mechanism (topic: Pharmacology). Slows repolarization; broadens spike The correct choice—“Slows repolarization; broadens spike”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Slows repolarization; broadens spike",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Application of Ouabain on a neuron produces which outcome?",
     options: [
-
       "Instant hyperpolarization",
       "Selective GABA block",
       "Blocks synaptic vesicle fusion",
@@ -170,12 +229,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Stops Na⁺/K⁺ pump; gradual depolarization",
+    wrongExplanations: [
+      "EPSPs are depolarizing (or less hyperpolarized) shifts that move V_m toward spike threshold. Hyperpolarization or clamping toward E_K describes inhibition (IPSPs), not excitation. Stops Na⁺/K⁺ pump; gradual depolarization",
+      "“Selective GABA block” does not match the mechanism (topic: Pharmacology). Stops Na⁺/K⁺ pump; gradual depolarization The correct choice—“Stops Na⁺/K⁺ pump; gradual depolarization”—fits that description.",
+      "“Blocks synaptic vesicle fusion” does not match the mechanism (topic: Pharmacology). Stops Na⁺/K⁺ pump; gradual depolarization The correct choice—“Stops Na⁺/K⁺ pump; gradual depolarization”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Application of 4-AP (K⁺ channel blocker) produces which outcome?",
     options: [
-
       "Eliminates EPSPs",
       "Mimics myelin",
       "Blocks Na⁺ entry",
@@ -183,12 +247,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Prolongs repolarization / increases firing",
+    wrongExplanations: [
+      "“Eliminates EPSPs” does not match the mechanism (topic: Pharmacology). Prolongs repolarization / increases firing The correct choice—“Prolongs repolarization / increases firing”—fits that description.",
+      "“Mimics myelin” does not match the mechanism (topic: Pharmacology). Prolongs repolarization / increases firing The correct choice—“Prolongs repolarization / increases firing”—fits that description.",
+      "“Blocks Na⁺ entry” does not match the mechanism (topic: Pharmacology). Prolongs repolarization / increases firing The correct choice—“Prolongs repolarization / increases firing”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Synaptic Transmission",
     question: "In AMPA receptor activation at rest Mg²⁺, the best description is:",
     options: [
-
       "Requires presynaptic effect",
       "Ionotropic Cl⁻ influx",
       "Fast EPSC; NMDA still blocked by Mg²⁺",
@@ -196,12 +265,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Fast EPSC; NMDA still blocked by Mg²⁺",
+    wrongExplanations: [
+      "“Requires presynaptic effect” does not match the mechanism (topic: Synaptic Transmission). Fast EPSC; NMDA still blocked by Mg²⁺ The correct choice—“Fast EPSC; NMDA still blocked by Mg²⁺”—fits that description.",
+      "“Ionotropic Cl⁻ influx” does not match the mechanism (topic: Synaptic Transmission). Fast EPSC; NMDA still blocked by Mg²⁺ The correct choice—“Fast EPSC; NMDA still blocked by Mg²⁺”—fits that description.",
+      "",
+      "“Requires g-protein signaling” does not match the mechanism (topic: Synaptic Transmission). Fast EPSC; NMDA still blocked by Mg²⁺ The correct choice—“Fast EPSC; NMDA still blocked by Mg²⁺”—fits that description.",
+    ]
   },
   {
     topic: "Synaptic Transmission",
     question: "In NMDA receptor with strong depolarization, the best description is:",
     options: [
-
       "Always closed at rest",
       "Requires metabotropic",
       "Blocks all LTP",
@@ -209,12 +283,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Mg²⁺ block relieved; Ca²⁺ entry possible",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Mg²⁺ block relieved; Ca²⁺ entry possible",
+      "“Requires metabotropic” does not match the mechanism (topic: Synaptic Transmission). Mg²⁺ block relieved; Ca²⁺ entry possible The correct choice—“Mg²⁺ block relieved; Ca²⁺ entry possible”—fits that description.",
+      "“Blocks all LTP” does not match the mechanism (topic: Synaptic Transmission). Mg²⁺ block relieved; Ca²⁺ entry possible The correct choice—“Mg²⁺ block relieved; Ca²⁺ entry possible”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Synaptic Transmission",
     question: "In GABA<sub>A</sub> at rest when E_Cl ≈ −70 mV, the best description is:",
     options: [
-
       "Cl⁻ influx; inhibition/shunting",
       "Always excitatory",
       "Requires presynaptic",
@@ -222,12 +301,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Cl⁻ influx; inhibition/shunting",
+    wrongExplanations: [
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Cl⁻ influx; inhibition/shunting",
+      "“Requires presynaptic” does not match the mechanism (topic: Synaptic Transmission). Cl⁻ influx; inhibition/shunting The correct choice—“Cl⁻ influx; inhibition/shunting”—fits that description.",
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Cl⁻ influx; inhibition/shunting",
+    ]
   },
   {
     topic: "Synaptic Transmission",
     question: "In GABA<sub>B</sub> receptor activation, the best description is:",
     options: [
-
       "G-protein; often opens K⁺ / closes Ca²⁺",
       "Requires in retina",
       "Fast ionotropic Cl⁻",
@@ -235,12 +319,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "G-protein; often opens K⁺ / closes Ca²⁺",
+    wrongExplanations: [
+      "",
+      "“Requires in retina” does not match the mechanism (topic: Synaptic Transmission). G-protein; often opens K⁺ / closes Ca²⁺ The correct choice—“G-protein; often opens K⁺ / closes Ca²⁺”—fits that description.",
+      "GABA_A receptors are ionotropic: GABA binding opens a Cl⁻ channel and produces a fast IPSP (often hyperpolarizing or shunting). GABA_B is metabotropic (Gᵢ/o-coupled), typically opening K⁺ channels and reducing presynaptic Ca²⁺—slower, indirect inhibition. G-protein; often opens K⁺ / closes Ca²⁺",
+      "“Na⁺ channel opening” does not match the mechanism (topic: Synaptic Transmission). G-protein; often opens K⁺ / closes Ca²⁺ The correct choice—“G-protein; often opens K⁺ / closes Ca²⁺”—fits that description.",
+    ]
   },
   {
     topic: "Synaptic Transmission",
     question: "In Nicotinic ACh at NMJ, the best description is:",
     options: [
-
       "Fast cationic EPSP leading to endplate potential",
       "Glutamate release only",
       "Metabotropic only",
@@ -248,12 +337,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Fast cationic EPSP leading to endplate potential",
+    wrongExplanations: [
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Fast cationic EPSP leading to endplate potential",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Fast cationic EPSP leading to endplate potential",
+      "EPSPs are depolarizing (or less hyperpolarized) shifts that move V_m toward spike threshold. Hyperpolarization or clamping toward E_K describes inhibition (IPSPs), not excitation. Fast cationic EPSP leading to endplate potential",
+    ]
   },
   {
     topic: "Synaptic Transmission",
     question: "In Botulinum toxin at motor synapse, the best description is:",
     options: [
-
       "Postsynaptic receptor block",
       "Myelin damage",
       "Cleaves SNAREs; blocks vesicle fusion",
@@ -261,12 +355,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Cleaves SNAREs; blocks vesicle fusion",
+    wrongExplanations: [
+      "“Postsynaptic receptor block” does not match the mechanism (topic: Synaptic Transmission). Cleaves SNAREs; blocks vesicle fusion The correct choice—“Cleaves SNAREs; blocks vesicle fusion”—fits that description.",
+      "“Myelin damage” does not match the mechanism (topic: Synaptic Transmission). Cleaves SNAREs; blocks vesicle fusion The correct choice—“Cleaves SNAREs; blocks vesicle fusion”—fits that description.",
+      "",
+      "“Na⁺ channel toxin” does not match the mechanism (topic: Synaptic Transmission). Cleaves SNAREs; blocks vesicle fusion The correct choice—“Cleaves SNAREs; blocks vesicle fusion”—fits that description.",
+    ]
   },
   {
     topic: "Synaptic Transmission",
     question: "In α-Latrotoxin (excess release), the best description is:",
     options: [
-
       "Requires inhibits GABA",
       "Blocks Ca²⁺ channels",
       "Massive vesicle release; depletion possible",
@@ -274,12 +373,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Massive vesicle release; depletion possible",
+    wrongExplanations: [
+      "“Requires inhibits GABA” does not match the mechanism (topic: Synaptic Transmission). Massive vesicle release; depletion possible The correct choice—“Massive vesicle release; depletion possible”—fits that description.",
+      "“Blocks Ca²⁺ channels” does not match the mechanism (topic: Synaptic Transmission). Massive vesicle release; depletion possible The correct choice—“Massive vesicle release; depletion possible”—fits that description.",
+      "",
+      "“Prevents AP propagation” does not match the mechanism (topic: Synaptic Transmission). Massive vesicle release; depletion possible The correct choice—“Massive vesicle release; depletion possible”—fits that description.",
+    ]
   },
   {
     topic: "Synaptic Transmission",
     question: "In Strengthening an synapse via LTP protocol, the best description is:",
     options: [
-
       "Requires in photoreceptors",
       "Requires presynaptic Na⁺ increase",
       "Light raises cGMP and keeps CNG channels open",
@@ -287,12 +391,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Postsynaptic Ca²⁺ via NMDA + AMPA cooperation",
+    wrongExplanations: [
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Postsynaptic Ca²⁺ via NMDA + AMPA cooperation",
+      "“Requires presynaptic Na⁺ increase” does not match the mechanism (topic: Synaptic Transmission). Postsynaptic Ca²⁺ via NMDA + AMPA cooperation The correct choice—“Postsynaptic Ca²⁺ via NMDA + AMPA cooperation”—fits that description.",
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Postsynaptic Ca²⁺ via NMDA + AMPA cooperation",
+      "",
+    ]
   },
   {
     topic: "Synaptic Integration",
     question: "Two EPSPs 5 ms apart at one synapse:",
     options: [
-
       "Requires inhibition possible",
       "No summation ever",
       "Temporal summation if within τ",
@@ -300,12 +409,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Temporal summation if within τ",
+    wrongExplanations: [
+      "“Requires inhibition possible” does not match the mechanism (topic: Synaptic Integration). Temporal summation if within τ The correct choice—“Temporal summation if within τ”—fits that description.",
+      "“No summation ever” does not match the mechanism (topic: Synaptic Integration). Temporal summation if within τ The correct choice—“Temporal summation if within τ”—fits that description.",
+      "",
+      "“Requires spatial summation” does not match the mechanism (topic: Synaptic Integration). Temporal summation if within τ The correct choice—“Temporal summation if within τ”—fits that description.",
+    ]
   },
   {
     topic: "Synaptic Integration",
     question: "EPSP at dendrite vs soma (same amplitude locally):",
     options: [
-
       "Distal EPSP smaller at soma (cable filter)",
       "Distal always larger",
       "Identical at AIS always",
@@ -313,12 +427,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Distal EPSP smaller at soma (cable filter)",
+    wrongExplanations: [
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Distal EPSP smaller at soma (cable filter)",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Distal EPSP smaller at soma (cable filter)",
+      "“Requires gap junctions matter” does not match the mechanism (topic: Synaptic Integration). Distal EPSP smaller at soma (cable filter) The correct choice—“Distal EPSP smaller at soma (cable filter)”—fits that description.",
+    ]
   },
   {
     topic: "Synaptic Integration",
     question: "Shunting inhibition during an EPSP:",
     options: [
-
       "Increased EPSP always",
       "Reduced EPSP amplitude via increased conductance",
       "Only hyperpolarization without conductance change",
@@ -326,12 +445,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Reduced EPSP amplitude via increased conductance",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Reduced EPSP amplitude via increased conductance",
+      "",
+      "EPSPs are depolarizing (or less hyperpolarized) shifts that move V_m toward spike threshold. Hyperpolarization or clamping toward E_K describes inhibition (IPSPs), not excitation. Reduced EPSP amplitude via increased conductance",
+      "“Blocks all spikes permanently” does not match the mechanism (topic: Synaptic Integration). Reduced EPSP amplitude via increased conductance The correct choice—“Reduced EPSP amplitude via increased conductance”—fits that description.",
+    ]
   },
   {
     topic: "Clinical Neuroanatomy",
     question: "Lesion: Left optic nerve transection. Expected deficit:",
     options: [
-
       "Blindness in left eye",
       "Bitemporal hemianopia",
       "Right homonymous hemianopia",
@@ -339,12 +463,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Left optic nerve transection → Blindness in left eye.",
+    wrongExplanations: [
+      "",
+      "“Bitemporal hemianopia” does not match the mechanism (topic: Clinical Neuroanatomy). Left optic nerve transection → Blindness in left eye. The correct choice—“Blindness in left eye”—fits that description.",
+      "“Right homonymous hemianopia” does not match the mechanism (topic: Clinical Neuroanatomy). Left optic nerve transection → Blindness in left eye. The correct choice—“Blindness in left eye”—fits that description.",
+      "“Left superior quadrantanopia” does not match the mechanism (topic: Clinical Neuroanatomy). Left optic nerve transection → Blindness in left eye. The correct choice—“Blindness in left eye”—fits that description.",
+    ]
   },
   {
     topic: "Clinical Neuroanatomy",
     question: "Lesion: Optic chiasm midline compression. Expected deficit:",
     options: [
-
       "Right homonymous hemianopia",
       "Bitemporal hemianopia",
       "Macular sparing only",
@@ -352,12 +481,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Optic chiasm midline compression → Bitemporal hemianopia.",
+    wrongExplanations: [
+      "“Right homonymous hemianopia” does not match the mechanism (topic: Clinical Neuroanatomy). Optic chiasm midline compression → Bitemporal hemianopia. The correct choice—“Bitemporal hemianopia”—fits that description.",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Optic chiasm midline compression → Bitemporal hemianopia.",
+      "“Left monocular blindness” does not match the mechanism (topic: Clinical Neuroanatomy). Optic chiasm midline compression → Bitemporal hemianopia. The correct choice—“Bitemporal hemianopia”—fits that description.",
+    ]
   },
   {
     topic: "Clinical Neuroanatomy",
     question: "Lesion: Right optic tract lesion. Expected deficit:",
     options: [
-
       "Ipsilateral quadrantanopia",
       "Right monocular blindness",
       "Bitemporal loss",
@@ -365,12 +499,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Right optic tract lesion → Left homonymous hemianopia.",
+    wrongExplanations: [
+      "“Ipsilateral quadrantanopia” does not match the mechanism (topic: Clinical Neuroanatomy). Right optic tract lesion → Left homonymous hemianopia. The correct choice—“Left homonymous hemianopia”—fits that description.",
+      "“Right monocular blindness” does not match the mechanism (topic: Clinical Neuroanatomy). Right optic tract lesion → Left homonymous hemianopia. The correct choice—“Left homonymous hemianopia”—fits that description.",
+      "“Bitemporal loss” does not match the mechanism (topic: Clinical Neuroanatomy). Right optic tract lesion → Left homonymous hemianopia. The correct choice—“Left homonymous hemianopia”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Clinical Neuroanatomy",
     question: "Lesion: Left Meyer's loop (temporal lobe) damage. Expected deficit:",
     options: [
-
       "Bitemporal hemianopia",
       "Left superior quadrantanopia",
       "Right monocular blindness",
@@ -378,12 +517,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Left Meyer's loop (temporal lobe) damage → Right superior quadrantanopia.",
+    wrongExplanations: [
+      "“Bitemporal hemianopia” does not match the mechanism (topic: Clinical Neuroanatomy). Left Meyer's loop (temporal lobe) damage → Right superior quadrantanopia. The correct choice—“Right superior quadrantanopia”—fits that description.",
+      "“Left superior quadrantanopia” does not match the mechanism (topic: Clinical Neuroanatomy). Left Meyer's loop (temporal lobe) damage → Right superior quadrantanopia. The correct choice—“Right superior quadrantanopia”—fits that description.",
+      "“Right monocular blindness” does not match the mechanism (topic: Clinical Neuroanatomy). Left Meyer's loop (temporal lobe) damage → Right superior quadrantanopia. The correct choice—“Right superior quadrantanopia”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Clinical Neuroanatomy",
     question: "Lesion: Right occipital lobe (V1) lesion. Expected deficit:",
     options: [
-
       "Pure alexia only",
       "Right monocular blindness",
       "Left homonymous hemianopia",
@@ -391,12 +535,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Right occipital lobe (V1) lesion → Left homonymous hemianopia.",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Right occipital lobe (V1) lesion → Left homonymous hemianopia.",
+      "“Right monocular blindness” does not match the mechanism (topic: Clinical Neuroanatomy). Right occipital lobe (V1) lesion → Left homonymous hemianopia. The correct choice—“Left homonymous hemianopia”—fits that description.",
+      "",
+      "“Bitemporal hemianopia” does not match the mechanism (topic: Clinical Neuroanatomy). Right occipital lobe (V1) lesion → Left homonymous hemianopia. The correct choice—“Left homonymous hemianopia”—fits that description.",
+    ]
   },
   {
     topic: "Clinical Neuroanatomy",
     question: "Lesion: Complete left medial lemniscus in medulla. Expected deficit:",
     options: [
-
       "Contralateral loss of touch/proprioception",
       "Bilateral blindness",
       "Ipsilateral face pain loss",
@@ -404,12 +553,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Complete left medial lemniscus in medulla → Contralateral loss of touch/proprioception.",
+    wrongExplanations: [
+      "",
+      "“Bilateral blindness” does not match the mechanism (topic: Clinical Neuroanatomy). Complete left medial lemniscus in medulla → Contralateral loss of touch/proprioception. The correct choice—“Contralateral loss of touch/proprioception”—fits that description.",
+      "“Ipsilateral face pain loss” does not match the mechanism (topic: Clinical Neuroanatomy). Complete left medial lemniscus in medulla → Contralateral loss of touch/proprioception. The correct choice—“Contralateral loss of touch/proprioception”—fits that description.",
+      "“Pure aphasia” does not match the mechanism (topic: Clinical Neuroanatomy). Complete left medial lemniscus in medulla → Contralateral loss of touch/proprioception. The correct choice—“Contralateral loss of touch/proprioception”—fits that description.",
+    ]
   },
   {
     topic: "Clinical Neuroanatomy",
     question: "Lesion: Left spinothalamic tract at T8. Expected deficit:",
     options: [
-
       "Deafness",
       "Ipsilateral proprioception loss",
       "Bilateral UMN weakness only",
@@ -417,12 +571,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Left spinothalamic tract at T8 → Contralateral pain/temperature loss below lesion.",
+    wrongExplanations: [
+      "“Deafness” does not match the mechanism (topic: Clinical Neuroanatomy). Left spinothalamic tract at T8 → Contralateral pain/temperature loss below lesion. The correct choice—“Contralateral pain/temperature loss below lesion”—fits that description.",
+      "“Ipsilateral proprioception loss” does not match the mechanism (topic: Clinical Neuroanatomy). Left spinothalamic tract at T8 → Contralateral pain/temperature loss below lesion. The correct choice—“Contralateral pain/temperature loss below lesion”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Left spinothalamic tract at T8 → Contralateral pain/temperature loss below lesion.",
+      "",
+    ]
   },
   {
     topic: "Clinical Neuroanatomy",
     question: "Lesion: Brown-Séquard hemisection at T10 (right). Expected deficit:",
     options: [
-
       "Ipsilateral UMN weakness + DCML loss",
       "Pure cerebellar ataxia",
       "Requires autonomic loss",
@@ -430,12 +589,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Brown-Séquard hemisection at T10 (right) → Ipsilateral UMN weakness + DCML loss; contralateral pain loss.",
+    wrongExplanations: [
+      "",
+      "“Pure cerebellar ataxia” does not match the mechanism (topic: Clinical Neuroanatomy). Brown-Séquard hemisection at T10 (right) → Ipsilateral UMN weakness + DCML loss; contralateral pain loss. The correct choice—“Ipsilateral UMN weakness + DCML loss”—fits that description.",
+      "“Requires autonomic loss” does not match the mechanism (topic: Clinical Neuroanatomy). Brown-Séquard hemisection at T10 (right) → Ipsilateral UMN weakness + DCML loss; contralateral pain loss. The correct choice—“Ipsilateral UMN weakness + DCML loss”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Brown-Séquard hemisection at T10 (right) → Ipsilateral UMN weakness + DCML loss; contralateral pain loss.",
+    ]
   },
   {
     topic: "Clinical Neuroanatomy",
     question: "Lesion: Anterior spinal artery infarct. Expected deficit:",
     options: [
-
       "Isolated proprioception loss only",
       "Pure ataxia",
       "Requires autonomic symptoms",
@@ -443,12 +607,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Anterior spinal artery infarct → Bilateral motor + spinothalamic loss; dorsal columns spared.",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Anterior spinal artery infarct → Bilateral motor + spinothalamic loss; dorsal columns spared.",
+      "“Pure ataxia” does not match the mechanism (topic: Clinical Neuroanatomy). Anterior spinal artery infarct → Bilateral motor + spinothalamic loss; dorsal columns spared. The correct choice—“Bilateral motor + spinothalamic loss”—fits that description.",
+      "“Requires autonomic symptoms” does not match the mechanism (topic: Clinical Neuroanatomy). Anterior spinal artery infarct → Bilateral motor + spinothalamic loss; dorsal columns spared. The correct choice—“Bilateral motor + spinothalamic loss”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Clinical Neuroanatomy",
     question: "Lesion: Right cerebellar hemisphere lesion. Expected deficit:",
     options: [
-
       "Contralateral hemiparesis",
       "Bitemporal hemianopia",
       "Ipsilateral limb ataxia (planning/timing)",
@@ -456,12 +625,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Right cerebellar hemisphere lesion → Ipsilateral limb ataxia (planning/timing).",
+    wrongExplanations: [
+      "“Contralateral hemiparesis” does not match the mechanism (topic: Clinical Neuroanatomy). Right cerebellar hemisphere lesion → Ipsilateral limb ataxia (planning/timing). The correct choice—“Ipsilateral limb ataxia (planning/timing)”—fits that description.",
+      "“Bitemporal hemianopia” does not match the mechanism (topic: Clinical Neuroanatomy). Right cerebellar hemisphere lesion → Ipsilateral limb ataxia (planning/timing). The correct choice—“Ipsilateral limb ataxia (planning/timing)”—fits that description.",
+      "",
+      "“Broca aphasia” does not match the mechanism (topic: Clinical Neuroanatomy). Right cerebellar hemisphere lesion → Ipsilateral limb ataxia (planning/timing). The correct choice—“Ipsilateral limb ataxia (planning/timing)”—fits that description.",
+    ]
   },
   {
     topic: "Clinical Neuroanatomy",
     question: "Lesion: Cerebellar vermis lesion. Expected deficit:",
     options: [
-
       "Truncal/gait ataxia",
       "Ipsilateral arm intention tremor only",
       "Homonymous hemianopia",
@@ -469,12 +643,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Cerebellar vermis lesion → Truncal/gait ataxia.",
+    wrongExplanations: [
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Cerebellar vermis lesion → Truncal/gait ataxia.",
+      "“Homonymous hemianopia” does not match the mechanism (topic: Clinical Neuroanatomy). Cerebellar vermis lesion → Truncal/gait ataxia. The correct choice—“Truncal/gait ataxia”—fits that description.",
+      "“Hyperreflexia with Babinski” does not match the mechanism (topic: Clinical Neuroanatomy). Cerebellar vermis lesion → Truncal/gait ataxia. The correct choice—“Truncal/gait ataxia”—fits that description.",
+    ]
   },
   {
     topic: "Clinical Neuroanatomy",
     question: "Lesion: Bilateral hippocampal damage. Expected deficit:",
     options: [
-
       "Deafness",
       "Anterograde declarative memory impairment",
       "Color blindness",
@@ -482,12 +661,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Bilateral hippocampal damage → Anterograde declarative memory impairment.",
+    wrongExplanations: [
+      "“Deafness” does not match the mechanism (topic: Clinical Neuroanatomy). Bilateral hippocampal damage → Anterograde declarative memory impairment. The correct choice—“Anterograde declarative memory impairment”—fits that description.",
+      "",
+      "“Color blindness” does not match the mechanism (topic: Clinical Neuroanatomy). Bilateral hippocampal damage → Anterograde declarative memory impairment. The correct choice—“Anterograde declarative memory impairment”—fits that description.",
+      "“Pure motor weakness” does not match the mechanism (topic: Clinical Neuroanatomy). Bilateral hippocampal damage → Anterograde declarative memory impairment. The correct choice—“Anterograde declarative memory impairment”—fits that description.",
+    ]
   },
   {
     topic: "Clinical Neuroanatomy",
     question: "Lesion: Substantia nigra dopamine loss. Expected deficit:",
     options: [
-
       "Pure sensory neglect",
       "Bradykinesia and rigidity",
       "Hyperreflexia only",
@@ -495,12 +679,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Substantia nigra dopamine loss → Bradykinesia and rigidity.",
+    wrongExplanations: [
+      "“Pure sensory neglect” does not match the mechanism (topic: Clinical Neuroanatomy). Substantia nigra dopamine loss → Bradykinesia and rigidity. The correct choice—“Bradykinesia and rigidity”—fits that description.",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Substantia nigra dopamine loss → Bradykinesia and rigidity.",
+      "“Homonymous hemianopia” does not match the mechanism (topic: Clinical Neuroanatomy). Substantia nigra dopamine loss → Bradykinesia and rigidity. The correct choice—“Bradykinesia and rigidity”—fits that description.",
+    ]
   },
   {
     topic: "Clinical Neuroanatomy",
     question: "Lesion: Left Broca area damage. Expected deficit:",
     options: [
-
       "Pure alexia",
       "Nonfluent aphasia; comprehension relatively spared",
       "Fluent nonsense speech",
@@ -508,12 +697,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Left Broca area damage → Nonfluent aphasia; comprehension relatively spared.",
+    wrongExplanations: [
+      "“Pure alexia” does not match the mechanism (topic: Clinical Neuroanatomy). Left Broca area damage → Nonfluent aphasia; comprehension relatively spared. The correct choice—“Nonfluent aphasia; comprehension relatively spared”—fits that description.",
+      "",
+      "“Fluent nonsense speech” does not match the mechanism (topic: Clinical Neuroanatomy). Left Broca area damage → Nonfluent aphasia; comprehension relatively spared. The correct choice—“Nonfluent aphasia; comprehension relatively spared”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Left Broca area damage → Nonfluent aphasia; comprehension relatively spared.",
+    ]
   },
   {
     topic: "Clinical Neuroanatomy",
     question: "Lesion: Left Wernicke area damage. Expected deficit:",
     options: [
-
       "Deafness",
       "Pure motor neglect",
       "Nonfluent speech",
@@ -521,12 +715,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Left Wernicke area damage → Fluent but impaired comprehension.",
+    wrongExplanations: [
+      "“Deafness” does not match the mechanism (topic: Clinical Neuroanatomy). Left Wernicke area damage → Fluent but impaired comprehension. The correct choice—“Fluent but impaired comprehension”—fits that description.",
+      "“Pure motor neglect” does not match the mechanism (topic: Clinical Neuroanatomy). Left Wernicke area damage → Fluent but impaired comprehension. The correct choice—“Fluent but impaired comprehension”—fits that description.",
+      "“Nonfluent speech” does not match the mechanism (topic: Clinical Neuroanatomy). Left Wernicke area damage → Fluent but impaired comprehension. The correct choice—“Fluent but impaired comprehension”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Clinical Neuroanatomy",
     question: "Lesion: MLF lesion (left). Expected deficit:",
     options: [
-
       "Monocular blindness",
       "Internuclear ophthalmoplegia",
       "Facial paralysis only",
@@ -534,12 +733,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "MLF lesion (left) → Internuclear ophthalmoplegia (impaired adduction + abduction nystagmus).",
+    wrongExplanations: [
+      "“Monocular blindness” does not match the mechanism (topic: Clinical Neuroanatomy). MLF lesion (left) → Internuclear ophthalmoplegia (impaired adduction + abduction nystagmus). The correct choice—“Internuclear ophthalmoplegia”—fits that description.",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: MLF lesion (left) → Internuclear ophthalmoplegia (impaired adduction + abduction nystagmus).",
+      "“Bitemporal hemianopia” does not match the mechanism (topic: Clinical Neuroanatomy). MLF lesion (left) → Internuclear ophthalmoplegia (impaired adduction + abduction nystagmus). The correct choice—“Internuclear ophthalmoplegia”—fits that description.",
+    ]
   },
   {
     topic: "Clinical Neuroanatomy",
     question: "Lesion: Right CN VI nucleus lesion. Expected deficit:",
     options: [
-
       "Optic chiasm syndrome",
       "Pure aphasia",
       "Horizontal gaze palsy toward lesion side / ipsilateral abduction deficit",
@@ -547,12 +751,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Right CN VI nucleus lesion → Horizontal gaze palsy toward lesion side / ipsilateral abduction deficit.",
+    wrongExplanations: [
+      "“Optic chiasm syndrome” does not match the mechanism (topic: Clinical Neuroanatomy). Right CN VI nucleus lesion → Horizontal gaze palsy toward lesion side / ipsilateral abduction deficit. The correct choice—“Horizontal gaze palsy toward lesion side / ipsilateral abduction deficit”—fits that description.",
+      "“Pure aphasia” does not match the mechanism (topic: Clinical Neuroanatomy). Right CN VI nucleus lesion → Horizontal gaze palsy toward lesion side / ipsilateral abduction deficit. The correct choice—“Horizontal gaze palsy toward lesion side / ipsilateral abduction deficit”—fits that description.",
+      "",
+      "“Requires hearing loss” does not match the mechanism (topic: Clinical Neuroanatomy). Right CN VI nucleus lesion → Horizontal gaze palsy toward lesion side / ipsilateral abduction deficit. The correct choice—“Horizontal gaze palsy toward lesion side / ipsilateral abduction deficit”—fits that description.",
+    ]
   },
   {
     topic: "Clinical Neuroanatomy",
     question: "Lesion: Unilateral vestibular nerve lesion. Expected deficit:",
     options: [
-
       "Vertigo and imbalance toward lesion",
       "Homonymous hemianopia",
       "Spastic paralysis only",
@@ -560,12 +769,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Unilateral vestibular nerve lesion → Vertigo and imbalance toward lesion; nystagmus.",
+    wrongExplanations: [
+      "",
+      "“Homonymous hemianopia” does not match the mechanism (topic: Clinical Neuroanatomy). Unilateral vestibular nerve lesion → Vertigo and imbalance toward lesion; nystagmus. The correct choice—“Vertigo and imbalance toward lesion”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Unilateral vestibular nerve lesion → Vertigo and imbalance toward lesion; nystagmus.",
+      "“Pure aphasia” does not match the mechanism (topic: Clinical Neuroanatomy). Unilateral vestibular nerve lesion → Vertigo and imbalance toward lesion; nystagmus. The correct choice—“Vertigo and imbalance toward lesion”—fits that description.",
+    ]
   },
   {
     topic: "Clinical Neuroanatomy",
     question: "Lesion: Left lateral pontine syndrome (AICA). Expected deficit:",
     options: [
-
       "Ipsilateral face pain/temp + cerebellar signs",
       "Pure motor weakness only",
       "Bitemporal hemianopia",
@@ -573,12 +787,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Left lateral pontine syndrome (AICA) → Ipsilateral face pain/temp + cerebellar signs; contralateral body pain/temp loss.",
+    wrongExplanations: [
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Left lateral pontine syndrome (AICA) → Ipsilateral face pain/temp + cerebellar signs; contralateral body pain/temp loss.",
+      "“Bitemporal hemianopia” does not match the mechanism (topic: Clinical Neuroanatomy). Left lateral pontine syndrome (AICA) → Ipsilateral face pain/temp + cerebellar signs; contralateral body pain/temp loss. The correct choice—“Ipsilateral face pain/temp + cerebellar signs”—fits that description.",
+      "“Broca aphasia” does not match the mechanism (topic: Clinical Neuroanatomy). Left lateral pontine syndrome (AICA) → Ipsilateral face pain/temp + cerebellar signs; contralateral body pain/temp loss. The correct choice—“Ipsilateral face pain/temp + cerebellar signs”—fits that description.",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Photoreceptor in darkness:",
     options: [
-
       "Spiking at 100 Hz",
       "Releases ACh only",
       "Hyperpolarized like bipolar ON cells always",
@@ -586,12 +805,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Relatively depolarized; glutamate release ongoing",
+    wrongExplanations: [
+      "“Spiking at 100 Hz” does not match the mechanism (topic: Sensory Systems). Relatively depolarized; glutamate release ongoing The correct choice—“Relatively depolarized; glutamate release ongoing”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Relatively depolarized; glutamate release ongoing",
+      "EPSPs are depolarizing (or less hyperpolarized) shifts that move V_m toward spike threshold. Hyperpolarization or clamping toward E_K describes inhibition (IPSPs), not excitation. Relatively depolarized; glutamate release ongoing",
+      "",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Hair cell stereocilia deflection toward tallest row:",
     options: [
-
       "Complete silence always",
       "Increased firing rate in auditory nerve",
       "Requires na⁺ pump stops",
@@ -599,12 +823,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Increased firing rate in auditory nerve",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Increased firing rate in auditory nerve",
+      "",
+      "“Requires na⁺ pump stops” does not match the mechanism (topic: Sensory Systems). Increased firing rate in auditory nerve The correct choice—“Increased firing rate in auditory nerve”—fits that description.",
+      "“Requires pain fibers activate” does not match the mechanism (topic: Sensory Systems). Increased firing rate in auditory nerve The correct choice—“Increased firing rate in auditory nerve”—fits that description.",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Olfactory receptor binding odorant:",
     options: [
-
       "Requires electrical synapse",
       "Requires in cerebellum",
       "G-protein cascade → cAMP → channel opening",
@@ -612,12 +841,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "G-protein cascade → cAMP → channel opening",
+    wrongExplanations: [
+      "“Requires electrical synapse” does not match the mechanism (topic: Sensory Systems). G-protein cascade → cAMP → channel opening The correct choice—“G-protein cascade → cAMP → channel opening”—fits that description.",
+      "“Requires in cerebellum” does not match the mechanism (topic: Sensory Systems). G-protein cascade → cAMP → channel opening The correct choice—“G-protein cascade → cAMP → channel opening”—fits that description.",
+      "",
+      "“Direct gap junction to cortex” does not match the mechanism (topic: Sensory Systems). G-protein cascade → cAMP → channel opening The correct choice—“G-protein cascade → cAMP → channel opening”—fits that description.",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Pacinian corpuscle high-frequency vibration:",
     options: [
-
       "Slow adaptation only",
       "Requires in retina",
       "Requires nociceptor response",
@@ -625,12 +859,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Rapid adaptation; phasic firing",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Rapid adaptation; phasic firing",
+      "“Requires in retina” does not match the mechanism (topic: Sensory Systems). Rapid adaptation; phasic firing The correct choice—“Rapid adaptation; phasic firing”—fits that description.",
+      "“Requires nociceptor response” does not match the mechanism (topic: Sensory Systems). Rapid adaptation; phasic firing The correct choice—“Rapid adaptation; phasic firing”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Methods",
     question: "Voltage clamp at −40 mV with TTX and K⁺ channels available:",
     options: [
-
       "Mostly K⁺ current isolated if Na⁺ blocked",
       "Photoreceptor current only",
       "Requires capacitive current forever",
@@ -638,12 +877,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Mostly K⁺ current isolated if Na⁺ blocked",
+    wrongExplanations: [
+      "",
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Mostly K⁺ current isolated if Na⁺ blocked",
+      "“Requires capacitive current forever” does not match the mechanism (topic: Methods). Mostly K⁺ current isolated if Na⁺ blocked The correct choice—“Mostly K⁺ current isolated if Na⁺ blocked”—fits that description.",
+      "“Requires cl⁻ without gradient” does not match the mechanism (topic: Methods). Mostly K⁺ current isolated if Na⁺ blocked The correct choice—“Mostly K⁺ current isolated if Na⁺ blocked”—fits that description.",
+    ]
   },
   {
     topic: "Methods",
     question: "Current clamp with brief hyperpolarizing step:",
     options: [
-
       "Subthreshold voltage change without spikes",
       "Requires cochlear amplification",
       "Requires synaptic vesicle fusion",
@@ -651,12 +895,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Subthreshold voltage change without spikes",
+    wrongExplanations: [
+      "",
+      "“Requires cochlear amplification” does not match the mechanism (topic: Methods). Subthreshold voltage change without spikes The correct choice—“Subthreshold voltage change without spikes”—fits that description.",
+      "“Requires synaptic vesicle fusion” does not match the mechanism (topic: Methods). Subthreshold voltage change without spikes The correct choice—“Subthreshold voltage change without spikes”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Subthreshold voltage change without spikes",
+    ]
   },
   {
     topic: "Methods",
     question: "Dual whole-cell recording of connected cells:",
     options: [
-
       "Can measure gap junction coupling or monosynaptic latency",
       "Requires measures bone density",
       "Requires measures myelin thickness",
@@ -664,12 +913,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Can measure gap junction coupling or monosynaptic latency",
+    wrongExplanations: [
+      "",
+      "“Requires measures bone density” does not match the mechanism (topic: Methods). Can measure gap junction coupling or monosynaptic latency The correct choice—“Can measure gap junction coupling or monosynaptic latency”—fits that description.",
+      "“Requires measures myelin thickness” does not match the mechanism (topic: Methods). Can measure gap junction coupling or monosynaptic latency The correct choice—“Can measure gap junction coupling or monosynaptic latency”—fits that description.",
+      "“Requires measures glomeruli size” does not match the mechanism (topic: Methods). Can measure gap junction coupling or monosynaptic latency The correct choice—“Can measure gap junction coupling or monosynaptic latency”—fits that description.",
+    ]
   },
   {
     topic: "Action Potentials",
     question: "Inactivation of Na⁺ channels during a long train:",
     options: [
-
       "Spike amplitude may decline; frequency adaptation",
       "Resting potential becomes +60 mV",
       "Requires photoreceptors fire",
@@ -677,12 +931,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Spike amplitude may decline; frequency adaptation",
+    wrongExplanations: [
+      "",
+      "“Resting potential becomes +60 mV” does not match the mechanism (topic: Action Potentials). Spike amplitude may decline; frequency adaptation The correct choice—“Spike amplitude may decline; frequency adaptation”—fits that description.",
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Spike amplitude may decline; frequency adaptation",
+      "“Spikes grow without bound” does not match the mechanism (topic: Action Potentials). Spike amplitude may decline; frequency adaptation The correct choice—“Spike amplitude may decline; frequency adaptation”—fits that description.",
+    ]
   },
   {
     topic: "Action Potentials",
     question: "Hyperpolarized resting V_m near E_K:",
     options: [
-
       "More Na⁺ channels always open",
       "Requires k⁺ channels disappear",
       "Fewer Na⁺ channels available from closed state",
@@ -690,12 +949,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Fewer Na⁺ channels available from closed state",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Fewer Na⁺ channels available from closed state",
+      "“Requires k⁺ channels disappear” does not match the mechanism (topic: Action Potentials). Fewer Na⁺ channels available from closed state The correct choice—“Fewer Na⁺ channels available from closed state”—fits that description.",
+      "",
+      "“Requires cl⁻ channels open” does not match the mechanism (topic: Action Potentials). Fewer Na⁺ channels available from closed state The correct choice—“Fewer Na⁺ channels available from closed state”—fits that description.",
+    ]
   },
   {
     topic: "Action Potentials",
     question: "Ectopic spike initiation in demyelinated axon:",
     options: [
-
       "Requires in dendrites always",
       "Requires in glomeruli",
       "Impossible without nodes",
@@ -703,12 +967,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Can occur where excitability is high along axon",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Can occur where excitability is high along axon",
+      "“Requires in glomeruli” does not match the mechanism (topic: Action Potentials). Can occur where excitability is high along axon The correct choice—“Can occur where excitability is high along axon”—fits that description.",
+      "“Impossible without nodes” does not match the mechanism (topic: Action Potentials). Can occur where excitability is high along axon The correct choice—“Can occur where excitability is high along axon”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Action Potentials",
     question: "Antidromic vs orthodromic propagation:",
     options: [
-
       "Same biophysics; direction follows refractory tail",
       "Orthodromic only in retina",
       "Antidromic",
@@ -716,12 +985,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Same biophysics; direction follows refractory tail",
+    wrongExplanations: [
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Same biophysics; direction follows refractory tail",
+      "“Antidromic” does not match the mechanism (topic: Action Potentials). Same biophysics; direction follows refractory tail The correct choice—“Same biophysics; direction follows refractory tail”—fits that description.",
+      "Gap junctions pass current directly between coupled cells (electrical synapses); they do not implement the timed opening of voltage-gated Na⁺ and K⁺ conductances that shapes an action potential. Same biophysics; direction follows refractory tail",
+    ]
   },
   {
     topic: "Action Potentials",
     question: "Absolute refractory period primarily reflects:",
     options: [
-
       "Requires photopigment recovery",
       "Na⁺ inactivation preventing immediate re-firing",
       "Requires synaptic depression",
@@ -729,12 +1003,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Na⁺ inactivation preventing immediate re-firing",
+    wrongExplanations: [
+      "“Requires photopigment recovery” does not match the mechanism (topic: Action Potentials). Na⁺ inactivation preventing immediate re-firing The correct choice—“Na⁺ inactivation preventing immediate re-firing”—fits that description.",
+      "",
+      "“Requires synaptic depression” does not match the mechanism (topic: Action Potentials). Na⁺ inactivation preventing immediate re-firing The correct choice—“Na⁺ inactivation preventing immediate re-firing”—fits that description.",
+      "“Requires k⁺ leak” does not match the mechanism (topic: Action Potentials). Na⁺ inactivation preventing immediate re-firing The correct choice—“Na⁺ inactivation preventing immediate re-firing”—fits that description.",
+    ]
   },
   {
     topic: "Action Potentials",
     question: "Relative refractory period:",
     options: [
-
       "Requires muscle spindle stretch",
       "No stimulus can fire cell",
       "Requires cl⁻ influx",
@@ -742,12 +1021,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Stronger stimulus needed; K⁺ still elevated",
+    wrongExplanations: [
+      "“Requires muscle spindle stretch” does not match the mechanism (topic: Action Potentials). Stronger stimulus needed; K⁺ still elevated The correct choice—“Stronger stimulus needed; K⁺ still elevated”—fits that description.",
+      "“No stimulus can fire cell” does not match the mechanism (topic: Action Potentials). Stronger stimulus needed; K⁺ still elevated The correct choice—“Stronger stimulus needed; K⁺ still elevated”—fits that description.",
+      "“Requires cl⁻ influx” does not match the mechanism (topic: Action Potentials). Stronger stimulus needed; K⁺ still elevated The correct choice—“Stronger stimulus needed; K⁺ still elevated”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Action Potentials",
     question: "Anode break excitation after hyperpolarization:",
     options: [
-
       "Requires gABA release",
       "Requires cochlear tuning",
       "Permanent silence",
@@ -755,12 +1039,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Na⁺ channels recover from inactivation; can fire on repolarization",
+    wrongExplanations: [
+      "“Requires gABA release” does not match the mechanism (topic: Action Potentials). Na⁺ channels recover from inactivation; can fire on repolarization The correct choice—“Na⁺ channels recover from inactivation”—fits that description.",
+      "“Requires cochlear tuning” does not match the mechanism (topic: Action Potentials). Na⁺ channels recover from inactivation; can fire on repolarization The correct choice—“Na⁺ channels recover from inactivation”—fits that description.",
+      "“Permanent silence” does not match the mechanism (topic: Action Potentials). Na⁺ channels recover from inactivation; can fire on repolarization The correct choice—“Na⁺ channels recover from inactivation”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Action Potentials",
     question: "Threshold is best defined as:",
     options: [
-
       "Voltage where net inward current triggers regenerative Na⁺ activation",
       "Fixed at 0 mV always",
       "Rod outer segments generate all-or-none spikes in darkness",
@@ -768,12 +1057,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Voltage where net inward current triggers regenerative Na⁺ activation",
+    wrongExplanations: [
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Voltage where net inward current triggers regenerative Na⁺ activation",
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Voltage where net inward current triggers regenerative Na⁺ activation",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Voltage where net inward current triggers regenerative Na⁺ activation",
+    ]
   },
   {
     topic: "Action Potentials",
     question: "Safety factor for propagation in myelinated axon:",
     options: [
-
       "Myelin blocks all current",
       "Requires dendrites propagate",
       "Exactly one node required always",
@@ -781,12 +1075,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Multiple nodes can support propagation if one fails",
+    wrongExplanations: [
+      "“Myelin blocks all current” does not match the mechanism (topic: Action Potentials). Multiple nodes can support propagation if one fails The correct choice—“Multiple nodes can support propagation if one fails”—fits that description.",
+      "“Requires dendrites propagate” does not match the mechanism (topic: Action Potentials). Multiple nodes can support propagation if one fails The correct choice—“Multiple nodes can support propagation if one fails”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Multiple nodes can support propagation if one fails",
+      "",
+    ]
   },
   {
     topic: "Action Potentials",
     question: "Temperature increase on squid axon:",
     options: [
-
       "Resting potential fixed at 0 mV",
       "Kinetics faster; shorter AP width often",
       "Requires photoreceptors change",
@@ -794,12 +1093,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Kinetics faster; shorter AP width often",
+    wrongExplanations: [
+      "“Resting potential fixed at 0 mV” does not match the mechanism (topic: Action Potentials). Kinetics faster; shorter AP width often The correct choice—“Kinetics faster; shorter AP width often”—fits that description.",
+      "",
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Kinetics faster; shorter AP width often",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Kinetics faster; shorter AP width often",
+    ]
   },
   {
     topic: "Action Potentials",
     question: "Local anesthetic block of small vs large fibers:",
     options: [
-
       "Dopamine from amacrine cells opens CNG channels in the dark",
       "Large fibers always blocked first",
       "Small myelinated/C fibers often blocked at lower exposure (use-dependent)",
@@ -807,12 +1111,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Small myelinated/C fibers often blocked at lower exposure (use-dependent)",
+    wrongExplanations: [
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Small myelinated/C fibers often blocked at lower exposure (use-dependent)",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Small myelinated/C fibers often blocked at lower exposure (use-dependent)",
+      "",
+      "“No use dependence” does not match the mechanism (topic: Action Potentials). Small myelinated/C fibers often blocked at lower exposure (use-dependent) The correct choice—“Small myelinated/C fibers often blocked at lower exposure (use-dependent)”—fits that description.",
+    ]
   },
   {
     topic: "Action Potentials",
     question: "Accommodation during slow depolarizing ramp:",
     options: [
-
       "Requires affects cochlea basilar membrane",
       "Requires affects glomeruli",
       "Inactivation reduces firing despite depolarization",
@@ -820,12 +1129,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Inactivation reduces firing despite depolarization",
+    wrongExplanations: [
+      "“Requires affects cochlea basilar membrane” does not match the mechanism (topic: Action Potentials). Inactivation reduces firing despite depolarization The correct choice—“Inactivation reduces firing despite depolarization”—fits that description.",
+      "“Requires affects glomeruli” does not match the mechanism (topic: Action Potentials). Inactivation reduces firing despite depolarization The correct choice—“Inactivation reduces firing despite depolarization”—fits that description.",
+      "",
+      "“Increases firing without limit” does not match the mechanism (topic: Action Potentials). Inactivation reduces firing despite depolarization The correct choice—“Inactivation reduces firing despite depolarization”—fits that description.",
+    ]
   },
   {
     topic: "Action Potentials",
     question: "Post-tetanic potentiation (short-term):",
     options: [
-
       "Requires gap junction opening",
       "Postsynaptic Na⁺ deletion",
       "Presynaptic Ca²⁺ buildup increases release briefly",
@@ -833,12 +1147,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Presynaptic Ca²⁺ buildup increases release briefly",
+    wrongExplanations: [
+      "Gap junctions pass current directly between coupled cells (electrical synapses); they do not implement the timed opening of voltage-gated Na⁺ and K⁺ conductances that shapes an action potential. Presynaptic Ca²⁺ buildup increases release briefly",
+      "“Postsynaptic Na⁺ deletion” does not match the mechanism (topic: Action Potentials). Presynaptic Ca²⁺ buildup increases release briefly The correct choice—“Presynaptic Ca²⁺ buildup increases release briefly”—fits that description.",
+      "",
+      "“Requires lTP in hippocampus forever” does not match the mechanism (topic: Action Potentials). Presynaptic Ca²⁺ buildup increases release briefly The correct choice—“Presynaptic Ca²⁺ buildup increases release briefly”—fits that description.",
+    ]
   },
   {
     topic: "Action Potentials",
     question: "Synaptic fatigue after high-frequency stimulation:",
     options: [
-
       "Depletion of readily releasable vesicles",
       "Requires myelin loss",
       "Unlimited vesicle supply always",
@@ -846,12 +1165,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Depletion of readily releasable vesicles",
+    wrongExplanations: [
+      "",
+      "“Requires myelin loss” does not match the mechanism (topic: Action Potentials). Depletion of readily releasable vesicles The correct choice—“Depletion of readily releasable vesicles”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Depletion of readily releasable vesicles",
+      "“Requires photopigment bleaching” does not match the mechanism (topic: Action Potentials). Depletion of readily releasable vesicles The correct choice—“Depletion of readily releasable vesicles”—fits that description.",
+    ]
   },
   {
     topic: "Action Potentials",
     question: "Dendritic Na⁺ spike in some pyramidal neurons:",
     options: [
-
       "Can boost distal signal toward soma",
       "Never occurs in CNS",
       "Requires in olfactory bulb",
@@ -859,12 +1183,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Can boost distal signal toward soma",
+    wrongExplanations: [
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Can boost distal signal toward soma",
+      "“Requires in olfactory bulb” does not match the mechanism (topic: Action Potentials). Can boost distal signal toward soma The correct choice—“Can boost distal signal toward soma”—fits that description.",
+      "“Requires in NMJ” does not match the mechanism (topic: Action Potentials). Can boost distal signal toward soma The correct choice—“Can boost distal signal toward soma”—fits that description.",
+    ]
   },
   {
     topic: "Action Potentials",
     question: "Backpropagating action potential into dendrites:",
     options: [
-
       "Blocked by myelin on dendrites",
       "Requires in muscle spindles",
       "Requires in photoreceptors",
@@ -872,12 +1201,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Can activate dendritic channels and plasticity rules",
+    wrongExplanations: [
+      "“Blocked by myelin on dendrites” does not match the mechanism (topic: Action Potentials). Can activate dendritic channels and plasticity rules The correct choice—“Can activate dendritic channels and plasticity rules”—fits that description.",
+      "“Requires in muscle spindles” does not match the mechanism (topic: Action Potentials). Can activate dendritic channels and plasticity rules The correct choice—“Can activate dendritic channels and plasticity rules”—fits that description.",
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Can activate dendritic channels and plasticity rules",
+      "",
+    ]
   },
   {
     topic: "Action Potentials",
     question: "Ephaptic coupling between unmyelinated fibers:",
     options: [
-
       "Requires in retina exclusively",
       "Requires in cerebellum exclusively",
       "Extracellular fields can influence neighbors weakly",
@@ -885,12 +1219,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Extracellular fields can influence neighbors weakly",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Extracellular fields can influence neighbors weakly",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Extracellular fields can influence neighbors weakly",
+      "",
+      "Gap junctions pass current directly between coupled cells (electrical synapses); they do not implement the timed opening of voltage-gated Na⁺ and K⁺ conductances that shapes an action potential. Extracellular fields can influence neighbors weakly",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Bicuculline applied to a CNS slice blocks which effect?",
     options: [
-
       "Myelin compaction",
       "GABA_A-mediated fast IPSPs",
       "Voltage-gated Na⁺ inactivation",
@@ -898,12 +1237,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "GABA_A-mediated fast IPSPs",
+    wrongExplanations: [
+      "“Myelin compaction” does not match the mechanism (topic: Pharmacology). GABA_A-mediated fast IPSPs The correct choice—“GABA_A-mediated fast IPSPs”—fits that description.",
+      "",
+      "“Voltage-gated Na⁺ inactivation” does not match the mechanism (topic: Pharmacology). GABA_A-mediated fast IPSPs The correct choice—“GABA_A-mediated fast IPSPs”—fits that description.",
+      "IPSPs make firing less likely by hyperpolarizing the cell or shunting depolarizing current. Depolarizing EPSPs bring the membrane closer to threshold—that is the opposite direction. GABA_A-mediated fast IPSPs",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Picrotoxin and bicuculline both disrupt inhibition primarily by targeting:",
     options: [
-
       "Glutamate transporters",
       "GABA_A receptor–channel function",
       "Voltage-gated Ca²⁺ channels",
@@ -911,12 +1255,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "GABA_A receptor–channel function",
+    wrongExplanations: [
+      "“Glutamate transporters” does not match the mechanism (topic: Pharmacology). GABA_A receptor–channel function The correct choice—“GABA_A receptor–channel function”—fits that description.",
+      "",
+      "“Voltage-gated Ca²⁺ channels” does not match the mechanism (topic: Pharmacology). GABA_A receptor–channel function The correct choice—“GABA_A receptor–channel function”—fits that description.",
+      "Fast synaptic inhibition at many CNS synapses is dominated by GABA_A Cl⁻ flux. Metabotropic GABA_B signaling is slower and works through G-proteins, not direct ligand-gated Cl⁻ pores. GABA_A receptor–channel function",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Strychnine causes convulsions mainly by blocking:",
     options: [
-
       "Glycine receptors in spinal cord",
       "Dopamine reuptake transporters",
       "Muscarinic receptors in heart",
@@ -924,12 +1273,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Glycine receptors in spinal cord",
+    wrongExplanations: [
+      "",
+      "“Dopamine reuptake transporters” does not match the mechanism (topic: Pharmacology). Glycine receptors in spinal cord The correct choice—“Glycine receptors in spinal cord”—fits that description.",
+      "“Muscarinic receptors in heart” does not match the mechanism (topic: Pharmacology). Glycine receptors in spinal cord The correct choice—“Glycine receptors in spinal cord”—fits that description.",
+      "“AMPA receptors in cortex” does not match the mechanism (topic: Pharmacology). Glycine receptors in spinal cord The correct choice—“Glycine receptors in spinal cord”—fits that description.",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Benzodiazepines enhance GABAergic inhibition by:",
     options: [
-
       "Inactivating Na⁺ channels irreversibly",
       "Increasing GABA_A channel open frequency (allosteric)",
       "Opening KCNQ channels directly",
@@ -937,12 +1291,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Increasing GABA_A channel open frequency (allosteric)",
+    wrongExplanations: [
+      "“Inactivating Na⁺ channels irreversibly” does not match the mechanism (topic: Pharmacology). Increasing GABA_A channel open frequency (allosteric) The correct choice—“Increasing GABA_A channel open frequency (allosteric)”—fits that description.",
+      "",
+      "“Opening KCNQ channels directly” does not match the mechanism (topic: Pharmacology). Increasing GABA_A channel open frequency (allosteric) The correct choice—“Increasing GABA_A channel open frequency (allosteric)”—fits that description.",
+      "“Blocking GABA reuptake” does not match the mechanism (topic: Pharmacology). Increasing GABA_A channel open frequency (allosteric) The correct choice—“Increasing GABA_A channel open frequency (allosteric)”—fits that description.",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Barbiturates at anesthetic doses differ from benzodiazepines because they can:",
     options: [
-
       "Selectively block NMDA only at all doses",
       "Activate dopamine D1 receptors",
       "Prolong GABA_A channel open time directly at high dose",
@@ -950,12 +1309,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Prolong GABA_A channel open time directly at high dose",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Prolong GABA_A channel open time directly at high dose",
+      "“Activate dopamine D1 receptors” does not match the mechanism (topic: Pharmacology). Prolong GABA_A channel open time directly at high dose The correct choice—“Prolong GABA_A channel open time directly at high dose”—fits that description.",
+      "",
+      "“Prevent all K⁺ flux” does not match the mechanism (topic: Pharmacology). Prolong GABA_A channel open time directly at high dose The correct choice—“Prolong GABA_A channel open time directly at high dose”—fits that description.",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Atropine blocks muscarinic receptors; expected peripheral effect includes:",
     options: [
-
       "Bradycardia and miosis",
       "Tachycardia and reduced salivation",
       "Bronchoconstriction",
@@ -963,12 +1327,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Tachycardia and reduced salivation",
+    wrongExplanations: [
+      "“Bradycardia and miosis” does not match the mechanism (topic: Pharmacology). Tachycardia and reduced salivation The correct choice—“Tachycardia and reduced salivation”—fits that description.",
+      "",
+      "“Bronchoconstriction” does not match the mechanism (topic: Pharmacology). Tachycardia and reduced salivation The correct choice—“Tachycardia and reduced salivation”—fits that description.",
+      "“Increased gastric motility” does not match the mechanism (topic: Pharmacology). Tachycardia and reduced salivation The correct choice—“Tachycardia and reduced salivation”—fits that description.",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Neostigmine reverses neuromuscular blockade by:",
     options: [
-
       "Blocking nicotinic receptors",
       "Opening voltage-gated K⁺ channels",
       "Cleaving SNARE proteins",
@@ -976,12 +1345,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Inhibiting acetylcholinesterase at the NMJ",
+    wrongExplanations: [
+      "“Blocking nicotinic receptors” does not match the mechanism (topic: Pharmacology). Inhibiting acetylcholinesterase at the NMJ The correct choice—“Inhibiting acetylcholinesterase at the NMJ”—fits that description.",
+      "“Opening voltage-gated K⁺ channels” does not match the mechanism (topic: Pharmacology). Inhibiting acetylcholinesterase at the NMJ The correct choice—“Inhibiting acetylcholinesterase at the NMJ”—fits that description.",
+      "“Cleaving SNARE proteins” does not match the mechanism (topic: Pharmacology). Inhibiting acetylcholinesterase at the NMJ The correct choice—“Inhibiting acetylcholinesterase at the NMJ”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Succinylcholine produces initial fasciculations because it:",
     options: [
-
       "Hyperpolarizes muscle to E_K",
       "Depolarizes the motor endplate (nicotinic agonist)",
       "Inhibits ryanodine receptors only",
@@ -989,12 +1363,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Depolarizes the motor endplate (nicotinic agonist)",
+    wrongExplanations: [
+      "EPSPs are depolarizing (or less hyperpolarized) shifts that move V_m toward spike threshold. Hyperpolarization or clamping toward E_K describes inhibition (IPSPs), not excitation. Depolarizes the motor endplate (nicotinic agonist)",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Depolarizes the motor endplate (nicotinic agonist)",
+      "“Blocks acetylcholine release” does not match the mechanism (topic: Pharmacology). Depolarizes the motor endplate (nicotinic agonist) The correct choice—“Depolarizes the motor endplate (nicotinic agonist)”—fits that description.",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Dantrolene treats malignant hyperthermia by reducing:",
     options: [
-
       "Central dopamine synthesis",
       "Na⁺ channel density in neurons",
       "Ca²⁺ release from sarcoplasmic reticulum in muscle",
@@ -1002,12 +1381,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Ca²⁺ release from sarcoplasmic reticulum in muscle",
+    wrongExplanations: [
+      "“Central dopamine synthesis” does not match the mechanism (topic: Pharmacology). Ca²⁺ release from sarcoplasmic reticulum in muscle The correct choice—“Ca²⁺ release from sarcoplasmic reticulum in muscle”—fits that description.",
+      "“Na⁺ channel density in neurons” does not match the mechanism (topic: Pharmacology). Ca²⁺ release from sarcoplasmic reticulum in muscle The correct choice—“Ca²⁺ release from sarcoplasmic reticulum in muscle”—fits that description.",
+      "",
+      "“Glutamate release in hippocampus” does not match the mechanism (topic: Pharmacology). Ca²⁺ release from sarcoplasmic reticulum in muscle The correct choice—“Ca²⁺ release from sarcoplasmic reticulum in muscle”—fits that description.",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Reserpine depletes monoamine stores by inhibiting:",
     options: [
-
       "COMT in synaptic cleft",
       "Dopamine β-hydroxylase only",
       "MAO-A in mitochondria only",
@@ -1015,12 +1399,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Vesicular monoamine transporter (VMAT)",
+    wrongExplanations: [
+      "“COMT in synaptic cleft” does not match the mechanism (topic: Pharmacology). Vesicular monoamine transporter (VMAT) The correct choice—“Vesicular monoamine transporter (VMAT)”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Vesicular monoamine transporter (VMAT)",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Vesicular monoamine transporter (VMAT)",
+      "",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Amphetamine increases synaptic catecholamines primarily by:",
     options: [
-
       "Reversing DAT/NET transporters and promoting release",
       "Blocking all voltage-gated Na⁺ channels",
       "Opening GABA_A receptors",
@@ -1028,12 +1417,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Reversing DAT/NET transporters and promoting release",
+    wrongExplanations: [
+      "",
+      "“Blocking all voltage-gated Na⁺ channels” does not match the mechanism (topic: Pharmacology). Reversing DAT/NET transporters and promoting release The correct choice—“Reversing DAT/NET transporters and promoting release”—fits that description.",
+      "“Opening GABA_A receptors” does not match the mechanism (topic: Pharmacology). Reversing DAT/NET transporters and promoting release The correct choice—“Reversing DAT/NET transporters and promoting release”—fits that description.",
+      "“Inhibiting acetylcholinesterase” does not match the mechanism (topic: Pharmacology). Reversing DAT/NET transporters and promoting release The correct choice—“Reversing DAT/NET transporters and promoting release”—fits that description.",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Cocaine's acute psychoactive motor effect is linked most to:",
     options: [
-
       "GABA_B activation in striatum",
       "Blockade of dopamine reuptake (DAT)",
       "Permanent Na⁺ channel destruction",
@@ -1041,12 +1435,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Blockade of dopamine reuptake (DAT)",
+    wrongExplanations: [
+      "“GABA_B activation in striatum” does not match the mechanism (topic: Pharmacology). Blockade of dopamine reuptake (DAT) The correct choice—“Blockade of dopamine reuptake (DAT)”—fits that description.",
+      "",
+      "“Permanent Na⁺ channel destruction” does not match the mechanism (topic: Pharmacology). Blockade of dopamine reuptake (DAT) The correct choice—“Blockade of dopamine reuptake (DAT)”—fits that description.",
+      "“Muscarinic blockade in spinal cord” does not match the mechanism (topic: Pharmacology). Blockade of dopamine reuptake (DAT) The correct choice—“Blockade of dopamine reuptake (DAT)”—fits that description.",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Haloperidol treats psychosis mainly through:",
     options: [
-
       "D2 dopamine receptor antagonism",
       "Nicotinic agonism in cortex",
       "Glycine transporter blockade",
@@ -1054,12 +1453,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "D2 dopamine receptor antagonism",
+    wrongExplanations: [
+      "",
+      "“Nicotinic agonism in cortex” does not match the mechanism (topic: Pharmacology). D2 dopamine receptor antagonism The correct choice—“D2 dopamine receptor antagonism”—fits that description.",
+      "“Glycine transporter blockade” does not match the mechanism (topic: Pharmacology). D2 dopamine receptor antagonism The correct choice—“D2 dopamine receptor antagonism”—fits that description.",
+      "“NMDA receptor potentiation” does not match the mechanism (topic: Pharmacology). D2 dopamine receptor antagonism The correct choice—“D2 dopamine receptor antagonism”—fits that description.",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "L-DOPA helps Parkinsonism because it:",
     options: [
-
       "Blocks subthalamic nucleus firing permanently",
       "Directly activates all serotonin receptors",
       "Replaces lost acetylcholine at NMJ",
@@ -1067,12 +1471,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Crosses the BBB and is converted to dopamine in striatum",
+    wrongExplanations: [
+      "“Blocks subthalamic nucleus firing permanently” does not match the mechanism (topic: Pharmacology). Crosses the BBB and is converted to dopamine in striatum The correct choice—“Crosses the BBB and is converted to dopamine in striatum”—fits that description.",
+      "“Directly activates all serotonin receptors” does not match the mechanism (topic: Pharmacology). Crosses the BBB and is converted to dopamine in striatum The correct choice—“Crosses the BBB and is converted to dopamine in striatum”—fits that description.",
+      "“Replaces lost acetylcholine at NMJ” does not match the mechanism (topic: Pharmacology). Crosses the BBB and is converted to dopamine in striatum The correct choice—“Crosses the BBB and is converted to dopamine in striatum”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Carbidopa is co-administered with L-DOPA to:",
     options: [
-
       "Inhibit peripheral DOPA decarboxylase",
       "Cross the BBB faster than L-DOPA",
       "Open K_ATP channels in pancreas",
@@ -1080,12 +1489,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Inhibit peripheral DOPA decarboxylase",
+    wrongExplanations: [
+      "",
+      "“Cross the BBB faster than L-DOPA” does not match the mechanism (topic: Pharmacology). Inhibit peripheral DOPA decarboxylase The correct choice—“Inhibit peripheral DOPA decarboxylase”—fits that description.",
+      "“Open K_ATP channels in pancreas” does not match the mechanism (topic: Pharmacology). Inhibit peripheral DOPA decarboxylase The correct choice—“Inhibit peripheral DOPA decarboxylase”—fits that description.",
+      "“Block MAO-B in all tissues equally” does not match the mechanism (topic: Pharmacology). Inhibit peripheral DOPA decarboxylase The correct choice—“Inhibit peripheral DOPA decarboxylase”—fits that description.",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Selegiline (low dose) can augment L-DOPA by inhibiting:",
     options: [
-
       "Acetylcholinesterase at NMJ",
       "GABA transaminase",
       "VMAT2 in all neurons",
@@ -1093,12 +1507,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "MAO-B in brain, slowing dopamine breakdown",
+    wrongExplanations: [
+      "“Acetylcholinesterase at NMJ” does not match the mechanism (topic: Pharmacology). MAO-B in brain, slowing dopamine breakdown The correct choice—“MAO-B in brain, slowing dopamine breakdown”—fits that description.",
+      "“GABA transaminase” does not match the mechanism (topic: Pharmacology). MAO-B in brain, slowing dopamine breakdown The correct choice—“MAO-B in brain, slowing dopamine breakdown”—fits that description.",
+      "“VMAT2 in all neurons” does not match the mechanism (topic: Pharmacology). MAO-B in brain, slowing dopamine breakdown The correct choice—“MAO-B in brain, slowing dopamine breakdown”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "SSRIs increase serotonin signaling chiefly by:",
     options: [
-
       "Opening 5-HT3 channels directly",
       "Blocking SERT reuptake",
       "Blocking all dopamine receptors",
@@ -1106,12 +1525,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Blocking SERT reuptake",
+    wrongExplanations: [
+      "“Opening 5-HT3 channels directly” does not match the mechanism (topic: Pharmacology). Blocking SERT reuptake The correct choice—“Blocking SERT reuptake”—fits that description.",
+      "",
+      "“Blocking all dopamine receptors” does not match the mechanism (topic: Pharmacology). Blocking SERT reuptake The correct choice—“Blocking SERT reuptake”—fits that description.",
+      "“Depleting vesicular 5-HT” does not match the mechanism (topic: Pharmacology). Blocking SERT reuptake The correct choice—“Blocking SERT reuptake”—fits that description.",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Ketamine's rapid antidepressant actions are often attributed to:",
     options: [
-
       "Requires mu-opioid receptor agonism",
       "Permanent GABA_A blockade",
       "Irreversible MAO inhibition",
@@ -1119,12 +1543,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "NMDA receptor antagonism and downstream synaptic effects",
+    wrongExplanations: [
+      "“Requires mu-opioid receptor agonism” does not match the mechanism (topic: Pharmacology). NMDA receptor antagonism and downstream synaptic effects The correct choice—“NMDA receptor antagonism and downstream synaptic effects”—fits that description.",
+      "“Permanent GABA_A blockade” does not match the mechanism (topic: Pharmacology). NMDA receptor antagonism and downstream synaptic effects The correct choice—“NMDA receptor antagonism and downstream synaptic effects”—fits that description.",
+      "“Irreversible MAO inhibition” does not match the mechanism (topic: Pharmacology). NMDA receptor antagonism and downstream synaptic effects The correct choice—“NMDA receptor antagonism and downstream synaptic effects”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Morphine analgesia in the spinal dorsal horn involves:",
     options: [
-
       "Blocking all K⁺ channels in DRG",
       "AMPA receptor potentiation on nociceptors",
       "Mu-opioid receptor–mediated inhibition of pain transmission",
@@ -1132,12 +1561,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Mu-opioid receptor–mediated inhibition of pain transmission",
+    wrongExplanations: [
+      "“Blocking all K⁺ channels in DRG” does not match the mechanism (topic: Pharmacology). Mu-opioid receptor–mediated inhibition of pain transmission The correct choice—“Mu-opioid receptor–mediated inhibition of pain transmission”—fits that description.",
+      "“AMPA receptor potentiation on nociceptors” does not match the mechanism (topic: Pharmacology). Mu-opioid receptor–mediated inhibition of pain transmission The correct choice—“Mu-opioid receptor–mediated inhibition of pain transmission”—fits that description.",
+      "",
+      "“Opening TRPV1 channels” does not match the mechanism (topic: Pharmacology). Mu-opioid receptor–mediated inhibition of pain transmission The correct choice—“Mu-opioid receptor–mediated inhibition of pain transmission”—fits that description.",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Naloxone reverses opioid overdose by:",
     options: [
-
       "Inhibiting COX enzymes",
       "Activating GABA_B in VTA",
       "Blocking Na⁺ channels like TTX",
@@ -1145,12 +1579,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Competitive antagonism at opioid receptors",
+    wrongExplanations: [
+      "“Inhibiting COX enzymes” does not match the mechanism (topic: Pharmacology). Competitive antagonism at opioid receptors The correct choice—“Competitive antagonism at opioid receptors”—fits that description.",
+      "“Activating GABA_B in VTA” does not match the mechanism (topic: Pharmacology). Competitive antagonism at opioid receptors The correct choice—“Competitive antagonism at opioid receptors”—fits that description.",
+      "“Blocking Na⁺ channels like TTX” does not match the mechanism (topic: Pharmacology). Competitive antagonism at opioid receptors The correct choice—“Competitive antagonism at opioid receptors”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Caffeine opposes sleepiness largely by antagonizing:",
     options: [
-
       "Nicotinic receptors at NMJ",
       "Adenosine A1/A2A receptors",
       "Voltage-gated Ca²⁺ channels in SNARE release",
@@ -1158,12 +1597,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Adenosine A1/A2A receptors",
+    wrongExplanations: [
+      "“Nicotinic receptors at NMJ” does not match the mechanism (topic: Pharmacology). Adenosine A1/A2A receptors The correct choice—“Adenosine A1/A2A receptors”—fits that description.",
+      "",
+      "“Voltage-gated Ca²⁺ channels in SNARE release” does not match the mechanism (topic: Pharmacology). Adenosine A1/A2A receptors The correct choice—“Adenosine A1/A2A receptors”—fits that description.",
+      "“Glycine receptors in cord” does not match the mechanism (topic: Pharmacology). Adenosine A1/A2A receptors The correct choice—“Adenosine A1/A2A receptors”—fits that description.",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Ethanol potentiates GABA_A and inhibits NMDA; at high dose this tends to:",
     options: [
-
       "Cause generalized seizures via NMDA potentiation",
       "Depress CNS function (sedation, ataxia)",
       "Selectively enhance dopamine only in cortex",
@@ -1171,12 +1615,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Depress CNS function (sedation, ataxia)",
+    wrongExplanations: [
+      "“Cause generalized seizures via NMDA potentiation” does not match the mechanism (topic: Pharmacology). Depress CNS function (sedation, ataxia) The correct choice—“Depress CNS function (sedation, ataxia)”—fits that description.",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Depress CNS function (sedation, ataxia)",
+      "“Increase REM without change to slow waves” does not match the mechanism (topic: Pharmacology). Depress CNS function (sedation, ataxia) The correct choice—“Depress CNS function (sedation, ataxia)”—fits that description.",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Phenylephrine as an alpha-1 agonist typically causes:",
     options: [
-
       "Hyperpolarization of all neurons to E_K",
       "Bronchodilation via β2 receptors",
       "Bradycardia via M2 receptors",
@@ -1184,12 +1633,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Vasoconstriction and increased blood pressure",
+    wrongExplanations: [
+      "“Hyperpolarization of all neurons to E_K” does not match the mechanism (topic: Pharmacology). Vasoconstriction and increased blood pressure The correct choice—“Vasoconstriction and increased blood pressure”—fits that description.",
+      "“Bronchodilation via β2 receptors” does not match the mechanism (topic: Pharmacology). Vasoconstriction and increased blood pressure The correct choice—“Vasoconstriction and increased blood pressure”—fits that description.",
+      "“Bradycardia via M2 receptors” does not match the mechanism (topic: Pharmacology). Vasoconstriction and increased blood pressure The correct choice—“Vasoconstriction and increased blood pressure”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Propranolol reduces tremor and tachycardia by blocking:",
     options: [
-
       "Alpha-1 receptors exclusively",
       "D2 receptors in striatum",
       "Beta-adrenergic receptors",
@@ -1197,12 +1651,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Beta-adrenergic receptors",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Beta-adrenergic receptors",
+      "“D2 receptors in striatum” does not match the mechanism (topic: Pharmacology). Beta-adrenergic receptors The correct choice—“Beta-adrenergic receptors”—fits that description.",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Beta-adrenergic receptors",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Nifedipine lowers blood pressure primarily by blocking:",
     options: [
-
       "Kir channels in glia only",
       "T-type Ca²⁺ in thalamus only",
       "L-type voltage-gated Ca²⁺ channels in vascular smooth muscle",
@@ -1210,12 +1669,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "L-type voltage-gated Ca²⁺ channels in vascular smooth muscle",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: L-type voltage-gated Ca²⁺ channels in vascular smooth muscle",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: L-type voltage-gated Ca²⁺ channels in vascular smooth muscle",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: L-type voltage-gated Ca²⁺ channels in vascular smooth muscle",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Verapamil differs from nifedipine partly because verapamil also:",
     options: [
-
       "Blocks all glutamate receptors",
       "Activates VMAT",
       "Slows AV conduction",
@@ -1223,12 +1687,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Slows AV conduction (cardiac L-type Ca²⁺ block)",
+    wrongExplanations: [
+      "“Blocks all glutamate receptors” does not match the mechanism (topic: Pharmacology). Slows AV conduction (cardiac L-type Ca²⁺ block) The correct choice—“Slows AV conduction”—fits that description.",
+      "“Activates VMAT” does not match the mechanism (topic: Pharmacology). Slows AV conduction (cardiac L-type Ca²⁺ block) The correct choice—“Slows AV conduction”—fits that description.",
+      "",
+      "“Permanently opens KCNQ channels” does not match the mechanism (topic: Pharmacology). Slows AV conduction (cardiac L-type Ca²⁺ block) The correct choice—“Slows AV conduction”—fits that description.",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Zolpidem aids sleep mainly through:",
     options: [
-
       "Irreversible NMDA blockade",
       "Serotonin reuptake inhibition",
       "GABA_A α1-subunit–preferring positive modulation",
@@ -1236,12 +1705,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "GABA_A α1-subunit–preferring positive modulation",
+    wrongExplanations: [
+      "“Irreversible NMDA blockade” does not match the mechanism (topic: Pharmacology). GABA_A α1-subunit–preferring positive modulation The correct choice—“GABA_A α1-subunit–preferring positive modulation”—fits that description.",
+      "“Serotonin reuptake inhibition” does not match the mechanism (topic: Pharmacology). GABA_A α1-subunit–preferring positive modulation The correct choice—“GABA_A α1-subunit–preferring positive modulation”—fits that description.",
+      "",
+      "“D2 receptor agonism” does not match the mechanism (topic: Pharmacology). GABA_A α1-subunit–preferring positive modulation The correct choice—“GABA_A α1-subunit–preferring positive modulation”—fits that description.",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Memantine in Alzheimer's disease is thought to act by:",
     options: [
-
       "Depleting acetylcholine stores",
       "Blocking all AMPA receptors",
       "Opening L-type Ca²⁺ channels",
@@ -1249,12 +1723,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Uncompetitive NMDA antagonism (moderate channel block)",
+    wrongExplanations: [
+      "“Depleting acetylcholine stores” does not match the mechanism (topic: Pharmacology). Uncompetitive NMDA antagonism (moderate channel block) The correct choice—“Uncompetitive NMDA antagonism (moderate channel block)”—fits that description.",
+      "“Blocking all AMPA receptors” does not match the mechanism (topic: Pharmacology). Uncompetitive NMDA antagonism (moderate channel block) The correct choice—“Uncompetitive NMDA antagonism (moderate channel block)”—fits that description.",
+      "“Opening L-type Ca²⁺ channels” does not match the mechanism (topic: Pharmacology). Uncompetitive NMDA antagonism (moderate channel block) The correct choice—“Uncompetitive NMDA antagonism (moderate channel block)”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Donepezil improves cognition in Alzheimer's by inhibiting:",
     options: [
-
       "Butyrylcholinesterase only in muscle",
       "VMAT2",
       "Acetylcholinesterase",
@@ -1262,12 +1741,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Acetylcholinesterase",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Acetylcholinesterase",
+      "“VMAT2” is not the best match for the stem (topic: Pharmacology). The keyed answer—“Acetylcholinesterase”—reflects the underlying neuroscience described in the course.",
+      "",
+      "“GABA transaminase” is not the best match for the stem (topic: Pharmacology). The keyed answer—“Acetylcholinesterase”—reflects the underlying neuroscience described in the course.",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Riluzole in ALS may prolong survival partly by reducing:",
     options: [
-
       "Myelin basic protein expression",
       "Cochlear outer hair cell motility",
       "Glutamate excitotoxicity",
@@ -1275,12 +1759,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Glutamate excitotoxicity (e.g., Na⁺ channel effects on release)",
+    wrongExplanations: [
+      "“Myelin basic protein expression” does not match the mechanism (topic: Pharmacology). Glutamate excitotoxicity (e.g., Na⁺ channel effects on release) The correct choice—“Glutamate excitotoxicity”—fits that description.",
+      "“Cochlear outer hair cell motility” does not match the mechanism (topic: Pharmacology). Glutamate excitotoxicity (e.g., Na⁺ channel effects on release) The correct choice—“Glutamate excitotoxicity”—fits that description.",
+      "",
+      "“All dopamine synthesis” does not match the mechanism (topic: Pharmacology). Glutamate excitotoxicity (e.g., Na⁺ channel effects on release) The correct choice—“Glutamate excitotoxicity”—fits that description.",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Tetrabenazine reduces chorea in Huntington's by depleting:",
     options: [
-
       "Monoamines via VMAT2 inhibition",
       "GABA via GAD blockade",
       "Glutamate via EAAT overactivation",
@@ -1288,12 +1777,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Monoamines via VMAT2 inhibition",
+    wrongExplanations: [
+      "",
+      "“GABA via GAD blockade” does not match the mechanism (topic: Pharmacology). Monoamines via VMAT2 inhibition The correct choice—“Monoamines via VMAT2 inhibition”—fits that description.",
+      "“Glutamate via EAAT overactivation” does not match the mechanism (topic: Pharmacology). Monoamines via VMAT2 inhibition The correct choice—“Monoamines via VMAT2 inhibition”—fits that description.",
+      "“Acetylcholine via hemicholinium” does not match the mechanism (topic: Pharmacology). Monoamines via VMAT2 inhibition The correct choice—“Monoamines via VMAT2 inhibition”—fits that description.",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Levetiracetam binds SV2A; this antiseizure action likely alters:",
     options: [
-
       "Muscarinic M1 exclusively in heart",
       "Synaptic vesicle release probability",
       "GABA_A benzodiazepine site only",
@@ -1301,12 +1795,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Synaptic vesicle release probability",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Synaptic vesicle release probability",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Synaptic vesicle release probability",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Synaptic vesicle release probability",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Carbamazepine treats trigeminal neuralgia partly by:",
     options: [
-
       "Stabilizing inactivated Na⁺ channels (use-dependent block)",
       "Opening KCNQ channels irreversibly",
       "Blocking all Ca²⁺ channels equally",
@@ -1314,12 +1813,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Stabilizing inactivated Na⁺ channels (use-dependent block)",
+    wrongExplanations: [
+      "",
+      "“Opening KCNQ channels irreversibly” does not match the mechanism (topic: Pharmacology). Stabilizing inactivated Na⁺ channels (use-dependent block) The correct choice—“Stabilizing inactivated Na⁺ channels (use-dependent block)”—fits that description.",
+      "“Blocking all Ca²⁺ channels equally” does not match the mechanism (topic: Pharmacology). Stabilizing inactivated Na⁺ channels (use-dependent block) The correct choice—“Stabilizing inactivated Na⁺ channels (use-dependent block)”—fits that description.",
+      "“Activating glycine receptors” does not match the mechanism (topic: Pharmacology). Stabilizing inactivated Na⁺ channels (use-dependent block) The correct choice—“Stabilizing inactivated Na⁺ channels (use-dependent block)”—fits that description.",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Phenytoin reduces seizure spread primarily through:",
     options: [
-
       "Permanent NMDA removal",
       "GABA transporter inhibition only",
       "Na⁺ channel block limiting high-frequency firing",
@@ -1327,12 +1831,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Na⁺ channel block limiting high-frequency firing",
+    wrongExplanations: [
+      "“Permanent NMDA removal” does not match the mechanism (topic: Pharmacology). Na⁺ channel block limiting high-frequency firing The correct choice—“Na⁺ channel block limiting high-frequency firing”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Na⁺ channel block limiting high-frequency firing",
+      "",
+      "“NMJ acetylcholinesterase inhibition” does not match the mechanism (topic: Pharmacology). Na⁺ channel block limiting high-frequency firing The correct choice—“Na⁺ channel block limiting high-frequency firing”—fits that description.",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Valproate has multiple mechanisms including:",
     options: [
-
       "Increased GABA tone and Na⁺/Ca²⁺ channel effects",
       "Requires dopamine reuptake blockade",
       "Irreversible VMAT blockade only",
@@ -1340,12 +1849,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Increased GABA tone and Na⁺/Ca²⁺ channel effects",
+    wrongExplanations: [
+      "",
+      "“Requires dopamine reuptake blockade” does not match the mechanism (topic: Pharmacology). Increased GABA tone and Na⁺/Ca²⁺ channel effects The correct choice—“Increased GABA tone and Na⁺/Ca²⁺ channel effects”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Increased GABA tone and Na⁺/Ca²⁺ channel effects",
+      "“Requires aMPA potentiation” does not match the mechanism (topic: Pharmacology). Increased GABA tone and Na⁺/Ca²⁺ channel effects The correct choice—“Increased GABA tone and Na⁺/Ca²⁺ channel effects”—fits that description.",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Baclofen reduces spasticity mainly by activating:",
     options: [
-
       "GABA_B receptors (Gi/o) in spinal cord",
       "AMPA on Ia afferents exclusively",
       "Nicotinic receptors on interneurons",
@@ -1353,12 +1867,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "GABA_B receptors (Gi/o) in spinal cord",
+    wrongExplanations: [
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: GABA_B receptors (Gi/o) in spinal cord",
+      "“Nicotinic receptors on interneurons” does not match the mechanism (topic: Pharmacology). GABA_B receptors (Gi/o) in spinal cord The correct choice—“GABA_B receptors (Gi/o) in spinal cord”—fits that description.",
+      "GABA_A receptors are ionotropic: GABA binding opens a Cl⁻ channel and produces a fast IPSP (often hyperpolarizing or shunting). GABA_B is metabotropic (Gᵢ/o-coupled), typically opening K⁺ channels and reducing presynaptic Ca²⁺—slower, indirect inhibition. GABA_B receptors (Gi/o) in spinal cord",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Gabapentinoids bind alpha-2-delta subunits of:",
     options: [
-
       "Ryanodine receptor",
       "Voltage-gated Ca²⁺ channels (modulating release)",
       "D2 receptor",
@@ -1366,12 +1885,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Voltage-gated Ca²⁺ channels (modulating release)",
+    wrongExplanations: [
+      "“Ryanodine receptor” does not match the mechanism (topic: Pharmacology). Voltage-gated Ca²⁺ channels (modulating release) The correct choice—“Voltage-gated Ca²⁺ channels (modulating release)”—fits that description.",
+      "",
+      "“D2 receptor” does not match the mechanism (topic: Pharmacology). Voltage-gated Ca²⁺ channels (modulating release) The correct choice—“Voltage-gated Ca²⁺ channels (modulating release)”—fits that description.",
+      "“SERT transporter” does not match the mechanism (topic: Pharmacology). Voltage-gated Ca²⁺ channels (modulating release) The correct choice—“Voltage-gated Ca²⁺ channels (modulating release)”—fits that description.",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Local anesthetic use-dependence means block is stronger when:",
     options: [
-
       "Channels open frequently during firing",
       "Only glial K⁺ channels open",
       "Myelin thickness doubles",
@@ -1379,12 +1903,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Channels open frequently during firing",
+    wrongExplanations: [
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Channels open frequently during firing",
+      "“Myelin thickness doubles” does not match the mechanism (topic: Pharmacology). Channels open frequently during firing The correct choice—“Channels open frequently during firing”—fits that description.",
+      "“Membrane is hyperpolarized for minutes” does not match the mechanism (topic: Pharmacology). Channels open frequently during firing The correct choice—“Channels open frequently during firing”—fits that description.",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Capsaicin desensitization reduces pain by:",
     options: [
-
       "Overactivating TRPV1 leading to nociceptor defunctionalization",
       "Blocking all Na⁺ channels permanently",
       "Opening GABA_A on muscle spindles",
@@ -1392,12 +1921,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Overactivating TRPV1 leading to nociceptor defunctionalization",
+    wrongExplanations: [
+      "",
+      "“Blocking all Na⁺ channels permanently” does not match the mechanism (topic: Pharmacology). Overactivating TRPV1 leading to nociceptor defunctionalization The correct choice—“Overactivating TRPV1 leading to nociceptor defunctionalization”—fits that description.",
+      "“Opening GABA_A on muscle spindles” does not match the mechanism (topic: Pharmacology). Overactivating TRPV1 leading to nociceptor defunctionalization The correct choice—“Overactivating TRPV1 leading to nociceptor defunctionalization”—fits that description.",
+      "“Preventing all glutamate release in DCML” does not match the mechanism (topic: Pharmacology). Overactivating TRPV1 leading to nociceptor defunctionalization The correct choice—“Overactivating TRPV1 leading to nociceptor defunctionalization”—fits that description.",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Tetrodotoxin and saxitoxin both block:",
     options: [
-
       "GABA transporters",
       "Voltage-gated Na⁺ channels",
       "Nicotinic receptors at NMJ only",
@@ -1405,12 +1939,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Voltage-gated Na⁺ channels",
+    wrongExplanations: [
+      "“GABA transporters” does not match the mechanism (topic: Pharmacology). Voltage-gated Na⁺ channels The correct choice—“Voltage-gated Na⁺ channels”—fits that description.",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Voltage-gated Na⁺ channels",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Voltage-gated Na⁺ channels",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Apamin blocks SK channels; expected neuronal effect:",
     options: [
-
       "Increased excitability and altered spike timing",
       "Requires photoreceptor hyperpolarization",
       "Requires myelination loss",
@@ -1418,12 +1957,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Increased excitability and altered spike timing",
+    wrongExplanations: [
+      "",
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Increased excitability and altered spike timing",
+      "“Requires myelination loss” does not match the mechanism (topic: Pharmacology). Increased excitability and altered spike timing The correct choice—“Increased excitability and altered spike timing”—fits that description.",
+      "“Complete inability to depolarize” does not match the mechanism (topic: Pharmacology). Increased excitability and altered spike timing The correct choice—“Increased excitability and altered spike timing”—fits that description.",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "D-AP5 blocks NMDA receptors; pairing-induced hippocampal LTP is:",
     options: [
-
       "Enhanced regardless of voltage",
       "Blocked only in cerebellum",
       "Impaired when NMDA-dependent Ca²⁺ influx is required",
@@ -1431,12 +1975,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Impaired when NMDA-dependent Ca²⁺ influx is required",
+    wrongExplanations: [
+      "“Enhanced regardless of voltage” does not match the mechanism (topic: Pharmacology). Impaired when NMDA-dependent Ca²⁺ influx is required The correct choice—“Impaired when NMDA-dependent Ca²⁺ influx is required”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Impaired when NMDA-dependent Ca²⁺ influx is required",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Impaired when NMDA-dependent Ca²⁺ influx is required",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "CNQX blocks AMPA/kainate; fast EPSCs at many glutamatergic synapses:",
     options: [
-
       "Are unchanged because NMDA carries all fast current",
       "Are greatly reduced or abolished",
       "Depend on gap junctions only",
@@ -1444,12 +1993,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Are greatly reduced or abolished",
+    wrongExplanations: [
+      "“Are unchanged because NMDA carries all fast current” does not match the mechanism (topic: Pharmacology). Are greatly reduced or abolished The correct choice—“Are greatly reduced or abolished”—fits that description.",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Are greatly reduced or abolished",
+      "“Become pure GABA_B responses” does not match the mechanism (topic: Pharmacology). Are greatly reduced or abolished The correct choice—“Are greatly reduced or abolished”—fits that description.",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Diazoxide opens K_ATP channels in beta cells, causing:",
     options: [
-
       "Requires glucagon release",
       "Depolarization and insulin surge",
       "Permanent Na⁺ channel opening",
@@ -1457,12 +2011,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Hyperpolarization and reduced insulin release",
+    wrongExplanations: [
+      "“Requires glucagon release” does not match the mechanism (topic: Pharmacology). Hyperpolarization and reduced insulin release The correct choice—“Hyperpolarization and reduced insulin release”—fits that description.",
+      "IPSPs make firing less likely by hyperpolarizing the cell or shunting depolarizing current. Depolarizing EPSPs bring the membrane closer to threshold—that is the opposite direction. Hyperpolarization and reduced insulin release",
+      "“Permanent Na⁺ channel opening” does not match the mechanism (topic: Pharmacology). Hyperpolarization and reduced insulin release The correct choice—“Hyperpolarization and reduced insulin release”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Pharmacology",
     question: "Sulfonylureas stimulate insulin release by:",
     options: [
-
       "Opening all GABA_A channels in pancreas",
       "Activating D2 receptors in liver",
       "Closing K_ATP → beta-cell depolarization → Ca²⁺ influx",
@@ -1470,12 +2029,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Closing K_ATP → beta-cell depolarization → Ca²⁺ influx",
+    wrongExplanations: [
+      "“Opening all GABA_A channels in pancreas” does not match the mechanism (topic: Pharmacology). Closing K_ATP → beta-cell depolarization → Ca²⁺ influx The correct choice—“Closing K_ATP → beta-cell depolarization → Ca²⁺ influx”—fits that description.",
+      "“Activating D2 receptors in liver” does not match the mechanism (topic: Pharmacology). Closing K_ATP → beta-cell depolarization → Ca²⁺ influx The correct choice—“Closing K_ATP → beta-cell depolarization → Ca²⁺ influx”—fits that description.",
+      "",
+      "“Blocking VMAT in islets” does not match the mechanism (topic: Pharmacology). Closing K_ATP → beta-cell depolarization → Ca²⁺ influx The correct choice—“Closing K_ATP → beta-cell depolarization → Ca²⁺ influx”—fits that description.",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "In the direct pathway of basal ganglia, striatal D1 MSNs tend to:",
     options: [
-
       "Hyperpolarize motor cortex directly",
       "Excite STN to increase GPi output",
       "Block all cerebellar output",
@@ -1483,12 +2047,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Inhibit GPi/SNr, disinhibiting thalamus (facilitate movement)",
+    wrongExplanations: [
+      "“Hyperpolarize motor cortex directly” does not match the mechanism (topic: Neural Circuits). Inhibit GPi/SNr, disinhibiting thalamus (facilitate movement) The correct choice—“Inhibit GPi/SNr, disinhibiting thalamus (facilitate movement)”—fits that description.",
+      "“Excite STN to increase GPi output” does not match the mechanism (topic: Neural Circuits). Inhibit GPi/SNr, disinhibiting thalamus (facilitate movement) The correct choice—“Inhibit GPi/SNr, disinhibiting thalamus (facilitate movement)”—fits that description.",
+      "“Block all cerebellar output” does not match the mechanism (topic: Neural Circuits). Inhibit GPi/SNr, disinhibiting thalamus (facilitate movement) The correct choice—“Inhibit GPi/SNr, disinhibiting thalamus (facilitate movement)”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "The indirect pathway (D2 MSNs) promotes motor suppression by:",
     options: [
-
       "Eliminating dopamine release permanently",
       "Directly opening Na⁺ channels in muscle",
       "Disinhibiting STN → increased GPi/SNr inhibition of thalamus",
@@ -1496,12 +2065,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Disinhibiting STN → increased GPi/SNr inhibition of thalamus",
+    wrongExplanations: [
+      "“Eliminating dopamine release permanently” does not match the mechanism (topic: Neural Circuits). Disinhibiting STN → increased GPi/SNr inhibition of thalamus The correct choice—“Disinhibiting STN → increased GPi/SNr inhibition of thalamus”—fits that description.",
+      "“Directly opening Na⁺ channels in muscle” does not match the mechanism (topic: Neural Circuits). Disinhibiting STN → increased GPi/SNr inhibition of thalamus The correct choice—“Disinhibiting STN → increased GPi/SNr inhibition of thalamus”—fits that description.",
+      "",
+      "“Blocking all sensory thalamus relay” does not match the mechanism (topic: Neural Circuits). Disinhibiting STN → increased GPi/SNr inhibition of thalamus The correct choice—“Disinhibiting STN → increased GPi/SNr inhibition of thalamus”—fits that description.",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "Dopamine loss in Parkinson's shifts basal ganglia balance toward:",
     options: [
-
       "Pure cerebellar ataxia only",
       "Complete loss of thalamus",
       "Enhanced direct pathway only",
@@ -1509,12 +2083,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Increased indirect pathway activity and bradykinesia",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Increased indirect pathway activity and bradykinesia",
+      "“Complete loss of thalamus” does not match the mechanism (topic: Neural Circuits). Increased indirect pathway activity and bradykinesia The correct choice—“Increased indirect pathway activity and bradykinesia”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Increased indirect pathway activity and bradykinesia",
+      "",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "STN deep brain stimulation often improves Parkinsonian symptoms by:",
     options: [
-
       "Replacing lost dopamine in substantia nigra",
       "Blocking all sensory input to M1",
       "Myelinating corticospinal axons",
@@ -1522,12 +2101,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Disrupting pathological basal ganglia–thalamus oscillations",
+    wrongExplanations: [
+      "“Replacing lost dopamine in substantia nigra” does not match the mechanism (topic: Neural Circuits). Disrupting pathological basal ganglia–thalamus oscillations The correct choice—“Disrupting pathological basal ganglia–thalamus oscillations”—fits that description.",
+      "“Blocking all sensory input to M1” does not match the mechanism (topic: Neural Circuits). Disrupting pathological basal ganglia–thalamus oscillations The correct choice—“Disrupting pathological basal ganglia–thalamus oscillations”—fits that description.",
+      "Basal ganglia motor control involves dopamine from substantia nigra pars compacta to striatum. Membrane equations or retinal biochemistry do not substitute for that circuit logic. Disrupting pathological basal ganglia–thalamus oscillations",
+      "",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "Climbing fiber input to Purkinje cells primarily:",
     options: [
-
       "Carries proprioception from muscle spindles only",
       "Is the sole driver of simple spikes always",
       "Releases dopamine in deep nuclei",
@@ -1535,12 +2119,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Delivers powerful excitation and error-related signals",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Delivers powerful excitation and error-related signals",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Delivers powerful excitation and error-related signals",
+      "“Releases dopamine in deep nuclei” does not match the mechanism (topic: Neural Circuits). Delivers powerful excitation and error-related signals The correct choice—“Delivers powerful excitation and error-related signals”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "Mossy fiber input to cerebellum carries:",
     options: [
-
       "Requires retinal ON/OFF channels",
       "Diverse sensory and motor-related information to granule cells",
       "Requires pain from spinothalamic tract",
@@ -1548,12 +2137,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Diverse sensory and motor-related information to granule cells",
+    wrongExplanations: [
+      "“Requires retinal ON/OFF channels” does not match the mechanism (topic: Neural Circuits). Diverse sensory and motor-related information to granule cells The correct choice—“Diverse sensory and motor-related information to granule cells”—fits that description.",
+      "",
+      "“Requires pain from spinothalamic tract” does not match the mechanism (topic: Neural Circuits). Diverse sensory and motor-related information to granule cells The correct choice—“Diverse sensory and motor-related information to granule cells”—fits that description.",
+      "“Requires olfactory cAMP signals” does not match the mechanism (topic: Neural Circuits). Diverse sensory and motor-related information to granule cells The correct choice—“Diverse sensory and motor-related information to granule cells”—fits that description.",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "Purkinje cell simple spikes are driven mainly by:",
     options: [
-
       "Parallel fiber synaptic input",
       "Dopamine from VTA only",
       "Direct monosynaptic Ia afferents only",
@@ -1561,12 +2155,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Parallel fiber synaptic input",
+    wrongExplanations: [
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Parallel fiber synaptic input",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Parallel fiber synaptic input",
+      "“Cochlear inner hair cells” does not match the mechanism (topic: Neural Circuits). Parallel fiber synaptic input The correct choice—“Parallel fiber synaptic input”—fits that description.",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "Cerebellar deep nuclei are the primary output because:",
     options: [
-
       "Climbing fibers bypass Purkinje cells entirely",
       "Vestibular nuclei have no connection",
       "Purkinje cells inhibit deep nuclei, gating cerebellar output",
@@ -1574,12 +2173,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Purkinje cells inhibit deep nuclei, gating cerebellar output",
+    wrongExplanations: [
+      "“Climbing fibers bypass Purkinje cells entirely” does not match the mechanism (topic: Neural Circuits). Purkinje cells inhibit deep nuclei, gating cerebellar output The correct choice—“Purkinje cells inhibit deep nuclei, gating cerebellar output”—fits that description.",
+      "“Vestibular nuclei have no connection” does not match the mechanism (topic: Neural Circuits). Purkinje cells inhibit deep nuclei, gating cerebellar output The correct choice—“Purkinje cells inhibit deep nuclei, gating cerebellar output”—fits that description.",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Purkinje cells inhibit deep nuclei, gating cerebellar output",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "The trisynaptic hippocampal circuit order is:",
     options: [
-
       "CA1 → dentate → subiculum → thalamus only",
       "Entorhinal cortex → dentate gyrus → CA3 → CA1",
       "Cerebellum → M1 → CA3",
@@ -1587,12 +2191,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Entorhinal cortex → dentate gyrus → CA3 → CA1",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Entorhinal cortex → dentate gyrus → CA3 → CA1",
+      "",
+      "“Cerebellum → M1 → CA3” does not match the mechanism (topic: Neural Circuits). Entorhinal cortex → dentate gyrus → CA3 → CA1 The correct choice—“Entorhinal cortex → dentate gyrus → CA3 → CA1”—fits that description.",
+      "“Amygdala → hypothalamus → CA3 directly” does not match the mechanism (topic: Neural Circuits). Entorhinal cortex → dentate gyrus → CA3 → CA1 The correct choice—“Entorhinal cortex → dentate gyrus → CA3 → CA1”—fits that description.",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "Place cells in CA1 fire maximally when:",
     options: [
-
       "Muscle spindle is silent only",
       "Basilar membrane is at cochlear apex only",
       "The animal occupies a specific location",
@@ -1600,12 +2209,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "The animal occupies a specific location",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: The animal occupies a specific location",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: The animal occupies a specific location",
+      "",
+      "“Retinal image motion is purely horizontal” does not match the mechanism (topic: Neural Circuits). The animal occupies a specific location The correct choice—“The animal occupies a specific location”—fits that description.",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "Grid cells in entorhinal cortex show:",
     options: [
-
       "Periodic firing fields tiling space hexagonally",
       "Orientation tuning like V1 simple cells only",
       "Pure frequency tuning like A1 only",
@@ -1613,12 +2227,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Periodic firing fields tiling space hexagonally",
+    wrongExplanations: [
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Periodic firing fields tiling space hexagonally",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Periodic firing fields tiling space hexagonally",
+      "“Requires nociceptive heat tuning” does not match the mechanism (topic: Neural Circuits). Periodic firing fields tiling space hexagonally The correct choice—“Periodic firing fields tiling space hexagonally”—fits that description.",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "LGN relay cells carry:",
     options: [
-
       "Requires olfactory glomerular maps",
       "Visual information to primary visual cortex",
       "Requires nMJ endplate potentials",
@@ -1626,12 +2245,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Visual information to primary visual cortex",
+    wrongExplanations: [
+      "“Requires olfactory glomerular maps” does not match the mechanism (topic: Neural Circuits). Visual information to primary visual cortex The correct choice—“Visual information to primary visual cortex”—fits that description.",
+      "",
+      "“Requires nMJ endplate potentials” does not match the mechanism (topic: Neural Circuits). Visual information to primary visual cortex The correct choice—“Visual information to primary visual cortex”—fits that description.",
+      "“Requires proprioception to cerebellum” does not match the mechanism (topic: Neural Circuits). Visual information to primary visual cortex The correct choice—“Visual information to primary visual cortex”—fits that description.",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "Thalamic reticular nucleus (TRN) provides:",
     options: [
-
       "Myelin to optic nerve",
       "Direct dopamine to striatum",
       "Excitatory drive to ventral horn only",
@@ -1639,12 +2263,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Inhibitory feedback/feedforward to relay nuclei",
+    wrongExplanations: [
+      "“Myelin to optic nerve” does not match the mechanism (topic: Neural Circuits). Inhibitory feedback/feedforward to relay nuclei The correct choice—“Inhibitory feedback/feedforward to relay nuclei”—fits that description.",
+      "“Direct dopamine to striatum” does not match the mechanism (topic: Neural Circuits). Inhibitory feedback/feedforward to relay nuclei The correct choice—“Inhibitory feedback/feedforward to relay nuclei”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Inhibitory feedback/feedforward to relay nuclei",
+      "",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "Corticothalamic feedback to sensory thalamus can:",
     options: [
-
       "Replace all peripheral transduction",
       "Eliminate need for Na⁺ channels",
       "Modulate relay gain and receptive fields",
@@ -1652,12 +2281,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Modulate relay gain and receptive fields",
+    wrongExplanations: [
+      "“Replace all peripheral transduction” does not match the mechanism (topic: Neural Circuits). Modulate relay gain and receptive fields The correct choice—“Modulate relay gain and receptive fields”—fits that description.",
+      "“Eliminate need for Na⁺ channels” does not match the mechanism (topic: Neural Circuits). Modulate relay gain and receptive fields The correct choice—“Modulate relay gain and receptive fields”—fits that description.",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Modulate relay gain and receptive fields",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "Superior colliculus deep layers are important for:",
     options: [
-
       "Orienting eye/head movements toward stimuli",
       "Glomerular odor discrimination only",
       "Cochlear amplification only",
@@ -1665,12 +2299,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Orienting eye/head movements toward stimuli",
+    wrongExplanations: [
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Orienting eye/head movements toward stimuli",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Orienting eye/head movements toward stimuli",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Orienting eye/head movements toward stimuli",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "Default mode network is most active during:",
     options: [
-
       "Maximal stretch reflex activation",
       "Pure photoreceptor transduction",
       "NMJ blockade",
@@ -1678,12 +2317,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Rest and internally directed thought",
+    wrongExplanations: [
+      "“Maximal stretch reflex activation” does not match the mechanism (topic: Neural Circuits). Rest and internally directed thought The correct choice—“Rest and internally directed thought”—fits that description.",
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Rest and internally directed thought",
+      "“NMJ blockade” does not match the mechanism (topic: Neural Circuits). Rest and internally directed thought The correct choice—“Rest and internally directed thought”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "Layer 5 pyramidal neurons often:",
     options: [
-
       "Project subcortically and intracortically",
       "Fire only at 200 Hz without adaptation",
       "Are the only cells with gap junctions",
@@ -1691,12 +2335,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Project subcortically and intracortically",
+    wrongExplanations: [
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Project subcortically and intracortically",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Project subcortically and intracortically",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Project subcortically and intracortically",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "Parvalbumin interneurons in cortex typically:",
     options: [
-
       "Are identical to Purkinje cells",
       "Carry proprioception to DCML",
       "Release glutamate at NMJ",
@@ -1704,12 +2353,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Provide fast perisomatic inhibition to pyramidal cells",
+    wrongExplanations: [
+      "“Are identical to Purkinje cells” does not match the mechanism (topic: Neural Circuits). Provide fast perisomatic inhibition to pyramidal cells The correct choice—“Provide fast perisomatic inhibition to pyramidal cells”—fits that description.",
+      "“Carry proprioception to DCML” does not match the mechanism (topic: Neural Circuits). Provide fast perisomatic inhibition to pyramidal cells The correct choice—“Provide fast perisomatic inhibition to pyramidal cells”—fits that description.",
+      "“Release glutamate at NMJ” does not match the mechanism (topic: Neural Circuits). Provide fast perisomatic inhibition to pyramidal cells The correct choice—“Provide fast perisomatic inhibition to pyramidal cells”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "VTA → nucleus accumbens dopamine mediates:",
     options: [
-
       "Reward prediction and motivational salience",
       "Cochlear tuning only",
       "Purely conjugate eye movements only",
@@ -1717,12 +2371,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Reward prediction and motivational salience",
+    wrongExplanations: [
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Reward prediction and motivational salience",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Reward prediction and motivational salience",
+      "“Requires cerebellar LTD” does not match the mechanism (topic: Neural Circuits). Reward prediction and motivational salience The correct choice—“Reward prediction and motivational salience”—fits that description.",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "Hypothalamic PVN neurons:",
     options: [
-
       "Release oxytocin/vasopressin and regulate autonomic/endocrine function",
       "Generate otoacoustic emissions",
       "Are sole source of NMJ acetylcholine",
@@ -1730,12 +2389,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Release oxytocin/vasopressin and regulate autonomic/endocrine function",
+    wrongExplanations: [
+      "",
+      "“Generate otoacoustic emissions” does not match the mechanism (topic: Neural Circuits). Release oxytocin/vasopressin and regulate autonomic/endocrine function The correct choice—“Release oxytocin/vasopressin and regulate autonomic/endocrine function”—fits that description.",
+      "“Are sole source of NMJ acetylcholine” does not match the mechanism (topic: Neural Circuits). Release oxytocin/vasopressin and regulate autonomic/endocrine function The correct choice—“Release oxytocin/vasopressin and regulate autonomic/endocrine function”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Release oxytocin/vasopressin and regulate autonomic/endocrine function",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "SCN circadian pacemaker synchronizes via:",
     options: [
-
       "Requires olfactory bulb oscillations",
       "Retinohypothalamic light input and internal gene loops",
       "Direct muscle spindle afferents",
@@ -1743,12 +2407,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Retinohypothalamic light input and internal gene loops",
+    wrongExplanations: [
+      "“Requires olfactory bulb oscillations” does not match the mechanism (topic: Neural Circuits). Retinohypothalamic light input and internal gene loops The correct choice—“Retinohypothalamic light input and internal gene loops”—fits that description.",
+      "",
+      "“Direct muscle spindle afferents” does not match the mechanism (topic: Neural Circuits). Retinohypothalamic light input and internal gene loops The correct choice—“Retinohypothalamic light input and internal gene loops”—fits that description.",
+      "“Requires gap junctions in liver” does not match the mechanism (topic: Neural Circuits). Retinohypothalamic light input and internal gene loops The correct choice—“Retinohypothalamic light input and internal gene loops”—fits that description.",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "Amygdala lateral nucleus is critical for:",
     options: [
-
       "Generating AIS spikes exclusively",
       "Associating sensory cues with emotional significance",
       "Motor unit recruitment order only",
@@ -1756,12 +2425,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Associating sensory cues with emotional significance",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Associating sensory cues with emotional significance",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Associating sensory cues with emotional significance",
+      "“Computing E_K from concentrations” does not match the mechanism (topic: Neural Circuits). Associating sensory cues with emotional significance The correct choice—“Associating sensory cues with emotional significance”—fits that description.",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "Cerebellar flocculus is involved in:",
     options: [
-
       "Pain crossing in cord only",
       "VOR adaptation",
       "NMJ ACh packaging only",
@@ -1769,12 +2443,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "VOR adaptation",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: VOR adaptation",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: VOR adaptation",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: VOR adaptation",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "Inferior olive climbing fibers are linked to:",
     options: [
-
       "Timing errors and cerebellar motor learning",
       "Photoreceptor bleaching only",
       "Requires glomerular OR binding",
@@ -1782,12 +2461,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Timing errors and cerebellar motor learning",
+    wrongExplanations: [
+      "",
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Timing errors and cerebellar motor learning",
+      "“Requires glomerular OR binding” does not match the mechanism (topic: Neural Circuits). Timing errors and cerebellar motor learning The correct choice—“Timing errors and cerebellar motor learning”—fits that description.",
+      "“Requires k⁺ Nernst potential” does not match the mechanism (topic: Neural Circuits). Timing errors and cerebellar motor learning The correct choice—“Timing errors and cerebellar motor learning”—fits that description.",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "Red nucleus participates in:",
     options: [
-
       "Rubrospinal influence on limb flexor tone",
       "Purely visual stereopsis only",
       "Adult hippocampal neurogenesis always",
@@ -1795,12 +2479,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Rubrospinal influence on limb flexor tone",
+    wrongExplanations: [
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Rubrospinal influence on limb flexor tone",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Rubrospinal influence on limb flexor tone",
+      "“Requires inner ear endolymph production” does not match the mechanism (topic: Neural Circuits). Rubrospinal influence on limb flexor tone The correct choice—“Rubrospinal influence on limb flexor tone”—fits that description.",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "Raphe serotonergic projections modulate:",
     options: [
-
       "Mood, sleep, and sensory gain broadly",
       "Requires rod disk shedding",
       "Requires outer hair cell length",
@@ -1808,12 +2497,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Mood, sleep, and sensory gain broadly",
+    wrongExplanations: [
+      "",
+      "“Requires rod disk shedding” does not match the mechanism (topic: Neural Circuits). Mood, sleep, and sensory gain broadly The correct choice—“Mood, sleep, and sensory gain broadly”—fits that description.",
+      "“Requires outer hair cell length” does not match the mechanism (topic: Neural Circuits). Mood, sleep, and sensory gain broadly The correct choice—“Mood, sleep, and sensory gain broadly”—fits that description.",
+      "“Requires nMJ quantal size” does not match the mechanism (topic: Neural Circuits). Mood, sleep, and sensory gain broadly The correct choice—“Mood, sleep, and sensory gain broadly”—fits that description.",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "Locus coeruleus norepinephrine increases:",
     options: [
-
       "Only photoreceptor dark current elimination",
       "Arousal and signal-to-noise in many circuits",
       "Only glycine at NMJ",
@@ -1821,12 +2515,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Arousal and signal-to-noise in many circuits",
+    wrongExplanations: [
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Arousal and signal-to-noise in many circuits",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Arousal and signal-to-noise in many circuits",
+      "“Permanent hyperpolarization to E_K everywhere” does not match the mechanism (topic: Neural Circuits). Arousal and signal-to-noise in many circuits The correct choice—“Arousal and signal-to-noise in many circuits”—fits that description.",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "Basal forebrain cholinergic neurons promote:",
     options: [
-
       "Requires spinal reflex reversal",
       "Cochlear map inversion",
       "Cortical arousal and attention",
@@ -1834,12 +2533,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Cortical arousal and attention",
+    wrongExplanations: [
+      "“Requires spinal reflex reversal” does not match the mechanism (topic: Neural Circuits). Cortical arousal and attention The correct choice—“Cortical arousal and attention”—fits that description.",
+      "“Cochlear map inversion” does not match the mechanism (topic: Neural Circuits). Cortical arousal and attention The correct choice—“Cortical arousal and attention”—fits that description.",
+      "",
+      "“Requires cerebellar simple spikes” does not match the mechanism (topic: Neural Circuits). Cortical arousal and attention The correct choice—“Cortical arousal and attention”—fits that description.",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "Internal capsule corticospinal lesion causes:",
     options: [
-
       "Pure Wernicke aphasia always",
       "Bitemporal hemianopia",
       "Ipsilateral proprioception loss only",
@@ -1847,12 +2551,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Contralateral UMN signs",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Contralateral UMN signs",
+      "“Bitemporal hemianopia” does not match the mechanism (topic: Neural Circuits). Contralateral UMN signs The correct choice—“Contralateral UMN signs”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Contralateral UMN signs",
+      "",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "DCML pathway carries:",
     options: [
-
       "Fine touch, vibration, and proprioception to S1",
       "Requires nMJ EPSPs",
       "Pain and temperature only",
@@ -1860,12 +2569,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Fine touch, vibration, and proprioception to S1",
+    wrongExplanations: [
+      "",
+      "“Requires nMJ EPSPs” does not match the mechanism (topic: Neural Circuits). Fine touch, vibration, and proprioception to S1 The correct choice—“Fine touch, vibration, and proprioception to S1”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Fine touch, vibration, and proprioception to S1",
+      "“Requires smell to amygdala” does not match the mechanism (topic: Neural Circuits). Fine touch, vibration, and proprioception to S1 The correct choice—“Fine touch, vibration, and proprioception to S1”—fits that description.",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "Spinoreticular tract contributes to:",
     options: [
-
       "Arousal and affective aspects of pain",
       "Fine two-point discrimination",
       "VOR slow phase only",
@@ -1873,12 +2587,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Arousal and affective aspects of pain",
+    wrongExplanations: [
+      "",
+      "“Fine two-point discrimination” does not match the mechanism (topic: Neural Circuits). Arousal and affective aspects of pain The correct choice—“Arousal and affective aspects of pain”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Arousal and affective aspects of pain",
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Arousal and affective aspects of pain",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "Cuneate vs gracile nuclei divide:",
     options: [
-
       "High vs low sound frequency only",
       "Left vs right visual hemifields",
       "D1 vs D2 receptors",
@@ -1886,12 +2605,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Upper limb vs lower limb DCML input",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Upper limb vs lower limb DCML input",
+      "“Left vs right visual hemifields” does not match the mechanism (topic: Neural Circuits). Upper limb vs lower limb DCML input The correct choice—“Upper limb vs lower limb DCML input”—fits that description.",
+      "“D1 vs D2 receptors” does not match the mechanism (topic: Neural Circuits). Upper limb vs lower limb DCML input The correct choice—“Upper limb vs lower limb DCML input”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "Trigeminal lemniscus carries:",
     options: [
-
       "Ia afferents to motor neurons only",
       "Olfactory axons to cortex directly",
       "Retinal axons to LGN",
@@ -1899,12 +2623,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Face touch/proprioception to VPM thalamus",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Face touch/proprioception to VPM thalamus",
+      "“Olfactory axons to cortex directly” does not match the mechanism (topic: Neural Circuits). Face touch/proprioception to VPM thalamus The correct choice—“Face touch/proprioception to VPM thalamus”—fits that description.",
+      "“Retinal axons to LGN” does not match the mechanism (topic: Neural Circuits). Face touch/proprioception to VPM thalamus The correct choice—“Face touch/proprioception to VPM thalamus”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "Hypoglossal nucleus damage causes:",
     options: [
-
       "Pure ataxia without weakness",
       "Contralateral hemianopia",
       "Deafness",
@@ -1912,12 +2641,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Ipsilateral tongue weakness/deviation toward lesion",
+    wrongExplanations: [
+      "“Pure ataxia without weakness” does not match the mechanism (topic: Neural Circuits). Ipsilateral tongue weakness/deviation toward lesion The correct choice—“Ipsilateral tongue weakness/deviation toward lesion”—fits that description.",
+      "“Contralateral hemianopia” does not match the mechanism (topic: Neural Circuits). Ipsilateral tongue weakness/deviation toward lesion The correct choice—“Ipsilateral tongue weakness/deviation toward lesion”—fits that description.",
+      "“Deafness” does not match the mechanism (topic: Neural Circuits). Ipsilateral tongue weakness/deviation toward lesion The correct choice—“Ipsilateral tongue weakness/deviation toward lesion”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "Facial nerve lesion with forehead sparing suggests:",
     options: [
-
       "Peripheral Bell's palsy whole hemiface",
       "Complete DCML loss",
       "Central (UMN) facial weakness",
@@ -1925,12 +2659,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Central (UMN) facial weakness",
+    wrongExplanations: [
+      "“Peripheral Bell's palsy whole hemiface” does not match the mechanism (topic: Neural Circuits). Central (UMN) facial weakness The correct choice—“Central (UMN) facial weakness”—fits that description.",
+      "“Complete DCML loss” does not match the mechanism (topic: Neural Circuits). Central (UMN) facial weakness The correct choice—“Central (UMN) facial weakness”—fits that description.",
+      "",
+      "“Optic chiasm compression” does not match the mechanism (topic: Neural Circuits). Central (UMN) facial weakness The correct choice—“Central (UMN) facial weakness”—fits that description.",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "Medial longitudinal fasciculus coordinates:",
     options: [
-
       "Requires ia discharge",
       "Cochlear amplification only",
       "Horizontal eye movements linking CN VI and III",
@@ -1938,12 +2677,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Horizontal eye movements linking CN VI and III",
+    wrongExplanations: [
+      "“Requires ia discharge” does not match the mechanism (topic: Neural Circuits). Horizontal eye movements linking CN VI and III The correct choice—“Horizontal eye movements linking CN VI and III”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Horizontal eye movements linking CN VI and III",
+      "",
+      "“Requires hippocampal ripples” does not match the mechanism (topic: Neural Circuits). Horizontal eye movements linking CN VI and III The correct choice—“Horizontal eye movements linking CN VI and III”—fits that description.",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "Nucleus ambiguus motor fibers innervate:",
     options: [
-
       "Dorsal root ganglion only",
       "Corticospinal tract only",
       "Pharynx/larynx via CN IX, X (XI component)",
@@ -1951,12 +2695,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Pharynx/larynx via CN IX, X (XI component)",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Pharynx/larynx via CN IX, X (XI component)",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Pharynx/larynx via CN IX, X (XI component)",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Pharynx/larynx via CN IX, X (XI component)",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "Area postrema detects emetic toxins because it:",
     options: [
-
       "Has no synapses",
       "Is sole site of Na⁺ pump",
       "Lacks a complete blood–brain barrier",
@@ -1964,12 +2713,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Lacks a complete blood–brain barrier",
+    wrongExplanations: [
+      "“Has no synapses” does not match the mechanism (topic: Neural Circuits). Lacks a complete blood–brain barrier The correct choice—“Lacks a complete blood–brain barrier”—fits that description.",
+      "“Is sole site of Na⁺ pump” does not match the mechanism (topic: Neural Circuits). Lacks a complete blood–brain barrier The correct choice—“Lacks a complete blood–brain barrier”—fits that description.",
+      "",
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Lacks a complete blood–brain barrier",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "Nucleus tractus solitarius receives:",
     options: [
-
       "Requires motor cortex commands",
       "Requires ia fibers directly",
       "Requires oN bipolar input",
@@ -1977,12 +2731,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Visceral sensory input (taste, baroreceptors)",
+    wrongExplanations: [
+      "“Requires motor cortex commands” does not match the mechanism (topic: Neural Circuits). Visceral sensory input (taste, baroreceptors) The correct choice—“Visceral sensory input (taste, baroreceptors)”—fits that description.",
+      "“Requires ia fibers directly” does not match the mechanism (topic: Neural Circuits). Visceral sensory input (taste, baroreceptors) The correct choice—“Visceral sensory input (taste, baroreceptors)”—fits that description.",
+      "“Requires oN bipolar input” does not match the mechanism (topic: Neural Circuits). Visceral sensory input (taste, baroreceptors) The correct choice—“Visceral sensory input (taste, baroreceptors)”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "PAG stimulation can produce:",
     options: [
-
       "Analgesia via descending pain-modulation",
       "Pure cerebellar intention tremor",
       "Complete loss of K⁺ channels",
@@ -1990,12 +2749,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Analgesia via descending pain-modulation",
+    wrongExplanations: [
+      "",
+      "“Pure cerebellar intention tremor” does not match the mechanism (topic: Neural Circuits). Analgesia via descending pain-modulation The correct choice—“Analgesia via descending pain-modulation”—fits that description.",
+      "“Complete loss of K⁺ channels” does not match the mechanism (topic: Neural Circuits). Analgesia via descending pain-modulation The correct choice—“Analgesia via descending pain-modulation”—fits that description.",
+      "“Permanent blindness” does not match the mechanism (topic: Neural Circuits). Analgesia via descending pain-modulation The correct choice—“Analgesia via descending pain-modulation”—fits that description.",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "Rostral ventrolateral medulla is important for:",
     options: [
-
       "Sympathetic vasomotor tone",
       "Color opponency only",
       "Cochlear map only",
@@ -2003,12 +2767,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Sympathetic vasomotor tone",
+    wrongExplanations: [
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Sympathetic vasomotor tone",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Sympathetic vasomotor tone",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Sympathetic vasomotor tone",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "Solitary nucleus baroreceptor afferents regulate:",
     options: [
-
       "NMJ quantal content only",
       "Photopigment regeneration",
       "Blood pressure via brainstem autonomic centers",
@@ -2016,12 +2785,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Blood pressure via brainstem autonomic centers",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Blood pressure via brainstem autonomic centers",
+      "“Photopigment regeneration” does not match the mechanism (topic: Neural Circuits). Blood pressure via brainstem autonomic centers The correct choice—“Blood pressure via brainstem autonomic centers”—fits that description.",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Blood pressure via brainstem autonomic centers",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "Cortico-pontine-cerebellar pathway carries:",
     options: [
-
       "Requires lamina I pain",
       "Efference copy of planned motor signals",
       "Requires renshaw glycine to muscle",
@@ -2029,12 +2803,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Efference copy of planned motor signals",
+    wrongExplanations: [
+      "“Requires lamina I pain” does not match the mechanism (topic: Neural Circuits). Efference copy of planned motor signals The correct choice—“Efference copy of planned motor signals”—fits that description.",
+      "",
+      "“Requires renshaw glycine to muscle” does not match the mechanism (topic: Neural Circuits). Efference copy of planned motor signals The correct choice—“Efference copy of planned motor signals”—fits that description.",
+      "“Requires rod signals” does not match the mechanism (topic: Neural Circuits). Efference copy of planned motor signals The correct choice—“Efference copy of planned motor signals”—fits that description.",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "Cerebello-thalamo-cortical loop returns to:",
     options: [
-
       "NMJ only",
       "Olfactory epithelium only",
       "Retinal bipolar cells only",
@@ -2042,12 +2821,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Motor/premotor cortex to adjust movement",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Motor/premotor cortex to adjust movement",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Motor/premotor cortex to adjust movement",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Motor/premotor cortex to adjust movement",
+      "",
+    ]
   },
   {
     topic: "Neural Circuits",
     question: "CA3 recurrent collaterals support:",
     options: [
-
       "Pattern completion and autoassociation",
       "Otoacoustic emissions",
       "Photoreceptor dark current",
@@ -2055,12 +2839,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Pattern completion and autoassociation",
+    wrongExplanations: [
+      "",
+      "“Otoacoustic emissions” does not match the mechanism (topic: Neural Circuits). Pattern completion and autoassociation The correct choice—“Pattern completion and autoassociation”—fits that description.",
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Pattern completion and autoassociation",
+      "“Requires monosynaptic reflex” does not match the mechanism (topic: Neural Circuits). Pattern completion and autoassociation The correct choice—“Pattern completion and autoassociation”—fits that description.",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Photoreceptors hyperpolarize to light because:",
     options: [
-
       "Glutamate release increases in light always",
       "cGMP-gated channels close → photoreceptor depolarization in dark reverses",
       "Action potentials propagate along the photoreceptor outer segment",
@@ -2068,12 +2857,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "cGMP-gated channels close → photoreceptor depolarization in dark reverses",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: cGMP-gated channels close → photoreceptor depolarization in dark reverses",
+      "",
+      "“Action potentials propagate along the photoreceptor outer segment” does not match the mechanism (topic: Sensory Systems). cGMP-gated channels close → photoreceptor depolarization in dark reverses The correct choice—“cGMP-gated channels close → photoreceptor depolarization in dark reverses”—fits that description.",
+      "“Na⁺ channels open maximally in light” does not match the mechanism (topic: Sensory Systems). cGMP-gated channels close → photoreceptor depolarization in dark reverses The correct choice—“cGMP-gated channels close → photoreceptor depolarization in dark reverses”—fits that description.",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "ON bipolar cells depolarize to light via:",
     options: [
-
       "ON pathway sign inversion (e.g., mGluR6 cascade)",
       "Requires muscarinic receptors",
       "Requires na⁺ spikes in bipolar axons always",
@@ -2081,12 +2875,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "ON pathway sign inversion (e.g., mGluR6 cascade)",
+    wrongExplanations: [
+      "",
+      "“Requires muscarinic receptors” does not match the mechanism (topic: Sensory Systems). ON pathway sign inversion (e.g., mGluR6 cascade) The correct choice—“ON pathway sign inversion (e.g., mGluR6 cascade)”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: ON pathway sign inversion (e.g., mGluR6 cascade)",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: ON pathway sign inversion (e.g., mGluR6 cascade)",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Horizontal cells contribute to center-surround by:",
     options: [
-
       "Generating cochlear traveling wave",
       "Releasing ACh at NMJ",
       "Lateral inhibition in outer retina",
@@ -2094,12 +2893,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Lateral inhibition in outer retina",
+    wrongExplanations: [
+      "“Generating cochlear traveling wave” does not match the mechanism (topic: Sensory Systems). Lateral inhibition in outer retina The correct choice—“Lateral inhibition in outer retina”—fits that description.",
+      "“Releasing ACh at NMJ” does not match the mechanism (topic: Sensory Systems). Lateral inhibition in outer retina The correct choice—“Lateral inhibition in outer retina”—fits that description.",
+      "",
+      "“Driving Ia afferents in muscle” does not match the mechanism (topic: Sensory Systems). Lateral inhibition in outer retina The correct choice—“Lateral inhibition in outer retina”—fits that description.",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Ganglion cell receptive fields often show center-surround because:",
     options: [
-
       "Bipolar/amacrine circuits create antagonistic surrounds",
       "Requires muscle spindles create surround",
       "Requires olfactory glomeruli create surround",
@@ -2107,12 +2911,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Bipolar/amacrine circuits create antagonistic surrounds",
+    wrongExplanations: [
+      "",
+      "“Requires muscle spindles create surround” does not match the mechanism (topic: Sensory Systems). Bipolar/amacrine circuits create antagonistic surrounds The correct choice—“Bipolar/amacrine circuits create antagonistic surrounds”—fits that description.",
+      "“Requires olfactory glomeruli create surround” does not match the mechanism (topic: Sensory Systems). Bipolar/amacrine circuits create antagonistic surrounds The correct choice—“Bipolar/amacrine circuits create antagonistic surrounds”—fits that description.",
+      "“Requires thalamus adds surround later” does not match the mechanism (topic: Sensory Systems). Bipolar/amacrine circuits create antagonistic surrounds The correct choice—“Bipolar/amacrine circuits create antagonistic surrounds”—fits that description.",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "M pathway (parvocellular) vs P pathway (magnocellular) in primates:",
     options: [
-
       "M: only smell; P: only proprioception",
       "P carries only pain from cord",
       "M: motion/depth transient; P: color/fine detail (classic division)",
@@ -2120,12 +2929,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "M: motion/depth transient; P: color/fine detail (classic division)",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: M: motion/depth transient; P: color/fine detail (classic division)",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: M: motion/depth transient; P: color/fine detail (classic division)",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: M: motion/depth transient; P: color/fine detail (classic division)",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Cochlear tonotopy maps frequency because:",
     options: [
-
       "Requires outer hair cells encode frequency",
       "All hair cells identical tuning",
       "Basilar membrane stiffness varies along length (high at base)",
@@ -2133,12 +2947,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Basilar membrane stiffness varies along length (high at base)",
+    wrongExplanations: [
+      "“Requires outer hair cells encode frequency” does not match the mechanism (topic: Sensory Systems). Basilar membrane stiffness varies along length (high at base) The correct choice—“Basilar membrane stiffness varies along length (high at base)”—fits that description.",
+      "“All hair cells identical tuning” does not match the mechanism (topic: Sensory Systems). Basilar membrane stiffness varies along length (high at base) The correct choice—“Basilar membrane stiffness varies along length (high at base)”—fits that description.",
+      "",
+      "“Requires vestibular otoliths encode pitch” does not match the mechanism (topic: Sensory Systems). Basilar membrane stiffness varies along length (high at base) The correct choice—“Basilar membrane stiffness varies along length (high at base)”—fits that description.",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Outer hair cell electromotility contributes to:",
     options: [
-
       "Requires dCML vibration sense",
       "Cochlear amplification and sharp tuning",
       "Photoreceptor dark current",
@@ -2146,12 +2965,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Cochlear amplification and sharp tuning",
+    wrongExplanations: [
+      "“Requires dCML vibration sense” does not match the mechanism (topic: Sensory Systems). Cochlear amplification and sharp tuning The correct choice—“Cochlear amplification and sharp tuning”—fits that description.",
+      "",
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Cochlear amplification and sharp tuning",
+      "“NMJ endplate potential” does not match the mechanism (topic: Sensory Systems). Cochlear amplification and sharp tuning The correct choice—“Cochlear amplification and sharp tuning”—fits that description.",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Tip links in hair cells transduce sound by:",
     options: [
-
       "Requires gap junction coupling",
       "Opening mechanotransduction channels when stereocilia shear",
       "Releasing dopamine in cochlear nucleus",
@@ -2159,12 +2983,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Opening mechanotransduction channels when stereocilia shear",
+    wrongExplanations: [
+      "“Requires gap junction coupling” does not match the mechanism (topic: Sensory Systems). Opening mechanotransduction channels when stereocilia shear The correct choice—“Opening mechanotransduction channels when stereocilia shear”—fits that description.",
+      "",
+      "“Releasing dopamine in cochlear nucleus” does not match the mechanism (topic: Sensory Systems). Opening mechanotransduction channels when stereocilia shear The correct choice—“Opening mechanotransduction channels when stereocilia shear”—fits that description.",
+      "“Closing all K⁺ channels permanently” does not match the mechanism (topic: Sensory Systems). Opening mechanotransduction channels when stereocilia shear The correct choice—“Opening mechanotransduction channels when stereocilia shear”—fits that description.",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Semicircular canals detect:",
     options: [
-
       "Angular acceleration of the head",
       "Skin vibration only",
       "Retinal image slip only",
@@ -2172,12 +3001,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Angular acceleration of the head",
+    wrongExplanations: [
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Angular acceleration of the head",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Angular acceleration of the head",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Angular acceleration of the head",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Utricle and saccule detect:",
     options: [
-
       "Linear acceleration and head tilt (gravity)",
       "Color opponency",
       "Olfactory concentration only",
@@ -2185,12 +3019,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Linear acceleration and head tilt (gravity)",
+    wrongExplanations: [
+      "",
+      "“Color opponency” does not match the mechanism (topic: Sensory Systems). Linear acceleration and head tilt (gravity) The correct choice—“Linear acceleration and head tilt (gravity)”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Linear acceleration and head tilt (gravity)",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Linear acceleration and head tilt (gravity)",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "VOR stabilizes gaze by:",
     options: [
-
       "Blocking all CN III output",
       "Generating eye movements opposite to head movement",
       "Requires hippocampal place fields",
@@ -2198,12 +3037,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Generating eye movements opposite to head movement",
+    wrongExplanations: [
+      "“Blocking all CN III output” does not match the mechanism (topic: Sensory Systems). Generating eye movements opposite to head movement The correct choice—“Generating eye movements opposite to head movement”—fits that description.",
+      "",
+      "“Requires hippocampal place fields” does not match the mechanism (topic: Sensory Systems). Generating eye movements opposite to head movement The correct choice—“Generating eye movements opposite to head movement”—fits that description.",
+      "“Requires pain withdrawal reflex” does not match the mechanism (topic: Sensory Systems). Generating eye movements opposite to head movement The correct choice—“Generating eye movements opposite to head movement”—fits that description.",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Two-point discrimination is finest on fingertips because:",
     options: [
-
       "Requires spinothalamic input is used",
       "High receptor density and large cortical representation",
       "No cortical map exists for fingers",
@@ -2211,12 +3055,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "High receptor density and large cortical representation",
+    wrongExplanations: [
+      "“Requires spinothalamic input is used” does not match the mechanism (topic: Sensory Systems). High receptor density and large cortical representation The correct choice—“High receptor density and large cortical representation”—fits that description.",
+      "",
+      "“No cortical map exists for fingers” does not match the mechanism (topic: Sensory Systems). High receptor density and large cortical representation The correct choice—“High receptor density and large cortical representation”—fits that description.",
+      "“Requires pacinian corpuscles exist there” does not match the mechanism (topic: Sensory Systems). High receptor density and large cortical representation The correct choice—“High receptor density and large cortical representation”—fits that description.",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Merkel discs are well suited for:",
     options: [
-
       "Fine texture and sustained touch (SA I)",
       "Proprioception from muscle spindles only",
       "Pain temperature only",
@@ -2224,12 +3073,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Fine texture and sustained touch (SA I)",
+    wrongExplanations: [
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Fine texture and sustained touch (SA I)",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Fine texture and sustained touch (SA I)",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Fine texture and sustained touch (SA I)",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Pacinian corpuscles encode:",
     options: [
-
       "Retinal contrast only",
       "Olfactory identity only",
       "Sustained pressure only",
@@ -2237,12 +3091,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "High-frequency vibration (rapidly adapting)",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: High-frequency vibration (rapidly adapting)",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: High-frequency vibration (rapidly adapting)",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: High-frequency vibration (rapidly adapting)",
+      "",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Ruffini endings detect:",
     options: [
-
       "Sound frequency at cochlear apex only",
       "Skin stretch and sustained deformation",
       "Photons in rods only",
@@ -2250,12 +3109,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Skin stretch and sustained deformation",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Skin stretch and sustained deformation",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Skin stretch and sustained deformation",
+      "“Requires visceral baroreceptors” does not match the mechanism (topic: Sensory Systems). Skin stretch and sustained deformation The correct choice—“Skin stretch and sustained deformation”—fits that description.",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Free nerve endings often mediate:",
     options: [
-
       "Requires cochlear tuning",
       "Pain and temperature (among other signals)",
       "Requires proprioception to DCML",
@@ -2263,12 +3127,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Pain and temperature (among other signals)",
+    wrongExplanations: [
+      "“Requires cochlear tuning” does not match the mechanism (topic: Sensory Systems). Pain and temperature (among other signals) The correct choice—“Pain and temperature (among other signals)”—fits that description.",
+      "",
+      "“Requires proprioception to DCML” does not match the mechanism (topic: Sensory Systems). Pain and temperature (among other signals) The correct choice—“Pain and temperature (among other signals)”—fits that description.",
+      "“Requires nMJ transmission” does not match the mechanism (topic: Sensory Systems). Pain and temperature (among other signals) The correct choice—“Pain and temperature (among other signals)”—fits that description.",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Gate control theory of pain emphasizes:",
     options: [
-
       "Requires photoreceptor bleaching",
       "Only horizontal cells hyperpolarize rods when cGMP is high",
       "Spinal modulation where touch and pain pathways interact",
@@ -2276,12 +3145,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Spinal modulation where touch and pain pathways interact",
+    wrongExplanations: [
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Spinal modulation where touch and pain pathways interact",
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Spinal modulation where touch and pain pathways interact",
+      "",
+      "“Requires cortical blindness” does not match the mechanism (topic: Sensory Systems). Spinal modulation where touch and pain pathways interact The correct choice—“Spinal modulation where touch and pain pathways interact”—fits that description.",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Referred pain from heart is often felt in left arm because:",
     options: [
-
       "Requires cochlear nucleus convergence",
       "Convergence of visceral and somatic pain pathways in CNS",
       "Requires retina maps heart",
@@ -2289,12 +3163,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Convergence of visceral and somatic pain pathways in CNS",
+    wrongExplanations: [
+      "“Requires cochlear nucleus convergence” does not match the mechanism (topic: Sensory Systems). Convergence of visceral and somatic pain pathways in CNS The correct choice—“Convergence of visceral and somatic pain pathways in CNS”—fits that description.",
+      "",
+      "“Requires retina maps heart” does not match the mechanism (topic: Sensory Systems). Convergence of visceral and somatic pain pathways in CNS The correct choice—“Convergence of visceral and somatic pain pathways in CNS”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Convergence of visceral and somatic pain pathways in CNS",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Capsaicin activates TRPV1 on:",
     options: [
-
       "Nociceptors sensing noxious heat/pH",
       "Alpha motor neurons only",
       "Photoreceptors in fovea only",
@@ -2302,12 +3181,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Nociceptors sensing noxious heat/pH",
+    wrongExplanations: [
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Nociceptors sensing noxious heat/pH",
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Nociceptors sensing noxious heat/pH",
+      "These are visual pathway structures (retina → LGN → cortex). Cochlear and auditory nerve mechanisms belong to hearing, not the visual question in the stem. Nociceptors sensing noxious heat/pH",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Cooling menthol sensation uses:",
     options: [
-
       "Rod cGMP channels",
       "TRPM8 channels on cold-sensitive fibers",
       "Nicotinic NMJ receptors",
@@ -2315,12 +3199,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "TRPM8 channels on cold-sensitive fibers",
+    wrongExplanations: [
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. TRPM8 channels on cold-sensitive fibers",
+      "",
+      "“Nicotinic NMJ receptors” does not match the mechanism (topic: Sensory Systems). TRPM8 channels on cold-sensitive fibers The correct choice—“TRPM8 channels on cold-sensitive fibers”—fits that description.",
+      "“Requires nMDA in CA1” does not match the mechanism (topic: Sensory Systems). TRPM8 channels on cold-sensitive fibers The correct choice—“TRPM8 channels on cold-sensitive fibers”—fits that description.",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Olfactory receptor neurons use:",
     options: [
-
       "Only cerebellar parallel fibers",
       "Direct gap junctions to cortex only",
       "G-protein / cAMP cascade to open cation channels",
@@ -2328,12 +3217,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "G-protein / cAMP cascade to open cation channels",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: G-protein / cAMP cascade to open cation channels",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: G-protein / cAMP cascade to open cation channels",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: G-protein / cAMP cascade to open cation channels",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Glomeruli in olfactory bulb represent:",
     options: [
-
       "Inputs from ORNs expressing the same receptor type (roughly)",
       "Single retinal photoreceptors only",
       "Single cochlear frequencies only",
@@ -2341,12 +3235,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Inputs from ORNs expressing the same receptor type (roughly)",
+    wrongExplanations: [
+      "",
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Inputs from ORNs expressing the same receptor type (roughly)",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Inputs from ORNs expressing the same receptor type (roughly)",
+      "“Individual muscle motor units” does not match the mechanism (topic: Sensory Systems). Inputs from ORNs expressing the same receptor type (roughly) The correct choice—“Inputs from ORNs expressing the same receptor type (roughly)”—fits that description.",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Taste sweet stimuli often act through:",
     options: [
-
       "T1R2/T1R3 G-protein coupled receptors",
       "Only NMDA on CN VII",
       "Only TRPV1 on fungiform papillae exclusively",
@@ -2354,12 +3253,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "T1R2/T1R3 G-protein coupled receptors",
+    wrongExplanations: [
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: T1R2/T1R3 G-protein coupled receptors",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: T1R2/T1R3 G-protein coupled receptors",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: T1R2/T1R3 G-protein coupled receptors",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Umami taste is primarily:",
     options: [
-
       "Only NaCl epithelial sodium channels",
       "Only sour proton block of K⁺ always",
       "Only bitter T2R always",
@@ -2367,12 +3271,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Glutamate sensing (e.g., T1R1/T1R3)",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Glutamate sensing (e.g., T1R1/T1R3)",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Glutamate sensing (e.g., T1R1/T1R3)",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Glutamate sensing (e.g., T1R1/T1R3)",
+      "",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Bitter taste uses T2R receptors to:",
     options: [
-
       "Encode sound localization only",
       "Detect potentially toxic compounds",
       "Encode retinal direction selectivity",
@@ -2380,12 +3289,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Detect potentially toxic compounds",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Detect potentially toxic compounds",
+      "",
+      "“Encode retinal direction selectivity” does not match the mechanism (topic: Sensory Systems). Detect potentially toxic compounds The correct choice—“Detect potentially toxic compounds”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Detect potentially toxic compounds",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Sour taste transduction often involves:",
     options: [
-
       "Requires cochlear tip links",
       "Proton entry/acid sensing depolarizing taste cells",
       "Requires ia afferents",
@@ -2393,12 +3307,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Proton entry/acid sensing depolarizing taste cells",
+    wrongExplanations: [
+      "“Requires cochlear tip links” does not match the mechanism (topic: Sensory Systems). Proton entry/acid sensing depolarizing taste cells The correct choice—“Proton entry/acid sensing depolarizing taste cells”—fits that description.",
+      "",
+      "“Requires ia afferents” does not match the mechanism (topic: Sensory Systems). Proton entry/acid sensing depolarizing taste cells The correct choice—“Proton entry/acid sensing depolarizing taste cells”—fits that description.",
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Proton entry/acid sensing depolarizing taste cells",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Primary somatosensory cortex (S1) is organized:",
     options: [
-
       "Without any spatial map",
       "Somatotopically (homunculus)",
       "Retinotopically like V1 only",
@@ -2406,12 +3325,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Somatotopically (homunculus)",
+    wrongExplanations: [
+      "“Without any spatial map” does not match the mechanism (topic: Sensory Systems). Somatotopically (homunculus) The correct choice—“Somatotopically (homunculus)”—fits that description.",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Somatotopically (homunculus)",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Somatotopically (homunculus)",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Receptive field size in S1 is smaller for:",
     options: [
-
       "Trunk vs fingers always larger on fingers",
       "Only vestibular nuclei",
       "Only olfactory bulb",
@@ -2419,12 +3343,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Digits vs proximal limb (more cortical territory per area)",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Digits vs proximal limb (more cortical territory per area)",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Digits vs proximal limb (more cortical territory per area)",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Digits vs proximal limb (more cortical territory per area)",
+      "",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Cortical blindness with V1 damage occurs because:",
     options: [
-
       "Optic nerve transection always",
       "No conscious visual perception despite intact eyes",
       "Requires nMJ block",
@@ -2432,12 +3361,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "No conscious visual perception despite intact eyes",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: No conscious visual perception despite intact eyes",
+      "",
+      "“Requires nMJ block” does not match the mechanism (topic: Sensory Systems). No conscious visual perception despite intact eyes The correct choice—“No conscious visual perception despite intact eyes”—fits that description.",
+      "These are visual pathway structures (retina → LGN → cortex). Cochlear and auditory nerve mechanisms belong to hearing, not the visual question in the stem. No conscious visual perception despite intact eyes",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Blindsight suggests:",
     options: [
-
       "Complete loss of all retina function",
       "Requires proprioception remains",
       "Some visual processing without conscious V1 perception",
@@ -2445,12 +3379,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Some visual processing without conscious V1 perception",
+    wrongExplanations: [
+      "“Complete loss of all retina function” does not match the mechanism (topic: Sensory Systems). Some visual processing without conscious V1 perception The correct choice—“Some visual processing without conscious V1 perception”—fits that description.",
+      "“Requires proprioception remains” does not match the mechanism (topic: Sensory Systems). Some visual processing without conscious V1 perception The correct choice—“Some visual processing without conscious V1 perception”—fits that description.",
+      "",
+      "“Requires hippocampal maps remain” does not match the mechanism (topic: Sensory Systems). Some visual processing without conscious V1 perception The correct choice—“Some visual processing without conscious V1 perception”—fits that description.",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Prosopagnosia typically reflects:",
     options: [
-
       "Requires alpha motor neuron loss",
       "Pure cochlear apex lesion",
       "Requires dCML lesion",
@@ -2458,12 +3397,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Fusiform face area / ventral stream dysfunction",
+    wrongExplanations: [
+      "“Requires alpha motor neuron loss” does not match the mechanism (topic: Sensory Systems). Fusiform face area / ventral stream dysfunction The correct choice—“Fusiform face area / ventral stream dysfunction”—fits that description.",
+      "“Pure cochlear apex lesion” does not match the mechanism (topic: Sensory Systems). Fusiform face area / ventral stream dysfunction The correct choice—“Fusiform face area / ventral stream dysfunction”—fits that description.",
+      "“Requires dCML lesion” does not match the mechanism (topic: Sensory Systems). Fusiform face area / ventral stream dysfunction The correct choice—“Fusiform face area / ventral stream dysfunction”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Akinetopsia (motion blindness) links to:",
     options: [
-
       "Requires nMJ myasthenia",
       "Requires spinal shock",
       "MT/V5 or dorsal stream motion processing lesions",
@@ -2471,12 +3415,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "MT/V5 or dorsal stream motion processing lesions",
+    wrongExplanations: [
+      "“Requires nMJ myasthenia” does not match the mechanism (topic: Sensory Systems). MT/V5 or dorsal stream motion processing lesions The correct choice—“MT/V5 or dorsal stream motion processing lesions”—fits that description.",
+      "“Requires spinal shock” does not match the mechanism (topic: Sensory Systems). MT/V5 or dorsal stream motion processing lesions The correct choice—“MT/V5 or dorsal stream motion processing lesions”—fits that description.",
+      "",
+      "“Requires olfactory bulb removal” does not match the mechanism (topic: Sensory Systems). MT/V5 or dorsal stream motion processing lesions The correct choice—“MT/V5 or dorsal stream motion processing lesions”—fits that description.",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Stereopsis depends on:",
     options: [
-
       "Requires muscle spindle Ia",
       "Requires vestibular otoliths",
       "Binocular disparity processed in visual cortex",
@@ -2484,12 +3433,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Binocular disparity processed in visual cortex",
+    wrongExplanations: [
+      "“Requires muscle spindle Ia” does not match the mechanism (topic: Sensory Systems). Binocular disparity processed in visual cortex The correct choice—“Binocular disparity processed in visual cortex”—fits that description.",
+      "“Requires vestibular otoliths” does not match the mechanism (topic: Sensory Systems). Binocular disparity processed in visual cortex The correct choice—“Binocular disparity processed in visual cortex”—fits that description.",
+      "",
+      "“Requires monocular luminance” does not match the mechanism (topic: Sensory Systems). Binocular disparity processed in visual cortex The correct choice—“Binocular disparity processed in visual cortex”—fits that description.",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Color opponency (red-green) arises partly from:",
     options: [
-
       "Requires cochlear outer hair cells",
       "Requires spinothalamic lamina I",
       "Requires cerebellar climbing fibers",
@@ -2497,12 +3451,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "P ganglion/on-off midget opponent pathways",
+    wrongExplanations: [
+      "“Requires cochlear outer hair cells” does not match the mechanism (topic: Sensory Systems). P ganglion/on-off midget opponent pathways The correct choice—“P ganglion/on-off midget opponent pathways”—fits that description.",
+      "“Requires spinothalamic lamina I” does not match the mechanism (topic: Sensory Systems). P ganglion/on-off midget opponent pathways The correct choice—“P ganglion/on-off midget opponent pathways”—fits that description.",
+      "“Requires cerebellar climbing fibers” does not match the mechanism (topic: Sensory Systems). P ganglion/on-off midget opponent pathways The correct choice—“P ganglion/on-off midget opponent pathways”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Auditory brainstem response (ABR) reflects:",
     options: [
-
       "Requires hippocampal theta only",
       "Synchronized activity in auditory nerve/brainstem nuclei",
       "Requires cortical alpha rhythm",
@@ -2510,12 +3469,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Synchronized activity in auditory nerve/brainstem nuclei",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Synchronized activity in auditory nerve/brainstem nuclei",
+      "",
+      "“Requires cortical alpha rhythm” does not match the mechanism (topic: Sensory Systems). Synchronized activity in auditory nerve/brainstem nuclei The correct choice—“Synchronized activity in auditory nerve/brainstem nuclei”—fits that description.",
+      "“Requires eMG from muscle” does not match the mechanism (topic: Sensory Systems). Synchronized activity in auditory nerve/brainstem nuclei The correct choice—“Synchronized activity in auditory nerve/brainstem nuclei”—fits that description.",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Interaural time differences localize:",
     options: [
-
       "Only visual bars in V1",
       "Only olfactory glomeruli",
       "Low-frequency sounds (phase timing)",
@@ -2523,12 +3487,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Low-frequency sounds (phase timing)",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Low-frequency sounds (phase timing)",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Low-frequency sounds (phase timing)",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Low-frequency sounds (phase timing)",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Interaural level differences localize:",
     options: [
-
       "Requires retinal rods",
       "Requires nMJ quanta",
       "Requires dCML vibration",
@@ -2536,12 +3505,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "High-frequency sounds (head shadow)",
+    wrongExplanations: [
+      "“Requires retinal rods” does not match the mechanism (topic: Sensory Systems). High-frequency sounds (head shadow) The correct choice—“High-frequency sounds (head shadow)”—fits that description.",
+      "“Requires nMJ quanta” does not match the mechanism (topic: Sensory Systems). High-frequency sounds (head shadow) The correct choice—“High-frequency sounds (head shadow)”—fits that description.",
+      "“Requires dCML vibration” does not match the mechanism (topic: Sensory Systems). High-frequency sounds (head shadow) The correct choice—“High-frequency sounds (head shadow)”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Visual afterimages relate to:",
     options: [
-
       "Photopigment/bleaching and adaptation in retina",
       "Requires lTP in CA3 exclusively",
       "Requires cochlear amplification",
@@ -2549,12 +3523,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Photopigment/bleaching and adaptation in retina",
+    wrongExplanations: [
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Photopigment/bleaching and adaptation in retina",
+      "“Requires cochlear amplification” does not match the mechanism (topic: Sensory Systems). Photopigment/bleaching and adaptation in retina The correct choice—“Photopigment/bleaching and adaptation in retina”—fits that description.",
+      "“Requires spinal gate control” does not match the mechanism (topic: Sensory Systems). Photopigment/bleaching and adaptation in retina The correct choice—“Photopigment/bleaching and adaptation in retina”—fits that description.",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Dark adaptation curve inflection reflects:",
     options: [
-
       "Requires olfactory fatigue only",
       "Rod system taking over from cones in dim light",
       "Requires muscle spindle adaptation",
@@ -2562,12 +3541,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Rod system taking over from cones in dim light",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Rod system taking over from cones in dim light",
+      "",
+      "“Requires muscle spindle adaptation” does not match the mechanism (topic: Sensory Systems). Rod system taking over from cones in dim light The correct choice—“Rod system taking over from cones in dim light”—fits that description.",
+      "“Requires k⁺ Nernst shift” does not match the mechanism (topic: Sensory Systems). Rod system taking over from cones in dim light The correct choice—“Rod system taking over from cones in dim light”—fits that description.",
+    ]
   },
   {
     topic: "Sensory Systems",
     question: "Conduction aphasia (arcuate) often shows:",
     options: [
-
       "Nonfluent Broca speech only always",
       "Impaired repetition with fluent speech/comprehension relatively spared",
       "Bitemporal hemianopia",
@@ -2575,12 +3559,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Impaired repetition with fluent speech/comprehension relatively spared",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Impaired repetition with fluent speech/comprehension relatively spared",
+      "",
+      "“Bitemporal hemianopia” does not match the mechanism (topic: Sensory Systems). Impaired repetition with fluent speech/comprehension relatively spared The correct choice—“Impaired repetition with fluent speech/comprehension relatively spared”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Impaired repetition with fluent speech/comprehension relatively spared",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Alpha motor neurons innervate:",
     options: [
-
       "Extrafusal skeletal muscle fibers",
       "All smooth muscle in gut",
       "Photoreceptors",
@@ -2588,12 +3577,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Extrafusal skeletal muscle fibers",
+    wrongExplanations: [
+      "",
+      "“All smooth muscle in gut” does not match the mechanism (topic: Motor Systems). Extrafusal skeletal muscle fibers The correct choice—“Extrafusal skeletal muscle fibers”—fits that description.",
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Extrafusal skeletal muscle fibers",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Extrafusal skeletal muscle fibers",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Gamma motor neurons adjust:",
     options: [
-
       "Retinal gain only",
       "Requires nMJ acetylcholinesterase",
       "Cochlear tuning only",
@@ -2601,12 +3595,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Muscle spindle sensitivity by innervating intrafusal fibers",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Muscle spindle sensitivity by innervating intrafusal fibers",
+      "“Requires nMJ acetylcholinesterase” does not match the mechanism (topic: Motor Systems). Muscle spindle sensitivity by innervating intrafusal fibers The correct choice—“Muscle spindle sensitivity by innervating intrafusal fibers”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Muscle spindle sensitivity by innervating intrafusal fibers",
+      "",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Coactivation of alpha and gamma during contraction:",
     options: [
-
       "Maintains spindle sensitivity during muscle shortening",
       "Requires affects cerebellum",
       "Requires affects olfactory bulb",
@@ -2614,12 +3613,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Maintains spindle sensitivity during muscle shortening",
+    wrongExplanations: [
+      "",
+      "“Requires affects cerebellum” does not match the mechanism (topic: Motor Systems). Maintains spindle sensitivity during muscle shortening The correct choice—“Maintains spindle sensitivity during muscle shortening”—fits that description.",
+      "“Requires affects olfactory bulb” does not match the mechanism (topic: Motor Systems). Maintains spindle sensitivity during muscle shortening The correct choice—“Maintains spindle sensitivity during muscle shortening”—fits that description.",
+      "“Eliminates stretch reflex entirely” does not match the mechanism (topic: Motor Systems). Maintains spindle sensitivity during muscle shortening The correct choice—“Maintains spindle sensitivity during muscle shortening”—fits that description.",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Stretch reflex (myotatic) is:",
     options: [
-
       "Polysynaptic pain withdrawal always",
       "Monosynaptic Ia → alpha motor neuron excitation",
       "Requires corticospinal volitional",
@@ -2627,12 +3631,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Monosynaptic Ia → alpha motor neuron excitation",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Monosynaptic Ia → alpha motor neuron excitation",
+      "",
+      "“Requires corticospinal volitional” does not match the mechanism (topic: Motor Systems). Monosynaptic Ia → alpha motor neuron excitation The correct choice—“Monosynaptic Ia → alpha motor neuron excitation”—fits that description.",
+      "“Requires vestibular otolith” does not match the mechanism (topic: Motor Systems). Monosynaptic Ia → alpha motor neuron excitation The correct choice—“Monosynaptic Ia → alpha motor neuron excitation”—fits that description.",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Golgi tendon organ Ib afferents mediate:",
     options: [
-
       "Photoreceptor transduction",
       "Cochlear amplification",
       "Stretch reflex facilitation always",
@@ -2640,12 +3649,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Autogenic inhibition when tendon tension is high",
+    wrongExplanations: [
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Autogenic inhibition when tendon tension is high",
+      "“Cochlear amplification” does not match the mechanism (topic: Motor Systems). Autogenic inhibition when tendon tension is high The correct choice—“Autogenic inhibition when tendon tension is high”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Autogenic inhibition when tendon tension is high",
+      "",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Reciprocal inhibition during stretch reflex:",
     options: [
-
       "Requires occurs in retina",
       "Excites antagonist always",
       "Inhibits antagonist alpha motor neurons via Ia interneurons",
@@ -2653,12 +3667,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Inhibits antagonist alpha motor neurons via Ia interneurons",
+    wrongExplanations: [
+      "“Requires occurs in retina” does not match the mechanism (topic: Motor Systems). Inhibits antagonist alpha motor neurons via Ia interneurons The correct choice—“Inhibits antagonist alpha motor neurons via Ia interneurons”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Inhibits antagonist alpha motor neurons via Ia interneurons",
+      "",
+      "“Requires in olfactory glomeruli” does not match the mechanism (topic: Motor Systems). Inhibits antagonist alpha motor neurons via Ia interneurons The correct choice—“Inhibits antagonist alpha motor neurons via Ia interneurons”—fits that description.",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Renshaw cells provide:",
     options: [
-
       "Requires dopamine to striatum",
       "Requires cerebellar climbing input",
       "Recurrent inhibition of alpha motor neurons",
@@ -2666,12 +3685,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Recurrent inhibition of alpha motor neurons",
+    wrongExplanations: [
+      "“Requires dopamine to striatum” does not match the mechanism (topic: Motor Systems). Recurrent inhibition of alpha motor neurons The correct choice—“Recurrent inhibition of alpha motor neurons”—fits that description.",
+      "“Requires cerebellar climbing input” does not match the mechanism (topic: Motor Systems). Recurrent inhibition of alpha motor neurons The correct choice—“Recurrent inhibition of alpha motor neurons”—fits that description.",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Recurrent inhibition of alpha motor neurons",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Upper motor neuron lesion signs include:",
     options: [
-
       "Flaccid paralysis with fasciculations typically",
       "Blindness always",
       "Immediate muscle atrophy within hours only",
@@ -2679,12 +3703,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Hyperreflexia, spasticity, Babinski",
+    wrongExplanations: [
+      "“Flaccid paralysis with fasciculations typically” does not match the mechanism (topic: Motor Systems). Hyperreflexia, spasticity, Babinski The correct choice—“Hyperreflexia, spasticity, Babinski”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Hyperreflexia, spasticity, Babinski",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Hyperreflexia, spasticity, Babinski",
+      "",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Lower motor neuron lesion signs include:",
     options: [
-
       "Homonymous hemianopia",
       "Hyperreflexia always",
       "Babinski positive always",
@@ -2692,12 +3721,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Weakness, atrophy, fasciculations, hyporeflexia",
+    wrongExplanations: [
+      "“Homonymous hemianopia” does not match the mechanism (topic: Motor Systems). Weakness, atrophy, fasciculations, hyporeflexia The correct choice—“Weakness, atrophy, fasciculations, hyporeflexia”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Weakness, atrophy, fasciculations, hyporeflexia",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Weakness, atrophy, fasciculations, hyporeflexia",
+      "",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Decorticate posturing (flexor arms) suggests:",
     options: [
-
       "Requires cochlear lesion",
       "Damage above red nucleus (cortex/thalamus)",
       "Requires peripheral nerve cut",
@@ -2705,12 +3739,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Damage above red nucleus (cortex/thalamus)",
+    wrongExplanations: [
+      "“Requires cochlear lesion” does not match the mechanism (topic: Motor Systems). Damage above red nucleus (cortex/thalamus) The correct choice—“Damage above red nucleus (cortex/thalamus)”—fits that description.",
+      "",
+      "“Requires peripheral nerve cut” does not match the mechanism (topic: Motor Systems). Damage above red nucleus (cortex/thalamus) The correct choice—“Damage above red nucleus (cortex/thalamus)”—fits that description.",
+      "“Requires olfactory bulb removal” does not match the mechanism (topic: Motor Systems). Damage above red nucleus (cortex/thalamus) The correct choice—“Damage above red nucleus (cortex/thalamus)”—fits that description.",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Decerebrate posturing (extensor) suggests:",
     options: [
-
       "Requires retinal detachment",
       "Brainstem lesion below red nucleus level",
       "Requires hippocampal lesion",
@@ -2718,12 +3757,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Brainstem lesion below red nucleus level",
+    wrongExplanations: [
+      "“Requires retinal detachment” does not match the mechanism (topic: Motor Systems). Brainstem lesion below red nucleus level The correct choice—“Brainstem lesion below red nucleus level”—fits that description.",
+      "",
+      "“Requires hippocampal lesion” does not match the mechanism (topic: Motor Systems). Brainstem lesion below red nucleus level The correct choice—“Brainstem lesion below red nucleus level”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Brainstem lesion below red nucleus level",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Corticospinal tract primarily decussates in:",
     options: [
-
       "Optic chiasm",
       "Pyramids of medulla (most fibers)",
       "Requires cerebellar vermis",
@@ -2731,12 +3775,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Pyramids of medulla (most fibers)",
+    wrongExplanations: [
+      "“Optic chiasm” does not match the mechanism (topic: Motor Systems). Pyramids of medulla (most fibers) The correct choice—“Pyramids of medulla (most fibers)”—fits that description.",
+      "",
+      "“Requires cerebellar vermis” does not match the mechanism (topic: Motor Systems). Pyramids of medulla (most fibers) The correct choice—“Pyramids of medulla (most fibers)”—fits that description.",
+      "“Requires spinal lamina II” does not match the mechanism (topic: Motor Systems). Pyramids of medulla (most fibers) The correct choice—“Pyramids of medulla (most fibers)”—fits that description.",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Voluntary fine finger movement relies heavily on:",
     options: [
-
       "Requires photoreceptors",
       "Requires autonomic ganglia",
       "Requires olfactory receptor neurons",
@@ -2744,12 +3793,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Corticospinal (and associated) control of distal muscles",
+    wrongExplanations: [
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Corticospinal (and associated) control of distal muscles",
+      "“Requires autonomic ganglia” does not match the mechanism (topic: Motor Systems). Corticospinal (and associated) control of distal muscles The correct choice—“Corticospinal (and associated) control of distal muscles”—fits that description.",
+      "“Requires olfactory receptor neurons” does not match the mechanism (topic: Motor Systems). Corticospinal (and associated) control of distal muscles The correct choice—“Corticospinal (and associated) control of distal muscles”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Basal ganglia motor role is often described as:",
     options: [
-
       "Transducing odorants",
       "Generating cochlear traveling waves",
       "Computing retinal receptive fields only",
@@ -2757,12 +3811,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Selecting/inhibiting movement programs and enabling initiation",
+    wrongExplanations: [
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Selecting/inhibiting movement programs and enabling initiation",
+      "“Generating cochlear traveling waves” does not match the mechanism (topic: Motor Systems). Selecting/inhibiting movement programs and enabling initiation The correct choice—“Selecting/inhibiting movement programs and enabling initiation”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Selecting/inhibiting movement programs and enabling initiation",
+      "",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Cerebellar motor role emphasizes:",
     options: [
-
       "Requires hormone release from PVN",
       "Requires pain/temperature crossing",
       "Error correction, timing, and coordination",
@@ -2770,12 +3829,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Error correction, timing, and coordination",
+    wrongExplanations: [
+      "“Requires hormone release from PVN” does not match the mechanism (topic: Motor Systems). Error correction, timing, and coordination The correct choice—“Error correction, timing, and coordination”—fits that description.",
+      "“Requires pain/temperature crossing” does not match the mechanism (topic: Motor Systems). Error correction, timing, and coordination The correct choice—“Error correction, timing, and coordination”—fits that description.",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Error correction, timing, and coordination",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Intention tremor suggests:",
     options: [
-
       "Pure UMN corticospinal lesion only",
       "Cerebellar or cerebellar outflow dysfunction",
       "Requires amygdala lesion",
@@ -2783,12 +3847,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Cerebellar or cerebellar outflow dysfunction",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Cerebellar or cerebellar outflow dysfunction",
+      "",
+      "“Requires amygdala lesion” does not match the mechanism (topic: Motor Systems). Cerebellar or cerebellar outflow dysfunction The correct choice—“Cerebellar or cerebellar outflow dysfunction”—fits that description.",
+      "“Optic nerve transection” does not match the mechanism (topic: Motor Systems). Cerebellar or cerebellar outflow dysfunction The correct choice—“Cerebellar or cerebellar outflow dysfunction”—fits that description.",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Dysmetria on finger-nose testing indicates:",
     options: [
-
       "Requires dCML loss",
       "Requires blindness",
       "Cerebellar inaccuracy of movement endpoint",
@@ -2796,12 +3865,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Cerebellar inaccuracy of movement endpoint",
+    wrongExplanations: [
+      "“Requires dCML loss” does not match the mechanism (topic: Motor Systems). Cerebellar inaccuracy of movement endpoint The correct choice—“Cerebellar inaccuracy of movement endpoint”—fits that description.",
+      "“Requires blindness” does not match the mechanism (topic: Motor Systems). Cerebellar inaccuracy of movement endpoint The correct choice—“Cerebellar inaccuracy of movement endpoint”—fits that description.",
+      "",
+      "“Pure LMN facial weakness” does not match the mechanism (topic: Motor Systems). Cerebellar inaccuracy of movement endpoint The correct choice—“Cerebellar inaccuracy of movement endpoint”—fits that description.",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Chorea (Huntington's) reflects:",
     options: [
-
       "Requires spinal shock",
       "Dysregulated basal ganglia leading to random movements",
       "Pure cerebellar vermis agenesis only",
@@ -2809,12 +3883,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Dysregulated basal ganglia leading to random movements",
+    wrongExplanations: [
+      "“Requires spinal shock” does not match the mechanism (topic: Motor Systems). Dysregulated basal ganglia leading to random movements The correct choice—“Dysregulated basal ganglia leading to random movements”—fits that description.",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Dysregulated basal ganglia leading to random movements",
+      "“Requires cochlear damage” does not match the mechanism (topic: Motor Systems). Dysregulated basal ganglia leading to random movements The correct choice—“Dysregulated basal ganglia leading to random movements”—fits that description.",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Dystonia involves:",
     options: [
-
       "Requires nMJ blockade always",
       "Requires hippocampal place cells",
       "Sustained abnormal postures from motor program dysfunction",
@@ -2822,12 +3901,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Sustained abnormal postures from motor program dysfunction",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Sustained abnormal postures from motor program dysfunction",
+      "“Requires hippocampal place cells” does not match the mechanism (topic: Motor Systems). Sustained abnormal postures from motor program dysfunction The correct choice—“Sustained abnormal postures from motor program dysfunction”—fits that description.",
+      "",
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Sustained abnormal postures from motor program dysfunction",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Myasthenia gravis fatigability is due to:",
     options: [
-
       "Requires retinal bipolar dysfunction",
       "Autoimmune reduction of functional nicotinic receptors at NMJ",
       "Dopamine loss in SNc",
@@ -2835,12 +3919,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Autoimmune reduction of functional nicotinic receptors at NMJ",
+    wrongExplanations: [
+      "“Requires retinal bipolar dysfunction” does not match the mechanism (topic: Motor Systems). Autoimmune reduction of functional nicotinic receptors at NMJ The correct choice—“Autoimmune reduction of functional nicotinic receptors at NMJ”—fits that description.",
+      "",
+      "“Dopamine loss in SNc” does not match the mechanism (topic: Motor Systems). Autoimmune reduction of functional nicotinic receptors at NMJ The correct choice—“Autoimmune reduction of functional nicotinic receptors at NMJ”—fits that description.",
+      "“Requires tTX on axons” does not match the mechanism (topic: Motor Systems). Autoimmune reduction of functional nicotinic receptors at NMJ The correct choice—“Autoimmune reduction of functional nicotinic receptors at NMJ”—fits that description.",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Lambert-Eaton syndrome differs from myasthenia because:",
     options: [
-
       "Postsynaptic AChR destruction always",
       "Presynaptic Ca²⁺ channel autoimmunity reduces ACh release",
       "Requires muscle spindle Ia loss",
@@ -2848,12 +3937,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Presynaptic Ca²⁺ channel autoimmunity reduces ACh release",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Presynaptic Ca²⁺ channel autoimmunity reduces ACh release",
+      "",
+      "“Requires muscle spindle Ia loss” does not match the mechanism (topic: Motor Systems). Presynaptic Ca²⁺ channel autoimmunity reduces ACh release The correct choice—“Presynaptic Ca²⁺ channel autoimmunity reduces ACh release”—fits that description.",
+      "“Requires cochlear hair cell loss” does not match the mechanism (topic: Motor Systems). Presynaptic Ca²⁺ channel autoimmunity reduces ACh release The correct choice—“Presynaptic Ca²⁺ channel autoimmunity reduces ACh release”—fits that description.",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Botulism causes weakness by:",
     options: [
-
       "Opening all Na⁺ channels",
       "Destroying cerebellar Purkinje cells",
       "Blocking all K⁺ channels",
@@ -2861,12 +3955,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Cleaving SNARE proteins → blocked vesicle fusion",
+    wrongExplanations: [
+      "“Opening all Na⁺ channels” does not match the mechanism (topic: Motor Systems). Cleaving SNARE proteins → blocked vesicle fusion The correct choice—“Cleaving SNARE proteins → blocked vesicle fusion”—fits that description.",
+      "“Destroying cerebellar Purkinje cells” does not match the mechanism (topic: Motor Systems). Cleaving SNARE proteins → blocked vesicle fusion The correct choice—“Cleaving SNARE proteins → blocked vesicle fusion”—fits that description.",
+      "“Blocking all K⁺ channels” does not match the mechanism (topic: Motor Systems). Cleaving SNARE proteins → blocked vesicle fusion The correct choice—“Cleaving SNARE proteins → blocked vesicle fusion”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "End-plate potential is graded because:",
     options: [
-
       "Only photoreceptor response",
       "Always regenerative Na⁺ along entire muscle instantly",
       "Only olfactory cAMP",
@@ -2874,12 +3973,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Local depolarization from NMJ ion flux (not full AP in muscle yet)",
+    wrongExplanations: [
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Local depolarization from NMJ ion flux (not full AP in muscle yet)",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Local depolarization from NMJ ion flux (not full AP in muscle yet)",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Local depolarization from NMJ ion flux (not full AP in muscle yet)",
+      "",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Muscle fiber types (slow vs fast) differ partly in:",
     options: [
-
       "Requires cochlear position",
       "Requires glomerular OR type",
       "Requires retinal opsin type",
@@ -2887,12 +3991,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Myosin ATPase isoforms and metabolic profile",
+    wrongExplanations: [
+      "“Requires cochlear position” does not match the mechanism (topic: Motor Systems). Myosin ATPase isoforms and metabolic profile The correct choice—“Myosin ATPase isoforms and metabolic profile”—fits that description.",
+      "“Requires glomerular OR type” does not match the mechanism (topic: Motor Systems). Myosin ATPase isoforms and metabolic profile The correct choice—“Myosin ATPase isoforms and metabolic profile”—fits that description.",
+      "“Requires retinal opsin type” does not match the mechanism (topic: Motor Systems). Myosin ATPase isoforms and metabolic profile The correct choice—“Myosin ATPase isoforms and metabolic profile”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Motor unit size is larger in:",
     options: [
-
       "Retina vs cochlea",
       "Proximal muscles vs small hand muscles typically",
       "Fingers vs back always smaller in back",
@@ -2900,12 +4009,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Proximal muscles vs small hand muscles typically",
+    wrongExplanations: [
+      "“Retina vs cochlea” does not match the mechanism (topic: Motor Systems). Proximal muscles vs small hand muscles typically The correct choice—“Proximal muscles vs small hand muscles typically”—fits that description.",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Proximal muscles vs small hand muscles typically",
+      "“Requires olfactory epithelium” does not match the mechanism (topic: Motor Systems). Proximal muscles vs small hand muscles typically The correct choice—“Proximal muscles vs small hand muscles typically”—fits that description.",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Size principle of motor unit recruitment:",
     options: [
-
       "Smaller units recruited before larger units for graded force",
       "Random order always",
       "Requires applies to photoreceptors",
@@ -2913,12 +4027,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Smaller units recruited before larger units for graded force",
+    wrongExplanations: [
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Smaller units recruited before larger units for graded force",
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Smaller units recruited before larger units for graded force",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Smaller units recruited before larger units for graded force",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Spinal shock after transection initially shows:",
     options: [
-
       "Pure aphasia",
       "Flaccid paralysis and areflexia below lesion",
       "Bitemporal hemianopia",
@@ -2926,12 +4045,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Flaccid paralysis and areflexia below lesion",
+    wrongExplanations: [
+      "“Pure aphasia” does not match the mechanism (topic: Motor Systems). Flaccid paralysis and areflexia below lesion The correct choice—“Flaccid paralysis and areflexia below lesion”—fits that description.",
+      "",
+      "“Bitemporal hemianopia” does not match the mechanism (topic: Motor Systems). Flaccid paralysis and areflexia below lesion The correct choice—“Flaccid paralysis and areflexia below lesion”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Flaccid paralysis and areflexia below lesion",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "After spinal shock, chronic SCI often shows:",
     options: [
-
       "Spasticity and hyperreflexia below lesion",
       "Only deafness",
       "Permanent flaccidity without change always",
@@ -2939,12 +4063,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Spasticity and hyperreflexia below lesion",
+    wrongExplanations: [
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Spasticity and hyperreflexia below lesion",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Spasticity and hyperreflexia below lesion",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Spasticity and hyperreflexia below lesion",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Central pattern generators in spinal cord can:",
     options: [
-
       "Only compute Goldman equation",
       "Produce rhythmic locomotor-like activity",
       "Only encode color opponency",
@@ -2952,12 +4081,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Produce rhythmic locomotor-like activity",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Produce rhythmic locomotor-like activity",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Produce rhythmic locomotor-like activity",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Produce rhythmic locomotor-like activity",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Rubrospinal tract generally facilitates:",
     options: [
-
       "Flexor muscle tone in upper limb (with other pathways)",
       "Requires retinal ON bipolar cells",
       "Requires hypothalamic SCN",
@@ -2965,12 +4099,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Flexor muscle tone in upper limb (with other pathways)",
+    wrongExplanations: [
+      "",
+      "“Requires retinal ON bipolar cells” does not match the mechanism (topic: Motor Systems). Flexor muscle tone in upper limb (with other pathways) The correct choice—“Flexor muscle tone in upper limb (with other pathways)”—fits that description.",
+      "“Requires hypothalamic SCN” does not match the mechanism (topic: Motor Systems). Flexor muscle tone in upper limb (with other pathways) The correct choice—“Flexor muscle tone in upper limb (with other pathways)”—fits that description.",
+      "“Requires cochlear inner hair cells” does not match the mechanism (topic: Motor Systems). Flexor muscle tone in upper limb (with other pathways) The correct choice—“Flexor muscle tone in upper limb (with other pathways)”—fits that description.",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Reticulospinal pathways influence:",
     options: [
-
       "Requires hippocampal grids exclusively",
       "Posture, locomotion, and autonomic-motor integration",
       "Requires photopigment bleaching",
@@ -2978,12 +4117,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Posture, locomotion, and autonomic-motor integration",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Posture, locomotion, and autonomic-motor integration",
+      "",
+      "“Requires photopigment bleaching” does not match the mechanism (topic: Motor Systems). Posture, locomotion, and autonomic-motor integration The correct choice—“Posture, locomotion, and autonomic-motor integration”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Posture, locomotion, and autonomic-motor integration",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Vestibulospinal tract helps:",
     options: [
-
       "Postural adjustments to maintain balance",
       "Requires lTP induction",
       "Color vision only",
@@ -2991,12 +4135,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Postural adjustments to maintain balance",
+    wrongExplanations: [
+      "",
+      "“Requires lTP induction” does not match the mechanism (topic: Motor Systems). Postural adjustments to maintain balance The correct choice—“Postural adjustments to maintain balance”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Postural adjustments to maintain balance",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Postural adjustments to maintain balance",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Tectospinal tract contributes to:",
     options: [
-
       "Requires dCML fine touch",
       "Requires insulin release",
       "Requires pain gate control",
@@ -3004,12 +4153,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Orienting head/eye movements with colliculus",
+    wrongExplanations: [
+      "“Requires dCML fine touch” does not match the mechanism (topic: Motor Systems). Orienting head/eye movements with colliculus The correct choice—“Orienting head/eye movements with colliculus”—fits that description.",
+      "“Requires insulin release” does not match the mechanism (topic: Motor Systems). Orienting head/eye movements with colliculus The correct choice—“Orienting head/eye movements with colliculus”—fits that description.",
+      "“Requires pain gate control” does not match the mechanism (topic: Motor Systems). Orienting head/eye movements with colliculus The correct choice—“Orienting head/eye movements with colliculus”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "ALS typically involves:",
     options: [
-
       "Only Wernicke aphasia",
       "Combined UMN and LMN degeneration",
       "Only retinal detachment",
@@ -3017,12 +4171,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Combined UMN and LMN degeneration",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Combined UMN and LMN degeneration",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Combined UMN and LMN degeneration",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Combined UMN and LMN degeneration",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Multiple sclerosis motor signs can include:",
     options: [
-
       "Requires pure agnosia always",
       "Requires peripheral LMN pattern always",
       "UMN weakness/spasticity from demyelination",
@@ -3030,12 +4189,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "UMN weakness/spasticity from demyelination",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: UMN weakness/spasticity from demyelination",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: UMN weakness/spasticity from demyelination",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: UMN weakness/spasticity from demyelination",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Parkinsonian rigidity is often:",
     options: [
-
       "Only NMJ fatigability",
       "Lead-pipe or cogwheel",
       "Flaccid with fasciculations always",
@@ -3043,12 +4207,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Lead-pipe or cogwheel (basal ganglia/bradykinesia context)",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Lead-pipe or cogwheel (basal ganglia/bradykinesia context)",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Lead-pipe or cogwheel (basal ganglia/bradykinesia context)",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Lead-pipe or cogwheel (basal ganglia/bradykinesia context)",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Essential tremor often improves with:",
     options: [
-
       "Requires tTX",
       "Requires strychnine",
       "Requires l-DOPA always required",
@@ -3056,12 +4225,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Beta-blockers (e.g., propranolol) or alcohol transiently",
+    wrongExplanations: [
+      "“Requires tTX” does not match the mechanism (topic: Motor Systems). Beta-blockers (e.g., propranolol) or alcohol transiently The correct choice—“Beta-blockers (e.g., propranolol) or alcohol transiently”—fits that description.",
+      "“Requires strychnine” does not match the mechanism (topic: Motor Systems). Beta-blockers (e.g., propranolol) or alcohol transiently The correct choice—“Beta-blockers (e.g., propranolol) or alcohol transiently”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Beta-blockers (e.g., propranolol) or alcohol transiently",
+      "",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Hemiballismus classically follows:",
     options: [
-
       "Optic chiasm compression",
       "Only cochlear nucleus lesion",
       "Only olfactory bulb lesion",
@@ -3069,12 +4243,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Subthalamic nucleus lesion (contralateral violent movements)",
+    wrongExplanations: [
+      "“Optic chiasm compression” does not match the mechanism (topic: Motor Systems). Subthalamic nucleus lesion (contralateral violent movements) The correct choice—“Subthalamic nucleus lesion”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Subthalamic nucleus lesion (contralateral violent movements)",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Subthalamic nucleus lesion (contralateral violent movements)",
+      "",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Focal dystonia in musicians may relate to:",
     options: [
-
       "Maladaptive cortical sensorimotor plasticity",
       "Requires hippocampal sclerosis always",
       "Requires photoreceptor loss",
@@ -3082,12 +4261,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Maladaptive cortical sensorimotor plasticity",
+    wrongExplanations: [
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Maladaptive cortical sensorimotor plasticity",
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Maladaptive cortical sensorimotor plasticity",
+      "“Requires spinal shock forever” does not match the mechanism (topic: Motor Systems). Maladaptive cortical sensorimotor plasticity The correct choice—“Maladaptive cortical sensorimotor plasticity”—fits that description.",
+    ]
   },
   {
     topic: "Motor Systems",
     question: "Mirror neurons (premotor/parietal) fire when:",
     options: [
-
       "Performing or observing similar actions",
       "Requires in photoreceptors",
       "Requires during REM sleep exclusively",
@@ -3095,12 +4279,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Performing or observing similar actions",
+    wrongExplanations: [
+      "",
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Performing or observing similar actions",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Performing or observing similar actions",
+      "“Requires in olfactory ORNs” does not match the mechanism (topic: Motor Systems). Performing or observing similar actions The correct choice—“Performing or observing similar actions”—fits that description.",
+    ]
   },
   {
     topic: "Memory & Learning",
     question: "Declarative memory depends critically on:",
     options: [
-
       "Medial temporal lobe structures (hippocampus and related)",
       "Requires cerebellar cortex exclusively",
       "Requires cochlear nucleus",
@@ -3108,12 +4297,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Medial temporal lobe structures (hippocampus and related)",
+    wrongExplanations: [
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Medial temporal lobe structures (hippocampus and related)",
+      "“Requires cochlear nucleus” does not match the mechanism (topic: Memory & Learning). Medial temporal lobe structures (hippocampus and related) The correct choice—“Medial temporal lobe structures (hippocampus and related)”—fits that description.",
+      "“Requires nMJ” does not match the mechanism (topic: Memory & Learning). Medial temporal lobe structures (hippocampus and related) The correct choice—“Medial temporal lobe structures (hippocampus and related)”—fits that description.",
+    ]
   },
   {
     topic: "Memory & Learning",
     question: "Procedural memory (skills/habits) involves:",
     options: [
-
       "Requires spinal lamina I exclusively",
       "Basal ganglia and cerebellum among other circuits",
       "Requires hippocampus CA1 exclusively always",
@@ -3121,12 +4315,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Basal ganglia and cerebellum among other circuits",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Basal ganglia and cerebellum among other circuits",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Basal ganglia and cerebellum among other circuits",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Basal ganglia and cerebellum among other circuits",
+    ]
   },
   {
     topic: "Memory & Learning",
     question: "Patient H.M. after bilateral hippocampal damage showed:",
     options: [
-
       "Loss of pain sensation only",
       "Severe anterograde declarative amnesia",
       "Loss of all motor skills immediately",
@@ -3134,12 +4333,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Severe anterograde declarative amnesia",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Severe anterograde declarative amnesia",
+      "",
+      "“Loss of all motor skills immediately” does not match the mechanism (topic: Memory & Learning). Severe anterograde declarative amnesia The correct choice—“Severe anterograde declarative amnesia”—fits that description.",
+      "“Blindness” does not match the mechanism (topic: Memory & Learning). Severe anterograde declarative amnesia The correct choice—“Severe anterograde declarative amnesia”—fits that description.",
+    ]
   },
   {
     topic: "Memory & Learning",
     question: "Consolidation of declarative memories is thought to require:",
     options: [
-
       "Hippocampal-cortical dialogue over time",
       "Requires photoreceptor bleaching",
       "Requires nMJ facilitation",
@@ -3147,12 +4351,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Hippocampal-cortical dialogue over time",
+    wrongExplanations: [
+      "",
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Hippocampal-cortical dialogue over time",
+      "“Requires nMJ facilitation” does not match the mechanism (topic: Memory & Learning). Hippocampal-cortical dialogue over time The correct choice—“Hippocampal-cortical dialogue over time”—fits that description.",
+      "“Requires immediate cerebellar LTD once” does not match the mechanism (topic: Memory & Learning). Hippocampal-cortical dialogue over time The correct choice—“Hippocampal-cortical dialogue over time”—fits that description.",
+    ]
   },
   {
     topic: "Memory & Learning",
     question: "Systems consolidation proposes:",
     options: [
-
       "Requires cochlea stores facts",
       "All memories stay only in DG forever",
       "Gradual redistribution of memory traces to cortex",
@@ -3160,12 +4369,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Gradual redistribution of memory traces to cortex",
+    wrongExplanations: [
+      "“Requires cochlea stores facts” does not match the mechanism (topic: Memory & Learning). Gradual redistribution of memory traces to cortex The correct choice—“Gradual redistribution of memory traces to cortex”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Gradual redistribution of memory traces to cortex",
+      "",
+      "“Requires olfactory bulb stores episodic memory” does not match the mechanism (topic: Memory & Learning). Gradual redistribution of memory traces to cortex The correct choice—“Gradual redistribution of memory traces to cortex”—fits that description.",
+    ]
   },
   {
     topic: "Memory & Learning",
     question: "Working memory prefrontal activity often shows:",
     options: [
-
       "Requires ia afferent silence",
       "Sustained delay-period firing for held information",
       "Requires insulin pulses",
@@ -3173,12 +4387,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Sustained delay-period firing for held information",
+    wrongExplanations: [
+      "“Requires ia afferent silence” does not match the mechanism (topic: Memory & Learning). Sustained delay-period firing for held information The correct choice—“Sustained delay-period firing for held information”—fits that description.",
+      "",
+      "“Requires insulin pulses” does not match the mechanism (topic: Memory & Learning). Sustained delay-period firing for held information The correct choice—“Sustained delay-period firing for held information”—fits that description.",
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Sustained delay-period firing for held information",
+    ]
   },
   {
     topic: "Memory & Learning",
     question: "NMDA receptor-dependent LTP at CA3–CA1 Schaffer collateral synapses requires:",
     options: [
-
       "under standard whole-cell recording conditions.",
       "under standard whole-cell recording conditions.",
       "Requires presynaptic Na⁺ increase",
@@ -3186,12 +4405,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Postsynaptic depolarization to relieve Mg²⁺ block with glutamate",
+    wrongExplanations: [
+      "“under standard whole-cell recording conditions.” does not match the mechanism (topic: Memory & Learning). Postsynaptic depolarization to relieve Mg²⁺ block with glutamate The correct choice—“Postsynaptic depolarization to relieve Mg²⁺ block with glutamate”—fits that description.",
+      "“under standard whole-cell recording conditions.” does not match the mechanism (topic: Memory & Learning). Postsynaptic depolarization to relieve Mg²⁺ block with glutamate The correct choice—“Postsynaptic depolarization to relieve Mg²⁺ block with glutamate”—fits that description.",
+      "“Requires presynaptic Na⁺ increase” does not match the mechanism (topic: Memory & Learning). Postsynaptic depolarization to relieve Mg²⁺ block with glutamate The correct choice—“Postsynaptic depolarization to relieve Mg²⁺ block with glutamate”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Memory & Learning",
     question: "LTD at cerebellar parallel fiber–Purkinje synapses is often:",
     options: [
-
       "Only at NMJ",
       "Climbing fiber–dependent",
       "Identical to hippocampal NMDA LTP always",
@@ -3199,12 +4423,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Climbing fiber–dependent (calcium signaling context)",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Climbing fiber–dependent (calcium signaling context)",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Climbing fiber–dependent (calcium signaling context)",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Climbing fiber–dependent (calcium signaling context)",
+    ]
   },
   {
     topic: "Memory & Learning",
     question: "Differential conditioning requires:",
     options: [
-
       "Requires one stimulus ever presented",
       "Requires muscle spindle stretch",
       "Requires photoreceptor adaptation",
@@ -3212,12 +4441,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Learning difference between CS+ and CS−",
+    wrongExplanations: [
+      "“Requires one stimulus ever presented” does not match the mechanism (topic: Memory & Learning). Learning difference between CS+ and CS− The correct choice—“Learning difference between CS+ and CS−”—fits that description.",
+      "“Requires muscle spindle stretch” does not match the mechanism (topic: Memory & Learning). Learning difference between CS+ and CS− The correct choice—“Learning difference between CS+ and CS−”—fits that description.",
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Learning difference between CS+ and CS−",
+      "",
+    ]
   },
   {
     topic: "Memory & Learning",
     question: "Extinction of conditioned response involves:",
     options: [
-
       "Permanent deletion of all hippocampal neurons",
       "Nernst potential is independent of ion concentration gradients",
       "Requires cochlear damage",
@@ -3225,12 +4459,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "New inhibitory learning, not erasure of original trace always",
+    wrongExplanations: [
+      "“Permanent deletion of all hippocampal neurons” does not match the mechanism (topic: Memory & Learning). New inhibitory learning, not erasure of original trace always The correct choice—“New inhibitory learning, not erasure of original trace always”—fits that description.",
+      "“Nernst potential is independent of ion concentration gradients” does not match the mechanism (topic: Memory & Learning). New inhibitory learning, not erasure of original trace always The correct choice—“New inhibitory learning, not erasure of original trace always”—fits that description.",
+      "“Requires cochlear damage” does not match the mechanism (topic: Memory & Learning). New inhibitory learning, not erasure of original trace always The correct choice—“New inhibitory learning, not erasure of original trace always”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Memory & Learning",
     question: "Kandel Aplysia sensitization involves:",
     options: [
-
       "Requires photoreceptors",
       "Requires nMDA LTP in CA1 always",
       "Presynaptic facilitation via serotonin and cAMP/PKA",
@@ -3238,12 +4477,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Presynaptic facilitation via serotonin and cAMP/PKA",
+    wrongExplanations: [
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Presynaptic facilitation via serotonin and cAMP/PKA",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Presynaptic facilitation via serotonin and cAMP/PKA",
+      "",
+      "“Requires cerebellar climbing fibers” does not match the mechanism (topic: Memory & Learning). Presynaptic facilitation via serotonin and cAMP/PKA The correct choice—“Presynaptic facilitation via serotonin and cAMP/PKA”—fits that description.",
+    ]
   },
   {
     topic: "Memory & Learning",
     question: "Hebbian plasticity is summarized as:",
     options: [
-
       "Only myelin thickness determines synapses",
       "Only olfactory OR choice",
       "Cells that fire together wire together",
@@ -3251,12 +4495,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Cells that fire together wire together (correlated activity strengthens synapses)",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Cells that fire together wire together (correlated activity strengthens synapses)",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Cells that fire together wire together (correlated activity strengthens synapses)",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Cells that fire together wire together (correlated activity strengthens synapses)",
+    ]
   },
   {
     topic: "Memory & Learning",
     question: "Spike-timing-dependent plasticity (STDP) depends on:",
     options: [
-
       "Requires cochlear frequency alone",
       "Requires retinal luminance alone",
       "Requires muscle length",
@@ -3264,12 +4513,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Relative timing of pre- and postsynaptic spikes",
+    wrongExplanations: [
+      "“Requires cochlear frequency alone” does not match the mechanism (topic: Memory & Learning). Relative timing of pre- and postsynaptic spikes The correct choice—“Relative timing of pre- and postsynaptic spikes”—fits that description.",
+      "“Requires retinal luminance alone” does not match the mechanism (topic: Memory & Learning). Relative timing of pre- and postsynaptic spikes The correct choice—“Relative timing of pre- and postsynaptic spikes”—fits that description.",
+      "“Requires muscle length” does not match the mechanism (topic: Memory & Learning). Relative timing of pre- and postsynaptic spikes The correct choice—“Relative timing of pre- and postsynaptic spikes”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Memory & Learning",
     question: "Reconsolidation theory suggests retrieved memories:",
     options: [
-
       "Can become labile and require restabilization",
       "Exist only in muscle spindles",
       "Exist only in rods",
@@ -3277,12 +4531,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Can become labile and require restabilization",
+    wrongExplanations: [
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Can become labile and require restabilization",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Can become labile and require restabilization",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Can become labile and require restabilization",
+    ]
   },
   {
     topic: "Memory & Learning",
     question: "Morris water maze tests:",
     options: [
-
       "Spatial learning dependent on hippocampus (in rodents)",
       "Requires color vision in V1",
       "Requires nMJ quantal content",
@@ -3290,12 +4549,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Spatial learning dependent on hippocampus (in rodents)",
+    wrongExplanations: [
+      "",
+      "“Requires color vision in V1” does not match the mechanism (topic: Memory & Learning). Spatial learning dependent on hippocampus (in rodents) The correct choice—“Spatial learning dependent on hippocampus (in rodents)”—fits that description.",
+      "“Requires nMJ quantal content” does not match the mechanism (topic: Memory & Learning). Spatial learning dependent on hippocampus (in rodents) The correct choice—“Spatial learning dependent on hippocampus (in rodents)”—fits that description.",
+      "“Requires olfactory glomeruli size” does not match the mechanism (topic: Memory & Learning). Spatial learning dependent on hippocampus (in rodents) The correct choice—“Spatial learning dependent on hippocampus (in rodents)”—fits that description.",
+    ]
   },
   {
     topic: "Memory & Learning",
     question: "Eyeblink classical conditioning in rabbits involves:",
     options: [
-
       "Requires dCML nuclei exclusively",
       "Requires primary visual cortex",
       "Requires hypothalamic SCN",
@@ -3303,12 +4567,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Cerebellum and associated brainstem nuclei",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Cerebellum and associated brainstem nuclei",
+      "“Requires primary visual cortex” does not match the mechanism (topic: Memory & Learning). Cerebellum and associated brainstem nuclei The correct choice—“Cerebellum and associated brainstem nuclei”—fits that description.",
+      "“Requires hypothalamic SCN” does not match the mechanism (topic: Memory & Learning). Cerebellum and associated brainstem nuclei The correct choice—“Cerebellum and associated brainstem nuclei”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Memory & Learning",
     question: "Fear conditioning to tone often requires:",
     options: [
-
       "Amygdala (lateral/basal nuclei) for acquisition",
       "Requires alpha motor neurons",
       "Requires cochlear outer hair cells",
@@ -3316,12 +4585,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Amygdala (lateral/basal nuclei) for acquisition",
+    wrongExplanations: [
+      "",
+      "“Requires alpha motor neurons” does not match the mechanism (topic: Memory & Learning). Amygdala (lateral/basal nuclei) for acquisition The correct choice—“Amygdala (lateral/basal nuclei) for acquisition”—fits that description.",
+      "“Requires cochlear outer hair cells” does not match the mechanism (topic: Memory & Learning). Amygdala (lateral/basal nuclei) for acquisition The correct choice—“Amygdala (lateral/basal nuclei) for acquisition”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Amygdala (lateral/basal nuclei) for acquisition",
+    ]
   },
   {
     topic: "Memory & Learning",
     question: "Contextual fear conditioning to chamber requires:",
     options: [
-
       "Requires proprioception loss",
       "Requires wernicke area",
       "Hippocampus for context representation with amygdala",
@@ -3329,12 +4603,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Hippocampus for context representation with amygdala",
+    wrongExplanations: [
+      "“Requires proprioception loss” does not match the mechanism (topic: Memory & Learning). Hippocampus for context representation with amygdala The correct choice—“Hippocampus for context representation with amygdala”—fits that description.",
+      "“Requires wernicke area” does not match the mechanism (topic: Memory & Learning). Hippocampus for context representation with amygdala The correct choice—“Hippocampus for context representation with amygdala”—fits that description.",
+      "",
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Hippocampus for context representation with amygdala",
+    ]
   },
   {
     topic: "Memory & Learning",
     question: "Retrograde amnesia after hippocampal damage is often:",
     options: [
-
       "Only for motor skills",
       "Only for pain",
       "Temporally graded (recent > remote)",
@@ -3342,12 +4621,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Temporally graded (recent > remote)",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Temporally graded (recent > remote)",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Temporally graded (recent > remote)",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Temporally graded (recent > remote)",
+    ]
   },
   {
     topic: "Memory & Learning",
     question: "Semantic vs episodic memory distinction:",
     options: [
-
       "Both identical to procedural always",
       "Both require NMJ",
       "Both stored only in cochlea",
@@ -3355,12 +4639,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Episodic: personal events; semantic: facts/knowledge",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Episodic: personal events; semantic: facts/knowledge",
+      "“Both require NMJ” does not match the mechanism (topic: Memory & Learning). Episodic: personal events; semantic: facts/knowledge The correct choice—“Episodic: personal events; semantic: facts/knowledge”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Episodic: personal events; semantic: facts/knowledge",
+      "",
+    ]
   },
   {
     topic: "Memory & Learning",
     question: "Priming is a form of:",
     options: [
-
       "Only photoreceptor adaptation",
       "Implicit memory",
       "Only stretch reflex",
@@ -3368,12 +4657,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Implicit memory (facilitated processing without conscious recall)",
+    wrongExplanations: [
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Implicit memory (facilitated processing without conscious recall)",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Implicit memory (facilitated processing without conscious recall)",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Implicit memory (facilitated processing without conscious recall)",
+    ]
   },
   {
     topic: "Memory & Learning",
     question: "Korsakoff syndrome memory deficits link to:",
     options: [
-
       "Requires peripheral neuropathy only always",
       "Thiamine deficiency affecting diencephalon (mammillary bodies etc.)",
       "Only Müller glia pass inward cation current in darkness",
@@ -3381,12 +4675,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Thiamine deficiency affecting diencephalon (mammillary bodies etc.)",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Thiamine deficiency affecting diencephalon (mammillary bodies etc.)",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Thiamine deficiency affecting diencephalon (mammillary bodies etc.)",
+      "“Requires cochlear lesion” does not match the mechanism (topic: Memory & Learning). Thiamine deficiency affecting diencephalon (mammillary bodies etc.) The correct choice—“Thiamine deficiency affecting diencephalon (mammillary bodies etc.)”—fits that description.",
+    ]
   },
   {
     topic: "Memory & Learning",
     question: "Alzheimer's early hippocampal involvement explains:",
     options: [
-
       "Deafness always",
       "Early episodic memory impairment",
       "Pure motor flaccidity always",
@@ -3394,12 +4693,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Early episodic memory impairment",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Early episodic memory impairment",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Early episodic memory impairment",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Early episodic memory impairment",
+    ]
   },
   {
     topic: "Memory & Learning",
     question: "Long-term potentiation maintenance phases may involve:",
     options: [
-
       "Structural synaptic changes and protein synthesis",
       "Requires golgi tendon silence",
       "Requires photopigment regeneration",
@@ -3407,12 +4711,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Structural synaptic changes and protein synthesis",
+    wrongExplanations: [
+      "",
+      "“Requires golgi tendon silence” does not match the mechanism (topic: Memory & Learning). Structural synaptic changes and protein synthesis The correct choice—“Structural synaptic changes and protein synthesis”—fits that description.",
+      "“Requires photopigment regeneration” does not match the mechanism (topic: Memory & Learning). Structural synaptic changes and protein synthesis The correct choice—“Structural synaptic changes and protein synthesis”—fits that description.",
+      "“Requires immediate Na⁺ block” does not match the mechanism (topic: Memory & Learning). Structural synaptic changes and protein synthesis The correct choice—“Structural synaptic changes and protein synthesis”—fits that description.",
+    ]
   },
   {
     topic: "Memory & Learning",
     question: "Sharp-wave ripples in hippocampus are associated with:",
     options: [
-
       "Cochlear otoacoustic emissions",
       "NMJ endplate only",
       "Requires retinal ON responses",
@@ -3420,12 +4729,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Offline replay and memory consolidation processes",
+    wrongExplanations: [
+      "“Cochlear otoacoustic emissions” does not match the mechanism (topic: Memory & Learning). Offline replay and memory consolidation processes The correct choice—“Offline replay and memory consolidation processes”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Offline replay and memory consolidation processes",
+      "“Requires retinal ON responses” does not match the mechanism (topic: Memory & Learning). Offline replay and memory consolidation processes The correct choice—“Offline replay and memory consolidation processes”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Memory & Learning",
     question: "Place field remapping occurs when:",
     options: [
-
       "Requires muscle spindle length changes",
       "Requires cN VI fires once",
       "Requires insulin is released",
@@ -3433,12 +4747,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Environment context changes substantially",
+    wrongExplanations: [
+      "“Requires muscle spindle length changes” does not match the mechanism (topic: Memory & Learning). Environment context changes substantially The correct choice—“Environment context changes substantially”—fits that description.",
+      "“Requires cN VI fires once” does not match the mechanism (topic: Memory & Learning). Environment context changes substantially The correct choice—“Environment context changes substantially”—fits that description.",
+      "“Requires insulin is released” does not match the mechanism (topic: Memory & Learning). Environment context changes substantially The correct choice—“Environment context changes substantially”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Memory & Learning",
     question: "Object recognition memory (perirhinal cortex) tests:",
     options: [
-
       "Requires pain withdrawal latency only",
       "Only sound frequency discrimination",
       "Requires vestibular nystagmus",
@@ -3446,12 +4765,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Familiarity discrimination for objects",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Familiarity discrimination for objects",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Familiarity discrimination for objects",
+      "“Requires vestibular nystagmus” does not match the mechanism (topic: Memory & Learning). Familiarity discrimination for objects The correct choice—“Familiarity discrimination for objects”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Memory & Learning",
     question: "Delayed non-match to sample tasks probe:",
     options: [
-
       "Requires photoreceptor bleaching rate",
       "Working memory and recognition in prefrontal/temporal networks",
       "Gap junctions relay dark current from cones to rods exclusively",
@@ -3459,12 +4783,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Working memory and recognition in prefrontal/temporal networks",
+    wrongExplanations: [
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Working memory and recognition in prefrontal/temporal networks",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Working memory and recognition in prefrontal/temporal networks",
+      "“Requires ia afferent frequency” does not match the mechanism (topic: Memory & Learning). Working memory and recognition in prefrontal/temporal networks The correct choice—“Working memory and recognition in prefrontal/temporal networks”—fits that description.",
+    ]
   },
   {
     topic: "Memory & Learning",
     question: "Medial temporal lobe amnesia spares:",
     options: [
-
       "Requires vision always lost",
       "Often procedural and priming (depending on lesion)",
       "Requires hearing always lost",
@@ -3472,12 +4801,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Often procedural and priming (depending on lesion)",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Often procedural and priming (depending on lesion)",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Often procedural and priming (depending on lesion)",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Often procedural and priming (depending on lesion)",
+    ]
   },
   {
     topic: "Memory & Learning",
     question: "Cognitive map concept (Tolman) refers to:",
     options: [
-
       "Requires motor unit map in muscle",
       "Requires cochlear frequency map",
       "Only retinotopic map exclusively same thing",
@@ -3485,12 +4819,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Internal spatial representation of environment",
+    wrongExplanations: [
+      "“Requires motor unit map in muscle” does not match the mechanism (topic: Memory & Learning). Internal spatial representation of environment The correct choice—“Internal spatial representation of environment”—fits that description.",
+      "“Requires cochlear frequency map” does not match the mechanism (topic: Memory & Learning). Internal spatial representation of environment The correct choice—“Internal spatial representation of environment”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Internal spatial representation of environment",
+      "",
+    ]
   },
   {
     topic: "Memory & Learning",
     question: "Engram cells refer to:",
     options: [
-
       "Requires muscle fibers always",
       "Requires photoreceptors always",
       "Requires glial cells always",
@@ -3498,12 +4837,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Neurons allocated to storing a specific memory trace",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Neurons allocated to storing a specific memory trace",
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Neurons allocated to storing a specific memory trace",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Neurons allocated to storing a specific memory trace",
+      "",
+    ]
   },
   {
     topic: "Memory & Learning",
     question: "Optogenetic reactivation of engram cells can:",
     options: [
-
       "Only silence cochlea always",
       "Only block NMJ always",
       "Evoke memory-associated behavior in rodents",
@@ -3511,12 +4855,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Evoke memory-associated behavior in rodents",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Evoke memory-associated behavior in rodents",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Evoke memory-associated behavior in rodents",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Evoke memory-associated behavior in rodents",
+    ]
   },
   {
     topic: "Memory & Learning",
     question: "Sleep slow-wave activity supports memory by:",
     options: [
-
       "under standard whole-cell recording conditions.",
       "under standard whole-cell recording conditions.",
       "Facilitating hippocampal-cortical transfer and synaptic homeostasis theories",
@@ -3524,12 +4873,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Facilitating hippocampal-cortical transfer and synaptic homeostasis theories",
+    wrongExplanations: [
+      "“under standard whole-cell recording conditions.” does not match the mechanism (topic: Memory & Learning). Facilitating hippocampal-cortical transfer and synaptic homeostasis theories The correct choice—“Facilitating hippocampal-cortical transfer and synaptic homeostasis theories”—fits that description.",
+      "“under standard whole-cell recording conditions.” does not match the mechanism (topic: Memory & Learning). Facilitating hippocampal-cortical transfer and synaptic homeostasis theories The correct choice—“Facilitating hippocampal-cortical transfer and synaptic homeostasis theories”—fits that description.",
+      "",
+      "“under standard whole-cell recording conditions.” does not match the mechanism (topic: Memory & Learning). Facilitating hippocampal-cortical transfer and synaptic homeostasis theories The correct choice—“Facilitating hippocampal-cortical transfer and synaptic homeostasis theories”—fits that description.",
+    ]
   },
   {
     topic: "Memory & Learning",
     question: "REM sleep is associated with:",
     options: [
-
       "Vivid dreaming and cortical activation with muscle atonia",
       "Requires cochlear amplification exclusively",
       "Requires spinal monosynaptic reflex exclusively",
@@ -3537,12 +4891,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Vivid dreaming and cortical activation with muscle atonia",
+    wrongExplanations: [
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Vivid dreaming and cortical activation with muscle atonia",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Vivid dreaming and cortical activation with muscle atonia",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Vivid dreaming and cortical activation with muscle atonia",
+    ]
   },
   {
     topic: "Memory & Learning",
     question: "Transcranial magnetic stimulation (TMS) can:",
     options: [
-
       "Measure E_K directly in vivo always without electrodes",
       "Replace all fMRI always",
       "Transiently disrupt or facilitate focal cortical processing",
@@ -3550,12 +4909,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Transiently disrupt or facilitate focal cortical processing",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Transiently disrupt or facilitate focal cortical processing",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Transiently disrupt or facilitate focal cortical processing",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Transiently disrupt or facilitate focal cortical processing",
+    ]
   },
   {
     topic: "Methods",
     question: "Patch-clamp gigaohm seal enables:",
     options: [
-
       "Requires eEG scalp averaging without contact",
       "High-resolution measurement of single-channel or whole-cell currents",
       "Requires mRI BOLD without magnet",
@@ -3563,12 +4927,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "High-resolution measurement of single-channel or whole-cell currents",
+    wrongExplanations: [
+      "“Requires eEG scalp averaging without contact” does not match the mechanism (topic: Methods). High-resolution measurement of single-channel or whole-cell currents The correct choice—“High-resolution measurement of single-channel or whole-cell currents”—fits that description.",
+      "",
+      "“Requires mRI BOLD without magnet” does not match the mechanism (topic: Methods). High-resolution measurement of single-channel or whole-cell currents The correct choice—“High-resolution measurement of single-channel or whole-cell currents”—fits that description.",
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. High-resolution measurement of single-channel or whole-cell currents",
+    ]
   },
   {
     topic: "Methods",
     question: "Voltage-clamp mode holds membrane potential fixed to:",
     options: [
-
       "Measure unlimited action potentials freely",
       "Requires measure olfactory OR mRNA only",
       "Measure currents required to maintain command voltage",
@@ -3576,12 +4945,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Measure currents required to maintain command voltage",
+    wrongExplanations: [
+      "“Measure unlimited action potentials freely” does not match the mechanism (topic: Methods). Measure currents required to maintain command voltage The correct choice—“Measure currents required to maintain command voltage”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Measure currents required to maintain command voltage",
+      "",
+      "“Requires measure bone density” does not match the mechanism (topic: Methods). Measure currents required to maintain command voltage The correct choice—“Measure currents required to maintain command voltage”—fits that description.",
+    ]
   },
   {
     topic: "Methods",
     question: "Current-clamp records:",
     options: [
-
       "Only insulin in blood only always",
       "Only cochlear basilar stiffness directly always",
       "Only magnetic field of Earth",
@@ -3589,12 +4963,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Voltage changes evoked by injected current",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Voltage changes evoked by injected current",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Voltage changes evoked by injected current",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Voltage changes evoked by injected current",
+      "",
+    ]
   },
   {
     topic: "Methods",
     question: "Whole-cell patch clamp dialyzes cytoplasm, which can:",
     options: [
-
       "Wash out second messengers over time (run-down concern)",
       "Increase seal resistance to infinity always harmful zero",
       "Only record from extracellular space",
@@ -3602,12 +4981,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Wash out second messengers over time (run-down concern)",
+    wrongExplanations: [
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Wash out second messengers over time (run-down concern)",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Wash out second messengers over time (run-down concern)",
+      "“Prevent all channel recording” does not match the mechanism (topic: Methods). Wash out second messengers over time (run-down concern) The correct choice—“Wash out second messengers over time (run-down concern)”—fits that description.",
+    ]
   },
   {
     topic: "Methods",
     question: "Cell-attached patch can record:",
     options: [
-
       "Only population spikes from whole brain always without electrodes",
       "Only EM synapse count only always",
       "Only fMRI signal",
@@ -3615,12 +4999,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Single-channel activity without breaking into cell",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Single-channel activity without breaking into cell",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Single-channel activity without breaking into cell",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Single-channel activity without breaking into cell",
+      "",
+    ]
   },
   {
     topic: "Methods",
     question: "Sharp electrode intracellular recording differs from patch in:",
     options: [
-
       "Higher access resistance; can impale without seal",
       "Only measures LFP always",
       "Always requires TTX",
@@ -3628,12 +5017,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Higher access resistance; can impale without seal",
+    wrongExplanations: [
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Higher access resistance; can impale without seal",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Higher access resistance; can impale without seal",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Higher access resistance; can impale without seal",
+    ]
   },
   {
     topic: "Methods",
     question: "Local field potential (LFP) reflects:",
     options: [
-
       "Single Na⁺ channel openings only always isolated",
       "Summed synaptic currents near electrode",
       "Only DCML fiber conduction only",
@@ -3641,12 +5035,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Summed synaptic currents near electrode",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Summed synaptic currents near electrode",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Summed synaptic currents near electrode",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Summed synaptic currents near electrode",
+    ]
   },
   {
     topic: "Methods",
     question: "Multi-unit activity is:",
     options: [
-
       "Only olfactory OR binding",
       "Identical to patch clamp single channel always",
       "Only EEG alpha always",
@@ -3654,12 +5053,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Mixed spikes from nearby neurons (not isolated single units)",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Mixed spikes from nearby neurons (not isolated single units)",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Mixed spikes from nearby neurons (not isolated single units)",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Mixed spikes from nearby neurons (not isolated single units)",
+      "",
+    ]
   },
   {
     topic: "Methods",
     question: "Calcium imaging with GCaMP reports:",
     options: [
-
       "Fluorescence changes tied to calcium influx/activity",
       "Permanent membrane voltage without indicator change always",
       "Only myelin thickness",
@@ -3667,12 +5071,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Fluorescence changes tied to calcium influx/activity",
+    wrongExplanations: [
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Fluorescence changes tied to calcium influx/activity",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Fluorescence changes tied to calcium influx/activity",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Fluorescence changes tied to calcium influx/activity",
+    ]
   },
   {
     topic: "Methods",
     question: "Optogenetics Channelrhodopsin-2 typically:",
     options: [
-
       "Hyperpolarizes always with any opsin",
       "Requires works without light if ATP high",
       "Requires works in glia exclusively always",
@@ -3680,12 +5089,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Depolarizes neurons when exposed to blue light",
+    wrongExplanations: [
+      "EPSPs are depolarizing (or less hyperpolarized) shifts that move V_m toward spike threshold. Hyperpolarization or clamping toward E_K describes inhibition (IPSPs), not excitation. Depolarizes neurons when exposed to blue light",
+      "“Requires works without light if ATP high” does not match the mechanism (topic: Methods). Depolarizes neurons when exposed to blue light The correct choice—“Depolarizes neurons when exposed to blue light”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Depolarizes neurons when exposed to blue light",
+      "",
+    ]
   },
   {
     topic: "Methods",
     question: "Halorhodopsin or archaerhodopsin often:",
     options: [
-
       "Requires binds glutamate",
       "Hyperpolarizes/inhibits neurons with light",
       "Always excites like ChR2",
@@ -3693,12 +5107,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Hyperpolarizes/inhibits neurons with light",
+    wrongExplanations: [
+      "“Requires binds glutamate” does not match the mechanism (topic: Methods). Hyperpolarizes/inhibits neurons with light The correct choice—“Hyperpolarizes/inhibits neurons with light”—fits that description.",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Hyperpolarizes/inhibits neurons with light",
+      "“Requires opens NMJ nicotinic receptors” does not match the mechanism (topic: Methods). Hyperpolarizes/inhibits neurons with light The correct choice—“Hyperpolarizes/inhibits neurons with light”—fits that description.",
+    ]
   },
   {
     topic: "Methods",
     question: "DREADDs (hM3Dq) activate neurons when exposed to:",
     options: [
-
       "under standard whole-cell recording conditions.",
       "under standard whole-cell recording conditions.",
       "Requires tTX",
@@ -3706,12 +5125,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Designer ligand (e.g., CNO/clozapine-N-oxide) not endogenous ligand at low dose context",
+    wrongExplanations: [
+      "“under standard whole-cell recording conditions.” does not match the mechanism (topic: Methods). Designer ligand (e.g., CNO/clozapine-N-oxide) not endogenous ligand at low dose context The correct choice—“Designer ligand (e.g., CNO/clozapine-N-oxide) not endogenous ligand at low dose cont…”—fits that description.",
+      "“under standard whole-cell recording conditions.” does not match the mechanism (topic: Methods). Designer ligand (e.g., CNO/clozapine-N-oxide) not endogenous ligand at low dose context The correct choice—“Designer ligand (e.g., CNO/clozapine-N-oxide) not endogenous ligand at low dose cont…”—fits that description.",
+      "“Requires tTX” does not match the mechanism (topic: Methods). Designer ligand (e.g., CNO/clozapine-N-oxide) not endogenous ligand at low dose context The correct choice—“Designer ligand (e.g., CNO/clozapine-N-oxide) not endogenous ligand at low dose cont…”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Methods",
     question: "Chemogenetic silencing Gi DREADDs typically:",
     options: [
-
       "Always cause LTP",
       "Always bleach photopigment",
       "Open all Na⁺ channels",
@@ -3719,12 +5143,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Reduce neuronal firing via Gi/o pathways when ligand present",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Reduce neuronal firing via Gi/o pathways when ligand present",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Reduce neuronal firing via Gi/o pathways when ligand present",
+      "“Open all Na⁺ channels” does not match the mechanism (topic: Methods). Reduce neuronal firing via Gi/o pathways when ligand present The correct choice—“Reduce neuronal firing via Gi/o pathways when ligand present”—fits that description.",
+      "",
+    ]
   },
   {
     topic: "Methods",
     question: "fMRI BOLD signal is best interpreted as:",
     options: [
-
       "Direct measure of each synaptic vesicle fusion",
       "Measure of E_K precisely",
       "Measure of NMJ quantal size directly always",
@@ -3732,12 +5161,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Indirect hemodynamic correlate of neural activity",
+    wrongExplanations: [
+      "“Direct measure of each synaptic vesicle fusion” does not match the mechanism (topic: Methods). Indirect hemodynamic correlate of neural activity The correct choice—“Indirect hemodynamic correlate of neural activity”—fits that description.",
+      "“Measure of E_K precisely” does not match the mechanism (topic: Methods). Indirect hemodynamic correlate of neural activity The correct choice—“Indirect hemodynamic correlate of neural activity”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Indirect hemodynamic correlate of neural activity",
+      "",
+    ]
   },
   {
     topic: "Methods",
     question: "EEG alpha rhythm (8–13 Hz) prominent when:",
     options: [
-
       "Only during cochlear damage always",
       "Only during maximal pain always",
       "Deep anesthesia stage with burst suppression only always",
@@ -3745,12 +5179,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Relaxed wakefulness with eyes closed (classically)",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Relaxed wakefulness with eyes closed (classically)",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Relaxed wakefulness with eyes closed (classically)",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Relaxed wakefulness with eyes closed (classically)",
+      "",
+    ]
   },
   {
     topic: "Methods",
     question: "MEG primarily detects:",
     options: [
-
       "Magnetic fields from synchronized post-synaptic currents",
       "Requires photopigment bleaching",
       "Requires muscle spindle length directly",
@@ -3758,12 +5197,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Magnetic fields from synchronized post-synaptic currents",
+    wrongExplanations: [
+      "",
+      "“Requires photopigment bleaching” does not match the mechanism (topic: Methods). Magnetic fields from synchronized post-synaptic currents The correct choice—“Magnetic fields from synchronized post-synaptic currents”—fits that description.",
+      "“Requires muscle spindle length directly” does not match the mechanism (topic: Methods). Magnetic fields from synchronized post-synaptic currents The correct choice—“Magnetic fields from synchronized post-synaptic currents”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Magnetic fields from synchronized post-synaptic currents",
+    ]
   },
   {
     topic: "Methods",
     question: "Event-related potential (ERP) P300 often relates to:",
     options: [
-
       "Requires ia afferent silence",
       "Requires rod dark current",
       "Attention/target detection in oddball paradigms",
@@ -3771,12 +5215,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 2,
     explanation: "Attention/target detection in oddball paradigms",
+    wrongExplanations: [
+      "“Requires ia afferent silence” does not match the mechanism (topic: Methods). Attention/target detection in oddball paradigms The correct choice—“Attention/target detection in oddball paradigms”—fits that description.",
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Attention/target detection in oddball paradigms",
+      "",
+      "“Requires insulin release” does not match the mechanism (topic: Methods). Attention/target detection in oddball paradigms The correct choice—“Attention/target detection in oddball paradigms”—fits that description.",
+    ]
   },
   {
     topic: "Methods",
     question: "Two-photon microscopy advantage in brain:",
     options: [
-
       "Only measures BOLD",
       "Deep scattering tissue imaging with localized excitation",
       "Non-invasive whole human brain without skull always clinically routine",
@@ -3784,12 +5233,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Deep scattering tissue imaging with localized excitation",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Deep scattering tissue imaging with localized excitation",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Deep scattering tissue imaging with localized excitation",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Deep scattering tissue imaging with localized excitation",
+    ]
   },
   {
     topic: "Methods",
     question: "Optical intrinsic signal imaging maps:",
     options: [
-
       "Activity-related changes in light reflectance/absorption",
       "Requires olfactory OR gene sequences",
       "Requires single ion channel conductance directly always",
@@ -3797,12 +5251,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Activity-related changes in light reflectance/absorption",
+    wrongExplanations: [
+      "",
+      "“Requires olfactory OR gene sequences” does not match the mechanism (topic: Methods). Activity-related changes in light reflectance/absorption The correct choice—“Activity-related changes in light reflectance/absorption”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Activity-related changes in light reflectance/absorption",
+      "“Requires nMJ ultrastructure without EM” does not match the mechanism (topic: Methods). Activity-related changes in light reflectance/absorption The correct choice—“Activity-related changes in light reflectance/absorption”—fits that description.",
+    ]
   },
   {
     topic: "Methods",
     question: "Unit recording with tetrodes helps:",
     options: [
-
       "Replace all behavior experiments always",
       "Sort spikes from multiple nearby neurons",
       "Only measure EEG without scalp contact",
@@ -3810,12 +5269,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Sort spikes from multiple nearby neurons",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Sort spikes from multiple nearby neurons",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Sort spikes from multiple nearby neurons",
+      "“Measure Goldman equation directly” does not match the mechanism (topic: Methods). Sort spikes from multiple nearby neurons The correct choice—“Sort spikes from multiple nearby neurons”—fits that description.",
+    ]
   },
   {
     topic: "Methods",
     question: "Antidromic activation in tract tracing stimulation means:",
     options: [
-
       "Action potential propagated toward axon terminals from stimulation site",
       "under standard whole-cell recording conditions.",
       "under standard whole-cell recording conditions.",
@@ -3823,12 +5287,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Action potential propagated toward axon terminals from stimulation site",
+    wrongExplanations: [
+      "",
+      "“under standard whole-cell recording conditions.” does not match the mechanism (topic: Methods). Action potential propagated toward axon terminals from stimulation site The correct choice—“Action potential propagated toward axon terminals from stimulation site”—fits that description.",
+      "“under standard whole-cell recording conditions.” does not match the mechanism (topic: Methods). Action potential propagated toward axon terminals from stimulation site The correct choice—“Action potential propagated toward axon terminals from stimulation site”—fits that description.",
+      "“under standard whole-cell recording conditions.” does not match the mechanism (topic: Methods). Action potential propagated toward axon terminals from stimulation site The correct choice—“Action potential propagated toward axon terminals from stimulation site”—fits that description.",
+    ]
   },
   {
     topic: "Methods",
     question: "Retrograde tracer (e.g., cholera toxin B) labels:",
     options: [
-
       "Neurons projecting to injection site",
       "Only glia always",
       "Only muscle spindles",
@@ -3836,12 +5305,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Neurons projecting to injection site",
+    wrongExplanations: [
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Neurons projecting to injection site",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Neurons projecting to injection site",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Neurons projecting to injection site",
+    ]
   },
   {
     topic: "Methods",
     question: "Anterograde tracer (e.g., Phaseolus) labels:",
     options: [
-
       "Only cerebrospinal fluid only",
       "Only blood vessels always",
       "Only cell bodies at injection exclusively always",
@@ -3849,12 +5323,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Axons projecting away from injection site",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Axons projecting away from injection site",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Axons projecting away from injection site",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Axons projecting away from injection site",
+      "",
+    ]
   },
   {
     topic: "Methods",
     question: "Lesion study limitation includes:",
     options: [
-
       "Lack of specificity and compensation over time",
       "Requires affects glia never neurons",
       "No plasticity ever after lesion",
@@ -3862,12 +5341,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Lack of specificity and compensation over time",
+    wrongExplanations: [
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Lack of specificity and compensation over time",
+      "“No plasticity ever after lesion” does not match the mechanism (topic: Methods). Lack of specificity and compensation over time The correct choice—“Lack of specificity and compensation over time”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Lack of specificity and compensation over time",
+    ]
   },
   {
     topic: "Methods",
     question: "Transcranial electrical stimulation (tES) modulates:",
     options: [
-
       "Only myelin gene expression always permanently in one session",
       "Only cochlear fluids always",
       "Only photoreceptors exclusively",
@@ -3875,12 +5359,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 3,
     explanation: "Neural excitability non-invasively (mechanisms debated)",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Neural excitability non-invasively (mechanisms debated)",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Neural excitability non-invasively (mechanisms debated)",
+      "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Neural excitability non-invasively (mechanisms debated)",
+      "",
+    ]
   },
   {
     topic: "Methods",
     question: "Brain-computer interface decode algorithms often use:",
     options: [
-
       "Population activity patterns from motor cortex (e.g., for prosthetics)",
       "under standard whole-cell recording conditions.",
       "under standard whole-cell recording conditions.",
@@ -3888,12 +5377,17 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 0,
     explanation: "Population activity patterns from motor cortex (e.g., for prosthetics)",
+    wrongExplanations: [
+      "",
+      "“under standard whole-cell recording conditions.” does not match the mechanism (topic: Methods). Population activity patterns from motor cortex (e.g., for prosthetics) The correct choice—“Population activity patterns from motor cortex (e.g., for prosthetics)”—fits that description.",
+      "“under standard whole-cell recording conditions.” does not match the mechanism (topic: Methods). Population activity patterns from motor cortex (e.g., for prosthetics) The correct choice—“Population activity patterns from motor cortex (e.g., for prosthetics)”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Population activity patterns from motor cortex (e.g., for prosthetics)",
+    ]
   },
   {
     topic: "Methods",
     question: "Miniscope calcium imaging in freely moving rodents allows:",
     options: [
-
       "Only measures blood pressure",
       "Mobile neural activity imaging",
       "Only human clinical diagnosis standard always",
@@ -3901,5 +5395,11 @@ const PINNACLE_MEGA_POOL = [
     ],
     correct: 1,
     explanation: "Mobile neural activity imaging",
+    wrongExplanations: [
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Mobile neural activity imaging",
+      "",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Mobile neural activity imaging",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Mobile neural activity imaging",
+    ]
   }
 ];
