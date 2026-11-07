@@ -369,7 +369,28 @@
   /**
    * Pull/merge using email-key first; fall back to legacy provider-id keys, then re-save with email key.
    */
-  async function pullAndMergeForAccount(primaryPass, alternatePasses, { preferRemoteIfLocalEmpty = true } = {}) {
+  async function probeBackup() {
+    if (!isConfigured()) {
+      return { ok: false, reason: "not-configured" };
+    }
+    const email = hooks?.getSyncEmail?.();
+    if (!email) return { ok: false, reason: "no-email" };
+    try {
+      const resp = await pullJsonp(email);
+      if (!resp?.ok) {
+        return { ok: false, reason: "pull-error", error: resp?.error || "Pull failed." };
+      }
+      return { ok: true, found: !!resp.found };
+    } catch (err) {
+      return { ok: false, reason: "pull-error", error: err?.message || String(err) };
+    }
+  }
+
+  async function pullAndMergeForAccount(
+    primaryPass,
+    alternatePasses,
+    { preferRemoteIfLocalEmpty = true, replaceLocal = false } = {}
+  ) {
     if (!isConfigured()) throw new Error("Cloud save is not available.");
     const email = hooks?.getSyncEmail?.();
     if (!email) throw new Error("Set your account email in Settings first.");
@@ -385,13 +406,13 @@
           sessionPassphrase = primaryPass;
           await pushNow(primaryPass);
         }
-        return { merged: false, empty: true };
+        return { merged: false, empty: true, found: false };
       }
       const candidates = [primaryPass, ...(alternatePasses || []).filter(p => p && p !== primaryPass)];
       const { bundle: remoteBundle } = await decryptEnvelopeWithCandidates(resp.envelope, candidates);
       delete remoteBundle.version;
       let merged;
-      if (preferRemoteIfLocalEmpty && isLocalBundleEmpty(local)) {
+      if (replaceLocal || (preferRemoteIfLocalEmpty && isLocalBundleEmpty(local))) {
         merged = {
           progress: remoteBundle.progress,
           settings: remoteBundle.settings,
@@ -407,7 +428,7 @@
       await pushNow(primaryPass);
       lastSyncAt = Date.now();
       lastSyncError = null;
-      return { merged: true, empty: false };
+      return { merged: true, empty: false, found: true };
     } catch (err) {
       lastSyncError = err?.message || String(err);
       throw err;
@@ -682,6 +703,7 @@
     deriveAccountSyncPassphrase,
     deriveOAuthSyncPassphrase,
     pullAndMergeForAccount,
+    probeBackup,
     bootstrapFromAccountSession,
     bootstrapFromOAuthSession: bootstrapFromAccountSession,
     restoreSessionUnlock,

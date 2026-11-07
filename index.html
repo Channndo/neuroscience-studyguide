@@ -5533,6 +5533,11 @@
       }
     }
 
+    function countPassedQuizzes(progress) {
+      const p = progress || {};
+      return Object.keys(p).filter(k => k.endsWith("Passed") && p[k]).length;
+    }
+
     async function runRestoreProgressNow() {
       const session =
         window.MCB80XOAuth?.getAccountSession?.() || window.MCB80XOAuth?.getSession?.();
@@ -5541,19 +5546,50 @@
         return;
       }
       try {
-        await ensureAccountCloudSync();
+        applyOAuthSessionToSettings(session);
+        await MCB80XSheetSync.ensureAutoUnlockForEmail?.(session.email);
+        const probe = await MCB80XSheetSync.probeBackup?.();
+        if (probe?.ok && !probe.found) {
+          alert(
+            "There is no progress stored under this account yet.\n\n" +
+              "Your phone keeps quiz data in that browser until you upload it. On the phone: sign in with the same email, then tap Save progress now (dashboard banner or Settings).\n\n" +
+              "Or on the phone: Settings → Download backup file, then on this computer → Import backup file."
+          );
+          renderSyncBanner();
+          return;
+        }
+        const replace =
+          probe?.found &&
+          countPassedQuizzes(getProgress()) === 0 &&
+          window.confirm(
+            "Replace this computer's study progress with the copy saved to your account? (Recommended when this device is new or empty.)"
+          );
         const pass = await MCB80XSheetSync.deriveEmailSyncPassphrase(session.email);
         const legacy = [];
         if (session.id && session.id !== session.email) {
           legacy.push(await MCB80XSheetSync.deriveOAuthSyncPassphrase(session.id));
         }
-        await MCB80XSheetSync.pullAndMergeForAccount(pass, legacy);
+        const result = await MCB80XSheetSync.pullAndMergeForAccount(pass, legacy, {
+          replaceLocal: !!replace
+        });
+        if (result?.found === false) {
+          alert(
+            "No account backup found. Save from your phone first (Save progress now), then try Restore again."
+          );
+          renderSyncBanner();
+          return;
+        }
         renderDashboard();
         renderProfile();
         renderUserActivityCard();
         renderStreakBadge();
         renderSyncBanner();
-        alert("Progress restored.");
+        const n = countPassedQuizzes(getProgress());
+        alert(
+          n > 0
+            ? `Progress restored (${n} quiz pass flag${n === 1 ? "" : "s"} on this device).`
+            : "Restore finished, but no passed quizzes were found in the backup. If your phone has more progress, save from the phone first."
+        );
       } catch (err) {
         alert(friendlySyncError(err?.message || String(err)));
         renderSyncBanner();
@@ -5576,13 +5612,18 @@
       }
       const when = formatSyncTime(syncSt.lastSyncAt);
       const err = syncSt.lastSyncError ? friendlySyncError(syncSt.lastSyncError) : "";
+      const backupHint = el.dataset.cloudFound === "0"
+        ? `<p style="margin:0.25rem 0 0;color:var(--incorrect);"><strong>No backup on this account yet</strong> — save from your phone before Restore will work here.</p>`
+        : el.dataset.cloudFound === "1"
+          ? `<p style="margin:0.25rem 0 0;color:var(--gray-600);">Account backup found — use Restore from account on this computer.</p>`
+          : "";
       const statusLine = err
         ? `<p style="margin:0;color:var(--incorrect);"><strong>Online save issue:</strong> ${escapeHtml(err)}</p>`
         : when
           ? `<p style="margin:0;">Last saved online: <strong>${escapeHtml(when)}</strong></p>`
-          : `<p style="margin:0;">Your progress on this device has not been saved online yet.</p>`;
-      el.innerHTML = `${statusLine}
-        <p style="margin:0.35rem 0 0;font-size:0.85rem;color:var(--gray-600);">Quizzes stay on each device until you save—sign-in alone does not move them.</p>
+          : `<p style="margin:0;">This device has not uploaded progress to your account yet.</p>`;
+      el.innerHTML = `${statusLine}${backupHint}
+        <p style="margin:0.35rem 0 0;font-size:0.85rem;color:var(--gray-600);">Sign-in does not copy progress. Phone must <strong>Save progress now</strong>; laptop must <strong>Restore</strong>.</p>
         <div class="sync-actions">
           <button type="button" class="btn-secondary" id="sync-banner-save">Save progress now</button>
           <button type="button" class="btn-secondary" id="sync-banner-restore">Restore from account</button>
@@ -5591,6 +5632,16 @@
       el.setAttribute("aria-hidden", "false");
       document.getElementById("sync-banner-save")?.addEventListener("click", () => runSaveProgressNow());
       document.getElementById("sync-banner-restore")?.addEventListener("click", () => runRestoreProgressNow());
+      if (window.MCB80XSheetSync?.probeBackup && !el.dataset.probePending) {
+        el.dataset.probePending = "1";
+        MCB80XSheetSync.probeBackup()
+          .then(p => {
+            delete el.dataset.probePending;
+            if (p?.ok) el.dataset.cloudFound = p.found ? "1" : "0";
+            renderSyncBanner();
+          })
+          .catch(() => delete el.dataset.probePending);
+      }
     }
 
     const BIOMETRIC_ICON_SVG =
@@ -5929,8 +5980,17 @@
             if (session?.id && session.id !== accountEmail) {
               legacy.push(await MCB80XSheetSync.deriveOAuthSyncPassphrase(session.id));
             }
-            await MCB80XSheetSync.pullAndMergeForAccount(pass, legacy);
-            showSyncMsg("Progress restored.");
+            const result = await MCB80XSheetSync.pullAndMergeForAccount(pass, legacy, {
+              replaceLocal: countPassedQuizzes(getProgress()) === 0
+            });
+            if (result?.found === false) {
+              showSyncMsg(
+                "No backup on this account yet. On your phone: Save progress now, then try again.",
+                true
+              );
+            } else {
+              showSyncMsg("Progress restored.");
+            }
           } else {
             const { email, pass } = await readSyncInputs();
             saveSettings({ syncEmail: email });
