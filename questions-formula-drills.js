@@ -4,11 +4,14 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Nernst Equation",
     calcType: "nernst",
-    question: "[K⁺]_in = 140 mM, [K⁺]_out = 5 mM at 37 °C. E_K ≈",
+    question: "Given [K⁺]_in = 140 mM, [K⁺]_out = 5 mM at 37 °C, approximately what is E_K?",
     options: [
+
+
+
       "-89.1 mV",
       "-52.1 mV",
-      "+60 mV",
+      "60 mV",
       "0 mV"
     ],
     correct: 0,
@@ -29,11 +32,14 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Nernst Equation",
     calcType: "nernst",
-    question: "[K⁺]_in = 140 mM, [K⁺]_out = 4 mM at 37 °C. E_K ≈",
+    question: "Given [K⁺]_in = 140 mM, [K⁺]_out = 4 mM at 37 °C, approximately what is E_K?",
     options: [
+
+
+
       "-95 mV",
       "-58 mV",
-      "+60 mV",
+      "60 mV",
       "0 mV"
     ],
     correct: 0,
@@ -54,11 +60,14 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Nernst Equation",
     calcType: "nernst",
-    question: "[K⁺]_in = 120 mM, [K⁺]_out = 4 mM at 37 °C. E_K ≈",
+    question: "Given [K⁺]_in = 120 mM, [K⁺]_out = 4 mM at 37 °C, approximately what is E_K?",
     options: [
+
+
+
       "-90.9 mV",
       "-53.9 mV",
-      "+60 mV",
+      "60 mV",
       "0 mV"
     ],
     correct: 0,
@@ -79,11 +88,14 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Nernst Equation",
     calcType: "nernst",
-    question: "[K⁺]_in = 140 mM, [K⁺]_out = 10 mM at 37 °C. E_K ≈",
+    question: "Given [K⁺]_in = 140 mM, [K⁺]_out = 10 mM at 37 °C, approximately what is E_K?",
     options: [
+
+
+
       "-70.5 mV",
       "-33.5 mV",
-      "+60 mV",
+      "60 mV",
       "0 mV"
     ],
     correct: 0,
@@ -104,11 +116,14 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Nernst Equation",
     calcType: "nernst",
-    question: "[K⁺]_in = 100 mM, [K⁺]_out = 5 mM at 37 °C. E_K ≈",
+    question: "Given [K⁺]_in = 100 mM, [K⁺]_out = 5 mM at 37 °C, approximately what is E_K?",
     options: [
+
+
+
       "-80.1 mV",
       "-43.1 mV",
-      "+60 mV",
+      "60 mV",
       "0 mV"
     ],
     correct: 0,
@@ -129,11 +144,14 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Nernst Equation",
     calcType: "nernst",
-    question: "[K⁺]_in = 140 mM, [K⁺]_out = 20 mM at 37 °C. E_K ≈",
+    question: "Given [K⁺]_in = 140 mM, [K⁺]_out = 20 mM at 37 °C, approximately what is E_K?",
     options: [
+
+
+
       "-52 mV",
       "-15 mV",
-      "+60 mV",
+      "60 mV",
       "0 mV"
     ],
     correct: 0,
@@ -154,12 +172,15 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Nernst Equation",
     calcType: "nernst",
-    question: "[Na⁺]_in = 15 mM, [Na⁺]_out = 145 mM. E_Na ≈",
+    question: "Given [Na⁺]_in = 15 mM, [Na⁺]_out = 145 mM, approximately what is E_Na?",
     options: [
-      "+60.6 mV",
+
+
+
+      "60.6 mV",
       "−60 mV",
       "0 mV",
-      "+30 mV"
+      "30 mV"
     ],
     correct: 0,
     formulaHint: "Use: Nernst — E_ion = (61.54 mV / z) · log10([out]/[in])",
@@ -179,12 +200,15 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Nernst Equation",
     calcType: "nernst",
-    question: "[Na⁺]_in = 12 mM, [Na⁺]_out = 120 mM. E_Na ≈",
+    question: "Given [Na⁺]_in = 12 mM, [Na⁺]_out = 120 mM, approximately what is E_Na?",
     options: [
-      "+61.5 mV",
+
+
+
+      "61.5 mV",
       "−60 mV",
       "0 mV",
-      "+30 mV"
+      "30 mV"
     ],
     correct: 0,
     formulaHint: "Use: Nernst — E_ion = (61.54 mV / z) · log10([out]/[in])",
@@ -204,12 +228,15 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Nernst Equation",
     calcType: "nernst",
-    question: "[Na⁺]_in = 20 mM, [Na⁺]_out = 140 mM. E_Na ≈",
+    question: "Given [Na⁺]_in = 20 mM, [Na⁺]_out = 140 mM, approximately what is E_Na?",
     options: [
-      "+52 mV",
+
+
+
+      "52 mV",
       "−60 mV",
       "0 mV",
-      "+30 mV"
+      "30 mV"
     ],
     correct: 0,
     formulaHint: "Use: Nernst — E_ion = (61.54 mV / z) · log10([out]/[in])",
@@ -229,10 +256,13 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Nernst Equation",
     calcType: "nernst",
-    question: "[Ca²⁺]_out = 2 mM, [Ca²⁺]_in = 0.0002 mM (z = 2). E_Ca ≈",
+    question: "Given [Ca²⁺]_out = 2 mM, [Ca²⁺]_in = 0.0002 mM (z = 2), approximately what is E_Ca?",
     options: [
-      "+123.1 mV",
-      "+61.5 mV",
+
+
+
+      "123.1 mV",
+      "61.5 mV",
       "−123 mV",
       "0 mV"
     ],
@@ -254,11 +284,14 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Goldman Equation",
     calcType: "goldman",
-    question: "Standard ions: K⁺ 140/5, Na⁺ 15/145 mM; P_K:P_Na = 1:0.05. Resting V_m ≈",
+    question: "Given Standard ions: K⁺ 140/5, Na⁺ 15/145 mM; P_K:P_Na = 1:0.05., approximately what is resting V_m?",
     options: [
+
+
+
       "-65.3 mV",
       "−89.1 mV",
-      "+67.7 mV",
+      "67.7 mV",
       "0 mV"
     ],
     correct: 0,
@@ -279,11 +312,14 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Goldman Equation",
     calcType: "goldman",
-    question: "Same concentrations; P_K:P_Na = 1:0.1. V_m closest to:",
+    question: "Given Same concentrations; P_K:P_Na = 1:0.1., which resting membrane potential (V_m) is closest?",
     options: [
+
+
+
       "-53 mV",
       "−89.1 mV",
-      "+67.7 mV",
+      "67.7 mV",
       "−40 mV"
     ],
     correct: 0,
@@ -304,11 +340,14 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Goldman Equation",
     calcType: "goldman",
-    question: "Same concentrations; P_K:P_Na = 1:0.2. V_m closest to:",
+    question: "Given Same concentrations; P_K:P_Na = 1:0.2., which resting membrane potential (V_m) is closest?",
     options: [
+
+
+
       "-38.4 mV",
       "−89.1 mV",
-      "+67.7 mV",
+      "67.7 mV",
       "−40 mV"
     ],
     correct: 0,
@@ -329,11 +368,14 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Goldman Equation",
     calcType: "goldman",
-    question: "Same concentrations; P_K:P_Na = 1:0.02. V_m closest to:",
+    question: "Given Same concentrations; P_K:P_Na = 1:0.02., which resting membrane potential (V_m) is closest?",
     options: [
+
+
+
       "-76.9 mV",
       "−89.1 mV",
-      "+67.7 mV",
+      "67.7 mV",
       "−40 mV"
     ],
     correct: 0,
@@ -354,10 +396,13 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Electrical Signaling",
     calcType: "current",
-    question: "g_Na = 50 nS, V_m = −10 mV, E_Na = +60 mV. Na⁺ current (outward +) ≈",
+    question: "Given g_Na = 50 nS, V_m = −10 mV, E_Na = +60 mV., approximately what is the Na⁺ current (outward +)?",
     options: [
+
+
+
       "−3.5 nA",
-      "+3.5 nA",
+      "3.5 nA",
       "−3.5 µA",
       "0 nA"
     ],
@@ -379,11 +424,14 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Electrical Signaling",
     calcType: "current",
-    question: "g = 10 nS, V_m = −60 mV, E = −70 mV. Current ≈",
+    question: "Given g = 10 nS, V_m = −60 mV, E = −70 mV., approximately what is the Current?",
     options: [
-      "+100 pA",
+
+
+
+      "100 pA",
       "−100 pA",
-      "+1 nA",
+      "1 nA",
       "0 pA"
     ],
     correct: 0,
@@ -404,11 +452,14 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Electrical Signaling",
     calcType: "current",
-    question: "g_K = 20 nS, V_m = −80 mV, E_K = −90 mV. K⁺ current ≈",
+    question: "Given g_K = 20 nS, V_m = −80 mV, E_K = −90 mV., approximately what is the K⁺ current?",
     options: [
-      "+200 pA",
+
+
+
+      "200 pA",
       "−200 pA",
-      "+2 nA",
+      "2 nA",
       "0 pA"
     ],
     correct: 0,
@@ -429,9 +480,12 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Electrical Signaling",
     calcType: "fold",
-    question: "Extracellular Na⁺ doubled (intracellular fixed). E_Na shifts ≈",
+    question: "Using the values stated below, which answer is correct: Extracellular Na⁺ doubled (intracellular fixed). E_Na shifts ≈?",
     options: [
-      "+18.5 mV",
+
+
+
+      "18.5 mV",
       "Opposite direction",
       "No change",
       "Always exactly 0 mV"
@@ -454,9 +508,12 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Electrical Signaling",
     calcType: "fold",
-    question: "Extracellular K⁺ raised fourfold. E_K shifts ≈",
+    question: "Using the values stated below, which answer is correct: Extracellular K⁺ raised fourfold. E_K shifts ≈?",
     options: [
-      "+37 mV (less negative)",
+
+
+
+      "37 mV (less negative)",
       "Opposite direction",
       "No change",
       "Always exactly 0 mV"
@@ -479,9 +536,12 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Nernst Equation",
     calcType: "fold",
-    question: "Extracellular Ca²⁺ quadrupled (z=2). E_Ca shifts ≈",
+    question: "Using the values stated below, which answer is correct: Extracellular Ca²⁺ quadrupled (z=2). E_Ca shifts ≈?",
     options: [
-      "+18.5 mV",
+
+
+
+      "18.5 mV",
       "Opposite direction",
       "No change",
       "Always exactly 0 mV"
@@ -504,8 +564,11 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Electrical Signaling",
     calcType: "sign",
-    question: "At V_m = E_K, net K⁺ driving force is:",
+    question: "Which description best applies to At V_m = E_K, net K⁺ driving force?",
     options: [
+
+
+
       "Zero",
       "Opposite direction",
       "No change",
@@ -528,9 +591,12 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Electrical Signaling",
     calcType: "fold",
-    question: "At V_m = −65 mV and E_Na = +60 mV, opening Na⁺ channels pulls V_m:",
+    question: "Using the values stated below, which answer is correct: At V_m = −65 mV and E_Na = +60 mV, opening Na⁺ channels pulls V_m?",
     options: [
-      "Toward +60 mV",
+
+
+
+      "Toward, 60 mV",
       "Opposite direction",
       "No change",
       "Always exactly 0 mV"
@@ -552,8 +618,11 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Electrical Signaling",
     calcType: "sign",
-    question: "Hyperpolarizing past E_K makes K⁺ current:",
+    question: "Using the values stated below, which answer is correct: Hyperpolarizing past E_K makes K⁺ current?",
     options: [
+
+
+
       "Outward (positive by convention)",
       "Opposite direction",
       "No change",
@@ -576,8 +645,11 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Passive Membrane Properties",
     calcType: "tau",
-    question: "τ = R_m · C_m. R_m doubles, C_m fixed. τ:",
+    question: "Using the values stated below, which answer is correct: τ = R_m · C_m. R_m doubles, C_m fixed. τ?",
     options: [
+
+
+
       "Doubles",
       "Halves",
       "Unchanged",
@@ -600,8 +672,11 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Passive Membrane Properties",
     calcType: "tau",
-    question: "Fixed current injection; R_m doubles. Steady ΔV:",
+    question: "Using the values stated below, which answer is correct: Fixed current injection; R_m doubles. Steady ΔV?",
     options: [
+
+
+
       "Doubles",
       "Halves",
       "Unchanged",
@@ -624,8 +699,11 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Passive Membrane Properties",
     calcType: "lambda",
-    question: "Higher leak conductance (lower R_m), λ:",
+    question: "Using the values stated below, which answer is correct: Higher leak conductance (lower R_m), λ?",
     options: [
+
+
+
       "Becomes shorter",
       "Halves",
       "Unchanged",
@@ -648,8 +726,11 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Passive Membrane Properties",
     calcType: "lambda",
-    question: "Larger axon diameter (lower R_i), λ:",
+    question: "Using the values stated below, which answer is correct: Larger axon diameter (lower R_i), λ?",
     options: [
+
+
+
       "Increases",
       "Halves",
       "Unchanged",
@@ -672,8 +753,11 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Passive Membrane Properties",
     calcType: "lambda",
-    question: "Myelin increases effective R_m; λ along axon:",
+    question: "Using the values stated below, which answer is correct: Myelin increases effective R_m; λ along axon?",
     options: [
+
+
+
       "Increases",
       "Halves",
       "Unchanged",

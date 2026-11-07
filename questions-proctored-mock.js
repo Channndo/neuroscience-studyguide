@@ -5,8 +5,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Nernst Equation",
     module: "part1",
-    question: "Which follow from the Nernst equation at 37°C? (Select all that apply.)",
+    question: "Which of the following statements about nernst Equation are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -30,8 +35,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Action Potentials",
     module: "part1",
-    question: "During a typical squid axon action potential, which are true? (Select all.)",
+    question: "Which of the following statements about action Potentials are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -55,8 +65,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Passive Membrane Properties",
     module: "part1",
-    question: "Membrane τ and λ: select all correct.",
+    question: "Which of the following statements about passive Membrane Properties are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -80,8 +95,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Goldman Equation",
     module: "part1",
-    question: "Goldman/constant-field resting potential: select all.",
+    question: "Which of the following statements about goldman Equation are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -105,8 +125,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Synaptic Transmission",
     module: "part2",
-    question: "Quantal release: select all true.",
+    question: "Which of the following statements about synaptic Transmission are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -130,8 +155,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Synaptic Integration",
     module: "part2",
-    question: "EPSP/IPSP integration: select all.",
+    question: "Which of the following statements about synaptic Integration are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -155,8 +185,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Long-Term Plasticity",
     module: "part2",
-    question: "NMDA-dependent LTP: select all required elements.",
+    question: "Which of the following statements about long-Term Plasticity are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -180,8 +215,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Visual System",
     module: "part3",
-    question: "Retinofugal pathway: select all correct.",
+    question: "Which of the following statements about visual System are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -205,8 +245,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Auditory System",
     module: "part3",
-    question: "Cochlear tuning: select all.",
+    question: "Which of the following statements about hearing are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -230,8 +275,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Motor Systems",
     module: "part3",
-    question: "Lower motor neuron pools: select all.",
+    question: "Which of the following statements about motor Systems are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -255,8 +305,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Neuroanatomy",
     module: "part3",
-    question: "Basal ganglia loops: select all.",
+    question: "Which of the following statements about neuroanatomy are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -280,8 +335,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Learning & Memory",
     module: "part3",
-    question: "Memory systems: select all.",
+    question: "Which of the following statements about learning & Memory are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -305,13 +365,18 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Electrical Signaling",
     module: "part1",
-    question: "Ionic current sign convention: select all.",
+    question: "Which of the following statements about electrical Signaling are correct? Select all that apply.",
     options: [
 
 
 
 
-      "Outward current is often defined positive",
+
+
+
+
+
+      "Outward current is defined positive",
       "I = g(V_m − E_ion)",
       "Inward Na⁺ at rest from E_Na is always outward current",
       "Driving force depends on V_m and E_ion",
@@ -330,8 +395,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Neuromodulation",
     module: "part2",
-    question: "Neuromodulators vs transmitters: select all.",
+    question: "Which of the following statements about neuromodulation are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -355,8 +425,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Somatosensation",
     module: "part3",
-    question: "Dorsal column vs spinothalamic: select all.",
+    question: "Which of the following statements about somatosensation are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -380,8 +455,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Chemical Synapses",
     module: "part2",
-    question: "Ionotropic vs metabotropic: select all.",
+    question: "Which of the following statements about chemical Synapses are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -405,8 +485,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Action Potential Propagation",
     module: "part1",
-    question: "Saltatory conduction: select all.",
+    question: "Which of the following statements about action Potential Propagation are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -430,8 +515,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Gustation",
     module: "part3",
-    question: "Taste transduction: select all.",
+    question: "Which of the following statements about gustation are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -455,8 +545,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Pharmacology",
     module: "part1",
-    question: "Channel toxins: select all.",
+    question: "Which of the following statements about pharmacology are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -480,8 +575,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Neural Circuits",
     module: "part2",
-    question: "Feedforward inhibition: select all.",
+    question: "Which of the following statements about neural Circuits are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -505,8 +605,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Ion Channels",
     module: "part1",
-    question: "Voltage-gated Na⁺ channel gating: select all that apply.",
+    question: "Which of the following statements about ion Channels are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -530,8 +635,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Passive Properties",
     module: "part1",
-    question: "Cable equation / length constant: select all correct.",
+    question: "Which of the following statements about passive Properties are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -555,8 +665,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Synaptic Plasticity",
     module: "part2",
-    question: "Hebbian LTP at CA3–CA1 synapses: select all supported statements.",
+    question: "Which of the following statements about synaptic Plasticity are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -580,8 +695,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Sensory Transduction",
     module: "part3",
-    question: "Photoreceptor responses to light: select all true.",
+    question: "Which of the following statements about sensory Transduction are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -605,8 +725,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Motor Systems",
     module: "part3",
-    question: "Upper vs lower motor neuron signs: select all correct pairings.",
+    question: "Which of the following statements about motor Systems are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -630,8 +755,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Basal Ganglia",
     module: "part3",
-    question: "Direct vs indirect pathway (simplified): select all accurate.",
+    question: "Which of the following statements about basal Ganglia are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -655,8 +785,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Autonomic Neuroscience",
     module: "part2",
-    question: "Sympathetic vs parasympathetic ganglia: select all true.",
+    question: "Which of the following statements about autonomic Neuroscience are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -680,8 +815,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Neurotransmitters",
     module: "part2",
-    question: "GABAergic signaling: select all correct.",
+    question: "Which of the following statements about neurotransmitters are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -705,8 +845,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Development",
     module: "part2",
-    question: "Activity-dependent refinement: select all that apply.",
+    question: "Which of the following statements about development are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -730,8 +875,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Methods",
     module: "part3",
-    question: "fMRI BOLD signal basics: select all accurate.",
+    question: "Which of the following statements about methods are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -755,8 +905,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Hearing",
     module: "part3",
-    question: "Cochlear tuning: select all true.",
+    question: "Which of the following statements about hearing are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -780,8 +935,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Sleep",
     module: "part3",
-    question: "REM vs NREM physiology: select all correct.",
+    question: "Which of the following statements about sleep are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -805,8 +965,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Pain",
     module: "part3",
-    question: "Nociceptive pathways: select all accurate.",
+    question: "Which of the following statements about pain are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -830,8 +995,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Cerebellum",
     module: "part3",
-    question: "Cerebellar motor learning signs: select all that apply.",
+    question: "Which of the following statements about cerebellum are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -855,8 +1025,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Memory",
     module: "part3",
-    question: "Hippocampal role in memory: select all supported.",
+    question: "Which of the following statements about memory are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -880,8 +1055,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Neuroendocrine",
     module: "part3",
-    question: "Hypothalamic–pituitary control: select all true.",
+    question: "Which of the following statements about neuroendocrine are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -905,8 +1085,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Glial Cells",
     module: "part2",
-    question: "Astrocyte functions: select all that apply.",
+    question: "Which of the following statements about glial Cells are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -930,8 +1115,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Retina",
     module: "part3",
-    question: "Retinal circuitry: select all correct.",
+    question: "Which of the following statements about retina are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -955,8 +1145,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Epilepsy",
     module: "part3",
-    question: "Seizure mechanisms (conceptual): select all accurate.",
+    question: "Which of the following statements about epilepsy are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -980,8 +1175,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Neurodegeneration",
     module: "part3",
-    question: "Alzheimer disease pathology: select all true.",
+    question: "Which of the following statements about neurodegeneration are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -1005,8 +1205,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Language",
     module: "part3",
-    question: "Aphasia profiles: select all correct pairings.",
+    question: "Which of the following statements about language are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -1030,8 +1235,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Vestibular",
     module: "part3",
-    question: "Semicircular canal physiology: select all true.",
+    question: "Which of the following statements about vestibular are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -1055,8 +1265,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Spinal Cord",
     module: "part3",
-    question: "Brown-Séquard hemisection: select all expected below the lesion.",
+    question: "Which of the following statements about spinal Cord are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -1080,8 +1295,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Neuromuscular",
     module: "part2",
-    question: "Neuromuscular junction pharmacology: select all accurate.",
+    question: "Which of the following statements about neuromuscular are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -1105,14 +1325,19 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Rhythmic Motor",
     module: "part2",
-    question: "Central pattern generators: select all true.",
+    question: "Which of the following statements about rhythmic Motor are correct? Select all that apply.",
     options: [
 
 
 
 
+
+
+
+
+
       "Can produce locomotor rhythms without sensory feedback",
-      "Reciprocal inhibition helps alternate flexor/extensor bursts",
+      "Reciprocal inhibition helps alternate flexor and extensor bursts",
       "Require continuous cortical spiking for each muscle twitch in all species",
       "Can be modulated by descending and sensory inputs",
     ],
@@ -1130,8 +1355,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Ion Homeostasis",
     module: "part1",
-    question: "Na⁺/K⁺-ATPase: select all correct.",
+    question: "Which of the following statements about ion Homeostasis are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -1155,8 +1385,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Receptors",
     module: "part2",
-    question: "Metabotropic glutamate receptors (group I example): select all true.",
+    question: "Which of the following statements about receptors are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -1180,8 +1415,13 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Olfactory System",
     module: "part3",
-    question: "Olfactory transduction: select all accurate.",
+    question: "Which of the following statements about olfactory System are correct? Select all that apply.",
     options: [
+
+
+
+
+
 
 
 
@@ -1205,14 +1445,19 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Gustation",
     module: "part3",
-    question: "Taste coding: select all true.",
+    question: "Which of the following statements about gustation are correct? Select all that apply.",
     options: [
 
 
 
 
+
+
+
+
+
       "Different taste qualities engage partially overlapping peripheral pathways",
-      "Umami is often signaled by glutamate binding metabotropic receptors",
+      "Umami is signaled by glutamate binding metabotropic receptors",
       "Sweet and bitter always share identical labeled lines with no overlap",
       "Brainstem gustatory nuclei receive primary afferents from VII, IX, and X",
     ],
@@ -1230,14 +1475,19 @@ const PROCTORED_SATA_POOL = [
     type: "selectAll",
     topic: "Computational",
     module: "part1",
-    question: "Integrate-and-fire simplifications: select all that apply.",
+    question: "Which of the following statements about computational are correct? Select all that apply.",
     options: [
 
 
 
 
+
+
+
+
+
       "Threshold crossing triggers a stereotyped spike event",
-      "Subthreshold dynamics often follow RC membrane properties",
+      "Subthreshold dynamics follow RC membrane properties",
       "Every dendritic branch is modeled with full Hodgkin–Huxley kinetics always",
       "Refractory period limits maximal firing rate",
     ],
@@ -1257,8 +1507,13 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Visual System",
     module: "part3",
-    question: "Left optic tract lesion.",
+    question: "Which clinical presentation is most consistent with Left optic tract lesion?",
     options: [
+
+
+
+
+
       "Left monocular blindness",
       "Right homonymous hemianopia",
       "Bitemporal hemianopia",
@@ -1276,12 +1531,17 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Visual System",
     module: "part3",
-    question: "Optic chiasm compression (pituitary).",
+    question: "Which clinical presentation is most consistent with Optic chiasm compression (pituitary)?",
     options: [
+
+
+
+
+
       "Bitemporal hemianopia",
       "Right homonymous hemianopia",
       "Left monocular loss",
-      "Upper quadrantanopia as the primary route",
+      "Upper quadrantanopia",
     ],
     correct: 0,
     explanation: "Bitemporal hemianopia",
@@ -1295,12 +1555,17 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Visual System",
     module: "part3",
-    question: "Right Meyer's loop (temporal) damage.",
+    question: "Using the values stated below, which answer is correct: Right Meyer's loop (temporal) damage?",
     options: [
+
+
+
+
+
       "Left superior quadrantanopia",
       "Right inferior quadrantanopia",
       "Left homonymous hemianopia",
-      "Macular sparing as the primary route",
+      "Macular sparing",
     ],
     correct: 0,
     explanation: "Left superior quadrantanopia",
@@ -1314,12 +1579,17 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Motor Systems",
     module: "part3",
-    question: "Left medullary pyramid (corticospinal fibers before decussation). Most likely deficit:",
+    question: "Using the values stated below, which answer is correct: Left medullary pyramid (corticospinal fibers before decussation). Most likely deficit?",
     options: [
+
+
+
+
+
       "Right limb weakness (UMN)",
       "Left limb weakness",
       "Bilateral flaccid paralysis",
-      "Ipsilateral face as the primary route",
+      "Ipsilateral face",
     ],
     correct: 0,
     explanation: "Right limb weakness (UMN)",
@@ -1333,8 +1603,13 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Motor Systems",
     module: "part3",
-    question: "Complete spinal hemisection at T10 (Brown-Séquard).",
+    question: "Using the values stated below, which answer is correct: Complete spinal hemisection at T10 (Brown-Séquard)?",
     options: [
+
+
+
+
+
       "Ipsilateral UMN weakness and DCML loss",
       "Pain loss bilaterally",
       "Flaccid paralysis above lesion",
@@ -1352,10 +1627,15 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Motor Systems",
     module: "part3",
-    question: "Anterior spinal artery syndrome at thoracic level.",
+    question: "Which clinical presentation is most consistent with Anterior spinal artery syndrome at thoracic level?",
     options: [
-      "Bilateral motor and pain/temp loss with spared dorsal columns",
-      "Isolated proprioception loss as the primary route",
+
+
+
+
+
+      "Bilateral motor and pain and temperature loss with spared dorsal columns",
+      "Isolated proprioception loss",
       "Autonomic symptoms",
       "Pure cerebellar ataxia",
     ],
@@ -1371,11 +1651,16 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Neuroanatomy",
     module: "part3",
-    question: "Right middle cerebral artery stroke (non-dominant hemisphere). Most likely deficit:",
+    question: "Which neurologic deficit or presentation is most likely with Right middle cerebral artery stroke (non-dominant hemisphere)?",
     options: [
+
+
+
+
+
       "Contralateral (left) face/arm weakness",
-      "Ipsilateral weakness as the primary route",
-      "Pure vision loss as the primary route",
+      "Ipsilateral weakness",
+      "Pure vision loss",
       "Cerebellar signs",
     ],
     correct: 0,
@@ -1390,8 +1675,13 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Neuroanatomy",
     module: "part3",
-    question: "Broca area (left frontal) lesion.",
+    question: "Which clinical presentation is most consistent with Broca area (left frontal) lesion?",
     options: [
+
+
+
+
+
       "Nonfluent aphasia with relatively preserved comprehension",
       "Fluent nonsense speech (Wernicke)",
       "Pure alexia without language loss",
@@ -1409,8 +1699,13 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Neuroanatomy",
     module: "part3",
-    question: "Wernicke area lesion.",
+    question: "Which clinical presentation is most consistent with Wernicke area lesion?",
     options: [
+
+
+
+
+
       "Fluent aphasia with poor comprehension",
       "Broca nonfluent aphasia",
       "Motor weakness",
@@ -1428,8 +1723,13 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Learning & Memory",
     module: "part3",
-    question: "Bilateral hippocampal damage.",
+    question: "Using the values stated below, which answer is correct: Bilateral hippocampal damage?",
     options: [
+
+
+
+
+
       "Anterograde declarative amnesia",
       "Loss of all procedural skills instantly",
       "Hypermnesia",
@@ -1447,8 +1747,13 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Motor Systems",
     module: "part3",
-    question: "Cerebellar hemisphere lesion.",
+    question: "Which clinical presentation is most consistent with Cerebellar hemisphere lesion?",
     options: [
+
+
+
+
+
       "Ipsilateral limb ataxia/dysmetria",
       "Contralateral hemiparesis",
       "Homonymous hemianopia",
@@ -1466,8 +1771,13 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Motor Systems",
     module: "part3",
-    question: "Basal ganglia dopamine loss (Parkinson).",
+    question: "Using the values stated below, which answer is correct: Basal ganglia dopamine loss (Parkinson)?",
     options: [
+
+
+
+
+
       "Bradykinesia, rigidity, resting tremor",
       "Hyperkinetic chorea",
       "Pure sensory loss",
@@ -1485,10 +1795,15 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Auditory System",
     module: "part3",
-    question: "Unilateral cochlear nerve section.",
+    question: "Using the values stated below, which answer is correct: Unilateral cochlear nerve section?",
     options: [
+
+
+
+
+
       "Ipsilateral SNHL",
-      "Conductive loss as the primary route",
+      "Conductive loss",
       "Bilateral loss",
       "Visual field cut",
     ],
@@ -1504,10 +1819,15 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Somatosensation",
     module: "part3",
-    question: "Right dorsal column lesion at C5.",
+    question: "Which clinical presentation is most consistent with Right dorsal column lesion at C5?",
     options: [
+
+
+
+
+
       "Ipsilateral DCML loss below lesion",
-      "Contralateral pain loss as the primary route",
+      "Contralateral pain loss",
       "Bilateral motor loss",
       "Olfactory loss",
     ],
@@ -1523,11 +1843,16 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Somatosensation",
     module: "part3",
-    question: "Left spinothalamic tract lesion at T6.",
+    question: "Which clinical presentation is most consistent with Left spinothalamic tract lesion at T6?",
     options: [
-      "Contralateral pain/temp loss below lesion",
+
+
+
+
+
+      "Contralateral pain and temperature loss below lesion",
       "Ipsilateral proprioception loss",
-      "Bilateral weakness as the primary route",
+      "Bilateral weakness",
       "Blindness",
     ],
     correct: 0,
@@ -1542,8 +1867,13 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Left optic nerve. Most likely deficit:",
+    question: "Using the values stated below, which answer is correct: Left optic nerve. Most likely deficit?",
     options: [
+
+
+
+
+
       "Total blindness in the left eye",
       "Right homonymous hemianopia",
       "Bitemporal hemianopia",
@@ -1561,8 +1891,13 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Right optic nerve. Most likely deficit:",
+    question: "Using the values stated below, which answer is correct: Right optic nerve. Most likely deficit?",
     options: [
+
+
+
+
+
       "Total blindness in the right eye",
       "Left monocular blindness",
       "Bitemporal hemianopia",
@@ -1580,12 +1915,17 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Optic chiasm (pituitary adenoma). Most likely deficit:",
+    question: "Which neurologic deficit or presentation is most likely with Optic chiasm (pituitary adenoma)?",
     options: [
+
+
+
+
+
       "Bitemporal hemianopia",
       "Right homonymous hemianopia",
       "Left monocular blindness",
-      "Macular sparing as the primary route",
+      "Macular sparing",
     ],
     correct: 0,
     explanation: "Optic chiasm (pituitary adenoma) → Bitemporal hemianopia.",
@@ -1599,8 +1939,13 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Right optic tract. Most likely deficit:",
+    question: "Which neurologic deficit or presentation is most likely with Right optic tract?",
     options: [
+
+
+
+
+
       "Left homonymous hemianopia",
       "Right monocular blindness",
       "Bitemporal hemianopia",
@@ -1618,8 +1963,13 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Left optic tract. Most likely deficit:",
+    question: "Which neurologic deficit or presentation is most likely with Left optic tract?",
     options: [
+
+
+
+
+
       "Right homonymous hemianopia",
       "Left monocular blindness",
       "Bitemporal hemianopia",
@@ -1637,8 +1987,13 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Right Meyer's loop (temporal lobe). Most likely deficit:",
+    question: "Using the values stated below, which answer is correct: Right Meyer's loop (temporal lobe). Most likely deficit?",
     options: [
+
+
+
+
+
       "Left superior quadrantanopia",
       "Right superior quadrantanopia",
       "Bitemporal hemianopia",
@@ -1656,8 +2011,13 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Left Meyer's loop (temporal lobe). Most likely deficit:",
+    question: "Using the values stated below, which answer is correct: Left Meyer's loop (temporal lobe). Most likely deficit?",
     options: [
+
+
+
+
+
       "Right superior quadrantanopia",
       "Left superior quadrantanopia",
       "Right homonymous hemianopia",
@@ -1675,8 +2035,13 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Right occipital lobe (V1). Most likely deficit:",
+    question: "Using the values stated below, which answer is correct: Right occipital lobe (V1). Most likely deficit?",
     options: [
+
+
+
+
+
       "Left homonymous hemianopia with macular involvement",
       "Right monocular blindness",
       "Bitemporal hemianopia",
@@ -1694,11 +2059,16 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Left occipital lobe (V1). Most likely deficit:",
+    question: "Using the values stated below, which answer is correct: Left occipital lobe (V1). Most likely deficit?",
     options: [
+
+
+
+
+
       "Right homonymous hemianopia",
       "Left monocular blindness",
-      "Right superior quadrantanopia as the primary route",
+      "Right superior quadrantanopia",
       "Broca aphasia",
     ],
     correct: 0,
@@ -1713,8 +2083,13 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Right lateral geniculate nucleus. Most likely deficit:",
+    question: "Using the values stated below, which answer is correct: Right lateral geniculate nucleus. Most likely deficit?",
     options: [
+
+
+
+
+
       "Contralateral homonymous visual field defect",
       "Ipsilateral monocular blindness",
       "Bitemporal hemianopia",
@@ -1732,12 +2107,17 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Left medial longitudinal fasciculus (MLF). Most likely deficit:",
+    question: "Using the values stated below, which answer is correct: Left medial longitudinal fasciculus (MLF). Most likely deficit?",
     options: [
+
+
+
+
+
       "Internuclear ophthalmoplegia",
       "Monocular blindness",
       "Bitemporal hemianopia",
-      "Facial paralysis as the primary route",
+      "Facial paralysis",
     ],
     correct: 0,
     explanation: "Left medial longitudinal fasciculus (MLF) → Internuclear ophthalmoplegia (impaired adduction + abduction nystagmus).",
@@ -1751,8 +2131,13 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Right abducens (CN VI) nucleus. Most likely deficit:",
+    question: "Using the values stated below, which answer is correct: Right abducens (CN VI) nucleus. Most likely deficit?",
     options: [
+
+
+
+
+
       "Horizontal gaze palsy toward lesion",
       "Optic chiasm syndrome",
       "Pure aphasia",
@@ -1770,12 +2155,17 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Left facial nerve (CN VII) peripheral lesion. Most likely deficit:",
+    question: "Which neurologic deficit or presentation is most likely with Left facial nerve (CN VII) peripheral lesion?",
     options: [
+
+
+
+
+
       "Ipsilateral lower face weakness",
-      "Contralateral arm weakness as the primary route",
+      "Contralateral arm weakness",
       "Homonymous hemianopia",
-      "Deafness as the primary route",
+      "Deafness",
     ],
     correct: 0,
     explanation: "Left facial nerve (CN VII) peripheral lesion → Ipsilateral lower face weakness; forehead often spared if UMN spared.",
@@ -1789,12 +2179,17 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Right hypoglossal (CN XII) nerve. Most likely deficit:",
+    question: "Using the values stated below, which answer is correct: Right hypoglossal (CN XII) nerve. Most likely deficit?",
     options: [
+
+
+
+
+
       "Tongue deviates to the right on protrusion",
       "Tongue deviates left",
       "Bitemporal hemianopia",
-      "Pure ataxia as the primary route",
+      "Pure ataxia",
     ],
     correct: 0,
     explanation: "Right hypoglossal (CN XII) nerve → Tongue deviates to the right on protrusion.",
@@ -1808,8 +2203,13 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Unilateral vestibular nerve lesion. Most likely deficit:",
+    question: "Which neurologic deficit or presentation is most likely with Unilateral vestibular nerve lesion?",
     options: [
+
+
+
+
+
       "Vertigo, imbalance, nystagmus toward lesion",
       "Homonymous hemianopia",
       "Spastic quadriplegia",
@@ -1827,8 +2227,13 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Right medial lemniscus in medulla. Most likely deficit:",
+    question: "Using the values stated below, which answer is correct: Right medial lemniscus in medulla. Most likely deficit?",
     options: [
+
+
+
+
+
       "Contralateral loss of touch",
       "Ipsilateral face pain loss",
       "Bitemporal hemianopia",
@@ -1846,8 +2251,13 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Left spinothalamic tract at T6. Most likely deficit:",
+    question: "Which neurologic deficit or presentation is most likely with Left spinothalamic tract at T6?",
     options: [
+
+
+
+
+
       "Contralateral pain and temperature loss below T6",
       "Ipsilateral proprioception loss below T6",
       "Bilateral blindness",
@@ -1865,10 +2275,15 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Right dorsal column at C5. Most likely deficit:",
+    question: "Using the values stated below, which answer is correct: Right dorsal column at C5. Most likely deficit?",
     options: [
+
+
+
+
+
       "Ipsilateral loss of fine touch/proprioception below C5",
-      "Contralateral pain loss as the primary route",
+      "Contralateral pain loss",
       "Bitemporal hemianopia",
       "Broca aphasia",
     ],
@@ -1884,10 +2299,15 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Complete spinal hemisection at T10 (Brown-Séquard). Most likely deficit:",
+    question: "Using the values stated below, which answer is correct: Complete spinal hemisection at T10 (Brown-Séquard). Most likely deficit?",
     options: [
+
+
+
+
+
       "Ipsilateral UMN weakness and DCML loss",
-      "Bilateral flaccid paralysis as the primary route",
+      "Bilateral flaccid paralysis",
       "Autonomic symptoms",
       "Pure cerebellar ataxia",
     ],
@@ -1903,10 +2323,15 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Anterior spinal artery syndrome (thoracic). Most likely deficit:",
+    question: "Which neurologic deficit or presentation is most likely with Anterior spinal artery syndrome (thoracic)?",
     options: [
+
+
+
+
+
       "Bilateral motor weakness and spinothalamic loss",
-      "Isolated proprioception loss as the primary route",
+      "Isolated proprioception loss",
       "Pure ataxia",
       "Monocular blindness",
     ],
@@ -1922,8 +2347,13 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Central cord syndrome (cervical). Most likely deficit:",
+    question: "Which neurologic deficit or presentation is most likely with Central cord syndrome (cervical)?",
     options: [
+
+
+
+
+
       "Greater weakness in upper limbs than lower",
       "Main mechanism: lower limb weakness with intact arms",
       "Homonymous hemianopia",
@@ -1941,10 +2371,15 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Cauda equina compression. Most likely deficit:",
+    question: "Which neurologic deficit or presentation is most likely with Cauda equina compression?",
     options: [
+
+
+
+
+
       "Lower motor neuron signs in legs",
-      "Upper motor neuron spasticity as the primary route above lesion",
+      "Upper motor neuron spasticity above lesion",
       "Bitemporal hemianopia",
       "Broca aphasia",
     ],
@@ -1960,8 +2395,13 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Right cerebellar hemisphere. Most likely deficit:",
+    question: "Which neurologic deficit or presentation is most likely with Right cerebellar hemisphere?",
     options: [
+
+
+
+
+
       "Ipsilateral limb ataxia and dysmetria",
       "Contralateral hemiparesis",
       "Homonymous hemianopia",
@@ -1979,10 +2419,15 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Cerebellar vermis. Most likely deficit:",
+    question: "Using the values stated below, which answer is correct: Cerebellar vermis. Most likely deficit?",
     options: [
+
+
+
+
+
       "Truncal and gait ataxia",
-      "Ipsilateral arm intention tremor as the primary route",
+      "Ipsilateral arm intention tremor",
       "Homonymous hemianopia",
       "Hyperreflexia with Babinski",
     ],
@@ -1998,10 +2443,15 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Left basal ganglia (Parkinsonian pattern). Most likely deficit:",
+    question: "Using the values stated below, which answer is correct: Left basal ganglia (Parkinsonian pattern). Most likely deficit?",
     options: [
+
+
+
+
+
       "Bradykinesia and rigidity",
-      "Flaccid paralysis as the primary route",
+      "Flaccid paralysis",
       "Bitemporal hemianopia",
       "Pure alexia",
     ],
@@ -2017,12 +2467,17 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Right thalamic VPL nucleus. Most likely deficit:",
+    question: "Using the values stated below, which answer is correct: Right thalamic VPL nucleus. Most likely deficit?",
     options: [
+
+
+
+
+
       "Contralateral hemibody sensory loss",
       "Ipsilateral sensory loss",
       "Bitemporal hemianopia",
-      "Broca aphasia as the primary route",
+      "Broca aphasia",
     ],
     correct: 0,
     explanation: "Right thalamic VPL nucleus → Contralateral hemibody sensory loss.",
@@ -2036,11 +2491,16 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Left thalamic language-related nuclei (dominant). Most likely deficit:",
+    question: "Using the values stated below, which answer is correct: Left thalamic language-related nuclei (dominant). Most likely deficit?",
     options: [
+
+
+
+
+
       "Thalamic aphasia or dysfluency with possible memory issues",
       "Pure deafness",
-      "Homonymous hemianopia as the primary route",
+      "Homonymous hemianopia",
       "Cerebellar ataxia",
     ],
     correct: 0,
@@ -2055,11 +2515,16 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Bilateral hippocampal damage. Most likely deficit:",
+    question: "Using the values stated below, which answer is correct: Bilateral hippocampal damage. Most likely deficit?",
     options: [
+
+
+
+
+
       "Profound anterograde declarative memory impairment",
       "Pure motor weakness",
-      "Color blindness as the primary route",
+      "Color blindness",
       "Deafness",
     ],
     correct: 0,
@@ -2074,8 +2539,13 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Bilateral amygdala (selective). Most likely deficit:",
+    question: "Using the values stated below, which answer is correct: Bilateral amygdala (selective). Most likely deficit?",
     options: [
+
+
+
+
+
       "Impaired fear conditioning",
       "Homonymous hemianopia",
       "Pure motor weakness",
@@ -2093,8 +2563,13 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Left Broca area. Most likely deficit:",
+    question: "Using the values stated below, which answer is correct: Left Broca area. Most likely deficit?",
     options: [
+
+
+
+
+
       "Nonfluent aphasia with relatively preserved comprehension",
       "Fluent nonsense speech (Wernicke pattern)",
       "Pure alexia without language loss",
@@ -2112,11 +2587,16 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Left Wernicke area. Most likely deficit:",
+    question: "Using the values stated below, which answer is correct: Left Wernicke area. Most likely deficit?",
     options: [
+
+
+
+
+
       "Fluent but impaired comprehension",
       "Nonfluent speech with good comprehension",
-      "Pure motor neglect as the primary route",
+      "Pure motor neglect",
       "Monocular blindness",
     ],
     correct: 0,
@@ -2131,8 +2611,13 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Arcuate fasciculus (dominant hemisphere). Most likely deficit:",
+    question: "Which neurologic deficit or presentation is most likely with Arcuate fasciculus (dominant hemisphere)?",
     options: [
+
+
+
+
+
       "Conduction aphasia: poor repetition with fluent speech",
       "Pure deafness",
       "Homonymous hemianopia",
@@ -2150,8 +2635,13 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Right parietal neglect syndrome. Most likely deficit:",
+    question: "Which neurologic deficit or presentation is most likely with Right parietal neglect syndrome?",
     options: [
+
+
+
+
+
       "Left spatial neglect and anosognosia",
       "Right neglect",
       "Bitemporal hemianopia",
@@ -2169,8 +2659,13 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Left primary motor cortex (hand area). Most likely deficit:",
+    question: "Using the values stated below, which answer is correct: Left primary motor cortex (hand area). Most likely deficit?",
     options: [
+
+
+
+
+
       "Contralateral hand/upper limb weakness (UMN)",
       "Ipsilateral hand weakness",
       "Bitemporal hemianopia",
@@ -2188,10 +2683,15 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Right primary motor cortex (leg area). Most likely deficit:",
+    question: "Using the values stated below, which answer is correct: Right primary motor cortex (leg area). Most likely deficit?",
     options: [
+
+
+
+
+
       "Contralateral leg weakness (UMN)",
-      "Ipsilateral leg weakness as the primary route",
+      "Ipsilateral leg weakness",
       "Homonymous hemianopia",
       "Deafness",
     ],
@@ -2207,10 +2707,15 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Left lateral pontine (AICA) syndrome. Most likely deficit:",
+    question: "Which neurologic deficit or presentation is most likely with Left lateral pontine (AICA) syndrome?",
     options: [
-      "Ipsilateral face pain/temp + cerebellar signs",
-      "Pure motor weakness as the primary route",
+
+
+
+
+
+      "Ipsilateral face pain and temperature, cerebellar signs",
+      "Pure motor weakness",
       "Bitemporal hemianopia",
       "Broca aphasia",
     ],
@@ -2226,9 +2731,14 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Right lateral medullary (PICA) syndrome. Most likely deficit:",
+    question: "Which neurologic deficit or presentation is most likely with Right lateral medullary (PICA) syndrome?",
     options: [
-      "Ipsilateral face pain/temp loss",
+
+
+
+
+
+      "Ipsilateral face pain and temperature loss",
       "Bilateral blindness",
       "Pure aphasia",
       "Deafness",
@@ -2245,8 +2755,13 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Medial medullary syndrome. Most likely deficit:",
+    question: "Which neurologic deficit or presentation is most likely with Medial medullary syndrome?",
     options: [
+
+
+
+
+
       "Ipsilateral tongue weakness",
       "Bitemporal hemianopia",
       "Cerebellar ataxia",
@@ -2264,8 +2779,13 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Right internal capsule (posterior limb). Most likely deficit:",
+    question: "Using the values stated below, which answer is correct: Right internal capsule (posterior limb). Most likely deficit?",
     options: [
+
+
+
+
+
       "Contralateral hemiparesis",
       "Ipsilateral weakness",
       "Bitemporal hemianopia",
@@ -2283,8 +2803,13 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Left prefrontal orbitofrontal lesion. Most likely deficit:",
+    question: "Which neurologic deficit or presentation is most likely with Left prefrontal orbitofrontal lesion?",
     options: [
+
+
+
+
+
       "Disinhibition and personality change (varies)",
       "Homonymous hemianopia",
       "Pure deafness",
@@ -2302,8 +2827,13 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Bilateral auditory cortex (Heschl's). Most likely deficit:",
+    question: "Using the values stated below, which answer is correct: Bilateral auditory cortex (Heschl's). Most likely deficit?",
     options: [
+
+
+
+
+
       "Cortical deafness or profound auditory processing deficit",
       "Monocular blindness",
       "Bitemporal hemianopia",
@@ -2321,10 +2851,15 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Unilateral cochlear nerve section. Most likely deficit:",
+    question: "Using the values stated below, which answer is correct: Unilateral cochlear nerve section. Most likely deficit?",
     options: [
+
+
+
+
+
       "Profound unilateral sensorineural hearing loss",
-      "Bilateral deafness from cortex as the primary route",
+      "Bilateral deafness from cortex",
       "Homonymous hemianopia",
       "Pure aphasia",
     ],
@@ -2340,8 +2875,13 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Right superior colliculus lesion. Most likely deficit:",
+    question: "Which neurologic deficit or presentation is most likely with Right superior colliculus lesion?",
     options: [
+
+
+
+
+
       "Contralateral visual neglect for orienting",
       "Bitemporal hemianopia",
       "Broca aphasia",
@@ -2359,8 +2899,13 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Left red nucleus (combined with nearby pathways). Most likely deficit:",
+    question: "Using the values stated below, which answer is correct: Left red nucleus (combined with nearby pathways). Most likely deficit?",
     options: [
+
+
+
+
+
       "Tremor and motor coordination issues",
       "Pure blindness",
       "Deafness",
@@ -2378,10 +2923,15 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Cervical cord syrinx expanding centrally. Most likely deficit:",
+    question: "Using the values stated below, which answer is correct: Cervical cord syrinx expanding centrally. Most likely deficit?",
     options: [
-      "Cape-like loss of pain/temp in upper limbs",
-      "DCML loss in legs first often",
+
+
+
+
+
+      "Cape-like loss of pain and temperature in upper limbs",
+      "DCML loss in legs first",
       "Bitemporal hemianopia",
       "Broca aphasia",
     ],
@@ -2397,12 +2947,17 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Tabes dorsalis (dorsal columns). Most likely deficit:",
+    question: "Using the values stated below, which answer is correct: Tabes dorsalis (dorsal columns). Most likely deficit?",
     options: [
+
+
+
+
+
       "Loss of proprioception/vibration",
-      "Pure motor UMN as the primary route",
+      "Pure motor UMN",
       "Homonymous hemianopia",
-      "Deafness as the primary route",
+      "Deafness",
     ],
     correct: 0,
     explanation: "Tabes dorsalis (dorsal columns) → Loss of proprioception/vibration; sensory ataxia; lancinating pains.",
@@ -2416,8 +2971,13 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Right middle cerebral artery stroke (left dominant hemisphere). Most likely deficit:",
+    question: "Which neurologic deficit or presentation is most likely with Right middle cerebral artery stroke (left dominant hemisphere)?",
     options: [
+
+
+
+
+
       "Left face/arm weakness; aphasia unlikely",
       "Right hemiparesis with fluent aphasia",
       "Pure homonymous hemianopia without motor weakness",
@@ -2435,8 +2995,13 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Left middle cerebral artery stroke (left dominant hemisphere). Most likely deficit:",
+    question: "Which neurologic deficit or presentation is most likely with Left middle cerebral artery stroke (left dominant hemisphere)?",
     options: [
+
+
+
+
+
       "Right face/arm weakness with aphasia",
       "Left hemiparesis without language deficit",
       "Bitemporal hemianopia",
@@ -2454,8 +3019,13 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Right middle cerebral artery stroke (right non-dominant hemisphere). Most likely deficit:",
+    question: "Which neurologic deficit or presentation is most likely with Right middle cerebral artery stroke (right non-dominant hemisphere)?",
     options: [
+
+
+
+
+
       "Left face/arm weakness",
       "Aphasia with intact comprehension",
       "Bitemporal hemianopia",
@@ -2473,12 +3043,17 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Lesion: Left pyramid (medulla) corticospinal lesion before decussation. Most likely deficit:",
+    question: "Which neurologic deficit or presentation is most likely with Left pyramid (medulla) corticospinal lesion before decussation?",
     options: [
+
+
+
+
+
       "Contralateral limb weakness (UMN) below lesion",
       "Ipsilateral limb weakness below lesion",
-      "Bilateral flaccid paralysis at lesion level as the primary route",
-      "Ipsilateral face weakness as the primary route (facial nucleus pattern)",
+      "Bilateral flaccid paralysis at lesion level",
+      "Ipsilateral face weakness (facial nucleus pattern)",
     ],
     correct: 0,
     explanation: "Left pyramid (medulla) corticospinal lesion before decussation → Contralateral limb weakness (UMN) below lesion.",
@@ -2497,6 +3072,11 @@ const PROCTORED_CIRCUIT_POOL = [
     module: "part2",
     question: "Three-neuron chain: sensory → excitatory interneuron → motor. Sensory fires; interneuron is blocked. Motor output?",
     options: [
+
+
+
+
+
       "Reduced or absent excitation of motor neuron",
       "Increased motor firing (not implied by the circuit wiring described above.)",
       "Main mechanism: neuromodulation (not implied by the circuit wiring described above.)",
@@ -2516,6 +3096,11 @@ const PROCTORED_CIRCUIT_POOL = [
     module: "part2",
     question: "Recurrent inhibition: motor neuron excites interneuron that inhibits the same motor neuron. Effect?",
     options: [
+
+
+
+
+
       "Negative feedback limiting firing duration",
       "Runaway excitation",
       "LTP",
@@ -2535,9 +3120,14 @@ const PROCTORED_CIRCUIT_POOL = [
     module: "part2",
     question: "Feedforward inhibition: sensory input excites both relay neuron and interneuron that inhibits relay. Net effect on relay timing?",
     options: [
+
+
+
+
+
       "Narrower window for relay firing",
       "Relay fires longer without limit",
-      "Relay cannot fire at all often",
+      "Relay cannot fire at all",
       "Main mechanism: gap junction coupling",
     ],
     correct: 0,
@@ -2554,9 +3144,14 @@ const PROCTORED_CIRCUIT_POOL = [
     module: "part2",
     question: "Disinhibition: inhibitory interneuron is silenced, releasing target neuron from inhibition. Target neuron activity?",
     options: [
+
+
+
+
+
       "Increases (disinhibition)",
       "Often decreases (not implied by the circuit wiring described above.)",
-      "Unchanged often (not implied by the circuit wiring described above.)",
+      "Unchanged (not implied by the circuit wiring described above.)",
       "Main mechanism: photoreceptor responds (not implied by the circuit wiring described above.)",
     ],
     correct: 0,
@@ -2573,6 +3168,11 @@ const PROCTORED_CIRCUIT_POOL = [
     module: "part2",
     question: "Reciprocal inhibition between two antagonist motor pools (flexor/extensor). When flexor pool is active, extensor pool?",
     options: [
+
+
+
+
+
       "Reciprocally inhibited (reduced firing)",
       "Co-activated equally (not implied by the circuit wiring described above.)",
       "Unrelated (not implied by the circuit wiring described above.)",
@@ -2592,8 +3192,13 @@ const PROCTORED_CIRCUIT_POOL = [
     module: "part2",
     question: "Central pattern generator (CPG) for locomotion: rhythmic output persists after sensory input ends. This implies?",
     options: [
+
+
+
+
+
       "Recurrent excitatory/inhibitory loops can sustain rhythm intrinsically",
-      "Sensory input required most cycle often (not implied by the circuit wiring described above.)",
+      "Sensory input required most cycle (not implied by the circuit wiring described above.)",
       "Main mechanism: myelin generates rhythm (not implied by the circuit wiring described above.)",
       "Main mechanism: cortex required each step (not implied by the circuit wiring described above.)",
     ],
@@ -2611,8 +3216,13 @@ const PROCTORED_CIRCUIT_POOL = [
     module: "part2",
     question: "Aplysia siphon withdrawal: strong tail shock sensitizes siphon response via serotonin on sensory terminals. Mechanism?",
     options: [
+
+
+
+
+
       "Serotonin increases cAMP/PKA and broadens sensory terminal excitability (sensitization)",
-      "Main mechanism: postsynaptic K⁺ block often (not implied by the circuit wiring described above.)",
+      "Main mechanism: postsynaptic K⁺ block (not implied by the circuit wiring described above.)",
       "Long-term depression (not implied by the circuit wiring described above.)",
       "Gap junction opening (not implied by the circuit wiring described above.)",
     ],
@@ -2630,10 +3240,15 @@ const PROCTORED_CIRCUIT_POOL = [
     module: "part2",
     question: "Summation: EPSP +5 mV and IPSP −3 mV arrive simultaneously at soma (linear range). Approximate net change?",
     options: [
-      "+2 mV toward threshold",
-      "+8 mV often (not implied by the circuit wiring described above.)",
-      "−8 mV often (not implied by the circuit wiring described above.)",
-      "0 mV often (not implied by the circuit wiring described above.)",
+
+
+
+
+
+      "2 mV toward threshold",
+      "8 mV (not implied by the circuit wiring described above.)",
+      "−8 mV (not implied by the circuit wiring described above.)",
+      "0 mV (not implied by the circuit wiring described above.)",
     ],
     correct: 0,
     explanation: "Subthreshold linear summation: +5 + (−3) ≈ +2 mV.",
@@ -2649,9 +3264,14 @@ const PROCTORED_CIRCUIT_POOL = [
     module: "part2",
     question: "Two EPSPs +3 mV each arrive 2 ms apart within τ_m. Compared with one EPSP, somatic depolarization?",
     options: [
+
+
+
+
+
       "Greater peak (temporal summation)",
-      "Same peak often (not implied by the circuit wiring described above.)",
-      "Zero often (not implied by the circuit wiring described above.)",
+      "Same peak (not implied by the circuit wiring described above.)",
+      "Zero (not implied by the circuit wiring described above.)",
       "Main mechanism: inhibition results (not implied by the circuit wiring described above.)",
     ],
     correct: 0,
@@ -2668,6 +3288,11 @@ const PROCTORED_CIRCUIT_POOL = [
     module: "part2",
     question: "Feedback inhibition in cortex: pyramidal cell activates interneuron that inhibits same pyramidal cell. Function?",
     options: [
+
+
+
+
+
       "Gain control and stabilization of firing rate",
       "Guaranteed runaway activity (not implied by the circuit wiring described above.)",
       "Main mechanism: lTP induction (not implied by the circuit wiring described above.)",
@@ -2687,6 +3312,11 @@ const PROCTORED_CIRCUIT_POOL = [
     module: "part2",
     question: "Lateral inhibition in retina: surround inhibits center. Visual edge enhancement occurs because?",
     options: [
+
+
+
+
+
       "Contrast at borders increases due to differential center vs surround firing",
       "Most pixels fire equally (not implied by the circuit wiring described above.)",
       "Main mechanism: photoreceptors spike (not implied by the circuit wiring described above.)",
@@ -2706,6 +3336,11 @@ const PROCTORED_CIRCUIT_POOL = [
     module: "part2",
     question: "Inhibitory interneuron (PV+) provides perisomatic inhibition on pyramidal cell. Effect on spike timing?",
     options: [
+
+
+
+
+
       "Precise control of spike timing and synchrony",
       "Main mechanism: increases firing rate without bound (not implied by the circuit wiring described above.)",
       "Main mechanism: blocks all input permanently (not implied by the circuit wiring described above.)",
@@ -2725,9 +3360,14 @@ const PROCTORED_CIRCUIT_POOL = [
     module: "part2",
     question: "Excitatory drive to motor neuron with concurrent shunting inhibition (open Cl⁻ channels). EPSP amplitude at soma?",
     options: [
+
+
+
+
+
       "Reduced (shunting) even if E_Cl near rest",
       "Often increased",
-      "Unchanged often",
+      "Unchanged",
       "Na⁺ blocked",
     ],
     correct: 0,
@@ -2744,6 +3384,11 @@ const PROCTORED_CIRCUIT_POOL = [
     module: "part2",
     question: "Divergent excitatory circuit: one sensory neuron drives many motor neurons. Effect?",
     options: [
+
+
+
+
+
       "Amplification/spread of signal to multiple outputs",
       "Main mechanism: one motor neuron can ever fire (not implied by the circuit wiring described above.)",
       "Main mechanism: inhibition spreads (not implied by the circuit wiring described above.)",
@@ -2763,9 +3408,14 @@ const PROCTORED_CIRCUIT_POOL = [
     module: "part2",
     question: "Convergent excitatory circuit: many sensory neurons onto one motor neuron. Effect?",
     options: [
+
+
+
+
+
       "Spatial summation can reach threshold more easily",
       "Motor neuron cannot integrate inputs (not implied by the circuit wiring described above.)",
-      "Main mechanism: one synapse matters often (not implied by the circuit wiring described above.)",
+      "Main mechanism: one synapse matters (not implied by the circuit wiring described above.)",
       "Main mechanism: gap junctions converge (not implied by the circuit wiring described above.)",
     ],
     correct: 0,
@@ -2782,6 +3432,11 @@ const PROCTORED_CIRCUIT_POOL = [
     module: "part2",
     question: "Renshaw cell recurrent inhibition on alpha motor neuron after firing. Purpose?",
     options: [
+
+
+
+
+
       "Limits firing rate and prevents over-excitation",
       "Increases firing without limit",
       "LTP at NMJ",
@@ -2801,8 +3456,13 @@ const PROCTORED_CIRCUIT_POOL = [
     module: "part2",
     question: "Mutual excitation between two neurons with slow synapses. Possible circuit behavior?",
     options: [
+
+
+
+
+
       "Sustained co-activation or oscillations depending on kinetics",
-      "Immediate silence often",
+      "Immediate silence",
       "Photopigment bleaching",
       "under standard whole-cell recording conditions.",
     ],
@@ -2823,10 +3483,15 @@ const PROCTORED_CLAMP_TRACE_POOL = [
     module: "part1",
     question: "The clamp trace shows a depolarizing step to 0 mV with early inward then late outward current (squid axon). Which currents dominate each phase?",
     options: [
+
+
+
+
+
       "Early inward Na⁺; later outward K⁺",
       "K⁺ throughout",
       "Leak current",
-      "Ca²⁺ as the primary route inward at all times",
+      "Ca²⁺ inward at all times",
     ],
     correct: 0,
     diagram: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 160\" role=\"img\" aria-label=\"HH step clamp\"><rect width=\"340\" height=\"160\" fill=\"#fafafa\"/><text x=\"170\" y=\"14\" text-anchor=\"middle\" font-size=\"10\">I (nA) vs time</text><line x1=\"30\" y1=\"130\" x2=\"310\" y2=\"130\" stroke=\"#333\"/><polyline fill=\"none\" stroke=\"#a41034\" stroke-width=\"2\" points=\"30,90 100,90 100,95 250,95\"/></svg>",
@@ -2841,8 +3506,13 @@ const PROCTORED_CLAMP_TRACE_POOL = [
   {
     topic: "Voltage Clamp",
     module: "part1",
-    question: "After TTX, the same voltage step shows only late outward current. This outward current is primarily:",
+    question: "Using the values stated below, which answer is correct: After TTX, the same voltage step shows only late outward current. This outward current is primarily?",
     options: [
+
+
+
+
+
       "Voltage-gated K⁺",
       "Na⁺ influx",
       "Photopigment current",
@@ -2861,8 +3531,13 @@ const PROCTORED_CLAMP_TRACE_POOL = [
   {
     topic: "Voltage Clamp",
     module: "part1",
-    question: "After TEA, the early inward current remains but repolarizing outward current is reduced. Early inward is:",
+    question: "Which description best applies to After TEA, the early inward current remains but repolarizing outward current is reduced. Early inward?",
     options: [
+
+
+
+
+
       "Na⁺ current (TEA blocks K⁺)",
       "Main mechanism: cl⁻ (not implied by the circuit wiring described above.)",
       "Main mechanism: pump current (not implied by the circuit wiring described above.)",
@@ -2881,8 +3556,13 @@ const PROCTORED_CLAMP_TRACE_POOL = [
   {
     topic: "Voltage Clamp",
     module: "part1",
-    question: "K⁺-only condition (Na⁺ blocked): step to −40 mV produces sustained outward current. This indicates:",
+    question: "Using the values stated below, which answer is correct: K⁺-only condition (Na⁺ blocked): step to −40 mV produces sustained outward current. This indicates?",
     options: [
+
+
+
+
+
       "K⁺ channels open at depolarized command",
       "Na⁺ regenerative spike",
       "Photopigment",
@@ -2901,8 +3581,13 @@ const PROCTORED_CLAMP_TRACE_POOL = [
   {
     topic: "Voltage Clamp",
     module: "part1",
-    question: "I–V plot shows inward current at depolarized potentials crossing zero near +55 mV. This reversal near +55 mV suggests:",
+    question: "Which anatomic lesion best explains I–V plot shows inward current at depolarized potentials crossing zero near +55 mV. This reversal near +55 mV?",
     options: [
+
+
+
+
+
       "Predominantly Na⁺ current under these conditions",
       "Predominantly K⁺ mainly at all voltages (not implied by the circuit wiring described above.)",
       "No ionic currents (not implied by the circuit wiring described above.)",
@@ -2921,10 +3606,15 @@ const PROCTORED_CLAMP_TRACE_POOL = [
   {
     topic: "Voltage Clamp",
     module: "part1",
-    question: "Current-clamp: brief hyperpolarizing current step produces exponential return with time constant τ. τ primarily reflects:",
+    question: "Using the values stated below, which answer is correct: Current-clamp: brief hyperpolarizing current step produces exponential return with time constant τ. τ primarily reflects?",
     options: [
+
+
+
+
+
       "R_m × C_m membrane properties",
-      "Axon diameter as the primary route (not implied by the circuit wiring described above.)",
+      "Axon diameter (not implied by the circuit wiring described above.)",
       "Main mechanism: synaptic quanta (not implied by the circuit wiring described above.)",
       "Main mechanism: myelin thickness without R_m (not implied by the circuit wiring described above.)",
     ],
@@ -2941,8 +3631,13 @@ const PROCTORED_CLAMP_TRACE_POOL = [
   {
     topic: "Voltage Clamp",
     module: "part1",
-    question: "Subthreshold current-clamp step produces graded depolarization without spikes. The trace shows:",
+    question: "Using the values stated below, which answer is correct: Subthreshold current-clamp step produces graded depolarization without spikes. The trace shows?",
     options: [
+
+
+
+
+
       "Passive/subthreshold response without regenerative Na⁺ activation",
       "Full action potential train (not implied by the circuit wiring described above.)",
       "Main mechanism: synaptic vesicle fusion (not implied by the circuit wiring described above.)",
@@ -2966,8 +3661,13 @@ const PROCTORED_MOCK_EXAM_POOL = [
     type: "selectAll",
     topic: "Nernst Equation",
     module: "part1",
-    question: "Proctored mock — Nernst at 37°C (61.54 mV/decade): select all true.",
+    question: "Which of the following statements about nernst Equation are correct? Select all that apply.",
     options: [
+
+
+
+
+
       "Raising external K⁺ makes E_K less negative",
       "E_Cl sign in the Nernst equation uses valence in the denominator",
       "Reversal potential is where net current for that ion is zero",
@@ -2987,8 +3687,13 @@ const PROCTORED_MOCK_EXAM_POOL = [
     type: "selectAll",
     topic: "Passive Properties",
     module: "part1",
-    question: "Proctored mock — τ and λ: select all correct.",
+    question: "Which of the following statements about passive Properties are correct? Select all that apply.",
     options: [
+
+
+
+
+
       "τ = R_m C_m",
       "λ increases if R_m rises with R_i fixed",
       "Higher leak conductance lengthens λ",
@@ -3008,8 +3713,13 @@ const PROCTORED_MOCK_EXAM_POOL = [
     type: "selectAll",
     topic: "Action Potentials",
     module: "part1",
-    question: "Proctored mock — spike phases: select all accurate.",
+    question: "Which of the following statements about action Potentials are correct? Select all that apply.",
     options: [
+
+
+
+
+
       "Na⁺ activation drives rapid depolarization",
       "Na⁺ inactivation contributes to repolarization",
       "K⁺ activation typically follows Na⁺ activation",
@@ -3029,8 +3739,13 @@ const PROCTORED_MOCK_EXAM_POOL = [
     type: "selectAll",
     topic: "Synaptic Transmission",
     module: "part2",
-    question: "Proctored mock — quantal release: select all true.",
+    question: "Which of the following statements about synaptic Transmission are correct? Select all that apply.",
     options: [
+
+
+
+
+
       "Miniature events reflect single vesicles",
       "Evoked release is probabilistic",
       "Every active zone fuses exactly one vesicle per spike",
@@ -3050,8 +3765,13 @@ const PROCTORED_MOCK_EXAM_POOL = [
     type: "selectAll",
     topic: "Plasticity",
     module: "part2",
-    question: "Proctored mock — LTD/LTP: select all supported.",
+    question: "Which of the following statements about plasticity are correct? Select all that apply.",
     options: [
+
+
+
+
+
       "Low-frequency pairing can weaken synapses (LTD)",
       "NMDA receptors detect coincident pre/post activity",
       "LTP never requires postsynaptic Ca²⁺",
@@ -3071,8 +3791,13 @@ const PROCTORED_MOCK_EXAM_POOL = [
     type: "selectAll",
     topic: "Visual System",
     module: "part3",
-    question: "Proctored mock — geniculate layers: select all true.",
+    question: "Which of the following statements about visual System are correct? Select all that apply.",
     options: [
+
+
+
+
+
       "M and P streams remain partially segregated in LGN",
       "LGN layers alternate between contralateral- and ipsilateral-eye input",
       "LGN receives only retinal input with no cortical feedback",
@@ -3092,8 +3817,13 @@ const PROCTORED_MOCK_EXAM_POOL = [
     type: "selectAll",
     topic: "Motor Systems",
     module: "part3",
-    question: "Proctored mock — corticospinal tract: select all accurate.",
+    question: "Which of the following statements about motor Systems are correct? Select all that apply.",
     options: [
+
+
+
+
+
       "Most fibers decussate in the medullary pyramids",
       "Lateral corticospinal tract controls skilled distal movement",
       "All corticospinal fibers remain ipsilateral without decussation",
@@ -3113,8 +3843,13 @@ const PROCTORED_MOCK_EXAM_POOL = [
     type: "selectAll",
     topic: "Basal Ganglia",
     module: "part3",
-    question: "Proctored mock — Parkinsonism: select all true.",
+    question: "Which of the following statements about basal Ganglia are correct? Select all that apply.",
     options: [
+
+
+
+
+
       "Dopamine loss in substantia nigra pars compacta is central",
       "Bradykinesia and rigidity are common",
       "Chorea is the hallmark of untreated Parkinson disease",
@@ -3134,8 +3869,13 @@ const PROCTORED_MOCK_EXAM_POOL = [
     type: "selectAll",
     topic: "Autonomic",
     module: "part2",
-    question: "Proctored mock — autonomic outflow: select all correct.",
+    question: "Which of the following statements about autonomic are correct? Select all that apply.",
     options: [
+
+
+
+
+
       "Sympathetic chain ganglia lie paravertebrally",
       "Parasympathetic preganglionic fibers are long",
       "All postganglionic fibers release ACh on vascular smooth muscle",
@@ -3155,8 +3895,13 @@ const PROCTORED_MOCK_EXAM_POOL = [
     type: "selectAll",
     topic: "Methods",
     module: "part3",
-    question: "Proctored mock — EEG vs unit recording: select all true.",
+    question: "Which of the following statements about methods are correct? Select all that apply.",
     options: [
+
+
+
+
+
       "Scalp EEG reflects synchronized population activity",
       "Single-unit recording resolves individual spike waveforms",
       "EEG has finer spatial resolution than fMRI always",
@@ -3176,8 +3921,13 @@ const PROCTORED_MOCK_EXAM_POOL = [
     type: "selectAll",
     topic: "Hearing",
     module: "part3",
-    question: "Proctored mock — auditory brainstem: select all accurate.",
+    question: "Which of the following statements about hearing are correct? Select all that apply.",
     options: [
+
+
+
+
+
       "Cochlear nuclei are the first CNS relay for audition",
       "Superior olivary complex computes interaural time differences",
       "Inferior colliculus is part of the tectum in midbrain",
@@ -3197,8 +3947,13 @@ const PROCTORED_MOCK_EXAM_POOL = [
     type: "selectAll",
     topic: "Sleep",
     module: "part3",
-    question: "Proctored mock — orexin/hypocretin: select all true.",
+    question: "Which of the following statements about sleep are correct? Select all that apply.",
     options: [
+
+
+
+
+
       "Loss of orexin neurons links to narcolepsy with cataplexy",
       "Orexin stabilizes wakefulness",
       "Orexin is identical to melatonin",
@@ -3218,8 +3973,13 @@ const PROCTORED_MOCK_EXAM_POOL = [
     type: "selectAll",
     topic: "Pain",
     module: "part3",
-    question: "Proctored mock — gate control (conceptual): select all supported.",
+    question: "Which of the following statements about pain are correct? Select all that apply.",
     options: [
+
+
+
+
+
       "Non-nociceptive input can modulate pain transmission",
       "Substantia gelatinosa involves interneurons in dorsal horn",
       "Pain is immutable once peripheral nociceptors fire",
@@ -3238,8 +3998,13 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Proctored mock — Right optic tract compression. Expected visual field defect:",
+    question: "Which clinical presentation is most consistent with Given Right optic tract compression, which visual field defect is expected?",
     options: [
+
+
+
+
+
       "Bitemporal hemianopia",
       "Left monocular blindness",
       "Right superior quadrantanopia",
@@ -3257,8 +4022,13 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Proctored mock — Pituitary adenoma compressing optic chiasm.",
+    question: "Which clinical presentation is most consistent with Pituitary adenoma compressing optic chiasm?",
     options: [
+
+
+
+
+
       "Left inferior quadrantanopia",
       "Bitemporal hemianopia",
       "Left monocular blindness",
@@ -3276,8 +4046,13 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Proctored mock — Right Meyer's loop (temporal lobe) destroyed.",
+    question: "Which clinical presentation is most consistent with Right Meyer's loop (temporal lobe) destroyed?",
     options: [
+
+
+
+
+
       "Left monocular blindness",
       "Right homonymous hemianopia",
       "Bitemporal loss",
@@ -3295,12 +4070,17 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Proctored mock — A lesion of the left medial lemniscus in the pons causes:",
+    question: "Which outcome is most likely when A lesion of the left medial lemniscus in the pons occurs?",
     options: [
-      "Left hemiparesis as the primary route",
+
+
+
+
+
+      "Left hemiparesis",
       "Right homonymous hemianopia",
       "Global aphasia",
-      "Right loss of vibration/proprioception",
+      "Right loss of vibration and proprioception",
     ],
     correct: 3,
     explanation: "Medial lemniscus carries dorsal column information already decussated.",
@@ -3314,12 +4094,17 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Proctored mock — Right lateral medulla (PICA) syndrome.",
+    question: "Which clinical presentation is most consistent with Right lateral medulla (PICA) syndrome?",
     options: [
-      "Pure motor hemiplegia as the primary route",
+
+
+
+
+
+      "Pure motor hemiplegia",
       "Broca aphasia",
       "Bitemporal hemianopia",
-      "Right Horner + ataxia + pain/temp loss on right face and left body",
+      "Right Horner, ataxia, pain and temperature loss on right face and left body",
     ],
     correct: 3,
     explanation: "Classic lateral medullary pattern mixes cranial nerve, cerebellar, and crossed spinothalamic findings.",
@@ -3333,11 +4118,16 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Proctored mock — Anterior spinal artery infarct at thoracic level.",
+    question: "Which clinical presentation is most consistent with Anterior spinal artery infarct at thoracic level?",
     options: [
+
+
+
+
+
       "Pure cerebellar ataxia",
-      "Isolated dorsal column loss as the primary route",
-      "Bilateral motor weakness with dissociated sensory loss (pain/temp) below lesion",
+      "Isolated dorsal column loss",
+      "Bilateral motor weakness with dissociated sensory loss (pain and temperature) below lesion",
       "Third nerve palsy",
     ],
     correct: 2,
@@ -3352,8 +4142,13 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Proctored mock — Left cerebellar hemisphere stroke.",
+    question: "Which clinical presentation is most consistent with Left cerebellar hemisphere stroke?",
     options: [
+
+
+
+
+
       "Left-sided UMN spasticity pattern",
       "Right hemianopia",
       "Bitemporal hemianopia",
@@ -3371,8 +4166,13 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Proctored mock — Left Broca area infarct in dominant hemisphere.",
+    question: "Which clinical presentation is most consistent with Left Broca area infarct in dominant hemisphere?",
     options: [
+
+
+
+
+
       "Pure alexia without motor deficit",
       "Bilateral deafness",
       "Nonfluent aphasia with relatively preserved comprehension",
@@ -3390,8 +4190,13 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Neural Circuits",
     module: "part2",
-    question: "Proctored mock — Feedforward inhibition: interneuron I inhibits principal P while both receive excitation. Net effect on P spike timing?",
+    question: "Feedforward inhibition: interneuron I inhibits principal P while both receive excitation. Net effect on P spike timing?",
     options: [
+
+
+
+
+
       "Identical to removing I",
       "Often prevents P from firing",
       "Narrows timing window for P to fire",
@@ -3409,10 +4214,15 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Neural Circuits",
     module: "part2",
-    question: "Proctored mock — Reciprocal inhibition between flexor and extensor CPG half-centers produces:",
+    question: "What does Reciprocal inhibition between flexor and extensor CPG half-centers produce?",
     options: [
-      "Random Poisson spikes as the primary route",
-      "Simultaneous flexor/extensor co-contraction often",
+
+
+
+
+
+      "Random Poisson spikes",
+      "Simultaneous flexor and extensor co-contraction",
       "Alternating burst patterns",
       "Complete silence",
     ],
@@ -3428,10 +4238,15 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Neural Circuits",
     module: "part2",
-    question: "Proctored mock — Disinhibition: inhibitory interneuron stops another inhibitor targeting P. P becomes:",
+    question: "Using the values stated below, which answer is correct: Disinhibition: inhibitory interneuron stops another inhibitor targeting P. P becomes?",
     options: [
+
+
+
+
+
       "Uncoupled from all synaptic input",
-      "Hyperpolarized below rest often",
+      "Hyperpolarized below rest",
       "More likely to fire (disinhibited)",
       "Unable to integrate EPSPs",
     ],
@@ -3447,9 +4262,14 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Electrophysiology",
     module: "part1",
-    question: "Proctored mock — TTX applied during current-clamp recording of action potential. Expected change?",
+    question: "TTX applied during current-clamp recording of action potential. Expected change?",
     options: [
-      "Blocks as the primary route afterhyperpolarization",
+
+
+
+
+
+      "Blocks afterhyperpolarization",
       "Abolishes the Na⁺-dependent upstroke",
       "Converts spikes to calcium-dominated plateaus unchanged",
       "Increases peak amplitude",
@@ -3466,9 +4286,14 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Electrophysiology",
     module: "part1",
-    question: "Proctored mock — Voltage clamp at 0 mV with normal gradients. Dominant inward current at peak of voltage step mimicking spike?",
+    question: "Voltage clamp at 0 mV with normal gradients. Dominant inward current at peak of voltage step mimicking spike?",
     options: [
-      "Sustained K⁺ current as the primary route",
+
+
+
+
+
+      "Sustained K⁺ current",
       "Exclusive Cl⁻ current",
       "No currents because 0 mV is rest",
       "Large transient Na⁺ current",
@@ -3485,9 +4310,14 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Nernst Equation",
     module: "part1",
-    question: "Proctored mock — [K⁺]o/[K⁺]i = 0.25 at 37°C. E_K is about:",
+    question: "Using the values stated below, which answer is correct: [K⁺]o/[K⁺]i = 0.25 at 37°C. E_K is about?",
     options: [
-      "+37 mV",
+
+
+
+
+
+      "37 mV",
       "0 mV",
       "−90 mV",
       "−37 mV",
@@ -3504,10 +4334,15 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Nernst Equation",
     module: "part1",
-    question: "Proctored mock — If E_K = −80 mV and V_m = −65 mV, opening K⁺ channels tends to:",
+    question: "When If E_K = −80 mV and V_m = −65 mV, opening K⁺ channels, which effect on membrane potential is most likely?",
     options: [
+
+
+
+
+
       "Hyperpolarize toward E_K",
-      "Depolarize toward 0 mV often",
+      "Depolarize toward 0 mV",
       "Have no effect on V_m",
       "Clamp V_m to E_Na",
     ],
@@ -3523,8 +4358,13 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Goldman Equation",
     module: "part1",
-    question: "Proctored mock — Only K⁺ permeant. V_m equals:",
+    question: "Under the conditions described in the stem, which value equals membrane potential?",
     options: [
+
+
+
+
+
       "Often 0 mV",
       "E_Na",
       "E_K",
@@ -3542,8 +4382,13 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Passive Properties",
     module: "part1",
-    question: "Proctored mock — R_m doubles, C_m unchanged. τ:",
+    question: "Using the values stated below, which answer is correct: R_m doubles, C_m unchanged. τ?",
     options: [
+
+
+
+
+
       "Halves",
       "Quarters",
       "Unchanged",
@@ -3561,8 +4406,13 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Passive Properties",
     module: "part1",
-    question: "Proctored mock — EPSP 5 mV at soma, threshold −50 mV, rest −65 mV. Subthreshold?",
+    question: "Given the EPSP, resting potential, and threshold in the stem, is the response subthreshold?",
     options: [
+
+
+
+
+
       "Cannot tell",
       "Often triggers spike",
       "Yes — peak −60 mV",
@@ -3580,12 +4430,17 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Synaptic Transmission",
     module: "part2",
-    question: "Proctored mock — Mini amplitude 1 mV; 100 quanta released synchronously (linear sum). Peak EPSP ~",
+    question: "Using the values stated below, which answer is correct: Mini amplitude 1 mV; 100 quanta released synchronously (linear sum). Peak EPSP ~?",
     options: [
+
+
+
+
+
       "100 mV",
-      "≈ 0 mV (same units as E_ion)",
-      "≈ 10 mV (same units as E_ion)",
-      "≈ 1 mV (same units as E_ion)",
+      "≈ 0 mV",
+      "≈ 10 mV",
+      "≈ 1 mV",
     ],
     correct: 0,
     explanation: "Linear summation of 100 × 1 mV quanta in this idealized stem.",
@@ -3599,10 +4454,15 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Synaptic Transmission",
     module: "part2",
-    question: "Proctored mock — Botulinum at NMJ reduces:",
+    question: "What does Botulinum at NMJ reduce?",
     options: [
+
+
+
+
+
       "Postsynaptic nicotinic receptors",
-      "Muscle AChE as the primary route",
+      "Muscle AChE",
       "Muscle action potential voltage-gated Na⁺",
       "Quantal ACh release",
     ],
@@ -3618,11 +4478,16 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Plasticity",
     module: "part2",
-    question: "Proctored mock — Blocking NMDA receptors during high-frequency pairing most directly prevents:",
+    question: "Which process would blocking the stated target most directly prevent during Blocking NMDA receptors during high-frequency pairing?",
     options: [
+
+
+
+
+
       "Resting K⁺ leak",
       "LTP induction",
-      "Retrograde endocannabinoid release as the primary route",
+      "Retrograde endocannabinoid release",
       "Rod phototransduction",
     ],
     correct: 1,
@@ -3637,10 +4502,15 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Sensory Systems",
     module: "part3",
-    question: "Proctored mock — Photoreceptor in dark is:",
+    question: "Which description best applies to Photoreceptor in dark?",
     options: [
+
+
+
+
+
       "Spiking at 100 Hz",
-      "Hyperpolarized below −80 mV often",
+      "Hyperpolarized below −80 mV",
       "Depolarized with steady dark current",
       "Silent electrically",
     ],
@@ -3656,8 +4526,13 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Motor Systems",
     module: "part3",
-    question: "Proctored mock — Lower motor neuron lesion causes:",
+    question: "Which outcome is most likely when Lower motor neuron lesion occurs?",
     options: [
+
+
+
+
+
       "Homonymous hemianopia",
       "Spasticity and hyperreflexia",
       "Flaccid weakness and hyporeflexia",
@@ -3675,12 +4550,17 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Language",
     module: "part3",
-    question: "Proctored mock — Wernicke area lesion in dominant hemisphere:",
+    question: "Which clinical presentation is most consistent with Wernicke area lesion in dominant hemisphere?",
     options: [
+
+
+
+
+
       "Fluent speech with poor comprehension",
       "Nonfluent speech",
       "Deafness",
-      "Pure motor hemiplegia as the primary route",
+      "Pure motor hemiplegia",
     ],
     correct: 0,
     explanation: "Wernicke aphasia is fluent but incomprehensible with poor comprehension.",
@@ -3694,8 +4574,13 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Vestibular",
     module: "part3",
-    question: "Proctored mock — Horizontal canal excitatory ampullopetal cupula deflection:",
+    question: "Which clinical presentation is most consistent with Horizontal canal excitatory ampullopetal cupula deflection?",
     options: [
+
+
+
+
+
       "Activates photoreceptors",
       "Increases afferent firing rate",
       "Silences all afferents permanently",
@@ -3713,8 +4598,13 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Neuroendocrine",
     module: "part3",
-    question: "Proctored mock — ADH release site:",
+    question: "Where is ADH released into the circulation?",
     options: [
+
+
+
+
+
       "Posterior pituitary (from hypothalamic axons)",
       "Pineal gland",
       "Adrenal medulla",
@@ -3732,9 +4622,14 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Glial Cells",
     module: "part2",
-    question: "Proctored mock — Myelin produced by oligodendrocytes in CNS:",
+    question: "Using the values stated below, which answer is correct: Myelin produced by oligodendrocytes in CNS?",
     options: [
-      "Shortens λ in axons often",
+
+
+
+
+
+      "Shortens λ in axons",
       "Is identical to Schwann cell myelin functionally",
       "Prevents all K⁺ leak",
       "Speeds saltatory conduction",
@@ -3751,9 +4646,14 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Rhythmic Motor",
     module: "part2",
-    question: "Proctored mock — Central pattern generator for walking can:",
+    question: "Which capability best describes Central pattern generator for walking?",
     options: [
-      "Require continuous conscious control for each step often",
+
+
+
+
+
+      "Require continuous conscious control for each step",
       "Produce alternating left/right bursts without sensory feedback",
       "Operate in REM sleep",
       "Not be modulated by brainstem",
@@ -3770,12 +4670,17 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Integrative",
     module: "part2",
-    question: "Proctored mock — Opening GABA_A channels at rest when E_Cl is below V_m tends to:",
+    question: "When Opening GABA_A channels at rest when E_Cl is below V_m, which effect on membrane potential is most likely?",
     options: [
+
+
+
+
+
       "Hyperpolarize or stabilize V_m",
       "Depolarize toward E_Na",
       "Abolish all synaptic release",
-      "Block the Na⁺/K⁺ pump as the primary route",
+      "Block the Na⁺/K⁺ pump",
     ],
     correct: 0,
     explanation: "Inhibitory chloride conductance pulls V_m toward E_Cl.",
@@ -3789,11 +4694,16 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Integrative",
     module: "part1",
-    question: "Proctored mock — Increasing membrane capacitance with fixed R_m changes τ by:",
+    question: "How does increasing membrane capacitance (with fixed membrane resistance) change the time constant τ?",
     options: [
+
+
+
+
+
       "Decreasing τ",
       "Eliminating λ entirely",
-      "Leaving τ unchanged often",
+      "Leaving τ unchanged",
       "Increasing τ (τ = R_m C_m)",
     ],
     correct: 3,
@@ -3808,12 +4718,17 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Integrative",
     module: "part2",
-    question: "Proctored mock — Presynaptic metabotropic autoreceptors typically:",
+    question: "Using the values stated below, which answer is correct: Presynaptic metabotropic autoreceptors typically?",
     options: [
+
+
+
+
+
       "Reduce transmitter release when activated",
       "Guarantee maximal release",
       "Convert EPSPs to action potentials in glia",
-      "Open voltage-gated Na⁺ in postsynaptic spine often",
+      "Open voltage-gated Na⁺ in postsynaptic spine",
     ],
     correct: 0,
     explanation: "Autoreceptors provide negative feedback on release.",
@@ -3827,12 +4742,17 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Integrative",
     module: "part3",
-    question: "Proctored mock — Unilateral labyrinthectomy acutely causes:",
+    question: "Which outcome is most likely when Unilateral labyrinthectomy acutely occurs?",
     options: [
+
+
+
+
+
       "Broca aphasia with nonfluent speech",
       "Bitemporal hemianopia",
       "Vertigo; slow-phase nystagmus toward the lesioned ear",
-      "Flaccid paralysis of the contralateral face as the primary route",
+      "Flaccid paralysis of the contralateral face",
     ],
     correct: 2,
     explanation: "Acute unilateral vestibular loss causes vertigo; nystagmus slow phase drifts toward the lesioned side and the fast phase beats away.",
@@ -3846,12 +4766,17 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Integrative",
     module: "part3",
-    question: "Proctored mock — Hippocampal place fields fire when:",
+    question: "Using the values stated below, which answer is correct: Hippocampal place fields fire when?",
     options: [
+
+
+
+
+
       "Light hits photoreceptors",
       "The animal occupies a preferred location in an environment",
       "Odorants bind mainly in glomeruli of cerebellum",
-      "Muscle spindles stretch as the primary route",
+      "Muscle spindles stretch",
     ],
     correct: 1,
     explanation: "Place cells encode spatial location.",
@@ -3865,8 +4790,13 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Integrative",
     module: "part2",
-    question: "Proctored mock — Electrical synapses (gap junctions) allow:",
+    question: "Using the values stated below, which answer is correct: Electrical synapses (gap junctions) allow?",
     options: [
+
+
+
+
+
       "Cl⁻ extrusion by NKCC",
       "Retrograde peptide signaling",
       "Myelination of axons",
@@ -3884,12 +4814,17 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Integrative",
     module: "part1",
-    question: "Proctored mock — In voltage clamp, holding potential is:",
+    question: "Which description best applies to In voltage clamp, holding potential?",
     options: [
-      "The same as spike threshold often",
+
+
+
+
+
+      "The same as spike threshold",
       "Measured mainly in muscle spindles",
       "The command potential the amplifier enforces across the membrane",
-      "Often +40 mV as the primary route",
+      "Often, 40 mV",
     ],
     correct: 2,
     explanation: "The clamp holds V_m at the command potential.",
@@ -3903,11 +4838,16 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Integrative",
     module: "part3",
-    question: "Proctored mock — Contralateral hemiparesis with UMN signs suggests:",
+    question: "Which anatomic lesion best explains Contralateral hemiparesis with UMN signs?",
     options: [
-      "Cochlear nucleus infarct as the primary route",
-      "Lesion of optic nerve as the primary route",
-      "Pure LMN anterior horn loss as the primary route",
+
+
+
+
+
+      "Cochlear nucleus infarct",
+      "Lesion of optic nerve",
+      "Pure LMN anterior horn loss",
       "Lesion in corticospinal tract above the spinal segment",
     ],
     correct: 3,
@@ -3922,11 +4862,16 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Integrative",
     module: "part2",
-    question: "Proctored mock — End-plate potential at NMJ is:",
+    question: "Which description best applies to End-plate potential at NMJ?",
     options: [
+
+
+
+
+
       "Generated by rods and cones",
       "Identical to inhibitory IPSP in spinal neuron",
-      "All-or-none in the muscle membrane often before initiation",
+      "All-or-none in the muscle membrane before initiation",
       "Graded and suprathreshold for muscle fiber in normal conditions",
     ],
     correct: 3,

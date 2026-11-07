@@ -18,6 +18,8 @@ const FILLER =
   /\(does not follow|inconsistent with the mechanism|not the best match|wrong visual pathway stage|wrong … stage|— inconsistent with the mechanism|does not follow from the mechanism implied/i;
 const JUNK_OPTION =
   /37\s*°?C|typical mammalian|during normal resting permeability|gap junctions relay dark current|depolarize rods in darkness|bleaching photopigment|glutamate release dominates.*dark|gap junction coupling in a typical/i;
+const FRAGMENT_STEM =
+  /^Proctored mock\s*[—–-]|^Lesion:\s*[A-Z]|\bas the primary route\b/i;
 const ABS_GIVEAWAY =
   /\b(always|never|exclusively|in all cases|without exception|cannot occur)\b/i;
 const ABS_SOFT = /\b(only|every)\b/i;
@@ -244,6 +246,19 @@ for (const [name, arr] of Object.entries(allPools)) {
       failed = true;
       report.push(`FAIL: banned placeholder text in ${name}: ${String(q.question).slice(0, 60)}…`);
       break;
+    }
+    const stem = String(q.question || "");
+    if (stem && !q.modelAnswer && q.options?.length) {
+      if (FRAGMENT_STEM.test(stem) || /\bas the primary route\b/i.test(blob)) {
+        failed = true;
+        report.push(`FAIL: fragment/junk copy in ${name}: ${stem.slice(0, 72)}…`);
+      }
+      if (!q.type || q.type !== "selectAll") {
+        if (!/[?？]\s*$/.test(stem) && !/select all that apply\.?\s*$/i.test(stem)) {
+          failed = true;
+          report.push(`FAIL: stem missing question mark in ${name}: ${stem.slice(0, 72)}…`);
+        }
+      }
     }
   }
 }

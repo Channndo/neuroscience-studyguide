@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="mcb80x-bank-build" content="20251107l">
+  <meta name="mcb80x-bank-build" content="20251107m">
   <link rel="icon" href="favicon.svg" type="image/svg+xml" sizes="any">
   <link rel="alternate icon" href="favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -3466,22 +3466,23 @@
   </div>
 
   <footer>
-    Fisher-Yates shuffle on every quiz start &middot; HarvardX MCB80x curriculum alignment &middot; bank build 20251107l
+    Fisher-Yates shuffle on every quiz start &middot; HarvardX MCB80x curriculum alignment &middot; bank build 20251107m
     &middot; <button type="button" class="footer-link-btn" id="footer-go-downloads">Downloads</button>
   </footer>
 
-  <script src="explanation-feedback.js?v=20251107l"></script>
-  <script src="questions-bank.js?v=20251107l"></script>
-  <script src="questions-extra-pools.js?v=20251107l"></script>
-  <script src="questions-fresh-pools.js?v=20251107l"></script>
-  <script src="questions-expansion.js?v=20251107l"></script>
-  <script src="questions-exam-paraphrases.js?v=20251107l"></script>
-  <script src="questions-written-final.js?v=20251107l"></script>
-  <script src="questions-proctored-mock.js?v=20251107l"></script>
-  <script src="questions-formula-drills.js?v=20251107l"></script>
-  <script src="questions-pinnacle-megabank.js?v=20251107l"></script>
-  <script src="brain-anatomy-diagrams.js?v=20251107l"></script>
-  <script src="questions-brain-anatomy.js?v=20251107l"></script>
+  <script src="question-copy-polish.js?v=20251107m"></script>
+  <script src="explanation-feedback.js?v=20251107m"></script>
+  <script src="questions-bank.js?v=20251107m"></script>
+  <script src="questions-extra-pools.js?v=20251107m"></script>
+  <script src="questions-fresh-pools.js?v=20251107m"></script>
+  <script src="questions-expansion.js?v=20251107m"></script>
+  <script src="questions-exam-paraphrases.js?v=20251107m"></script>
+  <script src="questions-written-final.js?v=20251107m"></script>
+  <script src="questions-proctored-mock.js?v=20251107m"></script>
+  <script src="questions-formula-drills.js?v=20251107m"></script>
+  <script src="questions-pinnacle-megabank.js?v=20251107m"></script>
+  <script src="brain-anatomy-diagrams.js?v=20251107m"></script>
+  <script src="questions-brain-anatomy.js?v=20251107m"></script>
   <script src="mcb80x-cloud-config.js"></script>
   <script src="sheets-sync.js"></script>
   <script src="oauth-client.js"></script>
@@ -3697,7 +3698,16 @@
       let t = String(opt ?? "").trim();
       if (!t) return t;
       for (const re of GIVEAWAY_OPTION_FILLER_RES) t = t.replace(re, "");
-      return t.replace(/\s{2,}/g, " ").replace(/\s+\./g, ".").trim();
+      t = t.replace(/\s{2,}/g, " ").replace(/\s+\./g, ".").trim();
+      if (typeof QuestionCopyPolish !== "undefined") {
+        t = QuestionCopyPolish.polishOption(t);
+      }
+      return t;
+    }
+
+    function polishMcqQuestion(q) {
+      if (typeof QuestionCopyPolish === "undefined") return q;
+      return QuestionCopyPolish.polishQuestion(q);
     }
 
     function repairMissingMcqOptions(q) {
@@ -7975,7 +7985,9 @@
             explanation: q.modelAnswer
           };
         }
-        const surfaced = repairMissingMcqOptions(applyExamSurfaceVariant(q, quizId));
+        const surfaced = repairMissingMcqOptions(
+          applyExamSurfaceVariant(polishMcqQuestion(q), quizId)
+        );
         const indexed = surfaced.options.map((text, i) => ({ text, originalIndex: i }));
         const shuffledOpts = shuffle(indexed);
         if (isSelectAllQuestion(surfaced)) {

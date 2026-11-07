@@ -5,7 +5,7 @@ const WRITTEN_EXAM_POOL = [
     type: "shortAnswer",
     topic: "Resting Potential",
     module: "part1",
-    question: "Explain why the resting membrane potential of a typical neuron lies closer to E_K than to E_Na, even though both ions are present.",
+    question: "Which answer best matches this scenario: Explain why the resting membrane potential of a typical neuron lies closer to E_K than to E_Na, even though both ions are present?",
     modelAnswer: "At rest, membrane permeability is dominated by K⁺ leak channels, so V_m is weighted toward E_K by the Goldman/constant-field relation; Na⁺ permeability is comparatively low, so E_Na has less influence until depolarization opens Na⁺ channels.",
     minChars: 40
   },
@@ -13,7 +13,7 @@ const WRITTEN_EXAM_POOL = [
     type: "shortAnswer",
     topic: "Nernst Equation",
     module: "part1",
-    question: "If extracellular K⁺ is raised, predict the direction of change in E_K and in resting V_m (qualitatively). Briefly justify using the Nernst/logic of gradients.",
+    question: "If extracellular K⁺ is raised, predict the direction of change in E_K and in resting V_m (qualitatively). Briefly justify using the Nernst/logic of gradients?",
     modelAnswer: "Raising external K⁺ reduces the K⁺ concentration gradient, shifting E_K toward 0 mV (less negative). Resting V_m depolarizes toward the new E_K because K⁺ still dominates resting permeability.",
     minChars: 40
   },
@@ -21,7 +21,7 @@ const WRITTEN_EXAM_POOL = [
     type: "shortAnswer",
     topic: "Action Potentials",
     module: "part1",
-    question: "Describe the ionic basis of the rising phase, peak, and falling phase of a single action potential.",
+    question: "Which answer best matches this scenario: Describe the ionic basis of the rising phase, peak, and falling phase of a single action potential?",
     modelAnswer: "Rising phase: voltage-gated Na⁺ influx. Peak: balance of inward Na⁺ and outward K⁺. Falling phase: delayed-rectifier K⁺ efflux dominates as Na⁺ inactivates, repolarizing the membrane.",
     minChars: 50
   },
@@ -29,7 +29,7 @@ const WRITTEN_EXAM_POOL = [
     type: "shortAnswer",
     topic: "Action Potential Propagation",
     module: "part1",
-    question: "Contrast continuous conduction in unmyelinated axons with saltatory conduction in myelinated axons.",
+    question: "Which answer best matches this scenario: Contrast continuous conduction in unmyelinated axons with saltatory conduction in myelinated axons?",
     modelAnswer: "Unmyelinated: active regeneration sequentially along the axon. Myelinated: depolarization jumps between nodes of Ranvier where Na⁺ channels are concentrated, increasing velocity and saving metabolic cost.",
     minChars: 45
   },
@@ -53,7 +53,7 @@ const WRITTEN_EXAM_POOL = [
     type: "shortAnswer",
     topic: "Synaptic Transmission",
     module: "part2",
-    question: "Outline the chain of events from presynaptic action potential arrival to quantal neurotransmitter release.",
+    question: "Which answer best matches this scenario: Outline the chain of events from presynaptic action potential arrival to quantal neurotransmitter release?",
     modelAnswer: "Terminal depolarization → voltage-gated Ca²⁺ influx → Ca²⁺ sensor on release machinery → SNARE-mediated vesicle fusion → quantal transmitter release into the cleft.",
     minChars: 45
   },
@@ -61,7 +61,7 @@ const WRITTEN_EXAM_POOL = [
     type: "shortAnswer",
     topic: "Receptor Types",
     module: "part2",
-    question: "Compare ionotropic and metabotropic receptors in terms of speed and typical downstream effects.",
+    question: "Which answer best matches this scenario: Compare ionotropic and metabotropic receptors in terms of speed and typical downstream effects?",
     modelAnswer: "Ionotropic: ligand-gated ion channels, fast ms-scale postsynaptic potentials. Metabotropic: G-protein coupled, slower modulation via second messengers/enzymes affecting channels and gene expression.",
     minChars: 45
   },
@@ -69,7 +69,7 @@ const WRITTEN_EXAM_POOL = [
     type: "shortAnswer",
     topic: "Synaptic Integration",
     module: "part2",
-    question: "Explain temporal summation versus spatial summation at the axon initial segment.",
+    question: "Which answer best matches this scenario: Explain temporal summation versus spatial summation at the axon initial segment?",
     modelAnswer: "Temporal: multiple inputs at one synapse within τ add depolarization. Spatial: simultaneous inputs from different synapses add at the soma/initial segment. Both can bring V_m toward threshold.",
     minChars: 45
   },
@@ -93,7 +93,7 @@ const WRITTEN_EXAM_POOL = [
     type: "shortAnswer",
     topic: "Neural Circuits",
     module: "part2",
-    question: "Give an example of lateral inhibition and state what computational role it serves in sensory systems.",
+    question: "Which answer best matches this scenario: Give an example of lateral inhibition and state what computational role it serves in sensory systems?",
     modelAnswer: "Example: retinal horizontal/amacrine inhibition sharpens center-surround receptive fields, enhancing contrast between stimulated and neighboring regions.",
     minChars: 40
   },
@@ -109,7 +109,7 @@ const WRITTEN_EXAM_POOL = [
     type: "shortAnswer",
     topic: "Auditory System",
     module: "part3",
-    question: "Explain tonotopic organization on the basilar membrane and its relation to place theory of pitch.",
+    question: "Which answer best matches this scenario: Explain tonotopic organization on the basilar membrane and its relation to place theory of pitch?",
     modelAnswer: "Basilar stiffness/mass varies along the cochlea so each location resonates best at a different frequency; nerve fibers inherit that place code for pitch.",
     minChars: 40
   },
@@ -117,7 +117,7 @@ const WRITTEN_EXAM_POOL = [
     type: "shortAnswer",
     topic: "Somatosensation",
     module: "part3",
-    question: "Contrast the dorsal column–medial lemniscus pathway with the spinothalamic pathway in terms of modality.",
+    question: "Which answer best matches this scenario: Contrast the dorsal column–medial lemniscus pathway with the spinothalamic pathway in terms of modality?",
     modelAnswer: "DCML: discriminative touch, vibration, proprioception. Spinothalamic: pain and temperature. Both reach thalamus/cortex but serve different modalities.",
     minChars: 40
   },
@@ -133,7 +133,7 @@ const WRITTEN_EXAM_POOL = [
     type: "shortAnswer",
     topic: "Motor Systems",
     module: "part3",
-    question: "Describe the role of the cerebellum in motor control using the idea of error correction.",
+    question: "Which answer best matches this scenario: Describe the role of the cerebellum in motor control using the idea of error correction?",
     modelAnswer: "Cerebellum compares predicted sensory consequences of movement with actual feedback (and climbing fiber error signals) to adjust timing and accuracy of motor commands.",
     minChars: 45
   },
@@ -165,7 +165,7 @@ const WRITTEN_EXAM_POOL = [
     type: "shortAnswer",
     topic: "Goldman Equation",
     module: "part1",
-    question: "Given [K⁺]_in=140, [K⁺]_out=5, [Na⁺]_in=15, [Na⁺]_out=145 mM at 37°C, estimate resting V_m if P_K:P_Na = 1:0.05 (ignore Cl⁻). Show reasoning qualitatively.",
+    question: "Given [K⁺]_in=140, [K⁺]_out=5, [Na⁺]_in=15, [Na⁺]_out=145 mM at 37°C, estimate resting V_m if P_K:P_Na = 1:0.05 (ignore Cl⁻). Show reasoning qualitatively?",
     modelAnswer: "Nernst: E_K ≈ −89.1 mV and E_Na ≈ +60.6 mV (37°C, 61.54 mV/decade). Goldman with P_K:P_Na = 1:0.05 (ignore Cl⁻): V_m ≈ −65.3 mV from weighted permeability and concentrations.\n\nMarking checklist: cites E_K ≈ −89 mV and E_Na ≈ +61 mV; uses Goldman (not Nernst alone); resting V_m near −65 mV with K⁺-weighted permeability.",
     minChars: 50
   },
@@ -197,7 +197,7 @@ const WRITTEN_EXAM_POOL = [
     type: "shortAnswer",
     topic: "Motor Systems",
     module: "part2",
-    question: "Describe reciprocal inhibition in a spinal stretch reflex.",
+    question: "Which answer best matches this scenario: Describe reciprocal inhibition in a spinal stretch reflex?",
     modelAnswer: "Ia afferents excite agonist α-motor neurons and Ia inhibitory interneurons that suppress antagonist α-motor neurons, coordinating agonist contraction with antagonist relaxation.\n\nMarking checklist: Ia afferent; agonist excitation; inhibitory interneuron; antagonist relaxation.",
     minChars: 40
   },
@@ -205,7 +205,7 @@ const WRITTEN_EXAM_POOL = [
     type: "shortAnswer",
     topic: "Synaptic Plasticity Rules",
     module: "part2",
-    question: "Contrast habituation and sensitization in Aplysia gill-withdrawal.",
+    question: "Which answer best matches this scenario: Contrast habituation and sensitization in Aplysia gill-withdrawal?",
     modelAnswer: "Habituation decreases presynaptic release from repeated benign stimulation; sensitization increases release after noxious shock via serotonergic facilitation.\n\nMarking checklist: habituation = decreased release; sensitization = modulatory facilitation; mentions serotonin or tail shock.",
     minChars: 40
   },
@@ -213,7 +213,7 @@ const WRITTEN_EXAM_POOL = [
     type: "shortAnswer",
     topic: "Clinical Correlates",
     module: "part3",
-    question: "Explain why a right optic tract lesion causes left homonymous hemianopia.",
+    question: "Which clinical presentation is most consistent with Explain why a right optic tract lesion causes left homonymous hemianopia?",
     modelAnswer: "Nasal retinal fibers cross at the chiasm; temporal fibers stay ipsilateral. Post-chiasmal tracts carry contralateral visual field information, so right tract damage removes left field in both eyes.\n\nMarking checklist: post-chiasmal; contralateral field; both eyes affected; left field loss.",
     minChars: 45
   },
@@ -221,7 +221,7 @@ const WRITTEN_EXAM_POOL = [
     type: "shortAnswer",
     topic: "Language",
     module: "part3",
-    question: "Compare Broca and Wernicke aphasia in fluency and comprehension.",
+    question: "Which answer best matches this scenario: Compare Broca and Wernicke aphasia in fluency and comprehension?",
     modelAnswer: "Broca: nonfluent, effortful speech, relatively preserved comprehension. Wernicke: fluent but impaired comprehension with paraphasic content.\n\nMarking checklist: Broca nonfluent; Wernicke fluent; comprehension contrast.",
     minChars: 40
   },
@@ -237,7 +237,7 @@ const WRITTEN_EXAM_POOL = [
     type: "shortAnswer",
     topic: "Gustation",
     module: "part3",
-    question: "Outline the path from taste receptor to gustatory cortex.",
+    question: "Which answer best matches this scenario: Outline the path from taste receptor to gustatory cortex?",
     modelAnswer: "Taste bud cells → cranial nerve afferents (VII, IX, X) → nucleus of solitary tract → thalamus (VPM) → insular/gustatory cortex.\n\nMarking checklist: taste bud; brainstem NST; thalamus; cortex.",
     minChars: 40
   }
