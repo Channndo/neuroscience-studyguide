@@ -1,6 +1,6 @@
 # Question Bank Review
 
-**Status:** Phase 0 — inventory only  
+**Status:** Phase 1 partial — `PROCTORED_SATA_POOL` keys 0–11 and 38–49 corrected on `qa/comprehensive-remediation`; full bank not audited  
 **Reviewer workflow:** Independent verification per statement (SATA) and per MCQ key; `reviewStatus` + `sourceReferences` on migration.
 
 ## Scope (deployed sources)
