@@ -6,6 +6,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Nernst Equation",
     module: "part1",
     question: "Which of the following statements about nernst Equation are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -36,6 +39,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Action Potentials",
     module: "part1",
     question: "Which of the following statements about action Potentials are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -66,6 +72,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Passive Membrane Properties",
     module: "part1",
     question: "Which of the following statements about passive Membrane Properties are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -96,6 +105,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Goldman Equation",
     module: "part1",
     question: "Which of the following statements about goldman Equation are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -126,6 +138,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Synaptic Transmission",
     module: "part2",
     question: "Which of the following statements about synaptic Transmission are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -156,6 +171,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Synaptic Integration",
     module: "part2",
     question: "Which of the following statements about synaptic Integration are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -186,6 +204,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Long-Term Plasticity",
     module: "part2",
     question: "Which of the following statements about long-Term Plasticity are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -216,6 +237,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Visual System",
     module: "part3",
     question: "Which of the following statements about visual System are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -246,6 +270,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Auditory System",
     module: "part3",
     question: "Which of the following statements about hearing are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -276,6 +303,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Motor Systems",
     module: "part3",
     question: "Which of the following statements about motor Systems are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -306,6 +336,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Neuroanatomy",
     module: "part3",
     question: "Which of the following statements about neuroanatomy are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -336,6 +369,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Learning & Memory",
     module: "part3",
     question: "Which of the following statements about learning & Memory are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -366,6 +402,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Electrical Signaling",
     module: "part1",
     question: "Which of the following statements about electrical Signaling are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -396,6 +435,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Neuromodulation",
     module: "part2",
     question: "Which of the following statements about neuromodulation are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -426,6 +468,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Somatosensation",
     module: "part3",
     question: "Which of the following statements about somatosensation are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -456,6 +501,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Chemical Synapses",
     module: "part2",
     question: "Which of the following statements about chemical Synapses are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -486,6 +534,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Action Potential Propagation",
     module: "part1",
     question: "Which of the following statements about action Potential Propagation are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -516,6 +567,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Gustation",
     module: "part3",
     question: "Which of the following statements about gustation are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -546,6 +600,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Pharmacology",
     module: "part1",
     question: "Which of the following statements about pharmacology are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -576,6 +633,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Neural Circuits",
     module: "part2",
     question: "Which of the following statements about neural Circuits are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -606,6 +666,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Ion Channels",
     module: "part1",
     question: "Which of the following statements about ion Channels are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -636,6 +699,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Passive Properties",
     module: "part1",
     question: "Which of the following statements about passive Properties are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -653,7 +719,7 @@ const PROCTORED_SATA_POOL = [
     ],
     correctIndices: [0,1,3],
     scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
-    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    explanation: "E_K follows the K⁺ outside/inside ratio (Nernst). Reversal potential is where net ionic current for that ion is zero. Anions use the same log form with signed valence. E_Na is not independent of Na⁺ concentrations.",
     wrongExplanations: [
       "",
       "",
@@ -666,6 +732,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Synaptic Plasticity",
     module: "part2",
     question: "Which of the following statements about synaptic Plasticity are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -696,6 +765,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Sensory Transduction",
     module: "part3",
     question: "Which of the following statements about sensory Transduction are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -713,7 +785,7 @@ const PROCTORED_SATA_POOL = [
     ],
     correctIndices: [0,3],
     scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
-    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    explanation: "Na⁺ channels activate before delayed K⁺ drives repolarization; Na⁺ inactivation limits the peak. Resting potential is not set only by E_Na, and unmyelinated axons can still spike.",
     wrongExplanations: [
       "",
       "ON bipolars depolarize when glutamate falls; that statement alone is false as written.",
@@ -726,6 +798,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Motor Systems",
     module: "part3",
     question: "Which of the following statements about motor Systems are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -756,6 +831,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Basal Ganglia",
     module: "part3",
     question: "Which of the following statements about basal Ganglia are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -773,7 +851,7 @@ const PROCTORED_SATA_POOL = [
     ],
     correctIndices: [0,1,2],
     scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
-    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    explanation: "mEPSPs reflect single-vesicle release; evoked release adds quanta stochastically; Ca²⁺ triggers SNARE-mediated fusion. Active zones do not each release exactly one vesicle per spike.",
     wrongExplanations: [
       "",
       "",
@@ -786,6 +864,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Autonomic Neuroscience",
     module: "part2",
     question: "Which of the following statements about autonomic Neuroscience are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -803,7 +884,7 @@ const PROCTORED_SATA_POOL = [
     ],
     correctIndices: [0,1,3],
     scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
-    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    explanation: "Optic nerve axons are retinal ganglion cells; LGN relays to primary visual cortex; nasal retinal fibers cross at the chiasm mapping contralateral hemifields. Most retinal output does not synapse only in the superior colliculus.",
     wrongExplanations: [
       "",
       "",
@@ -816,6 +897,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Neurotransmitters",
     module: "part2",
     question: "Which of the following statements about neurotransmitters are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -833,7 +917,7 @@ const PROCTORED_SATA_POOL = [
     ],
     correctIndices: [0,1,3],
     scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
-    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    explanation: "Lower motor neurons in the ventral horn receive corticospinal and interneuron input and innervate muscle through motor units. They are not the same as upper motor neurons.",
     wrongExplanations: [
       "",
       "",
@@ -846,6 +930,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Development",
     module: "part2",
     question: "Which of the following statements about development are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -876,6 +963,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Methods",
     module: "part3",
     question: "Which of the following statements about methods are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -906,6 +996,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Hearing",
     module: "part3",
     question: "Which of the following statements about hearing are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -936,6 +1029,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Sleep",
     module: "part3",
     question: "Which of the following statements about sleep are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -966,6 +1062,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Pain",
     module: "part3",
     question: "Which of the following statements about pain are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -996,6 +1095,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Cerebellum",
     module: "part3",
     question: "Which of the following statements about cerebellum are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1026,6 +1128,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Memory",
     module: "part3",
     question: "Which of the following statements about memory are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1056,6 +1161,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Neuroendocrine",
     module: "part3",
     question: "Which of the following statements about neuroendocrine are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1086,6 +1194,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Glial Cells",
     module: "part2",
     question: "Which of the following statements about glial Cells are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1116,6 +1227,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Retina",
     module: "part3",
     question: "Which of the following statements about retina are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1146,6 +1260,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Epilepsy",
     module: "part3",
     question: "Which of the following statements about epilepsy are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1176,6 +1293,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Neurodegeneration",
     module: "part3",
     question: "Which of the following statements about neurodegeneration are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1206,6 +1326,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Language",
     module: "part3",
     question: "Which of the following statements about language are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1236,6 +1359,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Vestibular",
     module: "part3",
     question: "Which of the following statements about vestibular are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1266,6 +1392,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Spinal Cord",
     module: "part3",
     question: "Which of the following statements about spinal Cord are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1296,6 +1425,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Neuromuscular",
     module: "part2",
     question: "Which of the following statements about neuromuscular are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1326,6 +1458,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Rhythmic Motor",
     module: "part2",
     question: "Which of the following statements about rhythmic Motor are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1356,6 +1491,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Ion Homeostasis",
     module: "part1",
     question: "Which of the following statements about ion Homeostasis are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1386,6 +1524,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Receptors",
     module: "part2",
     question: "Which of the following statements about receptors are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1416,6 +1557,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Olfactory System",
     module: "part3",
     question: "Which of the following statements about olfactory System are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1446,6 +1590,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Gustation",
     module: "part3",
     question: "Which of the following statements about gustation are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1476,6 +1623,9 @@ const PROCTORED_SATA_POOL = [
     topic: "Computational",
     module: "part1",
     question: "Which of the following statements about computational are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1508,6 +1658,9 @@ const PROCTORED_LESION_POOL = [
     topic: "Visual System",
     module: "part3",
     question: "Which clinical presentation is most consistent with Left optic tract lesion?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1532,6 +1685,9 @@ const PROCTORED_LESION_POOL = [
     topic: "Visual System",
     module: "part3",
     question: "Which clinical presentation is most consistent with Optic chiasm compression (pituitary)?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1555,7 +1711,7 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Visual System",
     module: "part3",
-    question: "Using the values stated below, which answer is correct: Right Meyer's loop (temporal) damage?",
+    question: "Right Meyer's loop (temporal) damage?",
     options: [
 
 
@@ -1579,7 +1735,10 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Motor Systems",
     module: "part3",
-    question: "Using the values stated below, which answer is correct: Left medullary pyramid (corticospinal fibers before decussation). Most likely deficit?",
+    question: "Left medullary pyramid (corticospinal fibers before decussation). Most likely deficit?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1603,7 +1762,10 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Motor Systems",
     module: "part3",
-    question: "Using the values stated below, which answer is correct: Complete spinal hemisection at T10 (Brown-Séquard)?",
+    question: "Complete spinal hemisection at T10 (Brown-Séquard)?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1628,6 +1790,9 @@ const PROCTORED_LESION_POOL = [
     topic: "Motor Systems",
     module: "part3",
     question: "Which clinical presentation is most consistent with Anterior spinal artery syndrome at thoracic level?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1652,6 +1817,9 @@ const PROCTORED_LESION_POOL = [
     topic: "Neuroanatomy",
     module: "part3",
     question: "Which neurologic deficit or presentation is most likely with Right middle cerebral artery stroke (non-dominant hemisphere)?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1676,6 +1844,9 @@ const PROCTORED_LESION_POOL = [
     topic: "Neuroanatomy",
     module: "part3",
     question: "Which clinical presentation is most consistent with Broca area (left frontal) lesion?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1700,6 +1871,9 @@ const PROCTORED_LESION_POOL = [
     topic: "Neuroanatomy",
     module: "part3",
     question: "Which clinical presentation is most consistent with Wernicke area lesion?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1723,7 +1897,7 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Learning & Memory",
     module: "part3",
-    question: "Using the values stated below, which answer is correct: Bilateral hippocampal damage?",
+    question: "Bilateral hippocampal damage?",
     options: [
 
 
@@ -1748,6 +1922,9 @@ const PROCTORED_LESION_POOL = [
     topic: "Motor Systems",
     module: "part3",
     question: "Which clinical presentation is most consistent with Cerebellar hemisphere lesion?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1771,7 +1948,10 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Motor Systems",
     module: "part3",
-    question: "Using the values stated below, which answer is correct: Basal ganglia dopamine loss (Parkinson)?",
+    question: "Basal ganglia dopamine loss (Parkinson)?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1795,7 +1975,7 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Auditory System",
     module: "part3",
-    question: "Using the values stated below, which answer is correct: Unilateral cochlear nerve section?",
+    question: "Unilateral cochlear nerve section?",
     options: [
 
 
@@ -1820,6 +2000,9 @@ const PROCTORED_LESION_POOL = [
     topic: "Somatosensation",
     module: "part3",
     question: "Which clinical presentation is most consistent with Right dorsal column lesion at C5?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1844,6 +2027,9 @@ const PROCTORED_LESION_POOL = [
     topic: "Somatosensation",
     module: "part3",
     question: "Which clinical presentation is most consistent with Left spinothalamic tract lesion at T6?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1867,7 +2053,10 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Using the values stated below, which answer is correct: Left optic nerve. Most likely deficit?",
+    question: "Left optic nerve. Most likely deficit?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1891,7 +2080,7 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Using the values stated below, which answer is correct: Right optic nerve. Most likely deficit?",
+    question: "Right optic nerve. Most likely deficit?",
     options: [
 
 
@@ -1916,6 +2105,9 @@ const PROCTORED_LESION_POOL = [
     topic: "Clinical Neuroanatomy",
     module: "part3",
     question: "Which neurologic deficit or presentation is most likely with Optic chiasm (pituitary adenoma)?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1940,6 +2132,9 @@ const PROCTORED_LESION_POOL = [
     topic: "Clinical Neuroanatomy",
     module: "part3",
     question: "Which neurologic deficit or presentation is most likely with Right optic tract?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1964,6 +2159,9 @@ const PROCTORED_LESION_POOL = [
     topic: "Clinical Neuroanatomy",
     module: "part3",
     question: "Which neurologic deficit or presentation is most likely with Left optic tract?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1987,7 +2185,10 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Using the values stated below, which answer is correct: Right Meyer's loop (temporal lobe). Most likely deficit?",
+    question: "Right Meyer's loop (temporal lobe). Most likely deficit?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2011,7 +2212,10 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Using the values stated below, which answer is correct: Left Meyer's loop (temporal lobe). Most likely deficit?",
+    question: "Left Meyer's loop (temporal lobe). Most likely deficit?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2035,7 +2239,10 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Using the values stated below, which answer is correct: Right occipital lobe (V1). Most likely deficit?",
+    question: "Right occipital lobe (V1). Most likely deficit?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2059,7 +2266,10 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Using the values stated below, which answer is correct: Left occipital lobe (V1). Most likely deficit?",
+    question: "Left occipital lobe (V1). Most likely deficit?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2083,7 +2293,10 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Using the values stated below, which answer is correct: Right lateral geniculate nucleus. Most likely deficit?",
+    question: "Right lateral geniculate nucleus. Most likely deficit?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2107,7 +2320,10 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Using the values stated below, which answer is correct: Left medial longitudinal fasciculus (MLF). Most likely deficit?",
+    question: "Left medial longitudinal fasciculus (MLF). Most likely deficit?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2131,7 +2347,10 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Using the values stated below, which answer is correct: Right abducens (CN VI) nucleus. Most likely deficit?",
+    question: "Right abducens (CN VI) nucleus. Most likely deficit?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2156,6 +2375,9 @@ const PROCTORED_LESION_POOL = [
     topic: "Clinical Neuroanatomy",
     module: "part3",
     question: "Which neurologic deficit or presentation is most likely with Left facial nerve (CN VII) peripheral lesion?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2179,7 +2401,10 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Using the values stated below, which answer is correct: Right hypoglossal (CN XII) nerve. Most likely deficit?",
+    question: "Right hypoglossal (CN XII) nerve. Most likely deficit?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2204,6 +2429,9 @@ const PROCTORED_LESION_POOL = [
     topic: "Clinical Neuroanatomy",
     module: "part3",
     question: "Which neurologic deficit or presentation is most likely with Unilateral vestibular nerve lesion?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2227,7 +2455,10 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Using the values stated below, which answer is correct: Right medial lemniscus in medulla. Most likely deficit?",
+    question: "Right medial lemniscus in medulla. Most likely deficit?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2252,6 +2483,9 @@ const PROCTORED_LESION_POOL = [
     topic: "Clinical Neuroanatomy",
     module: "part3",
     question: "Which neurologic deficit or presentation is most likely with Left spinothalamic tract at T6?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2275,7 +2509,10 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Using the values stated below, which answer is correct: Right dorsal column at C5. Most likely deficit?",
+    question: "Right dorsal column at C5. Most likely deficit?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2299,7 +2536,10 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Using the values stated below, which answer is correct: Complete spinal hemisection at T10 (Brown-Séquard). Most likely deficit?",
+    question: "Complete spinal hemisection at T10 (Brown-Séquard). Most likely deficit?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2324,6 +2564,9 @@ const PROCTORED_LESION_POOL = [
     topic: "Clinical Neuroanatomy",
     module: "part3",
     question: "Which neurologic deficit or presentation is most likely with Anterior spinal artery syndrome (thoracic)?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2348,6 +2591,9 @@ const PROCTORED_LESION_POOL = [
     topic: "Clinical Neuroanatomy",
     module: "part3",
     question: "Which neurologic deficit or presentation is most likely with Central cord syndrome (cervical)?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2372,6 +2618,9 @@ const PROCTORED_LESION_POOL = [
     topic: "Clinical Neuroanatomy",
     module: "part3",
     question: "Which neurologic deficit or presentation is most likely with Cauda equina compression?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2396,6 +2645,9 @@ const PROCTORED_LESION_POOL = [
     topic: "Clinical Neuroanatomy",
     module: "part3",
     question: "Which neurologic deficit or presentation is most likely with Right cerebellar hemisphere?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2419,7 +2671,7 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Using the values stated below, which answer is correct: Cerebellar vermis. Most likely deficit?",
+    question: "Cerebellar vermis. Most likely deficit?",
     options: [
 
 
@@ -2443,7 +2695,10 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Using the values stated below, which answer is correct: Left basal ganglia (Parkinsonian pattern). Most likely deficit?",
+    question: "Left basal ganglia (Parkinsonian pattern). Most likely deficit?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2467,7 +2722,10 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Using the values stated below, which answer is correct: Right thalamic VPL nucleus. Most likely deficit?",
+    question: "Right thalamic VPL nucleus. Most likely deficit?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2491,7 +2749,10 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Using the values stated below, which answer is correct: Left thalamic language-related nuclei (dominant). Most likely deficit?",
+    question: "Left thalamic language-related nuclei (dominant). Most likely deficit?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2515,7 +2776,10 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Using the values stated below, which answer is correct: Bilateral hippocampal damage. Most likely deficit?",
+    question: "Bilateral hippocampal damage. Most likely deficit?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2539,7 +2803,10 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Using the values stated below, which answer is correct: Bilateral amygdala (selective). Most likely deficit?",
+    question: "Bilateral amygdala (selective). Most likely deficit?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2563,7 +2830,10 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Using the values stated below, which answer is correct: Left Broca area. Most likely deficit?",
+    question: "Left Broca area. Most likely deficit?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2587,7 +2857,10 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Using the values stated below, which answer is correct: Left Wernicke area. Most likely deficit?",
+    question: "Left Wernicke area. Most likely deficit?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2612,6 +2885,9 @@ const PROCTORED_LESION_POOL = [
     topic: "Clinical Neuroanatomy",
     module: "part3",
     question: "Which neurologic deficit or presentation is most likely with Arcuate fasciculus (dominant hemisphere)?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2636,6 +2912,9 @@ const PROCTORED_LESION_POOL = [
     topic: "Clinical Neuroanatomy",
     module: "part3",
     question: "Which neurologic deficit or presentation is most likely with Right parietal neglect syndrome?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2659,7 +2938,10 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Using the values stated below, which answer is correct: Left primary motor cortex (hand area). Most likely deficit?",
+    question: "Left primary motor cortex (hand area). Most likely deficit?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2683,7 +2965,10 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Using the values stated below, which answer is correct: Right primary motor cortex (leg area). Most likely deficit?",
+    question: "Right primary motor cortex (leg area). Most likely deficit?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2708,6 +2993,9 @@ const PROCTORED_LESION_POOL = [
     topic: "Clinical Neuroanatomy",
     module: "part3",
     question: "Which neurologic deficit or presentation is most likely with Left lateral pontine (AICA) syndrome?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2732,6 +3020,9 @@ const PROCTORED_LESION_POOL = [
     topic: "Clinical Neuroanatomy",
     module: "part3",
     question: "Which neurologic deficit or presentation is most likely with Right lateral medullary (PICA) syndrome?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2756,6 +3047,9 @@ const PROCTORED_LESION_POOL = [
     topic: "Clinical Neuroanatomy",
     module: "part3",
     question: "Which neurologic deficit or presentation is most likely with Medial medullary syndrome?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2779,7 +3073,10 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Using the values stated below, which answer is correct: Right internal capsule (posterior limb). Most likely deficit?",
+    question: "Right internal capsule (posterior limb). Most likely deficit?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2804,6 +3101,9 @@ const PROCTORED_LESION_POOL = [
     topic: "Clinical Neuroanatomy",
     module: "part3",
     question: "Which neurologic deficit or presentation is most likely with Left prefrontal orbitofrontal lesion?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2827,7 +3127,10 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Using the values stated below, which answer is correct: Bilateral auditory cortex (Heschl's). Most likely deficit?",
+    question: "Bilateral auditory cortex (Heschl's). Most likely deficit?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2851,7 +3154,10 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Using the values stated below, which answer is correct: Unilateral cochlear nerve section. Most likely deficit?",
+    question: "Unilateral cochlear nerve section. Most likely deficit?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2876,6 +3182,9 @@ const PROCTORED_LESION_POOL = [
     topic: "Clinical Neuroanatomy",
     module: "part3",
     question: "Which neurologic deficit or presentation is most likely with Right superior colliculus lesion?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2899,7 +3208,10 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Using the values stated below, which answer is correct: Left red nucleus (combined with nearby pathways). Most likely deficit?",
+    question: "Left red nucleus (combined with nearby pathways). Most likely deficit?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2923,7 +3235,10 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Using the values stated below, which answer is correct: Cervical cord syrinx expanding centrally. Most likely deficit?",
+    question: "Cervical cord syrinx expanding centrally. Most likely deficit?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2947,7 +3262,10 @@ const PROCTORED_LESION_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     module: "part3",
-    question: "Using the values stated below, which answer is correct: Tabes dorsalis (dorsal columns). Most likely deficit?",
+    question: "Tabes dorsalis (dorsal columns). Most likely deficit?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2972,6 +3290,9 @@ const PROCTORED_LESION_POOL = [
     topic: "Clinical Neuroanatomy",
     module: "part3",
     question: "Which neurologic deficit or presentation is most likely with Right middle cerebral artery stroke (left dominant hemisphere)?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2996,6 +3317,9 @@ const PROCTORED_LESION_POOL = [
     topic: "Clinical Neuroanatomy",
     module: "part3",
     question: "Which neurologic deficit or presentation is most likely with Left middle cerebral artery stroke (left dominant hemisphere)?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3020,6 +3344,9 @@ const PROCTORED_LESION_POOL = [
     topic: "Clinical Neuroanatomy",
     module: "part3",
     question: "Which neurologic deficit or presentation is most likely with Right middle cerebral artery stroke (right non-dominant hemisphere)?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3044,6 +3371,9 @@ const PROCTORED_LESION_POOL = [
     topic: "Clinical Neuroanatomy",
     module: "part3",
     question: "Which neurologic deficit or presentation is most likely with Left pyramid (medulla) corticospinal lesion before decussation?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3071,6 +3401,9 @@ const PROCTORED_CIRCUIT_POOL = [
     topic: "Neural Circuits",
     module: "part2",
     question: "Three-neuron chain: sensory → excitatory interneuron → motor. Sensory fires; interneuron is blocked. Motor output?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3095,6 +3428,9 @@ const PROCTORED_CIRCUIT_POOL = [
     topic: "Neural Circuits",
     module: "part2",
     question: "Recurrent inhibition: motor neuron excites interneuron that inhibits the same motor neuron. Effect?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3119,6 +3455,9 @@ const PROCTORED_CIRCUIT_POOL = [
     topic: "Neural Circuits",
     module: "part2",
     question: "Feedforward inhibition: sensory input excites both relay neuron and interneuron that inhibits relay. Net effect on relay timing?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3143,6 +3482,9 @@ const PROCTORED_CIRCUIT_POOL = [
     topic: "Neural Circuits",
     module: "part2",
     question: "Disinhibition: inhibitory interneuron is silenced, releasing target neuron from inhibition. Target neuron activity?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3167,6 +3509,9 @@ const PROCTORED_CIRCUIT_POOL = [
     topic: "Neural Circuits",
     module: "part2",
     question: "Reciprocal inhibition between two antagonist motor pools (flexor/extensor). When flexor pool is active, extensor pool?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3191,6 +3536,9 @@ const PROCTORED_CIRCUIT_POOL = [
     topic: "Neural Circuits",
     module: "part2",
     question: "Central pattern generator (CPG) for locomotion: rhythmic output persists after sensory input ends. This implies?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3215,6 +3563,9 @@ const PROCTORED_CIRCUIT_POOL = [
     topic: "Neural Circuits",
     module: "part2",
     question: "Aplysia siphon withdrawal: strong tail shock sensitizes siphon response via serotonin on sensory terminals. Mechanism?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3239,6 +3590,9 @@ const PROCTORED_CIRCUIT_POOL = [
     topic: "Neural Circuits",
     module: "part2",
     question: "Summation: EPSP +5 mV and IPSP −3 mV arrive simultaneously at soma (linear range). Approximate net change?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3263,6 +3617,9 @@ const PROCTORED_CIRCUIT_POOL = [
     topic: "Neural Circuits",
     module: "part2",
     question: "Two EPSPs +3 mV each arrive 2 ms apart within τ_m. Compared with one EPSP, somatic depolarization?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3287,6 +3644,9 @@ const PROCTORED_CIRCUIT_POOL = [
     topic: "Neural Circuits",
     module: "part2",
     question: "Feedback inhibition in cortex: pyramidal cell activates interneuron that inhibits same pyramidal cell. Function?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3311,6 +3671,9 @@ const PROCTORED_CIRCUIT_POOL = [
     topic: "Neural Circuits",
     module: "part2",
     question: "Lateral inhibition in retina: surround inhibits center. Visual edge enhancement occurs because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3335,6 +3698,9 @@ const PROCTORED_CIRCUIT_POOL = [
     topic: "Neural Circuits",
     module: "part2",
     question: "Inhibitory interneuron (PV+) provides perisomatic inhibition on pyramidal cell. Effect on spike timing?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3359,6 +3725,9 @@ const PROCTORED_CIRCUIT_POOL = [
     topic: "Neural Circuits",
     module: "part2",
     question: "Excitatory drive to motor neuron with concurrent shunting inhibition (open Cl⁻ channels). EPSP amplitude at soma?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3383,6 +3752,9 @@ const PROCTORED_CIRCUIT_POOL = [
     topic: "Neural Circuits",
     module: "part2",
     question: "Divergent excitatory circuit: one sensory neuron drives many motor neurons. Effect?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3407,6 +3779,9 @@ const PROCTORED_CIRCUIT_POOL = [
     topic: "Neural Circuits",
     module: "part2",
     question: "Convergent excitatory circuit: many sensory neurons onto one motor neuron. Effect?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3431,6 +3806,9 @@ const PROCTORED_CIRCUIT_POOL = [
     topic: "Neural Circuits",
     module: "part2",
     question: "Renshaw cell recurrent inhibition on alpha motor neuron after firing. Purpose?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3455,6 +3833,9 @@ const PROCTORED_CIRCUIT_POOL = [
     topic: "Neural Circuits",
     module: "part2",
     question: "Mutual excitation between two neurons with slow synapses. Possible circuit behavior?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3482,6 +3863,9 @@ const PROCTORED_CLAMP_TRACE_POOL = [
     topic: "Voltage Clamp",
     module: "part1",
     question: "The clamp trace shows a depolarizing step to 0 mV with early inward then late outward current (squid axon). Which currents dominate each phase?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3506,7 +3890,10 @@ const PROCTORED_CLAMP_TRACE_POOL = [
   {
     topic: "Voltage Clamp",
     module: "part1",
-    question: "Using the values stated below, which answer is correct: After TTX, the same voltage step shows only late outward current. This outward current is primarily?",
+    question: "After TTX, the same voltage step shows only late outward current. This outward current is primarily?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3532,6 +3919,9 @@ const PROCTORED_CLAMP_TRACE_POOL = [
     topic: "Voltage Clamp",
     module: "part1",
     question: "Which description best applies to After TEA, the early inward current remains but repolarizing outward current is reduced. Early inward?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3556,7 +3946,10 @@ const PROCTORED_CLAMP_TRACE_POOL = [
   {
     topic: "Voltage Clamp",
     module: "part1",
-    question: "Using the values stated below, which answer is correct: K⁺-only condition (Na⁺ blocked): step to −40 mV produces sustained outward current. This indicates?",
+    question: "K⁺-only condition (Na⁺ blocked): step to −40 mV produces sustained outward current. This indicates?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3582,6 +3975,9 @@ const PROCTORED_CLAMP_TRACE_POOL = [
     topic: "Voltage Clamp",
     module: "part1",
     question: "Which anatomic lesion best explains I–V plot shows inward current at depolarized potentials crossing zero near +55 mV. This reversal near +55 mV?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3606,7 +4002,10 @@ const PROCTORED_CLAMP_TRACE_POOL = [
   {
     topic: "Voltage Clamp",
     module: "part1",
-    question: "Using the values stated below, which answer is correct: Current-clamp: brief hyperpolarizing current step produces exponential return with time constant τ. τ primarily reflects?",
+    question: "Current-clamp: brief hyperpolarizing current step produces exponential return with time constant τ. τ primarily reflects?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3631,7 +4030,10 @@ const PROCTORED_CLAMP_TRACE_POOL = [
   {
     topic: "Voltage Clamp",
     module: "part1",
-    question: "Using the values stated below, which answer is correct: Subthreshold current-clamp step produces graded depolarization without spikes. The trace shows?",
+    question: "Subthreshold current-clamp step produces graded depolarization without spikes. The trace shows?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3662,6 +4064,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Nernst Equation",
     module: "part1",
     question: "Which of the following statements about nernst Equation are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3688,6 +4093,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Passive Properties",
     module: "part1",
     question: "Which of the following statements about passive Properties are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3714,6 +4122,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Action Potentials",
     module: "part1",
     question: "Which of the following statements about action Potentials are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3740,6 +4151,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Synaptic Transmission",
     module: "part2",
     question: "Which of the following statements about synaptic Transmission are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3766,6 +4180,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Plasticity",
     module: "part2",
     question: "Which of the following statements about plasticity are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3792,6 +4209,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Visual System",
     module: "part3",
     question: "Which of the following statements about visual System are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3818,6 +4238,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Motor Systems",
     module: "part3",
     question: "Which of the following statements about motor Systems are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3844,6 +4267,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Basal Ganglia",
     module: "part3",
     question: "Which of the following statements about basal Ganglia are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3870,6 +4296,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Autonomic",
     module: "part2",
     question: "Which of the following statements about autonomic are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3896,6 +4325,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Methods",
     module: "part3",
     question: "Which of the following statements about methods are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3922,6 +4354,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Hearing",
     module: "part3",
     question: "Which of the following statements about hearing are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3948,6 +4383,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Sleep",
     module: "part3",
     question: "Which of the following statements about sleep are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3974,6 +4412,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Pain",
     module: "part3",
     question: "Which of the following statements about pain are correct? Select all that apply.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -3999,6 +4440,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Clinical Neuroanatomy",
     module: "part3",
     question: "Which clinical presentation is most consistent with Given Right optic tract compression, which visual field defect is expected?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -4023,6 +4467,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Clinical Neuroanatomy",
     module: "part3",
     question: "Which clinical presentation is most consistent with Pituitary adenoma compressing optic chiasm?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -4047,6 +4494,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Clinical Neuroanatomy",
     module: "part3",
     question: "Which clinical presentation is most consistent with Right Meyer's loop (temporal lobe) destroyed?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -4071,6 +4521,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Clinical Neuroanatomy",
     module: "part3",
     question: "Which outcome is most likely when A lesion of the left medial lemniscus in the pons occurs?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -4095,6 +4548,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Clinical Neuroanatomy",
     module: "part3",
     question: "Which clinical presentation is most consistent with Right lateral medulla (PICA) syndrome?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -4119,6 +4575,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Clinical Neuroanatomy",
     module: "part3",
     question: "Which clinical presentation is most consistent with Anterior spinal artery infarct at thoracic level?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -4143,6 +4602,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Clinical Neuroanatomy",
     module: "part3",
     question: "Which clinical presentation is most consistent with Left cerebellar hemisphere stroke?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -4167,6 +4629,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Clinical Neuroanatomy",
     module: "part3",
     question: "Which clinical presentation is most consistent with Left Broca area infarct in dominant hemisphere?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -4191,6 +4656,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Neural Circuits",
     module: "part2",
     question: "Feedforward inhibition: interneuron I inhibits principal P while both receive excitation. Net effect on P spike timing?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -4215,6 +4683,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Neural Circuits",
     module: "part2",
     question: "What does Reciprocal inhibition between flexor/extensor CPG half-centers produce?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -4238,7 +4709,10 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Neural Circuits",
     module: "part2",
-    question: "Using the values stated below, which answer is correct: Disinhibition: inhibitory interneuron stops another inhibitor targeting P. P becomes?",
+    question: "Disinhibition: inhibitory interneuron stops another inhibitor targeting P. P becomes?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -4263,6 +4737,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Electrophysiology",
     module: "part1",
     question: "TTX applied during current-clamp recording of action potential. Expected change?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -4287,6 +4764,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Electrophysiology",
     module: "part1",
     question: "Voltage clamp at 0 mV with normal gradients. Dominant inward current at peak of voltage step mimicking spike?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -4310,7 +4790,10 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Nernst Equation",
     module: "part1",
-    question: "Using the values stated below, which answer is correct: [K⁺]o/[K⁺]i = 0.25 at 37°C. E_K is about?",
+    question: "[K⁺]o/[K⁺]i = 0.25 at 37°C. E_K is about?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -4335,6 +4818,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Nernst Equation",
     module: "part1",
     question: "When If E_K = −80 mV and V_m = −65 mV, opening K⁺ channels, which effect on membrane potential is most likely?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -4358,31 +4844,34 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Goldman Equation",
     module: "part1",
-    question: "Under the conditions described in the stem, which value equals membrane potential?",
+    question:
+      "If only K⁺ is permeant across the membrane (P_Na and P_Cl ≈ 0), which value equals resting membrane potential?",
     options: [
-
-
-
-
-
       "Often 0 mV",
       "E_Na",
       "E_K",
-      "Average of all ions",
+      "The arithmetic mean of all individual E_ion values",
     ],
     correct: 2,
-    explanation: "Goldman reduces to Nernst for a single permeant ion.",
+    explanation:
+      "When a single ion dominates membrane permeability, the Goldman-Hodgkin-Katz equation reduces to that ion's Nernst equilibrium potential (here E_K).",
     wrongExplanations: [
-      "That choice does not match the mechanism or anatomy described in the stem.",
-      "That choice does not match the mechanism or anatomy described in the stem.",
+      "0 mV is not implied unless equal and opposite driving forces cancel — not the single-ion limit.",
+      "E_Na would dominate only if Na⁺ permeability were high relative to K⁺.",
       "",
-      "That choice does not match the mechanism or anatomy described in the stem.",
-    ]
+      "Averaging equilibrium potentials without permeability weights is not the GHK result.",
+    ],
+    reviewStatus: "verified",
+    pipelineStage: "approved_practice",
+    scientificReview: "phase3_curated",
   },
   {
     topic: "Passive Properties",
     module: "part1",
-    question: "Using the values stated below, which answer is correct: R_m doubles, C_m unchanged. τ?",
+    question: "R_m doubles, C_m unchanged. τ?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -4395,9 +4884,10 @@ const PROCTORED_MOCK_EXAM_POOL = [
       "Doubles",
     ],
     correct: 3,
-    explanation: "τ = R_m C_m.",
+    explanation:
+      "Membrane time constant τ = R_m × C_m; if resistance doubles while capacitance is fixed, τ doubles.",
     wrongExplanations: [
-      "That choice does not match the mechanism or anatomy described in the stem.",
+      "Halving or quartering τ would require R_m or C_m to decrease, not double.",
       "That choice does not match the mechanism or anatomy described in the stem.",
       "That choice does not match the mechanism or anatomy described in the stem.",
       "",
@@ -4407,6 +4897,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Passive Properties",
     module: "part1",
     question: "Given the EPSP, resting potential, and threshold in the stem, is the response subthreshold?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -4430,7 +4923,10 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Synaptic Transmission",
     module: "part2",
-    question: "Using the values stated below, which answer is correct: Mini amplitude 1 mV; 100 quanta released synchronously (linear sum). Peak EPSP ~?",
+    question: "Mini amplitude 1 mV; 100 quanta released synchronously (linear sum). Peak EPSP ~?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -4455,6 +4951,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Synaptic Transmission",
     module: "part2",
     question: "What does Botulinum at NMJ reduce?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -4467,9 +4966,10 @@ const PROCTORED_MOCK_EXAM_POOL = [
       "Quantal ACh release",
     ],
     correct: 3,
-    explanation: "Botulinum cleaves SNAREs presynaptically.",
+    explanation:
+      "Botulinum toxin cleaves SNARE proteins at the motor nerve terminal, blocking vesicle fusion and quantal ACh release.",
     wrongExplanations: [
-      "That choice does not match the mechanism or anatomy described in the stem.",
+      "Postsynaptic nicotinic receptors and muscle AChE are not the primary presynaptic targets of botulinum.",
       "That choice does not match the mechanism or anatomy described in the stem.",
       "That choice does not match the mechanism or anatomy described in the stem.",
       "",
@@ -4479,6 +4979,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Plasticity",
     module: "part2",
     question: "Which process would blocking the stated target most directly prevent during Blocking NMDA receptors during high-frequency pairing?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -4503,6 +5006,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Sensory Systems",
     module: "part3",
     question: "Which description best applies to Photoreceptor in dark?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -4527,6 +5033,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Motor Systems",
     module: "part3",
     question: "Which outcome is most likely when Lower motor neuron lesion occurs?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -4551,6 +5060,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Language",
     module: "part3",
     question: "Which clinical presentation is most consistent with Wernicke area lesion in dominant hemisphere?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -4575,6 +5087,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Vestibular",
     module: "part3",
     question: "Which clinical presentation is most consistent with Horizontal canal excitatory ampullopetal cupula deflection?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -4599,6 +5114,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Neuroendocrine",
     module: "part3",
     question: "Where is ADH released into the circulation?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -4622,7 +5140,10 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Glial Cells",
     module: "part2",
-    question: "Using the values stated below, which answer is correct: Myelin produced by oligodendrocytes in CNS?",
+    question: "Myelin produced by oligodendrocytes in CNS?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -4647,6 +5168,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Rhythmic Motor",
     module: "part2",
     question: "Which capability best describes Central pattern generator for walking?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -4671,6 +5195,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Integrative",
     module: "part2",
     question: "When Opening GABA_A channels at rest when E_Cl is below V_m, which effect on membrane potential is most likely?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -4707,18 +5234,24 @@ const PROCTORED_MOCK_EXAM_POOL = [
       "Increasing τ (τ = R_m C_m)",
     ],
     correct: 3,
-    explanation: "τ scales with C_m.",
+    explanation:
+      "τ = R_m × C_m, so raising capacitance with fixed resistance increases the membrane time constant (slower voltage changes).",
     wrongExplanations: [
-      "That choice does not match the mechanism or anatomy described in the stem.",
-      "That choice does not match the mechanism or anatomy described in the stem.",
-      "That choice does not match the mechanism or anatomy described in the stem.",
+      "Decreasing τ would require lower C_m or lower R_m, not higher capacitance.",
+      "Length constant λ depends on R_m and R_i, not C_m; capacitance changes do not eliminate λ.",
+      "τ is proportional to C_m when R_m is held constant.",
       "",
-    ]
+    ],
+    reviewStatus: "verified",
+    scientificReview: "phase3_curated",
   },
   {
     topic: "Integrative",
     module: "part2",
-    question: "Using the values stated below, which answer is correct: Presynaptic metabotropic autoreceptors typically?",
+    question: "Presynaptic metabotropic autoreceptors typically?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -4743,6 +5276,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Integrative",
     module: "part3",
     question: "Which outcome is most likely when Unilateral labyrinthectomy acutely occurs?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -4766,7 +5302,10 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Integrative",
     module: "part3",
-    question: "Using the values stated below, which answer is correct: Hippocampal place fields fire when?",
+    question: "Hippocampal place fields fire when?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -4779,9 +5318,10 @@ const PROCTORED_MOCK_EXAM_POOL = [
       "Muscle spindles stretch",
     ],
     correct: 1,
-    explanation: "Place cells encode spatial location.",
+    explanation:
+      "Hippocampal place cells increase firing when the animal occupies a preferred location in a familiar environment.",
     wrongExplanations: [
-      "That choice does not match the mechanism or anatomy described in the stem.",
+      "Photoreceptors, olfactory glomeruli, and muscle spindles belong to other sensory pathways, not place coding.",
       "",
       "That choice does not match the mechanism or anatomy described in the stem.",
       "That choice does not match the mechanism or anatomy described in the stem.",
@@ -4790,7 +5330,10 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Integrative",
     module: "part2",
-    question: "Using the values stated below, which answer is correct: Electrical synapses (gap junctions) allow?",
+    question: "Electrical synapses (gap junctions) allow?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -4814,7 +5357,10 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Integrative",
     module: "part1",
-    question: "Which description best applies to In voltage clamp, holding potential?",
+    question: "In voltage clamp, holding potential?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -4839,6 +5385,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Integrative",
     module: "part3",
     question: "Which anatomic lesion best explains Contralateral hemiparesis with UMN signs?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -4863,6 +5412,9 @@ const PROCTORED_MOCK_EXAM_POOL = [
     topic: "Integrative",
     module: "part2",
     question: "Which description best applies to End-plate potential at NMJ?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 

@@ -42,6 +42,20 @@ Open **Sign in** in the app header (`sign-in.html`). **Create an account** at `s
 
 **Amazon** uses the same Login with Amazon app as **Square1** (`square1OAuthBase` in `mcb80x-cloud-config.js`). The study guide merges Square1’s provider list with Syntrix’s, so you do **not** need Amazon credentials on Render. Deploy the latest **Square1** site (external `return_to` + CORS for GitHub Pages) and ensure `OAUTH_AMAZON_*` remains set on Square1/Netlify.
 
+### Quality / inventory (master overhaul)
+
+```bash
+node scripts/run-master-inventory.mjs    # Phase 1 — data/question-inventory.json + QUESTION_BANK_DEFECTS.csv
+node scripts/quality-dashboard.mjs
+node scripts/generate-overhaul-deliverables.mjs   # MCB80X_*.md deliverables A–J
+node scripts/build-verified-registry.mjs          # runtime stem registry
+node scripts/verify-full-bank.mjs               # verify ~all deployed questions (automated gate)
+```
+
+See **`VERIFICATION_STATUS.md`** for what `verified` means (automated gate, not expert sign-off).
+
+Timed **practice mock** and **comprehensive final** require `reviewStatus: "verified"`. After `verify-full-bank.mjs`, the full deployed pool is tagged.
+
 ### Regenerate large expansion banks
 
 ```bash

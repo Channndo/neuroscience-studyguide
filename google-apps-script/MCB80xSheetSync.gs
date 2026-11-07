@@ -5,8 +5,8 @@
  *   Type: Web app · Execute as: Me · Who has access: Anyone
  * Copy the Web app URL into mcb80x-cloud-config.js (sheetsWebAppUrl).
  *
- * Optional: Project Settings → Script properties → SYNC_SECRET = your-long-random-string
- * (same value in mcb80x-cloud-config.js syncSecret)
+ * Required: Project Settings → Script properties → SYNC_SECRET = your-long-random-string
+ * (injected at deploy time into mcb80x-cloud-config.js — never commit secrets to git)
  *
  * Sheet tab "user_accounts" is created automatically. Rows store encrypted payloads only
  * (ciphertext from the browser — Google never sees the passphrase).
@@ -31,12 +31,8 @@ function normalizeEmail_(email) {
 }
 
 function checkSecret_(secret) {
-  var props = PropertiesService.getScriptProperties();
-  var expected = props.getProperty("SYNC_SECRET");
-  if (!expected) {
-    expected = "56895b37833a440783ca84d8e0e7b130215d834b9c10b31c";
-    props.setProperty("SYNC_SECRET", expected);
-  }
+  var expected = PropertiesService.getScriptProperties().getProperty("SYNC_SECRET");
+  if (!expected) return false;
   return String(secret || "") === expected;
 }
 
@@ -126,7 +122,7 @@ function doPost(e) {
     ];
     var rowIdx = findRowIndex_(email);
     if (rowIdx > 0) {
-      sh.getRange(rowIdx, 1, 1, HEADERS.length).setValues([rowValues]);
+      sh.getRange(rowIdx, 1, rowIdx, HEADERS.length).setValues([rowValues]);
     } else {
       sh.appendRow(rowValues);
     }

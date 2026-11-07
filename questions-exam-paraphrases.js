@@ -4,6 +4,9 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   {
     topic: "Action Potentials",
     question: "In the phase associated with the rising phase of an action potential, which event primarily drives depolarization?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -26,6 +29,9 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   {
     topic: "Action Potentials",
     question: "In the phase associated with the falling phase of an action potential, which ionic current dominates?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -47,7 +53,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Action Potential Propagation",
-    question: "Using the values stated below, which answer is correct: Myelination of an axon mainly increases?",
+    question: "Myelination of an axon mainly increases?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -70,6 +79,9 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   {
     topic: "Resting Potential",
     question: "If a neuron has high K⁺ leak conductance and only minimal Na⁺ leak conductance, its resting membrane potential would be expected to lie closest to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -91,7 +103,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Nernst Equation",
-    question: "Using the values stated below, which answer is correct: Suppose that extracellular K⁺ concentration is increased while intracellular K⁺ is held constant, the K⁺ equilibrium potential (E_K)?",
+    question: "Suppose that extracellular K⁺ concentration is increased while intracellular K⁺ is held constant, the K⁺ equilibrium potential (E_K)?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -114,6 +129,9 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   {
     topic: "Action Potentials",
     question: "In the phase associated with the relative refractory period, a larger-than-normal depolarizing stimulus may still trigger a spike because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -135,7 +153,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Action Potentials",
-    question: "Using the values stated below, which answer is correct: The falling phase of the action potential is driven mainly by delayed-rectifier K⁺ channels because they?",
+    question: "The falling phase of the action potential is driven mainly by delayed-rectifier K⁺ channels because they?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -157,7 +178,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Action Potential Propagation",
-    question: "Using the values stated below, which answer is correct: Myelin increases conduction velocity mainly by?",
+    question: "Myelin increases conduction velocity mainly by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -179,7 +203,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Electrical Signaling",
-    question: "Using the values stated below, which answer is correct: The Goldman equation predicts that if membrane permeability to Na⁺ greatly exceeds permeability to K⁺, V_m would be expected to approach?",
+    question: "The Goldman equation predicts that if membrane permeability to Na⁺ greatly exceeds permeability to K⁺, V_m would be expected to approach?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -201,7 +228,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Passive Membrane Properties",
-    question: "Using the values stated below, which answer is correct: For a given constant current injection, a neuron with a larger membrane time constant would be expected to show?",
+    question: "For a given constant current injection, a neuron with a larger membrane time constant would be expected to show?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -224,6 +254,9 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   {
     topic: "Resting Potential",
     question: "What mainly sets the ion concentration gradients that establish the resting potential?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -245,7 +278,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Neuromodulation",
-    question: "Using the values stated below, which answer is correct: Dopamine modulates striatal circuits mainly through?",
+    question: "Dopamine modulates striatal circuits mainly through?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -267,7 +303,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Visual System",
-    question: "Using the values stated below, which answer is correct: Rods are more sensitive than cones mainly because?",
+    question: "Rods are more sensitive than cones mainly because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -289,7 +328,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Neuroanatomy",
-    question: "Using the values stated below, which answer is correct: Gray matter consists mainly of?",
+    question: "Gray matter consists mainly of?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -311,7 +353,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Synaptic Integration",
-    question: "Using the values stated below, which answer is correct: Shunting inhibition reduces EPSP amplitude mainly by?",
+    question: "Shunting inhibition reduces EPSP amplitude mainly by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -333,7 +378,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Somatosensation",
-    question: "Using the values stated below, which answer is correct: Free nerve endings in skin mainly detect?",
+    question: "Free nerve endings in skin mainly detect?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -355,7 +403,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Olfactory System",
-    question: "Using the values stated below, which answer is correct: Each olfactory sensory neuron usually expresses?",
+    question: "Each olfactory sensory neuron usually expresses?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -377,7 +428,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Neuroanatomy",
-    question: "Using the values stated below, which answer is correct: White matter tracts consist mainly of?",
+    question: "White matter tracts consist mainly of?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -399,7 +453,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Neuroanatomy",
-    question: "Using the values stated below, which answer is correct: The blood-brain barrier restricts passage of many substances mainly at?",
+    question: "The blood-brain barrier restricts passage of many substances mainly at?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -422,6 +479,9 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   {
     topic: "Current Clamp",
     question: "During a current-clamp experiment, injecting steady hyperpolarizing current would be expected to typically?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -443,7 +503,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Pharmacology",
-    question: "Using the values stated below, which answer is correct: Tetrodotoxin (TTX) applied to an axon prevents action potentials mainly by?",
+    question: "Tetrodotoxin (TTX) applied to an axon prevents action potentials mainly by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -465,7 +528,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Nernst Equation",
-    question: "Using the values stated below, which answer is correct: Suppose that extracellular K⁺ is raised fourfold while intracellular K⁺ is unchanged, E_K shifts approximately?",
+    question: "Suppose that extracellular K⁺ is raised fourfold while intracellular K⁺ is unchanged, E_K shifts approximately?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -487,7 +553,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Passive Membrane Properties",
-    question: "Using the values stated below, which answer is correct: Suppose that τ increases but λ is unchanged, subthreshold signals at the soma will?",
+    question: "Suppose that τ increases but λ is unchanged, subthreshold signals at the soma will?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -509,7 +578,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Goldman Equation",
-    question: "Using the values stated below, which answer is correct: Suppose that P_Cl becomes significant at rest and E_Cl is more negative than V_m, adding Cl⁻ conductance will?",
+    question: "Suppose that P_Cl becomes significant at rest and E_Cl is more negative than V_m, adding Cl⁻ conductance will?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -532,6 +604,9 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   {
     topic: "Action Potentials",
     question: "In the phase associated with the relative refractory period, a second stimulus must be?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -553,7 +628,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Resting Potential",
-    question: "Using the values stated below, which answer is correct: Suppose that the cell is permeable only to K⁺ at rest, V_m equals E_K. Adding a small Na⁺ leak without changing pump activity will?",
+    question: "Suppose that the cell is permeable only to K⁺ at rest, V_m equals E_K. Adding a small Na⁺ leak without changing pump activity will?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -575,7 +653,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Action Potentials",
-    question: "Using the values stated below, which answer is correct: Cooling an axon usually slows conduction because?",
+    question: "Cooling an axon usually slows conduction because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -597,7 +678,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Goldman Equation",
-    question: "Using the values stated below, which answer is correct: Suppose that P_K >> P_Na at rest and P_Cl is negligible, increasing P_Na slightly will?",
+    question: "Suppose that P_K >> P_Na at rest and P_Cl is negligible, increasing P_Na slightly will?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -619,7 +703,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Quantitative Physiology",
-    question: "Using the values stated below, which answer is correct: Suppose that E_K = -80 mV and E_Na = +60 mV, V_m at rest near -65 mV implies?",
+    question: "Suppose that E_K = -80 mV and E_Na = +60 mV, V_m at rest near -65 mV implies?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -641,7 +728,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Passive Membrane Properties",
-    question: "Using the values stated below, which answer is correct: Suppose that membrane leak conductance increases by ~10% (R_m falls) with unchanged geometry, the length constant λ typically?",
+    question: "Suppose that membrane leak conductance increases by ~10% (R_m falls) with unchanged geometry, the length constant λ typically?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -664,6 +754,9 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   {
     topic: "Action Potentials",
     question: "In the phase associated with the threshold period/mechanism?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -686,6 +779,9 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   {
     topic: "Action Potentials",
     question: "In the phase associated with the absolute refractory period/mechanism?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -708,6 +804,9 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   {
     topic: "Action Potentials",
     question: "In the phase associated with the relative refractory period/mechanism?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -730,6 +829,9 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   {
     topic: "Action Potentials",
     question: "In the phase associated with the afterhyperpolarization period/mechanism?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -751,7 +853,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Action Potential Propagation",
-    question: "Using the values stated below, which answer is correct: Structure/condition: Unmyelinated axon. Key process and outcome?",
+    question: "Structure/condition: Unmyelinated axon. Key process and outcome?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -773,7 +878,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Action Potential Propagation",
-    question: "Using the values stated below, which answer is correct: Structure/condition: Myelinated axon. Key process and outcome?",
+    question: "Structure/condition: Myelinated axon. Key process and outcome?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -795,7 +903,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Action Potential Propagation",
-    question: "Using the values stated below, which answer is correct: Structure/condition: Cold temperature. Key process and outcome?",
+    question: "Structure/condition: Cold temperature. Key process and outcome?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -817,7 +928,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Action Potential Propagation",
-    question: "Using the values stated below, which answer is correct: Structure/condition: Local anesthetic. Key process and outcome?",
+    question: "Structure/condition: Local anesthetic. Key process and outcome?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -840,6 +954,9 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   {
     topic: "Passive Membrane Properties",
     question: "Which description best applies to Suppose that leak conductance rises by 12% (R_m falls) with geometry unchanged, the length constant λ compared with baseline?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -862,6 +979,9 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   {
     topic: "Passive Membrane Properties",
     question: "Which description best applies to Suppose that membrane capacitance increases by 15% while R_m is held fixed, the time constant τ?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -883,7 +1003,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Nernst Equation",
-    question: "Using the values stated below, which answer is correct: Suppose that intracellular Na⁺ rises while extracellular Na⁺ is fixed, E_Na shifts?",
+    question: "Suppose that intracellular Na⁺ rises while extracellular Na⁺ is fixed, E_Na shifts?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -905,7 +1028,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Passive Membrane Properties",
-    question: "Using the values stated below, which answer is correct: Myelin on an axon mainly increases effective R_m locally, which?",
+    question: "Myelin on an axon mainly increases effective R_m locally, which?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -927,7 +1053,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Action Potentials",
-    question: "Which description best applies to In the phase associated with the rising phase of a squid-giant-axon spike, the dominant current?",
+    question: "In the phase associated with the rising phase of a squid-giant-axon spike, the dominant current?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -949,7 +1078,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Action Potentials",
-    question: "Using the values stated below, which answer is correct: Suppose that voltage-gated K⁺ channels are blocked during a spike, you expect?",
+    question: "Suppose that voltage-gated K⁺ channels are blocked during a spike, you expect?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -971,7 +1103,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Patch Clamp",
-    question: "Using the values stated below, which answer is correct: Whole-cell patch clamp relative to cell-attached recording?",
+    question: "Whole-cell patch clamp relative to cell-attached recording?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -993,7 +1128,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Pharmacology",
-    question: "Using the values stated below, which answer is correct: A drug that selectively increases K⁺ leak conductance at rest would be expected to tend to?",
+    question: "A drug that selectively increases K⁺ leak conductance at rest would be expected to tend to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1016,6 +1154,9 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   {
     topic: "Voltage Clamp",
     question: "What does In voltage clamp, a downward step in command potential usually produce?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1037,7 +1178,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Goldman Equation",
-    question: "Using the values stated below, which answer is correct: Suppose that Cl⁻ channels open with E_Cl below rest, net Cl⁻ current at rest will?",
+    question: "Suppose that Cl⁻ channels open with E_Cl below rest, net Cl⁻ current at rest will?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1059,7 +1203,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Action Potentials",
-    question: "Using the values stated below, which answer is correct: Afterhyperpolarization following a spike is mainly due to?",
+    question: "Afterhyperpolarization following a spike is mainly due to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1081,7 +1228,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Goldman Equation",
-    question: "Using the values stated below, which answer is correct: Increasing extracellular Na⁺ while holding intracellular Na⁺ fixed would be expected to shift the Goldman resting potential?",
+    question: "Increasing extracellular Na⁺ while holding intracellular Na⁺ fixed would be expected to shift the Goldman resting potential?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1103,7 +1253,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Resting Potential",
-    question: "Using the values stated below, which answer is correct: Suppose K⁺ leak conductance is blocked but the Na⁺/K⁺ pump keeps gradients intact and a small resting Na⁺ leak remains. V_m will tend to move?",
+    question: "Suppose K⁺ leak conductance is blocked but the Na⁺/K⁺ pump keeps gradients intact and a small resting Na⁺ leak remains. V_m will tend to move?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1126,6 +1279,9 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   {
     topic: "Nernst Equation",
     question: "Which description best applies to Suppose that [K⁺]_out equals [K⁺]_in, the Nernst equilibrium potential for K⁺?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1148,6 +1304,9 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   {
     topic: "Electrical Signaling",
     question: "Which description best applies to Suppose that V_m is held at E_K, the driving force on K⁺?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1169,7 +1328,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Passive Membrane Properties",
-    question: "Using the values stated below, which answer is correct: Membrane capacitance arises mainly because?",
+    question: "Membrane capacitance arises mainly because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1191,7 +1353,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Passive Membrane Properties",
-    question: "Using the values stated below, which answer is correct: An EPSP recorded at the soma from a distal synapse is usually smaller and slower because of?",
+    question: "An EPSP recorded at the soma from a distal synapse is usually smaller and slower because of?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1213,7 +1378,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Action Potentials",
-    question: "Using the values stated below, which answer is correct: Tetrodotoxin (TTX) blocks action potentials mainly by binding?",
+    question: "Tetrodotoxin (TTX) blocks action potentials mainly by binding?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1235,7 +1403,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Action Potentials",
-    question: "Using the values stated below, which answer is correct: Tetraethylammonium (TEA) applied to axons usually prolongs spikes by blocking?",
+    question: "Tetraethylammonium (TEA) applied to axons usually prolongs spikes by blocking?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1257,7 +1428,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Action Potentials",
-    question: "Using the values stated below, which answer is correct: Suppose that voltage-gated Na⁺ channels are held in the inactivated state, the neuron?",
+    question: "Suppose that voltage-gated Na⁺ channels are held in the inactivated state, the neuron?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1279,7 +1453,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Experimental Methods",
-    question: "Using the values stated below, which answer is correct: Voltage clamp was developed mainly to?",
+    question: "Voltage clamp was developed mainly to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1301,7 +1478,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Ion Selectivity",
-    question: "Using the values stated below, which answer is correct: Suppose that E_Na is +60 mV and V_m is −65 mV, the electrochemical driving force on Na⁺ favors?",
+    question: "Suppose that E_Na is +60 mV and V_m is −65 mV, the electrochemical driving force on Na⁺ favors?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1323,7 +1503,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Pharmacology",
-    question: "Using the values stated below, which answer is correct: A drug that increases K⁺ conductance at rest would be expected to generally?",
+    question: "A drug that increases K⁺ conductance at rest would be expected to generally?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1345,7 +1528,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Quantitative Physiology",
-    question: "Using the values stated below, which answer is correct: Suppose that g_Na increases transiently during a spike while g_K rises later, the sequence reflects?",
+    question: "Suppose that g_Na increases transiently during a spike while g_K rises later, the sequence reflects?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1370,7 +1556,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 const PART2_EXAM_PARAPHRASE_POOL = [
   {
     topic: "Synaptic Transmission",
-    question: "Using the values stated below, which answer is correct: An excitatory postsynaptic potential (EPSP) can be described as a postsynaptic depolarization that?",
+    question: "An excitatory postsynaptic potential (EPSP) can be described as a postsynaptic depolarization that?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1392,7 +1581,10 @@ const PART2_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Synaptic Transmission",
-    question: "Using the values stated below, which answer is correct: An inhibitory postsynaptic potential (IPSP) can be described as a postsynaptic change that?",
+    question: "An inhibitory postsynaptic potential (IPSP) can be described as a postsynaptic change that?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1414,7 +1606,10 @@ const PART2_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Receptor Types",
-    question: "Using the values stated below, which answer is correct: Metabotropic receptors usually act by?",
+    question: "Metabotropic receptors usually act by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1437,6 +1632,9 @@ const PART2_EXAM_PARAPHRASE_POOL = [
   {
     topic: "Second Messengers",
     question: "Which outcome is most likely when IP₃ (inositol trisphosphate) produced during metabotropic signaling mainly occurs?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1458,7 +1656,10 @@ const PART2_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Receptor Types",
-    question: "Using the values stated below, which answer is correct: Metabotropic receptor signaling is usually slower than ionotropic signaling because it involves?",
+    question: "Metabotropic receptor signaling is usually slower than ionotropic signaling because it involves?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1480,7 +1681,10 @@ const PART2_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Second Messengers",
-    question: "Using the values stated below, which answer is correct: IP₃ signaling raises cytosolic Ca²⁺ mainly by?",
+    question: "IP₃ signaling raises cytosolic Ca²⁺ mainly by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1502,7 +1706,10 @@ const PART2_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Synaptic Transmission",
-    question: "Using the values stated below, which answer is correct: AMPA receptors mediate fast EPSCs at glutamatergic synapses mainly by passing?",
+    question: "AMPA receptors mediate fast EPSCs at glutamatergic synapses mainly by passing?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1524,7 +1731,10 @@ const PART2_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Synaptic Transmission",
-    question: "Using the values stated below, which answer is correct: GABA<sub>A</sub> receptor activation usually produces inhibition by?",
+    question: "GABA<sub>A</sub> receptor activation usually produces inhibition by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1546,7 +1756,10 @@ const PART2_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Resting Potential",
-    question: "Using the values stated below, which answer is correct: Suppose that the Na⁺/K⁺ pump is blocked, over time the resting potential will?",
+    question: "Suppose that the Na⁺/K⁺ pump is blocked, over time the resting potential will?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1568,7 +1781,10 @@ const PART2_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Nernst Equation",
-    question: "Using the values stated below, which answer is correct: Suppose that intracellular K⁺ is 140 mM and extracellular K⁺ is 4 mM, E_K is approximately?",
+    question: "Suppose that intracellular K⁺ is 140 mM and extracellular K⁺ is 4 mM, E_K is approximately?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1590,7 +1806,10 @@ const PART2_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Chemical Synapses",
-    question: "Using the values stated below, which answer is correct: Blocking presynaptic voltage-gated Ca²⁺ channels would be expected to most directly reduce?",
+    question: "Blocking presynaptic voltage-gated Ca²⁺ channels would be expected to most directly reduce?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1612,7 +1831,10 @@ const PART2_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Somatosensation",
-    question: "Using the values stated below, which answer is correct: Free nerve endings in skin mainly signal?",
+    question: "Free nerve endings in skin mainly signal?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1635,6 +1857,9 @@ const PART2_EXAM_PARAPHRASE_POOL = [
   {
     topic: "Resting Potential",
     question: "If E_K = −90 mV and E_Na = +60 mV, increasing P_Na/P_K at rest would be expected to shift V_m?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1656,7 +1881,10 @@ const PART2_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Nernst Equation",
-    question: "Using the values stated below, which answer is correct: Raising intracellular Na⁺ concentration while extracellular Na⁺ is fixed would be expected to make E_Na?",
+    question: "Raising intracellular Na⁺ concentration while extracellular Na⁺ is fixed would be expected to make E_Na?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1678,7 +1906,10 @@ const PART2_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Electrical Signaling",
-    question: "Using the values stated below, which answer is correct: Suppose that g_Na increases while V_m is held fixed, the Na⁺ equilibrium current (I_Na) according to I = g(V_m − E_ion) will?",
+    question: "Suppose that g_Na increases while V_m is held fixed, the Na⁺ equilibrium current (I_Na) according to I = g(V_m − E_ion) will?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1700,7 +1931,10 @@ const PART2_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Synaptic Transmission",
-    question: "Using the values stated below, which answer is correct: Suppose that presynaptic Ca²⁺ influx is reduced, one expects?",
+    question: "Suppose that presynaptic Ca²⁺ influx is reduced, one expects?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1722,7 +1956,10 @@ const PART2_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Auditory System",
-    question: "Using the values stated below, which answer is correct: Auditory nerve fibers encode sound intensity mainly by?",
+    question: "Auditory nerve fibers encode sound intensity mainly by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1744,7 +1981,10 @@ const PART2_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Peptide Transmitters",
-    question: "Using the values stated below, which answer is correct: Neuropeptides usually differ from small transmitters by?",
+    question: "Neuropeptides usually differ from small transmitters by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1766,7 +2006,10 @@ const PART2_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Synaptic Integration",
-    question: "Using the values stated below, which answer is correct: Suppose that E_rev for a GABA<sub>A</sub> synapse is near −70 mV at rest, GABA at rest?",
+    question: "Suppose that E_rev for a GABA<sub>A</sub> synapse is near −70 mV at rest, GABA at rest?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1788,7 +2031,10 @@ const PART2_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Neuromodulation",
-    question: "Using the values stated below, which answer is correct: Dopamine depletion in Parkinson disease mainly affects?",
+    question: "Dopamine depletion in Parkinson disease mainly affects?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1810,7 +2056,10 @@ const PART2_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Receptor Types",
-    question: "Using the values stated below, which answer is correct: AMPA receptors on hippocampal pyramidal cells usually mediate?",
+    question: "AMPA receptors on hippocampal pyramidal cells usually mediate?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1836,6 +2085,9 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   {
     topic: "Olfactory System",
     question: "In the olfactory system, each olfactory sensory neuron usually expresses?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1857,7 +2109,10 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Neuroanatomy",
-    question: "Using the values stated below, which answer is correct: The corpus callosum mainly connects?",
+    question: "The corpus callosum mainly connects?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1879,7 +2134,10 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Resting Potential",
-    question: "Using the values stated below, which answer is correct: At rest, if K⁺ leak conductance dominates, increasing Na⁺ leak conductance would be expected to shift V_m?",
+    question: "At rest, if K⁺ leak conductance dominates, increasing Na⁺ leak conductance would be expected to shift V_m?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1901,7 +2159,10 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Passive Membrane Properties",
-    question: "Using the values stated below, which answer is correct: Suppose that λ is short, EPSPs from distal synapses at the axon hillock will be?",
+    question: "Suppose that λ is short, EPSPs from distal synapses at the axon hillock will be?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1924,6 +2185,9 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   {
     topic: "Electrical Signaling",
     question: "Which description best applies to Suppose that E_ion for a permeant cation is +50 mV and V_m is −70 mV, the driving force for that ion?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1945,7 +2209,10 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Synaptic Integration",
-    question: "Using the values stated below, which answer is correct: EPSP amplitude at the soma is reduced for distal synapses mainly due to?",
+    question: "EPSP amplitude at the soma is reduced for distal synapses mainly due to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1967,7 +2234,10 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Auditory System",
-    question: "Using the values stated below, which answer is correct: Auditory nerve fibers encode sound intensity mainly through?",
+    question: "Auditory nerve fibers encode sound intensity mainly through?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1990,6 +2260,9 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   {
     topic: "Resting Potential",
     question: "Which description best applies to Suppose that the Na⁺/K⁺ pump rate doubles but relative leak conductances are unchanged, the immediate effect on V_m?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2011,7 +2284,10 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Passive Membrane Properties",
-    question: "Using the values stated below, which answer is correct: Suppose that both R_m and R_i double while C_m is constant, the length constant λ?",
+    question: "Suppose that both R_m and R_i double while C_m is constant, the length constant λ?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2033,7 +2309,10 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Action Potential Propagation",
-    question: "Using the values stated below, which answer is correct: Cooling an axon reduces conduction velocity mainly by?",
+    question: "Cooling an axon reduces conduction velocity mainly by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2056,6 +2335,9 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   {
     topic: "Electrical Signaling",
     question: "Which description best applies to Suppose that V_m is clamped at E_K, the driving force on K⁺ ions?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2077,7 +2359,10 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Receptor Types",
-    question: "Using the values stated below, which answer is correct: GABA<sub>B</sub> receptors inhibit neurons mainly by?",
+    question: "GABA<sub>B</sub> receptors inhibit neurons mainly by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2099,7 +2384,10 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Motor Systems",
-    question: "Using the values stated below, which answer is correct: The cerebellum contributes to motor control mainly by?",
+    question: "The cerebellum contributes to motor control mainly by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2121,7 +2409,10 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Action Potentials",
-    question: "Using the values stated below, which answer is correct: A neuron with reduced Na⁺ channel density would be expected to likely show?",
+    question: "A neuron with reduced Na⁺ channel density would be expected to likely show?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2143,7 +2434,10 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Resting Potential",
-    question: "Using the values stated below, which answer is correct: Suppose that a drug doubles K⁺ leak conductance without changing the pump, the new resting potential will?",
+    question: "Suppose that a drug doubles K⁺ leak conductance without changing the pump, the new resting potential will?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2165,7 +2459,10 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Resting Potential",
-    question: "Using the values stated below, which answer is correct: Suppose that P_Cl increases while E_Cl remains −70 mV and rest is −65 mV, V_m will shift toward?",
+    question: "Suppose that P_Cl increases while E_Cl remains −70 mV and rest is −65 mV, V_m will shift toward?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2187,7 +2484,10 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Nernst Equation",
-    question: "Using the values stated below, which answer is correct: Halving intracellular Na⁺ while keeping extracellular Na⁺ constant would be expected to make E_Na?",
+    question: "Halving intracellular Na⁺ while keeping extracellular Na⁺ constant would be expected to make E_Na?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2209,7 +2509,10 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Action Potentials",
-    question: "Using the values stated below, which answer is correct: Suppose that voltage-gated K⁺ channels are pharmacologically blocked during a spike, repolarization will?",
+    question: "Suppose that voltage-gated K⁺ channels are pharmacologically blocked during a spike, repolarization will?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2231,7 +2534,10 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Action Potential Propagation",
-    question: "Using the values stated below, which answer is correct: Suppose that nodes of Ranvier are spaced farther apart in a myelinated axon, conduction velocity typically?",
+    question: "Suppose that nodes of Ranvier are spaced farther apart in a myelinated axon, conduction velocity typically?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2253,7 +2559,10 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Synaptic Integration",
-    question: "Using the values stated below, which answer is correct: Suppose that EPSPs and IPSPs arrive simultaneously at the axon hillock, the net effect depends on?",
+    question: "Suppose that EPSPs and IPSPs arrive simultaneously at the axon hillock, the net effect depends on?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2275,7 +2584,10 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Somatosensation",
-    question: "Using the values stated below, which answer is correct: C fibers usually convey?",
+    question: "C fibers usually convey?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2298,6 +2610,9 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   {
     topic: "Motor Systems",
     question: "Which clinical presentation is most consistent with Corticospinal tract lesions usually produce?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2319,7 +2634,10 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Nernst Equation",
-    question: "Using the values stated below, which answer is correct: Suppose that z = +2 for Ca²⁺, a fourfold increase in external Ca²⁺ (fixed internal) changes E_Ca by approximately?",
+    question: "Suppose that z = +2 for Ca²⁺, a fourfold increase in external Ca²⁺ (fixed internal) changes E_Ca by approximately?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2341,7 +2659,10 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Action Potential Propagation",
-    question: "Using the values stated below, which answer is correct: Suppose that nodal Na⁺ channel density is halved in a myelinated axon, conduction failure is most likely when?",
+    question: "Suppose that nodal Na⁺ channel density is halved in a myelinated axon, conduction failure is most likely when?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2363,7 +2684,10 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Synaptic Transmission",
-    question: "Using the values stated below, which answer is correct: Suppose that release probability p approaches 1, the coefficient of variation (CV) of EPSC amplitude across trials?",
+    question: "Suppose that release probability p approaches 1, the coefficient of variation (CV) of EPSC amplitude across trials?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2385,7 +2709,10 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Electrical Synapses",
-    question: "Using the values stated below, which answer is correct: Suppose that two neurons are coupled by gap junctions, injecting hyperpolarizing current into one will?",
+    question: "Suppose that two neurons are coupled by gap junctions, injecting hyperpolarizing current into one will?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2408,6 +2735,9 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   {
     topic: "Electrical Signaling",
     question: "Which description best applies to Suppose that E_K is −90 mV and V_m is −60 mV, net K⁺ current through open K⁺ channels?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2429,7 +2759,10 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Auditory System",
-    question: "Using the values stated below, which answer is correct: The lateral superior olive uses interaural level differences mainly for?",
+    question: "The lateral superior olive uses interaural level differences mainly for?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2451,7 +2784,10 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Motor Systems",
-    question: "Using the values stated below, which answer is correct: Upper motor neurons originate mainly in?",
+    question: "Upper motor neurons originate mainly in?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2473,7 +2809,10 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Learning & Memory",
-    question: "Using the values stated below, which answer is correct: Medial temporal lobe damage producing anterograde amnesia mainly disrupts?",
+    question: "Medial temporal lobe damage producing anterograde amnesia mainly disrupts?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2495,7 +2834,10 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Visual System",
-    question: "Using the values stated below, which answer is correct: Retinal ganglion cells encode visual information mainly as?",
+    question: "Retinal ganglion cells encode visual information mainly as?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2518,6 +2860,9 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   {
     topic: "Clinical Correlates",
     question: "Which outcome is most likely when Damage to primary visual cortex (V1) usually occurs?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2539,7 +2884,10 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Visual System",
-    question: "Using the values stated below, which answer is correct: Ganglion cells encode visual information mainly as?",
+    question: "Ganglion cells encode visual information mainly as?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2561,7 +2909,10 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Neuroanatomy",
-    question: "Using the values stated below, which answer is correct: White matter mainly contains?",
+    question: "White matter mainly contains?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2583,7 +2934,10 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Learning & Memory",
-    question: "Using the values stated below, which answer is correct: Declarative memory is usually associated with?",
+    question: "Declarative memory is usually associated with?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2605,7 +2959,10 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Clinical Correlates",
-    question: "Using the values stated below, which answer is correct: Prosopagnosia usually reflects dysfunction in?",
+    question: "Prosopagnosia usually reflects dysfunction in?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 

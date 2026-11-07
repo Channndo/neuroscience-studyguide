@@ -26,8 +26,12 @@
     return String(config().syncSecret || "");
   }
 
+  function syncEnabled() {
+    return webAppUrl().startsWith("https://") && syncSecret().length >= 16;
+  }
+
   function isConfigured() {
-    return webAppUrl().startsWith("https://");
+    return syncEnabled();
   }
 
   function b64FromBytes(bytes) {
@@ -569,16 +573,11 @@
         if (data.ok) return data;
         throw new Error(data.error || "Push rejected.");
       }
+      const errText = await res.text().catch(() => "");
+      throw new Error(errText || `Cloud push failed (HTTP ${res.status}).`);
     } catch (e) {
-      /* fall through to no-cors attempt */
+      throw new Error(e?.message || "Cloud push failed (network or CORS).");
     }
-    await fetch(webAppUrl(), {
-      method: "POST",
-      mode: "no-cors",
-      headers: { "Content-Type": "text/plain;charset=utf-8" },
-      body
-    });
-    return { ok: true, opaque: true };
   }
 
   async function pushNow(passphrase) {

@@ -1,0 +1,39 @@
+{
+  "total": 1490,
+  "approved": 5,
+  "quarantined": 166,
+  "missingExpl": 0,
+  "needsReview": 1485,
+  "avgQualityScore": 84.7,
+  "duplicateStemGroups": 48,
+  "byStage": {
+    "needs_revision": 1319,
+    "quarantined": 166,
+    "approved_practice": 5
+  },
+  "byCourse": {
+    "MCB80.1x": 265,
+    "MCB80.2x": 267,
+    "MCB80.3x": 322,
+    "MCB80.1x (supplemental pool)": 198,
+    "MCB80.2x (supplemental pool)": 166,
+    "MCB80.3x (supplemental pool)": 272
+  },
+  "byFormat": {
+    "multiple_choice": 1427,
+    "multiple_select": 63
+  },
+  "uniqueTopics": 102,
+  "uniqueObjectives": 185,
+  "defectCounts": {
+    "missing_wrong_explanations": 45,
+    "missing_objective_mapping": 1490,
+    "missing_source": 1490,
+    "short_stem": 23,
+    "duplicate_stem": 48,
+    "near_duplicate_stem": 87,
+    "short_explanation": 273,
+    "filler_distractors": 13,
+    "duplicate_options": 1
+  }
+}

@@ -4,7 +4,7 @@
 const PART1_VARIATION_POOL = [
   {
     topic: "Nernst Equation",
-    question: "Using the values stated below, which answer is correct: A giant axon is perfused so that [K⁺]_out = 140 mM and [K⁺]_in = 4 mM (inverted from normal). At 37°C, E_K is approximately?",
+    question: "A giant axon is perfused so that [K⁺]_out = 140 mM and [K⁺]_in = 4 mM (inverted from normal). At 37°C, E_K is approximately?",
     options: [
 
 
@@ -26,7 +26,7 @@ const PART1_VARIATION_POOL = [
   },
   {
     topic: "Nernst Equation",
-    question: "Using the values stated below, which answer is correct: Extracellular Na⁺ is increased tenfold while intracellular Na⁺ is held constant. E_Na should?",
+    question: "Extracellular Na⁺ is increased tenfold while intracellular Na⁺ is held constant. E_Na should?",
     options: [
 
 
@@ -48,7 +48,7 @@ const PART1_VARIATION_POOL = [
   },
   {
     topic: "Goldman Equation",
-    question: "Using the values stated below, which answer is correct: At rest, P_K : P_Na : P_Cl = 1 : 0.05 : 0.45 with normal mammalian concentrations. If P_Na is suddenly raised to equal P_K (while concentrations unchanged), V_m will?",
+    question: "At rest, P_K : P_Na : P_Cl = 1 : 0.05 : 0.45 with normal mammalian concentrations. If P_Na is suddenly raised to equal P_K (while concentrations unchanged), V_m will?",
     options: [
 
 
@@ -136,7 +136,7 @@ const PART1_VARIATION_POOL = [
   },
   {
     topic: "Electrical Signaling",
-    question: "Using the values stated below, which answer is correct: A novel cation X⁺ has E_X = +20 mV. At rest V_m = −70 mV, opening X⁺-selective leak channels will?",
+    question: "A novel cation X⁺ has E_X = +20 mV. At rest V_m = −70 mV, opening X⁺-selective leak channels will?",
     options: [
 
 
@@ -158,7 +158,7 @@ const PART1_VARIATION_POOL = [
   },
   {
     topic: "Passive Membrane Properties",
-    question: "Using the values stated below, which answer is correct: A dendrite receives simultaneous EPSPs at two branches equidistant from the soma. Compared with a single branch EPSP, somatic V_m peak is expected to?",
+    question: "A dendrite receives simultaneous EPSPs at two branches equidistant from the soma. Compared with a single branch EPSP, somatic V_m peak is expected to?",
     options: [
 
 
@@ -224,7 +224,7 @@ const PART1_VARIATION_POOL = [
   },
   {
     topic: "Nernst Equation",
-    question: "Using the values stated below, which answer is correct: Intracellular Cl⁻ is raised (more negative inside charge balance) while extracellular Cl⁻ is unchanged. If Cl⁻ is permeant, E_Cl shifts?",
+    question: "Intracellular Cl⁻ is raised (more negative inside charge balance) while extracellular Cl⁻ is unchanged. If Cl⁻ is permeant, E_Cl shifts?",
     options: [
 
 
@@ -246,7 +246,7 @@ const PART1_VARIATION_POOL = [
   },
   {
     topic: "Goldman Equation",
-    question: "Using the values stated below, which answer is correct: A cell has zero Na⁺ permeability, finite K⁺ and Cl⁻ permeability, with E_K = −90 mV and E_Cl = −70 mV. V_m will lie?",
+    question: "A cell has zero Na⁺ permeability, finite K⁺ and Cl⁻ permeability, with E_K = −90 mV and E_Cl = −70 mV. V_m will lie?",
     options: [
 
 
@@ -268,7 +268,7 @@ const PART1_VARIATION_POOL = [
   },
   {
     topic: "Passive Membrane Properties",
-    question: "Using the values stated below, which answer is correct: Membrane capacitance C_m is doubled while R_m stays the same. The membrane time constant τ?",
+    question: "Membrane capacitance C_m is doubled while R_m stays the same. The membrane time constant τ?",
     options: [
 
 
@@ -290,7 +290,7 @@ const PART1_VARIATION_POOL = [
   },
   {
     topic: "Electrical Signaling",
-    question: "Using the values stated below, which answer is correct: At V_m = −65 mV, E_K = −90 mV, E_Na = +60 mV. Opening only Na⁺ channels (no K⁺ change) will initially drive V_m?",
+    question: "At V_m = −65 mV, E_K = −90 mV, E_Na = +60 mV. Opening only Na⁺ channels (no K⁺ change) will initially drive V_m?",
     options: [
 
 
@@ -315,7 +315,7 @@ const PART1_VARIATION_POOL = [
 const PART2_VARIATION_POOL = [
   {
     topic: "Neural Circuits",
-    question: "Using the values stated below, which answer is correct: Circuit A: neuron R excites neuron T, and T inhibits neuron S (feedforward inhibition). Circuit B: R excites both T and S directly, and T also inhibits S (same net inhibition on S). If R fires briefly, S typically receives?",
+    question: "Circuit A: neuron R excites neuron T, and T inhibits neuron S (feedforward inhibition). Circuit B: R excites both T and S directly, and T also inhibits S (same net inhibition on S). If R fires briefly, S typically receives?",
     options: [
 
 
@@ -337,7 +337,7 @@ const PART2_VARIATION_POOL = [
   },
   {
     topic: "Neural Circuits",
-    question: "Using the values stated below, which answer is correct: A reciprocal inhibitory circuit alternates activity between pool A and pool B (each excites the other’s inhibitor). Swapping to mutual excitation between A and B with no inhibition would most likely?",
+    question: "A reciprocal inhibitory circuit alternates activity between pool A and pool B (each excites the other’s inhibitor). Swapping to mutual excitation between A and B with no inhibition would most likely?",
     options: [
 
 
@@ -359,7 +359,7 @@ const PART2_VARIATION_POOL = [
   },
   {
     topic: "Synaptic Integration",
-    question: "Using the values stated below, which answer is correct: A neuron receives EPSPs from pathway X and IPSPs from pathway Y onto the same soma. If inhibitory interneurons in Y are silenced (disinhibition), somatic firing rate will?",
+    question: "A neuron receives EPSPs from pathway X and IPSPs from pathway Y onto the same soma. If inhibitory interneurons in Y are silenced (disinhibition), somatic firing rate will?",
     options: [
 
 
@@ -381,7 +381,7 @@ const PART2_VARIATION_POOL = [
   },
   {
     topic: "Chemical Synapses",
-    question: "Using the values stated below, which answer is correct: Presynaptic voltage-gated Ca²⁺ channels are blocked, but action potentials still invade the terminal. Quantal release will?",
+    question: "Presynaptic voltage-gated Ca²⁺ channels are blocked, but action potentials still invade the terminal. Quantal release will?",
     options: [
 
 
@@ -403,7 +403,7 @@ const PART2_VARIATION_POOL = [
   },
   {
     topic: "Synaptic Transmission",
-    question: "Using the values stated below, which answer is correct: Postsynaptic NMDA receptors are blocked with Mg²⁺ clamp maintained, but AMPA receptors remain functional. Typical consequence for LTP induction protocols?",
+    question: "Postsynaptic NMDA receptors are blocked with Mg²⁺ clamp maintained, but AMPA receptors remain functional. Typical consequence for LTP induction protocols?",
     options: [
 
 
@@ -425,7 +425,7 @@ const PART2_VARIATION_POOL = [
   },
   {
     topic: "Inhibitory Circuits",
-    question: "Using the values stated below, which answer is correct: A feedforward inhibitory interneuron is converted in silico to feedforward excitatory onto the same principal cell (same input timing). Threshold crossing for the principal cell will generally?",
+    question: "A feedforward inhibitory interneuron is converted in silico to feedforward excitatory onto the same principal cell (same input timing). Threshold crossing for the principal cell will generally?",
     options: [
 
 
@@ -447,7 +447,7 @@ const PART2_VARIATION_POOL = [
   },
   {
     topic: "Short-Term Plasticity",
-    question: "Using the values stated below, which answer is correct: Presynaptic residual Ca²⁺ after one spike normally facilitates release. If Ca²⁺ buffers in the terminal are increased (faster Ca²⁺ clearance), paired-pulse facilitation will?",
+    question: "Presynaptic residual Ca²⁺ after one spike normally facilitates release. If Ca²⁺ buffers in the terminal are increased (faster Ca²⁺ clearance), paired-pulse facilitation will?",
     options: [
 
 
@@ -469,7 +469,7 @@ const PART2_VARIATION_POOL = [
   },
   {
     topic: "Synaptic Integration",
-    question: "Using the values stated below, which answer is correct: Two excitatory inputs A and B each alone produce 3 mV EPSPs at the soma. If B is replaced by an inhibitory input of equal conductance magnitude with E_rev = −75 mV at rest V_m = −65 mV, simultaneous A+B will?",
+    question: "Two excitatory inputs A and B each alone produce 3 mV EPSPs at the soma. If B is replaced by an inhibitory input of equal conductance magnitude with E_rev = −75 mV at rest V_m = −65 mV, simultaneous A+B will?",
     options: [
 
 
@@ -491,7 +491,7 @@ const PART2_VARIATION_POOL = [
   },
   {
     topic: "Neuromodulation",
-    question: "Using the values stated below, which answer is correct: A circuit has excitatory drive to a motor pool. Adding neuromodulator that closes K⁺ leak channels on those motor neurons will?",
+    question: "A circuit has excitatory drive to a motor pool. Adding neuromodulator that closes K⁺ leak channels on those motor neurons will?",
     options: [
 
 
@@ -557,7 +557,7 @@ const PART2_VARIATION_POOL = [
   },
   {
     topic: "Neural Circuits",
-    question: "Using the values stated below, which answer is correct: A central pattern generator normally produces alternating left/right bursts via reciprocal inhibition. If reciprocal inhibitory synapses are blocked but excitatory coupling remains, the pattern will most likely?",
+    question: "A central pattern generator normally produces alternating left/right bursts via reciprocal inhibition. If reciprocal inhibitory synapses are blocked but excitatory coupling remains, the pattern will most likely?",
     options: [
 
 
@@ -579,7 +579,7 @@ const PART2_VARIATION_POOL = [
   },
   {
     topic: "Receptor Types",
-    question: "Using the values stated below, which answer is correct: A metabotropic GABA<sub>B</sub> agonist is applied. Compared with GABA<sub>A</sub> activation, the effect on postsynaptic V_m is typically?",
+    question: "A metabotropic GABA<sub>B</sub> agonist is applied. Compared with GABA<sub>A</sub> activation, the effect on postsynaptic V_m is typically?",
     options: [
 
 
@@ -601,7 +601,7 @@ const PART2_VARIATION_POOL = [
   },
   {
     topic: "Synaptic Integration",
-    question: "Using the values stated below, which answer is correct: An inhibitory interneuron makes perisomatic synapses onto a pyramidal cell. Moving the same synapses to distal dendrites (same strength) will usually?",
+    question: "An inhibitory interneuron makes perisomatic synapses onto a pyramidal cell. Moving the same synapses to distal dendrites (same strength) will usually?",
     options: [
 
 
@@ -648,7 +648,7 @@ const PART3_VARIATION_POOL = [
   },
   {
     topic: "Clinical Correlates",
-    question: "Using the values stated below, which answer is correct: A patient cannot repeat phrases, speech is nonfluent and effortful, but comprehension is relatively preserved. Damage is most likely in?",
+    question: "A patient cannot repeat phrases, speech is nonfluent and effortful, but comprehension is relatively preserved. Damage is most likely in?",
     options: [
 
 
@@ -714,7 +714,7 @@ const PART3_VARIATION_POOL = [
   },
   {
     topic: "Clinical Correlates",
-    question: "Using the values stated below, which answer is correct: A patient recognizes objects and reads text but cannot recognize familiar faces, including their own in a mirror. Visual fields and acuity are normal. Most likely site?",
+    question: "A patient recognizes objects and reads text but cannot recognize familiar faces, including their own in a mirror. Visual fields and acuity are normal. Most likely site?",
     options: [
 
 
@@ -758,7 +758,7 @@ const PART3_VARIATION_POOL = [
   },
   {
     topic: "Motor Systems",
-    question: "Using the values stated below, which answer is correct: Resting tremor, cogwheel rigidity, bradykinesia, and improved mobility after levodopa suggest pathology primarily in?",
+    question: "Resting tremor, cogwheel rigidity, bradykinesia, and improved mobility after levodopa suggest pathology primarily in?",
     options: [
 
 
@@ -780,7 +780,7 @@ const PART3_VARIATION_POOL = [
   },
   {
     topic: "Motor Systems",
-    question: "Using the values stated below, which answer is correct: A patient overshoots finger-to-nose targets, shows intention tremor, and has dysmetria with normal strength. The dysfunction localizes most strongly to?",
+    question: "A patient overshoots finger-to-nose targets, shows intention tremor, and has dysmetria with normal strength. The dysfunction localizes most strongly to?",
     options: [
 
 
@@ -824,7 +824,7 @@ const PART3_VARIATION_POOL = [
   },
   {
     topic: "Auditory System",
-    question: "Using the values stated below, which answer is correct: A patient cannot understand speech in noisy environments but hears tones normally; audiogram shows poor word discrimination disproportionate to threshold loss. Likely dysfunction?",
+    question: "A patient cannot understand speech in noisy environments but hears tones normally; audiogram shows poor word discrimination disproportionate to threshold loss. Likely dysfunction?",
     options: [
 
 
@@ -846,7 +846,7 @@ const PART3_VARIATION_POOL = [
   },
   {
     topic: "Vestibular System",
-    question: "Using the values stated below, which answer is correct: A patient experiences spinning vertigo, horizontal nystagmus, and vomiting lasting days after a viral illness, without focal limb weakness. Hearing is mildly reduced on the same side. Most likely?",
+    question: "A patient experiences spinning vertigo, horizontal nystagmus, and vomiting lasting days after a viral illness, without focal limb weakness. Hearing is mildly reduced on the same side. Most likely?",
     options: [
 
 
@@ -912,7 +912,7 @@ const PART3_VARIATION_POOL = [
   },
   {
     topic: "Learning & Memory",
-    question: "Using the values stated below, which answer is correct: A patient can learn a mirror-drawing skill over days but cannot recall meeting the examiner an hour ago. MRI suggests bilateral medial temporal lobe damage. Deficit profile fits?",
+    question: "A patient can learn a mirror-drawing skill over days but cannot recall meeting the examiner an hour ago. MRI suggests bilateral medial temporal lobe damage. Deficit profile fits?",
     options: [
 
 

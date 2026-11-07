@@ -59,8 +59,8 @@ function loadPoolsFromFile(basename) {
 }
 
 function nernstMv(out, inn, z = 1) {
-  if (!out || !inn || out <= 0 || inn <= 0) return null;
-  return (RT_F_LOG10 / Math.abs(z)) * Math.log10(out / inn);
+  if (!out || !inn || out <= 0 || inn <= 0 || !z) return null;
+  return (RT_F_LOG10 / z) * Math.log10(out / inn);
 }
 
 function parseConcentrations(stem) {

@@ -5,6 +5,9 @@ const FORMULA_DRILL_POOL = [
     topic: "Nernst Equation",
     calcType: "nernst",
     question: "Given [K⁺]_in = 140 mM, [K⁺]_out = 5 mM at 37 °C, approximately what is E_K?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -33,6 +36,9 @@ const FORMULA_DRILL_POOL = [
     topic: "Nernst Equation",
     calcType: "nernst",
     question: "Given [K⁺]_in = 140 mM, [K⁺]_out = 4 mM at 37 °C, approximately what is E_K?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -61,6 +67,9 @@ const FORMULA_DRILL_POOL = [
     topic: "Nernst Equation",
     calcType: "nernst",
     question: "Given [K⁺]_in = 120 mM, [K⁺]_out = 4 mM at 37 °C, approximately what is E_K?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -89,6 +98,9 @@ const FORMULA_DRILL_POOL = [
     topic: "Nernst Equation",
     calcType: "nernst",
     question: "Given [K⁺]_in = 140 mM, [K⁺]_out = 10 mM at 37 °C, approximately what is E_K?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -117,6 +129,9 @@ const FORMULA_DRILL_POOL = [
     topic: "Nernst Equation",
     calcType: "nernst",
     question: "Given [K⁺]_in = 100 mM, [K⁺]_out = 5 mM at 37 °C, approximately what is E_K?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -145,6 +160,9 @@ const FORMULA_DRILL_POOL = [
     topic: "Nernst Equation",
     calcType: "nernst",
     question: "Given [K⁺]_in = 140 mM, [K⁺]_out = 20 mM at 37 °C, approximately what is E_K?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -173,6 +191,9 @@ const FORMULA_DRILL_POOL = [
     topic: "Nernst Equation",
     calcType: "nernst",
     question: "Given [Na⁺]_in = 15 mM, [Na⁺]_out = 145 mM, approximately what is E_Na?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -201,6 +222,9 @@ const FORMULA_DRILL_POOL = [
     topic: "Nernst Equation",
     calcType: "nernst",
     question: "Given [Na⁺]_in = 12 mM, [Na⁺]_out = 120 mM, approximately what is E_Na?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -257,6 +281,9 @@ const FORMULA_DRILL_POOL = [
     topic: "Nernst Equation",
     calcType: "nernst",
     question: "Given [Ca²⁺]_out = 2 mM, [Ca²⁺]_in = 0.0002 mM (z = 2), approximately what is E_Ca?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -285,6 +312,9 @@ const FORMULA_DRILL_POOL = [
     topic: "Goldman Equation",
     calcType: "goldman",
     question: "Given Standard ions: K⁺ 140/5, Na⁺ 15/145 mM; P_K:P_Na = 1:0.05., approximately what is resting V_m?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -313,6 +343,9 @@ const FORMULA_DRILL_POOL = [
     topic: "Goldman Equation",
     calcType: "goldman",
     question: "Given Same concentrations; P_K:P_Na = 1:0.1., which resting membrane potential (V_m) is closest?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -341,6 +374,9 @@ const FORMULA_DRILL_POOL = [
     topic: "Goldman Equation",
     calcType: "goldman",
     question: "Given Same concentrations; P_K:P_Na = 1:0.2., which resting membrane potential (V_m) is closest?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -369,6 +405,9 @@ const FORMULA_DRILL_POOL = [
     topic: "Goldman Equation",
     calcType: "goldman",
     question: "Given Same concentrations; P_K:P_Na = 1:0.02., which resting membrane potential (V_m) is closest?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -397,6 +436,9 @@ const FORMULA_DRILL_POOL = [
     topic: "Electrical Signaling",
     calcType: "current",
     question: "Given g_Na = 50 nS, V_m = −10 mV, E_Na = +60 mV., approximately what is the Na⁺ current (outward +)?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -425,6 +467,9 @@ const FORMULA_DRILL_POOL = [
     topic: "Electrical Signaling",
     calcType: "current",
     question: "Given g = 10 nS, V_m = −60 mV, E = −70 mV., approximately what is the Current?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -453,6 +498,9 @@ const FORMULA_DRILL_POOL = [
     topic: "Electrical Signaling",
     calcType: "current",
     question: "Given g_K = 20 nS, V_m = −80 mV, E_K = −90 mV., approximately what is the K⁺ current?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -480,7 +528,7 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Electrical Signaling",
     calcType: "fold",
-    question: "Using the values stated below, which answer is correct: Extracellular Na⁺ doubled (intracellular fixed). E_Na shifts ≈?",
+    question: "Extracellular Na⁺ doubled (intracellular fixed). E_Na shifts ≈?",
     options: [
 
 
@@ -508,7 +556,10 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Electrical Signaling",
     calcType: "fold",
-    question: "Using the values stated below, which answer is correct: Extracellular K⁺ raised fourfold. E_K shifts ≈?",
+    question: "Extracellular K⁺ raised fourfold. E_K shifts ≈?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -536,7 +587,10 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Nernst Equation",
     calcType: "fold",
-    question: "Using the values stated below, which answer is correct: Extracellular Ca²⁺ quadrupled (z=2). E_Ca shifts ≈?",
+    question: "Extracellular Ca²⁺ quadrupled (z=2). E_Ca shifts ≈?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -564,7 +618,7 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Electrical Signaling",
     calcType: "sign",
-    question: "Which description best applies to At V_m = E_K, net K⁺ driving force?",
+    question: "At V_m = E_K, net K⁺ driving force?",
     options: [
 
 
@@ -591,7 +645,10 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Electrical Signaling",
     calcType: "fold",
-    question: "Using the values stated below, which answer is correct: At V_m = −65 mV and E_Na = +60 mV, opening Na⁺ channels pulls V_m?",
+    question: "At V_m = −65 mV and E_Na = +60 mV, opening Na⁺ channels pulls V_m?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -618,7 +675,10 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Electrical Signaling",
     calcType: "sign",
-    question: "Using the values stated below, which answer is correct: Hyperpolarizing past E_K makes K⁺ current?",
+    question: "Hyperpolarizing past E_K makes K⁺ current?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -645,7 +705,10 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Passive Membrane Properties",
     calcType: "tau",
-    question: "Using the values stated below, which answer is correct: τ = R_m · C_m. R_m doubles, C_m fixed. τ?",
+    question: "τ = R_m · C_m. R_m doubles, C_m fixed. τ?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -672,7 +735,10 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Passive Membrane Properties",
     calcType: "tau",
-    question: "Using the values stated below, which answer is correct: Fixed current injection; R_m doubles. Steady ΔV?",
+    question: "Fixed current injection; R_m doubles. Steady ΔV?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -699,7 +765,10 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Passive Membrane Properties",
     calcType: "lambda",
-    question: "Using the values stated below, which answer is correct: Higher leak conductance (lower R_m), λ?",
+    question: "Higher leak conductance (lower R_m), λ?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -726,7 +795,10 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Passive Membrane Properties",
     calcType: "lambda",
-    question: "Using the values stated below, which answer is correct: Larger axon diameter (lower R_i), λ?",
+    question: "Larger axon diameter (lower R_i), λ?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -753,7 +825,10 @@ const FORMULA_DRILL_POOL = [
   {
     topic: "Passive Membrane Properties",
     calcType: "lambda",
-    question: "Using the values stated below, which answer is correct: Myelin increases effective R_m; λ along axon?",
+    question: "Myelin increases effective R_m; λ along axon?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 

@@ -9,14 +9,18 @@ import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.dirname(__dirname);
-const raw = execSync("node _extract_bank_questions.mjs", { cwd: root, encoding: "utf8" });
+const raw = execSync("node _extract_bank_questions.mjs", {
+  cwd: root,
+  encoding: "utf8",
+  maxBuffer: 64 * 1024 * 1024,
+});
 const questions = JSON.parse(raw);
 
 const RT_F_LOG10 = 61.54; // mV per decade at ~37°C (monovalent Nernst)
 
 function nernstLog10Mv(z, out, inn) {
   if (!out || !inn || out <= 0 || inn <= 0 || !z) return null;
-  return (RT_F_LOG10 / Math.abs(z)) * Math.log10(out / inn);
+  return (RT_F_LOG10 / z) * Math.log10(out / inn);
 }
 
 function parseOptionMv(opt) {
@@ -83,7 +87,7 @@ function goldmanVmMv(conc, pK, pNa) {
 }
 
 function expectedConcentrationShift(z = 1, fold = 4) {
-  return (RT_F_LOG10 / Math.abs(z)) * Math.log10(fold);
+  return (RT_F_LOG10 / z) * Math.log10(fold);
 }
 
 const issues = [];

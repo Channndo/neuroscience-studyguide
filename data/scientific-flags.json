@@ -1,0 +1,23 @@
+{
+  "generatedAt": "2026-11-07T22:53:08.030Z",
+  "totalMcq": 1490,
+  "flagCount": 2,
+  "accuracyFlags": 0,
+  "accuracyStems": [],
+  "flags": [
+    {
+      "category": "clarity",
+      "reason": "≥2 joke distractors on unrelated stem.",
+      "stem": "which clinical presentation is most consistent with corticospinal tract lesions typically produce",
+      "topic": "Motor Systems",
+      "canonicalId": "questions-bank:NEW_TIER4:54"
+    },
+    {
+      "category": "clarity",
+      "reason": "≥2 joke distractors on unrelated stem.",
+      "stem": "which clinical presentation is most consistent with corticospinal tract lesions usually produce",
+      "topic": "Motor Systems",
+      "canonicalId": "questions-exam-paraphrases:PART3_EXAM_PARAPHRASE_POOL:21"
+    }
+  ]
+}

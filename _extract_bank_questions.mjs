@@ -1,40 +1,11 @@
 #!/usr/bin/env node
-/** Extract question objects from bank JS + index.html for paraphrase generation. */
+/** Extract all deployed MCQ objects from bank JS + index.html for QA scripts. */
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = __dirname;
-
-function loadBank() {
-  const code = fs.readFileSync(path.join(root, "questions-bank.js"), "utf8");
-  const bag = new Function(`${code}
-    return {
-      PART1_VARIANTS,
-      PART2_VARIANTS,
-      PART3_VARIANTS,
-      NEW_TIER1,
-      NEW_TIER2,
-      NEW_TIER3,
-      NEW_TIER4,
-    };
-  `)();
-  const out = [];
-  const add = (list, module) => {
-    (list || []).forEach((q) => {
-      if (q?.question && q?.options?.length) out.push({ ...q, module });
-    });
-  };
-  add(bag.PART1_VARIANTS, "part1");
-  add(bag.PART2_VARIANTS, "part2");
-  add(bag.PART3_VARIANTS, "part3");
-  add(bag.NEW_TIER1, "part1");
-  add(bag.NEW_TIER2, "part2");
-  add(bag.NEW_TIER3, "part3");
-  add(bag.NEW_TIER4, "part3");
-  return out;
-}
 
 function sliceConstArray(html, name) {
   const token = `const ${name} = [`;
@@ -60,59 +31,95 @@ function sliceConstArray(html, name) {
   return [];
 }
 
-function loadCore() {
-  const html = fs.readFileSync(path.join(root, "index.html"), "utf8");
+function loadFromFile(file, pairs, source) {
+  const filePath = path.join(root, file);
+  if (!fs.existsSync(filePath)) return [];
+  const code = fs.readFileSync(filePath, "utf8");
+  const names = pairs.map(p => p[0]);
+  const retFields = names.map(n => `${n}: typeof ${n} !== "undefined" ? ${n} : undefined`).join(", ");
+  let bag;
+  try {
+    bag = new Function(`${code}\nreturn { ${retFields} };`)();
+  } catch {
+    return [];
+  }
   const out = [];
-  const add = (list, module) => {
-    (list || []).forEach((q) => {
-      if (q?.question && q?.options?.length) out.push({ ...q, module });
-    });
-  };
-  add(sliceConstArray(html, "PART1"), "part1");
-  add(sliceConstArray(html, "PART2"), "part2");
-  add(sliceConstArray(html, "PART3"), "part3");
-  return out;
-}
-
-function loadFreshExpansion() {
-  const out = [];
-  const files = [
-    ["questions-fresh-pools.js", [
-      ["PART1_FRESH_POOL", "part1"],
-      ["PART1_FRESH_POOL_2", "part1"],
-      ["PART2_FRESH_POOL", "part2"],
-      ["PART2_FRESH_POOL_2", "part2"],
-      ["PART3_FRESH_POOL", "part3"],
-      ["PART3_FRESH_POOL_2", "part3"],
-    ]],
-    ["questions-expansion.js", [
-      ["PART1_EXPANSION_POOL", "part1"],
-      ["PART2_EXPANSION_POOL", "part2"],
-      ["PART3_EXPANSION_POOL", "part3"],
-    ]],
-    ["questions-extra-pools.js", [
-      ["PART1_EXTRA_POOL", "part1"],
-      ["PART2_EXTRA_POOL", "part2"],
-      ["PART3_EXTRA_POOL", "part3"],
-    ]],
-  ];
-  for (const [file, pairs] of files) {
-    const code = fs.readFileSync(path.join(root, file), "utf8");
-    let bag;
-    try {
-      const returns = pairs.map(([name]) => name).join(", ");
-      bag = new Function(`${code}\nreturn { ${returns} };`)();
-    } catch {
-      continue;
-    }
-    for (const [name, module] of pairs) {
-      (bag[name] || []).forEach((q) => {
-        if (q?.question && q?.options?.length) out.push({ ...q, module });
+  for (const [name, module] of pairs) {
+    const list = bag[name];
+    if (!Array.isArray(list)) continue;
+    list.forEach((q, i) => {
+      if (!q?.question) return;
+      if (q.type === "shortAnswer" || (!q.options?.length && q.modelAnswer)) return;
+      out.push({
+        ...q,
+        module,
+        source: `${source}:${name}`,
+        bankIndex: i,
+        canonicalId: q.id || `${source}:${name}:${i}`,
       });
-    }
+    });
   }
   return out;
 }
 
-const all = [...loadCore(), ...loadBank(), ...loadFreshExpansion()];
+function inferPoolsFromFile(file) {
+  const filePath = path.join(root, file);
+  if (!fs.existsSync(filePath)) return [];
+  const code = fs.readFileSync(filePath, "utf8");
+  return [...code.matchAll(/^const ([A-Z][A-Z0-9_]*) = /gm)].map(m => [m[1], file.replace(/\.js$/, "")]);
+}
+
+function loadBankLegacy() {
+  return loadFromFile(
+    "questions-bank.js",
+    [
+      ["PART1_VARIANTS", "part1"],
+      ["PART2_VARIANTS", "part2"],
+      ["PART3_VARIANTS", "part3"],
+      ["NEW_TIER1", "part1"],
+      ["NEW_TIER2", "part2"],
+      ["NEW_TIER3", "part3"],
+      ["NEW_TIER4", "part3"],
+    ],
+    "questions-bank"
+  );
+}
+
+function loadAllQuestionJs() {
+  const files = fs
+    .readdirSync(root)
+    .filter(f => /^questions.*\.js$/.test(f) && f !== "questions-variation-pools.js")
+    .sort();
+  const out = [];
+  for (const file of files) {
+    if (file === "questions-bank.js") continue;
+    const pairs = inferPoolsFromFile(file);
+    out.push(...loadFromFile(file, pairs, file.replace(/\.js$/, "")));
+  }
+  return out;
+}
+
+function loadCore() {
+  const html = fs.readFileSync(path.join(root, "index.html"), "utf8");
+  const out = [];
+  for (const [name, module] of [
+    ["PART1", "part1-inline"],
+    ["PART2", "part2-inline"],
+    ["PART3", "part3-inline"],
+  ]) {
+    sliceConstArray(html, name).forEach((q, i) => {
+      if (!q?.question || !q?.options?.length) return;
+      out.push({
+        ...q,
+        module,
+        source: `index.html:${name}`,
+        bankIndex: i,
+        canonicalId: q.id || `inline:${name}:${i}`,
+      });
+    });
+  }
+  return out;
+}
+
+const all = [...loadCore(), ...loadBankLegacy(), ...loadAllQuestionJs()];
 process.stdout.write(JSON.stringify(all));

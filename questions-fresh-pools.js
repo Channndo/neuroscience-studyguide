@@ -4,6 +4,9 @@ const PART1_FRESH_POOL = [
   {
     topic: "Current Clamp",
     question: "During a current-clamp experiment, injecting steady hyperpolarizing current will typically?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -25,7 +28,10 @@ const PART1_FRESH_POOL = [
   },
   {
     topic: "Pharmacology",
-    question: "Using the values stated below, which answer is correct: Tetrodotoxin (TTX) applied to an axon prevents action potentials primarily by?",
+    question: "Tetrodotoxin (TTX) applied to an axon prevents action potentials primarily by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -48,6 +54,9 @@ const PART1_FRESH_POOL = [
   {
     topic: "Nernst Equation",
     question: "If extracellular K⁺ is raised fourfold while intracellular K⁺ is unchanged, E_K shifts approximately?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -69,7 +78,10 @@ const PART1_FRESH_POOL = [
   },
   {
     topic: "Action Potential Propagation",
-    question: "Using the values stated below, which answer is correct: Decreasing axon diameter (with myelin unchanged) generally?",
+    question: "Decreasing axon diameter (with myelin unchanged) generally?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -92,6 +104,9 @@ const PART1_FRESH_POOL = [
   {
     topic: "Passive Membrane Properties",
     question: "If τ increases but λ is unchanged, subthreshold signals at the soma will?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -113,7 +128,10 @@ const PART1_FRESH_POOL = [
   },
   {
     topic: "Pharmacology",
-    question: "Using the values stated below, which answer is correct: Tetraethylammonium (TEA) is classically used to probe?",
+    question: "Tetraethylammonium (TEA) is classically used to probe?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -136,6 +154,9 @@ const PART1_FRESH_POOL = [
   {
     topic: "Resting Potential",
     question: "When Ouabain inhibits the Na⁺/K⁺ ATPase. Over time this, which effect on membrane potential is most likely?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -158,6 +179,9 @@ const PART1_FRESH_POOL = [
   {
     topic: "Goldman Equation",
     question: "If P_Cl becomes significant at rest and E_Cl is more negative than V_m, adding Cl⁻ conductance will?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -180,6 +204,9 @@ const PART1_FRESH_POOL = [
   {
     topic: "Action Potentials",
     question: "During the relative refractory period, a second stimulus must be?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -201,7 +228,10 @@ const PART1_FRESH_POOL = [
   },
   {
     topic: "Electrical Signaling",
-    question: "Using the values stated below, which answer is correct: Subthreshold EPSPs decay as they travel toward the soma mainly because of?",
+    question: "Subthreshold EPSPs decay as they travel toward the soma mainly because of?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -224,6 +254,9 @@ const PART1_FRESH_POOL = [
   {
     topic: "Patch Clamp",
     question: "In voltage-clamp mode, the amplifier injects current to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -245,7 +278,10 @@ const PART1_FRESH_POOL = [
   },
   {
     topic: "Action Potential Propagation",
-    question: "Using the values stated below, which answer is correct: Local anesthetics such as lidocaine block?",
+    question: "Local anesthetics such as lidocaine block?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -267,7 +303,10 @@ const PART1_FRESH_POOL = [
   },
   {
     topic: "Passive Membrane Properties",
-    question: "Using the values stated below, which answer is correct: Increasing membrane thickness (more lipid) without changing channel density would tend to?",
+    question: "Increasing membrane thickness (more lipid) without changing channel density would tend to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -290,6 +329,9 @@ const PART1_FRESH_POOL = [
   {
     topic: "Electrical Signaling",
     question: "Which description best applies to The rheobase of a neuron?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -312,6 +354,9 @@ const PART1_FRESH_POOL = [
   {
     topic: "Resting Potential",
     question: "If the cell is permeable only to K⁺ at rest, V_m equals E_K. Adding a small Na⁺ leak without changing pump activity will?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -333,7 +378,10 @@ const PART1_FRESH_POOL = [
   },
   {
     topic: "Action Potentials",
-    question: "Using the values stated below, which answer is correct: After a spike, slow after-hyperpolarization (AHP) is often mediated by?",
+    question: "After a spike, slow after-hyperpolarization (AHP) is often mediated by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -355,7 +403,10 @@ const PART1_FRESH_POOL = [
   },
   {
     topic: "Electrical Signaling",
-    question: "Using the values stated below, which answer is correct: An integrator neuron (high τ, high input resistance) is specialized to?",
+    question: "An integrator neuron (high τ, high input resistance) is specialized to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -377,7 +428,10 @@ const PART1_FRESH_POOL = [
   },
   {
     topic: "Goldman Equation",
-    question: "Using the values stated below, which answer is correct: At a synapse, if only Na⁺ channels open transiently, V_m moves toward?",
+    question: "At a synapse, if only Na⁺ channels open transiently, V_m moves toward?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -399,7 +453,10 @@ const PART1_FRESH_POOL = [
   },
   {
     topic: "Passive Membrane Properties",
-    question: "Using the values stated below, which answer is correct: Doubling both R_m and R_i while keeping geometry fixed changes λ such that?",
+    question: "Doubling both R_m and R_i while keeping geometry fixed changes λ such that?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -421,7 +478,10 @@ const PART1_FRESH_POOL = [
   },
   {
     topic: "Action Potentials",
-    question: "Using the values stated below, which answer is correct: Cooling an axon typically slows conduction because?",
+    question: "Cooling an axon typically slows conduction because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -446,7 +506,10 @@ const PART1_FRESH_POOL = [
 const PART2_FRESH_POOL = [
   {
     topic: "Synaptic Transmission",
-    question: "Using the values stated below, which answer is correct: Presynaptic Ca²⁺ entry is critical because it?",
+    question: "Presynaptic Ca²⁺ entry is critical because it?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -468,7 +531,10 @@ const PART2_FRESH_POOL = [
   },
   {
     topic: "Receptor Types",
-    question: "Using the values stated below, which answer is correct: NMDA receptors show voltage-dependent Mg²⁺ block such that?",
+    question: "NMDA receptors show voltage-dependent Mg²⁺ block such that?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -490,7 +556,10 @@ const PART2_FRESH_POOL = [
   },
   {
     topic: "Synaptic Plasticity Rules",
-    question: "Using the values stated below, which answer is correct: Spike-timing-dependent plasticity (STDP) often strengthens synapses when?",
+    question: "Spike-timing-dependent plasticity (STDP) often strengthens synapses when?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -512,7 +581,10 @@ const PART2_FRESH_POOL = [
   },
   {
     topic: "Synaptic Transmission",
-    question: "Using the values stated below, which answer is correct: Autoreceptors on presynaptic terminals typically?",
+    question: "Autoreceptors on presynaptic terminals typically?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -534,7 +606,10 @@ const PART2_FRESH_POOL = [
   },
   {
     topic: "Chemical Synapses",
-    question: "Using the values stated below, which answer is correct: At the neuromuscular junction, acetylcholine acts on?",
+    question: "At the neuromuscular junction, acetylcholine acts on?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -556,7 +631,10 @@ const PART2_FRESH_POOL = [
   },
   {
     topic: "Neural Circuits",
-    question: "Using the values stated below, which answer is correct: Perisomatic inhibition from basket cells primarily?",
+    question: "Perisomatic inhibition from basket cells primarily?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -578,7 +656,10 @@ const PART2_FRESH_POOL = [
   },
   {
     topic: "Neuromodulation",
-    question: "Using the values stated below, which answer is correct: D1-type dopamine receptors are generally?",
+    question: "D1-type dopamine receptors are generally?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -600,7 +681,10 @@ const PART2_FRESH_POOL = [
   },
   {
     topic: "Synaptic Transmission",
-    question: "Using the values stated below, which answer is correct: Endocannabinoids often act as retrograde messengers to?",
+    question: "Endocannabinoids often act as retrograde messengers to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -623,6 +707,9 @@ const PART2_FRESH_POOL = [
   {
     topic: "Synaptic Transmission",
     question: "Which description best applies to The readily releasable pool of vesicles?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -644,7 +731,10 @@ const PART2_FRESH_POOL = [
   },
   {
     topic: "Chemical Synapses",
-    question: "Using the values stated below, which answer is correct: Co-transmission refers to?",
+    question: "Co-transmission refers to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -666,7 +756,10 @@ const PART2_FRESH_POOL = [
   },
   {
     topic: "Neural Circuits",
-    question: "Using the values stated below, which answer is correct: Feedback inhibition differs from feedforward inhibition because feedback?",
+    question: "Feedback inhibition differs from feedforward inhibition because feedback?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -688,7 +781,10 @@ const PART2_FRESH_POOL = [
   },
   {
     topic: "Second Messengers",
-    question: "Using the values stated below, which answer is correct: Phospholipase C activation produces IP₃ and DAG; IP₃ primarily?",
+    question: "Phospholipase C activation produces IP₃ and DAG; IP₃ primarily?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -710,7 +806,10 @@ const PART2_FRESH_POOL = [
   },
   {
     topic: "Synaptic Integration",
-    question: "Using the values stated below, which answer is correct: Divisive normalization in cortex can be implemented by?",
+    question: "Divisive normalization in cortex can be implemented by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -732,7 +831,10 @@ const PART2_FRESH_POOL = [
   },
   {
     topic: "Receptor Types",
-    question: "Using the values stated below, which answer is correct: Allosteric modulators of GABA<sub>A</sub> receptors (e.g., benzodiazepines) typically?",
+    question: "Allosteric modulators of GABA<sub>A</sub> receptors (e.g., benzodiazepines) typically?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -754,7 +856,10 @@ const PART2_FRESH_POOL = [
   },
   {
     topic: "Synaptic Transmission",
-    question: "Using the values stated below, which answer is correct: Synaptotagmin acts as a Ca²⁺ sensor for exocytosis because it?",
+    question: "Synaptotagmin acts as a Ca²⁺ sensor for exocytosis because it?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -776,7 +881,10 @@ const PART2_FRESH_POOL = [
   },
   {
     topic: "Neuromodulation",
-    question: "Using the values stated below, which answer is correct: Neuropeptides compared to small-molecule transmitters often?",
+    question: "Neuropeptides compared to small-molecule transmitters often?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -799,6 +907,9 @@ const PART2_FRESH_POOL = [
   {
     topic: "Neural Circuits",
     question: "Which capability best describes Winner-take-all dynamics in a recurrent inhibitory network?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -820,7 +931,10 @@ const PART2_FRESH_POOL = [
   },
   {
     topic: "Synaptic Integration",
-    question: "Using the values stated below, which answer is correct: An IPSP arriving at the axon initial segment is especially effective because?",
+    question: "An IPSP arriving at the axon initial segment is especially effective because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -845,7 +959,10 @@ const PART2_FRESH_POOL = [
 const PART3_FRESH_POOL = [
   {
     topic: "Visual System",
-    question: "Using the values stated below, which answer is correct: Magnocellular (M) retinal ganglion cells compared to parvocellular (P) cells typically?",
+    question: "Magnocellular (M) retinal ganglion cells compared to parvocellular (P) cells typically?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -867,7 +984,10 @@ const PART3_FRESH_POOL = [
   },
   {
     topic: "Visual System",
-    question: "Using the values stated below, which answer is correct: Orientation selectivity in primary visual cortex arises largely from?",
+    question: "Orientation selectivity in primary visual cortex arises largely from?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -889,7 +1009,10 @@ const PART3_FRESH_POOL = [
   },
   {
     topic: "Executive Function",
-    question: "Using the values stated below, which answer is correct: Working memory tasks often engage prefrontal cortex because it?",
+    question: "Working memory tasks often engage prefrontal cortex because it?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -911,7 +1034,10 @@ const PART3_FRESH_POOL = [
   },
   {
     topic: "Cerebellum",
-    question: "Using the values stated below, which answer is correct: Long-term depression (LTD) at cerebellar parallel fiber–Purkinje synapses is often induced by?",
+    question: "Long-term depression (LTD) at cerebellar parallel fiber–Purkinje synapses is often induced by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -933,7 +1059,10 @@ const PART3_FRESH_POOL = [
   },
   {
     topic: "Motor Systems",
-    question: "Using the values stated below, which answer is correct: Cerebellar output helps correct movement errors by comparing?",
+    question: "Cerebellar output helps correct movement errors by comparing?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -955,7 +1084,10 @@ const PART3_FRESH_POOL = [
   },
   {
     topic: "Emotion & Memory",
-    question: "Using the values stated below, which answer is correct: Amygdala activation during fear conditioning strongly associates?",
+    question: "Amygdala activation during fear conditioning strongly associates?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -977,7 +1109,10 @@ const PART3_FRESH_POOL = [
   },
   {
     topic: "Sleep & Memory",
-    question: "Using the values stated below, which answer is correct: Slow-wave sleep is thought to support memory consolidation partly by?",
+    question: "Slow-wave sleep is thought to support memory consolidation partly by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1000,6 +1135,9 @@ const PART3_FRESH_POOL = [
   {
     topic: "Language",
     question: "What does Broca's area damage classically produce?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1021,7 +1159,10 @@ const PART3_FRESH_POOL = [
   },
   {
     topic: "Learning & Memory",
-    question: "Using the values stated below, which answer is correct: Place cells in hippocampus fire when?",
+    question: "Place cells in hippocampus fire when?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1043,7 +1184,10 @@ const PART3_FRESH_POOL = [
   },
   {
     topic: "Neuroimaging",
-    question: "Using the values stated below, which answer is correct: BOLD fMRI signal indirectly reflects?",
+    question: "BOLD fMRI signal indirectly reflects?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1065,7 +1209,10 @@ const PART3_FRESH_POOL = [
   },
   {
     topic: "Motor Systems",
-    question: "Using the values stated below, which answer is correct: Upper motor neuron lesions (e.g., corticospinal) often cause?",
+    question: "Upper motor neuron lesions (e.g., corticospinal) often cause?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1087,7 +1234,10 @@ const PART3_FRESH_POOL = [
   },
   {
     topic: "Sensory Systems",
-    question: "Using the values stated below, which answer is correct: Receptive field surround antagonism in vision helps?",
+    question: "Receptive field surround antagonism in vision helps?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1109,7 +1259,10 @@ const PART3_FRESH_POOL = [
   },
   {
     topic: "Neuroanatomy",
-    question: "Using the values stated below, which answer is correct: The thalamus functions largely as?",
+    question: "The thalamus functions largely as?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1131,7 +1284,10 @@ const PART3_FRESH_POOL = [
   },
   {
     topic: "Learning & Memory",
-    question: "Using the values stated below, which answer is correct: Anterograde amnesia after hippocampal damage means?",
+    question: "Anterograde amnesia after hippocampal damage means?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1153,7 +1309,10 @@ const PART3_FRESH_POOL = [
   },
   {
     topic: "Auditory System",
-    question: "Using the values stated below, which answer is correct: Phase locking in auditory nerve fibers supports?",
+    question: "Phase locking in auditory nerve fibers supports?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1175,7 +1334,10 @@ const PART3_FRESH_POOL = [
   },
   {
     topic: "Clinical Correlates",
-    question: "Using the values stated below, which answer is correct: Parkinson disease motor symptoms relate especially to loss of?",
+    question: "Parkinson disease motor symptoms relate especially to loss of?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1197,7 +1359,10 @@ const PART3_FRESH_POOL = [
   },
   {
     topic: "Learning & Memory",
-    question: "Using the values stated below, which answer is correct: Protein synthesis blockers after training impair?",
+    question: "Protein synthesis blockers after training impair?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1219,7 +1384,10 @@ const PART3_FRESH_POOL = [
   },
   {
     topic: "Neuroanatomy",
-    question: "Using the values stated below, which answer is correct: The blood–brain barrier limits passage of?",
+    question: "The blood–brain barrier limits passage of?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1245,6 +1413,9 @@ const PART1_FRESH_POOL_2 = [
   {
     topic: "Goldman Equation",
     question: "If P_K >> P_Na at rest and P_Cl is negligible, increasing P_Na slightly will?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1266,7 +1437,10 @@ const PART1_FRESH_POOL_2 = [
   },
   {
     topic: "Nernst Equation",
-    question: "Using the values stated below, which answer is correct: For a cation with higher concentration inside than outside, E_ion is typically?",
+    question: "For a cation with higher concentration inside than outside, E_ion is typically?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1288,7 +1462,10 @@ const PART1_FRESH_POOL_2 = [
   },
   {
     topic: "Passive Membrane Properties",
-    question: "Using the values stated below, which answer is correct: Increasing membrane leak conductance (lower R_m) while C_m is fixed?",
+    question: "Increasing membrane leak conductance (lower R_m) while C_m is fixed?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1311,6 +1488,9 @@ const PART1_FRESH_POOL_2 = [
   {
     topic: "Action Potentials",
     question: "Which clinical presentation is most consistent with The upstroke threshold is reached when?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1333,6 +1513,9 @@ const PART1_FRESH_POOL_2 = [
   {
     topic: "Action Potential Propagation",
     question: "In unmyelinated axons, conduction velocity increases with?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1354,7 +1537,10 @@ const PART1_FRESH_POOL_2 = [
   },
   {
     topic: "Electrical Signaling",
-    question: "Using the values stated below, which answer is correct: An EPSP recorded at the soma from a distal dendrite is smaller than at the site of input because of?",
+    question: "An EPSP recorded at the soma from a distal dendrite is smaller than at the site of input because of?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1376,7 +1562,10 @@ const PART1_FRESH_POOL_2 = [
   },
   {
     topic: "Resting Potential",
-    question: "Using the values stated below, which answer is correct: The Na⁺/K⁺ pump is electrogenic because it?",
+    question: "The Na⁺/K⁺ pump is electrogenic because it?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1398,7 +1587,10 @@ const PART1_FRESH_POOL_2 = [
   },
   {
     topic: "Channel Gating",
-    question: "Using the values stated below, which answer is correct: Voltage-gated Na⁺ channel inactivation gates close during?",
+    question: "Voltage-gated Na⁺ channel inactivation gates close during?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1420,7 +1612,10 @@ const PART1_FRESH_POOL_2 = [
   },
   {
     topic: "Pharmacology",
-    question: "Using the values stated below, which answer is correct: TTX sensitivity indicates dependence on?",
+    question: "TTX sensitivity indicates dependence on?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1443,6 +1638,9 @@ const PART1_FRESH_POOL_2 = [
   {
     topic: "Patch Clamp",
     question: "Which capability best describes Whole-cell patch clamp dialyzes the interior of the cell, which?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1465,6 +1663,9 @@ const PART1_FRESH_POOL_2 = [
   {
     topic: "Quantitative Physiology",
     question: "If E_K = -80 mV and E_Na = +60 mV, V_m at rest near -65 mV implies?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1486,7 +1687,10 @@ const PART1_FRESH_POOL_2 = [
   },
   {
     topic: "Ion Selectivity",
-    question: "Using the values stated below, which answer is correct: The Na⁺ channel selectivity filter favors Na⁺ over K⁺ partly because?",
+    question: "The Na⁺ channel selectivity filter favors Na⁺ over K⁺ partly because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1508,7 +1712,10 @@ const PART1_FRESH_POOL_2 = [
   },
   {
     topic: "Equilibrium vs Steady State",
-    question: "Which description best applies to At the ion equilibrium potential, net electrodiffusive flux of that ion?",
+    question: "At the ion equilibrium potential, net electrodiffusive flux of that ion?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1530,7 +1737,10 @@ const PART1_FRESH_POOL_2 = [
   },
   {
     topic: "Axon Initial Segment",
-    question: "Using the values stated below, which answer is correct: High density of voltage-gated Na⁺ at the AIS serves to?",
+    question: "High density of voltage-gated Na⁺ at the AIS serves to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1552,7 +1762,10 @@ const PART1_FRESH_POOL_2 = [
   },
   {
     topic: "Experimental Methods",
-    question: "Using the values stated below, which answer is correct: Replacing extracellular Na⁺ with impermeant cation during voltage clamp typically?",
+    question: "Replacing extracellular Na⁺ with impermeant cation during voltage clamp typically?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1574,7 +1787,10 @@ const PART1_FRESH_POOL_2 = [
   },
   {
     topic: "Dendritic Integration",
-    question: "Using the values stated below, which answer is correct: Passive dendrites act as?",
+    question: "Passive dendrites act as?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1596,7 +1812,10 @@ const PART1_FRESH_POOL_2 = [
   },
   {
     topic: "Membrane Biophysics",
-    question: "Using the values stated below, which answer is correct: Specific membrane resistance R_m has units conceptually of?",
+    question: "Specific membrane resistance R_m has units conceptually of?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1618,7 +1837,10 @@ const PART1_FRESH_POOL_2 = [
   },
   {
     topic: "Action Potentials",
-    question: "Using the values stated below, which answer is correct: Afterchannel block of delayed rectifier K⁺ would?",
+    question: "Afterchannel block of delayed rectifier K⁺ would?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1641,6 +1863,9 @@ const PART1_FRESH_POOL_2 = [
   {
     topic: "Action Potential Propagation",
     question: "When an action potential reaches a cut axon terminal (open end), active propagation?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1662,7 +1887,10 @@ const PART1_FRESH_POOL_2 = [
   },
   {
     topic: "Electrical Signaling",
-    question: "Using the values stated below, which answer is correct: Current divided between capacitive and resistive paths at step onset reflects?",
+    question: "Current divided between capacitive and resistive paths at step onset reflects?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1685,6 +1913,9 @@ const PART1_FRESH_POOL_2 = [
   {
     topic: "Goldman Equation",
     question: "When Adding Cl- conductance when E_Cl is below V_m, which effect on membrane potential is most likely?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1706,7 +1937,10 @@ const PART1_FRESH_POOL_2 = [
   },
   {
     topic: "Nernst Equation",
-    question: "Using the values stated below, which answer is correct: Temperature increase in the Nernst relation (other factors fixed) changes E_ion magnitude?",
+    question: "Temperature increase in the Nernst relation (other factors fixed) changes E_ion magnitude?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1728,7 +1962,10 @@ const PART1_FRESH_POOL_2 = [
   },
   {
     topic: "Passive Membrane Properties",
-    question: "Using the values stated below, which answer is correct: Space clamp in experiments aims to?",
+    question: "Space clamp in experiments aims to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1750,7 +1987,10 @@ const PART1_FRESH_POOL_2 = [
   },
   {
     topic: "Pharmacology",
-    question: "Using the values stated below, which answer is correct: Lidocaine use-dependence means block is stronger when?",
+    question: "Lidocaine use-dependence means block is stronger when?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1772,7 +2012,10 @@ const PART1_FRESH_POOL_2 = [
   },
   {
     topic: "Current Clamp",
-    question: "Using the values stated below, which answer is correct: Zero net current injection in current clamp at rest records?",
+    question: "Zero net current injection in current clamp at rest records?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1797,7 +2040,10 @@ const PART1_FRESH_POOL_2 = [
 const PART2_FRESH_POOL_2 = [
   {
     topic: "Chemical Synapses",
-    question: "Using the values stated below, which answer is correct: Synaptic delay (≈0.5–2 ms) is largely due to?",
+    question: "Synaptic delay (≈0.5–2 ms) is largely due to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1819,7 +2065,10 @@ const PART2_FRESH_POOL_2 = [
   },
   {
     topic: "Synaptic Transmission",
-    question: "Using the values stated below, which answer is correct: Quantal analysis estimates release probability from?",
+    question: "Quantal analysis estimates release probability from?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1841,7 +2090,10 @@ const PART2_FRESH_POOL_2 = [
   },
   {
     topic: "Receptor Types",
-    question: "Using the values stated below, which answer is correct: AMPA receptors at many central synapses are permeable to?",
+    question: "AMPA receptors at many central synapses are permeable to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1864,6 +2116,9 @@ const PART2_FRESH_POOL_2 = [
   {
     topic: "Receptor Types",
     question: "Which description best applies to GABA<sub>A</sub> receptors?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1886,6 +2141,9 @@ const PART2_FRESH_POOL_2 = [
   {
     topic: "Second Messengers",
     question: "Which capability best describes cAMP produced by adenylyl cyclase?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1907,7 +2165,10 @@ const PART2_FRESH_POOL_2 = [
   },
   {
     topic: "Synaptic Integration",
-    question: "Using the values stated below, which answer is correct: Coincidence detection (e.g., NMDA) requires?",
+    question: "Coincidence detection (e.g., NMDA) requires?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1930,6 +2191,9 @@ const PART2_FRESH_POOL_2 = [
   {
     topic: "Neural Circuits",
     question: "Which capability best describes Feedforward inhibition?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1952,6 +2216,9 @@ const PART2_FRESH_POOL_2 = [
   {
     topic: "Electrical Synapses",
     question: "What does Electrical coupling allow?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1973,7 +2240,10 @@ const PART2_FRESH_POOL_2 = [
   },
   {
     topic: "Synaptic Vesicles",
-    question: "Using the values stated below, which answer is correct: Vesicular transporters load?",
+    question: "Vesicular transporters load?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -1995,7 +2265,10 @@ const PART2_FRESH_POOL_2 = [
   },
   {
     topic: "Short-Term Plasticity",
-    question: "Using the values stated below, which answer is correct: Synaptic depression after high-frequency trains often reflects?",
+    question: "Synaptic depression after high-frequency trains often reflects?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2017,7 +2290,10 @@ const PART2_FRESH_POOL_2 = [
   },
   {
     topic: "Long-Term Plasticity",
-    question: "Using the values stated below, which answer is correct: NMDA receptor-dependent LTP induction classically requires?",
+    question: "NMDA receptor-dependent LTP induction classically requires?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2039,7 +2315,10 @@ const PART2_FRESH_POOL_2 = [
   },
   {
     topic: "Synaptic Plasticity Rules",
-    question: "Using the values stated below, which answer is correct: Homosynaptic LTD can be induced by?",
+    question: "Homosynaptic LTD can be induced by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2062,6 +2341,9 @@ const PART2_FRESH_POOL_2 = [
   {
     topic: "Neuromuscular Junction",
     question: "Which description best applies to End-plate potential?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2083,7 +2365,10 @@ const PART2_FRESH_POOL_2 = [
   },
   {
     topic: "Co-transmission",
-    question: "Using the values stated below, which answer is correct: A neuron releasing both glutamate and neuropeptide Y will?",
+    question: "A neuron releasing both glutamate and neuropeptide Y will?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2105,7 +2390,10 @@ const PART2_FRESH_POOL_2 = [
   },
   {
     topic: "Drug Effects",
-    question: "Using the values stated below, which answer is correct: Benzodiazepines enhance GABAergic inhibition by?",
+    question: "Benzodiazepines enhance GABAergic inhibition by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2127,7 +2415,10 @@ const PART2_FRESH_POOL_2 = [
   },
   {
     topic: "Retrograde Signaling",
-    question: "Using the values stated below, which answer is correct: Nitric oxide (NO) as a retrograde messenger?",
+    question: "Nitric oxide (NO) as a retrograde messenger?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2149,7 +2440,10 @@ const PART2_FRESH_POOL_2 = [
   },
   {
     topic: "Excitatory-Inhibitory Balance",
-    question: "Using the values stated below, which answer is correct: E/I imbalance in cortex is implicated in?",
+    question: "E/I imbalance in cortex is implicated in?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2171,7 +2465,10 @@ const PART2_FRESH_POOL_2 = [
   },
   {
     topic: "Synaptic Anatomy",
-    question: "Using the values stated below, which answer is correct: Active zone proteins organize?",
+    question: "Active zone proteins organize?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2193,7 +2490,10 @@ const PART2_FRESH_POOL_2 = [
   },
   {
     topic: "Circuit Modulation",
-    question: "Using the values stated below, which answer is correct: Acetylcholine via muscarinic receptors often?",
+    question: "Acetylcholine via muscarinic receptors often?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2215,7 +2515,10 @@ const PART2_FRESH_POOL_2 = [
   },
   {
     topic: "Peptide Transmitters",
-    question: "Using the values stated below, which answer is correct: Neuropeptides typically differ from small transmitters by?",
+    question: "Neuropeptides typically differ from small transmitters by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2238,6 +2541,9 @@ const PART2_FRESH_POOL_2 = [
   {
     topic: "Synaptic Transmission",
     question: "What does Desensitization of ionotropic receptors reduce?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2260,6 +2566,9 @@ const PART2_FRESH_POOL_2 = [
   {
     topic: "Neural Circuits",
     question: "Which capability best describes Recurrent excitatory networks?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2284,7 +2593,10 @@ const PART2_FRESH_POOL_2 = [
 const PART3_FRESH_POOL_2 = [
   {
     topic: "Phototransduction",
-    question: "Using the values stated below, which answer is correct: Photoreceptors hyperpolarize to light because?",
+    question: "Photoreceptors hyperpolarize to light because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2306,7 +2618,10 @@ const PART3_FRESH_POOL_2 = [
   },
   {
     topic: "Retinal Circuitry",
-    question: "Using the values stated below, which answer is correct: OFF bipolar cells respond to light with?",
+    question: "OFF bipolar cells respond to light with?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2328,7 +2643,10 @@ const PART3_FRESH_POOL_2 = [
   },
   {
     topic: "Visual Cortex",
-    question: "Using the values stated below, which answer is correct: Ocular dominance columns reflect?",
+    question: "Ocular dominance columns reflect?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2350,7 +2668,10 @@ const PART3_FRESH_POOL_2 = [
   },
   {
     topic: "Auditory Pathway",
-    question: "Using the values stated below, which answer is correct: Interaural time differences are useful for?",
+    question: "Interaural time differences are useful for?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2372,7 +2693,10 @@ const PART3_FRESH_POOL_2 = [
   },
   {
     topic: "Auditory System",
-    question: "Using the values stated below, which answer is correct: Outer hair cells in cochlea contribute to?",
+    question: "Outer hair cells in cochlea contribute to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2394,7 +2718,10 @@ const PART3_FRESH_POOL_2 = [
   },
   {
     topic: "Vestibular System",
-    question: "Using the values stated below, which answer is correct: Otolith organs detect?",
+    question: "Otolith organs detect?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2416,7 +2743,10 @@ const PART3_FRESH_POOL_2 = [
   },
   {
     topic: "Somatosensation",
-    question: "Using the values stated below, which answer is correct: Dorsal column–medial lemniscus pathway carries?",
+    question: "Dorsal column–medial lemniscus pathway carries?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2439,6 +2769,9 @@ const PART3_FRESH_POOL_2 = [
   {
     topic: "Pain",
     question: "Which clinical presentation is most consistent with Spinothalamic tract carries?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2460,7 +2793,10 @@ const PART3_FRESH_POOL_2 = [
   },
   {
     topic: "Olfactory System",
-    question: "Using the values stated below, which answer is correct: Odor identity is encoded by?",
+    question: "Odor identity is encoded by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2482,7 +2818,10 @@ const PART3_FRESH_POOL_2 = [
   },
   {
     topic: "Gustation",
-    question: "Using the values stated below, which answer is correct: Sour taste often involves?",
+    question: "Sour taste often involves?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2504,7 +2843,10 @@ const PART3_FRESH_POOL_2 = [
   },
   {
     topic: "Motor Systems",
-    question: "Using the values stated below, which answer is correct: Upper motor neurons originate primarily in?",
+    question: "Upper motor neurons originate primarily in?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2527,6 +2869,9 @@ const PART3_FRESH_POOL_2 = [
   {
     topic: "Basal Ganglia",
     question: "When Direct pathway in basal ganglia, which effect on membrane potential is most likely?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2548,7 +2893,10 @@ const PART3_FRESH_POOL_2 = [
   },
   {
     topic: "Cerebellum",
-    question: "Using the values stated below, which answer is correct: Climbing fibers to Purkinje cells often signal?",
+    question: "Climbing fibers to Purkinje cells often signal?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2570,7 +2918,10 @@ const PART3_FRESH_POOL_2 = [
   },
   {
     topic: "Hippocampus",
-    question: "Using the values stated below, which answer is correct: Pattern separation in dentate gyrus helps?",
+    question: "Pattern separation in dentate gyrus helps?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2592,7 +2943,10 @@ const PART3_FRESH_POOL_2 = [
   },
   {
     topic: "Learning & Memory",
-    question: "Using the values stated below, which answer is correct: Systems consolidation proposes?",
+    question: "Systems consolidation proposes?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2614,7 +2968,10 @@ const PART3_FRESH_POOL_2 = [
   },
   {
     topic: "Language",
-    question: "Using the values stated below, which answer is correct: Wernicke's area damage often impairs?",
+    question: "Wernicke's area damage often impairs?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2636,7 +2993,10 @@ const PART3_FRESH_POOL_2 = [
   },
   {
     topic: "Neuroanatomy",
-    question: "Using the values stated below, which answer is correct: CSF is produced mainly by?",
+    question: "CSF is produced mainly by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2658,7 +3018,10 @@ const PART3_FRESH_POOL_2 = [
   },
   {
     topic: "Thalamus",
-    question: "Using the values stated below, which answer is correct: Thalamic reticular nucleus provides?",
+    question: "Thalamic reticular nucleus provides?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2680,7 +3043,10 @@ const PART3_FRESH_POOL_2 = [
   },
   {
     topic: "Clinical Correlates",
-    question: "Using the values stated below, which answer is correct: Multiple sclerosis symptoms relate to?",
+    question: "Multiple sclerosis symptoms relate to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2703,6 +3069,9 @@ const PART3_FRESH_POOL_2 = [
   {
     topic: "Sensory Systems",
     question: "What does Sensory adaptation reduce?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2724,7 +3093,10 @@ const PART3_FRESH_POOL_2 = [
   },
   {
     topic: "Sleep & Memory",
-    question: "Using the values stated below, which answer is correct: Hippocampal sharp-wave ripples occur often during?",
+    question: "Hippocampal sharp-wave ripples occur often during?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2746,7 +3118,10 @@ const PART3_FRESH_POOL_2 = [
   },
   {
     topic: "Emotion & Memory",
-    question: "Using the values stated below, which answer is correct: Flashbulb memories illustrate?",
+    question: "Flashbulb memories illustrate?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2768,7 +3143,10 @@ const PART3_FRESH_POOL_2 = [
   },
   {
     topic: "Executive Function",
-    question: "Using the values stated below, which answer is correct: Task switching costs reflect?",
+    question: "Task switching costs reflect?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 
@@ -2790,7 +3168,10 @@ const PART3_FRESH_POOL_2 = [
   },
   {
     topic: "Neuroimaging",
-    question: "Using the values stated below, which answer is correct: EEG compared to fMRI has?",
+    question: "EEG compared to fMRI has?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
 
 

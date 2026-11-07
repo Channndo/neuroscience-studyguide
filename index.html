@@ -2036,6 +2036,35 @@
       margin: 0 0 1.5rem;
     }
 
+    .results-breakdown {
+      text-align: left;
+      max-width: 36rem;
+      margin: 0 auto 1.25rem;
+      padding: 1rem 1.1rem;
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      font-size: 0.92rem;
+      color: var(--gray-700);
+    }
+
+    .results-breakdown h4 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--gray-500);
+      margin: 0.75rem 0 0.35rem;
+    }
+
+    .results-breakdown h4:first-child {
+      margin-top: 0;
+    }
+
+    .results-breakdown ul {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+
     .results-actions {
       display: flex;
       gap: 0.75rem;
@@ -3430,6 +3459,7 @@
         <div class="score-fraction" id="score-fraction">0 / 0</div>
         <p class="results-saved-note" id="results-saved-note">Progress saved to this browser.</p>
         <p class="results-message" id="results-message"></p>
+        <div id="results-breakdown" class="results-breakdown" hidden></div>
         <div class="results-actions">
           <button type="button" class="btn-primary" id="btn-retake">Retake Quiz</button>
           <button type="button" class="btn-secondary" id="btn-dashboard">Back to Dashboard</button>
@@ -3471,6 +3501,9 @@
   </footer>
 
   <script src="question-copy-polish.js?v=20251107p"></script>
+  <script src="mcb80x-pipeline.js?v=20251107p"></script>
+  <script src="mcb80x-learning.js?v=20251107p"></script>
+  <script src="mcb80x-verified-registry.js?v=20251107p"></script>
   <script src="explanation-feedback.js?v=20251107p"></script>
   <script src="questions-bank.js?v=20251107p"></script>
   <script src="questions-extra-pools.js?v=20251107p"></script>
@@ -3530,7 +3563,7 @@
 
       /** Course / pathway shorthand — not stacked division (keep a literal slash). */
       const PROSE_SLASH_RE =
-        /\b(?:outside\/inside|pain\/temp(?:erature)?|vibration\/proprioception|flexor\/extensor|intracellular\/extracellular|ipsilateral\/contralateral|pre\/post|Na\/K)\b/gi;
+        /\b(?:outside\/inside|pain\/temp(?:erature)?|vibration\/proprioception|flexor\/extensor|intracellular\/extracellular|ipsilateral\/contralateral|pre\/post|Na\/K|ON\/OFF|OFF\/ON|gain\/timing|selection\/inhibition|ON-center\/OFF-surround|OFF-center\/ON-surround)\b/gi;
 
       const proseHolds = [];
       let t = String(s).replace(PROSE_SLASH_RE, match => {
@@ -3578,6 +3611,24 @@
         /\b([A-Za-zλτΔ](?:_[a-zA-Z0-9]+)+)\s*\/\s*([A-Za-zλτΔ](?:_[a-zA-Z0-9]+)+)\b/g,
         (_, n, d) => tag(n.trim(), d.trim())
       );
+
+      const isProseSlashPair = (a, b) => {
+        const at = a.trim();
+        const bt = b.trim();
+        if (!at || !bt) return false;
+        if (/^\d+(?:\.\d+)?$/.test(at) && /^\d+(?:\.\d+)?$/.test(bt)) return false;
+        if (shouldStack(at, bt)) return false;
+        if (/^\[/.test(at) || /^\[/.test(bt)) return false;
+        if (isMathOperand(at) && isMathOperand(bt)) return false;
+        return true;
+      };
+
+      t = t.replace(/\b([A-Za-z][A-Za-z0-9-]*)\s*\/\s*([A-Za-z][A-Za-z0-9-]*)\b/g, (match, a, b) => {
+        if (!isProseSlashPair(a, b)) return match;
+        const id = proseHolds.length;
+        proseHolds.push(match);
+        return `\x00PROSESLASH${id}\x00`;
+      });
 
       t = t.replace(/\x00PROSESLASH(\d+)\x00/g, (_, id) => proseHolds[Number(id)] ?? "/");
 
@@ -3791,6 +3842,9 @@
       {
         topic: "Resting Potential",
         question: "The resting membrane potential of a typical neuron is closest to the equilibrium potential of which ion?",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "Sodium (Na\u207A)",
           "Potassium (K\u207A)",
@@ -3803,6 +3857,9 @@
       {
         topic: "Nernst Equation",
         question: "According to the Nernst equation, the equilibrium potential for an ion depends on:",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "The diameter of the axon only",
           "The intracellular and extracellular concentrations of that ion",
@@ -3815,6 +3872,9 @@
       {
         topic: "Passive Membrane Properties",
         question: "When a neuron receives a small depolarizing current injection at one point, the voltage change decays with distance. This spatial decay is described by:",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "The length constant (\u03BB)",
           "The absolute refractory period",
@@ -3839,6 +3899,9 @@
       {
         topic: "Action Potentials",
         question: "During the rising phase of an action potential, which event primarily drives depolarization?",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "Efflux of K\u207A through voltage-gated potassium channels",
           "Influx of Na\u207A through voltage-gated sodium channels",
@@ -3851,6 +3914,9 @@
       {
         topic: "Action Potentials",
         question: "During the falling phase of an action potential, which ionic current dominates?",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "Na\u207A influx through open sodium channels",
           "K\u207A efflux through voltage-gated potassium channels",
@@ -3863,6 +3929,9 @@
       {
         topic: "Action Potentials",
         question: "The absolute refractory period occurs because:",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "All K\u207A leak channels are permanently closed",
           "Inactivated voltage-gated Na\u207A channels cannot reopen immediately",
@@ -3875,6 +3944,9 @@
       {
         topic: "Action Potentials",
         question: "The threshold for initiating an action potential is the membrane voltage at which:",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "K\u207A efflux exactly equals Na\u207A influx",
           "Voltage-gated Na\u207A channel activation drives net inward current exceeding outward current",
@@ -3887,6 +3959,9 @@
       {
         topic: "Action Potential Propagation",
         question: "Saltatory conduction in myelinated axons occurs because action potentials:",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "Are generated continuously along the entire axon membrane",
           "Are regenerated only at nodes of Ranvier where voltage-gated channels cluster",
@@ -3899,6 +3974,9 @@
       {
         topic: "Action Potential Propagation",
         question: "Myelination of an axon primarily increases:",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "The resting membrane potential",
           "The speed of action potential propagation",
@@ -3911,6 +3989,9 @@
       {
         topic: "Electrical Signaling",
         question: "Hyperpolarization of the membrane means the membrane potential becomes:",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "Less negative than at rest",
           "More negative than at rest",
@@ -3923,6 +4004,9 @@
       {
         topic: "Electrical Signaling",
         question: "The Goldman equation extends the Nernst equation by accounting for:",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "Multiple ion species and their relative membrane permeabilities",
           "Only the diameter of the axon",
@@ -3947,6 +4031,9 @@
       {
         topic: "Passive Membrane Properties",
         question: "Membrane capacitance affects the rate at which the membrane potential changes because capacitance determines:",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "How much charge must accumulate on the membrane to change voltage",
           "The equilibrium potential for chloride",
@@ -3959,6 +4046,9 @@
       {
         topic: "Action Potentials",
         question: "An action potential is described as 'all-or-none' because:",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "Its amplitude is independent of stimulus strength once threshold is reached",
           "It only occurs in inhibitory neurons",
@@ -3974,6 +4064,9 @@
       {
         topic: "Chemical Synapses",
         question: "Neurotransmitter release from the presynaptic terminal depends most directly on:",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "Opening of voltage-gated Na\u207A channels at the axon hillock",
           "Influx of Ca\u00B2\u207A through voltage-gated calcium channels",
@@ -3986,6 +4079,9 @@
       {
         topic: "Synaptic Transmission",
         question: "An excitatory postsynaptic potential (EPSP) is defined as a postsynaptic depolarization that:",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "Always prevents action potential generation",
           "Brings the membrane closer to threshold for firing",
@@ -3998,6 +4094,9 @@
       {
         topic: "Synaptic Transmission",
         question: "An inhibitory postsynaptic potential (IPSP) is defined as a postsynaptic change that:",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "Depolarizes the membrane toward threshold",
           "Hyperpolarizes the membrane or stabilizes it away from threshold",
@@ -4010,6 +4109,9 @@
       {
         topic: "Receptor Types",
         question: "Ionotropic receptors differ from metabotropic receptors because ionotropic receptors:",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "Act through G-proteins and second messengers only",
           "Directly contain an ion channel that opens upon neurotransmitter binding",
@@ -4022,6 +4124,9 @@
       {
         topic: "Receptor Types",
         question: "Metabotropic receptors typically act by:",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "Opening an ion channel pore directly upon binding",
           "Activating G-proteins that modulate ion channels or second-messenger systems",
@@ -4034,6 +4139,9 @@
       {
         topic: "Second Messengers",
         question: "In a G-protein\u2013coupled receptor pathway, activation of adenylyl cyclase increases:",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
         options: [
           "Intracellular cAMP levels",
           "Extracellular Na\u207A concentration only",
@@ -4058,6 +4166,9 @@
       {
         topic: "Synaptic Integration",
         question: "Temporal summation occurs when:",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "EPSPs from different synapses arrive at the same time at different locations",
           "Multiple EPSPs arrive in rapid succession at the same synapse before decay",
@@ -4070,6 +4181,9 @@
       {
         topic: "Synaptic Integration",
         question: "Spatial summation occurs when:",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "EPSPs from multiple synapses on the same neuron combine at the axon hillock",
           "A single synapse fires repeatedly at high frequency only",
@@ -4082,6 +4196,9 @@
       {
         topic: "Neuromodulation",
         question: "Neuromodulators differ from classical neurotransmitters in that neuromodulators typically:",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "Act only at electrical synapses",
           "Diffuse more widely and adjust the sensitivity of neurons to other signals",
@@ -4106,6 +4223,9 @@
       {
         topic: "Neural Circuits",
         question: "In a feedforward inhibitory circuit, an excitatory input:",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "Directly excites the output neuron only",
           "Activates an interneuron that inhibits the output neuron",
@@ -4118,6 +4238,9 @@
       {
         topic: "Electrical Synapses",
         question: "Electrical synapses transmit signals through:",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "Gap junctions that allow direct ion flow between coupled cells",
           "Synaptic vesicle exocytosis into a cleft",
@@ -4130,6 +4253,9 @@
       {
         topic: "Synaptic Transmission",
         question: "Glutamate is the primary excitatory neurotransmitter in the CNS because it:",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "Opens Cl\u207B channels to hyperpolarize cells",
           "Activates receptors that depolarize postsynaptic neurons (e.g., AMPA/NMDA)",
@@ -4142,6 +4268,9 @@
       {
         topic: "Synaptic Transmission",
         question: "GABA is the primary inhibitory neurotransmitter in the CNS because it:",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "Opens Cl\u207B channels or K\u207A channels, hyperpolarizing or stabilizing the membrane",
           "Always depolarizes the postsynaptic cell",
@@ -4157,6 +4286,9 @@
       {
         topic: "Visual System",
         question: "In the vertebrate retina, which cell type transduces light into electrical signals?",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "Bipolar cells",
           "Horizontal cells",
@@ -4169,6 +4301,9 @@
       {
         topic: "Visual System",
         question: "Center-surround receptive fields of retinal ganglion cells show:",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "The same response to light in both center and surround",
           "Antagonistic responses: ON-center/OFF-surround or OFF-center/ON-surround",
@@ -4181,6 +4316,9 @@
       {
         topic: "Auditory System",
         question: "Place theory of pitch perception states that:",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "All frequencies are encoded only by action potential firing rate",
           "Different frequencies activate hair cells at specific locations along the basilar membrane",
@@ -4193,6 +4331,9 @@
       {
         topic: "Somatosensation",
         question: "In the somatosensory homunculus of primary somatosensory cortex (S1), which body region has the largest cortical representation?",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "Lower leg",
           "Trunk",
@@ -4205,6 +4346,9 @@
       {
         topic: "Somatosensation",
         question: "Meissner's corpuscles are specialized for detecting:",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "Deep pressure and stretch only",
           "Fine touch and low-frequency vibration in glabrous skin",
@@ -4217,6 +4361,9 @@
       {
         topic: "Olfaction",
         question: "In the olfactory system, each olfactory sensory neuron typically expresses:",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "All olfactory receptor genes simultaneously",
           "One functional olfactory receptor gene (one neuron\u2013one receptor rule)",
@@ -4229,6 +4376,9 @@
       {
         topic: "Neuroanatomy",
         question: "The blood-brain barrier is formed primarily by tight junctions between:",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "Oligodendrocytes",
           "Endothelial cells of CNS capillaries",
@@ -4241,6 +4391,9 @@
       {
         topic: "Neuroanatomy",
         question: "The corpus callosum primarily connects:",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "The spinal cord to the cerebellum",
           "Homologous regions of the left and right cerebral hemispheres",
@@ -4253,6 +4406,9 @@
       {
         topic: "Neuroanatomy",
         question: "The hippocampus is critically involved in:",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "Regulating heart rate directly",
           "Consolidating declarative (episodic) memories",
@@ -4265,6 +4421,9 @@
       {
         topic: "Motor Systems",
         question: "The substantia nigra pars compacta projects to the striatum using which neurotransmitter?",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "GABA",
           "Glutamate",
@@ -4277,6 +4436,9 @@
       {
         topic: "Learning & Memory",
         question: "Long-term potentiation (LTP) at hippocampal CA1 synapses classically requires:",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "Activation of NMDA receptors coincident with postsynaptic depolarization",
           "Blockade of all voltage-gated Ca\u00B2\u207A channels",
@@ -4289,6 +4451,9 @@
       {
         topic: "Learning & Memory",
         question: "According to Hebbian theory, synaptic strength increases when:",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "Presynaptic and postsynaptic neurons fire in an uncorrelated manner",
           "A presynaptic neuron repeatedly contributes to firing of a postsynaptic neuron",
@@ -4301,6 +4466,9 @@
       {
         topic: "Learning & Memory",
         question: "CREB (cAMP response element-binding protein) contributes to long-term memory by:",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "Opening voltage-gated Na\u207A channels at the synapse",
           "Acting as a transcription factor that regulates genes for synaptic growth and maintenance",
@@ -4313,6 +4481,9 @@
       {
         topic: "Learning & Memory",
         question: "The immediate early gene c-fos is used as a neural activity marker because its expression is:",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "Constitutively high in all neurons regardless of activity",
           "Rapidly and transiently induced by synaptic activity and calcium signaling",
@@ -4325,6 +4496,9 @@
       {
         topic: "Brain Function",
         question: "Primary sensory cortical areas are organized such that:",
+        reviewStatus: "verified",
+        scientificReview: "automated_mcb80x_gate_v1",
+        pipelineStage: "approved_practice",
         options: [
           "All body regions receive equal cortical area regardless of receptor density",
           "Cortical area devoted to a body region reflects its sensory acuity",
@@ -4705,6 +4879,8 @@
       return Array.isArray(keys) ? keys : [];
     }
 
+    const STRICT_VERIFIED_DRAW_QUIZ_IDS = new Set(["proctoredMock", "final"]);
+
     const SCORED_DRAW_QUIZ_IDS = new Set([
       "proctoredMock",
       "final",
@@ -4729,9 +4905,27 @@
       if (!activeScoredDrawQuizId || !SCORED_DRAW_QUIZ_IDS.has(activeScoredDrawQuizId)) {
         return pool;
       }
-      const kept = pool.filter(q => q && q.reviewStatus !== "needs-review");
+      const strict = STRICT_VERIFIED_DRAW_QUIZ_IDS.has(activeScoredDrawQuizId);
+      const stamp = q => window.MCB80XVerifiedRegistry?.stampQuestion?.(q) || q;
+      const kept = pool
+        .map(stamp)
+        .filter(q => {
+          if (!q) return false;
+          if (window.MCB80XPipeline?.isEligibleForScoredDraw) {
+            return MCB80XPipeline.isEligibleForScoredDraw(q, { strict });
+          }
+          if (strict) return q.reviewStatus === "verified";
+          return q.reviewStatus !== "needs-review";
+        });
       const need = Math.max(1, minRetain || 1);
-      return kept.length >= Math.min(need, pool.length) ? kept : pool;
+      if (kept.length >= Math.min(need, pool.length)) return kept;
+      if (strict && kept.length > 0) {
+        console.warn(
+          `[MCB80x] Verified pool has ${kept.length}/${need} items for ${activeScoredDrawQuizId}; using verified subset only.`
+        );
+        return kept;
+      }
+      return pool.filter(q => q && q.reviewStatus !== "needs-review");
     }
 
     function sampleFromPool(pool, count, avoidKeys) {
@@ -5027,11 +5221,21 @@
         return sampleFromPool(pool, QUIZ_SAMPLE_SIZES[quizId], avoid);
       }
       if (quizId === "proctoredMock") {
-        const examPool = filterPoolForScoredDraw(
-          typeof PROCTORED_MOCK_EXAM_POOL !== "undefined" ? PROCTORED_MOCK_EXAM_POOL : [],
-          QUIZ_SAMPLE_SIZES.proctoredMock || 50
-        );
-        return shuffle(examPool).slice(0, QUIZ_SAMPLE_SIZES.proctoredMock || 50);
+        const rawPool =
+          typeof PROCTORED_MOCK_EXAM_POOL !== "undefined" ? PROCTORED_MOCK_EXAM_POOL : [];
+        const examPool = filterPoolForScoredDraw(rawPool, QUIZ_SAMPLE_SIZES.proctoredMock || 50);
+        const byMod = { part1: [], part2: [], part3: [] };
+        examPool.forEach(q => {
+          const m = questionModule(q, quizId);
+          if (byMod[m]) byMod[m].push(q);
+        });
+        const total = QUIZ_SAMPLE_SIZES.proctoredMock || 50;
+        const [n1, n2, n3] = mixedReviewPartSplit(total);
+        return shuffle([
+          ...sampleExamStyleFromPool(byMod.part1, n1, avoid),
+          ...sampleExamStyleFromPool(byMod.part2, n2, avoid),
+          ...sampleExamStyleFromPool(byMod.part3, n3, avoid)
+        ]);
       }
       if (BRAIN_ANATOMY_QUIZ_IDS.has(quizId)) {
         return drawBrainAnatomySet(quizId, avoid);
@@ -5093,6 +5297,9 @@
       return pool.map(q => ({
         topic: `Neuroanatomy · ${q.anatomyView || "structure"}`,
         question: "Name the highlighted structure.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
         answer: q.options[q.correct],
         explanation: q.explanation,
         anatomyDiagram: true,
@@ -5573,10 +5780,10 @@
       proctoredMock: {
         id: "proctoredMock",
         section: "final",
-        title: "Proctored Mock Exam (Timed)",
+        title: "Timed Practice Mock Exam",
         subtitle: "Mixed Parts 1–3 · select-all items · 90 minutes",
-        meta: "70% to pass · answers at end · all-or-nothing SATA scoring",
-        description: "50-question timed mixed exam (~25% select-all, lesion/circuit/clamp/calculation items) — unique draw each attempt.",
+        meta: "70% to pass · answers at end · all-or-nothing SATA scoring · not a proctored official exam",
+        description: "50-question timed mixed exam (~25% select-all, lesion/circuit/clamp/calculation items) — shuffled draw from the fixed proctored mock pool each attempt.",
         icon: "⏱",
         cardClass: "final",
         immediateFeedback: false,
@@ -6796,6 +7003,10 @@
         data.topicStats[topic].total++;
         if (isCorrect) data.topicStats[topic].correct++;
         data.topicStats[topic].lastTs = ts;
+
+        if (window.MCB80XLearning?.recordObjectiveAttempt) {
+          MCB80XLearning.recordObjectiveAttempt(data, { ...q, course: mod }, isCorrect);
+        }
       });
 
       data.attempts.unshift({
@@ -8062,9 +8273,10 @@
             explanation: q.modelAnswer
           };
         }
-        const surfaced = repairMissingMcqOptions(
+        let surfaced = repairMissingMcqOptions(
           applyExamSurfaceVariant(polishMcqQuestion(q), quizId)
         );
+        surfaced = window.MCB80XVerifiedRegistry?.stampQuestion?.(surfaced) || surfaced;
         const indexed = surfaced.options.map((text, i) => ({ text, originalIndex: i }));
         const shuffledOpts = shuffle(indexed);
         if (isSelectAllQuestion(surfaced)) {
@@ -8141,12 +8353,12 @@
       return `${m}:${String(s).padStart(2, "0")} remaining`;
     }
 
-    function startQuizTimer(minutes) {
+    function startQuizTimerFromDeadline(deadlineTs) {
       clearQuizTimer();
-      if (!minutes || minutes <= 0) return;
+      if (!deadlineTs || deadlineTs <= 0) return;
       const el = document.getElementById("quiz-timer");
       if (!el) return;
-      quizDeadlineTs = Date.now() + minutes * 60 * 1000;
+      quizDeadlineTs = deadlineTs;
       el.hidden = false;
       const tick = () => {
         const left = quizDeadlineTs - Date.now();
@@ -8165,6 +8377,11 @@
       };
       tick();
       quizTimerInterval = setInterval(tick, 1000);
+    }
+
+    function startQuizTimer(minutes) {
+      if (!minutes || minutes <= 0) return;
+      startQuizTimerFromDeadline(Date.now() + minutes * 60 * 1000);
     }
 
     function formatQuizMeta(quiz) {
@@ -8447,12 +8664,15 @@
       if (!canPersistQuizSession() || !storageAvailable()) return;
       persistWrittenAnswerFromDom();
       try {
+        const quiz = QUIZZES[activeQuizId];
         localStorage.setItem(QUIZ_SESSION_KEY, JSON.stringify({
-          version: 1,
+          version: 2,
           quizId: activeQuizId,
           currentIndex,
           answers,
           questions: shuffledQuestions,
+          deadlineTs: quiz?.timedMinutes && quizDeadlineTs ? quizDeadlineTs : null,
+          flagged: activeQuizId === "proctoredMock" ? [...(flaggedQuestions || [])] : undefined,
           ts: Date.now()
         }));
         renderResumeBanner();
@@ -8462,7 +8682,7 @@
     function loadQuizSession() {
       try {
         const raw = JSON.parse(localStorage.getItem(QUIZ_SESSION_KEY) || "null");
-        if (!raw || raw.version !== 1 || !isPausableQuiz(raw.quizId)) return null;
+        if (!raw || (raw.version !== 1 && raw.version !== 2) || !isPausableQuiz(raw.quizId)) return null;
         if (!raw.quizId || !Array.isArray(raw.questions) || !raw.questions.length) return null;
         const quiz = QUIZZES[raw.quizId];
         if (!quiz || !isQuizUnlocked(quiz)) return null;
@@ -8490,9 +8710,29 @@
         Math.max(0, shuffledQuestions.length - 1)
       );
       answers = normalizeAnswersMap(data.answers);
+      if (Array.isArray(data.flagged)) flaggedQuestions = new Set(data.flagged);
       const titleEl = document.getElementById("quiz-title");
       titleEl.textContent = quiz.title;
       updateQuizBackLabel();
+      const flagWrap = document.getElementById("quiz-flag-wrap");
+      const submitMock = document.getElementById("btn-submit-mock");
+      if (flagWrap) flagWrap.hidden = data.quizId !== "proctoredMock";
+      if (submitMock) submitMock.hidden = data.quizId !== "proctoredMock";
+      if (quiz.timedMinutes) {
+        const deadline =
+          data.deadlineTs ||
+          (data.ts ? data.ts + quiz.timedMinutes * 60 * 1000 : Date.now() + quiz.timedMinutes * 60 * 1000);
+        if (deadline <= Date.now()) {
+          startQuizTimerFromDeadline(deadline);
+          showView("quiz");
+          renderQuestion();
+          showResults();
+          return true;
+        }
+        startQuizTimerFromDeadline(deadline);
+      } else {
+        clearQuizTimer();
+      }
       showView("quiz");
       renderQuestion();
       return true;
@@ -8614,8 +8854,7 @@
       if (isPausableQuiz(quizId) && !forceFresh) {
         const saved = loadQuizSession();
         if (saved && saved.quizId === quizId) {
-          resumeQuizSession(saved);
-          return;
+          if (resumeQuizSession(saved)) return;
         }
       }
 
@@ -8834,6 +9073,69 @@
       saveQuizSession();
     }
 
+    function renderResultsBreakdown(questions, answerMap, quizId) {
+      const el = document.getElementById("results-breakdown");
+      if (!el) return;
+      const examLike = ["proctoredMock", "final", "final100", "final150", "final200"].includes(quizId);
+      if (!examLike || !questions?.length) {
+        el.hidden = true;
+        el.innerHTML = "";
+        return;
+      }
+      const modStats = { part1: { c: 0, t: 0 }, part2: { c: 0, t: 0 }, part3: { c: 0, t: 0 } };
+      const topicStats = new Map();
+      questions.forEach((q, i) => {
+        if (isWrittenQuestion(q)) return;
+        const mod = questionModule(q, quizId);
+        if (!modStats[mod]) return;
+        const ok = isSelectAllQuestion(q)
+          ? scoreSelectAllQuestion(q, answerMap[i])
+          : answerMap[i] === q.correct;
+        modStats[mod].t++;
+        if (ok) modStats[mod].c++;
+        const topic = q.topic || "General";
+        if (!topicStats.has(topic)) topicStats.set(topic, { c: 0, t: 0 });
+        const row = topicStats.get(topic);
+        row.t++;
+        if (ok) row.c++;
+      });
+      const courseLabel = { part1: "MCB80.1x", part2: "MCB80.2x", part3: "MCB80.3x" };
+      let html = "<h4>Performance by course</h4><ul>";
+      CHAPTER_IDS.forEach(m => {
+        const s = modStats[m];
+        if (!s.t) return;
+        const p = Math.round((s.c / s.t) * 100);
+        html += `<li><strong>${courseLabel[m] || m}</strong>: ${s.c}/${s.t} (${p}%)</li>`;
+      });
+      html += "</ul>";
+      const weak = [...topicStats.entries()]
+        .filter(([, v]) => v.t >= 1 && v.c / v.t < 0.7)
+        .sort((a, b) => a[1].c / a[1].t - b[1].c / b[1].t)
+        .slice(0, 6);
+      if (weak.length) {
+        html += "<h4>Topics to review on this attempt</h4><ul>";
+        weak.forEach(([topic, v]) => {
+          html += `<li>${fmt(topic)} — ${v.c}/${v.t} correct</li>`;
+        });
+        html += "</ul>";
+      }
+      try {
+        const analytics = getAnalytics();
+        const hints = window.MCB80XLearning?.remediationHints(
+          MCB80XLearning.weakestObjectives(analytics, 3)
+        );
+        if (hints?.length) {
+          html += "<h4>Broader study focus (from your history)</h4><ul>";
+          hints.forEach(h => {
+            html += `<li>${fmt(h.hint)}</li>`;
+          });
+          html += "</ul>";
+        }
+      } catch { /* ignore */ }
+      el.innerHTML = html;
+      el.hidden = false;
+    }
+
     function showResults() {
       persistWrittenAnswerFromDom();
       activeAppView = "results";
@@ -8992,6 +9294,9 @@
               missedBrainAnatomy.push({
                 topic: q.topic,
                 question: "Name the highlighted structure.",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
                 answer: answerText,
                 explanation: q.explanation,
                 anatomyDiagram: true,
@@ -9102,6 +9407,7 @@
       else message = "Keep studying — use the review below to target weak areas.";
 
       document.getElementById("results-message").textContent = message + progressSaveWarning;
+      renderResultsBreakdown(shuffledQuestions, answers, activeQuizId);
       try {
         renderUserActivityCard();
         renderStudyPlanDashboard();

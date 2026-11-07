@@ -1,10 +1,23 @@
 /**
- * Full-sentence MCQ stems and readable options (loaded before inline app logic).
+ * Runtime MCQ stem/option polish — conservative transforms only (no global rewrites).
  */
 (function () {
   const PREFIX_RES = [
     /^Proctored mock\s*[—–-]\s*/i,
     /^Lesion:\s*/i,
+  ];
+
+  const GENERIC_WRAPPERS = [
+    /^Using the values stated below, which answer is correct:\s*/i,
+    /^Which answer best matches this scenario:\s*/i,
+  ];
+
+  const MALFORMED_APPLIES = [
+    [/^Which description best applies to If\b/i, "If"],
+    [/^Which description best applies to At\b/i, "At"],
+    [/^Which description best applies to Given\b/i, "Given"],
+    [/^Which description best applies to During\b/i, "During"],
+    [/^Which description best applies to In\b/i, "In"],
   ];
 
   function stripStemPrefix(s) {
@@ -13,14 +26,37 @@
     return t.trim();
   }
 
+  function stripGenericWrappers(s) {
+    let t = String(s ?? "").trim();
+    for (const re of GENERIC_WRAPPERS) t = t.replace(re, "");
+    for (const [re, lead] of MALFORMED_APPLIES) {
+      if (re.test(t)) t = t.replace(re, lead);
+    }
+    return t.trim();
+  }
+
+  /**
+   * Replace " + " only in plain-language lists (not ions, math, or signed voltages).
+   */
+  function polishListPlus(raw) {
+    let t = String(raw ?? "");
+    if (!/\s\+\s/.test(t)) return t;
+  const ionLike = /(?:\d|⁺|²|⁻|\+(?=\s*[,\;\)]|$)|^[\d.+-]?\s*mV|Na|K\+|Ca|Cl|Mg|H\+|Zn|E_ion|V_m|P_|Δ|≈|\/)/i;
+    return t.replace(/(\S+)\s+\+\s+(\S+)/g, (match, left, right) => {
+      if (ionLike.test(left) || ionLike.test(right)) return match;
+      if (/^[+\-−]?\d/.test(left) || /^[+\-−]?\d/.test(right)) return match;
+      if (left.length <= 1 || right.length <= 1) return match;
+      return `${left}; ${right}`;
+    });
+  }
+
   function polishOption(raw) {
     let t = String(raw ?? "").trim();
     if (!t) return t;
     t = t.replace(/\s+as the primary route\b/gi, "");
     t = t.replace(/\s+as the primary pathway\b/gi, "");
     t = t.replace(/\s*\(same units as E_ion\)/gi, "");
-    // Keep MCB80x course shorthand (outside/inside, pain/temp) — do not expand slashes here.
-    t = t.replace(/\s*\+\s*/g, "; ");
+    t = polishListPlus(t);
     t = t.replace(/,\s*,/g, ",");
     t = t.replace(/\s+often\s*$/i, "");
     t = t.replace(/\s+often\b/gi, "");
@@ -41,38 +77,35 @@
     return `${t}?`;
   }
 
+  function stemHasExperimentalContext(s) {
+    const t = String(s);
+    return (
+      t.length >= 100 ||
+      /\b(\d+\s*mM|clamp|lesion|TTX|voltage|current|EPSP|IPSP|reversal|Nernst|Goldman|Goldman-Hodgkin|\[K|\[Na|select all)/i.test(
+        t
+      )
+    );
+  }
+
   function polishStem(question, q) {
     let s = stripStemPrefix(question);
+    s = stripGenericWrappers(s);
     if (!s) return s;
+
+    const selectAll =
+      q?.type === "selectAll" || /\bselect all\b/i.test(s);
+
+    if (selectAll && stemHasExperimentalContext(s)) {
+      if (!/select all that apply/i.test(s)) {
+        const trimmed = s.replace(/[.?:]+\s*$/u, "").trim();
+        return `${trimmed} Select all that apply.`;
+      }
+      return s.endsWith(".") || s.endsWith("?") ? s : `${s}.`;
+    }
 
     const scenarioWrap = s.match(/^Which answer best matches this scenario:\s*(.+)$/i);
     if (scenarioWrap) {
-      let inner = scenarioWrap[1].replace(/\?\s*$/, "").trim();
-      const approxIon = inner.match(/^(.+?)\s*(E_[A-Za-z⁺²⁻]+)\s*≈\s*$/);
-      if (approxIon) {
-        return ensureQuestionMark(
-          `Given ${approxIon[1].replace(/\.\s*$/, "").trim()}, approximately what is ${approxIon[2]}`
-        );
-      }
-      const vmClose = inner.match(/^(.+?)\s*V_m\s+closest to\s*$/i);
-      if (vmClose) {
-        return ensureQuestionMark(
-          `Given ${vmClose[1].trim()}, which resting membrane potential (V_m) is closest`
-        );
-      }
-      const vmApprox = inner.match(/^(.+?)\s*Resting V_m\s*≈\s*$/i);
-      if (vmApprox) {
-        return ensureQuestionMark(`Given ${vmApprox[1].trim()}, approximately what is resting V_m`);
-      }
-      const currentApprox = inner.match(/^(.+?)\s*((?:Na⁺|K⁺|Ca²⁺)?\s*current[^?]*)\s*≈\s*$/i);
-      if (currentApprox) {
-        return ensureQuestionMark(
-          `Given ${currentApprox[1].trim()}, approximately what is the ${currentApprox[2].trim()}`
-        );
-      }
-      return ensureQuestionMark(
-        `Using the values stated below, which answer is correct: ${inner}`
-      );
+      return polishStem(scenarioWrap[1].trim(), q);
     }
 
     if (/driving force is:?\s*$/i.test(s)) {
@@ -97,39 +130,13 @@
       );
     }
 
-    const selectAll =
-      q?.type === "selectAll" || /\bselect all\b/i.test(s);
-
     if (selectAll) {
-      if (q?.topic) {
+      if (q?.topic && s.length < 40 && !stemHasExperimentalContext(s)) {
         const label = String(q.topic).trim();
         const lead = label.charAt(0).toLowerCase() + label.slice(1);
         return `Which of the following statements about ${lead} are correct? Select all that apply.`;
       }
-      const wrapped = s.match(
-        /^Which of the following statements about (.+?) are correct\?\s*Select all that apply\.?\s*$/i
-      );
-      if (wrapped) {
-        let topic = wrapped[1].trim();
-        topic = topic.replace(/\?\s*\([^)]*select[^)]*\)\.?\s*$/i, "");
-        topic = topic.replace(/^which follow from (the )?/i, "the ");
-        topic = topic.replace(/^during\s+(a\s+)?/i, "");
-        topic = topic.replace(/,?\s*which are true\??\s*$/i, "");
-        topic = topic.replace(/\s{2,}/g, " ").trim();
-        if (topic.length >= 6) {
-          const lead = topic.charAt(0).toLowerCase() + topic.slice(1);
-          return `Which of the following statements about ${lead} are correct? Select all that apply.`;
-        }
-      }
-      let topic = s
-        .replace(/:\s*select all[^.?!]*[.?!]?\s*$/i, "")
-        .replace(/\.\s*select all[^.?!]*[.?!]?\s*$/i, "")
-        .trim();
-      topic = stripStemPrefix(topic);
-      if (topic) {
-        const lead = topic.charAt(0).toLowerCase() + topic.slice(1);
-        return `Which of the following statements about ${lead} are correct? Select all that apply.`;
-      }
+      if (/select all that apply/i.test(s)) return s;
     }
 
     if (/^which\b/i.test(s)) return ensureQuestionMark(s);
@@ -140,22 +147,22 @@
     if (expectedSplit && !s.includes("?")) {
       const ctx = expectedSplit[1].trim();
       const field = expectedSplit[2].trim().replace(/:$/, "").toLowerCase();
-      return ensureQuestionMark(
-        `Given ${ctx}, which ${field} is expected`
-      );
+      return ensureQuestionMark(`Given ${ctx}, which ${field} is expected`);
     }
 
-   const suggests = s.match(/^(.+?)\s+suggests:?$/i);
+    const suggests = s.match(/^(.+?)\s+suggests:?$/i);
     if (suggests && !s.includes("?")) {
-      return ensureQuestionMark(
-        `Which anatomic lesion best explains ${suggests[1].trim()}`
-      );
+      return ensureQuestionMark(`Which anatomic lesion best explains ${suggests[1].trim()}`);
     }
 
     const verbTail = s.match(/^(.+?)\s+(reduces|produces|allows|can|causes|is|are|was|were)\s*:?$/i);
     if (verbTail && !s.includes("?")) {
       const subject = verbTail[1].trim();
       const verb = verbTail[2].toLowerCase();
+      const skipApplies =
+        verb === "is" || verb === "are"
+          ? /^(if|at|given|during|in|when|after|before|under|with)\b/i.test(subject)
+          : false;
       if (verb === "reduces") return ensureQuestionMark(`What does ${subject} reduce`);
       if (verb === "produces") return ensureQuestionMark(`What does ${subject} produce`);
       if (verb === "allows") return ensureQuestionMark(`What does ${subject} allow`);
@@ -163,7 +170,7 @@
       if (verb === "causes") {
         return ensureQuestionMark(`Which outcome is most likely when ${subject} occurs`);
       }
-      if (verb === "is" || verb === "are") {
+      if ((verb === "is" || verb === "are") && !skipApplies) {
         return ensureQuestionMark(`Which description best applies to ${subject}`);
       }
     }
@@ -218,21 +225,19 @@
       );
     if (clinical && !/^which\b/i.test(s)) {
       const scenario = s.replace(/\.$/, "");
-      return ensureQuestionMark(
-        `Which clinical presentation is most consistent with ${scenario}`
-      );
+      return ensureQuestionMark(`Which clinical presentation is most consistent with ${scenario}`);
     }
 
     if (/^Consider the following lesion:/i.test(s)) {
-      return ensureQuestionMark(
-        `${s} Which deficit or presentation is most likely`
-      );
+      return ensureQuestionMark(`${s} Which deficit or presentation is most likely`);
     }
 
-    if (!/^which\b|^what\b|^how\b|^where\b|^when\b|^why\b|^if\b|^in\b|^during\b|^given\b/i.test(s)) {
+    if (
+      !/^which\b|^what\b|^how\b|^where\b|^when\b|^why\b|^if\b|^in\b|^during\b|^given\b/i.test(s)
+    ) {
       const scenario = s.replace(/\.$/, "");
-      if (scenario.length >= 12) {
-        return ensureQuestionMark(`Which answer best matches this scenario: ${scenario}`);
+      if (scenario.length >= 12 && /\d|mM|clamp|lesion|TTX|EPSP/i.test(scenario)) {
+        return ensureQuestionMark(`Given the scenario below, which answer is correct: ${scenario}`);
       }
     }
 
@@ -252,10 +257,17 @@
     return { ...q, question, options };
   }
 
-  const root = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : this;
+  const root =
+    typeof globalThis !== "undefined"
+      ? globalThis
+      : typeof window !== "undefined"
+        ? window
+        : this;
   root.QuestionCopyPolish = {
     polishStem,
     polishOption,
     polishQuestion,
+    polishListPlus,
+    stripGenericWrappers,
   };
 })();

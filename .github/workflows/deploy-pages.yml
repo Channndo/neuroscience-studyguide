@@ -15,7 +15,51 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  qa:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Copy-polish regression
+        run: node scripts/test-question-copy-polish.mjs
+
+      - name: Quiz timer contract
+        run: node scripts/test-quiz-timer-logic.mjs
+
+      - name: Signed Nernst reference
+        run: node scripts/test-nernst-signed-z.mjs
+
+      - name: Nernst/Goldman bank verification
+        run: node scripts/verify-nernst-goldman.mjs
+
+      - name: Master inventory (Phase 1)
+        run: node scripts/run-master-inventory.mjs
+
+      - name: Phase 3 verified registry
+        run: node scripts/build-verified-registry.mjs
+
+      - name: Unified validation pipeline (unit + Nernst gates)
+        run: |
+          node scripts/test-question-copy-polish.mjs
+          node scripts/test-prose-slashes.mjs
+          node scripts/test-nernst-signed-z.mjs
+          node scripts/test-quiz-timer-logic.mjs
+          node scripts/verify-nernst-goldman.mjs
+
+      - name: Question bank structural QA
+        run: node scripts/validate-question-banks.mjs
+
+      - name: Bank defect screening (hard gate on malformed stems)
+        run: node scripts/audit-question-bank-defects.mjs --gate
+
   deploy:
+    needs: qa
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -35,7 +79,7 @@ jobs:
           EOF
 
       - name: Upload site
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: .
 
