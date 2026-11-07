@@ -881,9 +881,9 @@ const PART1_EXTRA_POOL = [
     options: [
 
       "Hodgkin–Huxley separation of Na⁺ activation and K⁺ delayed activation",
-      "Goldman equation at rest only",
-      "Dopamine from amacrine cells opens CNG channels in the dark",
-      "Gap junction coupling",
+      "Goldman equation for multi-ion resting potential only (not time-varying spike conductances)",
+      "Capacitive charging of the membrane with no voltage-gated conductance changes",
+      "Steady-state Nernst equilibrium for a single ion with g_Na and g_K fixed",
     ],
     correct: 0,
     explanation: "Classic HH model: fast Na⁺ conductance rise, slower K⁺ rise for repolarization.",

@@ -2,6 +2,7 @@
 /**
  * Remove auto-generated distractor suffixes from MCQ option strings in question banks.
  */
+import { spawnSync } from "child_process";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -107,3 +108,9 @@ for (const file of files) {
   total += hits;
 }
 console.log("total option cleanups:", total);
+
+const fix = spawnSync(process.execPath, ["scripts/fix-blank-options.mjs"], {
+  cwd: root,
+  stdio: "inherit",
+});
+if (fix.status !== 0) process.exit(fix.status ?? 1);

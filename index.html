@@ -3415,15 +3415,15 @@
     &middot; <button type="button" class="footer-link-btn" id="footer-go-downloads">Downloads</button>
   </footer>
 
-  <script src="questions-bank.js"></script>
-  <script src="questions-extra-pools.js"></script>
-  <script src="questions-fresh-pools.js"></script>
-  <script src="questions-expansion.js"></script>
-  <script src="questions-exam-paraphrases.js"></script>
-  <script src="questions-written-final.js"></script>
-  <script src="questions-proctored-mock.js"></script>
-  <script src="questions-formula-drills.js"></script>
-  <script src="questions-pinnacle-megabank.js"></script>
+  <script src="questions-bank.js?v=20251107b"></script>
+  <script src="questions-extra-pools.js?v=20251107b"></script>
+  <script src="questions-fresh-pools.js?v=20251107b"></script>
+  <script src="questions-expansion.js?v=20251107b"></script>
+  <script src="questions-exam-paraphrases.js?v=20251107b"></script>
+  <script src="questions-written-final.js?v=20251107b"></script>
+  <script src="questions-proctored-mock.js?v=20251107b"></script>
+  <script src="questions-formula-drills.js?v=20251107b"></script>
+  <script src="questions-pinnacle-megabank.js?v=20251107b"></script>
   <script src="brain-anatomy-diagrams.js?v=6"></script>
   <script src="questions-brain-anatomy.js?v=6"></script>
   <script src="mcb80x-cloud-config.js"></script>
@@ -3517,6 +3517,42 @@
     }
 
     const fmt = formatNeuroscienceText;
+
+    const FALLBACK_MCQ_DISTRACTORS = [
+      "Confuses resting multi-ion equilibrium with active spike conductance changes",
+      "Describes synaptic transmission rather than membrane voltage-gated currents",
+      "Applies only to photoreceptor dark current, not axonal action potentials",
+      "Requires gap junction coupling instead of voltage-gated channel gating",
+      "Equates capacitive charging with full Hodgkin–Huxley conductance kinetics",
+      "Uses steady-state Nernst for one ion while both g_Na and g_K change in time",
+      "Implies the Na⁺/K⁺ pump alone produces the spike upswing",
+      "Treats myelin length constant as the driver of Na⁺ and K⁺ conductance timing",
+    ];
+
+    function pickFallbackMcqOption(q, optionIndex) {
+      const used = new Set((q.options || []).map(o => String(o).trim().toLowerCase()).filter(Boolean));
+      const stem = `${q.topic || ""} ${q.question || ""}`;
+      let h = 0;
+      for (let i = 0; i < stem.length; i++) h = (h * 31 + stem.charCodeAt(i)) | 0;
+      const seed = Math.abs(h) + optionIndex * 997;
+      for (let k = 0; k < FALLBACK_MCQ_DISTRACTORS.length; k++) {
+        const d = FALLBACK_MCQ_DISTRACTORS[(seed + k) % FALLBACK_MCQ_DISTRACTORS.length];
+        if (!used.has(d.toLowerCase())) return d;
+      }
+      return `Incorrect mechanism for this stem (choice ${optionIndex + 1})`;
+    }
+
+    function repairMissingMcqOptions(q) {
+      if (!q?.options?.length || isWrittenQuestion(q) || isSelectAllQuestion(q)) return q;
+      let changed = false;
+      const options = q.options.map((opt, i) => {
+        const t = String(opt ?? "").trim();
+        if (t) return opt;
+        changed = true;
+        return pickFallbackMcqOption({ ...q, options: q.options.map((o, j) => (j === i ? "" : o)) }, i);
+      });
+      return changed ? { ...q, options } : q;
+    }
 
     function optionDisplayText(opt, letter) {
       const t = String(opt ?? "").trim();
@@ -7764,7 +7800,7 @@
             explanation: q.modelAnswer
           };
         }
-        const surfaced = applyExamSurfaceVariant(q, quizId);
+        const surfaced = repairMissingMcqOptions(applyExamSurfaceVariant(q, quizId));
         const indexed = surfaced.options.map((text, i) => ({ text, originalIndex: i }));
         const shuffledOpts = shuffle(indexed);
         if (isSelectAllQuestion(surfaced)) {

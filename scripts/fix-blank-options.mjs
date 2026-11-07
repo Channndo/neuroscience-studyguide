@@ -10,6 +10,10 @@ const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const SKIP_FILES = new Set(["questions-formula-drills.js", "questions-written-final.js"]);
 
 const POOL_DISTRACTORS = [
+  "Goldman equation for multi-ion resting potential only (not time-varying spike conductances)",
+  "Capacitive charging of the membrane with no voltage-gated conductance changes",
+  "Steady-state Nernst equilibrium for a single ion with g_Na and g_K fixed",
+  "Confuses resting multi-ion equilibrium with active spike conductance changes",
   "Glutamate release dominates in the dark in all vertebrate photoreceptors",
   "Light raises cGMP and keeps CNG channels open",
   "Voltage-gated Na⁺ channels drive the photoreceptor dark current",
