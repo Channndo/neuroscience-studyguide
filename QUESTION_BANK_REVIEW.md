@@ -1,0 +1,24 @@
+# Question Bank Review
+
+**Status:** Phase 0 — inventory only  
+**Reviewer workflow:** Independent verification per statement (SATA) and per MCQ key; `reviewStatus` + `sourceReferences` on migration.
+
+## Scope (deployed sources)
+
+All pools listed in `QA_BASELINE.md` §2–3.
+
+## SATA audit queue (`PROCTORED_SATA_POOL`)
+
+Standalone pool: 50 items (`questions-proctored-mock.js`).
+
+Remediation prompt indices 0–11 and 38–49 are **confirmed structurally defective** at baseline (see `QA_BASELINE.md` §6.1). Indices 12–37 require full statement-by-statement review in Phase 1.
+
+## MCQ audit queue
+
+- `PROCTORED_MOCK_EXAM_POOL` (50 items) — full key review
+- Inline `PART1`–`PART3` (45 items)
+- Scored exam draws: finals, pinnacle, mixed review (via deduped mega pools)
+
+## Excluded until reviewed
+
+*(None formally tagged yet — Phase 1 will mark `reviewStatus: "needs-review"` and gate draws.)*
