@@ -17,7 +17,7 @@ const BANNED = /variant|placeholder|Clinical vignette \d|Pinnacle calc|Pinnacle 
 const FILLER =
   /\(does not follow|inconsistent with the mechanism|not the best match|wrong visual pathway stage|wrong … stage|— inconsistent with the mechanism|does not follow from the mechanism implied/i;
 const JUNK_OPTION =
-  /37\s*°?C|typical mammalian central neuron|during normal resting permeability|gap junctions relay dark current|depolarize rods in darkness|bleaching photopigment|glutamate release dominates.*dark|gap junction coupling in a typical/i;
+  /37\s*°?C|typical mammalian|during normal resting permeability|gap junctions relay dark current|depolarize rods in darkness|bleaching photopigment|glutamate release dominates.*dark|gap junction coupling in a typical/i;
 const ABS_GIVEAWAY =
   /\b(always|never|exclusively|in all cases|without exception|cannot occur)\b/i;
 const ABS_SOFT = /\b(only|every)\b/i;

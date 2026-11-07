@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="mcb80x-bank-build" content="20251107h">
+  <meta name="mcb80x-bank-build" content="20251107i">
   <link rel="icon" href="favicon.svg" type="image/svg+xml" sizes="any">
   <link rel="alternate icon" href="favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -3418,22 +3418,22 @@
   </div>
 
   <footer>
-    Fisher-Yates shuffle on every quiz start &middot; HarvardX MCB80x curriculum alignment &middot; bank build 20251107h
+    Fisher-Yates shuffle on every quiz start &middot; HarvardX MCB80x curriculum alignment &middot; bank build 20251107i
     &middot; <button type="button" class="footer-link-btn" id="footer-go-downloads">Downloads</button>
   </footer>
 
-  <script src="explanation-feedback.js?v=20251107h"></script>
-  <script src="questions-bank.js?v=20251107h"></script>
-  <script src="questions-extra-pools.js?v=20251107h"></script>
-  <script src="questions-fresh-pools.js?v=20251107h"></script>
-  <script src="questions-expansion.js?v=20251107h"></script>
-  <script src="questions-exam-paraphrases.js?v=20251107h"></script>
-  <script src="questions-written-final.js?v=20251107h"></script>
-  <script src="questions-proctored-mock.js?v=20251107h"></script>
-  <script src="questions-formula-drills.js?v=20251107h"></script>
-  <script src="questions-pinnacle-megabank.js?v=20251107h"></script>
-  <script src="brain-anatomy-diagrams.js?v=20251107h"></script>
-  <script src="questions-brain-anatomy.js?v=20251107h"></script>
+  <script src="explanation-feedback.js?v=20251107i"></script>
+  <script src="questions-bank.js?v=20251107i"></script>
+  <script src="questions-extra-pools.js?v=20251107i"></script>
+  <script src="questions-fresh-pools.js?v=20251107i"></script>
+  <script src="questions-expansion.js?v=20251107i"></script>
+  <script src="questions-exam-paraphrases.js?v=20251107i"></script>
+  <script src="questions-written-final.js?v=20251107i"></script>
+  <script src="questions-proctored-mock.js?v=20251107i"></script>
+  <script src="questions-formula-drills.js?v=20251107i"></script>
+  <script src="questions-pinnacle-megabank.js?v=20251107i"></script>
+  <script src="brain-anatomy-diagrams.js?v=20251107i"></script>
+  <script src="questions-brain-anatomy.js?v=20251107i"></script>
   <script src="mcb80x-cloud-config.js"></script>
   <script src="sheets-sync.js"></script>
   <script src="oauth-client.js"></script>
@@ -3550,20 +3550,39 @@
       return `Incorrect mechanism for this stem (choice ${optionIndex + 1})`;
     }
 
+    const GIVEAWAY_OPTION_FILLER_RES = [
+      /\s+in a typical mammalian[^.]*\.?/gi,
+      /\s+typical mammalian[^.]*\.?/gi,
+      /\s+when temperature is near 37\s*°?C\.?/gi,
+      /\s+during normal resting permeability conditions\.?/gi,
+    ];
+    const GIVEAWAY_OPTION_JUNK_RE =
+      /typical mammalian|37\s*°?C|during normal resting permeability|gap junction coupling in a typical/i;
+
+    function sanitizeMcqOptionText(opt) {
+      let t = String(opt ?? "").trim();
+      if (!t) return t;
+      for (const re of GIVEAWAY_OPTION_FILLER_RES) t = t.replace(re, "");
+      return t.replace(/\s{2,}/g, " ").replace(/\s+\./g, ".").trim();
+    }
+
     function repairMissingMcqOptions(q) {
       if (!q?.options?.length || isWrittenQuestion(q) || isSelectAllQuestion(q)) return q;
       let changed = false;
       const options = q.options.map((opt, i) => {
-        const t = String(opt ?? "").trim();
-        if (t) return opt;
-        changed = true;
-        return pickFallbackMcqOption({ ...q, options: q.options.map((o, j) => (j === i ? "" : o)) }, i);
+        let t = sanitizeMcqOptionText(opt);
+        if (!t || GIVEAWAY_OPTION_JUNK_RE.test(String(opt ?? ""))) {
+          changed = true;
+          return pickFallbackMcqOption({ ...q, options: q.options.map((o, j) => (j === i ? "" : o)) }, i);
+        }
+        if (t !== String(opt ?? "").trim()) changed = true;
+        return t;
       });
       return changed ? { ...q, options } : q;
     }
 
     function optionDisplayText(opt, letter) {
-      const t = String(opt ?? "").trim();
+      const t = sanitizeMcqOptionText(opt);
       if (t) return fmt(t);
       return `<span class="option-missing">(Choice ${letter} is missing—hard-refresh to load the latest question banks.)</span>`;
     }

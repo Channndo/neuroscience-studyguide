@@ -10,7 +10,7 @@ const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const SKIP_FILES = new Set(["questions-formula-drills.js", "questions-written-final.js"]);
 
 const JUNK_RE =
-  /gap junctions relay dark|glutamate release dominates.*dark|depolarize rods|bleaching photopigment|horizontal cells hyperpolarize rods|müller glia pass inward|inner hair cells establish.*rod|transducin hydrolyzes cGMP|only müller glia|ipsp.*bipolar.*rods|37\s*°?c|typical mammalian central neuron|during normal resting permeability|gap junction coupling in a typical|goldman equation at rest only in a|opening voltage-gated na.*37|exclusive gaba.*muscle.*resting/i;
+  /gap junctions relay dark|glutamate release dominates.*dark|depolarize rods|bleaching photopigment|horizontal cells hyperpolarize rods|müller glia pass inward|inner hair cells establish.*rod|transducin hydrolyzes cGMP|only müller glia|ipsp.*bipolar.*rods|37\s*°?c|typical mammalian|during normal resting permeability|gap junction coupling in a typical|goldman equation at rest only in a|opening voltage-gated na.*37|exclusive gaba.*muscle.*resting/i;
 
 const SAFE_DISTRACTORS = [
   "Confuses resting multi-ion equilibrium with time-varying spike conductances",

@@ -41,7 +41,8 @@ const STRIP_RES = [
   /\s+and no homonymous visual field defect\.?/gi,
   /\s*Requires [^.]+\.$/gi,
   /\s+when temperature is near 37\s*°?C\.?/gi,
-  /\s+in a typical mammalian central neuron\.?/gi,
+  /\s+in a typical mammalian[^.]*\.?/gi,
+  /\s+typical mammalian[^.]*\.?/gi,
   /\s+during normal resting permeability conditions\.?/gi,
   /\s+exclusively in this context\.?/gi,
 ];

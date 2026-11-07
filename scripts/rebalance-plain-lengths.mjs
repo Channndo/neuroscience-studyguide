@@ -22,9 +22,9 @@ const CLINICAL_PADS = [
 
 const MECH_PADS = [
   " under standard whole-cell recording conditions",
-  " in a typical mammalian central neuron",
-  " when temperature is near 37 °C",
-  " during normal resting permeability conditions",
+  " with ion concentrations held at physiological values",
+  " when only leak conductances dominate",
+  " before voltage-gated channels activate",
 ];
 
 function len(s) {
