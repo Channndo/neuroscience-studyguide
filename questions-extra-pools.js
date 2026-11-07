@@ -1485,17 +1485,17 @@ const PART2_EXTRA_POOL = [
     question: "Postsynaptic density (PSD) is enriched in:",
     options: [
       "Scaffolding proteins and glutamate receptors at excitatory synapses",
-      "Gap junctions relay dark current from cones to rods exclusively",
-      "Rhodopsin",
-      "Cochlear hair cell tip links",
+      "Presynaptic active-zone proteins and synaptic vesicle tethers (CAZ)",
+      "Rhodopsin and G-protein transducin in photoreceptor outer segments",
+      "Cadherin tip-link proteins between cochlear hair-cell stereocilia",
     ],
     correct: 0,
-    explanation: "PSD organizes AMPA/NMDA receptors and signaling complexes.",
+    explanation: "The PSD is a protein mesh on the postsynaptic side of excitatory synapses. It concentrates glutamate receptors (AMPA, NMDA) and scaffolds such as PSD-95, plus signaling enzymes, so neurotransmitter binding efficiently drives postsynaptic currents.",
     wrongExplanations: [
       "",
-      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: PSD organizes AMPA/NMDA receptors and signaling complexes.",
-      "“Rhodopsin” does not match the mechanism (topic: Synaptic Anatomy). PSD organizes AMPA/NMDA receptors and signaling complexes. The correct choice—“Scaffolding proteins and glutamate receptors at excitatory synapses”—fits that description.",
-      "“Cochlear hair cell tip links” does not match the mechanism (topic: Synaptic Anatomy). PSD organizes AMPA/NMDA receptors and signaling complexes. The correct choice—“Scaffolding proteins and glutamate receptors at excitatory synapses”—fits that description.",
+      "The cytomatrix of the active zone (CAZ) and vesicle-docking machinery sit on the presynaptic terminal, opposite—but not within—the PSD. PSD is postsynaptic.",
+      "Rhodopsin is the photopigment in rod/cone outer segments; it triggers retinal phototransduction, not glutamatergic spine signaling. You would not find rhodopsin enriched at a central excitatory PSD.",
+      "Tip links connect stereocilia in the cochlea for auditory mechanotransduction. They are not components of dendritic spine postsynaptic densities.",
     ]
   },
   {

@@ -4,7 +4,7 @@
  */
 (function (global) {
   const BOILER_RE =
-    /unlike the keyed answer|misstates the mechanism|inconsistent with the stem|does not match the keyed|does not follow from the mechanism|This option is inconsistent/i;
+    /unlike the keyed answer|misstates the mechanism|inconsistent with the stem|does not match the keyed|does not follow from the mechanism|matches the underlying mechanism|This option is inconsistent|does not match the mechanism \(topic:/i;
 
   function stripHtml(s) {
     return String(s ?? "")
@@ -42,7 +42,28 @@
     const rules = [
       {
         when: () =>
-          /photoreceptor|transducin|\bcgmp\b|cng channel|horizontal cell|amacrine.*dark|rod.*dark|cone.*dark/i.test(
+          /postsynaptic density|\bpsd\b/i.test(c.stemTopic) &&
+          (/rhodopsin|transducin|photoreceptor|outer segment/i.test(c.wrong)),
+        text: () =>
+          `Rhodopsin and transducin operate in rod/cone outer segments for phototransduction. The PSD is a postsynaptic protein lattice at excitatory synapses, enriched in glutamate receptors and scaffolds (e.g., PSD-95)—not retinal photopigment.`,
+      },
+      {
+        when: () =>
+          /postsynaptic density|\bpsd\b/i.test(c.stemTopic) &&
+          (/tip link|hair cell|cochlea|stereocilia/i.test(c.wrong)),
+        text: () =>
+          `Tip-link proteins couple stereocilia during cochlear mechanotransduction. The PSD is on the postsynaptic dendritic spine/ shaft membrane at chemical synapses, not in the auditory organ of Corti.`,
+      },
+      {
+        when: () =>
+          /postsynaptic density|\bpsd\b/i.test(c.stemTopic) &&
+          (/active zone|caz|vesicle dock|presynaptic terminal/i.test(c.wrong)),
+        text: () =>
+          `Active-zone (CAZ) proteins and vesicle tethers are presynaptic—they position vesicles for Ca²⁺-triggered release facing the synaptic cleft. The PSD is the postsynaptic specialization on the opposite membrane.`,
+      },
+      {
+        when: () =>
+          /photoreceptor|transducin|\bcgmp\b|cng channel|horizontal cell|amacrine.*dark|rod.*dark|cone.*dark|rhodopsin/i.test(
             c.wrong
           ) && !/photoreceptor|retina|vision|rod|cone|light|dark adapt/i.test(c.stemTopic),
         text: () =>
@@ -168,7 +189,9 @@
           `Chemical synapses require presynaptic Ca²⁺ influx to trigger vesicle fusion and quantal neurotransmitter release. Receptor binding alone occurs postsynaptically and does not drive presynaptic exocytosis. ${c.main}`,
       },
       {
-        when: () => /always|never|only|exclusively|cannot occur/i.test(c.w),
+        when: () =>
+          /always|never|cannot occur/i.test(c.w) &&
+          !/rhodopsin|cochlea|photoreceptor|tip link|dark current|glomerul/i.test(c.w),
         text: () =>
           `MCB80x answers rarely hinge on absolute "always/never" claims—biology has exceptions. This option overstates a rule: ${c.main}`,
       },
