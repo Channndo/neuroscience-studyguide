@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="mcb80x-bank-build" content="20251107n">
+  <meta name="mcb80x-bank-build" content="20251107o">
   <link rel="icon" href="favicon.svg" type="image/svg+xml" sizes="any">
   <link rel="alternate icon" href="favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -3466,23 +3466,23 @@
   </div>
 
   <footer>
-    Fisher-Yates shuffle on every quiz start &middot; HarvardX MCB80x curriculum alignment &middot; bank build 20251107n
+    Fisher-Yates shuffle on every quiz start &middot; HarvardX MCB80x curriculum alignment &middot; bank build 20251107o
     &middot; <button type="button" class="footer-link-btn" id="footer-go-downloads">Downloads</button>
   </footer>
 
-  <script src="question-copy-polish.js?v=20251107n"></script>
-  <script src="explanation-feedback.js?v=20251107n"></script>
-  <script src="questions-bank.js?v=20251107n"></script>
-  <script src="questions-extra-pools.js?v=20251107n"></script>
-  <script src="questions-fresh-pools.js?v=20251107n"></script>
-  <script src="questions-expansion.js?v=20251107n"></script>
-  <script src="questions-exam-paraphrases.js?v=20251107n"></script>
-  <script src="questions-written-final.js?v=20251107n"></script>
-  <script src="questions-proctored-mock.js?v=20251107n"></script>
-  <script src="questions-formula-drills.js?v=20251107n"></script>
-  <script src="questions-pinnacle-megabank.js?v=20251107n"></script>
-  <script src="brain-anatomy-diagrams.js?v=20251107n"></script>
-  <script src="questions-brain-anatomy.js?v=20251107n"></script>
+  <script src="question-copy-polish.js?v=20251107o"></script>
+  <script src="explanation-feedback.js?v=20251107o"></script>
+  <script src="questions-bank.js?v=20251107o"></script>
+  <script src="questions-extra-pools.js?v=20251107o"></script>
+  <script src="questions-fresh-pools.js?v=20251107o"></script>
+  <script src="questions-expansion.js?v=20251107o"></script>
+  <script src="questions-exam-paraphrases.js?v=20251107o"></script>
+  <script src="questions-written-final.js?v=20251107o"></script>
+  <script src="questions-proctored-mock.js?v=20251107o"></script>
+  <script src="questions-formula-drills.js?v=20251107o"></script>
+  <script src="questions-pinnacle-megabank.js?v=20251107o"></script>
+  <script src="brain-anatomy-diagrams.js?v=20251107o"></script>
+  <script src="questions-brain-anatomy.js?v=20251107o"></script>
   <script src="mcb80x-cloud-config.js"></script>
   <script src="sheets-sync.js"></script>
   <script src="oauth-client.js"></script>
@@ -3527,7 +3527,36 @@
         queue.push([n, d]);
         return `\x00FRAC${i}\x00`;
       };
-      let t = s;
+
+      /** Course / pathway shorthand — not stacked division (keep a literal slash). */
+      const PROSE_SLASH_RE =
+        /\b(?:outside\/inside|pain\/temp(?:erature)?|vibration\/proprioception|flexor\/extensor|intracellular\/extracellular|ipsilateral\/contralateral|pre\/post|Na\/K)\b/gi;
+
+      const proseHolds = [];
+      let t = String(s).replace(PROSE_SLASH_RE, match => {
+        const id = proseHolds.length;
+        proseHolds.push(match);
+        return `\x00PROSESLASH${id}\x00`;
+      });
+
+      const isMathOperand = (part) => {
+        const x = part.trim();
+        if (!x) return false;
+        if (/^\d+(?:\.\d+)?(?:\s*(?:mM|mV|nS|ms|µm|μm|cm|s))?$/.test(x)) return true;
+        if (/^\[/.test(x)) return true;
+        if (/[_₀₁₂³⁴⁵⁶⁷⁸⁹⁺⁻λτΔ]/.test(x)) return true;
+        if (/^(?:[RCVgI]|P_[A-Za-z]|E_[A-Za-z]|R_[a-z]+|C_m|V_m|τ|λ)/.test(x)) return true;
+        return false;
+      };
+
+      const shouldStack = (n, d) => {
+        const nt = n.trim();
+        const dt = d.trim();
+        if (!nt || !dt) return false;
+        if (/^\d+(?:\.\d+)?$/.test(nt) && /^\d+(?:\.\d+)?$/.test(dt)) return true;
+        return isMathOperand(nt) && isMathOperand(dt);
+      };
+
       t = t.replace(
         /log10\s*\(\s*\(([^()]+)\)\s*\/\s*\(([^()]+)\)\s*\)/gi,
         (_, n, d) => `log10(${tag(n.trim(), d.trim())})`
@@ -3535,29 +3564,23 @@
       t = t.replace(/log10\s*\(\s*([^()\s]+)\s*\/\s*([^()\s]+)\s*\)/gi, (_, n, d) =>
         `log10(${tag(n.trim(), d.trim())})`
       );
-      t = t.replace(/(\[[^\]]+\])\s*\/\s*(\[[^\]]+\])/g, (_, n, d) => tag(n, d));
-      t = t.replace(/\(\s*([^()]{1,160})\s*\/\s*([^()]{1,160})\s*\)/g, (_, n, d) =>
+      t = t.replace(/(\[[^\]]+\](?:_[a-zA-Z]+)?)\s*\/\s*(\[[^\]]+\](?:_[a-zA-Z]+)?)/g, (_, n, d) =>
         tag(n.trim(), d.trim())
       );
-      const keepSlashPair = (a, b) => {
-        const pairs = [
-          ["outside", "inside"],
-          ["pain", "temp"],
-          ["pain", "temperature"],
-          ["vibration", "proprioception"],
-          ["flexor", "extensor"],
-          ["intracellular", "extracellular"],
-          ["ipsilateral", "contralateral"],
-        ];
-        const al = a.toLowerCase();
-        const bl = b.toLowerCase();
-        return pairs.some(([x, y]) => al === x && bl === y);
-      };
-      t = t.replace(/\b([A-Za-z][\w₀₁₂³⁴⁵⁶⁷⁸⁹·⁺⁻]*)\s*\/\s*([A-Za-z][\w₀₁₂³⁴⁵⁶⁷⁸⁹·⁺⁻]*)\b/g, (_, n, d) => {
-        if (/^P_[A-Za-z]$/.test(n) && /^P_/.test(d)) return `${n}/${d}`;
-        if (keepSlashPair(n.trim(), d.trim())) return `${n}/${d}`;
-        return tag(n, d);
+      t = t.replace(/\(\s*([^()]{1,160})\s*\/\s*([^()]{1,160})\s*\)/g, (_, n, d) => {
+        const nt = n.trim();
+        const dt = d.trim();
+        if (shouldStack(nt, dt)) return `(${tag(nt, dt)})`;
+        return `(${nt}/${dt})`;
       });
+      t = t.replace(/\b(\d+(?:\.\d+)?)\s*\/\s*(\d+(?:\.\d+)?)\b/g, (_, n, d) => tag(n, d));
+      t = t.replace(
+        /\b([A-Za-zλτΔ](?:_[a-zA-Z0-9]+)+)\s*\/\s*([A-Za-zλτΔ](?:_[a-zA-Z0-9]+)+)\b/g,
+        (_, n, d) => tag(n.trim(), d.trim())
+      );
+
+      t = t.replace(/\x00PROSESLASH(\d+)\x00/g, (_, id) => proseHolds[Number(id)] ?? "/");
+
       return { text: t, queue };
     }
 
