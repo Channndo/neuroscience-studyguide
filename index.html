@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="mcb80x-bank-build" content="20251107j">
+  <meta name="mcb80x-bank-build" content="20251107k">
   <link rel="icon" href="favicon.svg" type="image/svg+xml" sizes="any">
   <link rel="alternate icon" href="favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -1536,6 +1536,35 @@
     .formula-steps {
       margin: 0.5rem 0 0.35rem 1.1rem;
       padding: 0;
+    }
+
+    .formula-hint-panel p,
+    .formula-hint-panel li,
+    .formula-hint-panel .formula-steps {
+      font-family: ui-serif, Georgia, "Times New Roman", serif;
+    }
+
+    .math-frac {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: stretch;
+      vertical-align: middle;
+      margin: 0 0.2em;
+      text-align: center;
+      line-height: 1.15;
+    }
+
+    .math-frac-num,
+    .math-frac-den {
+      padding: 0 0.25em;
+      white-space: nowrap;
+      font-size: 0.94em;
+    }
+
+    .math-frac-bar {
+      border-top: 1.5px solid currentColor;
+      margin: 1px 0.05em;
+      min-width: 100%;
     }
 
     .formula-sheet-link {
@@ -3418,22 +3447,22 @@
   </div>
 
   <footer>
-    Fisher-Yates shuffle on every quiz start &middot; HarvardX MCB80x curriculum alignment &middot; bank build 20251107j
+    Fisher-Yates shuffle on every quiz start &middot; HarvardX MCB80x curriculum alignment &middot; bank build 20251107k
     &middot; <button type="button" class="footer-link-btn" id="footer-go-downloads">Downloads</button>
   </footer>
 
-  <script src="explanation-feedback.js?v=20251107j"></script>
-  <script src="questions-bank.js?v=20251107j"></script>
-  <script src="questions-extra-pools.js?v=20251107j"></script>
-  <script src="questions-fresh-pools.js?v=20251107j"></script>
-  <script src="questions-expansion.js?v=20251107j"></script>
-  <script src="questions-exam-paraphrases.js?v=20251107j"></script>
-  <script src="questions-written-final.js?v=20251107j"></script>
-  <script src="questions-proctored-mock.js?v=20251107j"></script>
-  <script src="questions-formula-drills.js?v=20251107j"></script>
-  <script src="questions-pinnacle-megabank.js?v=20251107j"></script>
-  <script src="brain-anatomy-diagrams.js?v=20251107j"></script>
-  <script src="questions-brain-anatomy.js?v=20251107j"></script>
+  <script src="explanation-feedback.js?v=20251107k"></script>
+  <script src="questions-bank.js?v=20251107k"></script>
+  <script src="questions-extra-pools.js?v=20251107k"></script>
+  <script src="questions-fresh-pools.js?v=20251107k"></script>
+  <script src="questions-expansion.js?v=20251107k"></script>
+  <script src="questions-exam-paraphrases.js?v=20251107k"></script>
+  <script src="questions-written-final.js?v=20251107k"></script>
+  <script src="questions-proctored-mock.js?v=20251107k"></script>
+  <script src="questions-formula-drills.js?v=20251107k"></script>
+  <script src="questions-pinnacle-megabank.js?v=20251107k"></script>
+  <script src="brain-anatomy-diagrams.js?v=20251107k"></script>
+  <script src="questions-brain-anatomy.js?v=20251107k"></script>
   <script src="mcb80x-cloud-config.js"></script>
   <script src="sheets-sync.js"></script>
   <script src="oauth-client.js"></script>
@@ -3460,11 +3489,54 @@
         .replace(/"/g, "&quot;");
     }
 
+    function renderMathFraction(numRaw, denRaw) {
+      const num = applyNeuroFormatting(numRaw, false);
+      const den = applyNeuroFormatting(denRaw, false);
+      return (
+        `<span class="math-frac" role="math" aria-label="${String(numRaw)} over ${String(denRaw)}">` +
+        `<span class="math-frac-num">${num}</span>` +
+        `<span class="math-frac-bar" aria-hidden="true"></span>` +
+        `<span class="math-frac-den">${den}</span></span>`
+      );
+    }
+
+    function markMathFractions(s) {
+      const queue = [];
+      const tag = (n, d) => {
+        const i = queue.length;
+        queue.push([n, d]);
+        return `\x00FRAC${i}\x00`;
+      };
+      let t = s;
+      t = t.replace(
+        /log10\s*\(\s*\(([^()]+)\)\s*\/\s*\(([^()]+)\)\s*\)/gi,
+        (_, n, d) => `log10(${tag(n.trim(), d.trim())})`
+      );
+      t = t.replace(/log10\s*\(\s*([^()\s]+)\s*\/\s*([^()\s]+)\s*\)/gi, (_, n, d) =>
+        `log10(${tag(n.trim(), d.trim())})`
+      );
+      t = t.replace(/(\[[^\]]+\])\s*\/\s*(\[[^\]]+\])/g, (_, n, d) => tag(n, d));
+      t = t.replace(/\(\s*([^()]{1,160})\s*\/\s*([^()]{1,160})\s*\)/g, (_, n, d) =>
+        tag(n.trim(), d.trim())
+      );
+      t = t.replace(/\b([A-Za-z][\w₀₁₂³⁴⁵⁶⁷⁸⁹·⁺⁻]*)\s*\/\s*([A-Za-z][\w₀₁₂³⁴⁵⁶⁷⁸⁹·⁺⁻]*)\b/g, (_, n, d) => {
+        if (/^P_[A-Za-z]$/.test(n) && /^P_/.test(d)) return `${n}/${d}`;
+        return tag(n, d);
+      });
+      return { text: t, queue };
+    }
+
     /** Turn keyboard shorthand (E_K, Na+, V_m) into readable notation with subscripts/superscripts. */
-    function formatNeuroscienceText(raw) {
+    function applyNeuroFormatting(raw, enableFractions) {
       if (raw == null) return "";
       const safeTags = [];
       let s = String(raw);
+      let fracQueue = [];
+      if (enableFractions !== false) {
+        const marked = markMathFractions(s);
+        s = marked.text;
+        fracQueue = marked.queue;
+      }
 
       s = s.replace(/<sub>([^<]*)<\/sub>/gi, (_, inner) => {
         const id = safeTags.length;
@@ -3487,7 +3559,12 @@
       s = s.replace(/E_(K|Na|Cl|Ca|ion|rev|h|LTP|EPSP|IPSP|m)⁺/g, "E<sub>$1</sub>");
       s = s.replace(/\bE_(K|Na|Cl|Ca|ion|rev|h|LTP|EPSP|IPSP|m)\b/g, "E<sub>$1</sub>");
       s = s.replace(/\bP_(K|Na|Cl)\b/g, "P<sub>$1</sub>");
+      s = s.replace(/P_K:P_Na/g, "P<sub>K</sub>:P<sub>Na</sub>");
       s = s.replace(/\b(K|Na|Ca)_(i|o)\b/g, "$1<sub>$2</sub>");
+      s = s.replace(/·K_o/g, "·K<sub>o</sub>");
+      s = s.replace(/·K_i/g, "·K<sub>i</sub>");
+      s = s.replace(/·Na_o/g, "·Na<sub>o</sub>");
+      s = s.replace(/·Na_i/g, "·Na<sub>i</sub>");
       s = s.replace(/\bg_(K|Na|Cl|Ca|syn)\b/g, "g<sub>$1</sub>");
       s = s.replace(/\bI_(Na|K|ion|Cl|inj)\b/g, "I<sub>$1</sub>");
       s = s.replace(/\blog10\b/g, "log<sub>10</sub>");
@@ -3521,7 +3598,17 @@
         return `<${row.tag}>${row.inner}</${row.tag}>`;
       });
 
+      s = s.replace(/\x00FRAC(\d+)\x00/g, (_, id) => {
+        const pair = fracQueue[Number(id)];
+        if (!pair) return "";
+        return renderMathFraction(pair[0], pair[1]);
+      });
+
       return s;
+    }
+
+    function formatNeuroscienceText(raw) {
+      return applyNeuroFormatting(raw, true);
     }
 
     const fmt = formatNeuroscienceText;

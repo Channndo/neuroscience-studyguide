@@ -14,8 +14,8 @@ const FORMULA_DRILL_POOL = [
     correct: 0,
     formulaHint: "Use: Nernst — E_ion = (61.54 mV / z) · log10([out]/[in])",
     formulaSteps: [
-      "Write [out] and [in] for the ion.",
-      "Apply E = (61.54/z)·log10(out/in).",
+      "Write [out] and [in] for the ion in the ratio.",
+      "Apply E_ion = (61.54/z) · log10([out]/[in]).",
       "Pick the closest mV."
     ],
     explanation: "E_K = 61.54·log10(5/140) ≈ -89.1 mV.",
@@ -39,8 +39,8 @@ const FORMULA_DRILL_POOL = [
     correct: 0,
     formulaHint: "Use: Nernst — E_ion = (61.54 mV / z) · log10([out]/[in])",
     formulaSteps: [
-      "Write [out] and [in] for the ion.",
-      "Apply E = (61.54/z)·log10(out/in).",
+      "Write [out] and [in] for the ion in the ratio.",
+      "Apply E_ion = (61.54/z) · log10([out]/[in]).",
       "Pick the closest mV."
     ],
     explanation: "E_K = 61.54·log10(4/140) ≈ -95 mV.",
@@ -64,8 +64,8 @@ const FORMULA_DRILL_POOL = [
     correct: 0,
     formulaHint: "Use: Nernst — E_ion = (61.54 mV / z) · log10([out]/[in])",
     formulaSteps: [
-      "Write [out] and [in] for the ion.",
-      "Apply E = (61.54/z)·log10(out/in).",
+      "Write [out] and [in] for the ion in the ratio.",
+      "Apply E_ion = (61.54/z) · log10([out]/[in]).",
       "Pick the closest mV."
     ],
     explanation: "E_K = 61.54·log10(4/120) ≈ -90.9 mV.",
@@ -89,8 +89,8 @@ const FORMULA_DRILL_POOL = [
     correct: 0,
     formulaHint: "Use: Nernst — E_ion = (61.54 mV / z) · log10([out]/[in])",
     formulaSteps: [
-      "Write [out] and [in] for the ion.",
-      "Apply E = (61.54/z)·log10(out/in).",
+      "Write [out] and [in] for the ion in the ratio.",
+      "Apply E_ion = (61.54/z) · log10([out]/[in]).",
       "Pick the closest mV."
     ],
     explanation: "E_K = 61.54·log10(10/140) ≈ -70.5 mV.",
@@ -114,8 +114,8 @@ const FORMULA_DRILL_POOL = [
     correct: 0,
     formulaHint: "Use: Nernst — E_ion = (61.54 mV / z) · log10([out]/[in])",
     formulaSteps: [
-      "Write [out] and [in] for the ion.",
-      "Apply E = (61.54/z)·log10(out/in).",
+      "Write [out] and [in] for the ion in the ratio.",
+      "Apply E_ion = (61.54/z) · log10([out]/[in]).",
       "Pick the closest mV."
     ],
     explanation: "E_K = 61.54·log10(5/100) ≈ -80.1 mV.",
@@ -139,8 +139,8 @@ const FORMULA_DRILL_POOL = [
     correct: 0,
     formulaHint: "Use: Nernst — E_ion = (61.54 mV / z) · log10([out]/[in])",
     formulaSteps: [
-      "Write [out] and [in] for the ion.",
-      "Apply E = (61.54/z)·log10(out/in).",
+      "Write [out] and [in] for the ion in the ratio.",
+      "Apply E_ion = (61.54/z) · log10([out]/[in]).",
       "Pick the closest mV."
     ],
     explanation: "E_K = 61.54·log10(20/140) ≈ -52 mV.",
@@ -164,8 +164,8 @@ const FORMULA_DRILL_POOL = [
     correct: 0,
     formulaHint: "Use: Nernst — E_ion = (61.54 mV / z) · log10([out]/[in])",
     formulaSteps: [
-      "Write [out] and [in] for the ion.",
-      "Apply E = (61.54/z)·log10(out/in).",
+      "Write [out] and [in] for the ion in the ratio.",
+      "Apply E_ion = (61.54/z) · log10([out]/[in]).",
       "Pick the closest mV."
     ],
     explanation: "E_Na ≈ +60.6 mV.",
@@ -189,8 +189,8 @@ const FORMULA_DRILL_POOL = [
     correct: 0,
     formulaHint: "Use: Nernst — E_ion = (61.54 mV / z) · log10([out]/[in])",
     formulaSteps: [
-      "Write [out] and [in] for the ion.",
-      "Apply E = (61.54/z)·log10(out/in).",
+      "Write [out] and [in] for the ion in the ratio.",
+      "Apply E_ion = (61.54/z) · log10([out]/[in]).",
       "Pick the closest mV."
     ],
     explanation: "E_Na ≈ +61.5 mV.",
@@ -214,8 +214,8 @@ const FORMULA_DRILL_POOL = [
     correct: 0,
     formulaHint: "Use: Nernst — E_ion = (61.54 mV / z) · log10([out]/[in])",
     formulaSteps: [
-      "Write [out] and [in] for the ion.",
-      "Apply E = (61.54/z)·log10(out/in).",
+      "Write [out] and [in] for the ion in the ratio.",
+      "Apply E_ion = (61.54/z) · log10([out]/[in]).",
       "Pick the closest mV."
     ],
     explanation: "E_Na ≈ +52 mV.",
@@ -239,8 +239,8 @@ const FORMULA_DRILL_POOL = [
     correct: 0,
     formulaHint: "Use: Nernst — E_ion = (61.54 mV / z) · log10([out]/[in])",
     formulaSteps: [
-      "Write [out] and [in] for the ion.",
-      "Apply E = (61.54/z)·log10(out/in).",
+      "Write [out] and [in] for the ion in the ratio.",
+      "Apply E_ion = (61.54/z) · log10([out]/[in]).",
       "Pick the closest mV."
     ],
     explanation: "E_Ca = (61.54/2)·log10(2/0.0002) ≈ +123 mV.",
@@ -264,8 +264,8 @@ const FORMULA_DRILL_POOL = [
     correct: 0,
     formulaHint: "Use: Goldman — V_m = 61.54 · log10((P_K·K_o + P_Na·Na_o) / (P_K·K_i + P_Na·Na_i))",
     formulaSteps: [
-      "Compute num = P_K·K_o + P_Na·Na_o and den = P_K·K_i + P_Na·Na_i.",
-      "V_m = 61.54·log10(num/den).",
+      "Numerator: P_K·K_o + P_Na·Na_o  ·  Denominator: P_K·K_i + P_Na·Na_i.",
+      "V_m = 61.54 · log10(numerator / denominator).",
       "Compare to E_K and E_Na."
     ],
     explanation: "Goldman ≈ -65.3 mV (weighted toward E_K).",
@@ -289,8 +289,8 @@ const FORMULA_DRILL_POOL = [
     correct: 0,
     formulaHint: "Use: Goldman — V_m = 61.54 · log10((P_K·K_o + P_Na·Na_o) / (P_K·K_i + P_Na·Na_i))",
     formulaSteps: [
-      "Compute num = P_K·K_o + P_Na·Na_o and den = P_K·K_i + P_Na·Na_i.",
-      "V_m = 61.54·log10(num/den).",
+      "Numerator: P_K·K_o + P_Na·Na_o  ·  Denominator: P_K·K_i + P_Na·Na_i.",
+      "V_m = 61.54 · log10(numerator / denominator).",
       "Compare to E_K and E_Na."
     ],
     explanation: "Higher P_Na depolarizes V_m → ≈ -53 mV.",
@@ -314,8 +314,8 @@ const FORMULA_DRILL_POOL = [
     correct: 0,
     formulaHint: "Use: Goldman — V_m = 61.54 · log10((P_K·K_o + P_Na·Na_o) / (P_K·K_i + P_Na·Na_i))",
     formulaSteps: [
-      "Compute num = P_K·K_o + P_Na·Na_o and den = P_K·K_i + P_Na·Na_i.",
-      "V_m = 61.54·log10(num/den).",
+      "Numerator: P_K·K_o + P_Na·Na_o  ·  Denominator: P_K·K_i + P_Na·Na_i.",
+      "V_m = 61.54 · log10(numerator / denominator).",
       "Compare to E_K and E_Na."
     ],
     explanation: "Higher P_Na depolarizes V_m → ≈ -38.4 mV.",
@@ -339,8 +339,8 @@ const FORMULA_DRILL_POOL = [
     correct: 0,
     formulaHint: "Use: Goldman — V_m = 61.54 · log10((P_K·K_o + P_Na·Na_o) / (P_K·K_i + P_Na·Na_i))",
     formulaSteps: [
-      "Compute num = P_K·K_o + P_Na·Na_o and den = P_K·K_i + P_Na·Na_i.",
-      "V_m = 61.54·log10(num/den).",
+      "Numerator: P_K·K_o + P_Na·Na_o  ·  Denominator: P_K·K_i + P_Na·Na_i.",
+      "V_m = 61.54 · log10(numerator / denominator).",
       "Compare to E_K and E_Na."
     ],
     explanation: "Higher P_Na depolarizes V_m → ≈ -76.9 mV.",
