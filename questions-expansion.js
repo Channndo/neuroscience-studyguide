@@ -31,12 +31,13 @@ const PART1_EXPANSION_POOL = [
 
 
 
-      "Equates electrical synapses with chemical quantal transmission at the NMJ",
+      "E_Na becomes more positive (≈ +18 mV per 2× [Na⁺]o at 37 °C)",
       "E_Na becomes less positive (toward 0 mV)",
-      "Mixes up temporal order of channel activation during signaling",
-      "Shifts by exactly −61 mV regardless of ion",
+      "E_Na is unchanged because Na⁺ is not permeant",
+      "E_Na shifts by exactly −61 mV regardless of the ion",
     ],
     correct: 0,
+    reviewStatus: "verified",
     explanation: "Doubling [Na⁺]_out increases log([Na⁺]_out/[Na⁺]_in), so E_Na moves more positive by ~61.54 mV×log10(2) ≈ +18.5 mV.",
     wrongExplanations: [
       "",
@@ -49,17 +50,14 @@ const PART1_EXPANSION_POOL = [
     topic: "Nernst Equation",
     question: "Given Nernst scenario: extracellular Cl⁻ is increased, which change in equilibrium potential is expected?",
     options: [
-
-
-
-
-      "E_Cl shifts according to the anion Nernst relation",
-      "Mixes up temporal order of channel activation during signaling",
-      "Mixes up temporal order of channel activation during signaling",
-      "Mixes up temporal order of channel activation during signaling",
+      "E_Cl shifts according to the anion Nernst relation (signed valence)",
+      "E_Cl becomes more negative when [Cl⁻]o rises, with no dependence on concentration",
+      "E_Cl is fixed at 0 mV in all neurons",
+      "Chloride equilibrium is unaffected by transmembrane Cl⁻ gradients",
     ],
     correct: 0,
-    explanation: "Concentration changes for Cl⁻ shift its equilibrium potential per the Nernst equation.",
+    reviewStatus: "verified",
+    explanation: "Concentration changes for Cl⁻ shift its equilibrium potential per the Nernst equation with the appropriate sign for anions.",
     wrongExplanations: [
       "",
       "“Mixes up temporal order of channel activation during signaling” does not match the mechanism (topic: Nernst Equation). Concentration changes for Cl⁻ shift its equilibrium potential per the Nernst equation. The correct choice—“E_Cl shifts according to the anion Nernst relation”—fits that description.",
@@ -71,17 +69,14 @@ const PART1_EXPANSION_POOL = [
     topic: "Nernst Equation",
     question: "Given Nernst scenario: intracellular Ca²⁺ buffering lowers free Ca²⁺, which change in equilibrium potential is expected?",
     options: [
-
-
-
-
       "E_Ca becomes more positive",
-      "Mixes up temporal order of channel activation during signaling",
-      "Mixes up temporal order of channel activation during signaling",
-      "Mixes up temporal order of channel activation during signaling",
+      "E_Ca becomes more negative",
+      "E_Ca is unchanged when only bound (non-free) Ca²⁺ rises",
+      "The Nernst equation does not apply to divalent cations",
     ],
     correct: 0,
-    explanation: "Lowering free intracellular Ca²⁺ increases the out/in ratio, shifting E_Ca toward more positive values.",
+    reviewStatus: "verified",
+    explanation: "Lowering free intracellular Ca²⁺ increases the effective out/in ratio for the permeant pool, shifting E_Ca toward more positive values.",
     wrongExplanations: [
       "",
       "“Mixes up temporal order of channel activation during signaling” does not match the mechanism (topic: Nernst Equation). Lowering free intracellular Ca²⁺ increases the out/in ratio, shifting E_Ca toward more positive values. The correct choice—“E_Ca becomes more positive”—fits that description.",

@@ -14,6 +14,13 @@
 - Header aligned to **Fundamentals of Neuroscience**; part line uses `/` between MCB80x modules.
 - Banks: restored `pain/temp` shorthand where batch polish had expanded it.
 
+## Phase 1 batch 2 — 2025-11-07
+
+- SATA `PROCTORED_SATA_POOL` indices 12–37: corrected keys + explanations
+- Expansion Nernst defects (Na⁺ double, Cl⁻, Ca buffering); `reviewStatus: verified` on those items
+- Pinnacle: replaced 21 placeholder whole-cell recording distractors
+- `index.html`: `filterPoolForScoredDraw` for high-stakes quiz IDs
+
 ## Upcoming (not started)
 
 - Phase 1: SATA key corrections, expansion/pinnacle fixes, metadata migration start.

@@ -5133,16 +5133,16 @@ const PINNACLE_MEGA_POOL = [
 
 
 
-      "under standard whole-cell recording conditions.",
-      "under standard whole-cell recording conditions.",
+      "Blockade of NMDA receptors without postsynaptic depolarization",
+      "LTD induced by presynaptic spikes alone without postsynaptic voltage change",
       "Requires presynaptic Na⁺ increase",
       "Postsynaptic depolarization to relieve Mg²⁺ block with glutamate",
     ],
     correct: 3,
     explanation: "Postsynaptic depolarization to relieve Mg²⁺ block with glutamate",
     wrongExplanations: [
-      "“under standard whole-cell recording conditions.” does not match the mechanism (topic: Memory & Learning). Postsynaptic depolarization to relieve Mg²⁺ block with glutamate The correct choice—“Postsynaptic depolarization to relieve Mg²⁺ block with glutamate”—fits that description.",
-      "“under standard whole-cell recording conditions.” does not match the mechanism (topic: Memory & Learning). Postsynaptic depolarization to relieve Mg²⁺ block with glutamate The correct choice—“Postsynaptic depolarization to relieve Mg²⁺ block with glutamate”—fits that description.",
+      "“Activation of AMPA alone with Mg²⁺ still blocking NMDA” does not match the mechanism (topic: Memory & Learning). Postsynaptic depolarization to relieve Mg²⁺ block with glutamate The correct choice—“Postsynaptic depolarization to relieve Mg²⁺ block with glutamate”—fits that description.",
+      "“Presynaptic LTP without postsynaptic depolarization” does not match the mechanism (topic: Memory & Learning). Postsynaptic depolarization to relieve Mg²⁺ block with glutamate The correct choice—“Postsynaptic depolarization to relieve Mg²⁺ block with glutamate”—fits that description.",
       "“Requires presynaptic Na⁺ increase” does not match the mechanism (topic: Memory & Learning). Postsynaptic depolarization to relieve Mg²⁺ block with glutamate The correct choice—“Postsynaptic depolarization to relieve Mg²⁺ block with glutamate”—fits that description.",
       "",
     ]
@@ -5679,18 +5679,18 @@ const PINNACLE_MEGA_POOL = [
 
 
 
-      "under standard whole-cell recording conditions.",
-      "under standard whole-cell recording conditions.",
+      "Requiring metabotropic glutamate receptors without Ca²⁺ entry",
+      "Inhibition of K⁺ leak channels only",
       "Facilitating hippocampal-cortical transfer and synaptic homeostasis theories",
-      "under standard whole-cell recording conditions.",
+      "Activation of AMPA alone with Mg²⁺ still blocking NMDA",
     ],
     correct: 2,
     explanation: "Facilitating hippocampal-cortical transfer and synaptic homeostasis theories",
     wrongExplanations: [
-      "“under standard whole-cell recording conditions.” does not match the mechanism (topic: Memory & Learning). Facilitating hippocampal-cortical transfer and synaptic homeostasis theories The correct choice—“Facilitating hippocampal-cortical transfer and synaptic homeostasis theories”—fits that description.",
-      "“under standard whole-cell recording conditions.” does not match the mechanism (topic: Memory & Learning). Facilitating hippocampal-cortical transfer and synaptic homeostasis theories The correct choice—“Facilitating hippocampal-cortical transfer and synaptic homeostasis theories”—fits that description.",
+      "“Presynaptic LTP without postsynaptic depolarization” does not match the mechanism (topic: Memory & Learning). Facilitating hippocampal-cortical transfer and synaptic homeostasis theories The correct choice—“Facilitating hippocampal-cortical transfer and synaptic homeostasis theories”—fits that description.",
+      "“Inhibition of K⁺ leak channels only” does not match the mechanism (topic: Memory & Learning). Facilitating hippocampal-cortical transfer and synaptic homeostasis theories The correct choice—“Facilitating hippocampal-cortical transfer and synaptic homeostasis theories”—fits that description.",
       "",
-      "“under standard whole-cell recording conditions.” does not match the mechanism (topic: Memory & Learning). Facilitating hippocampal-cortical transfer and synaptic homeostasis theories The correct choice—“Facilitating hippocampal-cortical transfer and synaptic homeostasis theories”—fits that description.",
+      "“Activation of AMPA alone with Mg²⁺ still blocking NMDA” does not match the mechanism (topic: Memory & Learning). Facilitating hippocampal-cortical transfer and synaptic homeostasis theories The correct choice—“Facilitating hippocampal-cortical transfer and synaptic homeostasis theories”—fits that description.",
     ]
   },
   {
@@ -5973,16 +5973,16 @@ const PINNACLE_MEGA_POOL = [
 
 
 
-      "under standard whole-cell recording conditions.",
-      "under standard whole-cell recording conditions.",
+      "Presynaptic LTP without postsynaptic depolarization",
+      "Inhibition of K⁺ leak channels only",
       "Requires tTX",
       "Designer ligand (e.g., CNO/clozapine-N-oxide) not endogenous ligand at low dose context",
     ],
     correct: 3,
     explanation: "Designer ligand (e.g., CNO/clozapine-N-oxide) not endogenous ligand at low dose context",
     wrongExplanations: [
-      "“under standard whole-cell recording conditions.” does not match the mechanism (topic: Methods). Designer ligand (e.g., CNO/clozapine-N-oxide) not endogenous ligand at low dose context The correct choice—“Designer ligand (e.g., CNO/clozapine-N-oxide) not endogenous ligand at low dose cont…”—fits that description.",
-      "“under standard whole-cell recording conditions.” does not match the mechanism (topic: Methods). Designer ligand (e.g., CNO/clozapine-N-oxide) not endogenous ligand at low dose context The correct choice—“Designer ligand (e.g., CNO/clozapine-N-oxide) not endogenous ligand at low dose cont…”—fits that description.",
+      "“Activation of AMPA alone with Mg²⁺ still blocking NMDA” does not match the mechanism (topic: Methods). Designer ligand (e.g., CNO/clozapine-N-oxide) not endogenous ligand at low dose context The correct choice—“Designer ligand (e.g., CNO/clozapine-N-oxide) not endogenous ligand at low dose cont…”—fits that description.",
+      "“Presynaptic LTP without postsynaptic depolarization” does not match the mechanism (topic: Methods). Designer ligand (e.g., CNO/clozapine-N-oxide) not endogenous ligand at low dose context The correct choice—“Designer ligand (e.g., CNO/clozapine-N-oxide) not endogenous ligand at low dose cont…”—fits that description.",
       "“Requires tTX” does not match the mechanism (topic: Methods). Designer ligand (e.g., CNO/clozapine-N-oxide) not endogenous ligand at low dose context The correct choice—“Designer ligand (e.g., CNO/clozapine-N-oxide) not endogenous ligand at low dose cont…”—fits that description.",
       "",
     ]
@@ -6163,17 +6163,17 @@ const PINNACLE_MEGA_POOL = [
 
 
       "Action potential propagated toward axon terminals from stimulation site",
-      "under standard whole-cell recording conditions.",
-      "under standard whole-cell recording conditions.",
-      "under standard whole-cell recording conditions.",
+      "Inhibition of K⁺ leak channels only",
+      "Activation of AMPA alone with Mg²⁺ still blocking NMDA",
+      "Presynaptic LTP without postsynaptic depolarization",
     ],
     correct: 0,
     explanation: "Action potential propagated toward axon terminals from stimulation site",
     wrongExplanations: [
       "",
-      "“under standard whole-cell recording conditions.” does not match the mechanism (topic: Methods). Action potential propagated toward axon terminals from stimulation site The correct choice—“Action potential propagated toward axon terminals from stimulation site”—fits that description.",
-      "“under standard whole-cell recording conditions.” does not match the mechanism (topic: Methods). Action potential propagated toward axon terminals from stimulation site The correct choice—“Action potential propagated toward axon terminals from stimulation site”—fits that description.",
-      "“under standard whole-cell recording conditions.” does not match the mechanism (topic: Methods). Action potential propagated toward axon terminals from stimulation site The correct choice—“Action potential propagated toward axon terminals from stimulation site”—fits that description.",
+      "“Inhibition of K⁺ leak channels only” does not match the mechanism (topic: Methods). Action potential propagated toward axon terminals from stimulation site The correct choice—“Action potential propagated toward axon terminals from stimulation site”—fits that description.",
+      "“Activation of AMPA alone with Mg²⁺ still blocking NMDA” does not match the mechanism (topic: Methods). Action potential propagated toward axon terminals from stimulation site The correct choice—“Action potential propagated toward axon terminals from stimulation site”—fits that description.",
+      "“Presynaptic LTP without postsynaptic depolarization” does not match the mechanism (topic: Methods). Action potential propagated toward axon terminals from stimulation site The correct choice—“Action potential propagated toward axon terminals from stimulation site”—fits that description.",
     ]
   },
   {
@@ -6268,16 +6268,16 @@ const PINNACLE_MEGA_POOL = [
 
 
       "Population activity patterns from motor cortex (e.g., for prosthetics)",
-      "under standard whole-cell recording conditions.",
-      "under standard whole-cell recording conditions.",
+      "Inhibition of K⁺ leak channels only",
+      "Activation of AMPA alone with Mg²⁺ still blocking NMDA",
       "Golgi tendon silence",
     ],
     correct: 0,
     explanation: "Population activity patterns from motor cortex (e.g., for prosthetics)",
     wrongExplanations: [
       "",
-      "“under standard whole-cell recording conditions.” does not match the mechanism (topic: Methods). Population activity patterns from motor cortex (e.g., for prosthetics) The correct choice—“Population activity patterns from motor cortex (e.g., for prosthetics)”—fits that description.",
-      "“under standard whole-cell recording conditions.” does not match the mechanism (topic: Methods). Population activity patterns from motor cortex (e.g., for prosthetics) The correct choice—“Population activity patterns from motor cortex (e.g., for prosthetics)”—fits that description.",
+      "“Presynaptic LTP without postsynaptic depolarization” does not match the mechanism (topic: Methods). Population activity patterns from motor cortex (e.g., for prosthetics) The correct choice—“Population activity patterns from motor cortex (e.g., for prosthetics)”—fits that description.",
+      "“Inhibition of K⁺ leak channels only” does not match the mechanism (topic: Methods). Population activity patterns from motor cortex (e.g., for prosthetics) The correct choice—“Population activity patterns from motor cortex (e.g., for prosthetics)”—fits that description.",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Population activity patterns from motor cortex (e.g., for prosthetics)",
     ]
   },

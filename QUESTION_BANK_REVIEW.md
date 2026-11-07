@@ -1,6 +1,12 @@
 # Question Bank Review
 
-**Status:** Phase 1 partial — `PROCTORED_SATA_POOL` keys 0–11 and 38–49 corrected on `qa/comprehensive-remediation`; full bank not audited  
+**Status:** Phase 1 in progress on `qa/comprehensive-remediation`
+
+- `PROCTORED_SATA_POOL`: keys corrected 0–49 (batch 2025-11-07)
+- `PROCTORED_MOCK_EXAM_POOL`: EPSP subthreshold explanation fixed
+- `PART1_EXPANSION_POOL`: Na⁺/Cl⁻/Ca²⁺ Nernst items fixed + `reviewStatus: verified`
+- `PINNACLE_MEGA_POOL`: removed `under standard whole-cell recording conditions.` junk options (21)
+- Scored draws exclude `reviewStatus: "needs-review"` (timed mock, finals, pinnacle, review10, formula exam)  
 **Reviewer workflow:** Independent verification per statement (SATA) and per MCQ key; `reviewStatus` + `sourceReferences` on migration.
 
 ## Scope (deployed sources)

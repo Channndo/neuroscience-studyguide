@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="mcb80x-bank-build" content="20251107o">
+  <meta name="mcb80x-bank-build" content="20251107p">
   <link rel="icon" href="favicon.svg" type="image/svg+xml" sizes="any">
   <link rel="alternate icon" href="favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -3466,23 +3466,23 @@
   </div>
 
   <footer>
-    Fisher-Yates shuffle on every quiz start &middot; HarvardX MCB80x curriculum alignment &middot; bank build 20251107o
+    Fisher-Yates shuffle on every quiz start &middot; HarvardX MCB80x curriculum alignment &middot; bank build 20251107p
     &middot; <button type="button" class="footer-link-btn" id="footer-go-downloads">Downloads</button>
   </footer>
 
-  <script src="question-copy-polish.js?v=20251107o"></script>
-  <script src="explanation-feedback.js?v=20251107o"></script>
-  <script src="questions-bank.js?v=20251107o"></script>
-  <script src="questions-extra-pools.js?v=20251107o"></script>
-  <script src="questions-fresh-pools.js?v=20251107o"></script>
-  <script src="questions-expansion.js?v=20251107o"></script>
-  <script src="questions-exam-paraphrases.js?v=20251107o"></script>
-  <script src="questions-written-final.js?v=20251107o"></script>
-  <script src="questions-proctored-mock.js?v=20251107o"></script>
-  <script src="questions-formula-drills.js?v=20251107o"></script>
-  <script src="questions-pinnacle-megabank.js?v=20251107o"></script>
-  <script src="brain-anatomy-diagrams.js?v=20251107o"></script>
-  <script src="questions-brain-anatomy.js?v=20251107o"></script>
+  <script src="question-copy-polish.js?v=20251107p"></script>
+  <script src="explanation-feedback.js?v=20251107p"></script>
+  <script src="questions-bank.js?v=20251107p"></script>
+  <script src="questions-extra-pools.js?v=20251107p"></script>
+  <script src="questions-fresh-pools.js?v=20251107p"></script>
+  <script src="questions-expansion.js?v=20251107p"></script>
+  <script src="questions-exam-paraphrases.js?v=20251107p"></script>
+  <script src="questions-written-final.js?v=20251107p"></script>
+  <script src="questions-proctored-mock.js?v=20251107p"></script>
+  <script src="questions-formula-drills.js?v=20251107p"></script>
+  <script src="questions-pinnacle-megabank.js?v=20251107p"></script>
+  <script src="brain-anatomy-diagrams.js?v=20251107p"></script>
+  <script src="questions-brain-anatomy.js?v=20251107p"></script>
   <script src="mcb80x-cloud-config.js"></script>
   <script src="sheets-sync.js"></script>
   <script src="oauth-client.js"></script>
@@ -4705,7 +4705,37 @@
       return Array.isArray(keys) ? keys : [];
     }
 
+    const SCORED_DRAW_QUIZ_IDS = new Set([
+      "proctoredMock",
+      "final",
+      "final100",
+      "final150",
+      "final200",
+      "pinnacle300",
+      "pinnacle500",
+      "pinnacle750",
+      "pinnacle1000",
+      "review10P1",
+      "review10P2",
+      "review10P3",
+      "review10Mix",
+      "formulaLabExam"
+    ]);
+
+    let activeScoredDrawQuizId = null;
+
+    function filterPoolForScoredDraw(pool, minRetain) {
+      if (!Array.isArray(pool) || !pool.length) return [];
+      if (!activeScoredDrawQuizId || !SCORED_DRAW_QUIZ_IDS.has(activeScoredDrawQuizId)) {
+        return pool;
+      }
+      const kept = pool.filter(q => q && q.reviewStatus !== "needs-review");
+      const need = Math.max(1, minRetain || 1);
+      return kept.length >= Math.min(need, pool.length) ? kept : pool;
+    }
+
     function sampleFromPool(pool, count, avoidKeys) {
+      pool = filterPoolForScoredDraw(pool, count);
       const avoid = new Set(avoidKeys || []);
       let candidates = pool.filter(q => q?.question && !avoid.has(q.question));
       if (candidates.length < count) {
@@ -4732,6 +4762,7 @@
 
     /** Spread questions across topics (exam-style breadth) instead of clustering one subject. */
     function sampleExamStyleFromPool(pool, count, avoidKeys) {
+      pool = filterPoolForScoredDraw(pool, count);
       if (!pool?.length) return [];
       const target = Math.min(count, pool.length);
       const avoid = new Set(avoidKeys || []);
@@ -4940,6 +4971,8 @@
     }
 
     function drawQuizQuestionSet(quizId, progress) {
+      activeScoredDrawQuizId = quizId;
+      try {
       const pools = poolsForQuiz(quizId, progress);
       const avoid = lastDrawAvoidKeys(quizId, progress);
       if (quizId === "writtenReview10") return drawWrittenOnlySet(progress, quizId);
@@ -4994,13 +5027,19 @@
         return sampleFromPool(pool, QUIZ_SAMPLE_SIZES[quizId], avoid);
       }
       if (quizId === "proctoredMock") {
-        const examPool = typeof PROCTORED_MOCK_EXAM_POOL !== "undefined" ? PROCTORED_MOCK_EXAM_POOL : [];
+        const examPool = filterPoolForScoredDraw(
+          typeof PROCTORED_MOCK_EXAM_POOL !== "undefined" ? PROCTORED_MOCK_EXAM_POOL : [],
+          QUIZ_SAMPLE_SIZES.proctoredMock || 50
+        );
         return shuffle(examPool).slice(0, QUIZ_SAMPLE_SIZES.proctoredMock || 50);
       }
       if (BRAIN_ANATOMY_QUIZ_IDS.has(quizId)) {
         return drawBrainAnatomySet(quizId, avoid);
       }
       return [];
+      } finally {
+        activeScoredDrawQuizId = null;
+      }
     }
 
     const PASS_THRESHOLD = 70;

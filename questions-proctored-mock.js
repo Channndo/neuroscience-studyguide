@@ -411,14 +411,14 @@ const PROCTORED_SATA_POOL = [
       "Always produce 1 ms EPSPs at one synapse",
       "Can change gain over seconds to minutes",
     ],
-    correctIndices: [0,1],
+    correctIndices: [0, 1, 3],
     scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
-    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    explanation: "Volume transmission and GPCR signaling can modulate circuits over seconds to minutes. Neuromodulators are not limited to 1 ms ionotropic EPSPs.",
     wrongExplanations: [
       "",
       "",
       "That statement is false for the scenario in the stem.",
-      "That statement is not generally true for the scenario described.",
+      "",
     ]
   },
   {
@@ -441,14 +441,14 @@ const PROCTORED_SATA_POOL = [
       "Both are purely motor",
       "Second-order neurons cross at different levels",
     ],
-    correctIndices: [0,1],
+    correctIndices: [0, 1, 3],
     scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
-    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    explanation: "DCML carries fine touch and proprioception; spinothalamic carries pain/temp. Their second-order neurons decussate at different CNS levels.",
     wrongExplanations: [
       "",
       "",
       "That statement is false for the scenario in the stem.",
-      "That statement is not generally true for the scenario described.",
+      "",
     ]
   },
   {
@@ -471,14 +471,14 @@ const PROCTORED_SATA_POOL = [
       "All GABA is ionotropic only",
       "mGluRs are metabotropic",
     ],
-    correctIndices: [0,1],
+    correctIndices: [0, 1, 3],
     scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
-    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    explanation: "Ionotropic receptors gate channels directly; metabotropic receptors use G-proteins. mGluRs are metabotropic; GABA can be ionotropic (GABA_A) or metabotropic (GABA_B).",
     wrongExplanations: [
       "",
       "",
       "That statement is false for the scenario in the stem.",
-      "That statement is not generally true for the scenario described.",
+      "",
     ]
   },
   {
@@ -501,14 +501,14 @@ const PROCTORED_SATA_POOL = [
       "Continuous propagation requires no Na⁺ channels",
       "Current loops between nodes",
     ],
-    correctIndices: [0,1],
+    correctIndices: [0, 1, 3],
     scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
-    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    explanation: "Saltatory conduction concentrates Na⁺ channels at nodes with internodal current loops. Continuous conduction still requires voltage-gated Na⁺ channels.",
     wrongExplanations: [
       "",
       "",
       "That statement is false for the scenario in the stem.",
-      "That statement is not generally true for the scenario described.",
+      "",
     ]
   },
   {
@@ -531,14 +531,14 @@ const PROCTORED_SATA_POOL = [
       "All tastes use rhodopsin",
       "Bitter uses T2R receptors",
     ],
-    correctIndices: [0,1],
+    correctIndices: [0, 1, 3],
     scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
-    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    explanation: "Sweet (T1R2/T1R3), umami (T1R1/T1R3), and bitter (T2R) use distinct receptor families — not rhodopsin.",
     wrongExplanations: [
       "",
       "",
       "That statement is false for the scenario in the stem.",
-      "That statement is not generally true for the scenario described.",
+      "",
     ]
   },
   {
@@ -561,9 +561,9 @@ const PROCTORED_SATA_POOL = [
       "α-dendrotoxin affects K⁺ channels",
       "Lidocaine use-dependent Na⁺ block",
     ],
-    correctIndices: [0,2],
+    correctIndices: [0, 2, 3],
     scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
-    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    explanation: "TTX blocks voltage-gated Na⁺ channels; dendrotoxins affect K⁺ channels; lidocaine use-dependently blocks Na⁺. TTX does not selectively block K⁺ channels.",
     wrongExplanations: [
       "",
       "That statement is false for the scenario in the stem.",
@@ -591,9 +591,9 @@ const PROCTORED_SATA_POOL = [
       "Is identical to recurrent excitation only",
       "Common in sensory circuits",
     ],
-    correctIndices: [0,1],
+    correctIndices: [0, 1, 3],
     scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
-    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    explanation: "Feedforward inhibition (shared drive to principal and interneuron cells) sharpens timing and is common in sensory circuits — not the same as pure recurrent excitation.",
     wrongExplanations: [
       "",
       "",
@@ -621,14 +621,14 @@ const PROCTORED_SATA_POOL = [
       "They are equally permeable to Ca²⁺ and Na⁺ at peak open probability",
       "Tetrodotoxin blocks many neuronal isoforms from the extracellular side",
     ],
-    correctIndices: [0,1],
+    correctIndices: [0, 1, 3],
     scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
-    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    explanation: "Voltage-gated Na⁺ channels activate and inactivate on depolarization; TTX blocks neuronal Na⁺ channels from the extracellular side. They are not equally permeable to Ca²⁺ at peak open probability.",
     wrongExplanations: [
       "",
       "",
       "Peak Na⁺ selectivity excludes meaningful Ca²⁺ flux through these channels.",
-      "That statement is not generally true for the scenario described.",
+      "",
     ]
   },
   {
@@ -681,14 +681,14 @@ const PROCTORED_SATA_POOL = [
       "LTP requires immediate permanent silencing of all inhibitory interneurons",
       "Ca²⁺ entry through NMDA receptors can trigger kinase cascades",
     ],
-    correctIndices: [0,1],
+    correctIndices: [0, 1, 3],
     scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
-    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    explanation: "NMDA coincidence detection and postsynaptic Ca²⁺ support LTP; AMPA trafficking can increase with pairing. LTP does not require global silencing of all inhibitory interneurons.",
     wrongExplanations: [
       "",
       "",
       "Inhibition modulates induction but is not abolished globally for LTP.",
-      "That statement is not generally true for the scenario described.",
+      "",
     ]
   },
   {
@@ -741,14 +741,14 @@ const PROCTORED_SATA_POOL = [
       "UMN lesion → fasciculations as the primary sign",
       "LMN lesion → reduced tone early",
     ],
-    correctIndices: [0,1],
+    correctIndices: [0, 1, 3],
     scoringRule: "All-or-nothing: every correct statement must be checked and no incorrect statement checked.",
-    explanation: "Review each statement independently; partial selection counts as incorrect for exam-style scoring.",
+    explanation: "UMN lesions increase reflexes; LMN lesions cause flaccid weakness, atrophy, and reduced tone. Fasciculations are an LMN sign, not the primary UMN presentation.",
     wrongExplanations: [
       "",
       "",
       "Fasciculations point to LMN or anterior horn pathology, not classic UMN lesions.",
-      "That statement is not generally true for the scenario described.",
+      "",
     ]
   },
   {
