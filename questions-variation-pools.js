@@ -8,6 +8,7 @@ const PART1_VARIATION_POOL = [
     options: [
 
 
+
       "About +96 mV (positive inside relative to standard sign convention)",
       "About −96 mV, identical to normal K⁺ gradients (contradicts the Nernst dependence on inside/outside concentrations)",
       "0 mV because channels are closed (contradicts the Nernst dependence on inside/outside concentrations)",
@@ -26,6 +27,7 @@ const PART1_VARIATION_POOL = [
     topic: "Nernst Equation",
     question: "Extracellular Na⁺ is increased tenfold while intracellular Na⁺ is held constant. E_Na should:",
     options: [
+
 
 
       "Shift to a more positive value",
@@ -48,6 +50,7 @@ const PART1_VARIATION_POOL = [
     options: [
 
 
+
       "Depolarize toward a value between E_K and E_Na, closer to the midpoint weighted by comparable permeabilities",
       "Hyperpolarize to E_K exactly (ignores weighted permeabilities in the constant-field equation)",
       "Clamp to E_Na (+60 mV) instantly with no K⁺ influence (ignores weighted permeabilities in the constant-field equation)",
@@ -66,6 +69,7 @@ const PART1_VARIATION_POOL = [
     topic: "Resting Potential",
     question: "Ouabain blocks the Na⁺/K⁺ ATPase. Over tens of minutes, with K⁺ leak still open, the most likely outcome is:",
     options: [
+
 
 
       "Gradual dissipation of ion gradients and drift of V_m toward 0 mV as leaks equilibrate ions",
@@ -88,10 +92,11 @@ const PART1_VARIATION_POOL = [
     options: [
 
 
+
       "Subthreshold responses may remain, but no all-or-none action potential",
-      "Faster spike firing with larger amplitude in a typical mammalian central neuron.",
-      "Block of K⁺ repolarization only during normal resting permeability conditions.",
-      "Immediate elimination of resting potential when temperature is near 37 °C.",
+      "Faster spike firing with larger amplitude",
+      "Block of K⁺ repolarization only",
+      "Immediate elimination of resting potential",
     ],
     correct: 0,
     explanation: "TTX blocks voltage-gated Na⁺ channels required for regenerative spikes; passive responses can persist.",
@@ -108,9 +113,10 @@ const PART1_VARIATION_POOL = [
     options: [
 
 
+
       "Prolonged repolarization and broadened spike because voltage-gated K⁺ channels are blocked",
-      "Failure of Na⁺ channel activation in a typical mammalian central neuron. when temperature is near 37 °C.",
-      "Block of presynaptic Ca²⁺ influx in a typical mammalian central neuron.",
+      "Failure of Na⁺ channel activation",
+      "Block of presynaptic Ca²⁺ influx",
       "Hyperpolarization below rest before any stimulus",
     ],
     correct: 0,
@@ -126,6 +132,7 @@ const PART1_VARIATION_POOL = [
     topic: "Electrical Signaling",
     question: "A novel cation X⁺ has E_X = +20 mV. At rest V_m = −70 mV, opening X⁺-selective leak channels will:",
     options: [
+
 
 
       "Depolarize V_m toward +20 mV",
@@ -148,6 +155,7 @@ const PART1_VARIATION_POOL = [
     options: [
 
 
+
       "Increase if both inputs arrive within the membrane time constant (spatial summation)",
       "Decrease because signals cancel by reflection (misstates how R_m, C_m, or geometry set τ or λ)",
       "Stay identical because distance cancels amplitude (misstates how R_m, C_m, or geometry set τ or λ)",
@@ -168,10 +176,11 @@ const PART1_VARIATION_POOL = [
     options: [
 
 
+
       "Outward K⁺ current (positive outward convention) because V_m is depolarized above E_K",
-      "Inward K⁺ current because V_m is negative on an absolute scale when temperature is near 37 °C.",
+      "Inward K⁺ current because V_m is negative on an absolute scale",
       "Zero current because the cell is clamped",
-      "Requires capacitive current with no ionic component at steady state exclusively in this context",
+      "Requires capacitive current with no ionic component at steady state",
     ],
     correct: 0,
     explanation: "I_K = g_K(V − E_K); at −40 mV with E_K = −90 mV, (V − E_K) > 0, driving outward K⁺ current that the clamp must sink.",
@@ -186,6 +195,7 @@ const PART1_VARIATION_POOL = [
     topic: "Action Potentials",
     question: "If voltage-gated Na⁺ channels are inactivated but delayed-rectifier K⁺ channels are held open, V_m will tend to move toward:",
     options: [
+
 
 
       "E_K (hyperpolarized relative to typical rest)",
@@ -208,6 +218,7 @@ const PART1_VARIATION_POOL = [
     options: [
 
 
+
       "Toward a less negative (more positive) value because [Cl⁻]_in/[Cl⁻]_out increases in the log term",
       "Toward a more negative value always (contradicts the Nernst dependence on inside/outside concentrations)",
       "To E_K automatically (contradicts the Nernst dependence on inside/outside concentrations)",
@@ -226,6 +237,7 @@ const PART1_VARIATION_POOL = [
     topic: "Goldman Equation",
     question: "A cell has zero Na⁺ permeability, finite K⁺ and Cl⁻ permeability, with E_K = −90 mV and E_Cl = −70 mV. V_m will lie:",
     options: [
+
 
 
       "Between −90 mV and −70 mV, weighted by relative P_K and P_Cl",
@@ -248,6 +260,7 @@ const PART1_VARIATION_POOL = [
     options: [
 
 
+
       "Doubles (τ = R_m C_m)",
       "Halves",
       "Is unchanged because λ changes instead",
@@ -266,6 +279,7 @@ const PART1_VARIATION_POOL = [
     topic: "Electrical Signaling",
     question: "At V_m = −65 mV, E_K = −90 mV, E_Na = +60 mV. Opening only Na⁺ channels (no K⁺ change) will initially drive V_m:",
     options: [
+
 
 
       "Toward E_Na (depolarizing)",
@@ -289,10 +303,11 @@ const PART2_VARIATION_POOL = [
     topic: "Neural Circuits",
     question: "Circuit A: neuron R excites neuron T, and T inhibits neuron S (feedforward inhibition). Circuit B: R excites both T and S directly, and T also inhibits S (same net inhibition on S). If R fires briefly, S typically receives:",
     options: [
+
       "In both designs, delayed disynaptic inhibition from T can sharpen timing of S output relative to direct excitation alone",
-      "No inhibition in either design because T is excitatory when temperature is near 37 °C. during normal resting permeability conditions.",
+      "No inhibition in either design because T is excitatory",
       "Inner hair cells establish the dark resting potential of rods",
-      "Identical firing rates in S regardless of wiring in a typical mammalian central neuron.",
+      "Identical firing rates in S regardless of wiring",
     ],
     correct: 0,
     explanation: "Feedforward inhibition (R→T→S) creates a window that can limit when S can fire after R activity, shaping temporal precision.",
@@ -307,10 +322,11 @@ const PART2_VARIATION_POOL = [
     topic: "Neural Circuits",
     question: "A reciprocal inhibitory circuit alternates activity between pool A and pool B (each excites the other’s inhibitor). Swapping to mutual excitation between A and B with no inhibition would most likely:",
     options: [
+
       "Allow simultaneous high activity in both pools instead of alternating suppression",
-      "Guarantee silence in both pools during normal resting permeability conditions.",
-      "Convert the circuit into a pure feedforward chain in a typical mammalian central neuron.",
-      "Eliminate the need for synaptic integration during normal resting permeability conditions.",
+      "Guarantee silence in both pools",
+      "Convert the circuit into a pure feedforward chain",
+      "Eliminate the need for synaptic integration",
     ],
     correct: 0,
     explanation: "Reciprocal inhibition supports winner-take-all/alternation; mutual excitation tends toward co-activation or runaway without balancing inhibition.",
@@ -325,6 +341,7 @@ const PART2_VARIATION_POOL = [
     topic: "Synaptic Integration",
     question: "A neuron receives EPSPs from pathway X and IPSPs from pathway Y onto the same soma. If inhibitory interneurons in Y are silenced (disinhibition), somatic firing rate will:",
     options: [
+
       "Increase if net excitation from X was previously suppressed by Y",
       "Always decrease because inhibition was removed (ignores how EPSPs/IPSPs sum in time or space)",
       "Stay fixed because IPSPs do not affect rate (ignores how EPSPs/IPSPs sum in time or space)",
@@ -343,6 +360,7 @@ const PART2_VARIATION_POOL = [
     topic: "Chemical Synapses",
     question: "Presynaptic voltage-gated Ca²⁺ channels are blocked, but action potentials still invade the terminal. Quantal release will:",
     options: [
+
       "Fail or drop drastically because Ca²⁺ influx triggers vesicle fusion",
       "Increase because Na⁺ replaces Ca²⁺ in fusion (describes the wrong synaptic structure or transmission step)",
       "Continue unchanged via SNARE activation alone (describes the wrong synaptic structure or transmission step)",
@@ -361,6 +379,7 @@ const PART2_VARIATION_POOL = [
     topic: "Synaptic Transmission",
     question: "Postsynaptic NMDA receptors are blocked with Mg²⁺ clamp maintained, but AMPA receptors remain functional. Typical consequence for LTP induction protocols:",
     options: [
+
       "LTP induction is impaired because NMDA coincidence detection and Ca²⁺ entry are blocked",
       "LTP strengthens immediately via AMPA alone (mixes up presynaptic release with postsynaptic receptor logic)",
       "Only short-term facilitation is blocked, LTP unchanged (mixes up presynaptic release with postsynaptic receptor logic)",
@@ -379,10 +398,11 @@ const PART2_VARIATION_POOL = [
     topic: "Inhibitory Circuits",
     question: "A feedforward inhibitory interneuron is converted in silico to feedforward excitatory onto the same principal cell (same input timing). Threshold crossing for the principal cell will generally:",
     options: [
+
       "Become easier (lower threshold effective) because inhibition is replaced by excitation",
-      "Become harder because excitation is slower than inhibition when temperature is near 37 °C.",
-      "Be unchanged because excitation and inhibition are equivalent in a typical mammalian central neuron.",
-      "Prevent all spikes because of shunting when temperature is near 37 °C. during normal resting permeability conditions.",
+      "Become harder because excitation is slower than inhibition",
+      "Be unchanged because excitation and inhibition are equivalent",
+      "Prevent all spikes because of shunting",
     ],
     correct: 0,
     explanation: "Replacing feedforward IPSPs with EPSPs adds depolarization instead of hyperpolarization/shunting, lowering the effective threshold.",
@@ -397,10 +417,11 @@ const PART2_VARIATION_POOL = [
     topic: "Short-Term Plasticity",
     question: "Presynaptic residual Ca²⁺ after one spike normally facilitates release. If Ca²⁺ buffers in the terminal are increased (faster Ca²⁺ clearance), paired-pulse facilitation will:",
     options: [
+
       "Decrease because less Ca²⁺ remains to boost the second spike’s release",
-      "Increase because buffering adds more Ca²⁺ in a typical mammalian central neuron.",
-      "Convert immediately to LTP when temperature is near 37 °C. during normal resting permeability conditions.",
-      "Abolish all action potentials in a typical mammalian central neuron.",
+      "Increase because buffering adds more Ca²⁺",
+      "Convert immediately to LTP",
+      "Abolish all action potentials",
     ],
     correct: 0,
     explanation: "Facilitation depends on residual Ca²⁺; faster buffering reduces the Ca²⁺ tail and weakens facilitation.",
@@ -415,6 +436,7 @@ const PART2_VARIATION_POOL = [
     topic: "Synaptic Integration",
     question: "Two excitatory inputs A and B each alone produce 3 mV EPSPs at the soma. If B is replaced by an inhibitory input of equal conductance magnitude with E_rev = −75 mV at rest V_m = −65 mV, simultaneous A+B will:",
     options: [
+
       "Produce less somatic depolarization than A alone (subtractive/shunting effect)",
       "Always sum to 6 mV depolarization (ignores how EPSPs/IPSPs sum in time or space)",
       "Hyperpolarize to −90 mV regardless of A (ignores how EPSPs/IPSPs sum in time or space)",
@@ -433,10 +455,11 @@ const PART2_VARIATION_POOL = [
     topic: "Neuromodulation",
     question: "A circuit has excitatory drive to a motor pool. Adding neuromodulator that closes K⁺ leak channels on those motor neurons will:",
     options: [
+
       "Increase excitability (depolarize toward threshold) and often increase firing for the same synaptic input",
-      "Decrease firing by hyperpolarizing toward E_K in a typical mammalian central neuron. when temperature is near 37 °C.",
-      "Block all voltage-gated Na⁺ channels in a typical mammalian central neuron.",
-      "Convert EPSPs into IPSPs in a typical mammalian central neuron.",
+      "Decrease firing by hyperpolarizing toward E_K",
+      "Block all voltage-gated Na⁺ channels",
+      "Convert EPSPs into IPSPs",
     ],
     correct: 0,
     explanation: "Reducing K⁺ leak conductance depolarizes V_m and increases gain for a given excitatory input.",
@@ -451,6 +474,7 @@ const PART2_VARIATION_POOL = [
     topic: "Chemical Synapses",
     question: "Botulinum toxin cleaves SNARE proteins presynaptically. The immediate physiological consequence is:",
     options: [
+
       "Reduced or abolished quantal transmitter release despite intact action potentials",
       "Enhanced release because SNAREs are activated (describes the wrong synaptic structure or transmission step)",
       "Block of postsynaptic GABA<sub>A</sub> receptors (describes the wrong synaptic structure or transmission step)",
@@ -469,6 +493,7 @@ const PART2_VARIATION_POOL = [
     topic: "Synaptic Plasticity Rules",
     question: "In a Hebbian STDP rule, presynaptic spike 10 ms before postsynaptic spike strengthens the synapse. If the order is reversed (post before pre), the same rule typically:",
     options: [
+
       "Weakens the synapse",
       "Strengthens the synapse equally",
       "Has no effect because timing is irrelevant",
@@ -487,10 +512,11 @@ const PART2_VARIATION_POOL = [
     topic: "Neural Circuits",
     question: "A central pattern generator normally produces alternating left/right bursts via reciprocal inhibition. If reciprocal inhibitory synapses are blocked but excitatory coupling remains, the pattern will most likely:",
     options: [
+
       "Lose strict alternation and may show synchronous or irregular co-activation",
       "Speed up perfect alternation",
       "Stop all rhythmic output permanently",
-      "Switch to photoreceptor-driven oscillations during normal resting permeability conditions.",
+      "Switch to photoreceptor-driven oscillations",
     ],
     correct: 0,
     explanation: "Reciprocal inhibition enforces anti-phase firing; removing it allows both sides to fire together or compete without structured alternation.",
@@ -505,10 +531,11 @@ const PART2_VARIATION_POOL = [
     topic: "Receptor Types",
     question: "A metabotropic GABA<sub>B</sub> agonist is applied. Compared with GABA<sub>A</sub> activation, the effect on postsynaptic V_m is typically:",
     options: [
+
       "Slower onset with longer-lasting modulation via G-protein coupled K⁺ or Ca²⁺ channel changes",
       "Instantaneous large depolarization identical to AMPA",
-      "Permanent block of all synaptic release during normal resting permeability conditions.",
-      "Direct opening of a cation channel with 1 ms decay when temperature is near 37 °C. during normal resting permeability conditions.",
+      "Permanent block of all synaptic release",
+      "Direct opening of a cation channel with 1 ms decay",
     ],
     correct: 0,
     explanation: "GABA<sub>B</sub> receptors are G-protein coupled, producing slower, prolonged effects unlike fast ionotropic GABA<sub>A</sub> currents.",
@@ -523,6 +550,7 @@ const PART2_VARIATION_POOL = [
     topic: "Synaptic Integration",
     question: "An inhibitory interneuron makes perisomatic synapses onto a pyramidal cell. Moving the same synapses to distal dendrites (same strength) will usually:",
     options: [
+
       "Reduce the inhibitory impact on somatic spike generation (location-dependent attenuation)",
       "Increase somatic inhibition because dendrites amplify IPSPs",
       "Have identical somatic effect regardless of location (ignores how EPSPs/IPSPs sum in time or space)",
@@ -544,10 +572,11 @@ const PART3_VARIATION_POOL = [
     topic: "Clinical Correlates",
     question: "A patient produces fluent, grammatical speech with normal articulation but frequent neologisms and poor comprehension; repetition is impaired. The most likely primary lesion site is:",
     options: [
+
       "Posterior superior temporal / Wernicke’s area",
-      "Primary motor cortex leg area and no homonymous visual field defect.",
-      "Cerebellar vermis only with preserved proprioception and vibration sense.",
-      "Optic chiasm with contralateral sensory findings.",
+      "Primary motor cortex leg area",
+      "Cerebellar vermis only",
+      "Optic chiasm",
     ],
     correct: 0,
     explanation: "Fluent speech with impaired comprehension and paraphasic errors fits Wernicke (receptive) aphasia from posterior temporal language cortex.",
@@ -562,10 +591,11 @@ const PART3_VARIATION_POOL = [
     topic: "Clinical Correlates",
     question: "A patient cannot repeat phrases, speech is nonfluent and effortful, but comprehension is relatively preserved. Damage is most likely in:",
     options: [
+
       "Broca’s area / inferior frontal gyrus (left) or adjacent arcuate connectivity",
-      "Primary visual cortex (V1) bilaterally matching a peripheral nerve distribution.",
-      "Cochlear nucleus with preserved proprioception and vibration sense. and no homonymous visual field defect.",
-      "Dorsal root ganglion matching a peripheral nerve distribution. suggesting brainstem rather than hemispheric origin.",
+      "Primary visual cortex (V1) bilaterally",
+      "Cochlear nucleus",
+      "Dorsal root ganglion",
     ],
     correct: 0,
     explanation: "Nonfluent speech with relatively spared comprehension suggests Broca (expressive) aphasia or connected subcortical white matter.",
@@ -580,10 +610,11 @@ const PART3_VARIATION_POOL = [
     topic: "Clinical Correlates",
     question: "A patient reports numbness and loss of fine touch/vibration on the right body below the neck, with no facial weakness. Pain and temperature on the right are intact. The most likely lesion is:",
     options: [
+
       "Right dorsal column (fasciculus gracilis/cuneatus) in the spinal cord",
-      "Right spinothalamic tract at the same spinal level matching a peripheral nerve distribution.",
-      "Left optic tract with preserved proprioception and vibration sense.",
-      "Right facial nerve with contralateral sensory findings. without cortical language involvement.",
+      "Right spinothalamic tract at the same spinal level",
+      "Left optic tract",
+      "Right facial nerve",
     ],
     correct: 0,
     explanation: "Fine touch and vibration travel in dorsal columns ipsilaterally in the cord, then cross in the medulla; a right-sided DCML spinal lesion or post-decussation left ML lesion can produce right-sided DCML loss with spared spinothalamic pain/temp.",
@@ -598,10 +629,11 @@ const PART3_VARIATION_POOL = [
     topic: "Clinical Correlates",
     question: "After a stroke, a patient neglects the left side of space, collides with doorframes on the left, and fails to eat food on the left half of the plate. Vision and primary sensation are intact. Likely damage:",
     options: [
+
       "Right parietal / right posterior association cortex",
-      "Left primary motor cortex hand area and no homonymous visual field defect.",
-      "Right cochlear nucleus with preserved proprioception and vibration sense.",
-      "Left cerebellar hemisphere only without cortical language involvement.",
+      "Left primary motor cortex hand area",
+      "Right cochlear nucleus",
+      "Left cerebellar hemisphere only",
     ],
     correct: 0,
     explanation: "Hemispatial neglect commonly follows right parietal/posterior cortical lesions affecting attention allocation to contralateral space.",
@@ -616,10 +648,11 @@ const PART3_VARIATION_POOL = [
     topic: "Clinical Correlates",
     question: "A patient recognizes objects and reads text but cannot recognize familiar faces, including their own in a mirror. Visual fields and acuity are normal. Most likely site:",
     options: [
+
       "Fusiform face area / ventral occipitotemporal cortex",
-      "Primary auditory cortex and no homonymous visual field defect.",
-      "Substantia nigra pars compacta with contralateral sensory findings.",
-      "Dorsal column nuclei matching a peripheral nerve distribution.",
+      "Primary auditory cortex",
+      "Substantia nigra pars compacta",
+      "Dorsal column nuclei",
     ],
     correct: 0,
     explanation: "Prosopagnosia is selective face recognition failure with preserved generic object vision, linked to ventral temporal face areas.",
@@ -634,6 +667,7 @@ const PART3_VARIATION_POOL = [
     topic: "Clinical Correlates",
     question: "A patient has bitemporal hemianopia (cannot see temporal visual fields in either eye). The lesion is most likely at the:",
     options: [
+
       "Optic chiasm",
       "Left optic tract",
       "Right occipital lobe",
@@ -652,6 +686,7 @@ const PART3_VARIATION_POOL = [
     topic: "Motor Systems",
     question: "Resting tremor, cogwheel rigidity, bradykinesia, and improved mobility after levodopa suggest pathology primarily in:",
     options: [
+
       "Nigrostriatal dopamine pathway (substantia nigra → striatum)",
       "Upper motor neuron corticospinal tract alone (maps the lesion to the wrong motor pathway or reflex)",
       "Neuromuscular junction acetylcholine receptors (maps the lesion to the wrong motor pathway or reflex)",
@@ -670,6 +705,7 @@ const PART3_VARIATION_POOL = [
     topic: "Motor Systems",
     question: "A patient overshoots finger-to-nose targets, shows intention tremor, and has dysmetria with normal strength. The dysfunction localizes most strongly to:",
     options: [
+
       "Cerebellum or its input/output pathways",
       "Anterior horn cells (maps the lesion to the wrong motor pathway or reflex)",
       "Optic chiasm (maps the lesion to the wrong motor pathway or reflex)",
@@ -688,10 +724,11 @@ const PART3_VARIATION_POOL = [
     topic: "Visual System",
     question: "A patient sees double when looking to the left; the left eye fails to adduct and shows nystagmus of the abducting eye. The lesion is in:",
     options: [
+
       "Left medial longitudinal fasciculus (MLF) or associated brainstem internuclear pathway",
-      "Right optic nerve only with preserved proprioception and vibration sense. and no homonymous visual field defect.",
-      "Left primary somatosensory cortex suggesting brainstem rather than hemispheric origin.",
-      "Cervical dorsal roots suggesting brainstem rather than hemispheric origin. with preserved proprioception and vibration sense.",
+      "Right optic nerve only",
+      "Left primary somatosensory cortex",
+      "Cervical dorsal roots",
     ],
     correct: 0,
     explanation: "Internuclear ophthalmoplegia (impaired adduction + abducting nystagmus) localizes to MLF connecting CN VI and CN III nuclei.",
@@ -706,10 +743,11 @@ const PART3_VARIATION_POOL = [
     topic: "Auditory System",
     question: "A patient cannot understand speech in noisy environments but hears tones normally; audiogram shows poor word discrimination disproportionate to threshold loss. Likely dysfunction:",
     options: [
+
       "Cochlear inner hair cell / auditory nerve synaptic integrity",
-      "Middle ear ossicle fixation only under standard whole-cell recording conditions.",
-      "Primary visual cortex suggesting brainstem rather than hemispheric origin.",
-      "Dorsal column nuclei under standard whole-cell recording conditions.",
+      "Middle ear ossicle fixation only",
+      "Primary visual cortex",
+      "Dorsal column nuclei",
     ],
     correct: 0,
     explanation: "Disproportionate speech discrimination difficulty suggests cochlear/neural processing deficits beyond simple conductive loss.",
@@ -724,9 +762,10 @@ const PART3_VARIATION_POOL = [
     topic: "Vestibular System",
     question: "A patient experiences spinning vertigo, horizontal nystagmus, and vomiting lasting days after a viral illness, without focal limb weakness. Hearing is mildly reduced on the same side. Most likely:",
     options: [
+
       "Peripheral vestibular labyrinth or vestibular nerve",
       "Bilateral occipital lobe infarct",
-      "Parkinson disease in a typical mammalian central neuron.",
+      "Parkinson disease",
       "Hippocampal CA1 lesion",
     ],
     correct: 0,
@@ -742,10 +781,11 @@ const PART3_VARIATION_POOL = [
     topic: "Language",
     question: "A patient can sing familiar songs fluently but cannot speak prose or name objects (mixed nonfluent output with preserved melody). This pattern suggests:",
     options: [
+
       "Aphasia with relative sparing of right-hemisphere or subcortical prosody/melody routes vs left language cortex",
-      "Pure hearing loss in a typical mammalian central neuron. when temperature is near 37 °C. during normal resting permeability conditions.",
-      "Prosopagnosia in a typical mammalian central neuron. when temperature is near 37 °C. during normal resting permeability conditions.",
-      "Dorsal column demyelination during normal resting permeability conditions.",
+      "Pure hearing loss",
+      "Prosopagnosia",
+      "Dorsal column demyelination",
     ],
     correct: 0,
     explanation: "Dissociation between sung prosody and propositional speech fits lateralized language vs melody/prosody networks.",
@@ -760,6 +800,7 @@ const PART3_VARIATION_POOL = [
     topic: "Thalamus",
     question: "A patient has loss of pain/temperature on the left face, loss of pain/temperature on the right arm and leg, left-sided Horner’s syndrome, and ataxia of the left limbs. The lesion is most likely in the:",
     options: [
+
       "Left lateral medulla",
       "Right primary motor cortex hand area",
       "Optic chiasm midline",
@@ -778,10 +819,11 @@ const PART3_VARIATION_POOL = [
     topic: "Learning & Memory",
     question: "A patient can learn a mirror-drawing skill over days but cannot recall meeting the examiner an hour ago. MRI suggests bilateral medial temporal lobe damage. Deficit profile fits:",
     options: [
+
       "Disproportionate anterograde declarative memory loss with relatively preserved procedural learning",
       "Global loss of all learning including motor skills",
       "Pure motor weakness",
-      "Photoreceptor degeneration when temperature is near 37 °C. during normal resting permeability conditions.",
+      "Photoreceptor degeneration",
     ],
     correct: 0,
     explanation: "Medial temporal lobe/hippocampal systems support declarative memory; procedural skills can remain intact (e.g., H.M.-like pattern).",

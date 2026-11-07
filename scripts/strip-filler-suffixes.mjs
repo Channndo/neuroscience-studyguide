@@ -38,7 +38,11 @@ const STRIP_RES = [
   /\s+under standard whole-cell recording conditions\.?/gi,
   /\s+with contralateral sensory findings\.?/gi,
   /\s+and no homonymous visual field defect\.?/gi,
-  /\s*Requires [^.]+\.$/gi
+  /\s*Requires [^.]+\.$/gi,
+  /\s+when temperature is near 37\s*°?C\.?/gi,
+  /\s+in a typical mammalian central neuron\.?/gi,
+  /\s+during normal resting permeability conditions\.?/gi,
+  /\s+exclusively in this context\.?/gi,
 ];
 
 function cleanOptionString(s) {
