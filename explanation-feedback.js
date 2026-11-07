@@ -221,7 +221,7 @@
     return `“${truncate(c.wrong, 85)}” is not the best match for the stem${topicBit}. The keyed answer—“${truncate(c.right, 85)}”—reflects the underlying neuroscience described in the course.`;
   }
 
-  function topicEnrichment(topic, stem, rightText) {
+  function topicEnrichment(topic, stem, rightText, q) {
     const t = `${topic} ${stem} ${rightText}`.toLowerCase();
     if (/resting potential|leak|k⁺ permeab/i.test(t)) {
       return "Resting V_m is dominated by K⁺ leak conductance and the Na⁺/K⁺ pump maintaining ion gradients.";
@@ -253,14 +253,30 @@
     if (/motor|cerebellum|basal ganglia|cortex/i.test(t)) {
       return "Separate planning (cortex), gain/timing (cerebellum), and action selection/inhibition (basal ganglia) roles.";
     }
+    if (/neuroanatomy|brain anatomy/i.test(t) || q?.anatomyDiagram) {
+      return "Use the chart orientation: rostral = anterior (toward frontal pole), dorsal = superior, ventral = inferior, caudal = toward brainstem/spinal cord.";
+    }
     return "";
+  }
+
+  function deepenText(text, minLen = 175) {
+    const t = String(text || "").trim();
+    if (t.length >= minLen) return t;
+    return t;
   }
 
   function resolveWrong(q, optionIndex) {
     if (optionIndex == null || optionIndex === q.correct) return "";
     const stored = q.wrongExplanations?.[optionIndex];
-    if (stored && !isBoilerplate(stored)) return stored;
-    return contrastFallback(ctx(q, optionIndex));
+    let text = stored && !isBoilerplate(stored) ? stored : contrastFallback(ctx(q, optionIndex));
+    const wrong = q.options?.[optionIndex] ?? "";
+    const right = q.options?.[q.correct] ?? "";
+    if (q.anatomyDiagram && text.length < 100) {
+      text = `${text} The crimson ring marks “${truncate(right, 70)}”; “${truncate(wrong, 70)}” is a different structure on the chart.`;
+    } else if (text.length < 110 && q.explanation) {
+      text = `${text} Correct mechanism: ${truncate(q.explanation, 160)}`;
+    }
+    return deepenText(text, 120);
   }
 
   function resolveMain(q) {
@@ -269,22 +285,34 @@
       main = contrastFallback(ctx(q, (q.correct + 1) % (q.options?.length || 1))).replace(/^“[^”]+” does not match[^.]+\.\s*/, "");
     }
     const right = q.options?.[q.correct] ?? "";
-    const extra = topicEnrichment(q.topic, q.question, right);
-    if (extra && main.length < 140 && !main.toLowerCase().includes(extra.slice(0, 25).toLowerCase())) {
+    const extra = topicEnrichment(q.topic, q.question, right, q);
+    if (extra && main.length < 200 && !main.toLowerCase().includes(extra.slice(0, 25).toLowerCase())) {
       main = `${main} ${extra}`.trim();
     }
-    const rightLine = right ? `Choice “${truncate(right, 90)}” is correct because it matches this mechanism.` : "";
-    if (main.length < 100 && rightLine) {
+    const rightLine = right
+      ? `“${truncate(right, 90)}” is correct: it names the structure or mechanism the stem describes.`
+      : "";
+    if (rightLine && !main.includes(right.slice(0, Math.min(24, right.length)))) {
       main = `${main} ${rightLine}`.trim();
     }
-    return main;
+    if (q.anatomyDiagram && q.highlightKey && global.BRAIN_ANATOMY_DIAGRAM?.chartRefForHighlight) {
+      const ref = global.BRAIN_ANATOMY_DIAGRAM.chartRefForHighlight(q.highlightKey);
+      if (ref && !main.includes(`label ${ref}`)) {
+        main = `${main} Match your answer to chart label ${ref} on the figure.`.trim();
+      }
+    }
+    return deepenText(main, 160);
   }
 
   function resolveWhyCorrect(q) {
     const right = q.options?.[q.correct] ?? "";
     const main = resolveMain(q);
     if (!right) return main;
-    return `${main} In short, “${truncate(right, 100)}” is the answer that aligns with the facts above.`;
+    const why =
+      q.anatomyDiagram
+        ? `You identified the structure whose location and function match the highlighted ring on the chart.`
+        : `The keyed choice states the mechanism or fact that follows from the stem.`;
+    return `${main} ${why}`;
   }
 
   global.ExplanationFeedback = {

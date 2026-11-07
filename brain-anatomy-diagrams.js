@@ -1,4 +1,4 @@
-// Brain Anatomy Lab — figures are exact exports from mcb80x-chart-pack.pdf (pages 1–2).
+// Brain Anatomy Lab — figures match mcb80x-chart-pack.pdf; rings sit on printed chart numbers where available.
 (function (global) {
   const RING_STROKE = "#a41034";
   const RING_WIDTH = 4;
@@ -8,7 +8,6 @@
     lateral: "Cerebral Cortex — Lobes & Functional Areas (lateral)"
   };
 
-  /** Chart pack page 2 — lobes, sulci, and cortical areas only. */
   const LATERAL_HIGHLIGHTS = new Set([
     "frontal_lobe",
     "parietal_lobe",
@@ -27,7 +26,6 @@
     "olfactory_bulb"
   ]);
 
-  /** Midsagittal lobe labels map to lateral lobe rings on the cortex chart. */
   const CORTEX_TO_LOBE = {
     frontal_cortex: "frontal_lobe",
     parietal_cortex: "parietal_lobe",
@@ -35,7 +33,6 @@
     occipital_cortex: "occipital_lobe"
   };
 
-  /** Exact raster crops from chart pack; coordinates are in native pixels. */
   const VIEWS = {
     sagittal: {
       src: "assets/brain-anatomy/sagittal-base.png",
@@ -51,58 +48,109 @@
     }
   };
 
-  /**
-   * Quiz indicator: crimson ring only (no fill) so the chart art stays identical.
-   * @type {Record<string, Record<string, { kind: string, [k: string]: number | string }>>}
-   */
-  const QUIZ_RINGS = {
+  /** Printed chart label (MCB80x chart pack) per structure — rings centered on the badge. */
+  const CHART_REF = {
     sagittal: {
-      frontal_cortex: { kind: "ellipse", cx: 360, cy: 300, rx: 230, ry: 210 },
-      parietal_cortex: { kind: "ellipse", cx: 720, cy: 250, rx: 190, ry: 165 },
-      occipital_cortex: { kind: "ellipse", cx: 990, cy: 310, rx: 165, ry: 175 },
-      temporal_cortex: { kind: "ellipse", cx: 510, cy: 610, rx: 210, ry: 145 },
-      corpus_callosum: { kind: "ellipse", cx: 720, cy: 595, rx: 210, ry: 38 },
-      thalamus: { kind: "circle", cx: 835, cy: 685, r: 58 },
-      hypothalamus: { kind: "circle", cx: 775, cy: 825, r: 48 },
-      hippocampus: { kind: "circle", cx: 675, cy: 755, r: 52 },
-      amygdala: { kind: "circle", cx: 615, cy: 805, r: 42 },
-      fornix: { kind: "circle", cx: 715, cy: 715, r: 38 },
-      lateral_ventricle: { kind: "ellipse", cx: 675, cy: 575, rx: 185, ry: 42 },
-      third_ventricle: { kind: "circle", cx: 835, cy: 655, r: 22 },
-      pineal_gland: { kind: "circle", cx: 925, cy: 625, r: 26 },
-      optic_chiasm: { kind: "ellipse", cx: 755, cy: 875, rx: 58, ry: 22 },
-      mammillary_bodies: { kind: "circle", cx: 735, cy: 855, r: 28 },
-      pituitary: { kind: "circle", cx: 778, cy: 925, r: 32 },
-      superior_colliculus: { kind: "circle", cx: 818, cy: 958, r: 32 },
-      cerebral_peduncle: { kind: "ellipse", cx: 818, cy: 1005, rx: 62, ry: 38 },
-      midbrain: { kind: "ellipse", cx: 818, cy: 968, rx: 72, ry: 48 },
-      pons: { kind: "ellipse", cx: 818, cy: 1088, rx: 82, ry: 42 },
-      medulla: { kind: "ellipse", cx: 818, cy: 1188, rx: 68, ry: 48 },
-      fourth_ventricle: { kind: "circle", cx: 878, cy: 1045, r: 24 },
-      brainstem: { kind: "ellipse", cx: 818, cy: 1095, rx: 98, ry: 135 },
-      cerebellum: { kind: "ellipse", cx: 1125, cy: 965, rx: 205, ry: 155 },
-      spinal_cord: { kind: "ellipse", cx: 818, cy: 1325, rx: 38, ry: 85 }
+      frontal_cortex: "1",
+      parietal_cortex: "1",
+      temporal_cortex: "1",
+      occipital_cortex: "1",
+      thalamus: "2",
+      corpus_callosum: "3",
+      pineal_gland: "3",
+      hypothalamus: "4",
+      optic_chiasm: "5",
+      pituitary: "6",
+      midbrain: "7",
+      pons: "8",
+      medulla: "9",
+      brainstem: "10",
+      spinal_cord: "11",
+      cerebellum: "12"
     },
     lateral: {
-      frontal_lobe: { kind: "ellipse", cx: 310, cy: 510, rx: 290, ry: 330 },
-      parietal_lobe: { kind: "ellipse", cx: 790, cy: 370, rx: 270, ry: 290 },
-      temporal_lobe: { kind: "ellipse", cx: 990, cy: 710, rx: 330, ry: 230 },
-      occipital_lobe: { kind: "ellipse", cx: 1385, cy: 510, rx: 205, ry: 310 },
-      precentral_gyrus: { kind: "ellipse", cx: 715, cy: 470, rx: 48, ry: 265 },
-      postcentral_gyrus: { kind: "ellipse", cx: 825, cy: 470, rx: 48, ry: 265 },
+      frontal_lobe: "1",
+      frontal_cortex: "1",
+      parietal_lobe: "2",
+      parietal_cortex: "2",
+      temporal_lobe: "3",
+      temporal_cortex: "3",
+      occipital_lobe: "4",
+      occipital_cortex: "4",
+      precentral_gyrus: "A",
+      postcentral_gyrus: "B",
+      primary_auditory_cortex: "E",
+      primary_visual_cortex: "F"
+    }
+  };
+
+  function toShape(entry) {
+    if (entry.kind === "path") return { kind: "path", d: entry.d };
+    if (entry.kind === "ellipse") {
+      return { kind: "ellipse", cx: entry.cx, cy: entry.cy, rx: entry.rx, ry: entry.ry };
+    }
+    return { kind: "circle", cx: entry.cx, cy: entry.cy, r: entry.r };
+  }
+
+  /**
+   * Coordinates tuned to the white number/letter badges on the chart raster exports.
+   * @type {Record<string, Record<string, object>>}
+   */
+  const LABEL_POSITIONS = {
+    sagittal: {
+      frontal_cortex: { cx: 378, cy: 342, r: 88 },
+      parietal_cortex: { cx: 562, cy: 298, r: 72 },
+      occipital_cortex: { cx: 938, cy: 328, r: 70 },
+      temporal_cortex: { cx: 488, cy: 602, r: 68 },
+      corpus_callosum: { cx: 808, cy: 552, r: 48 },
+      thalamus: { cx: 752, cy: 692, r: 40 },
+      third_ventricle: { cx: 752, cy: 668, r: 22 },
+      pineal_gland: { cx: 868, cy: 602, r: 30 },
+      fornix: { cx: 668, cy: 678, r: 32 },
+      hippocampus: { cx: 598, cy: 792, r: 44 },
+      amygdala: { cx: 558, cy: 758, r: 36 },
+      lateral_ventricle: { kind: "ellipse", cx: 662, cy: 578, rx: 128, ry: 30 },
+      hypothalamus: { cx: 702, cy: 808, r: 36 },
+      mammillary_bodies: { cx: 712, cy: 848, r: 26 },
+      optic_chiasm: { cx: 678, cy: 868, r: 30 },
+      pituitary: { cx: 692, cy: 932, r: 32 },
+      superior_colliculus: { cx: 758, cy: 968, r: 30 },
+      midbrain: { cx: 728, cy: 996, r: 42 },
+      cerebral_peduncle: { kind: "ellipse", cx: 728, cy: 1028, rx: 52, ry: 34 },
+      pons: { cx: 735, cy: 1085, r: 42 },
+      fourth_ventricle: { cx: 808, cy: 1042, r: 26 },
+      medulla: { cx: 738, cy: 1182, r: 40 },
+      brainstem: { kind: "ellipse", cx: 735, cy: 1090, rx: 72, ry: 118 },
+      cerebellum: { kind: "ellipse", cx: 1168, cy: 1008, rx: 158, ry: 118 },
+      spinal_cord: { kind: "ellipse", cx: 738, cy: 1352, rx: 34, ry: 78 }
+    },
+    lateral: {
+      frontal_lobe: { cx: 268, cy: 408, r: 50 },
+      parietal_lobe: { cx: 718, cy: 308, r: 50 },
+      temporal_lobe: { cx: 988, cy: 698, r: 50 },
+      occipital_lobe: { cx: 1368, cy: 478, r: 50 },
+      precentral_gyrus: { kind: "ellipse", cx: 688, cy: 508, rx: 30, ry: 178 },
+      postcentral_gyrus: { kind: "ellipse", cx: 788, cy: 508, rx: 30, ry: 178 },
       central_sulcus: {
         kind: "path",
-        d: "M 768 195 L 772 755"
+        d: "M 738 168 L 742 748"
       },
       lateral_sulcus: {
         kind: "path",
-        d: "M 120 820 Q 520 920 1280 780"
+        d: "M 108 798 Q 488 898 1268 758"
       },
-      primary_auditory_cortex: { kind: "circle", cx: 1055, cy: 985, r: 58 },
-      primary_visual_cortex: { kind: "circle", cx: 1325, cy: 575, r: 58 },
-      olfactory_bulb: { kind: "circle", cx: 115, cy: 815, r: 42 }
+      primary_auditory_cortex: { cx: 1018, cy: 928, r: 44 },
+      primary_visual_cortex: { cx: 1338, cy: 548, r: 44 },
+      olfactory_bulb: { cx: 108, cy: 798, r: 38 }
     }
   };
+
+  const QUIZ_RINGS = { sagittal: {}, lateral: {} };
+  for (const view of ["sagittal", "lateral"]) {
+    for (const [key, pos] of Object.entries(LABEL_POSITIONS[view])) {
+      QUIZ_RINGS[view][key] = toShape(pos);
+    }
+  }
 
   function anatomyViewForHighlight(highlightKey) {
     return LATERAL_HIGHLIGHTS.has(highlightKey) ? "lateral" : "sagittal";
@@ -115,10 +163,16 @@
     return highlightKey;
   }
 
+  function chartRefForHighlight(highlightKey) {
+    const view = anatomyViewForHighlight(highlightKey);
+    const ringKey = ringKeyForHighlight(highlightKey, view);
+    return CHART_REF[view]?.[ringKey] || CHART_REF[view]?.[highlightKey] || null;
+  }
+
   function diagramForHighlight(highlightKey) {
     const view = anatomyViewForHighlight(highlightKey);
     const ringKey = ringKeyForHighlight(highlightKey, view);
-    return diagram(view, ringKey);
+    return diagram(view, ringKey, highlightKey);
   }
 
   function resolveAssetUrl(relativePath) {
@@ -176,7 +230,7 @@
     return "";
   }
 
-  function diagram(view, highlight) {
+  function diagram(view, highlight, highlightOriginal) {
     const meta = VIEWS[view];
     if (!meta) return "";
     const title = VIEW_TITLES[view] || "Brain anatomy";
@@ -187,21 +241,28 @@
       const shape = QUIZ_RINGS[view][key];
       if (shape) rings += renderRing(shape, key === highlight);
     }
+    const ref = chartRefForHighlight(highlightOriginal || highlight);
+    const refLine = ref
+      ? `Crimson ring on chart label <strong>${ref}</strong> (MCB80x chart pack).`
+      : "Crimson ring marks the structure named in the question (see chart art).";
     const cap =
       view === "sagittal"
-        ? "Exact midsagittal figure from MCB80x chart pack · crimson ring = structure to name."
-        : "Exact lateral figure from MCB80x chart pack · crimson ring = structure to name.";
+        ? `Midsagittal figure — ${refLine}`
+        : `Lateral hemisphere figure — ${refLine}`;
     return `<figure class="brain-anatomy-figure brain-anatomy-raster brain-anatomy-${view}"><div class="brain-anatomy-stack" style="background:${meta.bg}" role="img" aria-label="${title}"><img class="brain-anatomy-base" src="${imgSrc}" alt="${title}" width="${meta.w}" height="${meta.h}" decoding="async" loading="eager"/><svg class="brain-anatomy-overlay" xmlns="http://www.w3.org/2000/svg" viewBox="${vb}" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><title>${title}</title>${rings}</svg></div><figcaption>${cap}</figcaption></figure>`;
   }
 
   global.BRAIN_ANATOMY_VIEW_TITLES = VIEW_TITLES;
+  global.BRAIN_ANATOMY_CHART_REF = CHART_REF;
   global.BRAIN_ANATOMY_DIAGRAM = {
     diagram,
     diagramForHighlight,
     anatomyViewForHighlight,
     ringKeyForHighlight,
+    chartRefForHighlight,
     QUIZ_RINGS,
     VIEWS,
+    CHART_REF,
     resolveAssetUrl
   };
 })(typeof window !== "undefined" ? window : globalThis);

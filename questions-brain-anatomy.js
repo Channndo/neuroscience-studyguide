@@ -22,8 +22,28 @@
     return 2;
   }
 
+  function chartLabel(highlight) {
+    return D ? D.chartRefForHighlight(highlight) : null;
+  }
+
+  function withChartRef(highlight, question) {
+    const ref = chartLabel(highlight);
+    if (!ref) return question;
+    if (/chart label/i.test(question)) return question;
+    return question.replace(
+      /the highlighted/i,
+      `the structure at chart label ${ref} (crimson ring)`
+    );
+  }
+
   function mk(_view, highlight, question, options, correct, explanation, wrongExplanations) {
     const anatomyView = D ? D.anatomyViewForHighlight(highlight) : _view;
+    const ref = chartLabel(highlight);
+    let fullExplanation = explanation;
+    if (ref) {
+      const chartName = anatomyView === "lateral" ? "lateral cortex" : "midsagittal";
+      fullExplanation = `${explanation} On the MCB80x ${chartName} chart pack, this matches printed label ${ref}.`;
+    }
     return {
       topic: "Neuroanatomy",
       module: "part3",
@@ -32,10 +52,10 @@
       highlightKey: highlight,
       difficulty: difficultyFor(highlight),
       diagram: D ? D.diagramForHighlight(highlight) : "",
-      question,
+      question: withChartRef(highlight, question),
       options,
       correct,
-      explanation,
+      explanation: fullExplanation,
       wrongExplanations
     };
   }
