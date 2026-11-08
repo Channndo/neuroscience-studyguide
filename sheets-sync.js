@@ -13,6 +13,9 @@
   let lastSyncAt = null;
   let lastSyncError = null;
   let sessionPassphrase = null;
+  let pullInflight = null;
+  const PULL_TIMEOUT_MS = 18000;
+  const PUSH_TIMEOUT_MS = 25000;
 
   function config() {
     return window.MCB80X_CLOUD || {};
@@ -522,34 +525,69 @@
   }
 
   function pullJsonp(email) {
-    return new Promise((resolve, reject) => {
+    const key = String(email || "").toLowerCase();
+    if (pullInflight && pullInflight.key === key) return pullInflight.promise;
+
+    const promise = new Promise((resolve, reject) => {
       const cb = `_mcb80xPull_${Date.now()}_${Math.random().toString(36).slice(2)}`;
       const url = new URL(webAppUrl());
       url.searchParams.set("action", "pull");
       url.searchParams.set("email", email);
       if (syncSecret()) url.searchParams.set("secret", syncSecret());
       url.searchParams.set("callback", cb);
+      let settled = false;
       const timer = setTimeout(() => {
+        if (settled) return;
+        settled = true;
         cleanup();
         reject(new Error("Cloud pull timed out."));
-      }, 25000);
+      }, PULL_TIMEOUT_MS);
       function cleanup() {
         clearTimeout(timer);
+        clearTimeout(fallbackTimer);
         delete window[cb];
-        script.remove();
+        if (script.parentNode) script.remove();
       }
-      window[cb] = data => {
+      function finish(data) {
+        if (settled) return;
+        settled = true;
         cleanup();
         resolve(data);
-      };
-      const script = document.createElement("script");
-      script.src = url.toString();
-      script.onerror = () => {
+      }
+      function fail(err) {
+        if (settled) return;
+        settled = true;
         cleanup();
-        reject(new Error("Could not reach cloud save. Try again later."));
-      };
+        reject(err);
+      }
+      window[cb] = data => finish(data);
+      const script = document.createElement("script");
+      script.async = true;
+      script.src = url.toString();
+      script.onerror = () => fail(new Error("Could not reach cloud save. Try again later."));
+      const fallbackTimer = setTimeout(() => {
+        if (settled) return;
+        fail(new Error("Cloud save returned an invalid response. Redeploy the Google Apps Script backup."));
+      }, 4000);
+      script.addEventListener("load", () => {
+        clearTimeout(fallbackTimer);
+        setTimeout(() => {
+          if (!settled) {
+            fail(
+              new Error(
+                "Cloud save pull did not complete. Update the Apps Script deployment (JSONP callback), then refresh."
+              )
+            );
+          }
+        }, 120);
+      });
       document.head.appendChild(script);
+    }).finally(() => {
+      if (pullInflight && pullInflight.key === key) pullInflight = null;
     });
+
+    pullInflight = { key, promise };
+    return promise;
   }
 
   async function pushPost(email, envelope, profile) {
@@ -563,11 +601,15 @@
       envelope
     });
     try {
+      const controller = new AbortController();
+      const pushTimer = setTimeout(() => controller.abort(), PUSH_TIMEOUT_MS);
       const res = await fetch(webAppUrl(), {
         method: "POST",
         headers: { "Content-Type": "text/plain;charset=utf-8" },
-        body
+        body,
+        signal: controller.signal
       });
+      clearTimeout(pushTimer);
       if (res.ok) {
         const data = await res.json();
         if (data.ok) return data;
@@ -576,7 +618,11 @@
       const errText = await res.text().catch(() => "");
       throw new Error(errText || `Cloud push failed (HTTP ${res.status}).`);
     } catch (e) {
-      throw new Error(e?.message || "Cloud push failed (network or CORS).");
+      const msg =
+        e?.name === "AbortError"
+          ? "Cloud push timed out. Try again on a stable connection."
+          : e?.message || "Cloud push failed (network or CORS).";
+      throw new Error(msg);
     }
   }
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="mcb80x-bank-build" content="20251107p">
+  <meta name="mcb80x-bank-build" content="20251107q">
   <link rel="icon" href="favicon.svg" type="image/svg+xml" sizes="any">
   <link rel="alternate icon" href="favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -3496,32 +3496,31 @@
   </div>
 
   <footer>
-    Fisher-Yates shuffle on every quiz start &middot; HarvardX MCB80x curriculum alignment &middot; bank build 20251107p
+    Fisher-Yates shuffle on every quiz start &middot; HarvardX MCB80x curriculum alignment &middot; bank build 20251107q
     &middot; <button type="button" class="footer-link-btn" id="footer-go-downloads">Downloads</button>
   </footer>
 
-  <script src="question-copy-polish.js?v=20251107p"></script>
-  <script src="mcb80x-pipeline.js?v=20251107p"></script>
-  <script src="mcb80x-learning.js?v=20251107p"></script>
-  <script src="mcb80x-verified-registry.js?v=20251107p"></script>
-  <script src="explanation-feedback.js?v=20251107p"></script>
-  <script src="questions-bank.js?v=20251107p"></script>
-  <script src="questions-extra-pools.js?v=20251107p"></script>
-  <script src="questions-fresh-pools.js?v=20251107p"></script>
-  <script src="questions-expansion.js?v=20251107p"></script>
-  <script src="questions-exam-paraphrases.js?v=20251107p"></script>
-  <script src="questions-written-final.js?v=20251107p"></script>
-  <script src="questions-proctored-mock.js?v=20251107p"></script>
-  <script src="questions-formula-drills.js?v=20251107p"></script>
-  <script src="questions-pinnacle-megabank.js?v=20251107p"></script>
-  <script src="brain-anatomy-diagrams.js?v=20251107p"></script>
-  <script src="questions-brain-anatomy.js?v=20251107p"></script>
+  <script src="question-copy-polish.js?v=20251107q"></script>
+  <script src="mcb80x-pipeline.js?v=20251107q"></script>
+  <script src="mcb80x-learning.js?v=20251107q"></script>
+  <script src="mcb80x-verified-registry.js?v=20251107q"></script>
+  <script src="explanation-feedback.js?v=20251107q"></script>
+  <script src="questions-bank.js?v=20251107q"></script>
+  <script src="questions-extra-pools.js?v=20251107q"></script>
+  <script src="questions-fresh-pools.js?v=20251107q"></script>
+  <script src="questions-expansion.js?v=20251107q"></script>
+  <script src="questions-exam-paraphrases.js?v=20251107q"></script>
+  <script src="questions-written-final.js?v=20251107q"></script>
+  <script src="questions-proctored-mock.js?v=20251107q"></script>
+  <script src="questions-formula-drills.js?v=20251107q"></script>
+  <script src="questions-pinnacle-megabank.js?v=20251107q"></script>
+  <script src="brain-anatomy-diagrams.js?v=20251107q"></script>
+  <script src="questions-brain-anatomy.js?v=20251107q"></script>
   <script src="mcb80x-cloud-config.js"></script>
   <script src="sheets-sync.js"></script>
   <script src="oauth-client.js"></script>
   <script src="biometric-auth.js"></script>
   <script src="auth-biometric-ui.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" crossorigin="anonymous"></script>
   <script>
     function shuffle(array) {
       const arr = array.slice();
@@ -6143,7 +6142,11 @@
       el.setAttribute("aria-hidden", "false");
       document.getElementById("sync-banner-save")?.addEventListener("click", () => runSaveProgressNow());
       document.getElementById("sync-banner-restore")?.addEventListener("click", () => runRestoreProgressNow());
-      if (window.MCB80XSheetSync?.probeBackup && !el.dataset.probePending) {
+      if (
+        window.MCB80XSheetSync?.probeBackup &&
+        !el.dataset.probePending &&
+        !accountCloudSyncPromise
+      ) {
         el.dataset.probePending = "1";
         MCB80XSheetSync.probeBackup()
           .then(p => {
@@ -7524,6 +7527,23 @@
     }
 
     let profileChartInstances = [];
+    let chartJsLoadPromise = null;
+
+    function loadChartJs() {
+      if (typeof Chart !== "undefined") return Promise.resolve();
+      if (chartJsLoadPromise) return chartJsLoadPromise;
+      chartJsLoadPromise = new Promise((resolve, reject) => {
+        const s = document.createElement("script");
+        s.src =
+          "https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js";
+        s.async = true;
+        s.crossOrigin = "anonymous";
+        s.onload = () => resolve();
+        s.onerror = () => reject(new Error("Could not load charts."));
+        document.head.appendChild(s);
+      });
+      return chartJsLoadPromise;
+    }
 
     function destroyProfileCharts() {
       profileChartInstances.forEach(c => c.destroy());
@@ -8034,7 +8054,11 @@
           </table>
         </div>`;
 
-      requestAnimationFrame(() => renderProfileCharts(data));
+      requestAnimationFrame(() => {
+        loadChartJs()
+          .then(() => renderProfileCharts(data))
+          .catch(() => {});
+      });
       bindStudyPlanActions(document.getElementById("profile-study-plan"));
     }
 

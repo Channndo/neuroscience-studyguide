@@ -45,8 +45,17 @@ function findRowIndex_(email) {
   return -1;
 }
 
-function jsonResponse_(obj) {
-  return ContentService.createTextOutput(JSON.stringify(obj)).setMimeType(ContentService.MimeType.JSON);
+function jsonResponse_(obj, callback) {
+  var json = JSON.stringify(obj);
+  if (callback) {
+    var cb = String(callback).replace(/[^\w$.]/g, "");
+    if (!cb) {
+      return ContentService.createTextOutput(json).setMimeType(ContentService.MimeType.JSON);
+    }
+    return ContentService.createTextOutput(cb + "(" + json + ")")
+      .setMimeType(ContentService.MimeType.JAVASCRIPT);
+  }
+  return ContentService.createTextOutput(json).setMimeType(ContentService.MimeType.JSON);
 }
 
 /** One-time via: clasp run setSyncSecret --params '["YOUR_SECRET"]' */
@@ -57,20 +66,22 @@ function setSyncSecret(secret) {
 }
 
 function doGet(e) {
+  var callback = "";
   try {
     var p = e.parameter || {};
+    callback = p.callback || "";
     if (!checkSecret_(p.secret || "")) {
-      return jsonResponse_({ ok: false, error: "unauthorized" });
+      return jsonResponse_({ ok: false, error: "unauthorized" }, callback);
     }
     if (p.action !== "pull") {
-      return jsonResponse_({ ok: false, error: "unknown action" });
+      return jsonResponse_({ ok: false, error: "unknown action" }, callback);
     }
     var email = normalizeEmail_(p.email);
-    if (!email) return jsonResponse_({ ok: false, error: "email required" });
+    if (!email) return jsonResponse_({ ok: false, error: "email required" }, callback);
 
     var rowIdx = findRowIndex_(email);
     if (rowIdx < 0) {
-      return jsonResponse_({ ok: true, found: false });
+      return jsonResponse_({ ok: true, found: false }, callback);
     }
     var sh = sheet_();
     var row = sh.getRange(rowIdx, 1, rowIdx, HEADERS.length).getValues()[0];
@@ -89,9 +100,9 @@ function doGet(e) {
       updatedAt: row[3] ? String(row[3]) : "",
       cryptoVersion: row[4] || 1,
       envelope: payload
-    });
+    }, callback);
   } catch (err) {
-    return jsonResponse_({ ok: false, error: String(err) });
+    return jsonResponse_({ ok: false, error: String(err) }, callback);
   }
 }
 
