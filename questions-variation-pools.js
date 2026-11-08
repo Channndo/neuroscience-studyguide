@@ -10,6 +10,7 @@ const PART1_VARIATION_POOL = [
 
 
 
+
       "About, 96 mV (positive inside relative to standard sign convention)",
       "About −96 mV, identical to normal K⁺ gradients",
       "0 mV because channels are closed",
@@ -20,7 +21,7 @@ const PART1_VARIATION_POOL = [
     wrongExplanations: [
       "",
       "−96 mV assumes the normal inside-high/outside-low K⁺ gradient, not the inverted perfusion in the stem.",
-      "0 mV requires equal concentrations or zero permeability relevance; here concentrations are unequal and K⁺ is permeant.",
+      "0 mV",
       "E_Na is set by sodium gradients and has a different Nernst value; it does not replace E_K.",
     ]
   },
@@ -28,6 +29,7 @@ const PART1_VARIATION_POOL = [
     topic: "Nernst Equation",
     question: "Extracellular Na⁺ is increased tenfold while intracellular Na⁺ is held constant. E_Na should?",
     options: [
+
 
 
 
@@ -54,6 +56,7 @@ const PART1_VARIATION_POOL = [
 
 
 
+
       "Depolarize toward a value between E_K and E_Na, closer to the midpoint weighted by comparable permeabilities",
       "Hyperpolarize to E_K exactly",
       "Clamp to E_Na (, 60 mV) instantly with no K⁺ influence",
@@ -76,6 +79,7 @@ const PART1_VARIATION_POOL = [
 
 
 
+
       "Gradual dissipation of ion gradients and drift of V_m toward 0 mV as leaks equilibrate ions",
       "Immediate hyperpolarization to −120 mV",
       "Persistent clamp at E_Na without gradient change",
@@ -86,7 +90,7 @@ const PART1_VARIATION_POOL = [
     wrongExplanations: [
       "",
       "Without maintained gradients, the membrane does not hyperpolarize beyond normal E_K; it typically depolarizes toward 0 mV.",
-      "E_Na requires maintained Na⁺ gradients; pump block undermines that over time.",
+      "E_Na",
       "Leak channels still pass ions down their electrochemical gradients; they are not inactivated by ouabain.",
     ]
   },
@@ -94,6 +98,7 @@ const PART1_VARIATION_POOL = [
     topic: "Pharmacology",
     question: "Which description best applies to Tetrodotoxin (TTX) is applied during a depolarizing current step that normally reaches threshold. The expected change?",
     options: [
+
 
 
 
@@ -120,6 +125,7 @@ const PART1_VARIATION_POOL = [
 
 
 
+
       "Prolonged repolarization and broadened spike because voltage-gated K⁺ channels are blocked",
       "Failure of Na⁺ channel activation",
       "Block of presynaptic Ca²⁺ influx",
@@ -138,6 +144,7 @@ const PART1_VARIATION_POOL = [
     topic: "Electrical Signaling",
     question: "A novel cation X⁺ has E_X = +20 mV. At rest V_m = −70 mV, opening X⁺-selective leak channels will?",
     options: [
+
 
 
 
@@ -164,6 +171,7 @@ const PART1_VARIATION_POOL = [
 
 
 
+
       "Increase if both inputs arrive within the membrane time constant (spatial summation)",
       "Decrease because signals cancel by reflection",
       "Stay identical because distance cancels amplitude",
@@ -186,6 +194,7 @@ const PART1_VARIATION_POOL = [
 
 
 
+
       "Outward K⁺ current (positive outward convention) because V_m is depolarized above E_K",
       "Inward K⁺ current because V_m is negative on an absolute scale",
       "Zero current because the cell is clamped",
@@ -196,7 +205,7 @@ const PART1_VARIATION_POOL = [
     wrongExplanations: [
       "",
       "Sign of current is relative to E_K, not whether V_m is negative in absolute terms.",
-      "Steady-state clamp holds V but requires continuous ionic current to oppose leak and open channels.",
+      "Steady-state clamp holds V but",
       "Ionic currents persist at steady clamp potentials; capacitive current is transient at steps.",
     ]
   },
@@ -204,6 +213,7 @@ const PART1_VARIATION_POOL = [
     topic: "Action Potentials",
     question: "If voltage-gated Na⁺ channels are inactivated but delayed-rectifier K⁺ channels are held open, V_m will tend to move toward?",
     options: [
+
 
 
 
@@ -230,6 +240,7 @@ const PART1_VARIATION_POOL = [
 
 
 
+
       "Toward a less negative (more positive) value because [Cl⁻]_in/[Cl⁻]_out increases in the log term",
       "Toward a more negative value",
       "To E_K automatically",
@@ -248,6 +259,7 @@ const PART1_VARIATION_POOL = [
     topic: "Goldman Equation",
     question: "A cell has zero Na⁺ permeability, finite K⁺ and Cl⁻ permeability, with E_K = −90 mV and E_Cl = −70 mV. V_m will lie?",
     options: [
+
 
 
 
@@ -274,6 +286,7 @@ const PART1_VARIATION_POOL = [
 
 
 
+
       "Doubles (τ = R_m C_m)",
       "Halves",
       "Is unchanged because λ changes instead",
@@ -292,6 +305,7 @@ const PART1_VARIATION_POOL = [
     topic: "Electrical Signaling",
     question: "At V_m = −65 mV, E_K = −90 mV, E_Na = +60 mV. Opening only Na⁺ channels (no K⁺ change) will initially drive V_m?",
     options: [
+
 
 
 
@@ -321,6 +335,7 @@ const PART2_VARIATION_POOL = [
 
 
 
+
       "In both designs, delayed disynaptic inhibition from T can sharpen timing of S output relative to direct excitation alone",
       "No inhibition in either design because T is excitatory",
       "Uses steady-state Nernst for one ion while multiple conductances change in time",
@@ -339,6 +354,7 @@ const PART2_VARIATION_POOL = [
     topic: "Neural Circuits",
     question: "A reciprocal inhibitory circuit alternates activity between pool A and pool B (each excites the other’s inhibitor). Swapping to mutual excitation between A and B with no inhibition would most likely?",
     options: [
+
 
 
 
@@ -365,6 +381,7 @@ const PART2_VARIATION_POOL = [
 
 
 
+
       "Increase if net excitation from X was previously suppressed by Y",
       "Often decrease because inhibition was removed",
       "Stay fixed because IPSPs do not affect rate",
@@ -387,10 +404,11 @@ const PART2_VARIATION_POOL = [
 
 
 
+
       "Fail or drop drastically because Ca²⁺ influx triggers vesicle fusion",
-      "Increase because Na⁺ replaces Ca²⁺ in fusion (describes the wrong synaptic structure or transmission step)",
-      "Continue unchanged via SNARE activation alone (describes the wrong synaptic structure or transmission step)",
-      "Switch to purely electrical transmission (describes the wrong synaptic structure or transmission step)",
+      "Increase because Na⁺ replaces Ca²⁺ in fusion",
+      "Continue unchanged via SNARE activation alone",
+      "Switch to purely electrical transmission",
     ],
     correct: 0,
     explanation: "Chemical synaptic release requires Ca²⁺ entry to trigger exocytosis; without Ca²⁺ channels, fusion is not triggered normally.",
@@ -405,6 +423,7 @@ const PART2_VARIATION_POOL = [
     topic: "Synaptic Transmission",
     question: "Postsynaptic NMDA receptors are blocked with Mg²⁺ clamp maintained, but AMPA receptors remain functional. Typical consequence for LTP induction protocols?",
     options: [
+
 
 
 
@@ -431,6 +450,7 @@ const PART2_VARIATION_POOL = [
 
 
 
+
       "Become easier (lower threshold effective) because inhibition is replaced by excitation",
       "Become harder because excitation is slower than inhibition",
       "Be unchanged because excitation and inhibition are equivalent",
@@ -449,6 +469,7 @@ const PART2_VARIATION_POOL = [
     topic: "Short-Term Plasticity",
     question: "Presynaptic residual Ca²⁺ after one spike normally facilitates release. If Ca²⁺ buffers in the terminal are increased (faster Ca²⁺ clearance), paired-pulse facilitation will?",
     options: [
+
 
 
 
@@ -475,6 +496,7 @@ const PART2_VARIATION_POOL = [
 
 
 
+
       "Produce less somatic depolarization than A alone (subtractive/shunting effect)",
       "Often sum to 6 mV depolarization",
       "Hyperpolarize to −90 mV regardless of A",
@@ -493,6 +515,7 @@ const PART2_VARIATION_POOL = [
     topic: "Neuromodulation",
     question: "A circuit has excitatory drive to a motor pool. Adding neuromodulator that closes K⁺ leak channels on those motor neurons will?",
     options: [
+
 
 
 
@@ -519,10 +542,11 @@ const PART2_VARIATION_POOL = [
 
 
 
+
       "Reduced or abolished quantal transmitter release despite intact action potentials",
-      "Enhanced release because SNAREs are activated (describes the wrong synaptic structure or transmission step)",
-      "Block of postsynaptic GABA<sub>A</sub> receptors (describes the wrong synaptic structure or transmission step)",
-      "Persistent opening of voltage-gated Na⁺ channels (describes the wrong synaptic structure or transmission step)",
+      "Enhanced release because SNAREs are activated",
+      "Block of postsynaptic GABA<sub>A</sub> receptors",
+      "Persistent opening of voltage-gated Na⁺ channels",
     ],
     correct: 0,
     explanation: "SNARE complexes mediate vesicle fusion; their cleavage prevents exocytosis even if Ca²⁺ enters.",
@@ -537,6 +561,7 @@ const PART2_VARIATION_POOL = [
     topic: "Synaptic Plasticity Rules",
     question: "In a Hebbian STDP rule, presynaptic spike 10 ms before postsynaptic spike strengthens the synapse. If the order is reversed (post before pre), the same rule typically?",
     options: [
+
 
 
 
@@ -563,6 +588,7 @@ const PART2_VARIATION_POOL = [
 
 
 
+
       "Lose strict alternation and may show synchronous or irregular co-activation",
       "Speed up perfect alternation",
       "Stop all rhythmic output permanently",
@@ -572,7 +598,7 @@ const PART2_VARIATION_POOL = [
     explanation: "Reciprocal inhibition enforces anti-phase firing; removing it allows both sides to fire together or compete without structured alternation.",
     wrongExplanations: [
       "",
-      "Alternation requires inhibitory coupling; blocking it does not improve alternation.",
+      "Alternation",
       "Rhythmic activity may persist from intrinsic properties and excitation, but pattern structure changes.",
       "CPG rhythm is spinal/neural circuit based, not photoreceptor driven.",
     ]
@@ -581,6 +607,7 @@ const PART2_VARIATION_POOL = [
     topic: "Receptor Types",
     question: "A metabotropic GABA<sub>B</sub> agonist is applied. Compared with GABA<sub>A</sub> activation, the effect on postsynaptic V_m is typically?",
     options: [
+
 
 
 
@@ -603,6 +630,7 @@ const PART2_VARIATION_POOL = [
     topic: "Synaptic Integration",
     question: "An inhibitory interneuron makes perisomatic synapses onto a pyramidal cell. Moving the same synapses to distal dendrites (same strength) will usually?",
     options: [
+
 
 
 
@@ -632,6 +660,7 @@ const PART3_VARIATION_POOL = [
 
 
 
+
       "Posterior superior temporal / Wernicke’s area",
       "Primary motor cortex leg area",
       "Cerebellar vermis",
@@ -650,6 +679,7 @@ const PART3_VARIATION_POOL = [
     topic: "Clinical Correlates",
     question: "A patient cannot repeat phrases, speech is nonfluent and effortful, but comprehension is relatively preserved. Damage is most likely in?",
     options: [
+
 
 
 
@@ -676,6 +706,7 @@ const PART3_VARIATION_POOL = [
 
 
 
+
       "Right dorsal column (fasciculus gracilis/cuneatus) in the spinal cord",
       "Right spinothalamic tract at the same spinal level",
       "Left optic tract",
@@ -694,6 +725,7 @@ const PART3_VARIATION_POOL = [
     topic: "Clinical Correlates",
     question: "Which clinical presentation is most consistent with After a stroke, a patient neglects the left side of space, collides with doorframes on the left, and fails to eat food on the left half of the plate. Vision and primary sensation are intact. Likely damage?",
     options: [
+
 
 
 
@@ -720,6 +752,7 @@ const PART3_VARIATION_POOL = [
 
 
 
+
       "Fusiform face area / ventral occipitotemporal cortex",
       "Primary auditory cortex",
       "Substantia nigra pars compacta",
@@ -738,6 +771,7 @@ const PART3_VARIATION_POOL = [
     topic: "Clinical Correlates",
     question: "Which clinical presentation is most consistent with A patient has bitemporal hemianopia (cannot see temporal visual fields in either eye). The lesion is most likely at the?",
     options: [
+
 
 
 
@@ -764,6 +798,7 @@ const PART3_VARIATION_POOL = [
 
 
 
+
       "Nigrostriatal dopamine pathway (substantia nigra → striatum)",
       "Upper motor neuron corticospinal tract alone (maps the lesion to the wrong motor pathway or reflex)",
       "Neuromuscular junction acetylcholine receptors (maps the lesion to the wrong motor pathway or reflex)",
@@ -782,6 +817,7 @@ const PART3_VARIATION_POOL = [
     topic: "Motor Systems",
     question: "A patient overshoots finger-to-nose targets, shows intention tremor, and has dysmetria with normal strength. The dysfunction localizes most strongly to?",
     options: [
+
 
 
 
@@ -808,6 +844,7 @@ const PART3_VARIATION_POOL = [
 
 
 
+
       "Left medial longitudinal fasciculus (MLF) or associated brainstem internuclear pathway",
       "Right optic nerve",
       "Left primary somatosensory cortex",
@@ -826,6 +863,7 @@ const PART3_VARIATION_POOL = [
     topic: "Auditory System",
     question: "A patient cannot understand speech in noisy environments but hears tones normally; audiogram shows poor word discrimination disproportionate to threshold loss. Likely dysfunction?",
     options: [
+
 
 
 
@@ -852,6 +890,7 @@ const PART3_VARIATION_POOL = [
 
 
 
+
       "Peripheral vestibular labyrinth or vestibular nerve",
       "Bilateral occipital lobe infarct",
       "Parkinson disease",
@@ -870,6 +909,7 @@ const PART3_VARIATION_POOL = [
     topic: "Language",
     question: "Which anatomic lesion best explains A patient can sing familiar songs fluently but cannot speak prose or name objects (mixed nonfluent output with preserved melody). This pattern?",
     options: [
+
 
 
 
@@ -896,6 +936,7 @@ const PART3_VARIATION_POOL = [
 
 
 
+
       "Left lateral medulla",
       "Right primary motor cortex hand area",
       "Optic chiasm midline",
@@ -914,6 +955,7 @@ const PART3_VARIATION_POOL = [
     topic: "Learning & Memory",
     question: "A patient can learn a mirror-drawing skill over days but cannot recall meeting the examiner an hour ago. MRI suggests bilateral medial temporal lobe damage. Deficit profile fits?",
     options: [
+
 
 
 

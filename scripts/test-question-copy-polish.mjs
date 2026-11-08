@@ -41,6 +41,17 @@ for (const inOpt of [
 assert(polishOption("Horner + ataxia + diplopia").includes(";"), "clinical list uses semicolons");
 assert(!polishOption("Na+ and K+").includes(";"), "ions not semicolonized");
 
+assert(
+  !polishOption("No change (does not follow from the mechanism implied in the stem)").includes("does not follow"),
+  "strip filler suffix from option"
+);
+assert(
+  !polishOption("Always 0 mV (contradicts the Nernst dependence on inside/outside concentrations)").includes(
+    "contradicts the Nernst"
+  ),
+  "strip Nernst filler tag"
+);
+
 assert(stripGenericWrappers("Using the values stated below, which answer is correct: x").startsWith("x"), "strip generic wrapper");
 
 const malformed = polishStem("Which description best applies to If TTX blocks Na+ channels?");

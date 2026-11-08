@@ -12,6 +12,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Efflux of K⁺ through voltage-gated potassium channels",
       "Influx of Na⁺ through voltage-gated sodium channels",
       "Influx of Cl⁻ through ligand-gated channels",
@@ -20,10 +21,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     correct: 1,
     explanation: "Voltage-gated Na⁺ channels open at threshold, producing rapid Na⁺ influx that drives the upswing of the action potential.",
     wrongExplanations: [
-      "“Efflux of K⁺ through voltage-gated potassium channels” does not match the mechanism (topic: Action Potentials). Voltage-gated Na⁺ channels open at threshold, producing rapid Na⁺ influx that drives the upswing of the action potential. The correct choice—“Influx of Na⁺ through voltage-gated sodium channels”—fits that description.",
       "",
-      "“Influx of Cl⁻ through ligand-gated channels” does not match the mechanism (topic: Action Potentials). Voltage-gated Na⁺ channels open at threshold, producing rapid Na⁺ influx that drives the upswing of the action potential. The correct choice—“Influx of Na⁺ through voltage-gated sodium channels”—fits that description.",
-      "“Efflux of Ca²⁺ through voltage-gated calcium channels” does not match the mechanism (topic: Action Potentials). Voltage-gated Na⁺ channels open at threshold, producing rapid Na⁺ influx that drives the upswing of the action potential. The correct choice—“Influx of Na⁺ through voltage-gated sodium channels”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -37,6 +38,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Na⁺ influx through open sodium channels",
       "K⁺ efflux through voltage-gated potassium channels",
       "Ca²⁺ influx through N-type channels",
@@ -45,10 +47,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     correct: 1,
     explanation: "Voltage-gated K⁺ channels open during repolarization, allowing K⁺ efflux that returns the membrane toward its resting potential.",
     wrongExplanations: [
-      "“Na⁺ influx through open sodium channels” does not match the mechanism (topic: Action Potentials). Voltage-gated K⁺ channels open during repolarization, allowing K⁺ efflux that returns the membrane toward its resting potential. The correct choice—“K⁺ efflux through voltage-gated potassium channels”—fits that description.",
       "",
-      "“Ca²⁺ influx through N-type channels” does not match the mechanism (topic: Action Potentials). Voltage-gated K⁺ channels open during repolarization, allowing K⁺ efflux that returns the membrane toward its resting potential. The correct choice—“K⁺ efflux through voltage-gated potassium channels”—fits that description.",
-      "“Cl⁻ influx through GABA receptors” does not match the mechanism (topic: Action Potentials). Voltage-gated K⁺ channels open during repolarization, allowing K⁺ efflux that returns the membrane toward its resting potential. The correct choice—“K⁺ efflux through voltage-gated potassium channels”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -62,6 +64,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "The resting membrane potential",
       "The speed of action potential propagation",
       "The number of synaptic vesicles released",
@@ -70,10 +73,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     correct: 1,
     explanation: "Myelin reduces membrane capacitance and enables saltatory conduction, allowing faster propagation of action potentials.",
     wrongExplanations: [
-      "“The resting membrane potential (misapplies how active propagation uses local circuit…” does not match the mechanism (topic: Action Potential Propagation). Myelin reduces membrane capacitance and enables saltatory conduction, allowing faster propagation of action potentials. The correct choice—“The speed of action potential propagation”—fits that description.",
       "",
-      "“The number of synaptic vesicles released” does not match the mechanism (topic: Action Potential Propagation). Myelin reduces membrane capacitance and enables saltatory conduction, allowing faster propagation of action potentials. The correct choice—“The speed of action potential propagation”—fits that description.",
-      "“The equilibrium potential for Na⁺ (misapplies how active propagation uses local circ…” does not match the mechanism (topic: Action Potential Propagation). Myelin reduces membrane capacitance and enables saltatory conduction, allowing faster propagation of action potentials. The correct choice—“The speed of action potential propagation”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -87,6 +90,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "The Na⁺ equilibrium potential",
       "The K⁺ equilibrium potential",
       "0 mV exactly",
@@ -95,9 +99,9 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     correct: 1,
     explanation: "Resting potential is weighted toward the equilibrium potential of the ion with highest permeability; dominant K⁺ leak channels place V_m near E_K.",
     wrongExplanations: [
-      "“The Na⁺ equilibrium potential” does not match the mechanism (topic: Resting Potential). Resting potential is weighted toward the equilibrium potential of the ion with highest permeability; dominant K⁺ leak channels place V_m near E_K. The correct choice—“The K⁺ equilibrium potential”—fits that description.",
       "",
-      "“0 mV exactly” does not match the mechanism (topic: Resting Potential). Resting potential is weighted toward the equilibrium potential of the ion with highest permeability; dominant K⁺ leak channels place V_m near E_K. The correct choice—“The K⁺ equilibrium potential”—fits that description.",
+      "",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Resting potential is weighted toward the equilibrium potential of the ion with highest permeability; dominant K⁺ leak channels place V_m near E_K.",
     ]
   },
@@ -112,6 +116,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Becomes more negative",
       "Becomes less negative (moves toward 0 mV)",
       "Becomes exactly 0 mV regardless of concentration",
@@ -120,9 +125,9 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     correct: 1,
     explanation: "The Nernst equation predicts that raising external K⁺ reduces the concentration gradient, shifting E_K toward 0 mV.",
     wrongExplanations: [
-      "“Becomes more negative” does not match the mechanism (topic: Nernst Equation). The Nernst equation predicts that raising external K⁺ reduces the concentration gradient, shifting E_K toward 0 mV. The correct choice—“Becomes less negative (moves toward 0 mV)”—fits that description.",
       "",
-      "“Becomes exactly 0 mV regardless of concentration” does not match the mechanism (topic: Nernst Equation). The Nernst equation predicts that raising external K⁺ reduces the concentration gradient, shifting E_K toward 0 mV. The correct choice—“Becomes less negative (moves toward 0 mV)”—fits that description.",
+      "",
+      "",
       "The Nernst potential depends logarithmically on the ratio of external to internal concentration (and on valence and temperature). Changing concentrations must shift E_ion; it is not fixed at 0 mV for all ions. The Nernst equation predicts that raising external K⁺ reduces the concentration gradient, shifting E_K toward 0 mV.",
     ]
   },
@@ -137,6 +142,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Inactivated Na⁺ channels are recovering and fewer channels are available",
       "Most K⁺ channels are permanently closed",
       "Myelin is absent at the axon hillock",
@@ -146,9 +152,9 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     explanation: "Partial recovery of Na⁺ channels from inactivation during the relative refractory period requires stronger stimulation to reach threshold.",
     wrongExplanations: [
       "",
-      "“All K⁺ channels are permanently closed” does not match the mechanism (topic: Action Potentials). Partial recovery of Na⁺ channels from inactivation during the relative refractory period requires stronger stimulation to reach threshold. The correct choice—“Inactivated Na⁺ channels are recovering and fewer channels are available”—fits that description.",
-      "“Myelin is absent at the axon hillock” does not match the mechanism (topic: Action Potentials). Partial recovery of Na⁺ channels from inactivation during the relative refractory period requires stronger stimulation to reach threshold. The correct choice—“Inactivated Na⁺ channels are recovering and fewer channels are available”—fits that description.",
-      "“The Na⁺/K⁺ pump stops functioning” does not match the mechanism (topic: Action Potentials). Partial recovery of Na⁺ channels from inactivation during the relative refractory period requires stronger stimulation to reach threshold. The correct choice—“Inactivated Na⁺ channels are recovering and fewer channels are available”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -162,6 +168,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Open with slower kinetics than the initial Na⁺ surge and carry outward current",
       "Permit massive Na⁺ influx",
       "Block all Cl⁻ conductance permanently",
@@ -171,9 +178,9 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     explanation: "Delayed-rectifier K⁺ channels activate during the spike and repolarize the membrane through K⁺ efflux.",
     wrongExplanations: [
       "",
-      "“Permit massive Na⁺ influx” does not match the mechanism (topic: Action Potentials). Delayed-rectifier K⁺ channels activate during the spike and repolarize the membrane through K⁺ efflux. The correct choice—“Open with slower kinetics than the initial Na⁺ surge and carry outward current”—fits that description.",
-      "“Block all Cl⁻ conductance permanently” does not match the mechanism (topic: Action Potentials). Delayed-rectifier K⁺ channels activate during the spike and repolarize the membrane through K⁺ efflux. The correct choice—“Open with slower kinetics than the initial Na⁺ surge and carry outward current”—fits that description.",
-      "“Pump Ca²⁺ into the cytosol” does not match the mechanism (topic: Action Potentials). Delayed-rectifier K⁺ channels activate during the spike and repolarize the membrane through K⁺ efflux. The correct choice—“Open with slower kinetics than the initial Na⁺ surge and carry outward current”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -187,6 +194,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Increasing the number of voltage-gated channels per unit length",
       "Reducing effective membrane capacitance and limiting active regeneration to nodes",
       "Raising the resting membrane potential above 0 mV",
@@ -195,10 +203,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     correct: 1,
     explanation: "Myelin insulation lowers capacitive load and confines ion channel activity to nodes, enabling faster saltatory propagation.",
     wrongExplanations: [
-      "“Increasing the number of voltage-gated channels per unit length” does not match the mechanism (topic: Action Potential Propagation). Myelin insulation lowers capacitive load and confines ion channel activity to nodes, enabling faster saltatory propagation. The correct choice—“Reducing effective membrane capacitance and limiting active regeneration to nodes”—fits that description.",
       "",
-      "“Raising the resting membrane potential above 0 mV (misapplies how active propagation…” does not match the mechanism (topic: Action Potential Propagation). Myelin insulation lowers capacitive load and confines ion channel activity to nodes, enabling faster saltatory propagation. The correct choice—“Reducing effective membrane capacitance and limiting active regeneration to nodes”—fits that description.",
-      "“Blocking all passive current flow (misapplies how active propagation uses local circ…” does not match the mechanism (topic: Action Potential Propagation). Myelin insulation lowers capacitive load and confines ion channel activity to nodes, enabling faster saltatory propagation. The correct choice—“Reducing effective membrane capacitance and limiting active regeneration to nodes”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -212,6 +220,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "The potassium reversal potential (E_K), as if K⁺ were the dominant permeant ion",
       "The sodium reversal potential (E_Na), weighted by high relative Na⁺ permeability",
       "0 mV if all monovalent gradients were abolished and Cl⁻ is impermeant",
@@ -220,10 +229,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     correct: 1,
     explanation: "The Goldman equation weights each ion's equilibrium potential by relative permeability; high P_Na drives V_m toward E_Na.",
     wrongExplanations: [
-      "“The potassium reversal potential (E_K), as if K⁺ were the dominant permeant ion” does not match the mechanism (topic: Electrical Signaling). The Goldman equation weights each ion's equilibrium potential by relative permeability; high P_Na drives V_m toward E_Na. The correct choice—“The sodium reversal potential (E_Na), weighted by high relative Na⁺ permeability”—fits that description.",
+      "",
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: The Goldman equation weights each ion's equilibrium potential by relative permeability; high P_Na drives V_m toward E_Na.",
-      "“The reversal potential of gap junction channels, not voltage-gated cation channels” does not match the mechanism (topic: Electrical Signaling). The Goldman equation weights each ion's equilibrium potential by relative permeability; high P_Na drives V_m toward E_Na. The correct choice—“The sodium reversal potential (E_Na), weighted by high relative Na⁺ permeability”—fits that description.",
+      "",
     ]
   },
   {
@@ -237,6 +246,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "A faster rise to steady-state voltage",
       "A slower rise to steady-state voltage",
       "No change in voltage over time",
@@ -245,10 +255,10 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     correct: 1,
     explanation: "A larger τ (R_m × C_m) slows the charging of the membrane capacitance, delaying voltage change.",
     wrongExplanations: [
-      "“A faster rise to steady-state voltage” does not match the mechanism (topic: Passive Membrane Properties). A larger τ (R_m × C_m) slows the charging of the membrane capacitance, delaying voltage change. The correct choice—“A slower rise to steady-state voltage”—fits that description.",
       "",
-      "“No change in voltage over time” does not match the mechanism (topic: Passive Membrane Properties). A larger τ (R_m × C_m) slows the charging of the membrane capacitance, delaying voltage change. The correct choice—“A slower rise to steady-state voltage”—fits that description.",
-      "“Immediate action potential firing at all stimulus amplitudes” does not match the mechanism (topic: Passive Membrane Properties). A larger τ (R_m × C_m) slows the charging of the membrane capacitance, delaying voltage change. The correct choice—“A slower rise to steady-state voltage”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -258,6 +268,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -272,7 +283,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: The Na⁺/K⁺ pump establishes the concentration gradients that drive passive ion flux at rest.",
-      "“Synaptic vesicle recycling (ignores which ion dominates resting permeability)” does not match the mechanism (topic: Resting Potential). The Na⁺/K⁺ pump establishes the concentration gradients that drive passive ion flux at rest. The correct choice—“The Na⁺/K⁺ ATPase maintaining Na⁺ and K⁺ gradients”—fits that description.",
+      "",
       "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. The Na⁺/K⁺ pump establishes the concentration gradients that drive passive ion flux at rest.",
     ]
   },
@@ -283,6 +294,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -298,7 +310,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
       "",
       "Ionotropic receptors are ligand-gated ion channels: neurotransmitter binding directly changes ion flux. Metabotropic receptors activate G-proteins and intracellular cascades (e.g., cAMP, IP₃, DAG) without opening the pore themselves. Dopamine acts through G-protein-coupled receptors to modulate excitability and plasticity.",
       "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Dopamine acts through G-protein-coupled receptors to modulate excitability and plasticity.",
-      "“Voltage-gated Na⁺ channels in the cochlea” does not match the mechanism (topic: Neuromodulation). Dopamine acts through G-protein-coupled receptors to modulate excitability and plasticity. The correct choice—“Metabotropic D1 and D2 receptors altering cAMP and channel activity”—fits that description.",
+      "",
     ]
   },
   {
@@ -308,6 +320,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -322,7 +335,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Rod convergence and high photopigment density support scotopic vision.",
-      "“They lack cGMP-gated channels” does not match the mechanism (topic: Visual System). Rod convergence and high photopigment density support scotopic vision. The correct choice—“They express higher levels of photopigment and converge on bipolar cells”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Rod convergence and high photopigment density support scotopic vision.",
     ]
   },
@@ -333,6 +346,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -362,6 +376,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Lowering input resistance and diverting current",
       "Opening Na⁺ channels at the axon hillock",
       "Increasing length constant indefinitely",
@@ -371,9 +386,9 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     explanation: "Increased conductance lowers input resistance, shunting depolarizing current and shrinking EPSPs.",
     wrongExplanations: [
       "",
-      "“Opening Na⁺ channels at the axon hillock (ignores how EPSPs/IPSPs sum in time or spa…” does not match the mechanism (topic: Synaptic Integration). Increased conductance lowers input resistance, shunting depolarizing current and shrinking EPSPs. The correct choice—“Lowering input resistance and diverting current”—fits that description.",
-      "“Increasing length constant indefinitely (ignores how EPSPs/IPSPs sum in time or spac…” does not match the mechanism (topic: Synaptic Integration). Increased conductance lowers input resistance, shunting depolarizing current and shrinking EPSPs. The correct choice—“Lowering input resistance and diverting current”—fits that description.",
-      "“Blocking the Na⁺/K⁺ pump (ignores how EPSPs/IPSPs sum in time or space)” does not match the mechanism (topic: Synaptic Integration). Increased conductance lowers input resistance, shunting depolarizing current and shrinking EPSPs. The correct choice—“Lowering input resistance and diverting current”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -387,6 +402,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "pain/temp",
       "High-frequency vibration at Pacinian frequency",
       "Sustained pressure with Merkel-like precision",
@@ -396,9 +412,9 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     explanation: "Free nerve endings are nociceptors and thermoreceptors for pain/temp.",
     wrongExplanations: [
       "",
-      "“High-frequency vibration at Pacinian frequency” does not match the mechanism (topic: Somatosensation). Free nerve endings are nociceptors and thermoreceptors for pain/temp. The correct choice—“pain/temp”—fits that description.",
-      "“Sustained pressure with Merkel-like precision” does not match the mechanism (topic: Somatosensation). Free nerve endings are nociceptors and thermoreceptors for pain/temp. The correct choice—“pain/temp”—fits that description.",
-      "“Photons of visible light” does not match the mechanism (topic: Somatosensation). Free nerve endings are nociceptors and thermoreceptors for pain/temp. The correct choice—“pain/temp”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -412,6 +428,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "One functional odor receptor type",
       "Most receptor genes simultaneously",
       "Main mechanism: photopigment genes",
@@ -421,7 +438,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     explanation: "One-receptor-per-neuron rule supports combinatorial odor coding in the bulb.",
     wrongExplanations: [
       "",
-      "“All receptor genes simultaneously” does not match the mechanism (topic: Olfactory System). One-receptor-per-neuron rule supports combinatorial odor coding in the bulb. The correct choice—“One functional odor receptor type”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: One-receptor-per-neuron rule supports combinatorial odor coding in the bulb.",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: One-receptor-per-neuron rule supports combinatorial odor coding in the bulb.",
     ]
@@ -437,6 +454,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Myelinated axons",
       "Neuronal cell bodies and dendrites",
       "Synaptic cleft fluid",
@@ -446,8 +464,8 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     explanation: "White matter is dominated by myelinated axon bundles connecting brain regions.",
     wrongExplanations: [
       "",
-      "“Neuronal cell bodies and dendrites” does not match the mechanism (topic: Neuroanatomy). White matter is dominated by myelinated axon bundles connecting brain regions. The correct choice—“Myelinated axons”—fits that description.",
-      "“Synaptic cleft fluid” does not match the mechanism (topic: Neuroanatomy). White matter is dominated by myelinated axon bundles connecting brain regions. The correct choice—“Myelinated axons”—fits that description.",
+      "",
+      "",
       "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. White matter is dominated by myelinated axon bundles connecting brain regions.",
     ]
   },
@@ -462,6 +480,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "CNS capillary endothelial tight junctions",
       "Nodes of Ranvier in peripheral nerve (localizes the function to the wrong brain region)",
       "Synaptic clefts of all chemical synapses",
@@ -471,8 +490,8 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     explanation: "Tight junctions between CNS endothelial cells limit paracellular diffusion into brain tissue.",
     wrongExplanations: [
       "",
-      "“Nodes of Ranvier in peripheral nerve (localizes the function to the wrong brain regi…” does not match the mechanism (topic: Neuroanatomy). Tight junctions between CNS endothelial cells limit paracellular diffusion into brain tissue. The correct choice—“CNS capillary endothelial tight junctions”—fits that description.",
-      "“Synaptic clefts of all chemical synapses” does not match the mechanism (topic: Neuroanatomy). Tight junctions between CNS endothelial cells limit paracellular diffusion into brain tissue. The correct choice—“CNS capillary endothelial tight junctions”—fits that description.",
+      "",
+      "",
       "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Tight junctions between CNS endothelial cells limit paracellular diffusion into brain tissue.",
     ]
   },
@@ -487,6 +506,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Move V_m away from threshold",
       "Open voltage-gated Na⁺ channels",
       "Eliminate K⁺ leak conductance",
@@ -496,9 +516,9 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     explanation: "Hyperpolarizing current makes the cell more negative, increasing distance to spike threshold.",
     wrongExplanations: [
       "",
-      "“Open voltage-gated Na⁺ channels” does not match the mechanism (topic: Current Clamp). Hyperpolarizing current makes the cell more negative, increasing distance to spike threshold. The correct choice—“Move V_m away from threshold”—fits that description.",
-      "“Eliminate K⁺ leak conductance” does not match the mechanism (topic: Current Clamp). Hyperpolarizing current makes the cell more negative, increasing distance to spike threshold. The correct choice—“Move V_m away from threshold”—fits that description.",
-      "“Block the Na⁺/K⁺ pump permanently” does not match the mechanism (topic: Current Clamp). Hyperpolarizing current makes the cell more negative, increasing distance to spike threshold. The correct choice—“Move V_m away from threshold”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -512,6 +532,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Blocking voltage-gated Na⁺ channels",
       "Blocking voltage-gated K⁺ channels",
       "Inhibiting the Na⁺/K⁺ ATPase",
@@ -521,8 +542,8 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     explanation: "TTX selectively blocks voltage-gated Na⁺ channels, preventing spike initiation and propagation.",
     wrongExplanations: [
       "",
-      "“Blocking voltage-gated K⁺ channels” does not match the mechanism (topic: Pharmacology). TTX selectively blocks voltage-gated Na⁺ channels, preventing spike initiation and propagation. The correct choice—“Blocking voltage-gated Na⁺ channels”—fits that description.",
-      "“Inhibiting the Na⁺/K⁺ ATPase” does not match the mechanism (topic: Pharmacology). TTX selectively blocks voltage-gated Na⁺ channels, preventing spike initiation and propagation. The correct choice—“Blocking voltage-gated Na⁺ channels”—fits that description.",
+      "",
+      "",
       "Gap junctions pass current directly between coupled cells (electrical synapses); they do not implement the timed opening of voltage-gated Na⁺ and K⁺ conductances that shapes an action potential. TTX selectively blocks voltage-gated Na⁺ channels, preventing spike initiation and propagation.",
     ]
   },
@@ -537,6 +558,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "~37 mV toward 0 mV (less negative)",
       "~37 mV more negative",
       "To exactly, 58 mV",
@@ -546,9 +568,9 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     explanation: "The Nernst relation includes a log term; a fourfold outside change is about 61 mV × log10(4) ≈ 37 mV toward 0.",
     wrongExplanations: [
       "",
-      "“~37 mV more negative” does not match the mechanism (topic: Nernst Equation). The Nernst relation includes a log term; a fourfold outside change is about 61 mV × log10(4) ≈ 37 mV toward 0. The correct choice—“~37 mV toward 0 mV (less negative)”—fits that description.",
-      "“To exactly +58 mV” does not match the mechanism (topic: Nernst Equation). The Nernst relation includes a log term; a fourfold outside change is about 61 mV × log10(4) ≈ 37 mV toward 0. The correct choice—“~37 mV toward 0 mV (less negative)”—fits that description.",
-      "“Not at all because K⁺ is impermeant” does not match the mechanism (topic: Nernst Equation). The Nernst relation includes a log term; a fourfold outside change is about 61 mV × log10(4) ≈ 37 mV toward 0. The correct choice—“~37 mV toward 0 mV (less negative)”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -562,6 +584,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Reach steady deflection more slowly but spread the same distance",
       "Spread farther along dendrites",
       "Often trigger full spikes",
@@ -571,9 +594,9 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     explanation: "τ = R_m C_m sets temporal filtering; λ sets spatial spread independently in idealized cable theory.",
     wrongExplanations: [
       "",
-      "“Spread farther along dendrites (misstates how R_m, C_m, or geometry set τ or λ)” does not match the mechanism (topic: Passive Membrane Properties). τ = R_m C_m sets temporal filtering; λ sets spatial spread independently in idealized cable theory. The correct choice—“Reach steady deflection more slowly but spread the same distance”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: τ = R_m C_m sets temporal filtering; λ sets spatial spread independently in idealized cable theory.",
-      "“No longer decay passively (misstates how R_m, C_m, or geometry set τ or λ)” does not match the mechanism (topic: Passive Membrane Properties). τ = R_m C_m sets temporal filtering; λ sets spatial spread independently in idealized cable theory. The correct choice—“Reach steady deflection more slowly but spread the same distance”—fits that description.",
+      "",
     ]
   },
   {
@@ -583,6 +606,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -597,8 +621,8 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     wrongExplanations: [
       "",
       "IPSPs make firing less likely by hyperpolarizing the cell or shunting depolarizing current. Depolarizing EPSPs bring the membrane closer to threshold—that is the opposite direction. Opening Cl⁻ conductance pulls V_m toward E_Cl, often hyperpolarizing when E_Cl is negative to rest.",
-      "“Have no effect because Cl⁻ is not charged (ignores weighted permeabilities in the co…” does not match the mechanism (topic: Goldman Equation). Opening Cl⁻ conductance pulls V_m toward E_Cl, often hyperpolarizing when E_Cl is negative to rest. The correct choice—“Tend to hyperpolarize or stabilize V_m toward E_Cl”—fits that description.",
-      "“Reverse the Na⁺/K⁺ pump (ignores weighted permeabilities in the constant-field equat…” does not match the mechanism (topic: Goldman Equation). Opening Cl⁻ conductance pulls V_m toward E_Cl, often hyperpolarizing when E_Cl is negative to rest. The correct choice—“Tend to hyperpolarize or stabilize V_m toward E_Cl”—fits that description.",
+      "",
+      "",
     ]
   },
   {
@@ -612,6 +636,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Stronger to reach threshold because many Na⁺ channels remain inactivated",
       "Weaker because K⁺ channels are closed",
       "Identical in strength",
@@ -621,7 +646,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     explanation: "Partial Na⁺ channel inactivation raises the effective threshold for a second spike.",
     wrongExplanations: [
       "",
-      "“Weaker because K⁺ channels are closed” does not match the mechanism (topic: Action Potentials). Partial Na⁺ channel inactivation raises the effective threshold for a second spike. The correct choice—“Stronger to reach threshold because many Na⁺ channels remain inactivated”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Partial Na⁺ channel inactivation raises the effective threshold for a second spike.",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Partial Na⁺ channel inactivation raises the effective threshold for a second spike.",
     ]
@@ -637,6 +662,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Make V_m less negative (depolarized relative to E_K)",
       "Make V_m equal E_Na instantly",
       "Hyperpolarize below E_K",
@@ -646,9 +672,9 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     explanation: "Na⁺ leak pulls resting potential toward E_Na, depolarizing from pure K⁺ rest.",
     wrongExplanations: [
       "",
-      "“Make V_m equal E_Na instantly (ignores which ion dominates resting permeability)” does not match the mechanism (topic: Resting Potential). Na⁺ leak pulls resting potential toward E_Na, depolarizing from pure K⁺ rest. The correct choice—“Make V_m less negative (depolarized relative to E_K)”—fits that description.",
+      "",
       "EPSPs are depolarizing (or less hyperpolarized) shifts that move V_m toward spike threshold. Hyperpolarization or clamping toward E_K describes inhibition (IPSPs), not excitation. Na⁺ leak pulls resting potential toward E_Na, depolarizing from pure K⁺ rest.",
-      "“Stop all ion movement (ignores which ion dominates resting permeability)” does not match the mechanism (topic: Resting Potential). Na⁺ leak pulls resting potential toward E_Na, depolarizing from pure K⁺ rest. The correct choice—“Make V_m less negative (depolarized relative to E_K)”—fits that description.",
+      "",
     ]
   },
   {
@@ -662,6 +688,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Channel kinetics and ion mobility slow",
       "Myelin is converted to cerebrospinal fluid",
       "Resting potential becomes, 40 mV",
@@ -671,9 +698,9 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     explanation: "Lower temperature slows gating and diffusion, delaying spike propagation.",
     wrongExplanations: [
       "",
-      "“Myelin is converted to cerebrospinal fluid” does not match the mechanism (topic: Action Potentials). Lower temperature slows gating and diffusion, delaying spike propagation. The correct choice—“Channel kinetics and ion mobility slow”—fits that description.",
-      "“Resting potential becomes +40 mV” does not match the mechanism (topic: Action Potentials). Lower temperature slows gating and diffusion, delaying spike propagation. The correct choice—“Channel kinetics and ion mobility slow”—fits that description.",
-      "“Na⁺/K⁺ pump reverses direction” does not match the mechanism (topic: Action Potentials). Lower temperature slows gating and diffusion, delaying spike propagation. The correct choice—“Channel kinetics and ion mobility slow”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -683,6 +710,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -698,7 +726,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
       "",
       "EPSPs are depolarizing (or less hyperpolarized) shifts that move V_m toward spike threshold. Hyperpolarization or clamping toward E_K describes inhibition (IPSPs), not excitation. Goldman weighting shifts V_m toward newly permeant ions.",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Goldman weighting shifts V_m toward newly permeant ions.",
-      "“Stop the Na⁺/K⁺ pump” does not match the mechanism (topic: Goldman Equation). Goldman weighting shifts V_m toward newly permeant ions. The correct choice—“Depolarize V_m toward E_Na”—fits that description.",
+      "",
     ]
   },
   {
@@ -712,6 +740,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Resting permeability is dominated by K, with some Na, leak",
       "Requires na, channels are open",
       "V_m equals E_Na",
@@ -721,9 +750,9 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     explanation: "Rest lies closer to E_K when K+ permeability dominates.",
     wrongExplanations: [
       "",
-      "“Requires na+ channels are open” does not match the mechanism (topic: Quantitative Physiology). Rest lies closer to E_K when K+ permeability dominates. The correct choice—“Resting permeability is dominated by K+ with some Na+ leak”—fits that description.",
-      "“V_m equals E_Na” does not match the mechanism (topic: Quantitative Physiology). Rest lies closer to E_K when K+ permeability dominates. The correct choice—“Resting permeability is dominated by K+ with some Na+ leak”—fits that description.",
-      "“No ion gradients exist” does not match the mechanism (topic: Quantitative Physiology). Rest lies closer to E_K when K+ permeability dominates. The correct choice—“Resting permeability is dominated by K+ with some Na+ leak”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -737,6 +766,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Becomes shorter (less spatial spread)",
       "Becomes infinitely long",
       "Does not change ever",
@@ -746,8 +776,8 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     explanation: "Higher leak (lower R_m) shortens λ, attenuating signals faster with distance.",
     wrongExplanations: [
       "",
-      "“Becomes infinitely long (misstates how R_m, C_m, or geometry set τ or λ)” does not match the mechanism (topic: Passive Membrane Properties). Higher leak (lower R_m) shortens λ, attenuating signals faster with distance. The correct choice—“Becomes shorter (less spatial spread)”—fits that description.",
-      "“Does not change ever (misstates how R_m, C_m, or geometry set τ or λ)” does not match the mechanism (topic: Passive Membrane Properties). Higher leak (lower R_m) shortens λ, attenuating signals faster with distance. The correct choice—“Becomes shorter (less spatial spread)”—fits that description.",
+      "",
+      "",
       "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Higher leak (lower R_m) shortens λ, attenuating signals faster with distance.",
     ]
   },
@@ -762,6 +792,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Net inward current exceeds outward current initiating regenerative Na⁺ entry",
       "Myelin is synthesized in the soma",
       "Describes presynaptic vesicle release instead of postsynaptic integration",
@@ -771,7 +802,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     explanation: "Net inward current exceeds outward current initiating regenerative Na⁺ entry",
     wrongExplanations: [
       "",
-      "“Myelin is synthesized in the soma” does not match the mechanism (topic: Action Potentials). Net inward current exceeds outward current initiating regenerative Na⁺ entry The correct choice—“Net inward current exceeds outward current initiating regenerative Na⁺ entry”—fits that description.",
+      "",
       "Gap junctions pass current directly between coupled cells (electrical synapses); they do not implement the timed opening of voltage-gated Na⁺ and K⁺ conductances that shapes an action potential. Net inward current exceeds outward current initiating regenerative Na⁺ entry",
       "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Net inward current exceeds outward current initiating regenerative Na⁺ entry",
     ]
@@ -787,6 +818,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Many Na⁺ channels inactivated",
       "Myelin is synthesized in the soma",
       "Main mechanism: gABA is released globally",
@@ -796,7 +828,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     explanation: "Many Na⁺ channels inactivated; no new spike possible",
     wrongExplanations: [
       "",
-      "“Myelin is synthesized in the soma” does not match the mechanism (topic: Action Potentials). Many Na⁺ channels inactivated; no new spike possible The correct choice—“Many Na⁺ channels inactivated”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Many Na⁺ channels inactivated; no new spike possible",
       "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Many Na⁺ channels inactivated; no new spike possible",
     ]
@@ -812,17 +844,18 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Partial recovery requires stronger stimulus",
       "Myelin is synthesized in the soma",
-      "Requires gABA is released globally",
+      "Describes synaptic machinery unrelated to the membrane process in the stem",
       "Photoreceptors depolarize to light",
     ],
     correct: 0,
     explanation: "Partial recovery requires stronger stimulus",
     wrongExplanations: [
       "",
-      "“Myelin is synthesized in the soma” does not match the mechanism (topic: Action Potentials). Partial recovery requires stronger stimulus The correct choice—“Partial recovery requires stronger stimulus”—fits that description.",
-      "“Requires gABA is released globally” does not match the mechanism (topic: Action Potentials). Partial recovery requires stronger stimulus The correct choice—“Partial recovery requires stronger stimulus”—fits that description.",
+      "",
+      "",
       "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Partial recovery requires stronger stimulus",
     ]
   },
@@ -837,17 +870,18 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Delayed K⁺ (and sometimes Ca²⁺-activated K⁺) drives V_m below rest",
       "Myelin is synthesized in the soma",
-      "Requires gABA is released globally",
+      "Describes synaptic machinery unrelated to the membrane process in the stem",
       "Photoreceptors depolarize to light",
     ],
     correct: 0,
     explanation: "Delayed K⁺ (and sometimes Ca²⁺-activated K⁺) drives V_m below rest",
     wrongExplanations: [
       "",
-      "“Myelin is synthesized in the soma” does not match the mechanism (topic: Action Potentials). Delayed K⁺ (and sometimes Ca²⁺-activated K⁺) drives V_m below rest The correct choice—“Delayed K⁺ (and sometimes Ca²⁺-activated K⁺) drives V_m below rest”—fits that description.",
-      "“Requires gABA is released globally” does not match the mechanism (topic: Action Potentials). Delayed K⁺ (and sometimes Ca²⁺-activated K⁺) drives V_m below rest The correct choice—“Delayed K⁺ (and sometimes Ca²⁺-activated K⁺) drives V_m below rest”—fits that description.",
+      "",
+      "",
       "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Delayed K⁺ (and sometimes Ca²⁺-activated K⁺) drives V_m below rest",
     ]
   },
@@ -858,6 +892,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -887,6 +922,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Nodes of Ranvier concentrate Na⁺ channels; Saltatory conduction",
       "Main mechanism: passive spread forever",
       "Main mechanism: cochlear tuning",
@@ -908,6 +944,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -937,6 +974,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Na⁺ block in pain fibers; Loss of sensation in region",
       "Main mechanism: passive spread forever",
       "Main mechanism: cochlear tuning",
@@ -962,6 +1000,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Shorter — signals attenuate faster with distance",
       "Longer — signals spread farther",
       "Unchanged — λ seldom depends on R_m",
@@ -973,7 +1012,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Higher leak (lower R_m) shortens λ in passive cable models.",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Higher leak (lower R_m) shortens λ in passive cable models.",
-      "“Infinite — passive spread without limit (misstates how R_m, C_m, or geometry set τ o…” does not match the mechanism (topic: Passive Membrane Properties). Higher leak (lower R_m) shortens λ in passive cable models. The correct choice—“Shorter — signals attenuate faster with distance”—fits that description.",
+      "",
     ]
   },
   {
@@ -983,6 +1022,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -1012,6 +1052,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Less positive (toward 0 mV)",
       "More positive beyond, 100 mV",
       "To match E_K",
@@ -1021,9 +1062,9 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     explanation: "Higher inside Na⁺ reduces the driving equilibrium toward outside.",
     wrongExplanations: [
       "",
-      "“More positive beyond +100 mV” does not match the mechanism (topic: Nernst Equation). Higher inside Na⁺ reduces the driving equilibrium toward outside. The correct choice—“Less positive (toward 0 mV)”—fits that description.",
-      "“To match E_K” does not match the mechanism (topic: Nernst Equation). Higher inside Na⁺ reduces the driving equilibrium toward outside. The correct choice—“Less positive (toward 0 mV)”—fits that description.",
-      "“Not at all — Nernst ignores Na⁺” does not match the mechanism (topic: Nernst Equation). Higher inside Na⁺ reduces the driving equilibrium toward outside. The correct choice—“Less positive (toward 0 mV)”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -1033,6 +1074,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -1047,8 +1089,8 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Myelin reduces membrane leak between nodes, improving passive spread to the next node.",
-      "“Prevents all ion flow at nodes (misstates how R_m, C_m, or geometry set τ or λ)” does not match the mechanism (topic: Passive Membrane Properties). Myelin reduces membrane leak between nodes, improving passive spread to the next node. The correct choice—“Lengthens λ and reduces current leak per unit length”—fits that description.",
-      "“Converts active to purely graded signals forever (misstates how R_m, C_m, or geometr…” does not match the mechanism (topic: Passive Membrane Properties). Myelin reduces membrane leak between nodes, improving passive spread to the next node. The correct choice—“Lengthens λ and reduces current leak per unit length”—fits that description.",
+      "",
+      "",
     ]
   },
   {
@@ -1058,6 +1100,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -1072,8 +1115,8 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Voltage-gated Na⁺ entry drives rapid depolarization.",
-      "“Inward Cl⁻ through GABA receptors” does not match the mechanism (topic: Action Potentials). Voltage-gated Na⁺ entry drives rapid depolarization. The correct choice—“Inward Na⁺ through voltage-gated channels”—fits that description.",
-      "“Na⁺/K⁺ pump current reversing each ms” does not match the mechanism (topic: Action Potentials). Voltage-gated Na⁺ entry drives rapid depolarization. The correct choice—“Inward Na⁺ through voltage-gated channels”—fits that description.",
+      "",
+      "",
     ]
   },
   {
@@ -1087,17 +1130,18 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Prolonged repolarization and broader spikes",
       "No change in spike width",
       "Immediate loss of resting potential",
-      "Requires photoreceptor responses",
+      "References a circuit element that does not control the variable asked about",
     ],
     correct: 0,
     explanation: "Delayed K⁺ repolarization widens the action potential.",
     wrongExplanations: [
       "",
-      "“No change in spike width” does not match the mechanism (topic: Action Potentials). Delayed K⁺ repolarization widens the action potential. The correct choice—“Prolonged repolarization and broader spikes”—fits that description.",
-      "“Immediate loss of resting potential” does not match the mechanism (topic: Action Potentials). Delayed K⁺ repolarization widens the action potential. The correct choice—“Prolonged repolarization and broader spikes”—fits that description.",
+      "",
+      "",
       "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Delayed K⁺ repolarization widens the action potential.",
     ]
   },
@@ -1112,6 +1156,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Controls V_m or I_m across the entire cell interior",
       "Samples one ion species with no pipette access",
       "Measures muscle force transduction",
@@ -1122,8 +1167,8 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Whole-cell dialyzes the cytoplasm and clamps the entire cell membrane.",
-      "“Measures muscle force transduction” does not match the mechanism (topic: Patch Clamp). Whole-cell dialyzes the cytoplasm and clamps the entire cell membrane. The correct choice—“Controls V_m or I_m across the entire cell interior”—fits that description.",
-      "“Replaces need for electrodes in cochlea” does not match the mechanism (topic: Patch Clamp). Whole-cell dialyzes the cytoplasm and clamps the entire cell membrane. The correct choice—“Controls V_m or I_m across the entire cell interior”—fits that description.",
+      "",
+      "",
     ]
   },
   {
@@ -1133,6 +1178,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -1147,7 +1193,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     wrongExplanations: [
       "",
       "IPSPs make firing less likely by hyperpolarizing the cell or shunting depolarizing current. Depolarizing EPSPs bring the membrane closer to threshold—that is the opposite direction. More leak conductance lowers R_m, hyperpolarizing toward E_K and shortening λ.",
-      "“Block all synaptic vesicle fusion” does not match the mechanism (topic: Pharmacology). More leak conductance lowers R_m, hyperpolarizing toward E_K and shortening λ. The correct choice—“Hyperpolarize the cell and shorten λ”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: More leak conductance lowers R_m, hyperpolarizing toward E_K and shortening λ.",
     ]
   },
@@ -1162,6 +1208,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Inward (negative) clamp current if channels open during the step",
       "Zero current because voltage is clamped",
       "Requires mechanical cochlear motion",
@@ -1171,9 +1218,9 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     explanation: "Clamp current equals the net ionic current required to hold V constant.",
     wrongExplanations: [
       "",
-      "“Zero current because voltage is clamped” does not match the mechanism (topic: Voltage Clamp). Clamp current equals the net ionic current required to hold V constant. The correct choice—“Inward (negative) clamp current if channels open during the step”—fits that description.",
-      "“Requires mechanical cochlear motion” does not match the mechanism (topic: Voltage Clamp). Clamp current equals the net ionic current required to hold V constant. The correct choice—“Inward (negative) clamp current if channels open during the step”—fits that description.",
-      "“Irreversible LTP” does not match the mechanism (topic: Voltage Clamp). Clamp current equals the net ionic current required to hold V constant. The correct choice—“Inward (negative) clamp current if channels open during the step”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -1183,6 +1230,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -1197,7 +1245,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: When V_m is above E_Cl, Cl⁻ enters and hyperpolarizes.",
-      "“Be zero because Cl⁻ is impermeant (ignores weighted permeabilities in the constant-f…” does not match the mechanism (topic: Goldman Equation). When V_m is above E_Cl, Cl⁻ enters and hyperpolarizes. The correct choice—“Be inward (hyperpolarizing) until V_m approaches E_Cl”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: When V_m is above E_Cl, Cl⁻ enters and hyperpolarizes.",
     ]
   },
@@ -1212,6 +1260,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Continued/outlasting K⁺ conductance",
       "Reopening of all Na⁺ channels",
       "Cl⁻ influx through AMPA receptors",
@@ -1221,8 +1270,8 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     explanation: "Delayed K⁺ currents drive V_m below rest briefly.",
     wrongExplanations: [
       "",
-      "“Reopening of all Na⁺ channels” does not match the mechanism (topic: Action Potentials). Delayed K⁺ currents drive V_m below rest briefly. The correct choice—“Continued/outlasting K⁺ conductance”—fits that description.",
-      "“Cl⁻ influx through AMPA receptors” does not match the mechanism (topic: Action Potentials). Delayed K⁺ currents drive V_m below rest briefly. The correct choice—“Continued/outlasting K⁺ conductance”—fits that description.",
+      "",
+      "",
       "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Delayed K⁺ currents drive V_m below rest briefly.",
     ]
   },
@@ -1233,6 +1282,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -1248,7 +1298,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Higher external Na⁺ makes E_Na more positive; if a small Na⁺ leak exists at rest, V_m shifts slightly toward E_Na.",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Higher external Na⁺ makes E_Na more positive; if a small Na⁺ leak exists at rest, V_m shifts slightly toward E_Na.",
-      "“Away from any ion equilibrium” does not match the mechanism (topic: Goldman Equation). Higher external Na⁺ makes E_Na more positive; if a small Na⁺ leak exists at rest, V_m shifts slightly toward E_Na. The correct choice—“Toward E_Na (less negative)”—fits that description.",
+      "",
     ]
   },
   {
@@ -1262,6 +1312,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Toward E_Na (depolarized relative to normal K⁺-dominated rest)",
       "Toward E_K as if K⁺ leak were unchanged",
       "To 0 mV instantly regardless of gradients",
@@ -1271,9 +1322,9 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     explanation: "Removing dominant K⁺ leak leaves remaining Na⁺ conductances to set V_m closer to E_Na.",
     wrongExplanations: [
       "",
-      "“Toward E_K as if K⁺ leak were unchanged (ignores which ion dominates resting permeab…” does not match the mechanism (topic: Resting Potential). Removing dominant K⁺ leak leaves remaining Na⁺ conductances to set V_m closer to E_Na. The correct choice—“Toward E_Na (depolarized relative to normal K⁺-dominated rest)”—fits that description.",
-      "“To 0 mV instantly regardless of gradients (ignores which ion dominates resting perme…” does not match the mechanism (topic: Resting Potential). Removing dominant K⁺ leak leaves remaining Na⁺ conductances to set V_m closer to E_Na. The correct choice—“Toward E_Na (depolarized relative to normal K⁺-dominated rest)”—fits that description.",
-      "“Below −150 mV (ignores which ion dominates resting permeability)” does not match the mechanism (topic: Resting Potential). Removing dominant K⁺ leak leaves remaining Na⁺ conductances to set V_m closer to E_Na. The correct choice—“Toward E_Na (depolarized relative to normal K⁺-dominated rest)”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -1287,6 +1338,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "0 mV",
       "−90 mV",
       "60 mV",
@@ -1296,9 +1348,9 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     explanation: "With no concentration gradient, E_K = 0 mV regardless of channel presence.",
     wrongExplanations: [
       "",
-      "“−90 mV” does not match the mechanism (topic: Nernst Equation). With no concentration gradient, E_K = 0 mV regardless of channel presence. The correct choice—“0 mV”—fits that description.",
-      "“+60 mV” does not match the mechanism (topic: Nernst Equation). With no concentration gradient, E_K = 0 mV regardless of channel presence. The correct choice—“0 mV”—fits that description.",
-      "“Undefined” does not match the mechanism (topic: Nernst Equation). With no concentration gradient, E_K = 0 mV regardless of channel presence. The correct choice—“0 mV”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -1312,6 +1364,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Zero",
       "Maximal outward",
       "Maximal inward",
@@ -1321,8 +1374,8 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     explanation: "At equilibrium potential, net electrochemical driving force for that ion is zero.",
     wrongExplanations: [
       "",
-      "“Maximal outward” does not match the mechanism (topic: Electrical Signaling). At equilibrium potential, net electrochemical driving force for that ion is zero. The correct choice—“Zero”—fits that description.",
-      "“Maximal inward” does not match the mechanism (topic: Electrical Signaling). At equilibrium potential, net electrochemical driving force for that ion is zero. The correct choice—“Zero”—fits that description.",
+      "",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: At equilibrium potential, net electrochemical driving force for that ion is zero.",
     ]
   },
@@ -1337,6 +1390,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "The lipid bilayer stores charge separated across a thin dielectric",
       "Myelin increases ion channel density",
       "Na⁺ channels pump charge into the ER",
@@ -1346,9 +1400,9 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     explanation: "The bilayer acts as a capacitor; charge accumulates on inner and outer leaflets.",
     wrongExplanations: [
       "",
-      "“Myelin increases ion channel density (misstates how R_m, C_m, or geometry set τ or λ)” does not match the mechanism (topic: Passive Membrane Properties). The bilayer acts as a capacitor; charge accumulates on inner and outer leaflets. The correct choice—“The lipid bilayer stores charge separated across a thin dielectric”—fits that description.",
-      "“Na⁺ channels pump charge into the ER (misstates how R_m, C_m, or geometry set τ or λ)” does not match the mechanism (topic: Passive Membrane Properties). The bilayer acts as a capacitor; charge accumulates on inner and outer leaflets. The correct choice—“The lipid bilayer stores charge separated across a thin dielectric”—fits that description.",
-      "“Dendrites lack any resistance (misstates how R_m, C_m, or geometry set τ or λ)” does not match the mechanism (topic: Passive Membrane Properties). The bilayer acts as a capacitor; charge accumulates on inner and outer leaflets. The correct choice—“The lipid bilayer stores charge separated across a thin dielectric”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -1362,6 +1416,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Cable filtering (attenuation and low-pass filtering)",
       "Complete absence of ionotropic receptors",
       "Myelin on dendrites",
@@ -1371,8 +1426,8 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     explanation: "Passive spread along dendrites attenuates amplitude and spreads rise time.",
     wrongExplanations: [
       "",
-      "“Complete absence of ionotropic receptors (misstates how R_m, C_m, or geometry set τ …” does not match the mechanism (topic: Passive Membrane Properties). Passive spread along dendrites attenuates amplitude and spreads rise time. The correct choice—“Cable filtering (attenuation and low-pass filtering)”—fits that description.",
-      "“Myelin on dendrites (misstates how R_m, C_m, or geometry set τ or λ)” does not match the mechanism (topic: Passive Membrane Properties). Passive spread along dendrites attenuates amplitude and spreads rise time. The correct choice—“Cable filtering (attenuation and low-pass filtering)”—fits that description.",
+      "",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Passive spread along dendrites attenuates amplitude and spreads rise time.",
     ]
   },
@@ -1387,6 +1442,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Voltage-gated Na⁺ channel pore",
       "Voltage-gated K⁺ channels",
       "The Na⁺/K⁺ pump",
@@ -1396,8 +1452,8 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     explanation: "TTX selectively occludes voltage-gated Na⁺ channels.",
     wrongExplanations: [
       "",
-      "“Voltage-gated K⁺ channels” does not match the mechanism (topic: Action Potentials). TTX selectively occludes voltage-gated Na⁺ channels. The correct choice—“Voltage-gated Na⁺ channel pore”—fits that description.",
-      "“The Na⁺/K⁺ pump” does not match the mechanism (topic: Action Potentials). TTX selectively occludes voltage-gated Na⁺ channels. The correct choice—“Voltage-gated Na⁺ channel pore”—fits that description.",
+      "",
+      "",
       "Gap junctions pass current directly between coupled cells (electrical synapses); they do not implement the timed opening of voltage-gated Na⁺ and K⁺ conductances that shapes an action potential. TTX selectively occludes voltage-gated Na⁺ channels.",
     ]
   },
@@ -1412,6 +1468,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Certain voltage-gated K⁺ channels",
       "Voltage-gated Na⁺ channels",
       "Glutamate receptors",
@@ -1421,9 +1478,9 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     explanation: "TEA blocks some K⁺ channels, slowing repolarization.",
     wrongExplanations: [
       "",
-      "“Voltage-gated Na⁺ channels” does not match the mechanism (topic: Action Potentials). TEA blocks some K⁺ channels, slowing repolarization. The correct choice—“Certain voltage-gated K⁺ channels”—fits that description.",
-      "“Glutamate receptors” does not match the mechanism (topic: Action Potentials). TEA blocks some K⁺ channels, slowing repolarization. The correct choice—“Certain voltage-gated K⁺ channels”—fits that description.",
-      "“Myelin basic protein” does not match the mechanism (topic: Action Potentials). TEA blocks some K⁺ channels, slowing repolarization. The correct choice—“Certain voltage-gated K⁺ channels”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -1437,6 +1494,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Cannot fire another action potential until recovery",
       "Fires at higher frequency",
       "Depolarizes to E_Na permanently",
@@ -1446,9 +1504,9 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     explanation: "Inactivation gate closure prevents repeated Na⁺ opening (absolute refractory period).",
     wrongExplanations: [
       "",
-      "“Fires at higher frequency” does not match the mechanism (topic: Action Potentials). Inactivation gate closure prevents repeated Na⁺ opening (absolute refractory period). The correct choice—“Cannot fire another action potential until recovery”—fits that description.",
-      "“Depolarizes to E_Na permanently” does not match the mechanism (topic: Action Potentials). Inactivation gate closure prevents repeated Na⁺ opening (absolute refractory period). The correct choice—“Cannot fire another action potential until recovery”—fits that description.",
-      "“Loses all resting potential” does not match the mechanism (topic: Action Potentials). Inactivation gate closure prevents repeated Na⁺ opening (absolute refractory period). The correct choice—“Cannot fire another action potential until recovery”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -1458,6 +1516,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -1472,8 +1531,8 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Hodgkin and Huxley clamped voltage to dissect underlying ionic currents.",
-      "“Visualize myelin with light microscopy alone” does not match the mechanism (topic: Experimental Methods). Hodgkin and Huxley clamped voltage to dissect underlying ionic currents. The correct choice—“Hold membrane voltage constant and measure the currents required”—fits that description.",
-      "“Count synaptic vesicles directly” does not match the mechanism (topic: Experimental Methods). Hodgkin and Huxley clamped voltage to dissect underlying ionic currents. The correct choice—“Hold membrane voltage constant and measure the currents required”—fits that description.",
+      "",
+      "",
     ]
   },
   {
@@ -1483,6 +1542,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -1497,7 +1557,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: V_m negative relative to E_Na drives cation influx if channels open.",
-      "“No movement regardless of channels” does not match the mechanism (topic: Ion Selectivity). V_m negative relative to E_Na drives cation influx if channels open. The correct choice—“Inward Na⁺ movement (into the cell)”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: V_m negative relative to E_Na drives cation influx if channels open.",
     ]
   },
@@ -1512,6 +1572,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Hyperpolarize or stabilize V_m nearer E_K",
       "Depolarize toward E_Na",
       "Block all spikes by removing Na⁺ channels from membrane",
@@ -1522,7 +1583,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     wrongExplanations: [
       "",
       "IPSPs make firing less likely by hyperpolarizing the cell or shunting depolarizing current. Depolarizing EPSPs bring the membrane closer to threshold—that is the opposite direction. More K⁺ conductance pulls V_m toward E_K (often more negative).",
-      "“Block all spikes by removing Na⁺ channels from membrane” does not match the mechanism (topic: Pharmacology). More K⁺ conductance pulls V_m toward E_K (often more negative). The correct choice—“Hyperpolarize or stabilize V_m nearer E_K”—fits that description.",
+      "",
       "Membrane capacitance stores charge (Q = CV) and slows voltage changes, but capacitive current alone cannot produce the selective Na⁺ influx and delayed K⁺ efflux that underlie spike upstroke and repolarization. More K⁺ conductance pulls V_m toward E_K (often more negative).",
     ]
   },
@@ -1533,6 +1594,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -1565,6 +1627,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Often prevents action potential generation",
       "Brings the membrane closer to threshold for firing",
       "Often hyperpolarizes the postsynaptic cell",
@@ -1590,6 +1653,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Depolarizes the membrane toward threshold",
       "Hyperpolarizes the membrane or stabilizes it away from threshold",
       "Often opens voltage-gated Na⁺ channels",
@@ -1601,7 +1665,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
       "IPSPs make firing less likely by hyperpolarizing the cell or shunting depolarizing current. Depolarizing EPSPs bring the membrane closer to threshold—that is the opposite direction. IPSPs hyperpolarize the postsynaptic cell or clamp the membrane potential, making it harder to reach threshold.",
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: IPSPs hyperpolarize the postsynaptic cell or clamp the membrane potential, making it harder to reach threshold.",
-      "“Directly triggers neurotransmitter release (mixes up presynaptic release with postsy…” does not match the mechanism (topic: Synaptic Transmission). IPSPs hyperpolarize the postsynaptic cell or clamp the membrane potential, making it harder to reach threshold. The correct choice—“Hyperpolarizes the membrane or stabilizes it away from threshold”—fits that description.",
+      "",
     ]
   },
   {
@@ -1615,6 +1679,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Opening an ion channel pore directly upon binding",
       "Activating G-proteins that modulate ion channels or second-messenger systems",
       "Blocking all synaptic transmission permanently",
@@ -1623,10 +1688,10 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     correct: 1,
     explanation: "Metabotropic receptors couple to G-proteins, which activate intracellular signaling cascades such as cAMP or IP₃ pathways.",
     wrongExplanations: [
-      "“Opening an ion channel pore directly upon binding” does not match the mechanism (topic: Receptor Types). Metabotropic receptors couple to G-proteins, which activate intracellular signaling cascades such as cAMP or IP₃ pathways. The correct choice—“Activating G-proteins that modulate ion channels or second-messenger systems”—fits that description.",
       "",
-      "“Blocking all synaptic transmission permanently” does not match the mechanism (topic: Receptor Types). Metabotropic receptors couple to G-proteins, which activate intracellular signaling cascades such as cAMP or IP₃ pathways. The correct choice—“Activating G-proteins that modulate ion channels or second-messenger systems”—fits that description.",
-      "“Generating action potentials in the presynaptic terminal” does not match the mechanism (topic: Receptor Types). Metabotropic receptors couple to G-proteins, which activate intracellular signaling cascades such as cAMP or IP₃ pathways. The correct choice—“Activating G-proteins that modulate ion channels or second-messenger systems”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -1640,6 +1705,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Direct opening of voltage-gated Na⁺ channels",
       "Release of Ca²⁺ from intracellular stores in the endoplasmic reticulum",
       "Immediate repolarization of the axon",
@@ -1648,10 +1714,10 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     correct: 1,
     explanation: "IP₃ binds receptors on the endoplasmic reticulum, releasing stored Ca²⁺ into the cytosol as part of the signaling cascade.",
     wrongExplanations: [
-      "“Direct opening of voltage-gated Na⁺ channels” does not match the mechanism (topic: Second Messengers). IP₃ binds receptors on the endoplasmic reticulum, releasing stored Ca²⁺ into the cytosol as part of the signaling cascade. The correct choice—“Release of Ca²⁺ from intracellular stores in the endoplasmic reticulum”—fits that description.",
       "",
-      "“Immediate repolarization of the axon” does not match the mechanism (topic: Second Messengers). IP₃ binds receptors on the endoplasmic reticulum, releasing stored Ca²⁺ into the cytosol as part of the signaling cascade. The correct choice—“Release of Ca²⁺ from intracellular stores in the endoplasmic reticulum”—fits that description.",
-      "“Degradation of all cAMP in the cell” does not match the mechanism (topic: Second Messengers). IP₃ binds receptors on the endoplasmic reticulum, releasing stored Ca²⁺ into the cytosol as part of the signaling cascade. The correct choice—“Release of Ca²⁺ from intracellular stores in the endoplasmic reticulum”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -1665,6 +1731,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Direct ion flux through the receptor pore",
       "G-protein activation and second-messenger cascades before channel modulation",
       "Immediate fusion of synaptic vesicles",
@@ -1673,10 +1740,10 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     correct: 1,
     explanation: "Metabotropic pathways require G-protein and second-messenger steps, producing slower but longer-lasting modulation.",
     wrongExplanations: [
-      "“Direct ion flux through the receptor pore” does not match the mechanism (topic: Receptor Types). Metabotropic pathways require G-protein and second-messenger steps, producing slower but longer-lasting modulation. The correct choice—“G-protein activation and second-messenger cascades before channel modulation”—fits that description.",
       "",
-      "“Immediate fusion of synaptic vesicles” does not match the mechanism (topic: Receptor Types). Metabotropic pathways require G-protein and second-messenger steps, producing slower but longer-lasting modulation. The correct choice—“G-protein activation and second-messenger cascades before channel modulation”—fits that description.",
-      "“Saltatory conduction in the dendrite” does not match the mechanism (topic: Receptor Types). Metabotropic pathways require G-protein and second-messenger steps, producing slower but longer-lasting modulation. The correct choice—“G-protein activation and second-messenger cascades before channel modulation”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -1690,6 +1757,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Opening plasmalemmal Na⁺ channels",
       "Releasing Ca²⁺ from endoplasmic reticulum stores",
       "Blocking all K⁺ channels permanently",
@@ -1698,10 +1766,10 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     correct: 1,
     explanation: "IP₃ binds ER receptors and releases stored Ca²⁺ into the cytosol as part of metabotropic cascades.",
     wrongExplanations: [
-      "“Opening plasmalemmal Na⁺ channels” does not match the mechanism (topic: Second Messengers). IP₃ binds ER receptors and releases stored Ca²⁺ into the cytosol as part of metabotropic cascades. The correct choice—“Releasing Ca²⁺ from endoplasmic reticulum stores”—fits that description.",
       "",
-      "“Blocking all K⁺ channels permanently” does not match the mechanism (topic: Second Messengers). IP₃ binds ER receptors and releases stored Ca²⁺ into the cytosol as part of metabotropic cascades. The correct choice—“Releasing Ca²⁺ from endoplasmic reticulum stores”—fits that description.",
-      "“Stopping vesicle endocytosis” does not match the mechanism (topic: Second Messengers). IP₃ binds ER receptors and releases stored Ca²⁺ into the cytosol as part of metabotropic cascades. The correct choice—“Releasing Ca²⁺ from endoplasmic reticulum stores”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -1711,6 +1779,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -1725,7 +1794,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: AMPA receptors are largely permeable to cations including Na⁺, producing rapid depolarizing currents at rest.",
-      "“Mg²⁺ out of the cell” does not match the mechanism (topic: Synaptic Transmission). AMPA receptors are largely permeable to cations including Na⁺, producing rapid depolarizing currents at rest. The correct choice—“Na⁺ and some K⁺ at resting potentials”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: AMPA receptors are largely permeable to cations including Na⁺, producing rapid depolarizing currents at rest.",
     ]
   },
@@ -1740,6 +1809,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Increasing Cl⁻ conductance when E_Cl⁻ is below rest",
       "Opening Na⁺ channels at the axon hillock",
       "Blocking all metabotropic signaling permanently",
@@ -1749,7 +1819,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     explanation: "GABA<sub>A</sub> receptors are Cl⁻ channels; when E_Cl⁻ is negative to rest, opening them hyperpolarizes or shunts the membrane.",
     wrongExplanations: [
       "",
-      "“Opening Na⁺ channels at the axon hillock (mixes up presynaptic release with postsyna…” does not match the mechanism (topic: Synaptic Transmission). GABAA receptors are Cl⁻ channels; when E_Cl⁻ is negative to rest, opening them hyperpolarizes or shunts the membrane. The correct choice—“Increasing Cl⁻ conductance when E_Cl⁻ is below rest”—fits that description.",
+      "",
       "Fast synaptic inhibition at many CNS synapses is dominated by GABA_A Cl⁻ flux. Metabotropic GABA_B signaling is slower and works through G-proteins, not direct ligand-gated Cl⁻ pores. GABAA receptors are Cl⁻ channels; when E_Cl⁻ is negative to rest, opening them hyperpolarizes or shunts the membrane.",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: GABAA receptors are Cl⁻ channels; when E_Cl⁻ is negative to rest, opening them hyperpolarizes or shunts the membrane.",
     ]
@@ -1765,6 +1835,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Move toward 0 mV as gradients collapse",
       "Become more negative indefinitely without limit",
       "Lock at the Nernst potential for Cl⁻",
@@ -1774,9 +1845,9 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     explanation: "Without active transport, Na⁺ and K⁺ gradients dissipate and V_m drifts toward 0 mV.",
     wrongExplanations: [
       "",
-      "“Become more negative indefinitely without limit” does not match the mechanism (topic: Resting Potential). Without active transport, Na⁺ and K⁺ gradients dissipate and V_m drifts toward 0 mV. The correct choice—“Move toward 0 mV as gradients collapse”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Without active transport, Na⁺ and K⁺ gradients dissipate and V_m drifts toward 0 mV.",
-      "“Prevent all action potentials by hyperpolarizing above 0 mV” does not match the mechanism (topic: Resting Potential). Without active transport, Na⁺ and K⁺ gradients dissipate and V_m drifts toward 0 mV. The correct choice—“Move toward 0 mV as gradients collapse”—fits that description.",
+      "",
     ]
   },
   {
@@ -1790,6 +1861,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "−95 mV (negative inside)",
       "60 mV (positive inside)",
       "0 mV",
@@ -1799,9 +1871,9 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     explanation: "A large inward K⁺ gradient yields a strongly negative E_K.",
     wrongExplanations: [
       "",
-      "“+60 mV (positive inside)” does not match the mechanism (topic: Nernst Equation). A large inward K⁺ gradient yields a strongly negative E_K. The correct choice—“−95 mV (negative inside)”—fits that description.",
-      "“0 mV” does not match the mechanism (topic: Nernst Equation). A large inward K⁺ gradient yields a strongly negative E_K. The correct choice—“−95 mV (negative inside)”—fits that description.",
-      "“+120 mV” does not match the mechanism (topic: Nernst Equation). A large inward K⁺ gradient yields a strongly negative E_K. The correct choice—“−95 mV (negative inside)”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -1815,18 +1887,19 @@ const PART2_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Neurotransmitter release probability",
-      "Postsynaptic AMPA receptor density (describes the wrong synaptic structure or transmission step)",
-      "Axonal myelin thickness (describes the wrong synaptic structure or transmission step)",
-      "Retinal phototransduction (describes the wrong synaptic structure or transmission step)",
+      "Postsynaptic AMPA receptor density",
+      "Axonal myelin thickness",
+      "Retinal phototransduction",
     ],
     correct: 0,
     explanation: "Ca²⁺ influx is the immediate trigger for vesicle fusion.",
     wrongExplanations: [
       "",
-      "“Postsynaptic AMPA receptor density (describes the wrong synaptic structure or transm…” does not match the mechanism (topic: Chemical Synapses). Ca²⁺ influx is the immediate trigger for vesicle fusion. The correct choice—“Neurotransmitter release probability”—fits that description.",
-      "“Axonal myelin thickness (describes the wrong synaptic structure or transmission step)” does not match the mechanism (topic: Chemical Synapses). Ca²⁺ influx is the immediate trigger for vesicle fusion. The correct choice—“Neurotransmitter release probability”—fits that description.",
-      "“Retinal phototransduction (describes the wrong synaptic structure or transmission st…” does not match the mechanism (topic: Chemical Synapses). Ca²⁺ influx is the immediate trigger for vesicle fusion. The correct choice—“Neurotransmitter release probability”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -1836,6 +1909,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -1850,8 +1924,8 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Polymodal nociceptors and thermoreceptors use free nerve endings.",
-      "“Auditory frequency place coding” does not match the mechanism (topic: Somatosensation). Polymodal nociceptors and thermoreceptors use free nerve endings. The correct choice—“pain/temp”—fits that description.",
-      "“Declarative memory consolidation” does not match the mechanism (topic: Somatosensation). Polymodal nociceptors and thermoreceptors use free nerve endings. The correct choice—“pain/temp”—fits that description.",
+      "",
+      "",
     ]
   },
   {
@@ -1865,6 +1939,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Toward E_Na (less negative)",
       "Toward E_K (more negative)",
       "To exactly the arithmetic mean (−15 mV)",
@@ -1874,9 +1949,9 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     explanation: "Goldman weighting pulls V_m toward the equilibrium potential of the ion with increased relative permeability.",
     wrongExplanations: [
       "",
-      "“Toward E_K (more negative)” does not match the mechanism (topic: Resting Potential). Goldman weighting pulls V_m toward the equilibrium potential of the ion with increased relative permeability. The correct choice—“Toward E_Na (less negative)”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Goldman weighting pulls V_m toward the equilibrium potential of the ion with increased relative permeability.",
-      "“Away from both equilibrium potentials equally” does not match the mechanism (topic: Resting Potential). Goldman weighting pulls V_m toward the equilibrium potential of the ion with increased relative permeability. The correct choice—“Toward E_Na (less negative)”—fits that description.",
+      "",
     ]
   },
   {
@@ -1890,6 +1965,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Less positive (closer to 0 mV)",
       "More positive",
       "Equal to E_K",
@@ -1899,9 +1975,9 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     explanation: "Higher internal Na⁺ reduces the inward driving force, lowering E_Na.",
     wrongExplanations: [
       "",
-      "“More positive (contradicts the Nernst dependence on inside/outside concentrations)” does not match the mechanism (topic: Nernst Equation). Higher internal Na⁺ reduces the inward driving force, lowering E_Na. The correct choice—“Less positive (closer to 0 mV)”—fits that description.",
-      "“Equal to E_K (contradicts the Nernst dependence on inside/outside concentrations)” does not match the mechanism (topic: Nernst Equation). Higher internal Na⁺ reduces the inward driving force, lowering E_Na. The correct choice—“Less positive (closer to 0 mV)”—fits that description.",
-      "“Independent of Na⁺ gradients (contradicts the Nernst dependence on inside/outside co…” does not match the mechanism (topic: Nernst Equation). Higher internal Na⁺ reduces the inward driving force, lowering E_Na. The correct choice—“Less positive (closer to 0 mV)”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -1911,6 +1987,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -1925,7 +2002,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Ohmic ion current scales with conductance times driving force (V_m − E_ion).",
-      "“Reverse sign without changing magnitude” does not match the mechanism (topic: Electrical Signaling). Ohmic ion current scales with conductance times driving force (V_m − E_ion). The correct choice—“Increase in magnitude if V_m ≠ E_Na”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Ohmic ion current scales with conductance times driving force (V_m − E_ion).",
     ]
   },
@@ -1940,6 +2017,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Lower probability of vesicle release",
       "Larger quantal size per vesicle",
       "Postsynaptic receptor number to increase instantly",
@@ -1950,8 +2028,8 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Release probability is steeply dependent on presynaptic Ca²⁺ concentration.",
-      "“Postsynaptic receptor number to increase instantly” does not match the mechanism (topic: Synaptic Transmission). Release probability is steeply dependent on presynaptic Ca²⁺ concentration. The correct choice—“Lower probability of vesicle release”—fits that description.",
-      "“Conversion of IPSPs to action potentials in the axon” does not match the mechanism (topic: Synaptic Transmission). Release probability is steeply dependent on presynaptic Ca²⁺ concentration. The correct choice—“Lower probability of vesicle release”—fits that description.",
+      "",
+      "",
     ]
   },
   {
@@ -1961,6 +2039,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -1975,8 +2054,8 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Rate coding in auditory nerve fibers conveys stimulus intensity.",
-      "“Switching from rods to cones” does not match the mechanism (topic: Auditory System). Rate coding in auditory nerve fibers conveys stimulus intensity. The correct choice—“Increasing firing rate with louder stimuli”—fits that description.",
-      "“Eliminating all spontaneous activity at threshold” does not match the mechanism (topic: Auditory System). Rate coding in auditory nerve fibers conveys stimulus intensity. The correct choice—“Increasing firing rate with louder stimuli”—fits that description.",
+      "",
+      "",
     ]
   },
   {
@@ -1986,6 +2065,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -2015,6 +2095,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Produces little change in V_m (shunting may still occur)",
       "Often massive hyperpolarization to −90 mV",
       "Depolarizes to E_Na",
@@ -2025,8 +2106,8 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Driving force is small when E_rev matches V_m; conductance changes still matter.",
-      "“Depolarizes to E_Na (ignores how EPSPs/IPSPs sum in time or space)” does not match the mechanism (topic: Synaptic Integration). Driving force is small when E_rev matches V_m; conductance changes still matter. The correct choice—“Produces little change in V_m (shunting may still occur)”—fits that description.",
-      "“Blocks all quantal release (ignores how EPSPs/IPSPs sum in time or space)” does not match the mechanism (topic: Synaptic Integration). Driving force is small when E_rev matches V_m; conductance changes still matter. The correct choice—“Produces little change in V_m (shunting may still occur)”—fits that description.",
+      "",
+      "",
     ]
   },
   {
@@ -2040,6 +2121,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Basal ganglia circuits for movement initiation and selection",
       "Cochlear inner hair cell transduction",
       "Assigns an unrelated sensory or synaptic mechanism to this context",
@@ -2049,8 +2131,8 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     explanation: "SNc dopamine loss disrupts basal ganglia motor loops.",
     wrongExplanations: [
       "",
-      "“Cochlear inner hair cell transduction” does not match the mechanism (topic: Neuromodulation). SNc dopamine loss disrupts basal ganglia motor loops. The correct choice—“Basal ganglia circuits for movement initiation and selection”—fits that description.",
-      "“Assigns an unrelated sensory or synaptic mechanism to this context” does not match the mechanism (topic: Neuromodulation). SNc dopamine loss disrupts basal ganglia motor loops. The correct choice—“Basal ganglia circuits for movement initiation and selection”—fits that description.",
+      "",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: SNc dopamine loss disrupts basal ganglia motor loops.",
     ]
   },
@@ -2065,6 +2147,7 @@ const PART2_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Fast excitatory postsynaptic currents at many glutamatergic synapses",
       "Slow G-protein inhibitory currents",
       "Direct opening of voltage-gated Na⁺ in myelin",
@@ -2075,8 +2158,8 @@ const PART2_EXAM_PARAPHRASE_POOL = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: AMPA channels dominate fast EPSCs when Glu is released.",
-      "“Direct opening of voltage-gated Na⁺ in myelin” does not match the mechanism (topic: Receptor Types). AMPA channels dominate fast EPSCs when Glu is released. The correct choice—“Fast excitatory postsynaptic currents at many glutamatergic synapses”—fits that description.",
-      "“Peptide hormone release” does not match the mechanism (topic: Receptor Types). AMPA channels dominate fast EPSCs when Glu is released. The correct choice—“Fast excitatory postsynaptic currents at many glutamatergic synapses”—fits that description.",
+      "",
+      "",
     ]
   }
 ];
@@ -2093,6 +2176,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Most olfactory receptor genes simultaneously",
       "One functional olfactory receptor gene",
       "Main mechanism: voltage-gated Na⁺ channels and no receptors",
@@ -2101,10 +2185,10 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     correct: 1,
     explanation: "The one neuron–one receptor rule ensures each OSN responds to a defined subset of odorants for combinatorial coding in the bulb.",
     wrongExplanations: [
-      "“All olfactory receptor genes simultaneously” does not match the mechanism (topic: Olfactory System). The one neuron–one receptor rule ensures each OSN responds to a defined subset of odorants for combinatorial coding in the bulb. The correct choice—“One functional olfactory receptor gene”—fits that description.",
+      "",
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: The one neuron–one receptor rule ensures each OSN responds to a defined subset of odorants for combinatorial coding in the bulb.",
-      "“The same receptors as gustatory taste cells” does not match the mechanism (topic: Olfactory System). The one neuron–one receptor rule ensures each OSN responds to a defined subset of odorants for combinatorial coding in the bulb. The correct choice—“One functional olfactory receptor gene”—fits that description.",
+      "",
     ]
   },
   {
@@ -2118,6 +2202,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "The spinal cord to the cerebellum (localizes the function to the wrong brain region)",
       "Homologous regions of the left and right cerebral hemispheres",
       "The hippocampus to the hypothalamus (localizes the function to the wrong brain region)",
@@ -2126,10 +2211,10 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     correct: 1,
     explanation: "The corpus callosum is the largest commissural tract, enabling interhemispheric communication between corresponding cortical areas.",
     wrongExplanations: [
-      "“The spinal cord to the cerebellum (localizes the function to the wrong brain region)” does not match the mechanism (topic: Neuroanatomy). The corpus callosum is the largest commissural tract, enabling interhemispheric communication between corresponding cortical areas. The correct choice—“Homologous regions of the left and right cerebral hemispheres”—fits that description.",
+      "",
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: The corpus callosum is the largest commissural tract, enabling interhemispheric communication between corresponding cortical areas.",
-      "“Sensory receptors to motor neurons directly (localizes the function to the wrong bra…” does not match the mechanism (topic: Neuroanatomy). The corpus callosum is the largest commissural tract, enabling interhemispheric communication between corresponding cortical areas. The correct choice—“Homologous regions of the left and right cerebral hemispheres”—fits that description.",
+      "",
     ]
   },
   {
@@ -2143,6 +2228,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Toward E_Na (less negative)",
       "Toward E_K (more negative)",
       "To exactly 0 mV instantly",
@@ -2152,9 +2238,9 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     explanation: "Resting V_m is a conductance-weighted average of equilibrium potentials; added Na⁺ leak pulls V_m toward E_Na.",
     wrongExplanations: [
       "",
-      "“Toward E_K (more negative)” does not match the mechanism (topic: Resting Potential). Resting V_m is a conductance-weighted average of equilibrium potentials; added Na⁺ leak pulls V_m toward E_Na. The correct choice—“Toward E_Na (less negative)”—fits that description.",
-      "“To exactly 0 mV instantly” does not match the mechanism (topic: Resting Potential). Resting V_m is a conductance-weighted average of equilibrium potentials; added Na⁺ leak pulls V_m toward E_Na. The correct choice—“Toward E_Na (less negative)”—fits that description.",
-      "“Away from both equilibrium potentials equally with no shift” does not match the mechanism (topic: Resting Potential). Resting V_m is a conductance-weighted average of equilibrium potentials; added Na⁺ leak pulls V_m toward E_Na. The correct choice—“Toward E_Na (less negative)”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -2164,6 +2250,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -2178,8 +2265,8 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Passive decrement limits the impact of distant synaptic inputs on the spike initiation zone.",
-      "“Unchanged regardless of distance” does not match the mechanism (topic: Passive Membrane Properties). Passive decrement limits the impact of distant synaptic inputs on the spike initiation zone. The correct choice—“Smaller due to greater attenuation”—fits that description.",
-      "“Converted directly to action potentials without decay” does not match the mechanism (topic: Passive Membrane Properties). Passive decrement limits the impact of distant synaptic inputs on the spike initiation zone. The correct choice—“Smaller due to greater attenuation”—fits that description.",
+      "",
+      "",
     ]
   },
   {
@@ -2189,6 +2276,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -2203,8 +2291,8 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Driving force is V_m − E_ion; negative values indicate inward current for cations.",
-      "“Zero because the cell is at rest (uses the wrong sign or driving force for ionic cur…” does not match the mechanism (topic: Electrical Signaling). Driving force is V_m − E_ion; negative values indicate inward current for cations. The correct choice—“120 mV inward (V_m − E_ion = −120 mV)”—fits that description.",
-      "“50 mV with no direction (uses the wrong sign or driving force for ionic current)” does not match the mechanism (topic: Electrical Signaling). Driving force is V_m − E_ion; negative values indicate inward current for cations. The correct choice—“120 mV inward (V_m − E_ion = −120 mV)”—fits that description.",
+      "",
+      "",
     ]
   },
   {
@@ -2214,6 +2302,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -2228,7 +2317,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Electrotonic decay reduces distal synaptic impact at the soma/AIS.",
-      "“Saltatory conduction in dendrites” does not match the mechanism (topic: Synaptic Integration). Electrotonic decay reduces distal synaptic impact at the soma/AIS. The correct choice—“Passive cable attenuation along dendrites”—fits that description.",
+      "",
       "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Electrotonic decay reduces distal synaptic impact at the soma/AIS.",
     ]
   },
@@ -2243,6 +2332,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Increased action potential firing rate",
       "Changing the amino acid sequence of rhodopsin",
       "Shifting the visual receptive field center",
@@ -2252,9 +2342,9 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     explanation: "Rate coding complements place coding for intensity and temporal features.",
     wrongExplanations: [
       "",
-      "“Changing the amino acid sequence of rhodopsin” does not match the mechanism (topic: Auditory System). Rate coding complements place coding for intensity and temporal features. The correct choice—“Increased action potential firing rate”—fits that description.",
-      "“Shifting the visual receptive field center” does not match the mechanism (topic: Auditory System). Rate coding complements place coding for intensity and temporal features. The correct choice—“Increased action potential firing rate”—fits that description.",
-      "“Blocking all K⁺ leak channels permanently” does not match the mechanism (topic: Auditory System). Rate coding complements place coding for intensity and temporal features. The correct choice—“Increased action potential firing rate”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -2264,6 +2354,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -2278,8 +2369,8 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     wrongExplanations: [
       "",
       "IPSPs make firing less likely by hyperpolarizing the cell or shunting depolarizing current. Depolarizing EPSPs bring the membrane closer to threshold—that is the opposite direction. Increased electrogenic pumping moves net positive charge out, hyperpolarizing slightly.",
-      "“No change because pumps do not affect voltage (ignores which ion dominates resting p…” does not match the mechanism (topic: Resting Potential). Increased electrogenic pumping moves net positive charge out, hyperpolarizing slightly. The correct choice—“Slight hyperpolarization due to electrogenic 3Na⁺/2K⁺ exchange”—fits that description.",
-      "“Shift to E_Cl regardless of Cl⁻ conductance (ignores which ion dominates resting per…” does not match the mechanism (topic: Resting Potential). Increased electrogenic pumping moves net positive charge out, hyperpolarizing slightly. The correct choice—“Slight hyperpolarization due to electrogenic 3Na⁺/2K⁺ exchange”—fits that description.",
+      "",
+      "",
     ]
   },
   {
@@ -2293,6 +2384,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Remains unchanged because λ = √(R_m/R_i)",
       "Doubles",
       "Halves",
@@ -2302,9 +2394,9 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     explanation: "Proportional changes in R_m and R_i cancel in the ratio under the square root.",
     wrongExplanations: [
       "",
-      "“Doubles (misstates how R_m, C_m, or geometry set τ or λ)” does not match the mechanism (topic: Passive Membrane Properties). Proportional changes in R_m and R_i cancel in the ratio under the square root. The correct choice—“Remains unchanged because λ = √(R_m/R_i)”—fits that description.",
-      "“Halves (misstates how R_m, C_m, or geometry set τ or λ)” does not match the mechanism (topic: Passive Membrane Properties). Proportional changes in R_m and R_i cancel in the ratio under the square root. The correct choice—“Remains unchanged because λ = √(R_m/R_i)”—fits that description.",
-      "“Becomes zero (misstates how R_m, C_m, or geometry set τ or λ)” does not match the mechanism (topic: Passive Membrane Properties). Proportional changes in R_m and R_i cancel in the ratio under the square root. The correct choice—“Remains unchanged because λ = √(R_m/R_i)”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -2318,6 +2410,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Slowing voltage-gated channel kinetics and ion diffusion",
       "Increasing myelin thickness",
       "Raising E_Na above, 100 mV",
@@ -2327,9 +2420,9 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     explanation: "Temperature affects channel gating rates and ion mobility, slowing propagation.",
     wrongExplanations: [
       "",
-      "“Increasing myelin thickness (misapplies how active propagation uses local circuit cu…” does not match the mechanism (topic: Action Potential Propagation). Temperature affects channel gating rates and ion mobility, slowing propagation. The correct choice—“Slowing voltage-gated channel kinetics and ion diffusion”—fits that description.",
-      "“Raising E_Na above +100 mV (misapplies how active propagation uses local circuit cur…” does not match the mechanism (topic: Action Potential Propagation). Temperature affects channel gating rates and ion mobility, slowing propagation. The correct choice—“Slowing voltage-gated channel kinetics and ion diffusion”—fits that description.",
-      "“Eliminating passive spread between nodes (misapplies how active propagation uses loc…” does not match the mechanism (topic: Action Potential Propagation). Temperature affects channel gating rates and ion mobility, slowing propagation. The correct choice—“Slowing voltage-gated channel kinetics and ion diffusion”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -2343,6 +2436,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Zero (no net electrochemical driving force)",
       "Maximal inward",
       "Maximal outward",
@@ -2352,7 +2446,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     explanation: "When V_m equals E_ion, (V_m − E_ion) = 0 and net ion flux at equilibrium is zero.",
     wrongExplanations: [
       "",
-      "“Maximal inward (uses the wrong sign or driving force for ionic current)” does not match the mechanism (topic: Electrical Signaling). When V_m equals E_ion, (V_m − E_ion) = 0 and net ion flux at equilibrium is zero. The correct choice—“Zero (no net electrochemical driving force)”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: When V_m equals E_ion, (V_m − E_ion) = 0 and net ion flux at equilibrium is zero.",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: When V_m equals E_ion, (V_m − E_ion) = 0 and net ion flux at equilibrium is zero.",
     ]
@@ -2368,6 +2462,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Opening K⁺ channels via G-proteins and reducing Ca²⁺ channel activity",
       "Producing fast Cl⁻ influx through the same pore as GABA<sub>A</sub> receptors",
       "Opening voltage-gated Na⁺ channels to trigger regenerative spikes",
@@ -2378,7 +2473,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     wrongExplanations: [
       "",
       "GABA_A receptors are ionotropic: GABA binding opens a Cl⁻ channel and produces a fast IPSP (often hyperpolarizing or shunting). GABA_B is metabotropic (Gᵢ/o-coupled), typically opening K⁺ channels and reducing presynaptic Ca²⁺—slower, indirect inhibition. GABAB is metabotropic (Gi/o): it opens G-protein-gated K⁺ channels and can reduce Ca²⁺ entry.",
-      "“Opening voltage-gated Na⁺ channels to trigger regenerative spikes” does not match the mechanism (topic: Receptor Types). GABAB is metabotropic (Gi/o): it opens G-protein-gated K⁺ channels and can reduce Ca²⁺ entry. The correct choice—“Opening K⁺ channels via G-proteins and reducing Ca²⁺ channel activity”—fits that description.",
+      "",
       "GABA_A receptors are ionotropic: GABA binding opens a Cl⁻ channel and produces a fast IPSP (often hyperpolarizing or shunting). GABA_B is metabotropic (Gᵢ/o-coupled), typically opening K⁺ channels and reducing presynaptic Ca²⁺—slower, indirect inhibition. GABAB is metabotropic (Gi/o): it opens G-protein-gated K⁺ channels and can reduce Ca²⁺ entry.",
     ]
   },
@@ -2393,6 +2488,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Error correction and timing of movements via mossy and climbing fiber input",
       "Transducing odorants in glomeruli (maps the lesion to the wrong motor pathway or reflex)",
       "Encoding color opponency in blobs (maps the lesion to the wrong motor pathway or reflex)",
@@ -2403,8 +2499,8 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     wrongExplanations: [
       "",
       "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Cerebellar circuits compare intended and actual movement for fine coordination.",
-      "“Encoding color opponency in blobs (maps the lesion to the wrong motor pathway or ref…” does not match the mechanism (topic: Motor Systems). Cerebellar circuits compare intended and actual movement for fine coordination. The correct choice—“Error correction and timing of movements via mossy and climbing fiber input”—fits that description.",
-      "“Generating the cochlear traveling wave (maps the lesion to the wrong motor pathway o…” does not match the mechanism (topic: Motor Systems). Cerebellar circuits compare intended and actual movement for fine coordination. The correct choice—“Error correction and timing of movements via mossy and climbing fiber input”—fits that description.",
+      "",
+      "",
     ]
   },
   {
@@ -2418,6 +2514,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Higher threshold and slower rising phase",
       "Lower threshold and faster rising phase",
       "No change in excitability",
@@ -2427,9 +2524,9 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     explanation: "Fewer Na⁺ channels require stronger depolarization and slow regenerative upswing.",
     wrongExplanations: [
       "",
-      "“Lower threshold and faster rising phase” does not match the mechanism (topic: Action Potentials). Fewer Na⁺ channels require stronger depolarization and slow regenerative upswing. The correct choice—“Higher threshold and slower rising phase”—fits that description.",
-      "“No change in excitability” does not match the mechanism (topic: Action Potentials). Fewer Na⁺ channels require stronger depolarization and slow regenerative upswing. The correct choice—“Higher threshold and slower rising phase”—fits that description.",
-      "“Permanent hyperpolarization to E_K without stimulation” does not match the mechanism (topic: Action Potentials). Fewer Na⁺ channels require stronger depolarization and slow regenerative upswing. The correct choice—“Higher threshold and slower rising phase”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -2443,6 +2540,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Move closer to E_K",
       "Move closer to E_Na",
       "Remain unchanged because the pump sets voltage directly",
@@ -2452,9 +2550,9 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     explanation: "Higher K⁺ conductance increases the weight of E_K in the Goldman equation.",
     wrongExplanations: [
       "",
-      "“Move closer to E_Na” does not match the mechanism (topic: Resting Potential). Higher K⁺ conductance increases the weight of E_K in the Goldman equation. The correct choice—“Move closer to E_K”—fits that description.",
-      "“Remain unchanged because the pump sets voltage directly” does not match the mechanism (topic: Resting Potential). Higher K⁺ conductance increases the weight of E_K in the Goldman equation. The correct choice—“Move closer to E_K”—fits that description.",
-      "“Become exactly 0 mV” does not match the mechanism (topic: Resting Potential). Higher K⁺ conductance increases the weight of E_K in the Goldman equation. The correct choice—“Move closer to E_K”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -2464,6 +2562,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -2493,6 +2592,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "More positive",
       "More negative (closer to 0 mV)",
       "Exactly 0 mV",
@@ -2502,9 +2602,9 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     explanation: "Lower internal Na⁺ increases the driving force for inward Na⁺, making E_Na more positive.",
     wrongExplanations: [
       "",
-      "“More negative (closer to 0 mV)” does not match the mechanism (topic: Nernst Equation). Lower internal Na⁺ increases the driving force for inward Na⁺, making E_Na more positive. The correct choice—“More positive”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Lower internal Na⁺ increases the driving force for inward Na⁺, making E_Na more positive.",
-      "“Equal to E_K” does not match the mechanism (topic: Nernst Equation). Lower internal Na⁺ increases the driving force for inward Na⁺, making E_Na more positive. The correct choice—“More positive”—fits that description.",
+      "",
     ]
   },
   {
@@ -2518,6 +2618,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Be slowed and the action potential may broaden",
       "Complete instantly with no change",
       "Prevent all Na⁺ channel opening permanently",
@@ -2527,9 +2628,9 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     explanation: "K⁺ efflux normally repolarizes the membrane; blockade prolongs depolarization.",
     wrongExplanations: [
       "",
-      "“Complete instantly with no change” does not match the mechanism (topic: Action Potentials). K⁺ efflux normally repolarizes the membrane; blockade prolongs depolarization. The correct choice—“Be slowed and the action potential may broaden”—fits that description.",
-      "“Prevent all Na⁺ channel opening permanently” does not match the mechanism (topic: Action Potentials). K⁺ efflux normally repolarizes the membrane; blockade prolongs depolarization. The correct choice—“Be slowed and the action potential may broaden”—fits that description.",
-      "“Eliminate the need for Na⁺ inactivation” does not match the mechanism (topic: Action Potentials). K⁺ efflux normally repolarizes the membrane; blockade prolongs depolarization. The correct choice—“Be slowed and the action potential may broaden”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -2539,6 +2640,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -2553,8 +2655,8 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Longer internodes reduce the number of regeneration steps, increasing velocity until passive spread fails.",
-      "“Is unaffected by internode distance (misapplies how active propagation uses local ci…” does not match the mechanism (topic: Action Potential Propagation). Longer internodes reduce the number of regeneration steps, increasing velocity until passive spread fails. The correct choice—“Increases up to a point because fewer regenerative steps are needed”—fits that description.",
-      "“Requires elimination of all K⁺ channels (misapplies how active propagation uses loca…” does not match the mechanism (topic: Action Potential Propagation). Longer internodes reduce the number of regeneration steps, increasing velocity until passive spread fails. The correct choice—“Increases up to a point because fewer regenerative steps are needed”—fits that description.",
+      "",
+      "",
     ]
   },
   {
@@ -2564,6 +2666,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -2593,6 +2696,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Slow pain/temp (unmyelinated)",
       "Fine discriminative touch with highest conduction velocity",
       "Photons to retinal ganglion cells",
@@ -2602,9 +2706,9 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     explanation: "Thin unmyelinated C fibers mediate slow nociceptive and thermal signals.",
     wrongExplanations: [
       "",
-      "“Fine discriminative touch with highest conduction velocity” does not match the mechanism (topic: Somatosensation). Thin unmyelinated C fibers mediate slow nociceptive and thermal signals. The correct choice—“Slow pain/temp (unmyelinated)”—fits that description.",
-      "“Photons to retinal ganglion cells” does not match the mechanism (topic: Somatosensation). Thin unmyelinated C fibers mediate slow nociceptive and thermal signals. The correct choice—“Slow pain/temp (unmyelinated)”—fits that description.",
-      "“Dopamine to the striatum” does not match the mechanism (topic: Somatosensation). Thin unmyelinated C fibers mediate slow nociceptive and thermal signals. The correct choice—“Slow pain/temp (unmyelinated)”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -2618,6 +2722,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Contralateral weakness or paralysis of voluntary movement",
       "Loss of olfactory receptor gene expression",
       "Elimination of all photoreceptor responses",
@@ -2627,9 +2732,9 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     explanation: "Most corticospinal fibers decussate, causing contralateral motor deficits.",
     wrongExplanations: [
       "",
-      "“Loss of olfactory receptor gene expression” does not match the mechanism (topic: Motor Systems). Most corticospinal fibers decussate, causing contralateral motor deficits. The correct choice—“Contralateral weakness or paralysis of voluntary movement”—fits that description.",
-      "“Elimination of all photoreceptor responses” does not match the mechanism (topic: Motor Systems). Most corticospinal fibers decussate, causing contralateral motor deficits. The correct choice—“Contralateral weakness or paralysis of voluntary movement”—fits that description.",
-      "“Permanent hyperpolarization of all photoreceptors in light” does not match the mechanism (topic: Motor Systems). Most corticospinal fibers decussate, causing contralateral motor deficits. The correct choice—“Contralateral weakness or paralysis of voluntary movement”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -2643,6 +2748,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Applies a peripheral sensory transduction step to unrelated central circuitry",
       "61 mV",
       "0 mV",
@@ -2652,9 +2758,9 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     explanation: "For divalent ions the Nernst slope is halved; a fourfold outside change is ~ (61/2)×log10(4) ≈ 18.5 mV at 37°C.",
     wrongExplanations: [
       "",
-      "“+61 mV (contradicts the Nernst dependence on inside/outside concentrations)” does not match the mechanism (topic: Nernst Equation). For divalent ions the Nernst slope is halved; a fourfold outside change is ~ (61/2)×log10(4) ≈ 18.5 mV at 37°C. The correct choice—“+18.5 mV at 37°C (more positive)”—fits that description.",
-      "“0 mV (contradicts the Nernst dependence on inside/outside concentrations)” does not match the mechanism (topic: Nernst Equation). For divalent ions the Nernst slope is halved; a fourfold outside change is ~ (61/2)×log10(4) ≈ 18.5 mV at 37°C. The correct choice—“+18.5 mV at 37°C (more positive)”—fits that description.",
-      "“−61 mV (contradicts the Nernst dependence on inside/outside concentrations)” does not match the mechanism (topic: Nernst Equation). For divalent ions the Nernst slope is halved; a fourfold outside change is ~ (61/2)×log10(4) ≈ 18.5 mV at 37°C. The correct choice—“+18.5 mV at 37°C (more positive)”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -2668,6 +2774,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Internodal distance is long and passive decay is large",
       "Internodal distance is very short with strong passive spread",
       "The axon is unmyelinated",
@@ -2677,9 +2784,9 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     explanation: "Insufficient nodal regeneration combined with excessive internodal decay blocks propagation.",
     wrongExplanations: [
       "",
-      "“Internodal distance is very short with strong passive spread” does not match the mechanism (topic: Action Potential Propagation). Insufficient nodal regeneration combined with excessive internodal decay blocks propagation. The correct choice—“Internodal distance is long and passive decay is large”—fits that description.",
-      "“The axon is unmyelinated” does not match the mechanism (topic: Action Potential Propagation). Insufficient nodal regeneration combined with excessive internodal decay blocks propagation. The correct choice—“Internodal distance is long and passive decay is large”—fits that description.",
-      "“Temperature is raised to accelerate kinetics” does not match the mechanism (topic: Action Potential Propagation). Insufficient nodal regeneration combined with excessive internodal decay blocks propagation. The correct choice—“Internodal distance is long and passive decay is large”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -2693,6 +2800,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Decreases toward zero (less trial-to-trial variability)",
       "Increases without bound",
       "Equals p independent of quantal size",
@@ -2702,9 +2810,9 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     explanation: "When release is nearly deterministic, variability from binomial release statistics diminishes.",
     wrongExplanations: [
       "",
-      "“Increases without bound (mixes up presynaptic release with postsynaptic receptor log…” does not match the mechanism (topic: Synaptic Transmission). When release is nearly deterministic, variability from binomial release statistics diminishes. The correct choice—“Decreases toward zero (less trial-to-trial variability)”—fits that description.",
-      "“Equals p independent of quantal size (mixes up presynaptic release with postsynaptic…” does not match the mechanism (topic: Synaptic Transmission). When release is nearly deterministic, variability from binomial release statistics diminishes. The correct choice—“Decreases toward zero (less trial-to-trial variability)”—fits that description.",
-      "“Is determined solely by mEPSP frequency in darkness (mixes up presynaptic release wi…” does not match the mechanism (topic: Synaptic Transmission). When release is nearly deterministic, variability from binomial release statistics diminishes. The correct choice—“Decreases toward zero (less trial-to-trial variability)”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -2714,6 +2822,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -2729,7 +2838,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
       "",
       "IPSPs make firing less likely by hyperpolarizing the cell or shunting depolarizing current. Depolarizing EPSPs bring the membrane closer to threshold—that is the opposite direction. Electrical synapses pass transmembrane voltage changes bidirectionally (non-rectifying case).",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Electrical synapses pass transmembrane voltage changes bidirectionally (non-rectifying case).",
-      "“Trigger photopigment regeneration” does not match the mechanism (topic: Electrical Synapses). Electrical synapses pass transmembrane voltage changes bidirectionally (non-rectifying case). The correct choice—“Hyperpolarize the coupled partner (if junction is open)”—fits that description.",
+      "",
     ]
   },
   {
@@ -2743,6 +2852,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Outward (efflux)",
       "Inward (influx)",
       "Zero",
@@ -2752,8 +2862,8 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     explanation: "V_m above E_K drives K⁺ outward through open channels.",
     wrongExplanations: [
       "",
-      "“Inward (influx)” does not match the mechanism (topic: Electrical Signaling). V_m above E_K drives K⁺ outward through open channels. The correct choice—“Outward (efflux)”—fits that description.",
-      "“Zero” does not match the mechanism (topic: Electrical Signaling). V_m above E_K drives K⁺ outward through open channels. The correct choice—“Outward (efflux)”—fits that description.",
+      "",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: V_m above E_K drives K⁺ outward through open channels.",
     ]
   },
@@ -2768,6 +2878,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "High-frequency localization via intensity cues",
       "Low-frequency phase locking without level",
       "Color processing in V1",
@@ -2777,9 +2888,9 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     explanation: "LSO compares sound level at the two ears, effective at higher frequencies.",
     wrongExplanations: [
       "",
-      "“Low-frequency phase locking without level” does not match the mechanism (topic: Auditory System). LSO compares sound level at the two ears, effective at higher frequencies. The correct choice—“High-frequency localization via intensity cues”—fits that description.",
+      "",
       "Cochlear place coding and hair-cell transduction are auditory. The stem concerns hearing mechanics or pathways, not retinotopy or cortical vision maps. LSO compares sound level at the two ears, effective at higher frequencies.",
-      "“Olfactory discrimination in piriform cortex” does not match the mechanism (topic: Auditory System). LSO compares sound level at the two ears, effective at higher frequencies. The correct choice—“High-frequency localization via intensity cues”—fits that description.",
+      "",
     ]
   },
   {
@@ -2789,6 +2900,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -2804,7 +2916,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
       "",
       "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. UMNs project to spinal/brainstem motor neurons.",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: UMNs project to spinal/brainstem motor neurons.",
-      "“Cochlear inner hair cells (maps the lesion to the wrong motor pathway or reflex)” does not match the mechanism (topic: Motor Systems). UMNs project to spinal/brainstem motor neurons. The correct choice—“Motor cortex and brainstem descending tracts”—fits that description.",
+      "",
     ]
   },
   {
@@ -2818,6 +2930,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Forming new declarative/episodic memories",
       "Most procedural skills such as riding a bike",
       "Most sensation including touch",
@@ -2827,9 +2940,9 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     explanation: "Medial temporal lobe/hippocampus is critical for new declarative memory.",
     wrongExplanations: [
       "",
-      "“All procedural skills such as riding a bike” does not match the mechanism (topic: Learning & Memory). Medial temporal lobe/hippocampus is critical for new declarative memory. The correct choice—“Forming new declarative/episodic memories”—fits that description.",
-      "“All sensation including touch” does not match the mechanism (topic: Learning & Memory). Medial temporal lobe/hippocampus is critical for new declarative memory. The correct choice—“Forming new declarative/episodic memories”—fits that description.",
-      "“Phototransduction in rods” does not match the mechanism (topic: Learning & Memory). Medial temporal lobe/hippocampus is critical for new declarative memory. The correct choice—“Forming new declarative/episodic memories”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -2843,6 +2956,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Patterns of action potentials sent to the brain",
       "Graded muscle contractions",
       "Continuous DC without spikes",
@@ -2852,9 +2966,9 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     explanation: "Ganglion cells are the spiking output of the retina.",
     wrongExplanations: [
       "",
-      "“Graded muscle contractions” does not match the mechanism (topic: Visual System). Ganglion cells are the spiking output of the retina. The correct choice—“Patterns of action potentials sent to the brain”—fits that description.",
-      "“Continuous DC without spikes” does not match the mechanism (topic: Visual System). Ganglion cells are the spiking output of the retina. The correct choice—“Patterns of action potentials sent to the brain”—fits that description.",
-      "“Direct hormone release into CSF” does not match the mechanism (topic: Visual System). Ganglion cells are the spiking output of the retina. The correct choice—“Patterns of action potentials sent to the brain”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -2868,6 +2982,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Cortical blindness in corresponding visual field regions",
       "Complete loss of all sensation including touch",
       "Deafness for all frequencies",
@@ -2877,9 +2992,9 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     explanation: "V1 lesions produce scotomas or field loss depending on extent.",
     wrongExplanations: [
       "",
-      "“Complete loss of all sensation including touch” does not match the mechanism (topic: Clinical Correlates). V1 lesions produce scotomas or field loss depending on extent. The correct choice—“Cortical blindness in corresponding visual field regions”—fits that description.",
-      "“Deafness for all frequencies” does not match the mechanism (topic: Clinical Correlates). V1 lesions produce scotomas or field loss depending on extent. The correct choice—“Cortical blindness in corresponding visual field regions”—fits that description.",
-      "“Immediate loss of all procedural memory” does not match the mechanism (topic: Clinical Correlates). V1 lesions produce scotomas or field loss depending on extent. The correct choice—“Cortical blindness in corresponding visual field regions”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -2893,6 +3008,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Patterns of action potentials (rate and timing)",
       "Graded muscle contractions",
       "Direct myelin thickness changes",
@@ -2902,9 +3018,9 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     explanation: "Retinal output is spiking activity in optic nerve fibers.",
     wrongExplanations: [
       "",
-      "“Graded muscle contractions” does not match the mechanism (topic: Visual System). Retinal output is spiking activity in optic nerve fibers. The correct choice—“Patterns of action potentials (rate and timing)”—fits that description.",
-      "“Direct myelin thickness changes” does not match the mechanism (topic: Visual System). Retinal output is spiking activity in optic nerve fibers. The correct choice—“Patterns of action potentials (rate and timing)”—fits that description.",
-      "“Requires peptide release without spikes” does not match the mechanism (topic: Visual System). Retinal output is spiking activity in optic nerve fibers. The correct choice—“Patterns of action potentials (rate and timing)”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -2914,6 +3030,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -2929,7 +3046,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: White matter is axons; gray matter is cell bodies and neuropil.",
       "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. White matter is axons; gray matter is cell bodies and neuropil.",
-      "“Taste bud cells” does not match the mechanism (topic: Neuroanatomy). White matter is axons; gray matter is cell bodies and neuropil. The correct choice—“Myelinated axon tracts”—fits that description.",
+      "",
     ]
   },
   {
@@ -2943,6 +3060,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
 
 
 
+
       "Hippocampus and medial temporal lobe structures",
       "Cerebellar cortex for all memories",
       "Cochlear nucleus primarily",
@@ -2952,9 +3070,9 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     explanation: "Explicit facts/events depend on medial temporal lobe circuits.",
     wrongExplanations: [
       "",
-      "“Requires cerebellar cortex for all memories” does not match the mechanism (topic: Learning & Memory). Explicit facts/events depend on medial temporal lobe circuits. The correct choice—“Hippocampus and medial temporal lobe structures”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Explicit facts/events depend on medial temporal lobe circuits.",
-      "“Skin Meissner corpuscles” does not match the mechanism (topic: Learning & Memory). Explicit facts/events depend on medial temporal lobe circuits. The correct choice—“Hippocampus and medial temporal lobe structures”—fits that description.",
+      "",
     ]
   },
   {
@@ -2964,6 +3082,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 

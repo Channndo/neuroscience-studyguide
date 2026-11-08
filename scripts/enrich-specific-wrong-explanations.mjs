@@ -13,8 +13,8 @@ function specificReason(opt, correct, topic) {
   if (/^always exactly 0/i.test(o)) return "Equilibrium potentials depend on concentrations; they are not fixed at 0 mV for every ion.";
   if (/unaffected by concentration/i.test(o)) return "Changing inside/outside concentrations shifts Nernst equilibrium potentials.";
   if (/photoreceptor|cochlea|glomerul|NMJ exclusively/i.test(o)) return "This mechanism belongs to a different sensory or synaptic system than the stem describes.";
-  if (o.length < 25) return `This choice (${o}) does not match the keyed answer’s mechanism for ${topic || "this topic"}.`;
-  return `Unlike the keyed answer (${c}), this option misstates the mechanism or direction described in the stem.`;
+  if (o.length < 25) return `This choice does not match the mechanism for ${topic || "this topic"}.`;
+  return `This option misstates the mechanism or direction described in the stem.`;
 }
 
 function enrichQuestion(q) {

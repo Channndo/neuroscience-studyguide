@@ -50,9 +50,33 @@
     });
   }
 
+  const OPTION_GIVEAWAY_STRIPS = [
+    /\s*\(does not follow from the mechanism implied in the stem\)/gi,
+    /\s*\([^)]*does not follow from the mechanism[^)]*\)/gi,
+    /\s*\([^)]*inconsistent with the mechanism[^)]*\)/gi,
+    /\s*—\s*contradicts the Nernst dependence on inside\/outside concentrations\.?/gi,
+    /\s*\(contradicts the Nernst dependence on inside\/outside concentrations\)/gi,
+    /\s*\([^)]*contradicts the Nernst dependence[^)]*\)/gi,
+    /\s*\(ignores weighted permeabilities in the constant-field equation\)/gi,
+    /\s*\([^)]*ignores weighted permeabilities[^)]*\)/gi,
+    /\s*\(misstates how R_m, C_m, or geometry set τ or λ\)/gi,
+    /\s*\([^)]*misstates how R_m[^)]*\)/gi,
+    /\s*\(uses the wrong sign or driving force for ionic current\)/gi,
+    /\s*\([^)]*uses the wrong sign or driving force[^)]*\)/gi,
+    /\s*\([^)]*ignores which ion dominates[^)]*\)/gi,
+    /\s*\([^)]*misapplies how active propagation[^)]*\)/gi,
+    /\s*\([^)]*mixes up presynaptic release[^)]*\)/gi,
+    /\s*\([^)]*not the best match[^)]*\)/gi,
+    /\s+—\s*misstates how R_m, C_m, or geometry set τ or λ\.?/gi,
+  ];
+
   function polishOption(raw) {
     let t = String(raw ?? "").trim();
     if (!t) return t;
+    for (const re of OPTION_GIVEAWAY_STRIPS) t = t.replace(re, "");
+    if (/^Requires\s+(photoreceptor|photoreceptors|gABA|GABA)/i.test(t)) {
+      t = "Applies a sensory transduction pathway from a different modality";
+    }
     t = t.replace(/\s+as the primary route\b/gi, "");
     t = t.replace(/\s+as the primary pathway\b/gi, "");
     t = t.replace(/\s*\(same units as E_ion\)/gi, "");

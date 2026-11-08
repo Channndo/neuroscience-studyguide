@@ -12,6 +12,7 @@ const PART1_FRESH_POOL = [
 
 
 
+
       "Move V_m away from threshold",
       "Open voltage-gated Na⁺ channels",
       "Eliminate K⁺ leak conductance",
@@ -21,9 +22,9 @@ const PART1_FRESH_POOL = [
     explanation: "Hyperpolarizing current makes the cell more negative, increasing distance to spike threshold.",
     wrongExplanations: [
       "",
-      "“Open voltage-gated Na⁺ channels” does not match the mechanism (topic: Current Clamp). Hyperpolarizing current makes the cell more negative, increasing distance to spike threshold. The correct choice—“Move V_m away from threshold”—fits that description.",
-      "“Eliminate K⁺ leak conductance” does not match the mechanism (topic: Current Clamp). Hyperpolarizing current makes the cell more negative, increasing distance to spike threshold. The correct choice—“Move V_m away from threshold”—fits that description.",
-      "“Block the Na⁺/K⁺ pump permanently” does not match the mechanism (topic: Current Clamp). Hyperpolarizing current makes the cell more negative, increasing distance to spike threshold. The correct choice—“Move V_m away from threshold”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -37,6 +38,7 @@ const PART1_FRESH_POOL = [
 
 
 
+
       "Blocking voltage-gated Na⁺ channels",
       "Blocking voltage-gated K⁺ channels",
       "Inhibiting the Na⁺/K⁺ ATPase",
@@ -46,8 +48,8 @@ const PART1_FRESH_POOL = [
     explanation: "TTX selectively blocks voltage-gated Na⁺ channels, preventing spike initiation and propagation.",
     wrongExplanations: [
       "",
-      "“Blocking voltage-gated K⁺ channels” does not match the mechanism (topic: Pharmacology). TTX selectively blocks voltage-gated Na⁺ channels, preventing spike initiation and propagation. The correct choice—“Blocking voltage-gated Na⁺ channels”—fits that description.",
-      "“Inhibiting the Na⁺/K⁺ ATPase” does not match the mechanism (topic: Pharmacology). TTX selectively blocks voltage-gated Na⁺ channels, preventing spike initiation and propagation. The correct choice—“Blocking voltage-gated Na⁺ channels”—fits that description.",
+      "",
+      "",
       "Gap junctions pass current directly between coupled cells (electrical synapses); they do not implement the timed opening of voltage-gated Na⁺ and K⁺ conductances that shapes an action potential. TTX selectively blocks voltage-gated Na⁺ channels, preventing spike initiation and propagation.",
     ]
   },
@@ -62,6 +64,7 @@ const PART1_FRESH_POOL = [
 
 
 
+
       "~37 mV toward 0 mV (less negative)",
       "~37 mV more negative",
       "To exactly, 58 mV",
@@ -71,9 +74,9 @@ const PART1_FRESH_POOL = [
     explanation: "The Nernst relation includes a log term; a fourfold outside change is about 61 mV × log10(4) ≈ 37 mV toward 0.",
     wrongExplanations: [
       "",
-      "“~37 mV more negative” does not match the mechanism (topic: Nernst Equation). The Nernst relation includes a log term; a fourfold outside change is about 61 mV × log10(4) ≈ 37 mV toward 0. The correct choice—“~37 mV toward 0 mV (less negative)”—fits that description.",
-      "“To exactly +58 mV” does not match the mechanism (topic: Nernst Equation). The Nernst relation includes a log term; a fourfold outside change is about 61 mV × log10(4) ≈ 37 mV toward 0. The correct choice—“~37 mV toward 0 mV (less negative)”—fits that description.",
-      "“Not at all because K⁺ is impermeant” does not match the mechanism (topic: Nernst Equation). The Nernst relation includes a log term; a fourfold outside change is about 61 mV × log10(4) ≈ 37 mV toward 0. The correct choice—“~37 mV toward 0 mV (less negative)”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -87,6 +90,7 @@ const PART1_FRESH_POOL = [
 
 
 
+
       "Slows conduction by increasing internal axial resistance",
       "Speeds conduction by shortening λ",
       "Eliminates the need for Na⁺ channels",
@@ -96,9 +100,9 @@ const PART1_FRESH_POOL = [
     explanation: "Smaller diameter raises R_i, shortening λ and slowing active propagation.",
     wrongExplanations: [
       "",
-      "“Speeds conduction by shortening λ (misapplies how active propagation uses local circ…” does not match the mechanism (topic: Action Potential Propagation). Smaller diameter raises R_i, shortening λ and slowing active propagation. The correct choice—“Slows conduction by increasing internal axial resistance”—fits that description.",
-      "“Eliminates the need for Na⁺ channels (misapplies how active propagation uses local c…” does not match the mechanism (topic: Action Potential Propagation). Smaller diameter raises R_i, shortening λ and slowing active propagation. The correct choice—“Slows conduction by increasing internal axial resistance”—fits that description.",
-      "“Prevents passive spread entirely (misapplies how active propagation uses local circu…” does not match the mechanism (topic: Action Potential Propagation). Smaller diameter raises R_i, shortening λ and slowing active propagation. The correct choice—“Slows conduction by increasing internal axial resistance”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -112,6 +116,7 @@ const PART1_FRESH_POOL = [
 
 
 
+
       "Reach steady deflection more slowly but spread the same distance",
       "Spread farther along dendrites",
       "Often trigger full spikes",
@@ -121,9 +126,9 @@ const PART1_FRESH_POOL = [
     explanation: "τ = R_m C_m sets temporal filtering; λ sets spatial spread independently in idealized cable theory.",
     wrongExplanations: [
       "",
-      "“Spread farther along dendrites (misstates how R_m, C_m, or geometry set τ or λ)” does not match the mechanism (topic: Passive Membrane Properties). τ = R_m C_m sets temporal filtering; λ sets spatial spread independently in idealized cable theory. The correct choice—“Reach steady deflection more slowly but spread the same distance”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: τ = R_m C_m sets temporal filtering; λ sets spatial spread independently in idealized cable theory.",
-      "“No longer decay passively (misstates how R_m, C_m, or geometry set τ or λ)” does not match the mechanism (topic: Passive Membrane Properties). τ = R_m C_m sets temporal filtering; λ sets spatial spread independently in idealized cable theory. The correct choice—“Reach steady deflection more slowly but spread the same distance”—fits that description.",
+      "",
     ]
   },
   {
@@ -137,6 +142,7 @@ const PART1_FRESH_POOL = [
 
 
 
+
       "Voltage-gated K⁺ channels",
       "Voltage-gated Na⁺ channels",
       "Nicotinic receptors",
@@ -146,9 +152,9 @@ const PART1_FRESH_POOL = [
     explanation: "TEA blocks many voltage-gated K⁺ channels, prolonging repolarization when applied.",
     wrongExplanations: [
       "",
-      "“Voltage-gated Na⁺ channels” does not match the mechanism (topic: Pharmacology). TEA blocks many voltage-gated K⁺ channels, prolonging repolarization when applied. The correct choice—“Voltage-gated K⁺ channels”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: TEA blocks many voltage-gated K⁺ channels, prolonging repolarization when applied.",
-      "“Glutamate transporters” does not match the mechanism (topic: Pharmacology). TEA blocks many voltage-gated K⁺ channels, prolonging repolarization when applied. The correct choice—“Voltage-gated K⁺ channels”—fits that description.",
+      "",
     ]
   },
   {
@@ -158,6 +164,7 @@ const PART1_FRESH_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -172,8 +179,8 @@ const PART1_FRESH_POOL = [
     wrongExplanations: [
       "",
       "EPSPs are depolarizing (or less hyperpolarized) shifts that move V_m toward spike threshold. Hyperpolarization or clamping toward E_K describes inhibition (IPSPs), not excitation. Pump failure gradually collapses ion gradients, eventually depolarizing the cell.",
-      "“Block all chemical synapses (ignores which ion dominates resting permeability)” does not match the mechanism (topic: Resting Potential). Pump failure gradually collapses ion gradients, eventually depolarizing the cell. The correct choice—“Depolarize the cell as Na⁺ accumulates and K⁺ is lost”—fits that description.",
-      "“Prevent action potentials by opening Cl⁻ channels (ignores which ion dominates resti…” does not match the mechanism (topic: Resting Potential). Pump failure gradually collapses ion gradients, eventually depolarizing the cell. The correct choice—“Depolarize the cell as Na⁺ accumulates and K⁺ is lost”—fits that description.",
+      "",
+      "",
     ]
   },
   {
@@ -183,6 +190,7 @@ const PART1_FRESH_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -197,8 +205,8 @@ const PART1_FRESH_POOL = [
     wrongExplanations: [
       "",
       "IPSPs make firing less likely by hyperpolarizing the cell or shunting depolarizing current. Depolarizing EPSPs bring the membrane closer to threshold—that is the opposite direction. Opening Cl⁻ conductance pulls V_m toward E_Cl, often hyperpolarizing when E_Cl is negative to rest.",
-      "“Have no effect because Cl⁻ is not charged (ignores weighted permeabilities in the co…” does not match the mechanism (topic: Goldman Equation). Opening Cl⁻ conductance pulls V_m toward E_Cl, often hyperpolarizing when E_Cl is negative to rest. The correct choice—“Tend to hyperpolarize or stabilize V_m toward E_Cl”—fits that description.",
-      "“Reverse the Na⁺/K⁺ pump (ignores weighted permeabilities in the constant-field equat…” does not match the mechanism (topic: Goldman Equation). Opening Cl⁻ conductance pulls V_m toward E_Cl, often hyperpolarizing when E_Cl is negative to rest. The correct choice—“Tend to hyperpolarize or stabilize V_m toward E_Cl”—fits that description.",
+      "",
+      "",
     ]
   },
   {
@@ -212,6 +220,7 @@ const PART1_FRESH_POOL = [
 
 
 
+
       "Stronger to reach threshold because many Na⁺ channels remain inactivated",
       "Weaker because K⁺ channels are closed",
       "Identical in strength",
@@ -221,7 +230,7 @@ const PART1_FRESH_POOL = [
     explanation: "Partial Na⁺ channel inactivation raises the effective threshold for a second spike.",
     wrongExplanations: [
       "",
-      "“Weaker because K⁺ channels are closed” does not match the mechanism (topic: Action Potentials). Partial Na⁺ channel inactivation raises the effective threshold for a second spike. The correct choice—“Stronger to reach threshold because many Na⁺ channels remain inactivated”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Partial Na⁺ channel inactivation raises the effective threshold for a second spike.",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Partial Na⁺ channel inactivation raises the effective threshold for a second spike.",
     ]
@@ -237,6 +246,7 @@ const PART1_FRESH_POOL = [
 
 
 
+
       "Passive cable properties (leak and axial resistance)",
       "Active regeneration at many micron",
       "Myelin along dendrites",
@@ -246,9 +256,9 @@ const PART1_FRESH_POOL = [
     explanation: "Dendrites lack dense voltage-gated Na⁺ for regeneration; passive decay dominates.",
     wrongExplanations: [
       "",
-      "“Active regeneration at every micron (uses the wrong sign or driving force for ionic …” does not match the mechanism (topic: Electrical Signaling). Dendrites lack dense voltage-gated Na⁺ for regeneration; passive decay dominates. The correct choice—“Passive cable properties (leak and axial resistance)”—fits that description.",
-      "“Myelin along dendrites (uses the wrong sign or driving force for ionic current)” does not match the mechanism (topic: Electrical Signaling). Dendrites lack dense voltage-gated Na⁺ for regeneration; passive decay dominates. The correct choice—“Passive cable properties (leak and axial resistance)”—fits that description.",
-      "“Exclusive Na⁺ pump activity (uses the wrong sign or driving force for ionic current)” does not match the mechanism (topic: Electrical Signaling). Dendrites lack dense voltage-gated Na⁺ for regeneration; passive decay dominates. The correct choice—“Passive cable properties (leak and axial resistance)”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -258,6 +268,7 @@ const PART1_FRESH_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -272,8 +283,8 @@ const PART1_FRESH_POOL = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Voltage-clamp feedback injects whatever current is needed to maintain the set V_m.",
-      "“Clamp extracellular K⁺ concentration” does not match the mechanism (topic: Patch Clamp). Voltage-clamp feedback injects whatever current is needed to maintain the set V_m. The correct choice—“Hold membrane voltage at a commanded value”—fits that description.",
-      "“Block all synaptic input pharmacologically” does not match the mechanism (topic: Patch Clamp). Voltage-clamp feedback injects whatever current is needed to maintain the set V_m. The correct choice—“Hold membrane voltage at a commanded value”—fits that description.",
+      "",
+      "",
     ]
   },
   {
@@ -287,6 +298,7 @@ const PART1_FRESH_POOL = [
 
 
 
+
       "Voltage-gated Na⁺ channels in axons",
       "Metabotropic GABA<sub>B</sub> receptors",
       "Photopigment isomerization",
@@ -296,9 +308,9 @@ const PART1_FRESH_POOL = [
     explanation: "Local anesthetics use-dependent block of Na⁺ channels prevents pain fiber firing.",
     wrongExplanations: [
       "",
-      "“Metabotropic GABAB receptors (misapplies how active propagation uses local circuit c…” does not match the mechanism (topic: Action Potential Propagation). Local anesthetics use-dependent block of Na⁺ channels prevents pain fiber firing. The correct choice—“Voltage-gated Na⁺ channels in axons”—fits that description.",
-      "“Photopigment isomerization (misapplies how active propagation uses local circuit cur…” does not match the mechanism (topic: Action Potential Propagation). Local anesthetics use-dependent block of Na⁺ channels prevents pain fiber firing. The correct choice—“Voltage-gated Na⁺ channels in axons”—fits that description.",
-      "“Basilar membrane motion (misapplies how active propagation uses local circuit curren…” does not match the mechanism (topic: Action Potential Propagation). Local anesthetics use-dependent block of Na⁺ channels prevents pain fiber firing. The correct choice—“Voltage-gated Na⁺ channels in axons”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -308,6 +320,7 @@ const PART1_FRESH_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -337,6 +350,7 @@ const PART1_FRESH_POOL = [
 
 
 
+
       "The minimum current amplitude needed to reach threshold",
       "The maximum firing rate in Hz",
       "The equilibrium potential for Ca²⁺",
@@ -346,9 +360,9 @@ const PART1_FRESH_POOL = [
     explanation: "Rheobase quantifies excitability: smallest sustained stimulus that elicits a response.",
     wrongExplanations: [
       "",
-      "“The maximum firing rate in Hz (uses the wrong sign or driving force for ionic curren…” does not match the mechanism (topic: Electrical Signaling). Rheobase quantifies excitability: smallest sustained stimulus that elicits a response. The correct choice—“The minimum current amplitude needed to reach threshold”—fits that description.",
-      "“The equilibrium potential for Ca²⁺ (uses the wrong sign or driving force for ionic c…” does not match the mechanism (topic: Electrical Signaling). Rheobase quantifies excitability: smallest sustained stimulus that elicits a response. The correct choice—“The minimum current amplitude needed to reach threshold”—fits that description.",
-      "“The synaptic delay at one synapse (uses the wrong sign or driving force for ionic cu…” does not match the mechanism (topic: Electrical Signaling). Rheobase quantifies excitability: smallest sustained stimulus that elicits a response. The correct choice—“The minimum current amplitude needed to reach threshold”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -362,6 +376,7 @@ const PART1_FRESH_POOL = [
 
 
 
+
       "Make V_m less negative (depolarized relative to E_K)",
       "Make V_m equal E_Na instantly",
       "Hyperpolarize below E_K",
@@ -371,9 +386,9 @@ const PART1_FRESH_POOL = [
     explanation: "Na⁺ leak pulls resting potential toward E_Na, depolarizing from pure K⁺ rest.",
     wrongExplanations: [
       "",
-      "“Make V_m equal E_Na instantly (ignores which ion dominates resting permeability)” does not match the mechanism (topic: Resting Potential). Na⁺ leak pulls resting potential toward E_Na, depolarizing from pure K⁺ rest. The correct choice—“Make V_m less negative (depolarized relative to E_K)”—fits that description.",
+      "",
       "EPSPs are depolarizing (or less hyperpolarized) shifts that move V_m toward spike threshold. Hyperpolarization or clamping toward E_K describes inhibition (IPSPs), not excitation. Na⁺ leak pulls resting potential toward E_Na, depolarizing from pure K⁺ rest.",
-      "“Stop all ion movement (ignores which ion dominates resting permeability)” does not match the mechanism (topic: Resting Potential). Na⁺ leak pulls resting potential toward E_Na, depolarizing from pure K⁺ rest. The correct choice—“Make V_m less negative (depolarized relative to E_K)”—fits that description.",
+      "",
     ]
   },
   {
@@ -387,6 +402,7 @@ const PART1_FRESH_POOL = [
 
 
 
+
       "Ca²⁺-activated K⁺ channels",
       "Opening of voltage-gated Na⁺ channels",
       "Closing of all leak channels",
@@ -396,8 +412,8 @@ const PART1_FRESH_POOL = [
     explanation: "Ca²⁺ entry during the spike can activate K_Ca channels, hyperpolarizing the membrane.",
     wrongExplanations: [
       "",
-      "“Opening of voltage-gated Na⁺ channels” does not match the mechanism (topic: Action Potentials). Ca²⁺ entry during the spike can activate K_Ca channels, hyperpolarizing the membrane. The correct choice—“Ca²⁺-activated K⁺ channels”—fits that description.",
-      "“Closing of all leak channels” does not match the mechanism (topic: Action Potentials). Ca²⁺ entry during the spike can activate K_Ca channels, hyperpolarizing the membrane. The correct choice—“Ca²⁺-activated K⁺ channels”—fits that description.",
+      "",
+      "",
       "This mechanism belongs to a different sensory or synaptic system than the stem describes.",
     ]
   },
@@ -412,6 +428,7 @@ const PART1_FRESH_POOL = [
 
 
 
+
       "Sum many small inputs over time before firing",
       "Fire at maximal rate to every input",
       "Conduct saltatory spikes in PNS",
@@ -421,9 +438,9 @@ const PART1_FRESH_POOL = [
     explanation: "Long τ and high R_in favor temporal summation of subthreshold inputs.",
     wrongExplanations: [
       "",
-      "“Fire at maximal rate to every input (uses the wrong sign or driving force for ionic …” does not match the mechanism (topic: Electrical Signaling). Long τ and high R_in favor temporal summation of subthreshold inputs. The correct choice—“Sum many small inputs over time before firing”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Long τ and high R_in favor temporal summation of subthreshold inputs.",
-      "“Transduce odorants (uses the wrong sign or driving force for ionic current)” does not match the mechanism (topic: Electrical Signaling). Long τ and high R_in favor temporal summation of subthreshold inputs. The correct choice—“Sum many small inputs over time before firing”—fits that description.",
+      "",
     ]
   },
   {
@@ -437,6 +454,7 @@ const PART1_FRESH_POOL = [
 
 
 
+
       "The sodium reversal potential (E_Na) while Na⁺ conductance dominates",
       "The potassium reversal potential (E_K) as if K⁺ leak were unchanged",
       "The chloride reversal potential (E_Cl) primarily, ignoring cations",
@@ -446,9 +464,9 @@ const PART1_FRESH_POOL = [
     explanation: "Dominant Na⁺ permeability during the rising phase drives V_m toward E_Na.",
     wrongExplanations: [
       "",
-      "“The potassium reversal potential (E_K) as if K⁺ leak were unchanged” does not match the mechanism (topic: Goldman Equation). Dominant Na⁺ permeability during the rising phase drives V_m toward E_Na. The correct choice—“The sodium reversal potential (E_Na) while Na⁺ conductance dominates”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Dominant Na⁺ permeability during the rising phase drives V_m toward E_Na.",
-      "“0 mV regardless of whether concentration gradients are maintained” does not match the mechanism (topic: Goldman Equation). Dominant Na⁺ permeability during the rising phase drives V_m toward E_Na. The correct choice—“The sodium reversal potential (E_Na) while Na⁺ conductance dominates”—fits that description.",
+      "",
     ]
   },
   {
@@ -462,6 +480,7 @@ const PART1_FRESH_POOL = [
 
 
 
+
       "λ is unchanged (√(R_m/R_i) ratio preserved)",
       "λ doubles",
       "λ halves",
@@ -471,9 +490,9 @@ const PART1_FRESH_POOL = [
     explanation: "λ = √(R_m/R_i); scaling both by the same factor leaves λ the same.",
     wrongExplanations: [
       "",
-      "“λ doubles (misstates how R_m, C_m, or geometry set τ or λ)” does not match the mechanism (topic: Passive Membrane Properties). λ = √(R_m/R_i); scaling both by the same factor leaves λ the same. The correct choice—“λ is unchanged (√(R_m/R_i) ratio preserved)”—fits that description.",
-      "“λ halves (misstates how R_m, C_m, or geometry set τ or λ)” does not match the mechanism (topic: Passive Membrane Properties). λ = √(R_m/R_i); scaling both by the same factor leaves λ the same. The correct choice—“λ is unchanged (√(R_m/R_i) ratio preserved)”—fits that description.",
-      "“λ becomes zero (misstates how R_m, C_m, or geometry set τ or λ)” does not match the mechanism (topic: Passive Membrane Properties). λ = √(R_m/R_i); scaling both by the same factor leaves λ the same. The correct choice—“λ is unchanged (√(R_m/R_i) ratio preserved)”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -487,6 +506,7 @@ const PART1_FRESH_POOL = [
 
 
 
+
       "Channel kinetics and ion mobility slow",
       "Myelin is converted to cerebrospinal fluid",
       "Resting potential becomes, 40 mV",
@@ -496,9 +516,9 @@ const PART1_FRESH_POOL = [
     explanation: "Lower temperature slows gating and diffusion, delaying spike propagation.",
     wrongExplanations: [
       "",
-      "“Myelin is converted to cerebrospinal fluid” does not match the mechanism (topic: Action Potentials). Lower temperature slows gating and diffusion, delaying spike propagation. The correct choice—“Channel kinetics and ion mobility slow”—fits that description.",
-      "“Resting potential becomes +40 mV” does not match the mechanism (topic: Action Potentials). Lower temperature slows gating and diffusion, delaying spike propagation. The correct choice—“Channel kinetics and ion mobility slow”—fits that description.",
-      "“Na⁺/K⁺ pump reverses direction” does not match the mechanism (topic: Action Potentials). Lower temperature slows gating and diffusion, delaying spike propagation. The correct choice—“Channel kinetics and ion mobility slow”—fits that description.",
+      "",
+      "",
+      "",
     ]
   }
 ];
@@ -515,6 +535,7 @@ const PART2_FRESH_POOL = [
 
 
 
+
       "Triggers synaptic vesicle fusion with the active zone membrane",
       "Directly opens postsynaptic AMPA receptors",
       "Hyperpolarizes the axon terminal to rest",
@@ -524,9 +545,9 @@ const PART2_FRESH_POOL = [
     explanation: "Ca²⁺ sensors on the release machinery couple depolarization to exocytosis.",
     wrongExplanations: [
       "",
-      "“Directly opens postsynaptic AMPA receptors (mixes up presynaptic release with postsy…” does not match the mechanism (topic: Synaptic Transmission). Ca²⁺ sensors on the release machinery couple depolarization to exocytosis. The correct choice—“Triggers synaptic vesicle fusion with the active zone membrane”—fits that description.",
-      "“Hyperpolarizes the axon terminal to rest (mixes up presynaptic release with postsyna…” does not match the mechanism (topic: Synaptic Transmission). Ca²⁺ sensors on the release machinery couple depolarization to exocytosis. The correct choice—“Triggers synaptic vesicle fusion with the active zone membrane”—fits that description.",
-      "“Blocks SNARE proteins permanently (mixes up presynaptic release with postsynaptic re…” does not match the mechanism (topic: Synaptic Transmission). Ca²⁺ sensors on the release machinery couple depolarization to exocytosis. The correct choice—“Triggers synaptic vesicle fusion with the active zone membrane”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -536,6 +557,7 @@ const PART2_FRESH_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -550,8 +572,8 @@ const PART2_FRESH_POOL = [
     wrongExplanations: [
       "",
       "EPSPs are depolarizing (or less hyperpolarized) shifts that move V_m toward spike threshold. Hyperpolarization or clamping toward E_K describes inhibition (IPSPs), not excitation. At rest Mg²⁺ blocks the pore; depolarization expels Mg²⁺, enabling NMDA current.",
-      "“Mg²⁺ acts as a neurotransmitter at NMDA sites” does not match the mechanism (topic: Receptor Types). At rest Mg²⁺ blocks the pore; depolarization expels Mg²⁺, enabling NMDA current. The correct choice—“Depolarization relieves block and permits Ca²⁺ influx”—fits that description.",
-      "“NMDA is purely metabotropic” does not match the mechanism (topic: Receptor Types). At rest Mg²⁺ blocks the pore; depolarization expels Mg²⁺, enabling NMDA current. The correct choice—“Depolarization relieves block and permits Ca²⁺ influx”—fits that description.",
+      "",
+      "",
     ]
   },
   {
@@ -561,6 +583,7 @@ const PART2_FRESH_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -576,7 +599,7 @@ const PART2_FRESH_POOL = [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Classic Hebbian STDP favors causal order: presynaptic before postsynaptic firing.",
       "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Classic Hebbian STDP favors causal order: presynaptic before postsynaptic firing.",
-      "“No Ca²⁺ enters the postsynaptic cell” does not match the mechanism (topic: Synaptic Plasticity Rules). Classic Hebbian STDP favors causal order: presynaptic before postsynaptic firing. The correct choice—“Presynaptic spikes precede postsynaptic spikes within a narrow window”—fits that description.",
+      "",
     ]
   },
   {
@@ -590,6 +613,7 @@ const PART2_FRESH_POOL = [
 
 
 
+
       "Reduce further neurotransmitter release when activated",
       "Increase release without limit",
       "Convert electrical to chemical synapses",
@@ -599,9 +623,9 @@ const PART2_FRESH_POOL = [
     explanation: "Negative feedback via autoreceptors (e.g., 5-HT1, D2) inhibits release.",
     wrongExplanations: [
       "",
-      "“Increase release without limit (mixes up presynaptic release with postsynaptic recep…” does not match the mechanism (topic: Synaptic Transmission). Negative feedback via autoreceptors (e.g., 5-HT1, D2) inhibits release. The correct choice—“Reduce further neurotransmitter release when activated”—fits that description.",
-      "“Convert electrical to chemical synapses (mixes up presynaptic release with postsynap…” does not match the mechanism (topic: Synaptic Transmission). Negative feedback via autoreceptors (e.g., 5-HT1, D2) inhibits release. The correct choice—“Reduce further neurotransmitter release when activated”—fits that description.",
-      "“Generate action potentials in the terminal (mixes up presynaptic release with postsy…” does not match the mechanism (topic: Synaptic Transmission). Negative feedback via autoreceptors (e.g., 5-HT1, D2) inhibits release. The correct choice—“Reduce further neurotransmitter release when activated”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -615,18 +639,19 @@ const PART2_FRESH_POOL = [
 
 
 
+
       "Nicotinic ionotropic receptors on muscle endplate",
-      "Muscarinic receptors on muscle nuclei (describes the wrong synaptic structure or transmission step)",
-      "NMDA receptors on motor neurons (describes the wrong synaptic structure or transmission step)",
-      "Gap junction hemichannels (describes the wrong synaptic structure or transmission step)",
+      "Muscarinic receptors on muscle nuclei",
+      "NMDA receptors on motor neurons",
+      "Gap junction hemichannels",
     ],
     correct: 0,
     explanation: "ACh nicotinic receptors depolarize the muscle endplate (end-plate potential).",
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: ACh nicotinic receptors depolarize the muscle endplate (end-plate potential).",
-      "“NMDA receptors on motor neurons (describes the wrong synaptic structure or transmiss…” does not match the mechanism (topic: Chemical Synapses). ACh nicotinic receptors depolarize the muscle endplate (end-plate potential). The correct choice—“Nicotinic ionotropic receptors on muscle endplate”—fits that description.",
-      "“Gap junction hemichannels (describes the wrong synaptic structure or transmission st…” does not match the mechanism (topic: Chemical Synapses). ACh nicotinic receptors depolarize the muscle endplate (end-plate potential). The correct choice—“Nicotinic ionotropic receptors on muscle endplate”—fits that description.",
+      "",
+      "",
     ]
   },
   {
@@ -640,6 +665,7 @@ const PART2_FRESH_POOL = [
 
 
 
+
       "Controls timing and gain of pyramidal output",
       "Transduces light in the retina",
       "Maps sound frequency on basilar membrane",
@@ -649,9 +675,9 @@ const PART2_FRESH_POOL = [
     explanation: "Perisomatic GABAergic input strongly regulates when principal cells fire.",
     wrongExplanations: [
       "",
-      "“Transduces light in the retina” does not match the mechanism (topic: Neural Circuits). Perisomatic GABAergic input strongly regulates when principal cells fire. The correct choice—“Controls timing and gain of pyramidal output”—fits that description.",
-      "“Maps sound frequency on basilar membrane” does not match the mechanism (topic: Neural Circuits). Perisomatic GABAergic input strongly regulates when principal cells fire. The correct choice—“Controls timing and gain of pyramidal output”—fits that description.",
-      "“Stores long-term declarative memories alone” does not match the mechanism (topic: Neural Circuits). Perisomatic GABAergic input strongly regulates when principal cells fire. The correct choice—“Controls timing and gain of pyramidal output”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -661,6 +687,7 @@ const PART2_FRESH_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -676,7 +703,7 @@ const PART2_FRESH_POOL = [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: D1 receptors typically couple to Gs, raising cAMP and modulating excitability.",
       "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. D1 receptors typically couple to Gs, raising cAMP and modulating excitability.",
-      "“Identical to nicotinic ACh receptors” does not match the mechanism (topic: Neuromodulation). D1 receptors typically couple to Gs, raising cAMP and modulating excitability. The correct choice—“Excitatory/modulatory via Gs-linked cAMP increases”—fits that description.",
+      "",
     ]
   },
   {
@@ -690,6 +717,7 @@ const PART2_FRESH_POOL = [
 
 
 
+
       "Suppress presynaptic release after strong postsynaptic activity",
       "Increase glutamate release unconditionally",
       "Open voltage-gated Na⁺ channels in glia",
@@ -699,9 +727,9 @@ const PART2_FRESH_POOL = [
     explanation: "Postsynaptic synthesis of endocannabinoids can feedback-inhibit presynaptic terminals.",
     wrongExplanations: [
       "",
-      "“Increase glutamate release unconditionally (mixes up presynaptic release with postsy…” does not match the mechanism (topic: Synaptic Transmission). Postsynaptic synthesis of endocannabinoids can feedback-inhibit presynaptic terminals. The correct choice—“Suppress presynaptic release after strong postsynaptic activity”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Postsynaptic synthesis of endocannabinoids can feedback-inhibit presynaptic terminals.",
-      "“Replace SNARE-mediated fusion (mixes up presynaptic release with postsynaptic recept…” does not match the mechanism (topic: Synaptic Transmission). Postsynaptic synthesis of endocannabinoids can feedback-inhibit presynaptic terminals. The correct choice—“Suppress presynaptic release after strong postsynaptic activity”—fits that description.",
+      "",
     ]
   },
   {
@@ -711,6 +739,7 @@ const PART2_FRESH_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -725,7 +754,7 @@ const PART2_FRESH_POOL = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Primed vesicles at the active zone supply fast synchronous release.",
-      "“Identical to neurotransmitter transporters” does not match the mechanism (topic: Synaptic Transmission). Primed vesicles at the active zone supply fast synchronous release. The correct choice—“Docked/primed for fast release upon Ca²⁺ influx”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Primed vesicles at the active zone supply fast synchronous release.",
     ]
   },
@@ -740,18 +769,19 @@ const PART2_FRESH_POOL = [
 
 
 
+
       "Release of multiple neuroactive substances from one neuron",
-      "Main mechanism: electrical coupling via gap junctions (describes the wrong synaptic structure or transmission step)",
-      "A single receptor type for all transmitters (describes the wrong synaptic structure or transmission step)",
-      "Propagation without vesicles (describes the wrong synaptic structure or transmission step)",
+      "Main mechanism: electrical coupling via gap junctions",
+      "A single receptor type for all transmitters",
+      "Propagation without vesicles",
     ],
     correct: 0,
     explanation: "Neurons may release classic transmitters plus peptides or other modulators.",
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Neurons may release classic transmitters plus peptides or other modulators.",
-      "“A single receptor type for all transmitters (describes the wrong synaptic structure …” does not match the mechanism (topic: Chemical Synapses). Neurons may release classic transmitters plus peptides or other modulators. The correct choice—“Release of multiple neuroactive substances from one neuron”—fits that description.",
-      "“Propagation without vesicles (describes the wrong synaptic structure or transmission…” does not match the mechanism (topic: Chemical Synapses). Neurons may release classic transmitters plus peptides or other modulators. The correct choice—“Release of multiple neuroactive substances from one neuron”—fits that description.",
+      "",
+      "",
     ]
   },
   {
@@ -765,6 +795,7 @@ const PART2_FRESH_POOL = [
 
 
 
+
       "Acts on an element earlier in the same pathway after it fired",
       "Requires occurs in the olfactory bulb",
       "Rod outer segments generate all-or-none spikes in darkness",
@@ -774,9 +805,9 @@ const PART2_FRESH_POOL = [
     explanation: "Feedback loops regulate activity of cells that were just active (e.g., Renshaw, interneuron loops).",
     wrongExplanations: [
       "",
-      "“Requires occurs in the olfactory bulb” does not match the mechanism (topic: Neural Circuits). Feedback loops regulate activity of cells that were just active (e.g., Renshaw, interneuron loops). The correct choice—“Acts on an element earlier in the same pathway after it fired”—fits that description.",
+      "",
       "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Feedback loops regulate activity of cells that were just active (e.g., Renshaw, interneuron loops).",
-      "“Prevents all sensory input” does not match the mechanism (topic: Neural Circuits). Feedback loops regulate activity of cells that were just active (e.g., Renshaw, interneuron loops). The correct choice—“Acts on an element earlier in the same pathway after it fired”—fits that description.",
+      "",
     ]
   },
   {
@@ -790,6 +821,7 @@ const PART2_FRESH_POOL = [
 
 
 
+
       "Releases Ca²⁺ from intracellular stores",
       "Opens nicotinic receptors",
       "Hydrolyzes cAMP",
@@ -799,9 +831,9 @@ const PART2_FRESH_POOL = [
     explanation: "IP₃ binds ER receptors to mobilize stored Ca²⁺.",
     wrongExplanations: [
       "",
-      "“Opens nicotinic receptors” does not match the mechanism (topic: Second Messengers). IP₃ binds ER receptors to mobilize stored Ca²⁺. The correct choice—“Releases Ca²⁺ from intracellular stores”—fits that description.",
-      "“Hydrolyzes cAMP” does not match the mechanism (topic: Second Messengers). IP₃ binds ER receptors to mobilize stored Ca²⁺. The correct choice—“Releases Ca²⁺ from intracellular stores”—fits that description.",
-      "“Closes all K⁺ channels permanently” does not match the mechanism (topic: Second Messengers). IP₃ binds ER receptors to mobilize stored Ca²⁺. The correct choice—“Releases Ca²⁺ from intracellular stores”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -815,6 +847,7 @@ const PART2_FRESH_POOL = [
 
 
 
+
       "Inhibitory interneurons scaling responses relative to local activity",
       "Removing all Na⁺ channels",
       "Increasing myelin on dendrites",
@@ -824,8 +857,8 @@ const PART2_FRESH_POOL = [
     explanation: "Inhibition can divide or scale excitatory drive depending on circuit motif.",
     wrongExplanations: [
       "",
-      "“Removing all Na⁺ channels (ignores how EPSPs/IPSPs sum in time or space)” does not match the mechanism (topic: Synaptic Integration). Inhibition can divide or scale excitatory drive depending on circuit motif. The correct choice—“Inhibitory interneurons scaling responses relative to local activity”—fits that description.",
-      "“Increasing myelin on dendrites (ignores how EPSPs/IPSPs sum in time or space)” does not match the mechanism (topic: Synaptic Integration). Inhibition can divide or scale excitatory drive depending on circuit motif. The correct choice—“Inhibitory interneurons scaling responses relative to local activity”—fits that description.",
+      "",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Inhibition can divide or scale excitatory drive depending on circuit motif.",
     ]
   },
@@ -840,6 +873,7 @@ const PART2_FRESH_POOL = [
 
 
 
+
       "Enhance GABA binding or channel opening probability",
       "Block GABA synthesis in presynaptic terminals",
       "Open NMDA receptors instead",
@@ -849,8 +883,8 @@ const PART2_FRESH_POOL = [
     explanation: "Positive allosteric modulators increase inhibitory effect of GABA without being the primary agonist.",
     wrongExplanations: [
       "",
-      "“Block GABA synthesis in presynaptic terminals” does not match the mechanism (topic: Receptor Types). Positive allosteric modulators increase inhibitory effect of GABA without being the primary agonist. The correct choice—“Enhance GABA binding or channel opening probability”—fits that description.",
-      "“Open NMDA receptors instead” does not match the mechanism (topic: Receptor Types). Positive allosteric modulators increase inhibitory effect of GABA without being the primary agonist. The correct choice—“Enhance GABA binding or channel opening probability”—fits that description.",
+      "",
+      "",
       "GABA_A receptors are ionotropic: GABA binding opens a Cl⁻ channel and produces a fast IPSP (often hyperpolarizing or shunting). GABA_B is metabotropic (Gᵢ/o-coupled), typically opening K⁺ channels and reducing presynaptic Ca²⁺—slower, indirect inhibition. Positive allosteric modulators increase inhibitory effect of GABA without being the primary agonist.",
     ]
   },
@@ -865,6 +899,7 @@ const PART2_FRESH_POOL = [
 
 
 
+
       "Binds Ca²⁺ and helps trigger SNARE-mediated fusion",
       "Pumps ACh into vesicles",
       "Is a glutamate receptor subunit",
@@ -874,9 +909,9 @@ const PART2_FRESH_POOL = [
     explanation: "Synaptotagmin couples Ca²⁺ rise to vesicle fusion machinery.",
     wrongExplanations: [
       "",
-      "“Pumps ACh into vesicles (mixes up presynaptic release with postsynaptic receptor log…” does not match the mechanism (topic: Synaptic Transmission). Synaptotagmin couples Ca²⁺ rise to vesicle fusion machinery. The correct choice—“Binds Ca²⁺ and helps trigger SNARE-mediated fusion”—fits that description.",
-      "“Is a glutamate receptor subunit (mixes up presynaptic release with postsynaptic rece…” does not match the mechanism (topic: Synaptic Transmission). Synaptotagmin couples Ca²⁺ rise to vesicle fusion machinery. The correct choice—“Binds Ca²⁺ and helps trigger SNARE-mediated fusion”—fits that description.",
-      "“Generates EPSPs in muscle (mixes up presynaptic release with postsynaptic receptor l…” does not match the mechanism (topic: Synaptic Transmission). Synaptotagmin couples Ca²⁺ rise to vesicle fusion machinery. The correct choice—“Binds Ca²⁺ and helps trigger SNARE-mediated fusion”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -886,6 +921,7 @@ const PART2_FRESH_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -900,8 +936,8 @@ const PART2_FRESH_POOL = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Peptide co-transmitters/modulators act on broader spatial and temporal scales.",
-      "“Cannot affect ion channels indirectly” does not match the mechanism (topic: Neuromodulation). Peptide co-transmitters/modulators act on broader spatial and temporal scales. The correct choice—“Diffuse more slowly over longer distances and modulate on slower timescales”—fits that description.",
-      "“Replace action potentials in axons” does not match the mechanism (topic: Neuromodulation). Peptide co-transmitters/modulators act on broader spatial and temporal scales. The correct choice—“Diffuse more slowly over longer distances and modulate on slower timescales”—fits that description.",
+      "",
+      "",
     ]
   },
   {
@@ -915,6 +951,7 @@ const PART2_FRESH_POOL = [
 
 
 
+
       "Sharpen selection of one active representation",
       "Eliminate all firing permanently",
       "Convert chemical synapses to electrical",
@@ -924,9 +961,9 @@ const PART2_FRESH_POOL = [
     explanation: "Strong lateral/recurrent inhibition suppresses weaker competitors.",
     wrongExplanations: [
       "",
-      "“Eliminate all firing permanently” does not match the mechanism (topic: Neural Circuits). Strong lateral/recurrent inhibition suppresses weaker competitors. The correct choice—“Sharpen selection of one active representation”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Strong lateral/recurrent inhibition suppresses weaker competitors.",
-      "“Map odorants one-to-one to glomeruli without overlap” does not match the mechanism (topic: Neural Circuits). Strong lateral/recurrent inhibition suppresses weaker competitors. The correct choice—“Sharpen selection of one active representation”—fits that description.",
+      "",
     ]
   },
   {
@@ -936,6 +973,7 @@ const PART2_FRESH_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -968,6 +1006,7 @@ const PART3_FRESH_POOL = [
 
 
 
+
       "Respond with transient/larger receptive fields and prefer motion/contrast",
       "Mediate fine color and high spatial acuity primarily",
       "Lack any axonal projection to the brain",
@@ -978,7 +1017,7 @@ const PART3_FRESH_POOL = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: M cells favor temporal change and motion; P cells favor color and fine detail.",
-      "“Lack any axonal projection to the brain” does not match the mechanism (topic: Visual System). M cells favor temporal change and motion; P cells favor color and fine detail. The correct choice—“Respond with transient/larger receptive fields and prefer motion/contrast”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: M cells favor temporal change and motion; P cells favor color and fine detail.",
     ]
   },
@@ -993,6 +1032,7 @@ const PART3_FRESH_POOL = [
 
 
 
+
       "Specific arrangements of thalamic inputs and intracortical inhibition",
       "Random wiring without structure",
       "Cochlear tonotopy",
@@ -1002,9 +1042,9 @@ const PART3_FRESH_POOL = [
     explanation: "Hubel–Wiesel models use oriented subfields and inhibition to build orientation tuning.",
     wrongExplanations: [
       "",
-      "“Random wiring without structure” does not match the mechanism (topic: Visual System). Hubel–Wiesel models use oriented subfields and inhibition to build orientation tuning. The correct choice—“Specific arrangements of thalamic inputs and intracortical inhibition”—fits that description.",
+      "",
       "This mechanism belongs to a different sensory or synaptic system than the stem describes.",
-      "“Muscle spindle length encoding” does not match the mechanism (topic: Visual System). Hubel–Wiesel models use oriented subfields and inhibition to build orientation tuning. The correct choice—“Specific arrangements of thalamic inputs and intracortical inhibition”—fits that description.",
+      "",
     ]
   },
   {
@@ -1014,6 +1054,7 @@ const PART3_FRESH_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -1029,7 +1070,7 @@ const PART3_FRESH_POOL = [
       "",
       "This mechanism belongs to a different sensory or synaptic system than the stem describes.",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: PFC supports temporary maintenance/control of task-relevant information.",
-      "“Is the sole source of action potentials in the CNS” does not match the mechanism (topic: Executive Function). PFC supports temporary maintenance/control of task-relevant information. The correct choice—“Maintains and manipulates information during delay periods”—fits that description.",
+      "",
     ]
   },
   {
@@ -1039,6 +1080,7 @@ const PART3_FRESH_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -1053,8 +1095,8 @@ const PART3_FRESH_POOL = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Cerebellar LTD protocols use specific pairing of parallel and climbing fiber activity.",
-      "“Blocking all Ca²⁺ signaling” does not match the mechanism (topic: Cerebellum). Cerebellar LTD protocols use specific pairing of parallel and climbing fiber activity. The correct choice—“Sustained low-frequency stimulation paired with climbing fiber input”—fits that description.",
-      "“Eliminating GABA release globally” does not match the mechanism (topic: Cerebellum). Cerebellar LTD protocols use specific pairing of parallel and climbing fiber activity. The correct choice—“Sustained low-frequency stimulation paired with climbing fiber input”—fits that description.",
+      "",
+      "",
     ]
   },
   {
@@ -1064,6 +1106,7 @@ const PART3_FRESH_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -1078,8 +1121,8 @@ const PART3_FRESH_POOL = [
     wrongExplanations: [
       "",
       "This mechanism belongs to a different sensory or synaptic system than the stem describes.",
-      "“Photopigment bleaching rates (maps the lesion to the wrong motor pathway or reflex)” does not match the mechanism (topic: Motor Systems). Forward models and sensory feedback guide cerebellar adjustment of motor commands. The correct choice—“Predicted vs. actual sensory consequences of actions”—fits that description.",
-      "“Blood CO₂ without neural signals (maps the lesion to the wrong motor pathway or refl…” does not match the mechanism (topic: Motor Systems). Forward models and sensory feedback guide cerebellar adjustment of motor commands. The correct choice—“Predicted vs. actual sensory consequences of actions”—fits that description.",
+      "",
+      "",
     ]
   },
   {
@@ -1089,6 +1132,7 @@ const PART3_FRESH_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -1103,8 +1147,8 @@ const PART3_FRESH_POOL = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Amygdala encodes emotional salience and learns CS–US associations.",
-      "“Basilar membrane stiffness alone” does not match the mechanism (topic: Emotion & Memory). Amygdala encodes emotional salience and learns CS–US associations. The correct choice—“Neutral cues with aversive outcomes”—fits that description.",
-      "“Na⁺ channel gating in axons” does not match the mechanism (topic: Emotion & Memory). Amygdala encodes emotional salience and learns CS–US associations. The correct choice—“Neutral cues with aversive outcomes”—fits that description.",
+      "",
+      "",
     ]
   },
   {
@@ -1118,6 +1162,7 @@ const PART3_FRESH_POOL = [
 
 
 
+
       "Replaying and transferring hippocampal patterns to cortex",
       "Eliminating Many synapses formed during the day",
       "Blocking all thalamic input permanently",
@@ -1127,9 +1172,9 @@ const PART3_FRESH_POOL = [
     explanation: "Hippocampo-cortical replay during SWS supports systems consolidation.",
     wrongExplanations: [
       "",
-      "“Eliminating all synapses formed during the day” does not match the mechanism (topic: Sleep & Memory). Hippocampo-cortical replay during SWS supports systems consolidation. The correct choice—“Replaying and transferring hippocampal patterns to cortex”—fits that description.",
-      "“Blocking all thalamic input permanently” does not match the mechanism (topic: Sleep & Memory). Hippocampo-cortical replay during SWS supports systems consolidation. The correct choice—“Replaying and transferring hippocampal patterns to cortex”—fits that description.",
-      "“Converting rods to cones” does not match the mechanism (topic: Sleep & Memory). Hippocampo-cortical replay during SWS supports systems consolidation. The correct choice—“Replaying and transferring hippocampal patterns to cortex”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -1139,6 +1184,7 @@ const PART3_FRESH_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -1153,7 +1199,7 @@ const PART3_FRESH_POOL = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Broca's aphasia: effortful, agrammatic speech; comprehension often less impaired.",
-      "“Blindness in both visual fields” does not match the mechanism (topic: Language). Broca's aphasia: effortful, agrammatic speech; comprehension often less impaired. The correct choice—“Nonfluent speech with relatively preserved comprehension”—fits that description.",
+      "",
       "This mechanism belongs to a different sensory or synaptic system than the stem describes.",
     ]
   },
@@ -1168,6 +1214,7 @@ const PART3_FRESH_POOL = [
 
 
 
+
       "The animal occupies specific locations in an environment",
       "Requires during REM sleep without locomotion",
       "Odorants bind olfactory receptors",
@@ -1177,8 +1224,8 @@ const PART3_FRESH_POOL = [
     explanation: "Place fields encode spatial location; key evidence for cognitive maps.",
     wrongExplanations: [
       "",
-      "“Requires during REM sleep without locomotion” does not match the mechanism (topic: Learning & Memory). Place fields encode spatial location; key evidence for cognitive maps. The correct choice—“The animal occupies specific locations in an environment”—fits that description.",
-      "“Odorants bind olfactory receptors” does not match the mechanism (topic: Learning & Memory). Place fields encode spatial location; key evidence for cognitive maps. The correct choice—“The animal occupies specific locations in an environment”—fits that description.",
+      "",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Place fields encode spatial location; key evidence for cognitive maps.",
     ]
   },
@@ -1193,6 +1240,7 @@ const PART3_FRESH_POOL = [
 
 
 
+
       "Local changes in blood oxygenation coupled to neural activity",
       "Direct measurement of every synaptic vesicle fusion",
       "Static anatomy without physiology",
@@ -1202,8 +1250,8 @@ const PART3_FRESH_POOL = [
     explanation: "Neural activity drives blood flow and oxygenation changes detected as BOLD contrast.",
     wrongExplanations: [
       "",
-      "“Direct measurement of every synaptic vesicle fusion” does not match the mechanism (topic: Neuroimaging). Neural activity drives blood flow and oxygenation changes detected as BOLD contrast. The correct choice—“Local changes in blood oxygenation coupled to neural activity”—fits that description.",
-      "“Static anatomy without physiology” does not match the mechanism (topic: Neuroimaging). Neural activity drives blood flow and oxygenation changes detected as BOLD contrast. The correct choice—“Local changes in blood oxygenation coupled to neural activity”—fits that description.",
+      "",
+      "",
       "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Neural activity drives blood flow and oxygenation changes detected as BOLD contrast.",
     ]
   },
@@ -1214,6 +1262,7 @@ const PART3_FRESH_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -1229,7 +1278,7 @@ const PART3_FRESH_POOL = [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: UMN loss removes inhibitory control, producing spasticity; LMN lesions differ.",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: UMN loss removes inhibitory control, producing spasticity; LMN lesions differ.",
-      "“Permanent blindness” does not match the mechanism (topic: Motor Systems). UMN loss removes inhibitory control, producing spasticity; LMN lesions differ. The correct choice—“Spasticity and hyperreflexia with weakness”—fits that description.",
+      "",
     ]
   },
   {
@@ -1243,6 +1292,7 @@ const PART3_FRESH_POOL = [
 
 
 
+
       "Enhance edges and contrast via lateral inhibition",
       "Eliminate all rod function",
       "Map frequency in the cochlea",
@@ -1252,7 +1302,7 @@ const PART3_FRESH_POOL = [
     explanation: "Center-surround antagonism sharpens spatial contrast (e.g., retinal ganglion cells).",
     wrongExplanations: [
       "",
-      "“Eliminate all rod function” does not match the mechanism (topic: Sensory Systems). Center-surround antagonism sharpens spatial contrast (e.g., retinal ganglion cells). The correct choice—“Enhance edges and contrast via lateral inhibition”—fits that description.",
+      "",
       "This mechanism belongs to a different sensory or synaptic system than the stem describes.",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Center-surround antagonism sharpens spatial contrast (e.g., retinal ganglion cells).",
     ]
@@ -1268,6 +1318,7 @@ const PART3_FRESH_POOL = [
 
 
 
+
       "A gateway relaying and modulating sensory/motor information to cortex",
       "The primary site of cerebrospinal fluid production",
       "Exclusive storage of long-term motor skills without relay",
@@ -1278,7 +1329,7 @@ const PART3_FRESH_POOL = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Thalamic nuclei gate and relay streams to specific cortical areas.",
-      "“Exclusive storage of long-term motor skills without relay” does not match the mechanism (topic: Neuroanatomy). Thalamic nuclei gate and relay streams to specific cortical areas. The correct choice—“A gateway relaying and modulating sensory/motor information to cortex”—fits that description.",
+      "",
       "This mechanism belongs to a different sensory or synaptic system than the stem describes.",
     ]
   },
@@ -1293,6 +1344,7 @@ const PART3_FRESH_POOL = [
 
 
 
+
       "Inability to form new declarative memories after injury",
       "Loss of all procedural skills including riding a bike",
       "Complete elimination of sensation",
@@ -1302,8 +1354,8 @@ const PART3_FRESH_POOL = [
     explanation: "Hippocampus critical for encoding new episodic/declarative memories.",
     wrongExplanations: [
       "",
-      "“Loss of all procedural skills including riding a bike” does not match the mechanism (topic: Learning & Memory). Hippocampus critical for encoding new episodic/declarative memories. The correct choice—“Inability to form new declarative memories after injury”—fits that description.",
-      "“Complete elimination of sensation” does not match the mechanism (topic: Learning & Memory). Hippocampus critical for encoding new episodic/declarative memories. The correct choice—“Inability to form new declarative memories after injury”—fits that description.",
+      "",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Hippocampus critical for encoding new episodic/declarative memories.",
     ]
   },
@@ -1314,6 +1366,7 @@ const PART3_FRESH_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -1343,6 +1396,7 @@ const PART3_FRESH_POOL = [
 
 
 
+
       "Dopaminergic neurons in substantia nigra pars compacta",
       "Photoreceptors in the retina",
       "Most Purkinje cells instantly",
@@ -1353,7 +1407,7 @@ const PART3_FRESH_POOL = [
     wrongExplanations: [
       "",
       "This mechanism belongs to a different sensory or synaptic system than the stem describes.",
-      "“All Purkinje cells instantly” does not match the mechanism (topic: Clinical Correlates). SNc dopamine loss disrupts basal ganglia movement control (bradykinesia, rigidity). The correct choice—“Dopaminergic neurons in substantia nigra pars compacta”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: SNc dopamine loss disrupts basal ganglia movement control (bradykinesia, rigidity).",
     ]
   },
@@ -1368,6 +1422,7 @@ const PART3_FRESH_POOL = [
 
 
 
+
       "Long-term but not early short-term memory in many paradigms",
       "Immediate reflexes",
       "Dark current in rods",
@@ -1377,9 +1432,9 @@ const PART3_FRESH_POOL = [
     explanation: "Late LTP/LTM often requires gene expression and new proteins.",
     wrongExplanations: [
       "",
-      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Late LTP/LTM often requires gene expression and new proteins.",
-      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Late LTP/LTM often requires gene expression and new proteins.",
-      "“Saltatory conduction in myelinated axons” does not match the mechanism (topic: Learning & Memory). Late LTP/LTM often requires gene expression and new proteins. The correct choice—“Long-term but not early short-term memory in many paradigms”—fits that description.",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Late LTP/LTM often",
+      "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Late LTP/LTM often",
+      "",
     ]
   },
   {
@@ -1393,6 +1448,7 @@ const PART3_FRESH_POOL = [
 
 
 
+
       "Many large/polar molecules while allowing some regulated transport",
       "Most ions including O₂ and CO₂ equally (localizes the function to the wrong brain region)",
       "Main mechanism: neurotransmitters synthesized in muscle (localizes the function to the wrong brain region)",
@@ -1402,9 +1458,9 @@ const PART3_FRESH_POOL = [
     explanation: "Tight junctions and transporters regulate CNS access; small gases still diffuse.",
     wrongExplanations: [
       "",
-      "“All ions including O₂ and CO₂ equally (localizes the function to the wrong brain reg…” does not match the mechanism (topic: Neuroanatomy). Tight junctions and transporters regulate CNS access; small gases still diffuse. The correct choice—“Many large/polar molecules while allowing some regulated transport”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Tight junctions and transporters regulate CNS access; small gases still diffuse.",
-      "“Nothing; all substances cross freely (localizes the function to the wrong brain regi…” does not match the mechanism (topic: Neuroanatomy). Tight junctions and transporters regulate CNS access; small gases still diffuse. The correct choice—“Many large/polar molecules while allowing some regulated transport”—fits that description.",
+      "",
     ]
   }
 ];
@@ -1421,6 +1477,7 @@ const PART1_FRESH_POOL_2 = [
 
 
 
+
       "Depolarize V_m toward E_Na",
       "Hyperpolarize to E_K instantly",
       "Fix V_m at 0 mV",
@@ -1432,7 +1489,7 @@ const PART1_FRESH_POOL_2 = [
       "",
       "EPSPs are depolarizing (or less hyperpolarized) shifts that move V_m toward spike threshold. Hyperpolarization or clamping toward E_K describes inhibition (IPSPs), not excitation. Goldman weighting shifts V_m toward newly permeant ions.",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Goldman weighting shifts V_m toward newly permeant ions.",
-      "“Stop the Na⁺/K⁺ pump” does not match the mechanism (topic: Goldman Equation). Goldman weighting shifts V_m toward newly permeant ions. The correct choice—“Depolarize V_m toward E_Na”—fits that description.",
+      "",
     ]
   },
   {
@@ -1442,6 +1499,7 @@ const PART1_FRESH_POOL_2 = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -1456,7 +1514,7 @@ const PART1_FRESH_POOL_2 = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Inward concentration gradient for cations yields negative equilibrium potential.",
-      "“Zero regardless of charge (contradicts the Nernst dependence on inside/outside conce…” does not match the mechanism (topic: Nernst Equation). Inward concentration gradient for cations yields negative equilibrium potential. The correct choice—“Negative (inside negative relative to outside at equilibrium)”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Inward concentration gradient for cations yields negative equilibrium potential.",
     ]
   },
@@ -1471,6 +1529,7 @@ const PART1_FRESH_POOL_2 = [
 
 
 
+
       "Decreases τ and shortens λ",
       "Increases τ and λ without limit",
       "Blocks action potentials by opening Na channels",
@@ -1480,8 +1539,8 @@ const PART1_FRESH_POOL_2 = [
     explanation: "More leak lowers R_m, shortening time and length constants.",
     wrongExplanations: [
       "",
-      "“Increases τ and λ without limit” does not match the mechanism (topic: Passive Membrane Properties). More leak lowers R_m, shortening time and length constants. The correct choice—“Decreases τ and shortens λ”—fits that description.",
-      "“Blocks action potentials by opening Na channels” does not match the mechanism (topic: Passive Membrane Properties). More leak lowers R_m, shortening time and length constants. The correct choice—“Decreases τ and shortens λ”—fits that description.",
+      "",
+      "",
       "Membrane capacitance stores charge (Q = CV) and slows voltage changes, but capacitive current alone cannot produce the selective Na⁺ influx and delayed K⁺ efflux that underlie spike upstroke and repolarization. More leak lowers R_m, shortening time and length constants.",
     ]
   },
@@ -1496,6 +1555,7 @@ const PART1_FRESH_POOL_2 = [
 
 
 
+
       "Inward current exceeds outward current net positive feedback",
       "K⁺ channels fully close permanently",
       "Myelin is removed",
@@ -1505,9 +1565,9 @@ const PART1_FRESH_POOL_2 = [
     explanation: "Regenerative Na⁺ current drives depolarization past threshold.",
     wrongExplanations: [
       "",
-      "“K⁺ channels fully close permanently” does not match the mechanism (topic: Action Potentials). Regenerative Na⁺ current drives depolarization past threshold. The correct choice—“Inward current exceeds outward current net positive feedback”—fits that description.",
-      "“Myelin is removed” does not match the mechanism (topic: Action Potentials). Regenerative Na⁺ current drives depolarization past threshold. The correct choice—“Inward current exceeds outward current net positive feedback”—fits that description.",
-      "“Pump rate doubles” does not match the mechanism (topic: Action Potentials). Regenerative Na⁺ current drives depolarization past threshold. The correct choice—“Inward current exceeds outward current net positive feedback”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -1517,6 +1577,7 @@ const PART1_FRESH_POOL_2 = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -1531,8 +1592,8 @@ const PART1_FRESH_POOL_2 = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Wider axons have lower R_i, supporting faster propagation.",
-      "“Removing all Na⁺ channels (misapplies how active propagation uses local circuit curr…” does not match the mechanism (topic: Action Potential Propagation). Wider axons have lower R_i, supporting faster propagation. The correct choice—“Larger diameter (lower internal resistance)”—fits that description.",
-      "“Cooling the axon (misapplies how active propagation uses local circuit currents)” does not match the mechanism (topic: Action Potential Propagation). Wider axons have lower R_i, supporting faster propagation. The correct choice—“Larger diameter (lower internal resistance)”—fits that description.",
+      "",
+      "",
     ]
   },
   {
@@ -1546,6 +1607,7 @@ const PART1_FRESH_POOL_2 = [
 
 
 
+
       "Passive attenuation along dendrites",
       "Active amplification at many spine",
       "Saltatory conduction in dendrites",
@@ -1555,9 +1617,9 @@ const PART1_FRESH_POOL_2 = [
     explanation: "Subthreshold signals decay with distance in passive cable.",
     wrongExplanations: [
       "",
-      "“Active amplification at every spine” does not match the mechanism (topic: Electrical Signaling). Subthreshold signals decay with distance in passive cable. The correct choice—“Passive attenuation along dendrites”—fits that description.",
-      "“Saltatory conduction in dendrites” does not match the mechanism (topic: Electrical Signaling). Subthreshold signals decay with distance in passive cable. The correct choice—“Passive attenuation along dendrites”—fits that description.",
-      "“Exclusive Cl- pumping” does not match the mechanism (topic: Electrical Signaling). Subthreshold signals decay with distance in passive cable. The correct choice—“Passive attenuation along dendrites”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -1571,6 +1633,7 @@ const PART1_FRESH_POOL_2 = [
 
 
 
+
       "Transports unequal charge (3 Na⁺ out, 2 K⁺ in per cycle)",
       "Opens voltage-gated channels",
       "Is the sole determinant of V_m without leaks",
@@ -1580,8 +1643,8 @@ const PART1_FRESH_POOL_2 = [
     explanation: "Net outward charge movement hyperpolarizes slightly beyond pure leak balance.",
     wrongExplanations: [
       "",
-      "“Opens voltage-gated channels (ignores which ion dominates resting permeability)” does not match the mechanism (topic: Resting Potential). Net outward charge movement hyperpolarizes slightly beyond pure leak balance. The correct choice—“Transports unequal charge (3 Na⁺ out, 2 K⁺ in per cycle)”—fits that description.",
-      "“Is the sole determinant of V_m without leaks (ignores which ion dominates resting pe…” does not match the mechanism (topic: Resting Potential). Net outward charge movement hyperpolarizes slightly beyond pure leak balance. The correct choice—“Transports unequal charge (3 Na⁺ out, 2 K⁺ in per cycle)”—fits that description.",
+      "",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Net outward charge movement hyperpolarizes slightly beyond pure leak balance.",
     ]
   },
@@ -1592,6 +1655,7 @@ const PART1_FRESH_POOL_2 = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -1607,7 +1671,7 @@ const PART1_FRESH_POOL_2 = [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Inactivation during the spike produces the absolute refractory period.",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Inactivation during the spike produces the absolute refractory period.",
-      "“Synaptic vesicle fusion” does not match the mechanism (topic: Channel Gating). Inactivation during the spike produces the absolute refractory period. The correct choice—“The peak/plateau of the spike”—fits that description.",
+      "",
     ]
   },
   {
@@ -1621,6 +1685,7 @@ const PART1_FRESH_POOL_2 = [
 
 
 
+
       "Voltage-gated Na⁺ channels",
       "Nicotinic ACh receptors",
       "Photopigment activation",
@@ -1630,9 +1695,9 @@ const PART1_FRESH_POOL_2 = [
     explanation: "TTX blocks Na⁺ channels and abolishes spikes.",
     wrongExplanations: [
       "",
-      "“Nicotinic ACh receptors” does not match the mechanism (topic: Pharmacology). TTX blocks Na⁺ channels and abolishes spikes. The correct choice—“Voltage-gated Na⁺ channels”—fits that description.",
-      "“Photopigment activation” does not match the mechanism (topic: Pharmacology). TTX blocks Na⁺ channels and abolishes spikes. The correct choice—“Voltage-gated Na⁺ channels”—fits that description.",
-      "“Gap junction connexins” does not match the mechanism (topic: Pharmacology). TTX blocks Na⁺ channels and abolishes spikes. The correct choice—“Voltage-gated Na⁺ channels”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -1646,6 +1711,7 @@ const PART1_FRESH_POOL_2 = [
 
 
 
+
       "Wash out second messengers and dialyzable factors over time",
       "Permanently myelinate the axon",
       "Replace synaptic vesicles",
@@ -1655,8 +1721,8 @@ const PART1_FRESH_POOL_2 = [
     explanation: "Dialysis can run down metabotropic signaling components.",
     wrongExplanations: [
       "",
-      "“Permanently myelinate the axon” does not match the mechanism (topic: Patch Clamp). Dialysis can run down metabotropic signaling components. The correct choice—“Wash out second messengers and dialyzable factors over time”—fits that description.",
-      "“Replace synaptic vesicles” does not match the mechanism (topic: Patch Clamp). Dialysis can run down metabotropic signaling components. The correct choice—“Wash out second messengers and dialyzable factors over time”—fits that description.",
+      "",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Dialysis can run down metabotropic signaling components.",
     ]
   },
@@ -1671,6 +1737,7 @@ const PART1_FRESH_POOL_2 = [
 
 
 
+
       "Resting permeability is dominated by K⁺ with some Na⁺ leak",
       "Requires na⁺ channels are open",
       "V_m equals E_Na",
@@ -1680,9 +1747,9 @@ const PART1_FRESH_POOL_2 = [
     explanation: "Rest lies closer to E_K when K⁺ permeability dominates.",
     wrongExplanations: [
       "",
-      "“Requires na⁺ channels are open” does not match the mechanism (topic: Quantitative Physiology). Rest lies closer to E_K when K⁺ permeability dominates. The correct choice—“Resting permeability is dominated by K⁺ with some Na⁺ leak”—fits that description.",
-      "“V_m equals E_Na” does not match the mechanism (topic: Quantitative Physiology). Rest lies closer to E_K when K⁺ permeability dominates. The correct choice—“Resting permeability is dominated by K⁺ with some Na⁺ leak”—fits that description.",
-      "“No ion gradients exist” does not match the mechanism (topic: Quantitative Physiology). Rest lies closer to E_K when K⁺ permeability dominates. The correct choice—“Resting permeability is dominated by K⁺ with some Na⁺ leak”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -1696,6 +1763,7 @@ const PART1_FRESH_POOL_2 = [
 
 
 
+
       "Smaller dehydrated Na⁺ fits the pore geometry better than K⁺",
       "Na⁺ is negatively charged",
       "K⁺ is impermeant in all channels",
@@ -1705,9 +1773,9 @@ const PART1_FRESH_POOL_2 = [
     explanation: "Pore structure discriminates ion size/hydration shell.",
     wrongExplanations: [
       "",
-      "“Na⁺ is negatively charged” does not match the mechanism (topic: Ion Selectivity). Pore structure discriminates ion size/hydration shell. The correct choice—“Smaller dehydrated Na⁺ fits the pore geometry better than K⁺”—fits that description.",
-      "“K⁺ is impermeant in all channels” does not match the mechanism (topic: Ion Selectivity). Pore structure discriminates ion size/hydration shell. The correct choice—“Smaller dehydrated Na⁺ fits the pore geometry better than K⁺”—fits that description.",
-      "“Selectivity” does not match the mechanism (topic: Ion Selectivity). Pore structure discriminates ion size/hydration shell. The correct choice—“Smaller dehydrated Na⁺ fits the pore geometry better than K⁺”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -1717,6 +1785,7 @@ const PART1_FRESH_POOL_2 = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -1732,7 +1801,7 @@ const PART1_FRESH_POOL_2 = [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Equilibrium: no net movement for that ion.",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Equilibrium: no net movement for that ion.",
-      "“Undefined” does not match the mechanism (topic: Equilibrium vs Steady State). Equilibrium: no net movement for that ion. The correct choice—“Zero”—fits that description.",
+      "",
     ]
   },
   {
@@ -1746,6 +1815,7 @@ const PART1_FRESH_POOL_2 = [
 
 
 
+
       "Lower threshold for spike initiation and regulate backpropagation",
       "Transduce odorants",
       "Generate EPSPs",
@@ -1755,9 +1825,9 @@ const PART1_FRESH_POOL_2 = [
     explanation: "AIS is the spike initiation zone in many neurons.",
     wrongExplanations: [
       "",
-      "“Transduce odorants” does not match the mechanism (topic: Axon Initial Segment). AIS is the spike initiation zone in many neurons. The correct choice—“Lower threshold for spike initiation and regulate backpropagation”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: AIS is the spike initiation zone in many neurons.",
-      "“Produce myelin” does not match the mechanism (topic: Axon Initial Segment). AIS is the spike initiation zone in many neurons. The correct choice—“Lower threshold for spike initiation and regulate backpropagation”—fits that description.",
+      "",
     ]
   },
   {
@@ -1771,6 +1841,7 @@ const PART1_FRESH_POOL_2 = [
 
 
 
+
       "Reduces inward Na⁺ current during depolarizing steps",
       "Increases Na⁺ current",
       "Blocks K⁺ leak",
@@ -1780,7 +1851,7 @@ const PART1_FRESH_POOL_2 = [
     explanation: "Na⁺ removal abolishes INa.",
     wrongExplanations: [
       "",
-      "“Increases Na⁺ current” does not match the mechanism (topic: Experimental Methods). Na⁺ removal abolishes INa. The correct choice—“Reduces inward Na⁺ current during depolarizing steps”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Na⁺ removal abolishes INa.",
       "EPSPs are depolarizing (or less hyperpolarized) shifts that move V_m toward spike threshold. Hyperpolarization or clamping toward E_K describes inhibition (IPSPs), not excitation. Na⁺ removal abolishes INa.",
     ]
@@ -1796,6 +1867,7 @@ const PART1_FRESH_POOL_2 = [
 
 
 
+
       "Low-pass filters attenuating high-frequency inputs",
       "Perfect amplifiers of all frequencies",
       "Myelinated conductors",
@@ -1805,7 +1877,7 @@ const PART1_FRESH_POOL_2 = [
     explanation: "RC properties filter synaptic inputs temporally and spatially.",
     wrongExplanations: [
       "",
-      "“Perfect amplifiers of all frequencies” does not match the mechanism (topic: Dendritic Integration). RC properties filter synaptic inputs temporally and spatially. The correct choice—“Low-pass filters attenuating high-frequency inputs”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: RC properties filter synaptic inputs temporally and spatially.",
       "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. RC properties filter synaptic inputs temporally and spatially.",
     ]
@@ -1821,6 +1893,7 @@ const PART1_FRESH_POOL_2 = [
 
 
 
+
       "Ohm·cm² (resistance times area)",
       "Farads per second",
       "Meters per volt",
@@ -1831,8 +1904,8 @@ const PART1_FRESH_POOL_2 = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: R_m normalizes leak per unit area of membrane.",
-      "“Meters per volt” does not match the mechanism (topic: Membrane Biophysics). R_m normalizes leak per unit area of membrane. The correct choice—“Ohm·cm² (resistance times area)”—fits that description.",
-      "“Spikes per second” does not match the mechanism (topic: Membrane Biophysics). R_m normalizes leak per unit area of membrane. The correct choice—“Ohm·cm² (resistance times area)”—fits that description.",
+      "",
+      "",
     ]
   },
   {
@@ -1846,6 +1919,7 @@ const PART1_FRESH_POOL_2 = [
 
 
 
+
       "Prolong repolarization and broaden spikes",
       "Prevent Na⁺ influx",
       "Eliminate resting potential",
@@ -1855,8 +1929,8 @@ const PART1_FRESH_POOL_2 = [
     explanation: "K⁺ outward current repolarizes; block widens the spike.",
     wrongExplanations: [
       "",
-      "“Prevent Na⁺ influx” does not match the mechanism (topic: Action Potentials). K⁺ outward current repolarizes; block widens the spike. The correct choice—“Prolong repolarization and broaden spikes”—fits that description.",
-      "“Eliminate resting potential” does not match the mechanism (topic: Action Potentials). K⁺ outward current repolarizes; block widens the spike. The correct choice—“Prolong repolarization and broaden spikes”—fits that description.",
+      "",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: K⁺ outward current repolarizes; block widens the spike.",
     ]
   },
@@ -1867,6 +1941,7 @@ const PART1_FRESH_POOL_2 = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -1896,6 +1971,7 @@ const PART1_FRESH_POOL_2 = [
 
 
 
+
       "I_C = C dV/dt charging the membrane",
       "Main mechanism: pump activity",
       "Saltatory conduction",
@@ -1906,8 +1982,8 @@ const PART1_FRESH_POOL_2 = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Early current charges C_m before steady leak dominates.",
-      "“Saltatory conduction (uses the wrong sign or driving force for ionic current)” does not match the mechanism (topic: Electrical Signaling). Early current charges C_m before steady leak dominates. The correct choice—“I_C = C dV/dt charging the membrane”—fits that description.",
-      "“Glial phagocytosis (uses the wrong sign or driving force for ionic current)” does not match the mechanism (topic: Electrical Signaling). Early current charges C_m before steady leak dominates. The correct choice—“I_C = C dV/dt charging the membrane”—fits that description.",
+      "",
+      "",
     ]
   },
   {
@@ -1917,6 +1993,7 @@ const PART1_FRESH_POOL_2 = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -1931,8 +2008,8 @@ const PART1_FRESH_POOL_2 = [
     wrongExplanations: [
       "",
       "IPSPs make firing less likely by hyperpolarizing the cell or shunting depolarizing current. Depolarizing EPSPs bring the membrane closer to threshold—that is the opposite direction. Conductance pulls V_m toward that ion's equilibrium.",
-      "“Have no effect (ignores weighted permeabilities in the constant-field equation)” does not match the mechanism (topic: Goldman Equation). Conductance pulls V_m toward that ion's equilibrium. The correct choice—“Hyperpolarize or stabilize V_m toward E_Cl”—fits that description.",
-      "“Open NMDA receptors (ignores weighted permeabilities in the constant-field equation)” does not match the mechanism (topic: Goldman Equation). Conductance pulls V_m toward that ion's equilibrium. The correct choice—“Hyperpolarize or stabilize V_m toward E_Cl”—fits that description.",
+      "",
+      "",
     ]
   },
   {
@@ -1946,6 +2023,7 @@ const PART1_FRESH_POOL_2 = [
 
 
 
+
       "Slightly (proportionally to absolute temperature in RT/F)",
       "Not at all",
       "Often to zero",
@@ -1955,7 +2033,7 @@ const PART1_FRESH_POOL_2 = [
     explanation: "RT/F scales with temperature.",
     wrongExplanations: [
       "",
-      "“Not at all (contradicts the Nernst dependence on inside/outside concentrations)” does not match the mechanism (topic: Nernst Equation). RT/F scales with temperature. The correct choice—“Slightly (proportionally to absolute temperature in RT/F)”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: RT/F scales with temperature.",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: RT/F scales with temperature.",
     ]
@@ -1971,6 +2049,7 @@ const PART1_FRESH_POOL_2 = [
 
 
 
+
       "Make V_m uniform along a long process for accurate voltage clamp",
       "Increase λ indefinitely",
       "Block synapses",
@@ -1980,9 +2059,9 @@ const PART1_FRESH_POOL_2 = [
     explanation: "Space clamp reduces axial voltage gradients.",
     wrongExplanations: [
       "",
-      "“Increase λ indefinitely (misstates how R_m, C_m, or geometry set τ or λ)” does not match the mechanism (topic: Passive Membrane Properties). Space clamp reduces axial voltage gradients. The correct choice—“Make V_m uniform along a long process for accurate voltage clamp”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Space clamp reduces axial voltage gradients.",
-      "“Measure smell intensity (misstates how R_m, C_m, or geometry set τ or λ)” does not match the mechanism (topic: Passive Membrane Properties). Space clamp reduces axial voltage gradients. The correct choice—“Make V_m uniform along a long process for accurate voltage clamp”—fits that description.",
+      "",
     ]
   },
   {
@@ -1992,6 +2071,7 @@ const PART1_FRESH_POOL_2 = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -2006,8 +2086,8 @@ const PART1_FRESH_POOL_2 = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Many local anesthetics prefer inactivated/open states.",
-      "“Myelin is thick” does not match the mechanism (topic: Pharmacology). Many local anesthetics prefer inactivated/open states. The correct choice—“Channels open frequently during firing”—fits that description.",
-      "“Requires k⁺ pumps run” does not match the mechanism (topic: Pharmacology). Many local anesthetics prefer inactivated/open states. The correct choice—“Channels open frequently during firing”—fits that description.",
+      "",
+      "",
     ]
   },
   {
@@ -2021,6 +2101,7 @@ const PART1_FRESH_POOL_2 = [
 
 
 
+
       "Resting potential",
       "E_Na directly",
       "Synaptic cleft width",
@@ -2030,9 +2111,9 @@ const PART1_FRESH_POOL_2 = [
     explanation: "No injected current → passive resting V_m.",
     wrongExplanations: [
       "",
-      "“E_Na directly” does not match the mechanism (topic: Current Clamp). No injected current → passive resting V_m. The correct choice—“Resting potential”—fits that description.",
-      "“Synaptic cleft width” does not match the mechanism (topic: Current Clamp). No injected current → passive resting V_m. The correct choice—“Resting potential”—fits that description.",
-      "“Cochlear vibration” does not match the mechanism (topic: Current Clamp). No injected current → passive resting V_m. The correct choice—“Resting potential”—fits that description.",
+      "",
+      "",
+      "",
     ]
   }
 ];
@@ -2049,18 +2130,19 @@ const PART2_FRESH_POOL_2 = [
 
 
 
+
       "Ca2, influx and vesicle fusion kinetics",
       "Action potential travel in myelin",
-      "DNA transcription (describes the wrong synaptic structure or transmission step)",
-      "Photopigment recovery (describes the wrong synaptic structure or transmission step)",
+      "DNA transcription",
+      "Photopigment recovery",
     ],
     correct: 0,
     explanation: "Release machinery adds milliseconds after presynaptic spike arrival.",
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Release machinery adds milliseconds after presynaptic spike arrival.",
-      "“DNA transcription (describes the wrong synaptic structure or transmission step)” does not match the mechanism (topic: Chemical Synapses). Release machinery adds milliseconds after presynaptic spike arrival. The correct choice—“Ca2+ influx and vesicle fusion kinetics”—fits that description.",
-      "“Photopigment recovery (describes the wrong synaptic structure or transmission step)” does not match the mechanism (topic: Chemical Synapses). Release machinery adds milliseconds after presynaptic spike arrival. The correct choice—“Ca2+ influx and vesicle fusion kinetics”—fits that description.",
+      "",
+      "",
     ]
   },
   {
@@ -2074,6 +2156,7 @@ const PART2_FRESH_POOL_2 = [
 
 
 
+
       "Distribution of EPSP amplitudes (multiples of mEPSP size)",
       "Muscle stretch",
       "Retinal dark current",
@@ -2083,9 +2166,9 @@ const PART2_FRESH_POOL_2 = [
     explanation: "Quantal content reflects number of vesicles released.",
     wrongExplanations: [
       "",
-      "“Muscle stretch (mixes up presynaptic release with postsynaptic receptor logic)” does not match the mechanism (topic: Synaptic Transmission). Quantal content reflects number of vesicles released. The correct choice—“Distribution of EPSP amplitudes (multiples of mEPSP size)”—fits that description.",
-      "“Retinal dark current (mixes up presynaptic release with postsynaptic receptor logic)” does not match the mechanism (topic: Synaptic Transmission). Quantal content reflects number of vesicles released. The correct choice—“Distribution of EPSP amplitudes (multiples of mEPSP size)”—fits that description.",
-      "“Cochlear place map (mixes up presynaptic release with postsynaptic receptor logic)” does not match the mechanism (topic: Synaptic Transmission). Quantal content reflects number of vesicles released. The correct choice—“Distribution of EPSP amplitudes (multiples of mEPSP size)”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -2095,6 +2178,7 @@ const PART2_FRESH_POOL_2 = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -2110,7 +2194,7 @@ const PART2_FRESH_POOL_2 = [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: AMPA typically carries depolarizing mixed cation current.",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: AMPA typically carries depolarizing mixed cation current.",
-      "“Large peptides” does not match the mechanism (topic: Receptor Types). AMPA typically carries depolarizing mixed cation current. The correct choice—“Na+ and K+ (non-selective cation)”—fits that description.",
+      "",
     ]
   },
   {
@@ -2120,6 +2204,7 @@ const PART2_FRESH_POOL_2 = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -2134,7 +2219,7 @@ const PART2_FRESH_POOL_2 = [
     wrongExplanations: [
       "",
       "Fast synaptic inhibition at many CNS synapses is dominated by GABA_A Cl⁻ flux. Metabotropic GABA_B signaling is slower and works through G-proteins, not direct ligand-gated Cl⁻ pores. GABAA is ionotropic Cl- conductance.",
-      "“Voltage-gated Na channels” does not match the mechanism (topic: Receptor Types). GABAA is ionotropic Cl- conductance. The correct choice—“Ligand-gated Cl- channels (usually inhibitory)”—fits that description.",
+      "",
       "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. GABAA is ionotropic Cl- conductance.",
     ]
   },
@@ -2149,6 +2234,7 @@ const PART2_FRESH_POOL_2 = [
 
 
 
+
       "Activate PKA to phosphorylate channels and enzymes",
       "Directly open nicotinic receptors",
       "Replace SNARE proteins",
@@ -2158,9 +2244,9 @@ const PART2_FRESH_POOL_2 = [
     explanation: "PKA is a major cAMP effector in neurons.",
     wrongExplanations: [
       "",
-      "“Directly open nicotinic receptors” does not match the mechanism (topic: Second Messengers). PKA is a major cAMP effector in neurons. The correct choice—“Activate PKA to phosphorylate channels and enzymes”—fits that description.",
-      "“Replace SNARE proteins” does not match the mechanism (topic: Second Messengers). PKA is a major cAMP effector in neurons. The correct choice—“Activate PKA to phosphorylate channels and enzymes”—fits that description.",
-      "“Measure muscle length” does not match the mechanism (topic: Second Messengers). PKA is a major cAMP effector in neurons. The correct choice—“Activate PKA to phosphorylate channels and enzymes”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -2170,6 +2256,7 @@ const PART2_FRESH_POOL_2 = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -2199,6 +2286,7 @@ const PART2_FRESH_POOL_2 = [
 
 
 
+
       "Limit spread of excitation and sharpen timing",
       "Eliminate all inhibition",
       "Replace electrical synapses globally",
@@ -2208,9 +2296,9 @@ const PART2_FRESH_POOL_2 = [
     explanation: "FF inhibition constrains excitatory recruitment.",
     wrongExplanations: [
       "",
-      "“Eliminate all inhibition” does not match the mechanism (topic: Neural Circuits). FF inhibition constrains excitatory recruitment. The correct choice—“Limit spread of excitation and sharpen timing”—fits that description.",
-      "“Replace electrical synapses globally” does not match the mechanism (topic: Neural Circuits). FF inhibition constrains excitatory recruitment. The correct choice—“Limit spread of excitation and sharpen timing”—fits that description.",
-      "“Map frequency on basilar membrane” does not match the mechanism (topic: Neural Circuits). FF inhibition constrains excitatory recruitment. The correct choice—“Limit spread of excitation and sharpen timing”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -2224,6 +2312,7 @@ const PART2_FRESH_POOL_2 = [
 
 
 
+
       "Rapid synchrony and shared subthreshold signals",
       "Vesicle fusion without Ca2,",
       "Phototransduction",
@@ -2233,9 +2322,9 @@ const PART2_FRESH_POOL_2 = [
     explanation: "Gap junctions pass ions and small molecules bidirectionally.",
     wrongExplanations: [
       "",
-      "“Vesicle fusion without Ca2+” does not match the mechanism (topic: Electrical Synapses). Gap junctions pass ions and small molecules bidirectionally. The correct choice—“Rapid synchrony and shared subthreshold signals”—fits that description.",
-      "“Phototransduction” does not match the mechanism (topic: Electrical Synapses). Gap junctions pass ions and small molecules bidirectionally. The correct choice—“Rapid synchrony and shared subthreshold signals”—fits that description.",
-      "“Requires retrograde peptide signaling” does not match the mechanism (topic: Electrical Synapses). Gap junctions pass ions and small molecules bidirectionally. The correct choice—“Rapid synchrony and shared subthreshold signals”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -2249,6 +2338,7 @@ const PART2_FRESH_POOL_2 = [
 
 
 
+
       "Neurotransmitter into vesicles against gradient (using H, gradient)",
       "Na, into nucleus",
       "Rhodopsin into spines",
@@ -2258,9 +2348,9 @@ const PART2_FRESH_POOL_2 = [
     explanation: "VGLUT/VGAT/VMAT use proton exchange to fill vesicles.",
     wrongExplanations: [
       "",
-      "“Na+ into nucleus” does not match the mechanism (topic: Synaptic Vesicles). VGLUT/VGAT/VMAT use proton exchange to fill vesicles. The correct choice—“Neurotransmitter into vesicles against gradient (using H+ gradient)”—fits that description.",
-      "“Rhodopsin into spines” does not match the mechanism (topic: Synaptic Vesicles). VGLUT/VGAT/VMAT use proton exchange to fill vesicles. The correct choice—“Neurotransmitter into vesicles against gradient (using H+ gradient)”—fits that description.",
-      "“Myelin proteins into cleft” does not match the mechanism (topic: Synaptic Vesicles). VGLUT/VGAT/VMAT use proton exchange to fill vesicles. The correct choice—“Neurotransmitter into vesicles against gradient (using H+ gradient)”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -2274,6 +2364,7 @@ const PART2_FRESH_POOL_2 = [
 
 
 
+
       "Depletion of readily releasable vesicles",
       "Persistent loss of DNA",
       "Myelin thinning",
@@ -2283,9 +2374,9 @@ const PART2_FRESH_POOL_2 = [
     explanation: "Vesicle pool depletion reduces release probability.",
     wrongExplanations: [
       "",
-      "“Permanent loss of DNA” does not match the mechanism (topic: Short-Term Plasticity). Vesicle pool depletion reduces release probability. The correct choice—“Depletion of readily releasable vesicles”—fits that description.",
-      "“Myelin thinning” does not match the mechanism (topic: Short-Term Plasticity). Vesicle pool depletion reduces release probability. The correct choice—“Depletion of readily releasable vesicles”—fits that description.",
-      "“Rod-cone switch” does not match the mechanism (topic: Short-Term Plasticity). Vesicle pool depletion reduces release probability. The correct choice—“Depletion of readily releasable vesicles”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -2299,10 +2390,11 @@ const PART2_FRESH_POOL_2 = [
 
 
 
+
       "Postsynaptic depolarization sufficient to unblock NMDA and Ca2, entry",
-      "Main mechanism: presynaptic GABA (states the wrong induction requirement for LTP/LTD)",
-      "Main mechanism: hyperpolarization (states the wrong induction requirement for LTP/LTD)",
-      "Elimination of AMPA (states the wrong induction requirement for LTP/LTD)",
+      "Main mechanism: presynaptic GABA",
+      "Main mechanism: hyperpolarization",
+      "Elimination of AMPA",
     ],
     correct: 0,
     explanation: "Ca2+ through NMDA triggers LTP cascades.",
@@ -2310,7 +2402,7 @@ const PART2_FRESH_POOL_2 = [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Ca2+ through NMDA triggers LTP cascades.",
       "EPSPs are depolarizing (or less hyperpolarized) shifts that move V_m toward spike threshold. Hyperpolarization or clamping toward E_K describes inhibition (IPSPs), not excitation. Ca2+ through NMDA triggers LTP cascades.",
-      "“Elimination of AMPA (states the wrong induction requirement for LTP/LTD)” does not match the mechanism (topic: Long-Term Plasticity). Ca2+ through NMDA triggers LTP cascades. The correct choice—“Postsynaptic depolarization sufficient to unblock NMDA and Ca2+ entry”—fits that description.",
+      "",
     ]
   },
   {
@@ -2324,6 +2416,7 @@ const PART2_FRESH_POOL_2 = [
 
 
 
+
       "Prolonged low-frequency stimulation at the synapse",
       "Single photon absorption",
       "Muscle spindle stretch",
@@ -2333,9 +2426,9 @@ const PART2_FRESH_POOL_2 = [
     explanation: "Low-frequency pairing protocols weaken synapses.",
     wrongExplanations: [
       "",
-      "“Single photon absorption” does not match the mechanism (topic: Synaptic Plasticity Rules). Low-frequency pairing protocols weaken synapses. The correct choice—“Prolonged low-frequency stimulation at the synapse”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Low-frequency pairing protocols weaken synapses.",
-      "“Opening all Na channels” does not match the mechanism (topic: Synaptic Plasticity Rules). Low-frequency pairing protocols weaken synapses. The correct choice—“Prolonged low-frequency stimulation at the synapse”—fits that description.",
+      "",
     ]
   },
   {
@@ -2345,6 +2438,7 @@ const PART2_FRESH_POOL_2 = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -2360,7 +2454,7 @@ const PART2_FRESH_POOL_2 = [
       "",
       "EPSPs are depolarizing (or less hyperpolarized) shifts that move V_m toward spike threshold. Hyperpolarization or clamping toward E_K describes inhibition (IPSPs), not excitation. NMJ EPP typically exceeds muscle threshold.",
       "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. NMJ EPP typically exceeds muscle threshold.",
-      "“Purely electrical gap junction” does not match the mechanism (topic: Neuromuscular Junction). NMJ EPP typically exceeds muscle threshold. The correct choice—“Graded depolarization from ACh”—fits that description.",
+      "",
     ]
   },
   {
@@ -2374,6 +2468,7 @@ const PART2_FRESH_POOL_2 = [
 
 
 
+
       "Act on fast ionotropic and slower modulatory targets",
       "Requires signal via gap junctions",
       "Requires affect retina",
@@ -2383,9 +2478,9 @@ const PART2_FRESH_POOL_2 = [
     explanation: "Co-release spans fast and slow signaling timescales.",
     wrongExplanations: [
       "",
-      "“Requires signal via gap junctions” does not match the mechanism (topic: Co-transmission). Co-release spans fast and slow signaling timescales. The correct choice—“Act on fast ionotropic and slower modulatory targets”—fits that description.",
-      "“Requires affect retina” does not match the mechanism (topic: Co-transmission). Co-release spans fast and slow signaling timescales. The correct choice—“Act on fast ionotropic and slower modulatory targets”—fits that description.",
-      "“Cannot modulate circuits” does not match the mechanism (topic: Co-transmission). Co-release spans fast and slow signaling timescales. The correct choice—“Act on fast ionotropic and slower modulatory targets”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -2399,6 +2494,7 @@ const PART2_FRESH_POOL_2 = [
 
 
 
+
       "Positive allosteric modulation of GABA<sub>A</sub> receptors",
       "Blocking glutamate synthesis",
       "Opening NMDA maximally",
@@ -2408,9 +2504,9 @@ const PART2_FRESH_POOL_2 = [
     explanation: "BZDs increase Cl- flux probability when GABA binds.",
     wrongExplanations: [
       "",
-      "“Blocking glutamate synthesis” does not match the mechanism (topic: Drug Effects). BZDs increase Cl- flux probability when GABA binds. The correct choice—“Positive allosteric modulation of GABAA receptors”—fits that description.",
-      "“Opening NMDA maximally” does not match the mechanism (topic: Drug Effects). BZDs increase Cl- flux probability when GABA binds. The correct choice—“Positive allosteric modulation of GABAA receptors”—fits that description.",
-      "“Destroying synaptic vesicles” does not match the mechanism (topic: Drug Effects). BZDs increase Cl- flux probability when GABA binds. The correct choice—“Positive allosteric modulation of GABAA receptors”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -2420,6 +2516,7 @@ const PART2_FRESH_POOL_2 = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -2435,7 +2532,7 @@ const PART2_FRESH_POOL_2 = [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: NO can act as a short-range retrograde signal.",
       "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. NO can act as a short-range retrograde signal.",
-      "“Is the primary photopigment” does not match the mechanism (topic: Retrograde Signaling). NO can act as a short-range retrograde signal. The correct choice—“Diffuses from postsynaptic sites to modulate presynaptic release”—fits that description.",
+      "",
     ]
   },
   {
@@ -2449,8 +2546,9 @@ const PART2_FRESH_POOL_2 = [
 
 
 
+
       "Epilepsy and some psychiatric phenotypes",
-      "Requires cochlear tuning",
+      "Applies a sensory transduction pathway from a different modality",
       "Requires rod dark current",
       "Elimination of all LTP",
     ],
@@ -2458,9 +2556,9 @@ const PART2_FRESH_POOL_2 = [
     explanation: "Too much excitation or too little inhibition destabilizes networks.",
     wrongExplanations: [
       "",
-      "“Requires cochlear tuning” does not match the mechanism (topic: Excitatory-Inhibitory Balance). Too much excitation or too little inhibition destabilizes networks. The correct choice—“Epilepsy and some psychiatric phenotypes”—fits that description.",
+      "",
       "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Too much excitation or too little inhibition destabilizes networks.",
-      "“Elimination of all LTP” does not match the mechanism (topic: Excitatory-Inhibitory Balance). Too much excitation or too little inhibition destabilizes networks. The correct choice—“Epilepsy and some psychiatric phenotypes”—fits that description.",
+      "",
     ]
   },
   {
@@ -2470,6 +2568,7 @@ const PART2_FRESH_POOL_2 = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -2484,7 +2583,7 @@ const PART2_FRESH_POOL_2 = [
     wrongExplanations: [
       "",
       "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. Active zone scaffolds exocytosis machinery.",
-      "“Cochlear basilar stiffness” does not match the mechanism (topic: Synaptic Anatomy). Active zone scaffolds exocytosis machinery. The correct choice—“Vesicle docking and Ca2+ channel coupling for release”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Active zone scaffolds exocytosis machinery.",
     ]
   },
@@ -2499,6 +2598,7 @@ const PART2_FRESH_POOL_2 = [
 
 
 
+
       "Slows K, channels or alters cAMP, changing excitability",
       "Directly opens photopigment",
       "Forms the blood-brain barrier",
@@ -2508,8 +2608,8 @@ const PART2_FRESH_POOL_2 = [
     explanation: "Muscarinic signaling modulates ion channels via G proteins.",
     wrongExplanations: [
       "",
-      "“Directly opens photopigment” does not match the mechanism (topic: Circuit Modulation). Muscarinic signaling modulates ion channels via G proteins. The correct choice—“Slows K+ channels or alters cAMP, changing excitability”—fits that description.",
-      "“Forms the blood-brain barrier” does not match the mechanism (topic: Circuit Modulation). Muscarinic signaling modulates ion channels via G proteins. The correct choice—“Slows K+ channels or alters cAMP, changing excitability”—fits that description.",
+      "",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Muscarinic signaling modulates ion channels via G proteins.",
     ]
   },
@@ -2520,6 +2620,7 @@ const PART2_FRESH_POOL_2 = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -2549,6 +2650,7 @@ const PART2_FRESH_POOL_2 = [
 
 
 
+
       "Response despite agonist still bound",
       "Resting K, leak",
       "Myelin thickness",
@@ -2559,7 +2661,7 @@ const PART2_FRESH_POOL_2 = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Conformational desensitization lowers current during prolonged agonist.",
-      "“Myelin thickness (mixes up presynaptic release with postsynaptic receptor logic)” does not match the mechanism (topic: Synaptic Transmission). Conformational desensitization lowers current during prolonged agonist. The correct choice—“Response despite agonist still bound”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Conformational desensitization lowers current during prolonged agonist.",
     ]
   },
@@ -2574,6 +2676,7 @@ const PART2_FRESH_POOL_2 = [
 
 
 
+
       "Amplify activity but risk runaway unless balanced by inhibition",
       "Seldom show oscillations",
       "Uses steady-state Nernst for one ion while multiple conductances change in time",
@@ -2584,8 +2687,8 @@ const PART2_FRESH_POOL_2 = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Recurrent E loops need I for stability.",
-      "“Inner hair cells establish the dark resting potential of rods” does not match the mechanism (topic: Neural Circuits). Recurrent E loops need I for stability. The correct choice—“Amplify activity but risk runaway unless balanced by inhibition”—fits that description.",
-      "“Eliminate action potentials” does not match the mechanism (topic: Neural Circuits). Recurrent E loops need I for stability. The correct choice—“Amplify activity but risk runaway unless balanced by inhibition”—fits that description.",
+      "",
+      "",
     ]
   }
 ];
@@ -2602,6 +2705,7 @@ const PART3_FRESH_POOL_2 = [
 
 
 
+
       "cGMP drops and cGMP-gated channels close",
       "Na, channels open maximally",
       "Myelin is added",
@@ -2611,9 +2715,9 @@ const PART3_FRESH_POOL_2 = [
     explanation: "Light reduces cGMP, closing channels and hyperpolarizing.",
     wrongExplanations: [
       "",
-      "“Na+ channels open maximally” does not match the mechanism (topic: Phototransduction). Light reduces cGMP, closing channels and hyperpolarizing. The correct choice—“cGMP drops and cGMP-gated channels close”—fits that description.",
-      "“Myelin is added” does not match the mechanism (topic: Phototransduction). Light reduces cGMP, closing channels and hyperpolarizing. The correct choice—“cGMP drops and cGMP-gated channels close”—fits that description.",
-      "“Tip links break permanently” does not match the mechanism (topic: Phototransduction). Light reduces cGMP, closing channels and hyperpolarizing. The correct choice—“cGMP drops and cGMP-gated channels close”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -2623,6 +2727,7 @@ const PART3_FRESH_POOL_2 = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -2637,7 +2742,7 @@ const PART3_FRESH_POOL_2 = [
     wrongExplanations: [
       "",
       "IPSPs make firing less likely by hyperpolarizing the cell or shunting depolarizing current. Depolarizing EPSPs bring the membrane closer to threshold—that is the opposite direction. OFF pathway signals light offset depending on wiring; MCB80x contrasts ON/OFF.",
-      "“Muscle contraction” does not match the mechanism (topic: Retinal Circuitry). OFF pathway signals light offset depending on wiring; MCB80x contrasts ON/OFF. The correct choice—“Hyperpolarization”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: OFF pathway signals light offset depending on wiring; MCB80x contrasts ON/OFF.",
     ]
   },
@@ -2652,6 +2757,7 @@ const PART3_FRESH_POOL_2 = [
 
 
 
+
       "Binocular input segregation that can be shaped by experience",
       "Random wiring without use",
       "Requires olfactory maps",
@@ -2661,9 +2767,9 @@ const PART3_FRESH_POOL_2 = [
     explanation: "Early visual experience sculpts dominance patterns.",
     wrongExplanations: [
       "",
-      "“Random wiring without use” does not match the mechanism (topic: Visual Cortex). Early visual experience sculpts dominance patterns. The correct choice—“Binocular input segregation that can be shaped by experience”—fits that description.",
-      "“Requires olfactory maps” does not match the mechanism (topic: Visual Cortex). Early visual experience sculpts dominance patterns. The correct choice—“Binocular input segregation that can be shaped by experience”—fits that description.",
-      "“Saltatory conduction maps” does not match the mechanism (topic: Visual Cortex). Early visual experience sculpts dominance patterns. The correct choice—“Binocular input segregation that can be shaped by experience”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -2677,6 +2783,7 @@ const PART3_FRESH_POOL_2 = [
 
 
 
+
       "Localizing low-frequency sounds",
       "Color vision",
       "Taste umami",
@@ -2686,8 +2793,8 @@ const PART3_FRESH_POOL_2 = [
     explanation: "ITD coding supports azimuth for low frequencies.",
     wrongExplanations: [
       "",
-      "“Color vision” does not match the mechanism (topic: Auditory Pathway). ITD coding supports azimuth for low frequencies. The correct choice—“Localizing low-frequency sounds”—fits that description.",
-      "“Taste umami” does not match the mechanism (topic: Auditory Pathway). ITD coding supports azimuth for low frequencies. The correct choice—“Localizing low-frequency sounds”—fits that description.",
+      "",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: ITD coding supports azimuth for low frequencies.",
     ]
   },
@@ -2702,6 +2809,7 @@ const PART3_FRESH_POOL_2 = [
 
 
 
+
       "Active amplification (cochlear amplifier)",
       "Phototransduction",
       "NMJ transmission",
@@ -2711,9 +2819,9 @@ const PART3_FRESH_POOL_2 = [
     explanation: "OHC electromotility boosts sensitivity and tuning.",
     wrongExplanations: [
       "",
-      "“Phototransduction” does not match the mechanism (topic: Auditory System). OHC electromotility boosts sensitivity and tuning. The correct choice—“Active amplification (cochlear amplifier)”—fits that description.",
-      "“NMJ transmission” does not match the mechanism (topic: Auditory System). OHC electromotility boosts sensitivity and tuning. The correct choice—“Active amplification (cochlear amplifier)”—fits that description.",
-      "“Glomerular odor maps” does not match the mechanism (topic: Auditory System). OHC electromotility boosts sensitivity and tuning. The correct choice—“Active amplification (cochlear amplifier)”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -2727,6 +2835,7 @@ const PART3_FRESH_POOL_2 = [
 
 
 
+
       "Linear acceleration and head tilt (gravity)",
       "Requires angular acceleration",
       "Odor concentration",
@@ -2736,8 +2845,8 @@ const PART3_FRESH_POOL_2 = [
     explanation: "Utricle/saccule sense linear forces including gravity.",
     wrongExplanations: [
       "",
-      "“Requires angular acceleration” does not match the mechanism (topic: Vestibular System). Utricle/saccule sense linear forces including gravity. The correct choice—“Linear acceleration and head tilt (gravity)”—fits that description.",
-      "“Odor concentration” does not match the mechanism (topic: Vestibular System). Utricle/saccule sense linear forces including gravity. The correct choice—“Linear acceleration and head tilt (gravity)”—fits that description.",
+      "",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Utricle/saccule sense linear forces including gravity.",
     ]
   },
@@ -2752,6 +2861,7 @@ const PART3_FRESH_POOL_2 = [
 
 
 
+
       "Fine touch, vibration, proprioception to cortex",
       "Requires pain via spinothalamic",
       "Implies myelin alone sets spike threshold without voltage-gated channels",
@@ -2761,9 +2871,9 @@ const PART3_FRESH_POOL_2 = [
     explanation: "DCML is the discriminative touch pathway.",
     wrongExplanations: [
       "",
-      "“Requires pain via spinothalamic” does not match the mechanism (topic: Somatosensation). DCML is the discriminative touch pathway. The correct choice—“Fine touch, vibration, proprioception to cortex”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: DCML is the discriminative touch pathway.",
-      "“Requires auditory pitch” does not match the mechanism (topic: Somatosensation). DCML is the discriminative touch pathway. The correct choice—“Fine touch, vibration, proprioception to cortex”—fits that description.",
+      "",
     ]
   },
   {
@@ -2777,18 +2887,19 @@ const PART3_FRESH_POOL_2 = [
 
 
 
+
       "pain/temp to thalamus",
       "Requires proprioception",
       "Requires vision",
-      "Requires nMJ signals",
+      "References a circuit element that does not control the variable asked about",
     ],
     correct: 0,
     explanation: "Anterolateral system for nociception and thermal sense.",
     wrongExplanations: [
       "",
-      "“Requires proprioception” does not match the mechanism (topic: Pain). Anterolateral system for nociception and thermal sense. The correct choice—“pain/temp to thalamus”—fits that description.",
-      "“Requires vision” does not match the mechanism (topic: Pain). Anterolateral system for nociception and thermal sense. The correct choice—“pain/temp to thalamus”—fits that description.",
-      "“Requires nMJ signals” does not match the mechanism (topic: Pain). Anterolateral system for nociception and thermal sense. The correct choice—“pain/temp to thalamus”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -2802,6 +2913,7 @@ const PART3_FRESH_POOL_2 = [
 
 
 
+
       "Combinatorial receptor activation across glomeruli",
       "Single receptor for all odors",
       "Cochlear tonotopy",
@@ -2811,8 +2923,8 @@ const PART3_FRESH_POOL_2 = [
     explanation: "Combinatorial coding maps complex odor space.",
     wrongExplanations: [
       "",
-      "“Single receptor for all odors” does not match the mechanism (topic: Olfactory System). Combinatorial coding maps complex odor space. The correct choice—“Combinatorial receptor activation across glomeruli”—fits that description.",
-      "“Cochlear tonotopy” does not match the mechanism (topic: Olfactory System). Combinatorial coding maps complex odor space. The correct choice—“Combinatorial receptor activation across glomeruli”—fits that description.",
+      "",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Combinatorial coding maps complex odor space.",
     ]
   },
@@ -2827,6 +2939,7 @@ const PART3_FRESH_POOL_2 = [
 
 
 
+
       "Acid sensing",
       "Rhodopsin activation",
       "Hair cell tip links",
@@ -2836,8 +2949,8 @@ const PART3_FRESH_POOL_2 = [
     explanation: "Low pH is detected by specialized taste mechanisms.",
     wrongExplanations: [
       "",
-      "“Rhodopsin activation” does not match the mechanism (topic: Gustation). Low pH is detected by specialized taste mechanisms. The correct choice—“Acid sensing”—fits that description.",
-      "“Hair cell tip links” does not match the mechanism (topic: Gustation). Low pH is detected by specialized taste mechanisms. The correct choice—“Acid sensing”—fits that description.",
+      "",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Low pH is detected by specialized taste mechanisms.",
     ]
   },
@@ -2848,6 +2961,7 @@ const PART3_FRESH_POOL_2 = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -2863,7 +2977,7 @@ const PART3_FRESH_POOL_2 = [
       "",
       "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. UMNs project to spinal/brainstem motor neurons.",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: UMNs project to spinal/brainstem motor neurons.",
-      "“Cochlear inner hair cells (maps the lesion to the wrong motor pathway or reflex)” does not match the mechanism (topic: Motor Systems). UMNs project to spinal/brainstem motor neurons. The correct choice—“Motor cortex and brainstem descending tracts”—fits that description.",
+      "",
     ]
   },
   {
@@ -2873,6 +2987,7 @@ const PART3_FRESH_POOL_2 = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -2887,8 +3002,8 @@ const PART3_FRESH_POOL_2 = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Direct pathway (simplified) supports action selection.",
-      "“Transduce sound” does not match the mechanism (topic: Basal Ganglia). Direct pathway (simplified) supports action selection. The correct choice—“Facilitate movement by disinhibiting thalamus”—fits that description.",
-      "“Generate dark current” does not match the mechanism (topic: Basal Ganglia). Direct pathway (simplified) supports action selection. The correct choice—“Facilitate movement by disinhibiting thalamus”—fits that description.",
+      "",
+      "",
     ]
   },
   {
@@ -2902,6 +3017,7 @@ const PART3_FRESH_POOL_2 = [
 
 
 
+
       "Error or unexpected events in motor learning",
       "Color opponency",
       "Odor identity alone",
@@ -2911,9 +3027,9 @@ const PART3_FRESH_POOL_2 = [
     explanation: "Climbing fiber input is linked to error teaching signals.",
     wrongExplanations: [
       "",
-      "“Color opponency” does not match the mechanism (topic: Cerebellum). Climbing fiber input is linked to error teaching signals. The correct choice—“Error or unexpected events in motor learning”—fits that description.",
-      "“Odor identity alone” does not match the mechanism (topic: Cerebellum). Climbing fiber input is linked to error teaching signals. The correct choice—“Error or unexpected events in motor learning”—fits that description.",
-      "“Requires passive membrane properties” does not match the mechanism (topic: Cerebellum). Climbing fiber input is linked to error teaching signals. The correct choice—“Error or unexpected events in motor learning”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -2927,6 +3043,7 @@ const PART3_FRESH_POOL_2 = [
 
 
 
+
       "Distinguish similar memories/contexts",
       "Transduce photons",
       "Amplify cochlea",
@@ -2936,9 +3053,9 @@ const PART3_FRESH_POOL_2 = [
     explanation: "DG/CAS networks reduce overlap of similar inputs.",
     wrongExplanations: [
       "",
-      "“Transduce photons” does not match the mechanism (topic: Hippocampus). DG/CAS networks reduce overlap of similar inputs. The correct choice—“Distinguish similar memories/contexts”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: DG/CAS networks reduce overlap of similar inputs.",
-      "“Block all synapses” does not match the mechanism (topic: Hippocampus). DG/CAS networks reduce overlap of similar inputs. The correct choice—“Distinguish similar memories/contexts”—fits that description.",
+      "",
     ]
   },
   {
@@ -2948,6 +3065,7 @@ const PART3_FRESH_POOL_2 = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -2962,8 +3080,8 @@ const PART3_FRESH_POOL_2 = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Memories become less hippocampus-dependent over time.",
-      "“No role for sleep” does not match the mechanism (topic: Learning & Memory). Memories become less hippocampus-dependent over time. The correct choice—“Gradual transfer of memory traces from hippocampus to cortex”—fits that description.",
-      "“Requires procedural memory exists” does not match the mechanism (topic: Learning & Memory). Memories become less hippocampus-dependent over time. The correct choice—“Gradual transfer of memory traces from hippocampus to cortex”—fits that description.",
+      "",
+      "",
     ]
   },
   {
@@ -2973,6 +3091,7 @@ const PART3_FRESH_POOL_2 = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -2987,8 +3106,8 @@ const PART3_FRESH_POOL_2 = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Receptive language deficits characterize Wernicke-type aphasia.",
-      "“Vision in both fields” does not match the mechanism (topic: Language). Receptive language deficits characterize Wernicke-type aphasia. The correct choice—“Language comprehension while speech may remain fluent but empty”—fits that description.",
-      "“Cochlear tuning” does not match the mechanism (topic: Language). Receptive language deficits characterize Wernicke-type aphasia. The correct choice—“Language comprehension while speech may remain fluent but empty”—fits that description.",
+      "",
+      "",
     ]
   },
   {
@@ -3002,6 +3121,7 @@ const PART3_FRESH_POOL_2 = [
 
 
 
+
       "Choroid plexus epithelium",
       "Photoreceptor outer segments",
       "NMJ",
@@ -3011,9 +3131,9 @@ const PART3_FRESH_POOL_2 = [
     explanation: "Choroid plexus secretes CSF into ventricles.",
     wrongExplanations: [
       "",
-      "“Photoreceptor outer segments” does not match the mechanism (topic: Neuroanatomy). Choroid plexus secretes CSF into ventricles. The correct choice—“Choroid plexus epithelium”—fits that description.",
-      "“NMJ” does not match the mechanism (topic: Neuroanatomy). Choroid plexus secretes CSF into ventricles. The correct choice—“Choroid plexus epithelium”—fits that description.",
-      "“Glomeruli” does not match the mechanism (topic: Neuroanatomy). Choroid plexus secretes CSF into ventricles. The correct choice—“Choroid plexus epithelium”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -3023,6 +3143,7 @@ const PART3_FRESH_POOL_2 = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -3037,8 +3158,8 @@ const PART3_FRESH_POOL_2 = [
     wrongExplanations: [
       "",
       "This option describes retinal phototransduction (cGMP, transducin, or outer-segment currents), which is a specialized sensory pathway—not the membrane, synaptic, or systems mechanism asked about here. TRN inhibits relay cells, modulating thalamic gate.",
-      "“Cochlear amplification” does not match the mechanism (topic: Thalamus). TRN inhibits relay cells, modulating thalamic gate. The correct choice—“Inhibitory gating of thalamocortical relay”—fits that description.",
-      "“Myelin to all axons” does not match the mechanism (topic: Thalamus). TRN inhibits relay cells, modulating thalamic gate. The correct choice—“Inhibitory gating of thalamocortical relay”—fits that description.",
+      "",
+      "",
     ]
   },
   {
@@ -3052,6 +3173,7 @@ const PART3_FRESH_POOL_2 = [
 
 
 
+
       "Demyelination slowing/failing conduction in CNS pathways",
       "Requires peripheral NMJ block",
       "Loss of taste buds",
@@ -3061,9 +3183,9 @@ const PART3_FRESH_POOL_2 = [
     explanation: "CNS demyelination disrupts timing and strength of signals.",
     wrongExplanations: [
       "",
-      "“Requires peripheral NMJ block” does not match the mechanism (topic: Clinical Correlates). CNS demyelination disrupts timing and strength of signals. The correct choice—“Demyelination slowing/failing conduction in CNS pathways”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: CNS demyelination disrupts timing and strength of signals.",
-      "“Purely retinal disease” does not match the mechanism (topic: Clinical Correlates). CNS demyelination disrupts timing and strength of signals. The correct choice—“Demyelination slowing/failing conduction in CNS pathways”—fits that description.",
+      "",
     ]
   },
   {
@@ -3077,6 +3199,7 @@ const PART3_FRESH_POOL_2 = [
 
 
 
+
       "Response to maintained constant stimuli",
       "Most pain permanently",
       "Need for receptors",
@@ -3086,9 +3209,9 @@ const PART3_FRESH_POOL_2 = [
     explanation: "Adaptation emphasizes changes over steady state.",
     wrongExplanations: [
       "",
-      "“All pain permanently” does not match the mechanism (topic: Sensory Systems). Adaptation emphasizes changes over steady state. The correct choice—“Response to maintained constant stimuli”—fits that description.",
-      "“Need for receptors” does not match the mechanism (topic: Sensory Systems). Adaptation emphasizes changes over steady state. The correct choice—“Response to maintained constant stimuli”—fits that description.",
-      "“Number of neurons in cortex” does not match the mechanism (topic: Sensory Systems). Adaptation emphasizes changes over steady state. The correct choice—“Response to maintained constant stimuli”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -3102,18 +3225,19 @@ const PART3_FRESH_POOL_2 = [
 
 
 
+
       "Slow-wave sleep and quiet rest, supporting replay",
       "Requires deep anesthesia without neural activity",
       "Requires phototransduction",
-      "Requires nMJ release",
+      "References a circuit element that does not control the variable asked about",
     ],
     correct: 0,
     explanation: "Ripples accompany replay linked to consolidation.",
     wrongExplanations: [
       "",
-      "“Requires deep anesthesia without neural activity” does not match the mechanism (topic: Sleep & Memory). Ripples accompany replay linked to consolidation. The correct choice—“Slow-wave sleep and quiet rest, supporting replay”—fits that description.",
-      "“Requires phototransduction” does not match the mechanism (topic: Sleep & Memory). Ripples accompany replay linked to consolidation. The correct choice—“Slow-wave sleep and quiet rest, supporting replay”—fits that description.",
-      "“Requires nMJ release” does not match the mechanism (topic: Sleep & Memory). Ripples accompany replay linked to consolidation. The correct choice—“Slow-wave sleep and quiet rest, supporting replay”—fits that description.",
+      "",
+      "",
+      "",
     ]
   },
   {
@@ -3123,6 +3247,7 @@ const PART3_FRESH_POOL_2 = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -3137,8 +3262,8 @@ const PART3_FRESH_POOL_2 = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: Emotional arousal can enhance declarative memory vividness.",
-      "“Cochlear phase locking” does not match the mechanism (topic: Emotion & Memory). Emotional arousal can enhance declarative memory vividness. The correct choice—“Vivid episodic memories for emotionally salient events”—fits that description.",
-      "“Passive membrane τ” does not match the mechanism (topic: Emotion & Memory). Emotional arousal can enhance declarative memory vividness. The correct choice—“Vivid episodic memories for emotionally salient events”—fits that description.",
+      "",
+      "",
     ]
   },
   {
@@ -3152,6 +3277,7 @@ const PART3_FRESH_POOL_2 = [
 
 
 
+
       "Executive control overhead when changing rules/context",
       "Purely sensory adaptation",
       "Myelin thickness",
@@ -3161,9 +3287,9 @@ const PART3_FRESH_POOL_2 = [
     explanation: "PFC-mediated control slows performance when switching tasks.",
     wrongExplanations: [
       "",
-      "“Purely sensory adaptation” does not match the mechanism (topic: Executive Function). PFC-mediated control slows performance when switching tasks. The correct choice—“Executive control overhead when changing rules/context”—fits that description.",
+      "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: PFC-mediated control slows performance when switching tasks.",
-      "“Rod-cone ratio” does not match the mechanism (topic: Executive Function). PFC-mediated control slows performance when switching tasks. The correct choice—“Executive control overhead when changing rules/context”—fits that description.",
+      "",
     ]
   },
   {
@@ -3173,6 +3299,7 @@ const PART3_FRESH_POOL_2 = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
 
 
 
@@ -3187,8 +3314,8 @@ const PART3_FRESH_POOL_2 = [
     wrongExplanations: [
       "",
       "MCB80x answers rarely hinge on absolute \"always/never\" claims—biology has exceptions. This option overstates a rule: EEG tracks summed electrical activity with ms timing.",
-      "“No relation to neural activity” does not match the mechanism (topic: Neuroimaging). EEG tracks summed electrical activity with ms timing. The correct choice—“Higher temporal resolution but poorer spatial localization generally”—fits that description.",
-      "“Requires measures blood flow” does not match the mechanism (topic: Neuroimaging). EEG tracks summed electrical activity with ms timing. The correct choice—“Higher temporal resolution but poorer spatial localization generally”—fits that description.",
+      "",
+      "",
     ]
   }
 ];

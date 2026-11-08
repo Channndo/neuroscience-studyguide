@@ -4,7 +4,7 @@
  */
 (function (global) {
   const BOILER_RE =
-    /unlike the keyed answer|misstates the mechanism|inconsistent with the stem|does not match the keyed|does not follow from the mechanism|matches the underlying mechanism|This option is inconsistent|does not match the mechanism \(topic:/i;
+    /unlike the keyed answer|the correct choice—|the keyed answer—|fits that description|misstates the mechanism or direction|does not match the keyed|does not follow from the mechanism|matches the underlying mechanism|This option is inconsistent|does not match the mechanism \(topic:/i;
 
   function stripHtml(s) {
     return String(s ?? "")
@@ -216,9 +216,9 @@
 
     const topicBit = c.topic ? ` (topic: ${c.topic})` : "";
     if (c.main.length > 20) {
-      return `“${truncate(c.wrong, 85)}” does not match the mechanism${topicBit}. ${c.main} The correct choice—“${truncate(c.right, 85)}”—fits that description.`;
+      return `This option does not match the mechanism described in the stem${topicBit}. ${c.main}`;
     }
-    return `“${truncate(c.wrong, 85)}” is not the best match for the stem${topicBit}. The keyed answer—“${truncate(c.right, 85)}”—reflects the underlying neuroscience described in the course.`;
+    return `This option does not match what the stem is asking about${topicBit}.`;
   }
 
   function topicEnrichment(topic, stem, rightText, q) {
@@ -273,8 +273,8 @@
     const right = q.options?.[q.correct] ?? "";
     if (q.anatomyDiagram && text.length < 100) {
       text = `${text} The crimson ring marks “${truncate(right, 70)}”; “${truncate(wrong, 70)}” is a different structure on the chart.`;
-    } else if (text.length < 110 && q.explanation) {
-      text = `${text} Correct mechanism: ${truncate(q.explanation, 160)}`;
+    } else if (text.length < 110 && q.explanation && !/correct choice|keyed answer/i.test(text)) {
+      text = `${text} ${truncate(q.explanation, 160)}`;
     }
     return deepenText(text, 120);
   }
@@ -288,12 +288,6 @@
     const extra = topicEnrichment(q.topic, q.question, right, q);
     if (extra && main.length < 200 && !main.toLowerCase().includes(extra.slice(0, 25).toLowerCase())) {
       main = `${main} ${extra}`.trim();
-    }
-    const rightLine = right
-      ? `“${truncate(right, 90)}” is correct: it names the structure or mechanism the stem describes.`
-      : "";
-    if (rightLine && !main.includes(right.slice(0, Math.min(24, right.length)))) {
-      main = `${main} ${rightLine}`.trim();
     }
     if (q.anatomyDiagram && q.highlightKey && global.BRAIN_ANATOMY_DIAGRAM?.chartRefForHighlight) {
       const ref = global.BRAIN_ANATOMY_DIAGRAM.chartRefForHighlight(q.highlightKey);
@@ -311,7 +305,7 @@
     const why =
       q.anatomyDiagram
         ? `You identified the structure whose location and function match the highlighted ring on the chart.`
-        : `The keyed choice states the mechanism or fact that follows from the stem.`;
+        : `The mechanism in the main explanation follows from the stem.`;
     return `${main} ${why}`;
   }
 
