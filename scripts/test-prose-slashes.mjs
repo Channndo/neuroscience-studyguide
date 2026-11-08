@@ -51,5 +51,9 @@ for (const c of proseCases) {
 const { queue: numQ } = markMathFractions("Nernst with 140/4 mM");
 assert(numQ.length === 1, "numeric ratio 140/4 still stacks");
 
+const { text: nernstZ, queue: zQ } = markMathFractions("Apply E = (61.54/z)·log10(out/in).");
+assert(zQ.length >= 1, "61.54/z stacks as fraction");
+assert(!nernstZ.includes("61.54/z"), "no raw 61.54/z slash");
+
 if (failed) process.exit(1);
 console.log("prose slash fraction guard: OK");
