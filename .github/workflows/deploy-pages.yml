@@ -29,6 +29,9 @@ jobs:
       - name: Copy-polish regression
         run: node scripts/test-question-copy-polish.mjs
 
+      - name: Formula hint fraction layout
+        run: node scripts/test-formula-hint-format.mjs
+
       - name: Question stem repair check
         run: node scripts/repair-question-stems.mjs
 
