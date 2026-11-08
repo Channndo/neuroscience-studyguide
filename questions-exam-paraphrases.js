@@ -887,7 +887,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Action Potential Propagation",
-    question: "Structure/condition: Unmyelinated axon. Key process and outcome?",
+    question: "For this condition (Unmyelinated axon), which mechanism and outcome best match the scenario?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -913,7 +913,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Action Potential Propagation",
-    question: "Structure/condition: Myelinated axon. Key process and outcome?",
+    question: "For this condition (Myelinated axon), which mechanism and outcome best match the scenario?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -939,7 +939,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Action Potential Propagation",
-    question: "Structure/condition: Cold temperature. Key process and outcome?",
+    question: "For this condition (Cold temperature), which mechanism and outcome best match the scenario?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -965,7 +965,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Action Potential Propagation",
-    question: "Structure/condition: Local anesthetic. Key process and outcome?",
+    question: "For this condition (Local anesthetic), which mechanism and outcome best match the scenario?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -991,7 +991,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Passive Membrane Properties",
-    question: "Which description best applies to Suppose that leak conductance rises by 12% (R_m falls) with geometry unchanged, the length constant λ compared with baseline?",
+    question: "Which statement best describes Suppose that leak conductance rises by 12% (R_m falls) with geometry unchanged, the length constant λ compared with baseline?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -1017,7 +1017,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Passive Membrane Properties",
-    question: "Which description best applies to Suppose that membrane capacitance increases by 15% while R_m is held fixed, the time constant τ?",
+    question: "Which statement best describes Suppose that membrane capacitance increases by 15% while R_m is held fixed, the time constant τ?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -1329,7 +1329,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Nernst Equation",
-    question: "Which description best applies to Suppose that [K⁺]_out equals [K⁺]_in, the Nernst equilibrium potential for K⁺?",
+    question: "Which statement best describes Suppose that [K⁺]_out equals [K⁺]_in, the Nernst equilibrium potential for K⁺?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -1355,7 +1355,7 @@ const PART1_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Electrical Signaling",
-    question: "Which description best applies to Suppose that V_m is held at E_K, the driving force on K⁺?",
+    question: "Which statement best describes Suppose that V_m is held at E_K, the driving force on K⁺?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -2271,7 +2271,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Electrical Signaling",
-    question: "Which description best applies to Suppose that E_ion for a permeant cation is +50 mV and V_m is −70 mV, the driving force for that ion?",
+    question: "Which statement best describes Suppose that E_ion for a permeant cation is +50 mV and V_m is −70 mV, the driving force for that ion?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -2349,7 +2349,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Resting Potential",
-    question: "Which description best applies to Suppose that the Na⁺/K⁺ pump rate doubles but relative leak conductances are unchanged, the immediate effect on V_m?",
+    question: "Which statement best describes Suppose that the Na⁺/K⁺ pump rate doubles but relative leak conductances are unchanged, the immediate effect on V_m?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -2427,7 +2427,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Electrical Signaling",
-    question: "Which description best applies to Suppose that V_m is clamped at E_K, the driving force on K⁺ ions?",
+    question: "Which statement best describes Suppose that V_m is clamped at E_K, the driving force on K⁺ ions?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -2843,7 +2843,7 @@ const PART3_EXAM_PARAPHRASE_POOL = [
   },
   {
     topic: "Electrical Signaling",
-    question: "Which description best applies to Suppose that E_K is −90 mV and V_m is −60 mV, net K⁺ current through open K⁺ channels?",
+    question: "Which statement best describes Suppose that E_K is −90 mV and V_m is −60 mV, net K⁺ current through open K⁺ channels?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",

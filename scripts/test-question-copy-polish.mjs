@@ -16,6 +16,7 @@ vm.createContext(sandbox);
 vm.runInContext(code, sandbox);
 const { polishOption, polishListPlus, polishStem, stripGenericWrappers } =
   sandbox.QuestionCopyPolish;
+void polishListPlus;
 
 let failed = 0;
 function assert(cond, msg) {
@@ -51,6 +52,19 @@ assert(
   ),
   "strip Nernst filler tag"
 );
+
+const neStem = polishStem(
+  "When Norepinephrine in arousal networks, which effect on membrane potential is most likely?",
+  { topic: "Neuromodulation" }
+);
+assert(/is active in arousal networks/i.test(neStem), "NE stem gets a verb");
+assert(/neural circuit function/i.test(neStem), "NE stem asks circuit not bogus V_m");
+
+const structStem = polishStem("Structure/condition: Unmyelinated axon. Key mechanism and outcome?", {
+  topic: "Action Potential Propagation",
+});
+assert(/unmyelinated axon/i.test(structStem), "structure/condition preserved");
+assert(/which mechanism and outcome/i.test(structStem), "structure/condition is a real question");
 
 assert(stripGenericWrappers("Using the values stated below, which answer is correct: x").startsWith("x"), "strip generic wrapper");
 

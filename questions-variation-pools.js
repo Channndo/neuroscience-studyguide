@@ -73,7 +73,7 @@ const PART1_VARIATION_POOL = [
   },
   {
     topic: "Resting Potential",
-    question: "Which description best applies to Ouabain blocks the Na⁺/K⁺ ATPase. Over tens of minutes, with K⁺ leak still open, the most likely outcome?",
+    question: "Which statement best describes Ouabain blocks the Na⁺/K⁺ ATPase. Over tens of minutes, with K⁺ leak still open, the most likely outcome?",
     options: [
 
 
@@ -96,7 +96,7 @@ const PART1_VARIATION_POOL = [
   },
   {
     topic: "Pharmacology",
-    question: "Which description best applies to Tetrodotoxin (TTX) is applied during a depolarizing current step that normally reaches threshold. The expected change?",
+    question: "Which statement best describes Tetrodotoxin (TTX) is applied during a depolarizing current step that normally reaches threshold. The expected change?",
     options: [
 
 
@@ -119,7 +119,7 @@ const PART1_VARIATION_POOL = [
   },
   {
     topic: "Pharmacology",
-    question: "Which description best applies to Tetraethylammonium (TEA) is applied during an evoked action potential. The most direct effect?",
+    question: "Which statement best describes Tetraethylammonium (TEA) is applied during an evoked action potential. The most direct effect?",
     options: [
 
 
@@ -536,7 +536,7 @@ const PART2_VARIATION_POOL = [
   },
   {
     topic: "Chemical Synapses",
-    question: "Which description best applies to Botulinum toxin cleaves SNARE proteins presynaptically. The immediate physiological consequence?",
+    question: "Which statement best describes Botulinum toxin cleaves SNARE proteins presynaptically. The immediate physiological consequence?",
     options: [
 
 
@@ -654,7 +654,7 @@ const PART2_VARIATION_POOL = [
 const PART3_VARIATION_POOL = [
   {
     topic: "Clinical Correlates",
-    question: "Which description best applies to A patient produces fluent, grammatical speech with normal articulation but frequent neologisms and poor comprehension; repetition is impaired. The most likely primary lesion site?",
+    question: "Which statement best describes A patient produces fluent, grammatical speech with normal articulation but frequent neologisms and poor comprehension; repetition is impaired. The most likely primary lesion site?",
     options: [
 
 
@@ -700,7 +700,7 @@ const PART3_VARIATION_POOL = [
   },
   {
     topic: "Clinical Correlates",
-    question: "Which description best applies to A patient reports numbness and loss of fine touch/vibration on the right body below the neck, with no facial weakness. pain/temp on the right are intact. The most likely lesion?",
+    question: "Which statement best describes A patient reports numbness and loss of fine touch/vibration on the right body below the neck, with no facial weakness. pain/temp on the right are intact. The most likely lesion?",
     options: [
 
 

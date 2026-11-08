@@ -3918,7 +3918,7 @@ const PROCTORED_CLAMP_TRACE_POOL = [
   {
     topic: "Voltage Clamp",
     module: "part1",
-    question: "Which description best applies to After TEA, the early inward current remains but repolarizing outward current is reduced. Early inward?",
+    question: "Which statement best describes After TEA, the early inward current remains but repolarizing outward current is reduced. Early inward?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -4817,7 +4817,7 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Nernst Equation",
     module: "part1",
-    question: "When If E_K = −80 mV and V_m = −65 mV, opening K⁺ channels, which effect on membrane potential is most likely?",
+    question: "If E_K = −80 mV and V_m = −65 mV, opening K⁺ channels, which change in membrane potential is most likely?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -5005,7 +5005,7 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Sensory Systems",
     module: "part3",
-    question: "Which description best applies to Photoreceptor in dark?",
+    question: "Which statement best describes Photoreceptor in dark?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -5194,7 +5194,7 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Integrative",
     module: "part2",
-    question: "When Opening GABA_A channels at rest when E_Cl is below V_m, which effect on membrane potential is most likely?",
+    question: "If Opening GABA_A channels at rest when E_Cl is below V_m, which change in membrane potential is most likely?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -5411,7 +5411,7 @@ const PROCTORED_MOCK_EXAM_POOL = [
   {
     topic: "Integrative",
     module: "part2",
-    question: "Which description best applies to End-plate potential at NMJ?",
+    question: "Which statement best describes End-plate potential at NMJ?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",

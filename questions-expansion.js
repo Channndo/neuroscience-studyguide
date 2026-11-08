@@ -3,7 +3,7 @@
 const PART1_EXPANSION_POOL = [
   {
     topic: "Nernst Equation",
-    question: "Given Nernst scenario: intracellular K⁺ is doubled, which change in equilibrium potential is expected?",
+    question: "Using the Nernst relation, if intracellular K⁺ is doubled, how does equilibrium potential change?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -29,7 +29,7 @@ const PART1_EXPANSION_POOL = [
   },
   {
     topic: "Nernst Equation",
-    question: "Given Nernst scenario: extracellular Na⁺ is doubled, which change in equilibrium potential is expected?",
+    question: "Using the Nernst relation, if extracellular Na⁺ is doubled, how does equilibrium potential change?",
     options: [
 
 
@@ -53,7 +53,7 @@ const PART1_EXPANSION_POOL = [
   },
   {
     topic: "Nernst Equation",
-    question: "Given Nernst scenario: extracellular Cl⁻ is increased, which change in equilibrium potential is expected?",
+    question: "Using the Nernst relation, if extracellular Cl⁻ is increased, how does equilibrium potential change?",
     options: [
 
       "E_Cl shifts according to the anion Nernst relation (signed valence)",
@@ -73,7 +73,7 @@ const PART1_EXPANSION_POOL = [
   },
   {
     topic: "Nernst Equation",
-    question: "Given Nernst scenario: intracellular Ca²⁺ buffering lowers free Ca²⁺, which change in equilibrium potential is expected?",
+    question: "Using the Nernst relation, if intracellular Ca²⁺ buffering lowers free Ca²⁺, how does equilibrium potential change?",
     options: [
 
       "E_Ca becomes more positive",
@@ -561,7 +561,7 @@ const PART1_EXPANSION_POOL = [
   },
   {
     topic: "Action Potential Propagation",
-    question: "Structure/condition: Unmyelinated axon. Key mechanism and outcome?",
+    question: "For this condition (Unmyelinated axon), which mechanism and outcome best match the scenario?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -587,7 +587,7 @@ const PART1_EXPANSION_POOL = [
   },
   {
     topic: "Action Potential Propagation",
-    question: "Structure/condition: Myelinated axon. Key mechanism and outcome?",
+    question: "For this condition (Myelinated axon), which mechanism and outcome best match the scenario?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -613,7 +613,7 @@ const PART1_EXPANSION_POOL = [
   },
   {
     topic: "Action Potential Propagation",
-    question: "Structure/condition: Cold temperature. Key mechanism and outcome?",
+    question: "For this condition (Cold temperature), which mechanism and outcome best match the scenario?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -639,7 +639,7 @@ const PART1_EXPANSION_POOL = [
   },
   {
     topic: "Action Potential Propagation",
-    question: "Structure/condition: Local anesthetic. Key mechanism and outcome?",
+    question: "For this condition (Local anesthetic), which mechanism and outcome best match the scenario?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -925,7 +925,7 @@ const PART1_EXPANSION_POOL = [
   },
   {
     topic: "Electrical Signaling",
-    question: "Which description best applies to Resting V_m is −70 mV. A subthreshold EPSP peaks at −70 + 4 mV. This EPSP?",
+    question: "Which statement best describes Resting V_m is −70 mV. A subthreshold EPSP peaks at −70 + 4 mV. This EPSP?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -951,7 +951,7 @@ const PART1_EXPANSION_POOL = [
   },
   {
     topic: "Electrical Signaling",
-    question: "Which description best applies to Resting V_m is −70 mV. A subthreshold EPSP peaks at −70 + 9 mV. This EPSP?",
+    question: "Which statement best describes Resting V_m is −70 mV. A subthreshold EPSP peaks at −70 + 9 mV. This EPSP?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -977,7 +977,7 @@ const PART1_EXPANSION_POOL = [
   },
   {
     topic: "Electrical Signaling",
-    question: "Which description best applies to Resting V_m is −70 mV. A subthreshold EPSP peaks at −70 + 14 mV. This EPSP?",
+    question: "Which statement best describes Resting V_m is −70 mV. A subthreshold EPSP peaks at −70 + 14 mV. This EPSP?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -1393,7 +1393,7 @@ const PART1_EXPANSION_POOL = [
   },
   {
     topic: "Passive Membrane Properties",
-    question: "When Increasing extracellular K⁺ (without changing intracellular K⁺), which effect on membrane potential is most likely?",
+    question: "When Increasing extracellular K⁺ (without changing intracellular K⁺) occurs, which change in membrane potential is most likely?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -1965,7 +1965,7 @@ const PART1_EXPANSION_POOL = [
   },
   {
     topic: "Resting Potential",
-    question: "When A selective increase in P_Cl with E_Cl below rest, which effect on membrane potential is most likely?",
+    question: "If A selective increase is active in P_Cl with E_Cl below rest, which change in membrane potential is most likely?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -2017,7 +2017,7 @@ const PART1_EXPANSION_POOL = [
   },
   {
     topic: "Electrical Signaling",
-    question: "Which description best applies to Cable theory predicts dendritic EPSPs recorded at the soma?",
+    question: "Which statement best describes Cable theory predicts dendritic EPSPs recorded at the soma?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -3112,7 +3112,7 @@ const PART2_EXPANSION_POOL = [
   },
   {
     topic: "Chemical Synapses",
-    question: "Which description best applies to Nicotinic ACh receptors at the NMJ?",
+    question: "Which statement best describes Nicotinic ACh receptors at the NMJ?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -3944,7 +3944,7 @@ const PART2_EXPANSION_POOL = [
   },
   {
     topic: "Neuromodulation",
-    question: "When Norepinephrine in arousal networks, which effect on membrane potential is most likely?",
+    question: "When Norepinephrine is active in arousal networks, which effect on neural circuit function is most likely?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -4961,7 +4961,7 @@ const PART3_EXPANSION_POOL = [
   },
   {
     topic: "Learning & Memory",
-    question: "Which description best applies to Following extensive hippocampal injury in adults, the ability to form new memories?",
+    question: "Which statement best describes Following extensive hippocampal injury in adults, the ability to form new memories?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -5270,7 +5270,7 @@ const PART3_EXPANSION_POOL = [
   },
   {
     topic: "Auditory Pathway",
-    question: "Which description best applies to For localizing high-frequency sounds, a dominant cue?",
+    question: "Which statement best describes For localizing high-frequency sounds, a dominant cue?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -5400,7 +5400,7 @@ const PART3_EXPANSION_POOL = [
   },
   {
     topic: "Gustation",
-    question: "Which description best applies to Different taste qualities (sweet, salty, sour, bitter, umami)?",
+    question: "Which statement best describes Different taste qualities (sweet, salty, sour, bitter, umami)?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -6206,7 +6206,7 @@ const PART3_EXPANSION_POOL = [
   },
   {
     topic: "Motor Systems",
-    question: "When The direct pathway of the basal ganglia (striatum → GPi/SNr), which effect on membrane potential is most likely?",
+    question: "When direct pathway of the basal ganglia (striatum → GPi/SNr) is active, which effect on neural circuit function is most likely?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",

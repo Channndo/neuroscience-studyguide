@@ -111,10 +111,126 @@
     );
   }
 
+  function clauseWithVerb(clause) {
+    let c = String(clause || "")
+      .trim()
+      .replace(/^When\s+/i, "")
+      .replace(/^The\s+/i, "")
+      .replace(/^If\s+/i, "if ");
+    if (/\b(is|are|was|were|acts|increases|decreases|released|binds|blocks|opens|elevated|active|occurs)\b/i.test(c)) {
+      return c;
+    }
+    const inMatch = c.match(/^(.+?)\s+in\s+(.+)$/i);
+    if (inMatch && !/\b(is|are)\b/i.test(c)) {
+      return `${inMatch[1].trim()} is active in ${inMatch[2].trim()}`;
+    }
+    if (/activity$/i.test(c)) return `${c} increases`;
+    if (/^increasing\s+/i.test(c)) return `${c} occurs`;
+    if (/^adding\s+/i.test(c)) {
+      return `${c.replace(/^adding\s+/i, "").trim()} increases`;
+    }
+    if (/^opening\s+/i.test(c)) return c;
+    if (/^a selective/i.test(c)) return c;
+    if (/^direct pathway/i.test(c)) return `${c} is active`;
+    return c;
+  }
+
+  function repairBrokenStem(s, q) {
+    let t = String(s || "").trim();
+    const topic = String(q?.topic || "");
+
+    const struct = t.match(/^Structure\/condition:\s*(.+?)\.\s*Key (mechanism|process) and outcome\??$/i);
+    if (struct) {
+      const cond = struct[1].trim().replace(/^the\s+/i, "");
+      return ensureQuestionMark(
+        `For this condition (${cond}), which mechanism and outcome best match the scenario`
+      );
+    }
+
+    const brokenWhenVm = t.match(/^When (.+),\s*which effect on membrane potential is most likely\??$/i);
+    if (brokenWhenVm) {
+      const clause = clauseWithVerb(brokenWhenVm[1]);
+      const ctx = `${topic} ${clause}`.toLowerCase();
+      const circuit =
+        /neuromodulation|arousal|norepinephrine|acetylcholine|wake|basal ganglia|direct pathway|cortex during|motor output/i.test(
+          ctx
+        );
+      const biophysical =
+        /ouabain|pump|conductance|channel|k⁺|na⁺|cl⁻|e_|v_m|p_|gaba|opening|adding|selective increase|extracellular k/i.test(
+          ctx
+        );
+      if (circuit && !biophysical) {
+        return ensureQuestionMark(`When ${clause}, which effect on neural circuit function is most likely`);
+      }
+      if (/^adding\s+|^opening\s+|^a selective|^if\s+/i.test(clause) || /^if\s+/i.test(brokenWhenVm[1])) {
+        const body = clause.replace(/^if\s+/i, "").trim();
+        return ensureQuestionMark(`If ${body}, which change in membrane potential is most likely`);
+      }
+      if (/ouabain|pump|atpase/i.test(clause)) {
+        return ensureQuestionMark(
+          `When ${clause}, which change in resting membrane potential is most likely over time`
+        );
+      }
+      return ensureQuestionMark(`When ${clause}, which change in membrane potential is most likely`);
+    }
+
+    if (/^When The\s+/i.test(t)) {
+      t = t.replace(/^When The\s+/i, "When ");
+    }
+    if (/^When If\s+/i.test(t)) {
+      t = t.replace(/^When If\s+/i, "If ");
+    }
+    if (/\.\s*Over time this,/i.test(t)) {
+      t = t.replace(/\.\s*Over time this,/i, ", over time,");
+    }
+
+    const applies = t.match(/^Which description best applies to (.+)\?$/i);
+    if (applies) {
+      let subj = applies[1].trim().replace(/^The\s+/i, "");
+      if (/^For a positively charged ion/i.test(subj)) {
+        return ensureQuestionMark(
+          "For a cation with higher extracellular than intracellular concentration, what is the sign of E_ion at equilibrium"
+        );
+      }
+      if (/^For an anion like Cl⁻/i.test(subj) || /^For an anion like Cl-/i.test(subj)) {
+        return ensureQuestionMark(
+          "For Cl⁻ with higher internal than external concentration, what is the relative value of E_Cl"
+        );
+      }
+      if (/^For a cation with equal intracellular and extracellular concentrations/i.test(subj)) {
+        return ensureQuestionMark("If inside and outside concentrations are equal, what is the Nernst equilibrium potential");
+      }
+      if (/primary cation with highest permeability at rest/i.test(subj)) {
+        return ensureQuestionMark("Which ion has the highest resting membrane permeability in most neurons");
+      }
+      if (/^Glycine receptors/i.test(subj)) {
+        return ensureQuestionMark(`Which statement best describes ${subj}`);
+      }
+      if (/^Nicotinic acetylcholine receptors/i.test(subj)) {
+        return ensureQuestionMark(`Which statement best describes ${subj}`);
+      }
+      if (/^A major advantage of electrical synapses/i.test(subj)) {
+        return ensureQuestionMark("What is a major advantage of electrical synapses over chemical synapses");
+      }
+      return ensureQuestionMark(`Which statement best describes ${subj}`);
+    }
+
+  const givenNernst = t.match(/^Given Nernst scenario:\s*(.+),\s*which change in equilibrium potential is expected\??$/i);
+    if (givenNernst) {
+      const scenario = givenNernst[1].trim();
+      return ensureQuestionMark(
+        `Using the Nernst relation, if ${scenario.charAt(0).toLowerCase()}${scenario.slice(1)}, how does equilibrium potential change`
+      );
+    }
+
+    return t;
+  }
+
   function polishStem(question, q) {
     let s = stripStemPrefix(question);
     s = stripGenericWrappers(s);
     if (!s) return s;
+    s = repairBrokenStem(s, q);
 
     const selectAll =
       q?.type === "selectAll" || /\bselect all\b/i.test(s);
@@ -206,9 +322,15 @@
 
     if (/\btends to:?$/i.test(s) && !s.includes("?")) {
       const topic = s.replace(/\s+tends to:?$/i, "").trim();
-      return ensureQuestionMark(
-        `When ${topic}, which effect on membrane potential is most likely`
-      );
+      const clause = clauseWithVerb(topic);
+      const ctx = `${q?.topic || ""} ${topic}`.toLowerCase();
+      if (/neuromodulation|arousal|norepinephrine|acetylcholine|wake|cortex|basal ganglia/i.test(ctx)) {
+        return ensureQuestionMark(`When ${clause}, which effect on neural circuit function is most likely`);
+      }
+      if (/conductance|channel|pump|ion|e_|v_m|k⁺|na⁺|cl⁻/i.test(topic)) {
+        return ensureQuestionMark(`When ${clause}, which change in membrane potential is most likely`);
+      }
+      return ensureQuestionMark(`When ${clause}, which outcome is most likely`);
     }
 
     if (/\bequals:?$/i.test(s) && !s.includes("?")) {

@@ -179,7 +179,7 @@ const PINNACLE_MEGA_POOL = [
   },
   {
     topic: "Cable Properties",
-    question: "Which description best applies to Passive cable: Doubling R_m with R_i fixed. The expected effect?",
+    question: "Which statement best describes Passive cable: Doubling R_m with R_i fixed. The expected effect?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -204,7 +204,7 @@ const PINNACLE_MEGA_POOL = [
   },
   {
     topic: "Cable Properties",
-    question: "Which description best applies to Passive cable: Doubling C_m with fixed g_leak. The expected effect?",
+    question: "Which statement best describes Passive cable: Doubling C_m with fixed g_leak. The expected effect?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -229,7 +229,7 @@ const PINNACLE_MEGA_POOL = [
   },
   {
     topic: "Cable Properties",
-    question: "Which description best applies to Passive cable: Increased axial resistance R_a. The expected effect?",
+    question: "Which statement best describes Passive cable: Increased axial resistance R_a. The expected effect?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -2229,7 +2229,7 @@ const PINNACLE_MEGA_POOL = [
   },
   {
     topic: "Pharmacology",
-    question: "When Ethanol potentiates GABA_A and inhibits NMDA; at high dose this, which effect on membrane potential is most likely?",
+    question: "When Ethanol potentiates GABA_A and inhibits NMDA; at high dose this, which change in membrane potential is most likely?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -2729,7 +2729,7 @@ const PINNACLE_MEGA_POOL = [
   },
   {
     topic: "Pharmacology",
-    question: "Which description best applies to D-AP5 blocks NMDA receptors; pairing-induced hippocampal LTP?",
+    question: "Which statement best describes D-AP5 blocks NMDA receptors; pairing-induced hippocampal LTP?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -3029,7 +3029,7 @@ const PINNACLE_MEGA_POOL = [
   },
   {
     topic: "Neural Circuits",
-    question: "Which description best applies to The trisynaptic hippocampal circuit order?",
+    question: "Which statement best describes trisynaptic hippocampal circuit order?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -5026,7 +5026,7 @@ const PINNACLE_MEGA_POOL = [
   },
   {
     topic: "Motor Systems",
-    question: "Which description best applies to Stretch reflex (myotatic)?",
+    question: "Which statement best describes Stretch reflex (myotatic)?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -7001,7 +7001,7 @@ const PINNACLE_MEGA_POOL = [
   },
   {
     topic: "Methods",
-    question: "Which description best applies to Multi-unit activity?",
+    question: "Which statement best describes Multi-unit activity?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",

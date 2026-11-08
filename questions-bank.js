@@ -1442,7 +1442,7 @@ const NEW_TIER1 = [
   },
   {
     topic: "Receptor Types",
-    question: "Which description best applies to Nicotinic acetylcholine receptors at the neuromuscular junction?",
+    question: "Which statement best describes Nicotinic acetylcholine receptors at the neuromuscular junction?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -1858,7 +1858,7 @@ const NEW_TIER1 = [
   },
   {
     topic: "Resting Potential",
-    question: "Which description best applies to The primary cation with highest permeability at rest in most neurons?",
+    question: "Which ion has the highest resting membrane permeability in most neurons?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -1884,7 +1884,7 @@ const NEW_TIER1 = [
   },
   {
     topic: "Nernst Equation",
-    question: "Which description best applies to For a positively charged ion, if extracellular concentration exceeds intracellular concentration, E_ion?",
+    question: "For a cation with higher extracellular than intracellular concentration, what is the sign of E_ion at equilibrium?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -3473,7 +3473,7 @@ const NEW_TIER2 = [
   },
   {
     topic: "Receptor Types",
-    question: "Which description best applies to Glycine receptors at spinal inhibitory synapses?",
+    question: "Which statement best describes Glycine receptors at spinal inhibitory synapses?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -3785,7 +3785,7 @@ const NEW_TIER2 = [
   },
   {
     topic: "Electrical Synapses",
-    question: "Which description best applies to A major advantage of electrical synapses over chemical synapses?",
+    question: "What is a major advantage of electrical synapses over chemical synapses?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -3944,7 +3944,7 @@ const NEW_TIER3 = [
   },
   {
     topic: "Nernst Equation",
-    question: "Which description best applies to For a cation with equal intracellular and extracellular concentrations, the Nernst potential?",
+    question: "If inside and outside concentrations are equal, what is the Nernst equilibrium potential?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -5819,7 +5819,7 @@ const NEW_TIER4 = [
   },
   {
     topic: "Synaptic Transmission",
-    question: "Which description best applies to Glycine receptors in spinal circuits?",
+    question: "Which statement best describes Glycine receptors in spinal circuits?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -7379,7 +7379,7 @@ const NEW_TIER4 = [
   },
   {
     topic: "Nernst Equation",
-    question: "Which description best applies to For an anion like Cl⁻ with higher internal than external concentration, E_Cl?",
+    question: "For Cl⁻ with higher internal than external concentration, what is the relative value of E_Cl?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -7795,7 +7795,7 @@ const NEW_TIER4 = [
   },
   {
     topic: "Motor Systems",
-    question: "When Basal ganglia direct pathway activity, which effect on membrane potential is most likely?",
+    question: "When Basal ganglia direct pathway activity increases, which effect on neural circuit function is most likely?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",

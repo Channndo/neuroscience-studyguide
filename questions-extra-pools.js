@@ -1121,7 +1121,7 @@ const PART1_EXTRA_POOL = [
   },
   {
     topic: "Pharmacology",
-    question: "When Ouabain blocks the Na⁺/K⁺ pump and over time, which effect on membrane potential is most likely?",
+    question: "When Ouabain blocks the Na⁺/K⁺ pump and over time, which change in resting membrane potential is most likely over time?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -1514,7 +1514,7 @@ const PART2_EXTRA_POOL = [
   },
   {
     topic: "Receptor Types",
-    question: "Which description best applies to Nicotinic ACh receptors at the neuromuscular junction?",
+    question: "Which statement best describes Nicotinic ACh receptors at the neuromuscular junction?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -2476,7 +2476,7 @@ const PART2_EXTRA_POOL = [
   },
   {
     topic: "Circuit Modulation",
-    question: "When Acetylcholine in cortex during wakefulness, which effect on membrane potential is most likely?",
+    question: "When Acetylcholine is active in cortex during wakefulness, which effect on neural circuit function is most likely?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -2892,7 +2892,7 @@ const PART3_EXTRA_POOL = [
   },
   {
     topic: "Pain",
-    question: "Which description best applies to Nociceptive Aδ fibers?",
+    question: "Which statement best describes Nociceptive Aδ fibers?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",

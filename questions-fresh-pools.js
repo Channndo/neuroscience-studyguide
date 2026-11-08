@@ -159,7 +159,7 @@ const PART1_FRESH_POOL = [
   },
   {
     topic: "Resting Potential",
-    question: "When Ouabain inhibits the Na⁺/K⁺ ATPase. Over time this, which effect on membrane potential is most likely?",
+    question: "When Ouabain inhibits the Na⁺/K⁺ ATPase. Over time this, which change in resting membrane potential is most likely over time?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -341,7 +341,7 @@ const PART1_FRESH_POOL = [
   },
   {
     topic: "Electrical Signaling",
-    question: "Which description best applies to The rheobase of a neuron?",
+    question: "Which statement best describes rheobase of a neuron?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -734,7 +734,7 @@ const PART2_FRESH_POOL = [
   },
   {
     topic: "Synaptic Transmission",
-    question: "Which description best applies to The readily releasable pool of vesicles?",
+    question: "Which statement best describes readily releasable pool of vesicles?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -1988,7 +1988,7 @@ const PART1_FRESH_POOL_2 = [
   },
   {
     topic: "Goldman Equation",
-    question: "When Adding Cl- conductance when E_Cl is below V_m, which effect on membrane potential is most likely?",
+    question: "If Adding Cl- conductance when E_Cl is below V_m, which change in membrane potential is most likely?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -2199,7 +2199,7 @@ const PART2_FRESH_POOL_2 = [
   },
   {
     topic: "Receptor Types",
-    question: "Which description best applies to GABA<sub>A</sub> receptors?",
+    question: "Which statement best describes GABA<sub>A</sub> receptors?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -2433,7 +2433,7 @@ const PART2_FRESH_POOL_2 = [
   },
   {
     topic: "Neuromuscular Junction",
-    question: "Which description best applies to End-plate potential?",
+    question: "Which statement best describes End-plate potential?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
@@ -2982,7 +2982,7 @@ const PART3_FRESH_POOL_2 = [
   },
   {
     topic: "Basal Ganglia",
-    question: "When Direct pathway in basal ganglia, which effect on membrane potential is most likely?",
+    question: "When Direct pathway is active in basal ganglia, which effect on neural circuit function is most likely?",
     reviewStatus: "verified",
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",

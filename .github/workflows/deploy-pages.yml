@@ -29,6 +29,9 @@ jobs:
       - name: Copy-polish regression
         run: node scripts/test-question-copy-polish.mjs
 
+      - name: Question stem repair check
+        run: node scripts/repair-question-stems.mjs
+
       - name: Quiz timer contract
         run: node scripts/test-quiz-timer-logic.mjs
 
