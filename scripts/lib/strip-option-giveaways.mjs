@@ -47,6 +47,13 @@ export const OPTION_GIVEAWAY_RES = [
   /^during normal resting permeability conditions\.?$/gi,
   /\s+exclusively in this context\.?/gi,
   /\s+—\s*misstates how R_m, C_m, or geometry set τ or λ\.?/gi,
+  /\s+in the context described in the stem\.?/gi,
+  /\s+for the membrane process named above\.?/gi,
+  /\s+before voltage-gated conductances dominate\.?/gi,
+  /\s+when only leak channels are considered\.?/gi,
+  /\s+under physiological ion concentrations\.?/gi,
+  /\s+relative to resting membrane conditions\.?/gi,
+  /\s+ at 37\s*°C$/gi,
 ];
 
 const REQUIRES_PREFIX =

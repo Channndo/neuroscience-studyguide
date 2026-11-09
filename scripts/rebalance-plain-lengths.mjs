@@ -1,143 +1,39 @@
 #!/usr/bin/env node
 /**
  * Reduce "longest option = correct" giveaway without filler suffixes.
- * Trims verbose keyed options; lengthens distractors with plain clinical/mechanistic phrases.
  */
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { balanceMcqOptions, isKeyedLongest, optionLen } from "./lib/balance-option-lengths.mjs";
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 
 const TARGET_FILES = /^questions.*\.js$/;
 
-const CLINICAL_PADS = [
-  " with contralateral sensory findings",
-  " without cortical language involvement",
-  " matching a peripheral nerve distribution",
-  " suggesting brainstem rather than hemispheric origin",
-  " with preserved proprioception and vibration sense",
-  " and no homonymous visual field defect",
-];
-
-const MECH_PADS = [
-  " under standard whole-cell recording conditions",
-  " with ion concentrations held at physiological values",
-  " when only leak conductances dominate",
-  " before voltage-gated channels activate",
-];
-
-function len(s) {
-  return String(s || "").replace(/<[^>]+>/g, "").trim().length;
-}
-
-function isLongestCorrect(q) {
-  const lens = q.options.map(len);
-  const cLen = lens[q.correct];
-  const maxLen = Math.max(...lens);
-  return cLen === maxLen && lens.filter(l => l === maxLen).length === 1;
-}
-
-function trimCorrectText(opt) {
-  let t = String(opt).trim();
-  const parts = t.split(/\s*;\s*/);
-  if (parts.length > 1 && len(parts[0]) >= 22) t = parts[0];
-  if (len(t) > 48 && /,/.test(t)) t = t.split(",")[0].trim();
-  t = t.replace(/\s*\([^)]{15,}\)\s*$/, "").trim();
-  t = t.replace(/\s*—[^—]{12,}$/, "").trim();
-  return t;
-}
-
-function padWrongPlain(opt, topic, targetLen) {
-  let t = String(opt).trim();
-  if (len(t) >= targetLen) return t;
-  if (/^Only /i.test(t)) {
-    const rest = t.replace(/^Only /i, "").replace(/\.$/, "").trim();
-    t = rest ? `Main mechanism: ${rest.charAt(0).toLowerCase()}${rest.slice(1)}` : t;
-  }
-  const pads = /lesion|stroke|weakness|aphasia|hemianopia|ataxia|Motor|Visual|Neuroanatomy|Clinical/i.test(
-    `${topic} ${opt}`
-  )
-    ? CLINICAL_PADS
-    : MECH_PADS;
-  let i = len(t) % pads.length;
-  while (len(t) < targetLen && i < pads.length + 6) {
-    t = `${t}${pads[i % pads.length]}.`.replace(/\.\./g, ".");
-    i++;
-  }
-  return t.replace(/\s{2,}/g, " ").trim();
-}
-
 function normalizeMvOptions(options, correct) {
   const mvRe = /^[−-]?\s*~?\s*(\d+(?:\.\d+)?)\s*mV/i;
   if (!options.every(o => mvRe.test(String(o).trim()))) return null;
-  const target = Math.max(...options.map(len));
+  const target = Math.max(...options.map(optionLen));
   return options.map((o, i) => {
     if (i === correct) return String(o).trim();
-    const m = String(o).match(mvRe);
-    if (!m) return o;
-    const padded = `≈ ${String(o).trim().replace(/^≈\s*/, "")}`;
-    if (len(padded) < target - 2) return `${padded} (same units as E_ion)`;
-    return padded;
+    let t = `≈ ${String(o).trim().replace(/^≈\s*/, "")}`;
+    if (optionLen(t) < target - 2) t = `${t} at 37 °C`;
+    return t;
   });
-}
-
-function swapCorrectWithShorterDistractor(q) {
-  if (!isLongestCorrect(q)) return false;
-  let minI = -1;
-  let minL = Infinity;
-  for (let i = 0; i < q.options.length; i++) {
-    if (i === q.correct) continue;
-    if (!String(q.options[i] || "").trim()) continue;
-    const l = len(q.options[i]);
-    if (l < minL) {
-      minL = l;
-      minI = i;
-    }
-  }
-  if (minI < 0 || minL < 8) return false;
-  const ci = q.correct;
-  [q.options[ci], q.options[minI]] = [q.options[minI], q.options[ci]];
-  q.correct = minI;
-  if (Array.isArray(q.wrongExplanations)) {
-    [q.wrongExplanations[ci], q.wrongExplanations[minI]] = [
-      q.wrongExplanations[minI] || "",
-      q.wrongExplanations[ci] || "",
-    ];
-  }
-  return true;
 }
 
 function rebalanceQuestion(q) {
   if (!q?.options?.length || q.correct == null || q.type === "selectAll") return false;
-  if (!isLongestCorrect(q)) return false;
+  if (!isKeyedLongest(q)) return false;
 
-  let changed = false;
   const mvNorm = normalizeMvOptions(q.options, q.correct);
-  if (mvNorm) {
-    q.options = mvNorm;
-    changed = true;
-    if (!isLongestCorrect(q)) return changed;
-  }
+  if (mvNorm) q.options = mvNorm;
 
-  const trimmed = trimCorrectText(q.options[q.correct]);
-  if (trimmed !== q.options[q.correct]) {
-    q.options[q.correct] = trimmed;
-    changed = true;
-  }
-
-  if (!isLongestCorrect(q)) return changed;
-
-  const target = Math.max(len(q.options[q.correct]) - 4, 32);
-  q.options = q.options.map((opt, i) => {
-    if (i === q.correct) return opt;
-    if (len(opt) >= target) return opt;
-    const next = padWrongPlain(opt, q.topic, target);
-    if (next !== opt) changed = true;
-    return next;
-  });
-  if (isLongestCorrect(q) && swapCorrectWithShorterDistractor(q)) changed = true;
-  return changed;
+  const before = JSON.stringify(q.options);
+  const balanced = balanceMcqOptions(q);
+  q.options = balanced.options;
+  return before !== JSON.stringify(q.options);
 }
 
 function loadFilePools(file) {

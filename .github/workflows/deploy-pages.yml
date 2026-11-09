@@ -32,6 +32,9 @@ jobs:
       - name: Formula hint fraction layout
         run: node scripts/test-formula-hint-format.mjs
 
+      - name: MCQ option length balance
+        run: node scripts/test-option-length-balance.mjs
+
       - name: Question stem repair check
         run: node scripts/repair-question-stems.mjs
 

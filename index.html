@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="mcb80x-bank-build" content="20251108d">
+  <meta name="mcb80x-bank-build" content="20251108f">
   <link rel="icon" href="favicon.svg" type="image/svg+xml" sizes="any">
   <link rel="alternate icon" href="favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -3518,26 +3518,26 @@
   </div>
 
   <footer>
-    Fisher-Yates shuffle on every quiz start &middot; HarvardX MCB80x curriculum alignment &middot; bank build 20251108d
+    Fisher-Yates shuffle on every quiz start &middot; HarvardX MCB80x curriculum alignment &middot; bank build 20251108f
     &middot; <button type="button" class="footer-link-btn" id="footer-go-downloads">Downloads</button>
   </footer>
 
-  <script src="question-copy-polish.js?v=20251108d"></script>
-  <script src="mcb80x-pipeline.js?v=20251108d"></script>
-  <script src="mcb80x-learning.js?v=20251108d"></script>
-  <script src="mcb80x-verified-registry.js?v=20251108d"></script>
-  <script src="explanation-feedback.js?v=20251108d"></script>
-  <script src="questions-bank.js?v=20251108d"></script>
-  <script src="questions-extra-pools.js?v=20251108d"></script>
-  <script src="questions-fresh-pools.js?v=20251108d"></script>
-  <script src="questions-expansion.js?v=20251108d"></script>
-  <script src="questions-exam-paraphrases.js?v=20251108d"></script>
-  <script src="questions-written-final.js?v=20251108d"></script>
-  <script src="questions-proctored-mock.js?v=20251108d"></script>
-  <script src="questions-formula-drills.js?v=20251108d"></script>
-  <script src="questions-pinnacle-megabank.js?v=20251108d"></script>
-  <script src="brain-anatomy-diagrams.js?v=20251108d"></script>
-  <script src="questions-brain-anatomy.js?v=20251108d"></script>
+  <script src="question-copy-polish.js?v=20251108f"></script>
+  <script src="mcb80x-pipeline.js?v=20251108f"></script>
+  <script src="mcb80x-learning.js?v=20251108f"></script>
+  <script src="mcb80x-verified-registry.js?v=20251108f"></script>
+  <script src="explanation-feedback.js?v=20251108f"></script>
+  <script src="questions-bank.js?v=20251108f"></script>
+  <script src="questions-extra-pools.js?v=20251108f"></script>
+  <script src="questions-fresh-pools.js?v=20251108f"></script>
+  <script src="questions-expansion.js?v=20251108f"></script>
+  <script src="questions-exam-paraphrases.js?v=20251108f"></script>
+  <script src="questions-written-final.js?v=20251108f"></script>
+  <script src="questions-proctored-mock.js?v=20251108f"></script>
+  <script src="questions-formula-drills.js?v=20251108f"></script>
+  <script src="questions-pinnacle-megabank.js?v=20251108f"></script>
+  <script src="brain-anatomy-diagrams.js?v=20251108f"></script>
+  <script src="questions-brain-anatomy.js?v=20251108f"></script>
   <script src="mcb80x-cloud-config.js"></script>
   <script src="sheets-sync.js"></script>
   <script src="oauth-client.js"></script>
@@ -3796,6 +3796,84 @@
       "Treats myelin length constant as the driver of Na⁺ and K⁺ conductance timing",
     ];
 
+    function optionTextLen(s) {
+      return String(s || "")
+        .replace(/<[^>]+>/g, "")
+        .trim()
+        .length;
+    }
+
+    function trimKeyedMcqOption(text) {
+      let t = String(text ?? "").trim();
+      if (optionTextLen(t) <= 44) return t;
+      const semi = t.split(/\s*;\s*/);
+      if (semi.length > 1 && optionTextLen(semi[0]) >= 20) return semi[0].trim();
+      const comma = t.match(/^(.{20,}?),/);
+      if (comma) return comma[1].trim();
+      const em = t.match(/^(.{18,}?)—/);
+      if (em) return em[1].trim();
+      const whilePart = t.split(/\s+while\s+/i);
+      if (whilePart.length > 1 && optionTextLen(whilePart[0]) >= 18) return whilePart[0].trim();
+      t = t.replace(/\s*\([^)]{12,}\)\s*$/, "").trim();
+      if (optionTextLen(t) > 48) {
+        const words = t.split(/\s+/);
+        let out = "";
+        for (const w of words) {
+          if (optionTextLen(`${out} ${w}`.trim()) > 48) break;
+          out = out ? `${out} ${w}` : w;
+        }
+        if (out) return out;
+      }
+      return t;
+    }
+
+    function topicMcqDistractorPads(topic, optionText) {
+      const t = `${topic || ""} ${optionText || ""}`.toLowerCase();
+      if (/\bmv\b|nernst|goldman|membrane potential|v_m|permeab|ion channel/.test(t)) {
+        return [" at mammalian body temperature", " with dominant K⁺ permeability at rest"];
+      }
+      if (/synap|neurotrans|receptor|epsp|ipsp/.test(t)) {
+        return [" at fast chemical synapses", " following presynaptic depolarization"];
+      }
+      if (/visual|retina|cochlea|somatosens|cortex|thalamus|brainstem|hippocamp/.test(t)) {
+        return [" in the adult human CNS", " via the major pathway named"];
+      }
+      return [" under typical experimental conditions", " at steady state in normoxic tissue"];
+    }
+
+    function padMcqDistractor(opt, topic, targetLen) {
+      let t = String(opt ?? "").trim();
+      if (optionTextLen(t) >= targetLen) return t;
+      const pads = topicMcqDistractorPads(topic, t);
+      let i = (optionTextLen(t) + String(topic || "").length) % pads.length;
+      for (let guard = 0; optionTextLen(t) < targetLen && guard < 3; guard++) {
+        const suffix = pads[i % pads.length];
+        if (!t.includes(suffix.trim())) t = `${t}${suffix}`.replace(/\s+/g, " ").trim();
+        i++;
+        if (optionTextLen(t) >= targetLen) break;
+      }
+      return t;
+    }
+
+    function balanceMcqOptionLengths(q) {
+      if (!q?.options?.length || q.correct == null || isSelectAllQuestion(q)) return q;
+      const lens = q.options.map(optionTextLen);
+      const ci = q.correct;
+      const cLen = lens[ci];
+      const maxWrong = Math.max(...lens.filter((_, i) => i !== ci));
+      if (cLen <= maxWrong) return q;
+      const opts = q.options.slice();
+      const trimmed = trimKeyedMcqOption(opts[ci]);
+      if (trimmed !== opts[ci]) opts[ci] = trimmed;
+      const cLen2 = optionTextLen(opts[ci]);
+      if (cLen2 <= maxWrong) return { ...q, options: opts };
+      const target = Math.max(Math.min(cLen2 - 2, maxWrong + 1), 30);
+      const next = opts.map((o, i) =>
+        i === ci ? o : padMcqDistractor(o, q.topic, Math.max(target, maxWrong))
+      );
+      return { ...q, options: next };
+    }
+
     function pickFallbackMcqOption(q, optionIndex) {
       const used = new Set((q.options || []).map(o => String(o).trim().toLowerCase()).filter(Boolean));
       const stem = `${q.topic || ""} ${q.question || ""}`;
@@ -3824,6 +3902,12 @@
       /\s+when temperature is near 37\s*°?C\.?/gi,
       /\s+during normal resting permeability conditions\.?/gi,
       /^during normal resting permeability conditions\.?$/gi,
+      /\s+in the context described in the stem\.?/gi,
+      /\s+for the membrane process named above\.?/gi,
+      /\s+before voltage-gated conductances dominate\.?/gi,
+      /\s+when only leak channels are considered\.?/gi,
+      /\s+under physiological ion concentrations\.?/gi,
+      /\s+relative to resting membrane conditions\.?/gi,
       /\s*\([^)]*ignores which ion dominates[^)]*\)/gi,
       /\s*\([^)]*misstates how R_m[^)]*\)/gi,
       /\s*\([^)]*misapplies how active propagation[^)]*\)/gi,
@@ -8349,8 +8433,8 @@
             explanation: q.modelAnswer
           };
         }
-        let surfaced = repairMissingMcqOptions(
-          applyExamSurfaceVariant(polishMcqQuestion(q), quizId)
+        let surfaced = balanceMcqOptionLengths(
+          repairMissingMcqOptions(applyExamSurfaceVariant(polishMcqQuestion(q), quizId))
         );
         surfaced = window.MCB80XVerifiedRegistry?.stampQuestion?.(surfaced) || surfaced;
         const indexed = surfaced.options.map((text, i) => ({ text, originalIndex: i }));

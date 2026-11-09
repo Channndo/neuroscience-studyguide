@@ -4,15 +4,7 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Nernst Equation",
     question: "Using the Nernst relation, if intracellular K⁺ is doubled, how does equilibrium potential change?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "E_K becomes more negative",
       "Often exactly 0 mV",
       "Unaffected by concentration",
@@ -31,18 +23,12 @@ const PART1_EXPANSION_POOL = [
     topic: "Nernst Equation",
     question: "Using the Nernst relation, if extracellular Na⁺ is doubled, how does equilibrium potential change?",
     options: [
-
-
-
-
-
-      "E_Na becomes more positive (≈ +18 mV per 2× [Na⁺]o at 37 °C)",
+      "E_Na becomes more positive",
       "E_Na becomes less positive (toward 0 mV)",
       "E_Na is unchanged because Na⁺ is not permeant",
       "E_Na shifts by exactly −61 mV regardless of the ion",
     ],
     correct: 0,
-    reviewStatus: "verified",
     explanation: "Doubling [Na⁺]_out increases log([Na⁺]_out/[Na⁺]_in), so E_Na moves more positive by ~61.54 mV×log10(2) ≈ +18.5 mV.",
     wrongExplanations: [
       "",
@@ -55,14 +41,12 @@ const PART1_EXPANSION_POOL = [
     topic: "Nernst Equation",
     question: "Using the Nernst relation, if extracellular Cl⁻ is increased, how does equilibrium potential change?",
     options: [
-
       "E_Cl shifts according to the anion Nernst relation (signed valence)",
       "E_Cl becomes more negative when [Cl⁻]o rises, with no dependence on concentration",
       "E_Cl is fixed at 0 mV in all neurons",
       "Chloride equilibrium is unaffected by transmembrane Cl⁻ gradients",
     ],
     correct: 0,
-    reviewStatus: "verified",
     explanation: "Concentration changes for Cl⁻ shift its equilibrium potential per the Nernst equation with the appropriate sign for anions.",
     wrongExplanations: [
       "",
@@ -75,14 +59,12 @@ const PART1_EXPANSION_POOL = [
     topic: "Nernst Equation",
     question: "Using the Nernst relation, if intracellular Ca²⁺ buffering lowers free Ca²⁺, how does equilibrium potential change?",
     options: [
-
       "E_Ca becomes more positive",
       "E_Ca becomes more negative",
       "E_Ca is unchanged when only bound (non-free) Ca²⁺ rises",
       "The Nernst equation does not apply to divalent cations",
     ],
     correct: 0,
-    reviewStatus: "verified",
     explanation: "Lowering free intracellular Ca²⁺ increases the effective out/in ratio for the permeant pool, shifting E_Ca toward more positive values.",
     wrongExplanations: [
       "",
@@ -94,19 +76,11 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Passive Membrane Properties",
     question: "If membrane leak conductance increases by ~10% (R_m falls) with unchanged geometry, the length constant λ typically?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Becomes shorter (less spatial spread)",
-      "Becomes infinitely long",
-      "Does not change ever",
-      "Converts dendrites to photoreceptors",
+      "Becomes infinitely long when homeostatic mechanisms are intact",
+      "Does not change ever when homeostatic mechanisms are intact",
+      "Converts dendrites to photoreceptors at fast chemical synapses",
     ],
     correct: 0,
     explanation: "Higher leak (lower R_m) shortens λ, attenuating signals faster with distance.",
@@ -120,19 +94,11 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Passive Membrane Properties",
     question: "If membrane leak conductance increases by ~40% (R_m falls) with unchanged geometry, the length constant λ typically?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Becomes shorter (less spatial spread)",
-      "Becomes infinitely long",
-      "Does not change ever",
-      "Converts dendrites to photoreceptors",
+      "Becomes infinitely long when homeostatic mechanisms are intact",
+      "Does not change ever when homeostatic mechanisms are intact",
+      "Converts dendrites to photoreceptors at fast chemical synapses",
     ],
     correct: 0,
     explanation: "Higher leak (lower R_m) shortens λ, attenuating signals faster with distance.",
@@ -146,15 +112,7 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Pharmacology",
     question: "Drug: TTX. Mechanism → outcome?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Blocks voltage-gated Na⁺ channels; Action potentials fail",
       "Opens photopigment",
       "Forms gap junctions in retina",
@@ -172,15 +130,7 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Pharmacology",
     question: "Drug: TEA. Mechanism → outcome?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Blocks many voltage-gated K⁺ channels",
       "Opens photopigment",
       "Forms gap junctions in retina",
@@ -198,16 +148,8 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Pharmacology",
     question: "Drug: Ouabain. Mechanism → outcome?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Inhibits Na⁺/K⁺ ATPase; Gradients run down; eventual depolarization",
+      "Inhibits Na⁺/K⁺ ATPase",
       "Opens photopigment",
       "Forms gap junctions in retina",
       "Assigns an unrelated sensory or synaptic mechanism to this context",
@@ -224,15 +166,7 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Pharmacology",
     question: "Drug: Lidocaine (use-dependent). Mechanism → outcome?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Preferentially blocks inactivated Na⁺ channels",
       "Opens photopigment",
       "Forms gap junctions in retina",
@@ -250,19 +184,11 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Patch Clamp",
     question: "The voltage clamp configuration is especially useful because it allows experimenters to?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "hold V_m constant and measure required current",
-      "Measure muscle force",
-      "Transduce sound in cochlea",
-      "Label glomeruli directly",
+      "hold V_m constant and measure required",
+      "Measure muscle force at steady state in normoxic tissue",
+      "Transduce sound in cochlea contralateral to monocular stimulation",
+      "Label glomeruli directly when homeostatic mechanisms are intact",
     ],
     correct: 0,
     explanation: "Voltage Clamp enables hold V_m constant and measure required current.",
@@ -276,19 +202,11 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Patch Clamp",
     question: "The current clamp configuration is especially useful because it allows experimenters to?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "inject current and record V_m changes",
-      "Measure muscle force",
-      "Transduce sound in cochlea",
-      "Label glomeruli directly",
+      "Measure muscle force at steady state in normoxic tissue",
+      "Transduce sound in cochlea contralateral to monocular stimulation",
+      "Label glomeruli directly when homeostatic mechanisms are intact",
     ],
     correct: 0,
     explanation: "Current Clamp enables inject current and record V_m changes.",
@@ -302,19 +220,11 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Patch Clamp",
     question: "The cell-attached patch configuration is especially useful because it allows experimenters to?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "record single-channel openings in a membrane patch",
-      "Measure muscle force",
-      "Transduce sound in cochlea",
-      "Label glomeruli directly",
+      "record single-channel openings in a",
+      "Measure muscle force at steady state in normoxic tissue",
+      "Transduce sound in cochlea contralateral to monocular stimulation",
+      "Label glomeruli directly when homeostatic mechanisms are intact",
     ],
     correct: 0,
     explanation: "Cell-Attached Patch enables record single-channel openings in a membrane patch.",
@@ -328,15 +238,7 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Electrical Signaling",
     question: "A neuron at -70 mV receives a +5 mV EPSP that remains subthreshold. Approximate peak V_m?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "-65 mV",
       "40 mV",
       "Exactly E_Na",
@@ -354,15 +256,7 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Electrical Signaling",
     question: "A neuron at -70 mV receives a +8 mV EPSP that remains subthreshold. Approximate peak V_m?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "-62 mV",
       "40 mV",
       "Exactly E_Na",
@@ -380,15 +274,7 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Electrical Signaling",
     question: "A neuron at -70 mV receives a +12 mV EPSP that remains subthreshold. Approximate peak V_m?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "-58 mV",
       "40 mV",
       "Exactly E_Na",
@@ -406,15 +292,7 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Electrical Signaling",
     question: "A neuron at -70 mV receives a +15 mV EPSP that remains subthreshold. Approximate peak V_m?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "-55 mV",
       "40 mV",
       "Exactly E_Na",
@@ -432,15 +310,7 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Electrical Signaling",
     question: "A neuron at -70 mV receives a +20 mV EPSP that remains subthreshold. Approximate peak V_m?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "-50 mV",
       "40 mV",
       "Exactly E_Na",
@@ -458,16 +328,8 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Action Potentials",
     question: "During the threshold period/mechanism?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Net inward current exceeds outward current initiating regenerative Na⁺ entry",
+      "Net inward current exceeds outward current",
       "Myelin is synthesized in the soma",
       "Myelin on the inner segment sets receptor potential",
       "Photoreceptors depolarize to light",
@@ -484,15 +346,7 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Action Potentials",
     question: "During the absolute refractory period/mechanism?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Many Na⁺ channels inactivated",
       "Myelin is synthesized in the soma",
       "Main mechanism: gABA is released globally",
@@ -510,15 +364,7 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Action Potentials",
     question: "During the relative refractory period/mechanism?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Partial recovery requires stronger stimulus",
       "Myelin is synthesized in the soma",
       "Describes synaptic machinery unrelated to the membrane process in the stem",
@@ -536,15 +382,7 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Action Potentials",
     question: "During the afterhyperpolarization period/mechanism?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Delayed K⁺ (and sometimes Ca²⁺-activated K⁺) drives V_m below rest",
       "Myelin is synthesized in the soma",
       "Describes synaptic machinery unrelated to the membrane process in the stem",
@@ -562,16 +400,8 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Action Potential Propagation",
     question: "For this condition (Unmyelinated axon), which mechanism and outcome best match the scenario?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Active regeneration along membrane; Non-decremental propagation",
+      "Active regeneration along membrane",
       "Main mechanism: passive spread forever",
       "Main mechanism: cochlear tuning",
       "Main mechanism: lTP induction",
@@ -588,19 +418,11 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Action Potential Propagation",
     question: "For this condition (Myelinated axon), which mechanism and outcome best match the scenario?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Nodes of Ranvier concentrate Na⁺ channels; Saltatory conduction",
-      "Main mechanism: passive spread forever",
-      "Main mechanism: cochlear tuning",
-      "Main mechanism: lTP induction",
+      "Nodes of Ranvier concentrate Na⁺ channels",
+      "Main mechanism: passive spread forever during the rising phase of the spike",
+      "Main mechanism: cochlear tuning along a uniformly leaky cable",
+      "Main mechanism: lTP induction during the rising phase of the spike",
     ],
     correct: 0,
     explanation: "Myelinated axon: Nodes of Ranvier concentrate Na⁺ channels → Saltatory conduction.",
@@ -614,16 +436,8 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Action Potential Propagation",
     question: "For this condition (Cold temperature), which mechanism and outcome best match the scenario?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Slower channel kinetics; Reduced conduction velocity",
+      "Slower channel kinetics",
       "Main mechanism: passive spread forever",
       "Main mechanism: cochlear tuning",
       "Main mechanism: lTP induction",
@@ -640,16 +454,8 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Action Potential Propagation",
     question: "For this condition (Local anesthetic), which mechanism and outcome best match the scenario?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Na⁺ block in pain fibers; Loss of sensation in region",
+      "Na⁺ block in pain fibers",
       "Main mechanism: passive spread forever",
       "Main mechanism: cochlear tuning",
       "Main mechanism: lTP induction",
@@ -666,15 +472,7 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Goldman Equation",
     question: "Given: Only K⁺ leak channels open (no significant Na⁺ or Cl⁻ conductance). V_m is pulled toward?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "E_K (the K⁺ equilibrium potential)",
       "E_Na regardless of permeability",
       "Often 0 mV regardless of gradients",
@@ -692,16 +490,8 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Goldman Equation",
     question: "Given: Brief opening of Na⁺ channels during synaptic depolarization (K⁺ leak still present). V_m is pulled toward?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "A Goldman-weighted value between E_K and E_Na, closer to E_Na while Na⁺ conductance dominates",
+      "A Goldman-weighted value between E_K and E_Na",
       "E_K primarily, ignoring Na⁺ conductance",
       "Often 0 mV regardless of gradients",
       "The electrogenic pump reversal potential alone",
@@ -718,16 +508,8 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Goldman Equation",
     question: "Given: Increased Cl⁻ conductance with E_Cl below rest (K⁺ leak still present). V_m is pulled toward?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "A Goldman-weighted value between E_K and E_Cl, shifted more negative when g_Cl rises",
+      "A Goldman-weighted value between E_K and E_Cl",
       "E_Na regardless of chloride",
       "Often 0 mV regardless of gradients",
       "The electrogenic pump reversal potential alone",
@@ -744,16 +526,8 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Goldman Equation",
     question: "Given: Elevated extracellular K⁺ with unchanged intracellular K⁺ (dominant K⁺ leak). V_m is pulled toward?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "The new, less-negative E_K after the extracellular K⁺ increase",
+      "The new, less-negative E_K after the",
       "E_Na regardless of potassium",
       "Often 0 mV regardless of gradients",
       "The electrogenic pump reversal potential alone",
@@ -770,16 +544,8 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Passive Membrane Properties",
     question: "If leak conductance rises by 12% (R_m falls) with geometry unchanged, the length constant λ compared with baseline?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Shorter — signals attenuate faster with distance",
+      "Shorter — signals attenuate faster with",
       "Longer — signals spread farther",
       "Unchanged — λ seldom depends on R_m",
       "Infinite — passive spread without limit",
@@ -796,16 +562,8 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Passive Membrane Properties",
     question: "If leak conductance rises by 28% (R_m falls) with geometry unchanged, the length constant λ compared with baseline?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Shorter — signals attenuate faster with distance",
+      "Shorter — signals attenuate faster with",
       "Longer — signals spread farther",
       "Unchanged — λ seldom depends on R_m",
       "Infinite — passive spread without limit",
@@ -822,16 +580,8 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Passive Membrane Properties",
     question: "If leak conductance rises by 41% (R_m falls) with geometry unchanged, the length constant λ compared with baseline?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Shorter — signals attenuate faster with distance",
+      "Shorter — signals attenuate faster with",
       "Longer — signals spread farther",
       "Unchanged — λ seldom depends on R_m",
       "Infinite — passive spread without limit",
@@ -848,15 +598,7 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Passive Membrane Properties",
     question: "If membrane capacitance increases by 15% while R_m is held fixed, the time constant τ?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "~115% of baseline (τ = R_m C_m)",
       "Zero — voltage changes instantly",
       "Independent of C_m",
@@ -874,15 +616,7 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Passive Membrane Properties",
     question: "If membrane capacitance increases by 35% while R_m is held fixed, the time constant τ?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "~135% of baseline (τ = R_m C_m)",
       "Zero — voltage changes instantly",
       "Independent of C_m",
@@ -900,15 +634,7 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Passive Membrane Properties",
     question: "If membrane capacitance increases by 55% while R_m is held fixed, the time constant τ?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "~155% of baseline (τ = R_m C_m)",
       "Zero — voltage changes instantly",
       "Independent of C_m",
@@ -926,15 +652,7 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Electrical Signaling",
     question: "Which statement best describes Resting V_m is −70 mV. A subthreshold EPSP peaks at −70 + 4 mV. This EPSP?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Depolarizing by about 4 mV without reaching threshold",
       "Hyperpolarizing by 4 mV",
       "At E_Na (, 60 mV) — uses the wrong sign or driving force for ionic current.",
@@ -952,15 +670,7 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Electrical Signaling",
     question: "Which statement best describes Resting V_m is −70 mV. A subthreshold EPSP peaks at −70 + 9 mV. This EPSP?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Depolarizing by about 9 mV without reaching threshold",
       "Hyperpolarizing by 9 mV",
       "At E_Na (, 60 mV) — uses the wrong sign or driving force for ionic current.",
@@ -978,15 +688,7 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Electrical Signaling",
     question: "Which statement best describes Resting V_m is −70 mV. A subthreshold EPSP peaks at −70 + 14 mV. This EPSP?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Depolarizing by about 14 mV without reaching threshold",
       "Hyperpolarizing by 14 mV",
       "At E_Na (, 60 mV) — uses the wrong sign or driving force for ionic current.",
@@ -1004,16 +706,8 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Resting Potential",
     question: "Increasing membrane permeability to K⁺ alone (with gradients unchanged) moves V_m?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Closer to E_K (more negative in typical cells)",
+      "Closer to E_K",
       "To E_Na (, 60 mV)",
       "To exactly 0 mV",
       "Away from any ion equilibrium",
@@ -1030,15 +724,7 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Nernst Equation",
     question: "If intracellular Na⁺ rises while extracellular Na⁺ is fixed, E_Na shifts?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Less positive (toward 0 mV)",
       "More positive beyond, 100 mV",
       "To match E_K",
@@ -1056,16 +742,8 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Goldman Equation",
     question: "At rest, if P_Na << P_K, V_m is best described as?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Near E_K with a small depolarizing influence from Na⁺",
+      "Near E_K with a small depolarizing",
       "Exactly halfway between E_K and E_Na",
       "At E_Na because Na⁺ dominates",
       "Independent of ion gradients",
@@ -1082,19 +760,11 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Passive Membrane Properties",
     question: "Doubling dendrite diameter (uniform cylinder) typically?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Increases λ because internal axial resistance falls",
-      "Halves λ",
-      "Eliminates passive decay",
-      "Blocks voltage-gated channels",
+      "Increases λ because internal axial",
+      "Halves λ when homeostatic mechanisms are intact",
+      "Eliminates passive decay under typical experimental conditions",
+      "Blocks voltage-gated channels when homeostatic mechanisms are intact",
     ],
     correct: 0,
     explanation: "Larger diameter lowers R_i, lengthening the space constant.",
@@ -1108,16 +778,8 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Passive Membrane Properties",
     question: "Myelin on an axon primarily increases effective R_m locally, which?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Lengthens λ and reduces current leak per unit length",
+      "Lengthens λ and reduces current leak per unit",
       "Shortens λ by increasing capacitance",
       "Prevents all ion flow at nodes",
       "Converts active to purely graded signals forever",
@@ -1134,16 +796,8 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Electrical Signaling",
     question: "An IPSP that hyperpolarizes the soma from −70 mV to −75 mV will?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Increase the depolarization needed to reach threshold",
+      "Increase the depolarization needed to",
       "Guarantee an immediate action potential",
       "Set V_m to E_Na",
       "Block all K⁺ leak channels permanently",
@@ -1160,19 +814,11 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Action Potentials",
     question: "During the rising phase of a squid-giant-axon spike, the dominant current?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Inward Na⁺ through voltage-gated channels",
-      "Outward K⁺ through leak channels",
-      "Inward Cl⁻ through GABA receptors",
-      "Na⁺/K⁺ pump current reversing each ms",
+      "Outward K⁺ through leak channels with dominant K⁺ permeability at rest",
+      "Inward Cl⁻ through GABA receptors along a uniformly leaky cable",
+      "Na⁺/K⁺ pump current reversing each ms during the rising phase of the spike",
     ],
     correct: 0,
     explanation: "Voltage-gated Na⁺ entry drives rapid depolarization.",
@@ -1186,15 +832,7 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Action Potentials",
     question: "If voltage-gated K⁺ channels are blocked during a spike, you expect?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Prolonged repolarization and broader spikes",
       "No change in spike width",
       "Immediate loss of resting potential",
@@ -1212,15 +850,7 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Action Potential Propagation",
     question: "In saltatory conduction, action currents are regenerated chiefly at?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Nodes of Ranvier",
       "Myelin internodes",
       "Dendritic spines primarily",
@@ -1238,16 +868,8 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Patch Clamp",
     question: "Whole-cell patch clamp compared with cell-attached recording?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Controls V_m or I_m across the entire cell interior",
+      "Controls V_m or I_m across the entire cell",
       "Samples one ion species with no pipette access",
       "Measures muscle force transduction",
       "Replaces need for electrodes in cochlea",
@@ -1264,19 +886,11 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Pharmacology",
     question: "A drug that selectively increases K⁺ leak conductance at rest will tend to?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Hyperpolarize the cell and shorten λ",
-      "Depolarize toward E_Na",
-      "Block all synaptic vesicle fusion",
-      "Increase cochlear gain",
+      "Depolarize toward E_Na when Na⁺ inactivation has progressed",
+      "Block all synaptic vesicle fusion at fast chemical synapses",
+      "Increase cochlear gain contralateral to monocular stimulation",
     ],
     correct: 0,
     explanation: "More leak conductance lowers R_m, hyperpolarizing toward E_K and shortening λ.",
@@ -1290,15 +904,7 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Current Clamp",
     question: "What does Injecting a brief depolarizing current step in current clamp produce?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "A graded V_m change whose size depends on R_in",
       "An all-or-none spike even below threshold",
       "Direct measurement of single-channel conductance without noise",
@@ -1316,16 +922,8 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Voltage Clamp",
     question: "What does In voltage clamp, a downward step in command potential typically produce?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Inward (negative) clamp current if channels open during the step",
+      "Inward (negative) clamp current if",
       "Zero current because voltage is clamped",
       "Requires mechanical cochlear motion",
       "Irreversible LTP",
@@ -1342,16 +940,8 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Electrical Signaling",
     question: "Spatial summation is most effective when EPSPs arrive?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "At nearby sites on the dendritic tree within a short time window",
+      "At nearby sites on the dendritic tree",
       "At opposite ends of the axon",
       "After complete Na⁺ channel inactivation",
       "Main mechanism: at the axon terminal",
@@ -1368,19 +958,11 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Electrical Signaling",
     question: "Temporal summation fails when successive EPSPs are separated by?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Intervals much longer than the membrane time constant τ",
-      "Exactly one millisecond",
-      "The refractory period of muscle",
-      "The photopigment recovery cycle",
+      "Intervals much longer than the membrane",
+      "Exactly one millisecond at steady state in normoxic tissue",
+      "The refractory period of muscle under typical experimental conditions",
+      "The photopigment recovery cycle under typical experimental conditions",
     ],
     correct: 0,
     explanation: "If the second input arrives after decay, peaks do not add strongly.",
@@ -1394,19 +976,11 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Passive Membrane Properties",
     question: "When Increasing extracellular K⁺ (without changing intracellular K⁺) occurs, which change in membrane potential is most likely?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Depolarize neurons by shifting E_K and resting V_m",
-      "Hyperpolarize all cells to −90 mV",
-      "Block glutamate release",
-      "Eliminate tonotopy",
+      "Depolarize neurons by shifting E_K",
+      "Hyperpolarize all cells to −90 mV at mammalian body temperature",
+      "Block glutamate release when ligand-gated channels are open",
+      "Eliminate tonotopy under typical experimental conditions",
     ],
     correct: 0,
     explanation: "Raised external K⁺ makes E_K less negative, depolarizing cells toward threshold.",
@@ -1420,15 +994,7 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Action Potentials",
     question: "The absolute refractory period exists largely because?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Many Na⁺ channels remain inactivated",
       "Most K⁺ channels are permanently open",
       "Myelin is removed transiently",
@@ -1446,16 +1012,8 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Action Potential Propagation",
     question: "An axon with fewer functional Na⁺ channels per unit area will?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Conduct spikes more slowly or fail to propagate",
+      "Conduct spikes more slowly or fail to",
       "Often conduct faster via saltation",
       "Convert to purely electrical synapses",
       "Encode high-frequency sound better",
@@ -1472,16 +1030,8 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Nernst Equation",
     question: "For a cation with higher concentration outside than inside, E_ion is typically?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Positive (driving inward current at rest if permeable)",
+      "Positive",
       "Often negative",
       "Zero regardless of gradients",
       "Equal to pump reversal potential",
@@ -1498,19 +1048,11 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Goldman Equation",
     question: "If Cl⁻ channels open with E_Cl below rest, net Cl⁻ current at rest will?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Be inward (hyperpolarizing) until V_m approaches E_Cl",
-      "Often be outward",
-      "Be zero because Cl⁻ is impermeant",
-      "Depend on photopigment",
+      "Be inward (hyperpolarizing) until V_m",
+      "Often be outward if voltage-gated Na⁺ channels are inactivated",
+      "Be zero because Cl⁻ is impermeant with dominant K⁺ permeability at rest",
+      "Depend on photopigment if voltage-gated Na⁺ channels are inactivated",
     ],
     correct: 0,
     explanation: "When V_m is above E_Cl, Cl⁻ enters and hyperpolarizes.",
@@ -1524,16 +1066,8 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Electrical Signaling",
     question: "Shunting inhibition works in part by?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Lowering input resistance so EPSPs produce smaller V_m changes",
+      "Lowering input resistance so EPSPs produce",
       "Increasing R_m to amplify EPSPs",
       "Opening Na⁺ channels at the axon hillock",
       "Converting spikes to graded release mainly in retina",
@@ -1550,16 +1084,8 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Passive Membrane Properties",
     question: "A longer λ with unchanged τ implies subthreshold signals?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Spread farther electrotonically before decaying",
+      "Spread farther electrotonically before",
       "Decay faster in time",
       "Often trigger spikes at distant synapses",
       "Is unlikely in dendrites",
@@ -1576,16 +1102,8 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Pharmacology",
     question: "Local anesthetics preferentially block small-diameter pain fibers partly because?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Use-dependent block accumulates in actively firing fibers",
+      "Use-dependent block accumulates in",
       "Pain fibers lack voltage-gated Na⁺",
       "Anesthetics open NMDA receptors",
       "Pain fibers are purely passive",
@@ -1602,15 +1120,7 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Resting Potential",
     question: "The Na⁺/K⁺ ATPase contributes to resting V_m mainly by?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Maintaining ion gradients that set E_K and E_Na",
       "Directly clamping V_m to, 60 mV",
       "Replacing all leak conductance",
@@ -1628,19 +1138,11 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Action Potentials",
     question: "Threshold is best defined as the V_m at which?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Regenerative Na⁺ entry exceeds opposing currents",
-      "K⁺ channels are fully closed forever",
-      "The cell reaches E_Na instantly",
-      "Myelin thickness changes",
+      "Regenerative Na⁺ entry exceeds opposing",
+      "K⁺ channels are fully closed forever along a uniformly leaky cable",
+      "The cell reaches E_Na instantly during the rising phase of the spike",
+      "Myelin thickness changes along a uniformly leaky cable",
     ],
     correct: 0,
     explanation: "Positive feedback from Na⁺ channels initiates the all-or-none spike.",
@@ -1654,16 +1156,8 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Electrical Signaling",
     question: "A neuron receiving concurrent EPSP and IPSP at the soma shows?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Net integration — outcome depends on relative driving forces and timing",
+      "Net integration",
       "Often silent inhibition regardless of timing",
       "Main mechanism: the last synapse counts",
       "Guaranteed spike if either is excitatory",
@@ -1680,16 +1174,8 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Passive Membrane Properties",
     question: "Membrane capacitance C_m affects?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "How quickly V_m can change for a given current (τ = R_m C_m)",
+      "How quickly V_m can change for a given",
       "The Nernst potential of K⁺ directly",
       "Tonotopic map position on basilar membrane",
       "Which glomerulus a receptor targets",
@@ -1706,15 +1192,7 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Action Potential Propagation",
     question: "Cooling an axon generally slows conduction because?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Channel gating kinetics slow",
       "Myelin is permanently removed",
       "Saltatory jumps increase in distance",
@@ -1732,19 +1210,11 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Patch Clamp",
     question: "What does Rupturing the patch membrane to achieve whole-cell mode allow?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Dialysis of the cell with pipette solution",
-      "Recording extracellular field potentials",
-      "Direct imaging of rhodopsin isomerization",
-      "Measurement of basilar membrane velocity",
+      "Recording extracellular field potentials under typical experimental conditions",
+      "Direct imaging of rhodopsin isomerization at steady state in normoxic tissue",
+      "Measurement of basilar membrane velocity under typical experimental conditions",
     ],
     correct: 0,
     explanation: "Whole-cell access exchanges cytoplasm with electrode solution.",
@@ -1758,19 +1228,11 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Nernst Equation",
     question: "For an anion with higher outside concentration, E_ion is typically?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Negative relative to typical resting V_m",
-      "Often, 58 mV",
-      "Independent of valence",
-      "Defined by the pump",
+      "Often, 58 mV at mammalian body temperature",
+      "Independent of valence with dominant K⁺ permeability at rest",
+      "Defined by the pump with dominant K⁺ permeability at rest",
     ],
     correct: 0,
     explanation: "Anions like Cl⁻ often have negative E when outside > inside.",
@@ -1784,16 +1246,8 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Electrical Signaling",
     question: "A synapse with reversal potential near −70 mV produces at rest?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Little net driving force — weak effect on V_m",
+      "Little net driving force",
       "Maximal depolarization",
       "Hyperpolarization to E_Na",
       "Persistent spike inactivation",
@@ -1810,15 +1264,7 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Goldman Equation",
     question: "Increasing P_Na relative to P_K during a depolarizing event moves V_m?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Toward E_Na (more positive)",
       "Instantly to E_K",
       "To 0 mV regardless of gradients",
@@ -1836,16 +1282,8 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Pharmacology",
     question: "Blocking the Na⁺/K⁺ pump with ouabain over minutes will?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Gradually depolarize cells as Na⁺ accumulates inside",
+      "Gradually depolarize cells as Na⁺",
       "Immediately hyperpolarize to E_K",
       "Prevent all action potentials within 1 ms",
       "Enhance cochlear outer hair motility",
@@ -1862,15 +1300,7 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Action Potentials",
     question: "Afterhyperpolarization following a spike is primarily due to?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Continued/outlasting K⁺ conductance",
       "Reopening of all Na⁺ channels",
       "Cl⁻ influx through AMPA receptors",
@@ -1888,15 +1318,7 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Passive Membrane Properties",
     question: "Input resistance R_in decreases when?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Additional ion channels open (leak or synaptic)",
       "Myelin thickness increases",
       "Axon diameter shrinks toward zero mainly in nodes",
@@ -1914,16 +1336,8 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Electrical Signaling",
     question: "An EPSP with reversal potential above threshold can still fail to fire if?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "It is too brief or too far electrotonically from the axon hillock",
+      "It is too brief or too far",
       "It triggers two spikes",
       "Na⁺ channels are absent at rest",
       "It hyperpolarizes the cell",
@@ -1940,16 +1354,8 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Action Potential Propagation",
     question: "Bidirectional propagation from a mid-axon stimulus occurs because?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Both directions lack refractory block at the stimulus site initially",
+      "Both directions lack refractory block at",
       "Myelin forces one direction",
       "Nodes exist on one side",
       "Photoreceptors release glutamate equally",
@@ -1966,15 +1372,7 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Resting Potential",
     question: "If A selective increase is active in P_Cl with E_Cl below rest, which change in membrane potential is most likely?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Hyperpolarize or stabilize V_m near E_Cl",
       "Depolarize to E_Na",
       "Have no effect on V_m ever",
@@ -1992,19 +1390,11 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Voltage Clamp",
     question: "Holding V_m at 0 mV during an experiment (from a resting −70 mV) typically?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Produces net outward current if rest was dominated by K⁺ leak",
-      "Requires zero pipette resistance",
-      "Eliminates all ion gradients instantly",
-      "Measures muscle spindle length",
+      "Produces net outward current if rest was",
+      "Requires zero pipette resistance under typical experimental conditions",
+      "Eliminates all ion gradients instantly under typical experimental conditions",
+      "Measures muscle spindle length at steady state in normoxic tissue",
     ],
     correct: 0,
     explanation: "Depolarizing from rest toward 0 mV reverses the driving force on K⁺, so the clamp must inject outward current to hold 0 mV.",
@@ -2018,19 +1408,11 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Electrical Signaling",
     question: "Which statement best describes Cable theory predicts dendritic EPSPs recorded at the soma?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Smaller and slower than at the synaptic site",
-      "Larger than at the synapse",
-      "Identical amplitude everywhere",
-      "Often suprathreshold",
+      "Smaller and slower than at the synaptic",
+      "Larger than at the synapse following presynaptic Ca²⁺ influx",
+      "Identical amplitude everywhere when homeostatic mechanisms are intact",
+      "Often suprathreshold when Na⁺ inactivation has progressed",
     ],
     correct: 0,
     explanation: "Distance and τ filter dendritic signals reaching the soma.",
@@ -2044,16 +1426,8 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Goldman Equation",
     question: "A neuron at 37°C has [K⁺]_in=140 mM, [K⁺]_out=4 mM, [Na⁺]_in=12 mM, [Na⁺]_out=145 mM, and P_K:P_Na:P_Cl = 1:0.04:0.45 with E_Cl=−65 mV. With dominant K⁺ leak, V_m is closest to?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "About −65 to −75 mV (near E_K, slightly influenced by Cl⁻ and Na⁺)",
+      "About −65 to −75 mV (near E_K",
       "About, 60 mV (dominated by E_Na)",
       "Exactly 0 mV",
       "About −150 mV regardless of permeabilities",
@@ -2070,19 +1444,11 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Goldman Equation",
     question: "Using the same concentrations, if P_Na increases tenfold during the rising phase while P_K stays constant, V_m should?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Depolarize toward E_Na but remain below, 60 mV while K⁺ conductance persists",
-      "Hyperpolarize toward E_K",
-      "Clamp instantly to 0 mV",
-      "Reverse sign of E_Cl",
+      "Depolarize toward E_Na but remain below",
+      "Hyperpolarize toward E_K with dominant K⁺ permeability at rest",
+      "Clamp instantly to 0 mV at mammalian body temperature",
+      "Reverse sign of E_Cl at mammalian body temperature",
     ],
     correct: 0,
     explanation: "Goldman potential shifts toward E_Na when sodium permeability rises, but other ions still contribute.",
@@ -2096,19 +1462,11 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Electrical Signaling",
     question: "A patch with g_Na=50 nS, V_m=−10 mV, and E_Na=+60 mV. The Na⁺ current (conventional positive outward) is approximately?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "−3.5 nA (inward Na⁺ current at −10 mV)",
-      "3.5 nA outward",
-      "0 nA because V_m is negative",
-      "−60 nA regardless of E_Na",
+      "3.5 nA outward at steady state in normoxic tissue",
+      "0 nA because V_m is negative at mammalian body temperature",
+      "−60 nA regardless of E_Na under typical experimental conditions",
     ],
     correct: 0,
     explanation: "I = g(V−E): 50 nS × (−70 mV) = −3500 pA = −3.5 nA inward (negative by outward-positive convention).",
@@ -2122,16 +1480,8 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Passive Membrane Properties",
     question: "Membrane τ = R_m C_m. If R_m doubles and C_m is unchanged, a step current produces a voltage response that?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Reaches twice the original steady-state amplitude with a longer time constant (2× τ)",
+      "Reaches twice the original steady-state",
       "Rises to the same steady state but with a longer time constant (2× τ)",
       "Becomes instantaneous with half the amplitude",
       "Oscillates at 100 Hz",
@@ -2148,19 +1498,11 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Action Potentials",
     question: "In Hodgkin–Huxley kinetics, the m gate primarily controls?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Activation (opening) of voltage-gated Na⁺ channels",
-      "Inactivation of K⁺ channels",
-      "Na⁺/K⁺ pump rate",
-      "Myelin thickness",
+      "Activation (opening) of voltage-gated Na⁺",
+      "Inactivation of K⁺ channels along a uniformly leaky cable",
+      "Na⁺/K⁺ pump rate during the rising phase of the spike",
+      "Myelin thickness during the rising phase of the spike",
     ],
     correct: 0,
     explanation: "m tracks Na⁺ channel activation; h mediates inactivation and n mediates delayed K⁺ activation.",
@@ -2174,16 +1516,8 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Action Potentials",
     question: "During a voltage-clamp step from −70 mV to 0 mV in a squid axon, the initial inward current followed by outward current reflects?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Early Na⁺ influx (inward) then delayed K⁺ efflux (outward)",
+      "Early Na⁺ influx (inward) then delayed K⁺",
       "K⁺ influx then Cl⁻ efflux",
       "Pump current",
       "Capacitive current with no ionic currents",
@@ -2200,15 +1534,7 @@ const PART1_EXPANSION_POOL = [
   {
     topic: "Electrical Signaling",
     question: "In current-clamp, injecting a brief depolarizing current pulse at rest typically produces a membrane response that?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Shows a graded, passive depolarization",
       "Often produces a full action potential regardless of amplitude",
       "Hyperpolarizes before depolarizing",
@@ -2229,16 +1555,8 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Synaptic Transmission",
     question: "Sequence step: AP invades terminal. Immediate consequence?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Depolarization opens presynaptic Ca²⁺ channels",
+      "Depolarization opens presynaptic Ca²⁺",
       "Photopigment isomerization",
       "Basilar membrane vibration",
       "Persistent DNA transcription in muscle",
@@ -2255,15 +1573,7 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Synaptic Transmission",
     question: "Sequence step: Ca²⁺ influx. Immediate consequence?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Triggers SNARE-mediated vesicle fusion",
       "Photopigment isomerization",
       "Basilar membrane vibration",
@@ -2281,15 +1591,7 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Synaptic Transmission",
     question: "Sequence step: Vesicle fusion. Immediate consequence?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Quantal transmitter release into cleft",
       "Photopigment isomerization",
       "Basilar membrane vibration",
@@ -2307,19 +1609,11 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Synaptic Transmission",
     question: "Sequence step: Transmitter binding. Immediate consequence?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Postsynaptic receptor opening/conformation change",
-      "Photopigment isomerization",
-      "Basilar membrane vibration",
-      "Persistent DNA transcription in muscle",
+      "Postsynaptic receptor opening/conformation",
+      "Photopigment isomerization when ligand-gated channels are open",
+      "Basilar membrane vibration when ligand-gated channels are open",
+      "Persistent DNA transcription in muscle when ligand-gated channels are open",
     ],
     correct: 0,
     explanation: "Transmitter binding leads to Postsynaptic receptor opening/conformation change in chemical synaptic transmission.",
@@ -2333,16 +1627,8 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Synaptic Transmission",
     question: "Transmitter: Glutamate. Typical role?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Fast excitatory ionotropic signaling (often AMPA/NMDA)",
+      "Fast excitatory ionotropic signaling",
       "Main mechanism: phototransduction",
       "Main mechanism: cochlear outer hair motility",
       "Main mechanism: cerebrospinal fluid secretion",
@@ -2359,15 +1645,7 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Synaptic Transmission",
     question: "Transmitter: GABA. Typical role?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Fast inhibitory Cl⁻ conductance (GABA<sub>A</sub>)",
       "Main mechanism: phototransduction",
       "Main mechanism: cochlear outer hair motility",
@@ -2385,16 +1663,8 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Chemical Synapses",
     question: "Transmitter: Acetylcholine. Typical role?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Nicotinic ionotropic at NMJ; muscarinic modulatory in CNS",
+      "Nicotinic ionotropic at NMJ",
       "Main mechanism: phototransduction",
       "Main mechanism: cochlear outer hair motility",
       "Main mechanism: cerebrospinal fluid secretion",
@@ -2411,15 +1681,7 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Neuromodulation",
     question: "Transmitter: Dopamine. Typical role?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Neuromodulation of motivation/movement circuits",
       "Requires phototransduction",
       "Describes synaptic machinery unrelated to the membrane process in the stem",
@@ -2437,19 +1699,11 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Long-Term Plasticity",
     question: "Plasticity form: NMDA-dependent LTP. Induction requirement?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Postsynaptic Ca²⁺ entry during strong depolarization",
-      "Main mechanism: muscle stretch",
-      "Main mechanism: rod dark current",
-      "Main mechanism: olfactory adaptation",
+      "Postsynaptic Ca²⁺ entry during strong",
+      "Main mechanism: muscle stretch without changes in presynaptic release probability",
+      "Main mechanism: rod dark current when NMDA receptors are co-activated",
+      "Main mechanism: olfactory adaptation before cortical association areas",
     ],
     correct: 0,
     explanation: "NMDA-dependent LTP requires Postsynaptic Ca²⁺ entry during strong depolarization.",
@@ -2463,15 +1717,7 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Long-Term Plasticity",
     question: "Plasticity form: Homosynaptic LTD. Induction requirement?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Prolonged low-frequency stimulation",
       "Main mechanism: muscle stretch",
       "Main mechanism: rod dark current",
@@ -2489,19 +1735,11 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Synaptic Plasticity Rules",
     question: "Plasticity form: STDP potentiation. Induction requirement?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Presynaptic spike shortly before postsynaptic spike",
-      "Requires muscle stretch",
-      "Requires rod dark current",
-      "Requires olfactory adaptation",
+      "Presynaptic spike shortly before",
+      "Requires muscle stretch at fast chemical synapses",
+      "Requires rod dark current when ligand-gated channels are open",
+      "Requires olfactory adaptation at fast chemical synapses",
     ],
     correct: 0,
     explanation: "STDP potentiation requires Presynaptic spike shortly before postsynaptic spike.",
@@ -2515,19 +1753,11 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Short-Term Plasticity",
     question: "Plasticity form: Facilitation. Induction requirement?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Residual presynaptic Ca²⁺ increases release probability",
-      "Requires muscle stretch",
-      "Requires rod dark current",
-      "Requires olfactory adaptation",
+      "Residual presynaptic Ca²⁺ increases",
+      "Requires muscle stretch without changes in presynaptic release probability",
+      "Requires rod dark current when NMDA receptors are co-activated",
+      "Requires olfactory adaptation before cortical association areas",
     ],
     correct: 0,
     explanation: "Facilitation requires Residual presynaptic Ca²⁺ increases release probability.",
@@ -2541,16 +1771,8 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Neural Circuits",
     question: "Circuit motif: Feedforward inhibition. Functional effect?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Limits spread and sharpens timing of excitation",
+      "Limits spread and sharpens timing of",
       "Eliminates all spikes globally",
       "Requires maps sound frequency",
       "Requires stores declarative memory in NMJ",
@@ -2567,15 +1789,7 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Neural Circuits",
     question: "Circuit motif: Feedback inhibition. Functional effect?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Stabilizes firing rate after activity",
       "Eliminates all spikes globally",
       "Main mechanism: maps sound frequency",
@@ -2593,16 +1807,8 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Neural Circuits",
     question: "Circuit motif: Lateral inhibition. Functional effect?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Enhances contrast between active and surround",
+      "Enhances contrast between active",
       "Eliminates all spikes globally",
       "Requires maps sound frequency",
       "Requires stores declarative memory in NMJ",
@@ -2619,16 +1825,8 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Inhibitory Circuits",
     question: "Circuit motif: Disinhibition. Functional effect?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Removing inhibition from a target increases net excitation",
+      "Removing inhibition from a target",
       "Eliminates all spikes globally",
       "Requires maps sound frequency",
       "Requires stores declarative memory in NMJ",
@@ -2645,19 +1843,11 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Second Messengers",
     question: "Second-messenger pathway: cAMP → PKA. Common action?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Phosphorylation of channels/transporters",
-      "Direct opening of rhodopsin",
-      "Saltatory conduction in dendrites",
-      "Requires cl⁻ pumping at NMJ",
+      "Direct opening of rhodopsin when homeostatic mechanisms are intact",
+      "Saltatory conduction in dendrites along a uniformly leaky cable",
+      "Requires cl⁻ pumping at NMJ when homeostatic mechanisms are intact",
     ],
     correct: 0,
     explanation: "cAMP → PKA typically causes Phosphorylation of channels/transporters.",
@@ -2671,15 +1861,7 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Second Messengers",
     question: "Second-messenger pathway: IP₃. Common action?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Ca²⁺ release from ER stores",
       "Direct opening of rhodopsin",
       "Saltatory conduction in dendrites",
@@ -2697,15 +1879,7 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Second Messengers",
     question: "Second-messenger pathway: DAG. Common action?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Can activate PKC at membrane",
       "Direct opening of rhodopsin",
       "Saltatory conduction in dendrites",
@@ -2723,19 +1897,11 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Synaptic Integration",
     question: "Two simultaneous EPSPs of +3 mV each (spatial summation at soma) from rest (-70 mV) yield approximate peak?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "-64 mV if approximately linear",
-      "Often threshold crossed",
-      "Often hyperpolarization",
-      "Exactly E_Na",
+      "Often threshold crossed when Na⁺ inactivation has progressed",
+      "Often hyperpolarization following presynaptic Ca²⁺ influx",
+      "Exactly E_Na when ligand-gated channels are open",
     ],
     correct: 0,
     explanation: "Spatial summation combines depolarizations at the integration zone.",
@@ -2749,19 +1915,11 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Synaptic Integration",
     question: "Two simultaneous EPSPs of +6 mV each (spatial summation at soma) from rest (-70 mV) yield approximate peak?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "-58 mV if approximately linear",
-      "Often threshold crossed",
-      "Often hyperpolarization",
-      "Exactly E_Na",
+      "Often threshold crossed when Na⁺ inactivation has progressed",
+      "Often hyperpolarization following presynaptic Ca²⁺ influx",
+      "Exactly E_Na when ligand-gated channels are open",
     ],
     correct: 0,
     explanation: "Spatial summation combines depolarizations at the integration zone.",
@@ -2775,19 +1933,11 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Synaptic Integration",
     question: "Two simultaneous EPSPs of +9 mV each (spatial summation at soma) from rest (-70 mV) yield approximate peak?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "-52 mV if approximately linear",
-      "Often threshold crossed",
-      "Often hyperpolarization",
-      "Exactly E_Na",
+      "Often threshold crossed when Na⁺ inactivation has progressed",
+      "Often hyperpolarization following presynaptic Ca²⁺ influx",
+      "Exactly E_Na when ligand-gated channels are open",
     ],
     correct: 0,
     explanation: "Spatial summation combines depolarizations at the integration zone.",
@@ -2801,19 +1951,11 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Synaptic Integration",
     question: "Two simultaneous EPSPs of +12 mV each (spatial summation at soma) from rest (-70 mV) yield approximate peak?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "-46 mV if approximately linear",
-      "Often threshold crossed",
-      "Often hyperpolarization",
-      "Exactly E_Na",
+      "Often threshold crossed when Na⁺ inactivation has progressed",
+      "Often hyperpolarization following presynaptic Ca²⁺ influx",
+      "Exactly E_Na when ligand-gated channels are open",
     ],
     correct: 0,
     explanation: "Spatial summation combines depolarizations at the integration zone.",
@@ -2827,19 +1969,11 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Synaptic Integration",
     question: "Two simultaneous EPSPs of +15 mV each (spatial summation at soma) from rest (-70 mV) yield approximate peak?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "-40 mV if approximately linear",
-      "Often threshold crossed",
-      "Often hyperpolarization",
-      "Exactly E_Na",
+      "Often threshold crossed when Na⁺ inactivation has progressed",
+      "Often hyperpolarization following presynaptic Ca²⁺ influx",
+      "Exactly E_Na when ligand-gated channels are open",
     ],
     correct: 0,
     explanation: "Spatial summation combines depolarizations at the integration zone.",
@@ -2853,19 +1987,11 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Synaptic Integration",
     question: "Two simultaneous EPSPs of +18 mV each (spatial summation at soma) from rest (-70 mV) yield approximate peak?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "-34 mV if approximately linear",
-      "Often threshold crossed",
-      "Often hyperpolarization",
-      "Exactly E_Na",
+      "Often threshold crossed when Na⁺ inactivation has progressed",
+      "Often hyperpolarization following presynaptic Ca²⁺ influx",
+      "Exactly E_Na when ligand-gated channels are open",
     ],
     correct: 0,
     explanation: "Spatial summation combines depolarizations at the integration zone.",
@@ -2879,15 +2005,7 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Neuromuscular Junction",
     question: "NMJ concept: End-plate potential. Description?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Graded depolarization of muscle membrane",
       "Photoreceptor hyperpolarization to light",
       "Cochlear phase locking",
@@ -2905,15 +2023,7 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Neuromuscular Junction",
     question: "NMJ concept: AChE in cleft. Description?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Clears ACh to terminate signal",
       "Photoreceptor hyperpolarization to light",
       "Cochlear phase locking",
@@ -2931,15 +2041,7 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Drug Effects",
     question: "NMJ concept: Curare-like antagonists. Description?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Block nicotinic receptors",
       "Photoreceptor hyperpolarization to light",
       "Cochlear phase locking",
@@ -2957,15 +2059,7 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Short-Term Plasticity",
     question: "After a brief presynaptic train at 10 Hz, the next EPSC is often larger because?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Residual presynaptic Ca²⁺ elevates release probability",
       "Persistent insertion of all postsynaptic NMDA receptors",
       "Complete vesicle pool depletion on the first spike",
@@ -2983,16 +2077,8 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Short-Term Plasticity",
     question: "After a brief presynaptic train at 40 Hz, release often shows?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Mixed facilitation early in the train with growing depression as the readily releasable pool depletes",
+      "Mixed facilitation early in the train with",
       "Persistent loss of all receptors",
       "Conversion to electrical synapses",
       "Assigns an unrelated sensory or synaptic mechanism to this context",
@@ -3009,16 +2095,8 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Short-Term Plasticity",
     question: "After a brief presynaptic train at 100 Hz, the dominant short-term change is usually?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Synaptic depression from rapid depletion of the readily releasable vesicle pool",
+      "Synaptic depression from rapid depletion of the",
       "Persistent loss of all receptors",
       "Conversion to electrical synapses",
       "Assigns an unrelated sensory or synaptic mechanism to this context",
@@ -3035,19 +2113,11 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Synaptic Integration",
     question: "Two EPSPs (+2 mV each) arrive 5 ms apart at one synapse (temporal summation). Compared with one EPSP alone, peak depolarization tends to be?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Larger if within τ of the membrane",
-      "Smaller",
-      "Unchanged",
-      "Exactly at E_K",
+      "Smaller at fast chemical synapses",
+      "Unchanged when ligand-gated channels are open",
+      "Exactly at E_K following presynaptic Ca²⁺ influx",
     ],
     correct: 0,
     explanation: "Temporal summation combines inputs within the membrane time window.",
@@ -3061,16 +2131,8 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Synaptic Transmission",
     question: "Calcium entry into the presynaptic terminal is required because it?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Triggers vesicle fusion machinery (SNARE complex)",
+      "Triggers vesicle fusion machinery",
       "Directly opens postsynaptic AMPA receptors",
       "Hyperpolarizes the postsynaptic cell",
       "Replaces ACh in the cleft",
@@ -3087,19 +2149,11 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Synaptic Transmission",
     question: "Miniature EPSCs (mEPSCs) in the absence of presynaptic spikes indicate?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Spontaneous quantal release of vesicles",
-      "Postsynthetic DNA damage",
-      "Cochlear amplification failure",
-      "Persistent LTP",
+      "Postsynthetic DNA damage at fast chemical synapses",
+      "Cochlear amplification failure at fast chemical synapses",
+      "Persistent LTP when ligand-gated channels are open",
     ],
     correct: 0,
     explanation: "mEPSCs reflect single vesicle fusion events.",
@@ -3113,19 +2167,11 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Chemical Synapses",
     question: "Which statement best describes Nicotinic ACh receptors at the NMJ?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Ligand-gated cation channels (fast EPSP)",
-      "Metabotropic G-protein receptors",
-      "Voltage-gated Cl⁻ channels",
-      "Gap junction hemichannels",
+      "Metabotropic G-protein receptors following presynaptic Ca²⁺ influx",
+      "Voltage-gated Cl⁻ channels following presynaptic Ca²⁺ influx",
+      "Gap junction hemichannels at fast chemical synapses",
     ],
     correct: 0,
     explanation: "Nicotinic receptors pass cations and depolarize muscle.",
@@ -3139,16 +2185,8 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Synaptic Integration",
     question: "If E_rev for a GABA<sub>A</sub> synapse is near −70 mV at rest, GABA at rest?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Produces little change in V_m (shunting may still occur)",
+      "Produces little change in V_m",
       "Often massive hyperpolarization to −90 mV",
       "Depolarizes to E_Na",
       "Blocks all quantal release",
@@ -3165,19 +2203,11 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Long-Term Plasticity",
     question: "NMDA receptors act as coincidence detectors because they require?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Glutamate binding AND postsynaptic depolarization to relieve Mg²⁺ block",
-      "Main mechanism: presynaptic Ca²⁺",
-      "Main mechanism: gABA release",
-      "Photopigment isomerization",
+      "Glutamate binding AND postsynaptic",
+      "Main mechanism: presynaptic Ca²⁺ following presynaptic Ca²⁺ influx",
+      "Main mechanism: gABA release at fast chemical synapses",
+      "Photopigment isomerization when NMDA receptors are co-activated",
     ],
     correct: 0,
     explanation: "Voltage-dependent Mg²⁺ block links pre and post activity.",
@@ -3191,16 +2221,8 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Short-Term Plasticity",
     question: "Post-tetanic potentiation reflects primarily?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Elevated presynaptic Ca²⁺ and increased release probability briefly",
+      "Elevated presynaptic Ca²⁺",
       "Persistent insertion of AMPA receptors",
       "Loss of all inhibitory interneurons",
       "Cochlear outer hair cell motility",
@@ -3217,19 +2239,11 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Neural Circuits",
     question: "Feedforward inhibition in sensory pathways often?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Narrows the temporal window for effective excitation",
-      "Eliminates all thalamic relay",
-      "Prevents any spikes in cortex",
-      "Stores declarative memories directly",
+      "Narrows the temporal window for effective",
+      "Eliminates all thalamic relay when homeostatic mechanisms are intact",
+      "Prevents any spikes in cortex along a uniformly leaky cable",
+      "Stores declarative memories directly under typical experimental conditions",
     ],
     correct: 0,
     explanation: "Inhibition follows disynaptic paths that limit excitation duration.",
@@ -3243,16 +2257,8 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Second Messengers",
     question: "Which capability best describes Metabotropic glutamate receptor activation?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Modulate ion channels via G-proteins and second messengers",
+      "Modulate ion channels via G-proteins",
       "Directly pass Na⁺ like AMPA",
       "Transduce sound in the cochlea primarily",
       "Replace SNARE proteins",
@@ -3269,15 +2275,7 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Synaptic Plasticity Rules",
     question: "In spike-timing-dependent plasticity (STDP), pre-before-post within ~20 ms often yields?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "LTP (potentiation)",
       "LTD",
       "No change regardless of timing",
@@ -3295,15 +2293,7 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Drug Effects",
     question: "Botulinum toxin reduces transmission by?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Cleaving SNARE proteins required for vesicle fusion",
       "Blocking nicotinic receptors on muscle via curare mechanism",
       "Opening NMDA receptors",
@@ -3321,15 +2311,7 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Neuromuscular Junction",
     question: "Acetylcholinesterase inhibitors (e.g., neostigmine) increase?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Duration of ACh in the synaptic cleft",
       "Quantal size of each vesicle permanently",
       "Myelin thickness",
@@ -3347,19 +2329,11 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Synaptic Transmission",
     question: "Desensitization of ionotropic receptors means?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Receptors enter a closed state despite agonist still bound",
-      "Vesicles stop fusing permanently",
-      "Axons myelinate faster",
-      "Hippocampus is removed",
+      "Receptors enter a closed state despite",
+      "Vesicles stop fusing permanently when ligand-gated channels are open",
+      "Axons myelinate faster when Na⁺ inactivation has progressed",
+      "Hippocampus is removed following presynaptic Ca²⁺ influx",
     ],
     correct: 0,
     explanation: "Desensitized receptors no longer conduct even with ligand present.",
@@ -3373,15 +2347,7 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Chemical Synapses",
     question: "Electrical synapses (gap junctions) differ from chemical synapses because they?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Pass ionic current directly with less synaptic delay",
       "Often require SNARE-mediated fusion",
       "Use dopamine as transmitter",
@@ -3399,16 +2365,8 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Long-Term Plasticity",
     question: "LTD induced by low-frequency stimulation often involves?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Reduced AMPA receptor insertion or enhanced endocytosis",
+      "Reduced AMPA receptor insertion or",
       "Immediate permanent axotomy",
       "Main mechanism: cochlear tuning shifts",
       "Loss of all K⁺ channels",
@@ -3425,19 +2383,11 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Synaptic Transmission",
     question: "Synaptotagmin acts as a Ca²⁺ sensor because it?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Triggers fast exocytosis when Ca²⁺ binds after an action potential",
-      "Opens voltage-gated Na⁺ channels",
-      "Is a ligand for glutamate",
-      "Defines tonotopic position",
+      "Triggers fast exocytosis when Ca²⁺ binds",
+      "Opens voltage-gated Na⁺ channels when ligand-gated channels are open",
+      "Is a ligand for glutamate following presynaptic Ca²⁺ influx",
+      "Defines tonotopic position when ligand-gated channels are open",
     ],
     correct: 0,
     explanation: "Synaptotagmin couples Ca²⁺ influx to vesicle fusion timing.",
@@ -3451,19 +2401,11 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Neural Circuits",
     question: "Which capability best describes Recurrent excitatory circuits?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Sustain activity or amplify patterns but risk runaway without inhibition",
-      "Guarantee perfect stability",
-      "Prevent all oscillations",
-      "Replace hippocampal indexing",
+      "Sustain activity or amplify patterns but",
+      "Guarantee perfect stability under typical experimental conditions",
+      "Prevent all oscillations under typical experimental conditions",
+      "Replace hippocampal indexing bilaterally at the level described",
     ],
     correct: 0,
     explanation: "Recurrent loops need inhibitory balance to avoid epileptiform activity.",
@@ -3477,19 +2419,11 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Second Messengers",
     question: "cAMP elevation in neurons commonly?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Activates PKA to phosphorylate channels and transcription factors",
-      "Directly opens nicotinic receptors",
-      "Hyperpolarizes rods to light",
-      "Sets E_Na to 0 mV",
+      "Activates PKA to phosphorylate channels",
+      "Directly opens nicotinic receptors at fast chemical synapses",
+      "Hyperpolarizes rods to light under typical experimental conditions",
+      "Sets E_Na to 0 mV with dominant K⁺ permeability at rest",
     ],
     correct: 0,
     explanation: "PKA-mediated phosphorylation modulates excitability and gene expression.",
@@ -3503,16 +2437,8 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Synaptic Transmission",
     question: "Which capability best describes Retrograde messengers (e.g., endocannabinoids)?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Suppress presynaptic release following strong postsynaptic activity",
+      "Suppress presynaptic release following",
       "Travel anterograde in myelin",
       "Replace all electrical coupling",
       "Encode sound frequency on basilar membrane",
@@ -3529,16 +2455,8 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Synaptic Integration",
     question: "Coincidence detection in dendrites can use?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Nonlinear NMDA and active dendritic conductances",
+      "Nonlinear NMDA and active dendritic",
       "Main mechanism: passive leak at all sites",
       "Photopigment regeneration",
       "Outer hair cell somatic motility alone",
@@ -3555,19 +2473,11 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Short-Term Plasticity",
     question: "Synaptic depression after sustained high-frequency firing often reflects?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Depletion of readily releasable vesicles",
-      "Instant permanent SNARE loss",
-      "Requires lTD at CA3–CA1",
-      "Elimination of ITD coding",
+      "Instant permanent SNARE loss when NMDA receptors are co-activated",
+      "Requires lTD at CA3–CA1 without changes in presynaptic release probability",
+      "Elimination of ITD coding when NMDA receptors are co-activated",
     ],
     correct: 0,
     explanation: "Vesicle pool depletion reduces release probability transiently.",
@@ -3581,15 +2491,7 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Chemical Synapses",
     question: "Muscarinic ACh receptors in the CNS are typically?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Metabotropic — slow modulation of excitability",
       "Ionotropic nicotinic channels identical to NMJ",
       "Main mechanism: located on muscle endplate",
@@ -3607,15 +2509,7 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Neuromodulation",
     question: "Dopamine depletion in Parkinson disease primarily affects?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Basal ganglia circuits for movement initiation and selection",
       "Cochlear inner hair cell transduction",
       "Assigns an unrelated sensory or synaptic mechanism to this context",
@@ -3633,15 +2527,7 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Synaptic Plasticity Rules",
     question: "Hebbian plasticity is often summarized as?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Cells that fire together wire together",
       "Many synapses weaken many second regardless of activity",
       "Main mechanism: inhibitory synapses potentiate",
@@ -3659,15 +2545,7 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Neural Circuits",
     question: "Center-surround receptive fields in retina emerge largely from?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Lateral inhibition and bipolar/amacrine connectivity",
       "Describes synaptic machinery unrelated to the membrane process in the stem",
       "Gap junctions at the NMJ",
@@ -3685,16 +2563,8 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Synaptic Transmission",
     question: "Clathrin-mediated endocytosis after fusion serves to?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Recycle vesicle membrane and maintain release capacity",
+      "Recycle vesicle membrane",
       "Open new Na⁺ channels at nodes",
       "Generate photoreceptor hyperpolarization",
       "Encode odor identity in glomeruli",
@@ -3711,19 +2581,11 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Second Messengers",
     question: "IP₃ opens channels on the ER to?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Release Ca²⁺ from internal stores into the cytosol",
-      "Pump Na⁺ out of the cell directly",
-      "Hyperpolarize photoreceptors to light",
-      "Set basilar membrane stiffness globally",
+      "Release Ca²⁺ from internal stores into the",
+      "Pump Na⁺ out of the cell directly when homeostatic mechanisms are intact",
+      "Hyperpolarize photoreceptors to light at fast chemical synapses",
+      "Set basilar membrane stiffness globally when homeostatic mechanisms are intact",
     ],
     correct: 0,
     explanation: "IP₃ receptors release stored Ca²⁺ for signaling.",
@@ -3737,16 +2599,8 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Synaptic Integration",
     question: "An inhibitory synapse with E_rev above rest can be?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Depolarizing yet still inhibitory (shunting / Cl⁻ load) in some developing circuits",
+      "Depolarizing yet still inhibitory",
       "Impossible under any condition",
       "Often excitatory if depolarizing",
       "Main mechanism: found in cochlear hair cells",
@@ -3763,15 +2617,7 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Drug Effects",
     question: "AMPA receptor blockers reduce?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Fast excitatory synaptic currents in many CNS pathways",
       "References a circuit element that does not control the variable asked about",
       "Myelin thickness",
@@ -3789,15 +2635,7 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Neuromuscular Junction",
     question: "Miniature end-plate potentials (MEPPs) demonstrate?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Quantal nature of synaptic transmission at the NMJ",
       "Continuous graded muscle depolarization without vesicles",
       "Saltatory conduction in muscle spindles",
@@ -3815,16 +2653,8 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Synaptic Transmission",
     question: "Tetanus toxin prevents release by?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Proteolyzing SNARE proteins (similar mechanism to botulinum)",
+      "Proteolyzing SNARE proteins",
       "Blocking voltage-gated K⁺",
       "Opening gap junctions globally",
       "Destroying hippocampal place fields",
@@ -3841,15 +2671,7 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Neural Circuits",
     question: "Winner-take-all selection can be implemented by?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Strong mutual inhibition among competing representations",
       "Removing all inhibition",
       "Describes synaptic machinery unrelated to the membrane process in the stem",
@@ -3867,16 +2689,8 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Synaptic Integration",
     question: "Dendritic spikes (active dendritic conductances) allow?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Local nonlinear amplification before somatic integration",
+      "Local nonlinear amplification before",
       "Main mechanism: passive decay everywhere",
       "Elimination of all IPSPs",
       "Direct transduction of odor to muscle",
@@ -3893,16 +2707,8 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Chemical Synapses",
     question: "Glutamate reuptake transporters on glia and neurons serve to?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Terminate synaptic action and prevent excitotoxic buildup",
+      "Terminate synaptic action",
       "Synthesize GABA from glutamate mainly in cochlea",
       "Open nicotinic receptors",
       "Set E_K to, 60 mV",
@@ -3919,19 +2725,11 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Short-Term Plasticity",
     question: "Facilitation after a single presynaptic spike partly reflects?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Leftover presynaptic Ca²⁺ elevating release probability for the next spike",
-      "Persistent insertion of new axons",
-      "Loss of all AMPA receptors",
-      "Increased rod dark current",
+      "Leftover presynaptic Ca²⁺ elevating",
+      "Persistent insertion of new axons during the rising phase of the spike",
+      "Loss of all AMPA receptors when ligand-gated channels are open",
+      "Increased rod dark current without changes in presynaptic release probability",
     ],
     correct: 0,
     explanation: "Ca²⁺ remains elevated briefly, enhancing subsequent release.",
@@ -3945,19 +2743,11 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Neuromodulation",
     question: "When Norepinephrine is active in arousal networks, which effect on neural circuit function is most likely?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Increase gain and reduce background noise correlation in cortex",
-      "Silence all thalamic relay permanently",
-      "Block all Na⁺ channels",
-      "Replace cerebellar climbing fibers",
+      "Increase gain and reduce background noise",
+      "Silence all thalamic relay permanently when brainstem arousal nuclei are active",
+      "Block all Na⁺ channels with diffuse forebrain projections",
+      "Replace cerebellar climbing fibers bilaterally at the level described",
     ],
     correct: 0,
     explanation: "NE modulates alertness and signal-to-noise in sensory cortex.",
@@ -3971,15 +2761,7 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Motor Systems",
     question: "A central pattern generator (CPG) for locomotion can produce rhythmic output because?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Reciprocally connected interneurons and endogenous bursting sustain alternating activity",
       "Every motor neuron requires continuous cortical spikes each cycle",
       "Main mechanism: sensory feedback from muscle spindles creates rhythm",
@@ -3997,15 +2779,7 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Motor Systems",
     question: "Reciprocal inhibition in a spinal stretch reflex circuit ensures that?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Agonist contraction is accompanied by antagonist relaxation",
       "Both agonist and antagonist contract maximally together",
       "Main mechanism: sensory neurons fire without motor output (maps the lesion to the wrong motor pathway or reflex)",
@@ -4023,16 +2797,8 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Synaptic Plasticity Rules",
     question: "In Aplysia, habituation of the gill-withdrawal reflex is associated with?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Decreased presynaptic glutamate release from sensory neurons",
+      "Decreased presynaptic glutamate release from",
       "New insertion of AMPA receptors on motor neurons",
       "Persistent LTP at many synapse",
       "Loss of all voltage-gated Na⁺ channels",
@@ -4049,15 +2815,7 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Synaptic Plasticity Rules",
     question: "Sensitization in Aplysia after noxious tail shock involves?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Modulatory serotonergic facilitation of sensory neuron terminals",
       "Immediate long-term potentiation requiring NMDA mainly in hippocampus",
       "Exclusive gap junction coupling in cerebellum",
@@ -4075,16 +2833,8 @@ const PART2_EXPANSION_POOL = [
   {
     topic: "Synaptic Transmission",
     question: "Quantal analysis showing discrete step sizes in EPSC amplitude supports?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Vesicles release fixed amounts of transmitter (quantal packets)",
+      "Vesicles release fixed amounts of transmitter",
       "Continuous fluid secretion without vesicles",
       "Main mechanism: electrical coupling without quanta",
       "Infinite release without saturation",
@@ -4104,15 +2854,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Phototransduction",
     question: "Retinal cell class: Photoreceptor. Role?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Transduces photons; releases glutamate continuously in darkness",
       "Describes synaptic machinery unrelated to the membrane process in the stem",
       "Applies a sensory transduction pathway from a different modality",
@@ -4130,15 +2872,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Retinal Circuitry",
     question: "Retinal cell class: Bipolar cell. Role?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Sign-inverting or sign-conserving pathway element",
       "Describes synaptic machinery unrelated to the membrane process in the stem",
       "Applies a sensory transduction pathway from a different modality",
@@ -4156,15 +2890,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Retinal Circuitry",
     question: "Retinal cell class: Amacrine cell. Role?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Lateral processing in inner plexiform layer",
       "Describes synaptic machinery unrelated to the membrane process in the stem",
       "Applies a sensory transduction pathway from a different modality",
@@ -4182,15 +2908,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Visual System",
     question: "Retinal cell class: Ganglion cell. Role?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Output spike trains to brain via optic nerve",
       "Describes synaptic machinery unrelated to the membrane process in the stem",
       "Applies a sensory transduction pathway from a different modality",
@@ -4208,15 +2926,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Auditory System",
     question: "Cochlear structure: Basilar base. Function?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Encodes high frequencies",
       "Olfactory combinatorial coding",
       "Photopigment regeneration",
@@ -4234,15 +2944,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Auditory System",
     question: "Cochlear structure: Basilar apex. Function?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Encodes low frequencies",
       "Olfactory combinatorial coding",
       "Photopigment regeneration",
@@ -4260,19 +2962,11 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Auditory System",
     question: "Cochlear structure: Inner hair cell. Function?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Primary sensory transduction to afferents",
-      "Olfactory combinatorial coding",
-      "Photopigment regeneration",
-      "Cerebellar climbing fiber error",
+      "Olfactory combinatorial coding in the primary sensory pathway named",
+      "Photopigment regeneration contralateral to monocular stimulation",
+      "Cerebellar climbing fiber error contralateral to monocular stimulation",
     ],
     correct: 0,
     explanation: "Inner hair cell: Primary sensory transduction to afferents.",
@@ -4286,19 +2980,11 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Auditory System",
     question: "Cochlear structure: Outer hair cell. Function?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Active cochlear amplification/tuning",
-      "Olfactory combinatorial coding",
-      "Photopigment regeneration",
-      "Cerebellar climbing fiber error",
+      "Olfactory combinatorial coding in the primary sensory pathway named",
+      "Photopigment regeneration contralateral to monocular stimulation",
+      "Cerebellar climbing fiber error contralateral to monocular stimulation",
     ],
     correct: 0,
     explanation: "Outer hair cell: Active cochlear amplification/tuning.",
@@ -4312,19 +2998,11 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Somatosensation",
     question: "Sensory pathway/receptor: Dorsal column pathway. Conveys?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Fine touch, vibration, proprioception",
-      "Color opponency",
-      "Saltatory node formation",
-      "Requires declarative memory storage",
+      "Color opponency in the primary sensory pathway named",
+      "Saltatory node formation during the rising phase of the spike",
+      "Requires declarative memory storage before cortical association areas",
     ],
     correct: 0,
     explanation: "Dorsal column pathway signals Fine touch, vibration, proprioception.",
@@ -4338,15 +3016,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Pain",
     question: "Which clinical presentation is most consistent with Sensory pathway/receptor: Spinothalamic tract. Conveys?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "pain/temp",
       "Color opponency",
       "Saltatory node formation",
@@ -4364,15 +3034,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Somatosensation",
     question: "Sensory pathway/receptor: Meissner corpuscle. Conveys?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Light touch and flutter",
       "Color opponency",
       "Saltatory node formation",
@@ -4390,15 +3052,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Proprioception",
     question: "Sensory pathway/receptor: Muscle spindle. Conveys?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Muscle length/stretch",
       "Color opponency",
       "Saltatory node formation",
@@ -4416,15 +3070,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Hippocampus",
     question: "CNS region: Hippocampus. Best-known function?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Spatial/episodic memory and navigation",
       "Requires phototransduction",
       "Applies a sensory transduction pathway from a different modality",
@@ -4442,15 +3088,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Emotion & Memory",
     question: "CNS region: Amygdala. Best-known function?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Emotional learning and salience",
       "Requires phototransduction",
       "Applies a sensory transduction pathway from a different modality",
@@ -4468,15 +3106,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Cerebellum",
     question: "CNS region: Cerebellum. Best-known function?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Timing and error correction in movement",
       "Requires phototransduction",
       "Applies a sensory transduction pathway from a different modality",
@@ -4494,15 +3124,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Basal Ganglia",
     question: "CNS region: Basal ganglia. Best-known function?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Action selection and reinforcement learning",
       "Requires phototransduction",
       "Applies a sensory transduction pathway from a different modality",
@@ -4520,15 +3142,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Thalamus",
     question: "CNS region: Thalamus. Best-known function?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Sensory/motor relay and gating to cortex",
       "Requires phototransduction",
       "Applies a sensory transduction pathway from a different modality",
@@ -4546,15 +3160,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Executive Function",
     question: "CNS region: Prefrontal cortex. Best-known function?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Working memory and executive control",
       "Requires phototransduction",
       "Applies a sensory transduction pathway from a different modality",
@@ -4572,19 +3178,11 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Synaptic Basis of Memory",
     question: "Memory paradigm/structure: LTP at CA3–CA1. Key lesson?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Long-lasting increase in synaptic strength after strong activation",
-      "Eliminates all sensation",
-      "Blocks photopigment",
-      "Prevents Na⁺ gating",
+      "Long-lasting increase in synaptic strength",
+      "Eliminates all sensation at fast chemical synapses",
+      "Blocks photopigment following presynaptic Ca²⁺ influx",
+      "Prevents Na⁺ gating following presynaptic Ca²⁺ influx",
     ],
     correct: 0,
     explanation: "LTP at CA3–CA1: Long-lasting increase in synaptic strength after strong activation.",
@@ -4598,19 +3196,11 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Learning & Memory",
     question: "Memory paradigm/structure: Consolidation. Key lesson?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Transfer/stabilization of memory over hours to years",
-      "Eliminates all sensation",
-      "Blocks photopigment",
-      "Prevents Na⁺ gating",
+      "Transfer/stabilization of memory over",
+      "Eliminates all sensation without changes in presynaptic release probability",
+      "Blocks photopigment after repeated synaptic activation",
+      "Prevents Na⁺ gating after repeated synaptic activation",
     ],
     correct: 0,
     explanation: "Consolidation: Transfer/stabilization of memory over hours to years.",
@@ -4624,19 +3214,11 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Learning & Memory",
     question: "Memory paradigm/structure: H.M.. Key lesson?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Profound anterograde declarative amnesia",
-      "Eliminates all sensation",
-      "Blocks photopigment",
-      "Prevents Na⁺ gating",
+      "Eliminates all sensation without changes in presynaptic release probability",
+      "Blocks photopigment after repeated synaptic activation",
+      "Prevents Na⁺ gating after repeated synaptic activation",
     ],
     correct: 0,
     explanation: "H.M.: Profound anterograde declarative amnesia.",
@@ -4650,19 +3232,11 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Learning & Memory",
     question: "Memory paradigm/structure: Morris water maze. Key lesson?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Tests hippocampal-dependent spatial learning",
-      "Eliminates all sensation",
-      "Blocks photopigment",
-      "Prevents Na⁺ gating",
+      "Tests hippocampal-dependent spatial",
+      "Eliminates all sensation without changes in presynaptic release probability",
+      "Blocks photopigment after repeated synaptic activation",
+      "Prevents Na⁺ gating after repeated synaptic activation",
     ],
     correct: 0,
     explanation: "Morris water maze: Tests hippocampal-dependent spatial learning.",
@@ -4676,15 +3250,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Clinical Correlates",
     question: "Clinical correlate: Parkinson disease. Typical neural basis?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Loss of SNc dopamine neurons",
       "Main mechanism: outer hair cell loss in cochlea",
       "Main mechanism: taste bud apoptosis",
@@ -4702,15 +3268,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Clinical Correlates",
     question: "Clinical correlate: Multiple sclerosis. Typical neural basis?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "CNS demyelination",
       "Main mechanism: outer hair cell loss in cochlea",
       "Main mechanism: taste bud apoptosis",
@@ -4728,15 +3286,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Clinical Correlates",
     question: "Clinical correlate: Prosopagnosia. Typical neural basis?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Fusiform face area / ventral temporal cortex",
       "Assigns an unrelated sensory or synaptic mechanism to this context",
       "Assigns an unrelated sensory or synaptic mechanism to this context",
@@ -4754,15 +3304,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Clinical Correlates",
     question: "Clinical correlate: Hemianopia (post-chiasmal). Typical neural basis?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Contralateral visual field loss",
       "Main mechanism: outer hair cell loss in cochlea",
       "Main mechanism: taste bud apoptosis",
@@ -4780,15 +3322,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Auditory Pathway",
     question: "Binaural hearing uses interaural cues; for low frequencies, which cue is especially important?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Interaural time differences (ITD)",
       "Requires retinal eccentricity",
       "Describes synaptic machinery unrelated to the membrane process in the stem",
@@ -4806,15 +3340,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Auditory Pathway",
     question: "Binaural hearing uses interaural cues; for mid frequencies, which cue is especially important?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "ITD for low, ILD for high (classic MCB80x split)",
       "Requires retinal eccentricity",
       "Describes synaptic machinery unrelated to the membrane process in the stem",
@@ -4832,15 +3358,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Auditory Pathway",
     question: "Binaural hearing uses interaural cues; for high frequencies, which cue is especially important?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Interaural level differences (ILD)",
       "Requires retinal eccentricity",
       "Describes synaptic machinery unrelated to the membrane process in the stem",
@@ -4858,15 +3376,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Auditory System",
     question: "A basilar membrane region with peak sensitivity near 400 Hz best reflects?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Tonotopic organization",
       "Random wiring without frequency order",
       "Main mechanism: olfactory receptor choice",
@@ -4884,15 +3394,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Auditory System",
     question: "A basilar membrane region with peak sensitivity near 4000 Hz best reflects?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Tonotopic organization",
       "Random wiring without frequency order",
       "Main mechanism: olfactory receptor choice",
@@ -4910,15 +3412,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Learning & Memory",
     question: "Bilateral hippocampal system damage in humans most consistently impairs?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Forming new declarative/episodic memories",
       "Most procedural skills such as riding a bike",
       "Most sensation including touch",
@@ -4936,15 +3430,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Learning & Memory",
     question: "Profound medial temporal lobe damage in humans most consistently impairs?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Forming new declarative/episodic memories",
       "Most procedural skills such as riding a bike",
       "Most sensation including touch",
@@ -4962,15 +3448,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Learning & Memory",
     question: "Which statement best describes Following extensive hippocampal injury in adults, the ability to form new memories?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Forming new declarative/episodic memories",
       "Most procedural skills such as riding a bike",
       "Most sensation including touch",
@@ -4988,15 +3466,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Learning & Memory",
     question: "After bilateral hippocampal loss, which learning is most impaired in typical cases?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Forming new declarative/episodic memories",
       "Most procedural skills such as riding a bike",
       "Most sensation including touch",
@@ -5014,15 +3484,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Learning & Memory",
     question: "Medial temporal lobe damage producing anterograde amnesia primarily disrupts?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Forming new declarative/episodic memories",
       "Most procedural skills such as riding a bike",
       "Most sensation including touch",
@@ -5040,16 +3502,8 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Phototransduction",
     question: "In darkness, vertebrate photoreceptors?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Are depolarized and release glutamate continuously",
+      "Are depolarized and release glutamate",
       "Hyperpolarize strongly to −70 mV below rest",
       "Fire Na⁺ spikes at 100 Hz",
       "Use nicotinic receptors at the outer segment",
@@ -5066,16 +3520,8 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Phototransduction",
     question: "Light closes cGMP-gated channels in rods, leading to?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Hyperpolarization and reduced glutamate release",
+      "Hyperpolarization and reduced glutamate",
       "Depolarization and increased glutamate release",
       "Opening of voltage-gated Na⁺ at the synapse",
       "Immediate LTP at CA3–CA1",
@@ -5092,19 +3538,11 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Visual System",
     question: "Retinal ganglion cells encode visual information primarily as?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Patterns of action potentials sent to the brain",
-      "Graded muscle contractions",
-      "Continuous DC without spikes",
-      "Direct hormone release into CSF",
+      "Patterns of action potentials sent to the",
+      "Graded muscle contractions in the primary sensory pathway named",
+      "Continuous DC without spikes along a uniformly leaky cable",
+      "Direct hormone release into CSF before cortical association areas",
     ],
     correct: 0,
     explanation: "Ganglion cells are the spiking output of the retina.",
@@ -5118,19 +3556,11 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Visual System",
     question: "Lateral geniculate nucleus (LGN) of thalamus?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Relays retinal input to primary visual cortex",
-      "Transduces photons directly",
-      "Encodes smell via glomeruli",
-      "Generates end-plate potentials",
+      "Relays retinal input to primary visual",
+      "Transduces photons directly contralateral to monocular stimulation",
+      "Encodes smell via glomeruli contralateral to monocular stimulation",
+      "Generates end-plate potentials contralateral to monocular stimulation",
     ],
     correct: 0,
     explanation: "LGN is the main thalamic relay for vision.",
@@ -5144,16 +3574,8 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Visual System",
     question: "Primary visual cortex (V1) neurons often show?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Orientation and spatial frequency selectivity",
+      "Orientation and spatial frequency",
       "Pure tone frequency tuning like cochlea",
       "Requires pain/temp maps",
       "No receptive fields",
@@ -5170,16 +3592,8 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Auditory System",
     question: "Place theory of hearing states that?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Sound frequency is mapped to location along the basilar membrane",
+      "Sound frequency is mapped to location along the",
       "Most frequencies activate the entire cochlea equally",
       "ITD is used for all frequencies in most recordings",
       "Outer hair cells are the sole afferent signal",
@@ -5196,16 +3610,8 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Auditory System",
     question: "Inner hair cells primarily?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Provide afferent signal to auditory nerve fibers",
+      "Provide afferent signal to auditory nerve",
       "Amplify basilar motion via somatic motility",
       "Secrete cerebrospinal fluid",
       "Store episodic memories",
@@ -5223,12 +3629,7 @@ const PART3_EXPANSION_POOL = [
     topic: "Auditory System",
     question: "Outer hair cell electromotility contributes to?",
     options: [
-
-
-
-
-
-      "Sharp cochlear tuning and sensitivity (active amplification)",
+      "Sharp cochlear tuning and sensitivity",
       "Requires pain modulation in spinothalamic tract",
       "Photopigment regeneration",
       "NMJ quantal release",
@@ -5245,15 +3646,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Auditory Pathway",
     question: "For localizing low-frequency sounds, the brain relies heavily on?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Interaural time differences (ITD)",
       "Interaural level differences (ILD)",
       "Retinal eccentricity",
@@ -5271,19 +3664,11 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Auditory Pathway",
     question: "Which statement best describes For localizing high-frequency sounds, a dominant cue?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Interaural level difference (ILD) from head shadowing",
-      "Pure ITD without level change",
-      "Olfactory combinatorial codes",
-      "Rod dark current amplitude",
+      "Interaural level difference (ILD) from",
+      "Pure ITD without level change in the primary sensory pathway named",
+      "Olfactory combinatorial codes in the primary sensory pathway named",
+      "Rod dark current amplitude in the primary sensory pathway named",
     ],
     correct: 0,
     explanation: "High frequencies are shadowed by the head, creating level differences.",
@@ -5297,16 +3682,8 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Somatosensation",
     question: "Pacinian corpuscles are most sensitive to?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "High-frequency vibration and deep pressure transients",
+      "High-frequency vibration",
       "Static two-point touch",
       "Cold temperatures primarily",
       "Bitter taste quality",
@@ -5323,15 +3700,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Somatosensation",
     question: "Free nerve endings in skin often signal?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "pain/temp",
       "Fine vibration at 200 Hz",
       "Sound frequency",
@@ -5349,16 +3718,8 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Pain",
     question: "Gate control theory proposes that?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Spinal interneurons can inhibit nociceptive transmission to projection neurons",
+      "Spinal interneurons can inhibit nociceptive",
       "Pain fibers are seldom influenced by touch",
       "Most pain is purely cortical with no spinal relay",
       "Myelin prevents all pain",
@@ -5375,16 +3736,8 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Olfactory System",
     question: "One olfactory receptor neuron in many species typically?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Expresses one receptor type and projects to specific glomeruli",
+      "Expresses one receptor type",
       "Expresses all receptor genes simultaneously",
       "Synapses directly on motor neurons",
       "Uses ACh as its neurotransmitter at NMJ",
@@ -5401,19 +3754,11 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Gustation",
     question: "Which statement best describes Different taste qualities (sweet, salty, sour, bitter, umami)?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Encoded by distinct receptor mechanisms and pathways",
-      "Detected by pain fibers in tongue",
-      "Identical to cochlear tonotopy",
-      "Stored solely in cerebellum",
+      "Encoded by distinct receptor mechanisms",
+      "Detected by pain fibers in tongue in the primary sensory pathway named",
+      "Identical to cochlear tonotopy in the primary sensory pathway named",
+      "Stored solely in cerebellum in the adult human CNS",
     ],
     correct: 0,
     explanation: "Taste uses specialized receptors and central gustatory pathways.",
@@ -5427,19 +3772,11 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Learning & Memory",
     question: "Procedural memory (e.g., skills) often involves?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Basal ganglia and cerebellum among other motor circuits",
-      "Hippocampal place cells primarily",
-      "Requires olfactory glomeruli",
-      "Requires inner hair cells",
+      "Basal ganglia and cerebellum among other",
+      "Hippocampal place cells primarily via major descending or ascending tracts",
+      "Requires olfactory glomeruli in the primary sensory pathway named",
+      "Requires inner hair cells after repeated synaptic activation",
     ],
     correct: 0,
     explanation: "Motor learning uses striatum, cerebellum, and related loops.",
@@ -5453,15 +3790,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Cerebellum",
     question: "Climbing fiber input to Purkinje cells often signals?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Unexpected error or perturbation in movement",
       "Assigns an unrelated sensory or synaptic mechanism to this context",
       "Constant sound intensity",
@@ -5479,15 +3808,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Basal Ganglia",
     question: "Direct vs indirect pathways in basal ganglia modulate?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Thalamic drive to cortex",
       "Main mechanism: cochlear fluid ion composition",
       "Rhodopsin regeneration primarily",
@@ -5505,16 +3826,8 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Thalamus",
     question: "Thalamic relay nuclei function as?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Gateways that filter and route sensory/motor information to cortex",
+      "Gateways that filter and route sensory/motor",
       "Sites of phototransduction",
       "Primary storage of all declarative memories permanently",
       "NMJ-dominated synapses",
@@ -5531,16 +3844,8 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Executive Function",
     question: "Working memory tasks heavily engage?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Prefrontal cortex maintaining task-relevant information",
+      "Prefrontal cortex maintaining",
       "Requires rod outer segments",
       "Requires spinothalamic tract",
       "Cochlear basilar apex primarily",
@@ -5557,16 +3862,8 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Clinical Correlates",
     question: "Which outcome is most likely when Damage to primary visual cortex (V1) typically occurs?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Cortical blindness in corresponding visual field regions",
+      "Cortical blindness in corresponding visual",
       "Complete loss of all sensation including touch",
       "Deafness for all frequencies",
       "Immediate loss of all procedural memory",
@@ -5583,19 +3880,11 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Clinical Correlates",
     question: "Which clinical presentation is most consistent with Hemianopia after post-chiasmal lesion means?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Loss of contralateral half of the visual field in each eye",
-      "Loss of ipsilateral hearing",
-      "Inability to taste umami",
-      "Complete NMJ block",
+      "Loss of contralateral half of the visual",
+      "Loss of ipsilateral hearing at steady state in normoxic tissue",
+      "Inability to taste umami contralateral to monocular stimulation",
+      "Complete NMJ block at steady state in normoxic tissue",
     ],
     correct: 0,
     explanation: "Optic tract/radiation lesions create contralateral field defects.",
@@ -5609,19 +3898,11 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Clinical Correlates",
     question: "Prosopagnosia involves difficulty with?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Recognizing faces despite intact low-level vision",
-      "Detecting all sounds above 4 kHz",
-      "Feeling vibration",
-      "Most forms of motor learning instantly",
+      "Recognizing faces despite intact low-level",
+      "Detecting all sounds above 4 kHz under typical experimental conditions",
+      "Feeling vibration under typical experimental conditions",
+      "Most forms of motor learning instantly after repeated synaptic activation",
     ],
     correct: 0,
     explanation: "Face recognition networks (fusiform area among others) are impaired.",
@@ -5635,19 +3916,11 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Emotion & Memory",
     question: "Which capability best describes Amygdala activation during emotional events?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Modulate hippocampal consolidation strength",
-      "Transduce photons in rods",
-      "Set cochlear place map",
-      "Replace SNARE proteins",
+      "Modulate hippocampal consolidation",
+      "Transduce photons in rods without changes in presynaptic release probability",
+      "Set cochlear place map before cortical association areas",
+      "Replace SNARE proteins without changes in presynaptic release probability",
     ],
     correct: 0,
     explanation: "Emotional salience enhances memory encoding via amygdala–hippocampus interactions.",
@@ -5661,16 +3934,8 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Synaptic Basis of Memory",
     question: "Morris water maze performance is impaired by?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Hippocampal lesions that disrupt spatial navigation memory",
+      "Hippocampal lesions that disrupt spatial",
       "Blocking photopigment",
       "Removing outer hair cells",
       "Cutting all dorsal roots without CNS effect",
@@ -5687,19 +3952,11 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Visual System",
     question: "Magnocellular vs parvocellular LGN pathways differ partly in?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Temporal vs spatial resolution emphasis",
-      "Encoding bitter taste",
-      "NMJ quantal content",
-      "Muscle spindle length",
+      "Encoding bitter taste contralateral to monocular stimulation",
+      "NMJ quantal content before cortical association areas",
+      "Muscle spindle length contralateral to monocular stimulation",
     ],
     correct: 0,
     explanation: "M pathway favors motion/transients; P pathway favors detail/color.",
@@ -5713,19 +3970,11 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Retinal Circuitry",
     question: "Horizontal cells contribute to?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Lateral inhibition shaping center-surround antagonism",
-      "Saltatory conduction in optic nerve",
-      "ACh release at NMJ",
-      "CSF production",
+      "Lateral inhibition shaping center-surround",
+      "Saltatory conduction in optic nerve when Na⁺ inactivation has progressed",
+      "ACh release at NMJ when ligand-gated channels are open",
+      "CSF production contralateral to monocular stimulation",
     ],
     correct: 0,
     explanation: "Horizontal cells modulate bipolar input via lateral inhibition.",
@@ -5739,15 +3988,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Auditory System",
     question: "The organ of Corti sits on the basilar membrane and contains?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Hair cells and supporting cells transducing mechanical vibration",
       "References a circuit element that does not control the variable asked about",
       "Delayed K⁺ channels are closed throughout the entire action potential",
@@ -5765,15 +4006,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Pain",
     question: "Which clinical presentation is most consistent with Spinothalamic tract neurons convey?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Pain, temperature, and crude touch",
       "Main mechanism: fine two-point discrimination",
       "Main mechanism: visual orientation",
@@ -5791,16 +4024,8 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Learning & Memory",
     question: "Consolidation of memory over sleep involves?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Reactivation and transfer/interaction of hippocampal and cortical traces",
+      "Reactivation and transfer/interaction of",
       "Immediate erasure of all LTP",
       "HCN channels are silent while cGMP keeps CNG channels open",
       "Persistent block of Many synapses",
@@ -5817,19 +4042,11 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Basal Ganglia",
     question: "Dopamine reward prediction error signals are often associated with?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Midbrain dopamine neurons responding to unexpected reward",
-      "Inner hair cell stereocilia",
-      "Rod outer segment discs",
-      "NMJ acetylcholinesterase",
+      "Midbrain dopamine neurons responding to",
+      "Inner hair cell stereocilia bilaterally at the level described",
+      "Rod outer segment discs in the adult human CNS",
+      "NMJ acetylcholinesterase bilaterally at the level described",
     ],
     correct: 0,
     explanation: "DA neurons encode discrepancies between expected and received reward.",
@@ -5843,15 +4060,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Cerebellum",
     question: "Purkinje cells are the sole output of cerebellar cortex and?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Inhibit deep cerebellar nuclei",
       "Excite all motor neurons directly",
       "Transduce sound in cochlea",
@@ -5869,19 +4078,11 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Visual System",
     question: "Color opponency (red–green) arises largely from?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Retinal ganglion cell receptive field organization and cone inputs",
-      "Cochlear place map alone",
-      "Spinothalamic nociceptors",
-      "NMJ end-plate folds",
+      "Retinal ganglion cell receptive field",
+      "Cochlear place map alone contralateral to monocular stimulation",
+      "Spinothalamic nociceptors before cortical association areas",
+      "NMJ end-plate folds before cortical association areas",
     ],
     correct: 0,
     explanation: "Opponent processing compares cone signals.",
@@ -5895,15 +4096,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Auditory Pathway",
     question: "Auditory information reaches cortex via?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Thalamus (MGN) to primary auditory cortex",
       "Direct rod synapse on Purkinje cells",
       "Requires hippocampus without thalamus",
@@ -5921,19 +4114,11 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Olfactory System",
     question: "Mitral cells in olfactory bulb?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Project output to higher olfactory areas",
-      "Are photoreceptors in retina",
-      "Are inner hair cells",
-      "Generate NMJ quanta",
+      "Are photoreceptors in retina when ligand-gated channels are open",
+      "Are inner hair cells in the primary sensory pathway named",
+      "Generate NMJ quanta before cortical association areas",
     ],
     correct: 0,
     explanation: "Mitral/tufted cells are principal output neurons of the bulb.",
@@ -5947,15 +4132,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Gustation",
     question: "Taste information reaches cortex through?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Thalamus (VPM) and gustatory cortex among other relays",
       "Describes synaptic machinery unrelated to the membrane process in the stem",
       "Requires dorsal column without synapse",
@@ -5973,16 +4150,8 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Clinical Correlates",
     question: "Multiple sclerosis symptoms often include?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Weakness, sensory changes, and vision problems from demyelination",
+      "Weakness, sensory changes",
       "Requires loss of bitter taste permanently",
       "Requires rod hyperpolarization to dark",
       "Exclusive NMJ curare sensitivity",
@@ -5999,15 +4168,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Clinical Correlates",
     question: "Parkinson disease motor symptoms include?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Bradykinesia, rigidity, and resting tremor",
       "Hyperacuity for high-frequency hearing",
       "Complete cortical blindness",
@@ -6025,15 +4186,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Phototransduction",
     question: "Rhodopsin activation by light triggers?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Transducin/phosphodiesterase cascade lowering cGMP",
       "Immediate opening of voltage-gated Na⁺ at axon hillock",
       "SNARE-mediated fusion at NMJ",
@@ -6051,19 +4204,11 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Somatosensation",
     question: "Two-point discrimination is finest on?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Fingertips with high receptor density and large cortical representation",
-      "Proximal back with low density",
-      "Cochlear apex primarily",
-      "Rod outer segment tip",
+      "Fingertips with high receptor density",
+      "Proximal back with low density in the primary sensory pathway named",
+      "Cochlear apex primarily before cortical association areas",
+      "Rod outer segment tip in the primary sensory pathway named",
     ],
     correct: 0,
     explanation: "Sensory acuity correlates with receptor density and cortical magnification.",
@@ -6077,15 +4222,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Clinical Correlates",
     question: "Which outcome is most likely when A lesion of the optic tract (post-chiasmal, left side) typically occurs?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Right homonymous hemianopia",
       "Left nasal hemianopia mainly in the left eye",
       "Bitemporal hemianopia",
@@ -6103,19 +4240,11 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Clinical Correlates",
     question: "Which clinical presentation is most consistent with What does Transection of the lateral corticospinal tract in the cervical spinal cord usually produce?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Ipsilateral weakness below the lesion with upper motor neuron signs",
-      "Contralateral weakness below the lesion",
-      "Bilateral flaccid paralysis at the level",
-      "Isolated loss of taste on the tongue",
+      "Ipsilateral weakness below the lesion with",
+      "Contralateral weakness below the lesion at steady state in normoxic tissue",
+      "Bilateral flaccid paralysis at the level when homeostatic mechanisms are intact",
+      "Isolated loss of taste on the tongue contralateral to monocular stimulation",
     ],
     correct: 0,
     explanation: "Corticospinal fibers decussate in the medulla; ipsilateral tract carries ipsilateral limb control.",
@@ -6129,15 +4258,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Clinical Correlates",
     question: "Damage to left Wernicke's area (posterior superior temporal gyrus) most often yields?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Fluent but largely meaningless speech with impaired comprehension",
       "Nonfluent effortful speech with relatively preserved comprehension",
       "Pure motor weakness without language change",
@@ -6155,19 +4276,11 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Vestibular System",
     question: "Semicircular canal hair cells depolarize when?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Endolymph flow deflects the cupula toward the kinocilium",
-      "Basilar membrane moves at 4 kHz",
-      "Rod photopigment isomerizes",
-      "Glomeruli are activated by odorants",
+      "Endolymph flow deflects the cupula toward",
+      "Basilar membrane moves at 4 kHz under typical experimental conditions",
+      "Rod photopigment isomerizes when homeostatic mechanisms are intact",
+      "Glomeruli are activated by odorants at steady state in normoxic tissue",
     ],
     correct: 0,
     explanation: "Vestibular transduction is direction-sensitive to stereocilia bundle deflection.",
@@ -6181,15 +4294,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Motor Systems",
     question: "Cerebellar lesions classically produce?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Ataxia, dysmetria, and intention tremor without primary weakness",
       "Resting tremor and bradykinesia identical to Parkinson disease",
       "Complete cortical blindness (maps the lesion to the wrong motor pathway or reflex)",
@@ -6207,15 +4312,7 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Motor Systems",
     question: "When direct pathway of the basal ganglia (striatum → GPi/SNr) is active, which effect on neural circuit function is most likely?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
       "Disinhibit thalamocortical neurons and facilitate movement",
       "Strongly inhibit all thalamic output permanently (maps the lesion to the wrong motor pathway or reflex)",
       "Hyperpolarize photoreceptors (maps the lesion to the wrong motor pathway or reflex)",
@@ -6233,16 +4330,8 @@ const PART3_EXPANSION_POOL = [
   {
     topic: "Thalamus",
     question: "The ventral posteromedial (VPM) nucleus of thalamus primarily relays?",
-    reviewStatus: "verified",
-    scientificReview: "automated_mcb80x_gate_v1",
-    pipelineStage: "approved_practice",
     options: [
-
-
-
-
-
-      "Facial somatosensory and gustatory information toward cortex",
+      "Facial somatosensory",
       "Primary visual information from retina",
       "Cochlear frequency maps",
       "Corticospinal tract motor commands",
