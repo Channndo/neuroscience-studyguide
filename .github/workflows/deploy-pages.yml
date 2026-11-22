@@ -35,6 +35,9 @@ jobs:
       - name: MCQ option length balance
         run: node scripts/test-option-length-balance.mjs
 
+      - name: MCQ option completeness
+        run: node scripts/test-option-completeness.mjs
+
       - name: Question stem repair check
         run: node scripts/repair-question-stems.mjs
 

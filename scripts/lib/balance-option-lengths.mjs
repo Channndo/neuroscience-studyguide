@@ -15,37 +15,6 @@ export function isKeyedLongest(q) {
   return cLen > maxOther;
 }
 
-export function trimKeyedOption(text) {
-  let t = String(text ?? "").trim();
-  if (!t || optionLen(t) <= 40) return t;
-
-  const parts = t.split(/\s*;\s*/);
-  if (parts.length > 1 && optionLen(parts[0]) >= 18) return parts[0].trim();
-
-  const comma = t.match(/^(.{18,}?),/);
-  if (comma) return comma[1].trim();
-
-  const em = t.match(/^(.{16,}?)—/);
-  if (em) return em[1].trim();
-
-  const whileSplit = t.split(/\s+while\s+/i);
-  if (whileSplit.length > 1 && optionLen(whileSplit[0]) >= 16) return whileSplit[0].trim();
-
-  const andSplit = t.split(/\s+and\s+/i);
-  if (andSplit.length > 1 && optionLen(andSplit[0]) >= 20) return andSplit[0].trim();
-
-  t = t.replace(/\s*\([^)]{10,}\)\s*$/, "").trim();
-  if (optionLen(t) <= 42) return t;
-
-  const words = t.split(/\s+/);
-  let out = "";
-  for (const w of words) {
-    if (optionLen(out + " " + w) > 42) break;
-    out = out ? `${out} ${w}` : w;
-  }
-  return out || t.slice(0, 42).trim();
-}
-
 function topicContextPads(topic, optionText) {
   const t = `${topic || ""} ${optionText || ""}`.toLowerCase();
   if (/\bmv\b|nernst|goldman|membrane potential|v_m|driving force|permeab|ion channel|leak/.test(t)) {
@@ -128,23 +97,15 @@ export function padDistractor(opt, topic, targetLen) {
 
 export function balanceMcqOptions(q) {
   if (!q?.options?.length || q.correct == null || q.type === "selectAll") return q;
+  if (!isKeyedLongest(q)) return q;
 
   const opts = q.options.slice();
   const ci = q.correct;
-  const trimmed = trimKeyedOption(opts[ci]);
-  if (trimmed !== opts[ci]) opts[ci] = trimmed;
-
-  if (!isKeyedLongest({ ...q, options: opts })) {
-    return { ...q, options: opts };
-  }
-
   const cLen = optionLen(opts[ci]);
   const maxWrong = Math.max(...opts.map((o, i) => (i === ci ? 0 : optionLen(o))));
-  const target = Math.max(Math.min(cLen - 2, maxWrong + 2), Math.min(cLen - 4, 28));
+  const target = Math.max(maxWrong + 1, cLen - 3);
 
-  const next = opts.map((o, i) =>
-    i === ci ? o : padDistractor(o, q.topic, Math.max(target, optionLen(o) + 1))
-  );
+  const next = opts.map((o, i) => (i === ci ? o : padDistractor(o, q.topic, target)));
 
   return { ...q, options: next };
 }
