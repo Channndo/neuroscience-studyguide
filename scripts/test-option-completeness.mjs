@@ -7,6 +7,10 @@ import { fileURLToPath } from "url";
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 
 function optionIncomplete(text) {
+  const raw = String(text ?? "").trim();
+  if (/^Main mechanism:/i.test(raw)) return true;
+  if (/maps the lesion|not implied by the circuit wiring|localizes the function to the wrong brain region/i.test(raw))
+    return true;
   const t = String(text ?? "")
     .replace(/<[^>]+>/g, "")
     .trim();

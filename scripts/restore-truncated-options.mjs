@@ -7,6 +7,7 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import { execSync } from "child_process";
+import { isShortenedOption } from "./lib/restore-option-helpers.mjs";
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const REV = process.argv.find(a => a.startsWith("--rev="))?.slice(6) || "eb30e6a";
@@ -23,16 +24,6 @@ function loadPoolsFromSource(source) {
   if (!names.length) return { names: [], bag: {} };
   const bag = new Function(`${source}\nreturn { ${names.join(", ")} };`)();
   return { names, bag };
-}
-
-function isShortenedOption(short, full) {
-  const s = String(short ?? "").trim();
-  const f = String(full ?? "").trim();
-  if (!s || !f || s === f) return false;
-  if (f.length < s.length + 2) return false;
-  if (!f.startsWith(s)) return false;
-  const rest = f.slice(s.length);
-  return /^(\s+[\w(/]|[,;:—])/.test(rest);
 }
 
 function optionLooksIncomplete(text) {

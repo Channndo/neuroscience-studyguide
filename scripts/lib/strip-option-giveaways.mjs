@@ -54,6 +54,10 @@ export const OPTION_GIVEAWAY_RES = [
   /\s+under physiological ion concentrations\.?/gi,
   /\s+relative to resting membrane conditions\.?/gi,
   /\s+ at 37\s*°C$/gi,
+  /\s*\(maps the lesion to the wrong motor pathway or reflex\)/gi,
+  /\s*\(localizes the function to the wrong brain region\)/gi,
+  /\s*\(not implied by the circuit wiring described above\.?\)/gi,
+  /\s*primarily forever\.?/gi,
 ];
 
 const REQUIRES_PREFIX =
@@ -73,6 +77,10 @@ export function stripOptionGiveawayText(raw) {
   if (REQUIRES_PREFIX.test(t)) {
     const idx = t.length % REQUIRES_REPLACEMENTS.length;
     t = REQUIRES_REPLACEMENTS[idx];
+  }
+  t = t.replace(/^Main mechanism:\s*/i, "");
+  if (/^(photoreceptor|glomerul|NMJ|nMJ)/i.test(t)) {
+    t = "Applies a sensory transduction pathway from a different modality";
   }
   t = t.replace(/\s{2,}/g, " ").replace(/\s+\./g, ".").trim();
   if (t.endsWith("—")) t = t.slice(0, -1).trim();

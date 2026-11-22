@@ -20,6 +20,8 @@ const PROCTORED_SATA_POOL = [
 
 
 
+
+
       "E_K depends on the K⁺ outside/inside ratio",
       "E_Na is independent of Na⁺ concentrations",
       "Anion equilibrium potentials use the same log form with valence",
@@ -44,6 +46,8 @@ const PROCTORED_SATA_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
+
 
 
 
@@ -88,6 +92,8 @@ const PROCTORED_SATA_POOL = [
 
 
 
+
+
       "τ = R_m × C_m",
       "λ increases if R_m rises with R_i fixed",
       "Higher membrane leak conductance lengthens λ (lower leak shortens it)",
@@ -112,6 +118,8 @@ const PROCTORED_SATA_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
+
 
 
 
@@ -156,6 +164,8 @@ const PROCTORED_SATA_POOL = [
 
 
 
+
+
       "mEPSPs reflect single vesicle fusion",
       "Evoked release adds quanta stochastically",
       "All synapses release exactly one vesicle per spike",
@@ -180,6 +190,8 @@ const PROCTORED_SATA_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
+
 
 
 
@@ -224,6 +236,8 @@ const PROCTORED_SATA_POOL = [
 
 
 
+
+
       "Postsynaptic depolarization relieves Mg²⁺ block",
       "Presynaptic activity alone is always sufficient",
       "Ca²⁺ influx through NMDA receptors",
@@ -248,6 +262,8 @@ const PROCTORED_SATA_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
+
 
 
 
@@ -292,6 +308,8 @@ const PROCTORED_SATA_POOL = [
 
 
 
+
+
       "Basilar membrane is tonotopic",
       "High frequencies encoded basally",
       "All hair cells respond equally to all frequencies",
@@ -316,6 +334,8 @@ const PROCTORED_SATA_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
+
 
 
 
@@ -360,6 +380,8 @@ const PROCTORED_SATA_POOL = [
 
 
 
+
+
       "Dopamine loss in SNc relates to Parkinsonism",
       "Direct and indirect pathways regulate movement",
       "Cerebellar cortex is part of basal ganglia",
@@ -384,6 +406,8 @@ const PROCTORED_SATA_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
+
 
 
 
@@ -428,6 +452,8 @@ const PROCTORED_SATA_POOL = [
 
 
 
+
+
       "Outward current is defined positive",
       "I = g(V_m − E_ion)",
       "Inward Na⁺ at rest from E_Na is always outward current",
@@ -452,6 +478,8 @@ const PROCTORED_SATA_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
+
 
 
 
@@ -496,6 +524,8 @@ const PROCTORED_SATA_POOL = [
 
 
 
+
+
       "DCML carries fine touch/proprioception",
       "Spinothalamic carries pain/temp",
       "Both are purely motor",
@@ -520,6 +550,8 @@ const PROCTORED_SATA_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
+
 
 
 
@@ -564,6 +596,8 @@ const PROCTORED_SATA_POOL = [
 
 
 
+
+
       "Na⁺ channels concentrated at nodes",
       "Myelin reduces capacitance per unit length",
       "Continuous propagation requires no Na⁺ channels",
@@ -588,6 +622,8 @@ const PROCTORED_SATA_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
+
 
 
 
@@ -632,6 +668,8 @@ const PROCTORED_SATA_POOL = [
 
 
 
+
+
       "TTX blocks voltage-gated Na⁺",
       "TTX blocks voltage-gated K⁺ exclusively",
       "α-dendrotoxin affects K⁺ channels",
@@ -656,6 +694,8 @@ const PROCTORED_SATA_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
+
 
 
 
@@ -700,6 +740,8 @@ const PROCTORED_SATA_POOL = [
 
 
 
+
+
       "Activation opens the pore on depolarization",
       "Inactivation can close the pore during sustained depolarization",
       "They are equally permeable to Ca²⁺ and Na⁺ at peak open probability",
@@ -724,6 +766,8 @@ const PROCTORED_SATA_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
+
 
 
 
@@ -768,6 +812,8 @@ const PROCTORED_SATA_POOL = [
 
 
 
+
+
       "Coincident pre- and postsynaptic activity can strengthen AMPA responses",
       "NMDA receptors act as coincidence detectors via voltage-dependent Mg²⁺ block",
       "LTP requires immediate permanent silencing of all inhibitory interneurons",
@@ -792,6 +838,8 @@ const PROCTORED_SATA_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
+
 
 
 
@@ -836,6 +884,8 @@ const PROCTORED_SATA_POOL = [
 
 
 
+
+
       "UMN lesion → increased deep tendon reflexes",
       "LMN lesion → flaccid weakness with atrophy",
       "UMN lesion → fasciculations as the primary sign",
@@ -860,6 +910,8 @@ const PROCTORED_SATA_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
+
 
 
 
@@ -904,6 +956,8 @@ const PROCTORED_SATA_POOL = [
 
 
 
+
+
       "Preganglionic sympathetic fibers can be myelinated and relatively short to the chain ganglia",
       "Parasympathetic preganglionic fibers are long and synapse near or in target organs",
       "All autonomic postganglionic neurons release ACh onto smooth muscle",
@@ -928,6 +982,8 @@ const PROCTORED_SATA_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
+
 
 
 
@@ -972,6 +1028,8 @@ const PROCTORED_SATA_POOL = [
 
 
 
+
+
       "Binocular competition shapes ocular dominance columns",
       "Spontaneous retinal waves can drive wiring before vision",
       "Critical periods never close in sensory cortex",
@@ -996,6 +1054,8 @@ const PROCTORED_SATA_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
+
 
 
 
@@ -1040,6 +1100,8 @@ const PROCTORED_SATA_POOL = [
 
 
 
+
+
       "Basilar membrane is stiffer at the base (high-frequency place)",
       "Outer hair cells provide active amplification",
       "All frequencies map to the apex only",
@@ -1064,6 +1126,8 @@ const PROCTORED_SATA_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
+
 
 
 
@@ -1108,6 +1172,8 @@ const PROCTORED_SATA_POOL = [
 
 
 
+
+
       "First-order nociceptors can synapse in dorsal horn laminae I–II",
       "Spinothalamic tract carries pain/temp",
       "All fast touch and pain share identical thickly myelinated fibers",
@@ -1132,6 +1198,8 @@ const PROCTORED_SATA_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
+
 
 
 
@@ -1176,6 +1244,8 @@ const PROCTORED_SATA_POOL = [
 
 
 
+
+
       "Declarative/episodic encoding depends on hippocampal circuits",
       "Procedural skills like riding a bike rely primarily on hippocampus alone",
       "Bilateral medial temporal damage can cause anterograde amnesia",
@@ -1200,6 +1270,8 @@ const PROCTORED_SATA_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
+
 
 
 
@@ -1244,6 +1316,8 @@ const PROCTORED_SATA_POOL = [
 
 
 
+
+
       "K⁺ spatial buffering after neuronal firing",
       "Uptake of glutamate from synaptic cleft",
       "Generation of action potentials for long-range signaling like axons",
@@ -1268,6 +1342,8 @@ const PROCTORED_SATA_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
+
 
 
 
@@ -1312,6 +1388,8 @@ const PROCTORED_SATA_POOL = [
 
 
 
+
+
       "Imbalance of excitation and inhibition can promote hypersynchrony",
       "Spread can involve thalamocortical loops",
       "All seizures require visible tonic–clonic movements",
@@ -1336,6 +1414,8 @@ const PROCTORED_SATA_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
+
 
 
 
@@ -1380,6 +1460,8 @@ const PROCTORED_SATA_POOL = [
 
 
 
+
+
       "Broca → nonfluent speech with relatively preserved comprehension",
       "Wernicke → fluent but paraphasic speech with poor comprehension",
       "Conduction aphasia → impaired repetition with fluent speech",
@@ -1404,6 +1486,8 @@ const PROCTORED_SATA_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
+
 
 
 
@@ -1448,6 +1532,8 @@ const PROCTORED_SATA_POOL = [
 
 
 
+
+
       "Ipsilateral loss of proprioception/vibration (dorsal columns)",
       "Contralateral loss of pain/temperature (spinothalamic)",
       "Ipsilateral UMN weakness",
@@ -1472,6 +1558,8 @@ const PROCTORED_SATA_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
+
 
 
 
@@ -1516,6 +1604,8 @@ const PROCTORED_SATA_POOL = [
 
 
 
+
+
       "Can produce locomotor rhythms without sensory feedback",
       "Reciprocal inhibition helps alternate flexor/extensor bursts",
       "Require continuous cortical spiking for each muscle twitch in all species",
@@ -1540,6 +1630,8 @@ const PROCTORED_SATA_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
+
 
 
 
@@ -1584,6 +1676,8 @@ const PROCTORED_SATA_POOL = [
 
 
 
+
+
       "Often couple to Gq and can raise postsynaptic Ca²⁺",
       "Can modulate ionotropic receptor function",
       "Are always ligand-gated ion channels like AMPA",
@@ -1608,6 +1702,8 @@ const PROCTORED_SATA_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
+
 
 
 
@@ -1652,6 +1748,8 @@ const PROCTORED_SATA_POOL = [
 
 
 
+
+
       "Different taste qualities engage partially overlapping peripheral pathways",
       "Umami is signaled by glutamate binding metabotropic receptors",
       "Sweet and bitter always share identical labeled lines with no overlap",
@@ -1676,6 +1774,8 @@ const PROCTORED_SATA_POOL = [
     scientificReview: "automated_mcb80x_gate_v1",
     pipelineStage: "approved_practice",
     options: [
+
+
 
 
 
@@ -1883,7 +1983,7 @@ const PROCTORED_LESION_POOL = [
       "Anterograde declarative amnesia",
       "Loss of all procedural skills instantly",
       "Hypermnesia",
-      "Main mechanism: motor deficit",
+      "States that photoreceptors generate overshooting Na⁺ spikes like axons",
     ],
     correct: 0,
     explanation: "Anterograde declarative amnesia",
@@ -2375,7 +2475,7 @@ const PROCTORED_LESION_POOL = [
     question: "Which neurologic deficit or presentation is most likely with Central cord syndrome (cervical)?",
     options: [
       "Greater weakness in upper limbs than lower",
-      "Main mechanism: lower limb weakness with intact arms",
+      "Describes vestibular hair-cell signaling as identical to retinal phototransduction",
       "Homonymous hemianopia",
       "Deafness",
     ],
@@ -2814,7 +2914,7 @@ const PROCTORED_LESION_POOL = [
       "Tremor and motor coordination issues",
       "Pure blindness",
       "Deafness",
-      "Main mechanism: aphasia without motor signs",
+      "Treats myelin length constant as the driver of Na⁺ and K⁺ conductance timing",
     ],
     correct: 0,
     explanation: "Left red nucleus (combined with nearby pathways) → Tremor and motor coordination issues; pattern depends on adjacent damage.",
@@ -2948,9 +3048,9 @@ const PROCTORED_CIRCUIT_POOL = [
     question: "Three-neuron chain: sensory → excitatory interneuron → motor. Sensory fires; interneuron is blocked. Motor output?",
     options: [
       "Reduced or absent excitation of motor neuron",
-      "Increased motor firing (not implied by the circuit wiring described above.)",
-      "Main mechanism: neuromodulation (not implied by the circuit wiring described above.)",
-      "Saltatory conduction in muscle (not implied by the circuit wiring described above.)",
+      "Increased motor firing",
+      "States that photoreceptors generate overshooting Na⁺ spikes like axons",
+      "Saltatory conduction in muscle",
     ],
     correct: 0,
     explanation: "Without the interneuron relay, the motor neuron receives little or no excitation.",
@@ -2968,7 +3068,7 @@ const PROCTORED_CIRCUIT_POOL = [
     options: [
       "Negative feedback limiting firing duration",
       "Runaway excitation under typical experimental conditions",
-      "LTP after repeated synaptic activation",
+      "LTP after repeated synaptic activation when NMDA receptors are co-activated",
       "Myelin formation when Na⁺ inactivation has progressed",
     ],
     correct: 0,
@@ -2988,7 +3088,7 @@ const PROCTORED_CIRCUIT_POOL = [
       "Narrower window for relay firing",
       "Relay fires longer without limit",
       "Relay cannot fire at all",
-      "Main mechanism: gap junction coupling",
+      "Mixes up ipsilateral cerebellar signs with contralateral corticospinal deficits",
     ],
     correct: 0,
     explanation: "Feedforward inhibition curtails relay output to a brief window.",
@@ -3005,9 +3105,9 @@ const PROCTORED_CIRCUIT_POOL = [
     question: "Disinhibition: inhibitory interneuron is silenced, releasing target neuron from inhibition. Target neuron activity?",
     options: [
       "Increases (disinhibition)",
-      "Often decreases (not implied by the circuit wiring described above.)",
-      "Unchanged (not implied by the circuit wiring described above.)",
-      "Main mechanism: photoreceptor responds (not implied by the circuit wiring described above.)",
+      "Often decreases",
+      "Unchanged",
+      "Describes synaptic transmission rather than membrane voltage-gated currents",
     ],
     correct: 0,
     explanation: "Removing inhibition increases target excitability.",
@@ -3024,9 +3124,9 @@ const PROCTORED_CIRCUIT_POOL = [
     question: "Reciprocal inhibition between two antagonist motor pools (flexor/extensor). When flexor pool is active, extensor pool?",
     options: [
       "Reciprocally inhibited (reduced firing)",
-      "Co-activated equally (not implied by the circuit wiring described above.)",
-      "Unrelated (not implied by the circuit wiring described above.)",
-      "Main mechanism: sensory firing (not implied by the circuit wiring described above.)",
+      "Co-activated equally",
+      "Unrelated",
+      "Confuses resting multi-ion equilibrium with active spike conductance changes",
     ],
     correct: 0,
     explanation: "Reciprocal inhibition prevents co-contraction of antagonists.",
@@ -3043,9 +3143,9 @@ const PROCTORED_CIRCUIT_POOL = [
     question: "Central pattern generator (CPG) for locomotion: rhythmic output persists after sensory input ends. This implies?",
     options: [
       "Recurrent excitatory/inhibitory loops can sustain rhythm intrinsically",
-      "Sensory input required most cycle (not implied by the circuit wiring described above.)",
-      "Main mechanism: myelin generates rhythm (not implied by the circuit wiring described above.)",
-      "Main mechanism: cortex required each step (not implied by the circuit wiring described above.)",
+      "Sensory input required most cycle",
+      "Describes synaptic transmission rather than membrane voltage-gated currents",
+      "Applies photoreceptor dark current logic to axonal action potentials",
     ],
     correct: 0,
     explanation: "CPGs use local circuit dynamics to maintain rhythmic motor patterns.",
@@ -3062,9 +3162,9 @@ const PROCTORED_CIRCUIT_POOL = [
     question: "Aplysia siphon withdrawal: strong tail shock sensitizes siphon response via serotonin on sensory terminals. Mechanism?",
     options: [
       "Serotonin increases cAMP/PKA and broadens sensory terminal excitability (sensitization)",
-      "Main mechanism: postsynaptic K⁺ block (not implied by the circuit wiring described above.)",
-      "Long-term depression (not implied by the circuit wiring described above.)",
-      "Gap junction opening (not implied by the circuit wiring described above.)",
+      "Attributes blood–brain barrier tight junctions to muscle endplate ACh receptors following presynaptic Ca²⁺ influx",
+      "Long-term depression when homeostatic mechanisms are intact under typical experimental conditions",
+      "Gap junction opening when homeostatic mechanisms are intact under typical experimental conditions",
     ],
     correct: 0,
     explanation: "Serotonin modulates presynaptic release in Aplysia sensitization.",
@@ -3081,9 +3181,9 @@ const PROCTORED_CIRCUIT_POOL = [
     question: "Summation: EPSP +5 mV and IPSP −3 mV arrive simultaneously at soma (linear range). Approximate net change?",
     options: [
       "2 mV toward threshold",
-      "8 mV (not implied by the circuit wiring described above.)",
-      "−8 mV (not implied by the circuit wiring described above.)",
-      "0 mV (not implied by the circuit wiring described above.)",
+      "≈ 8 mV at 37 °C at mammalian body temperature",
+      "≈ −8 mV at 37 °C with dominant K⁺ permeability at rest",
+      "≈ 0 mV at 37 °C at mammalian body temperature",
     ],
     correct: 0,
     explanation: "Subthreshold linear summation: +5 + (−3) ≈ +2 mV.",
@@ -3100,9 +3200,9 @@ const PROCTORED_CIRCUIT_POOL = [
     question: "Two EPSPs +3 mV each arrive 2 ms apart within τ_m. Compared with one EPSP, somatic depolarization?",
     options: [
       "Greater peak (temporal summation)",
-      "Same peak (not implied by the circuit wiring described above.)",
-      "Zero (not implied by the circuit wiring described above.)",
-      "Main mechanism: inhibition results (not implied by the circuit wiring described above.)",
+      "Same peak",
+      "Zero",
+      "Treats cerebellar parallel fibers as the sole output of the basal ganglia",
     ],
     correct: 0,
     explanation: "Temporal summation within τ increases peak depolarization.",
@@ -3119,9 +3219,9 @@ const PROCTORED_CIRCUIT_POOL = [
     question: "Feedback inhibition in cortex: pyramidal cell activates interneuron that inhibits same pyramidal cell. Function?",
     options: [
       "Gain control and stabilization of firing rate",
-      "Guaranteed runaway activity (not implied by the circuit wiring described above.)",
-      "Main mechanism: lTP induction (not implied by the circuit wiring described above.)",
-      "Main mechanism: myelin repair (not implied by the circuit wiring described above.)",
+      "Guaranteed runaway activity",
+      "Applies photoreceptor dark current logic to axonal action potentials",
+      "Describes synaptic transmission rather than membrane voltage-gated currents",
     ],
     correct: 0,
     explanation: "Feedback inhibition stabilizes cortical firing.",
@@ -3138,9 +3238,9 @@ const PROCTORED_CIRCUIT_POOL = [
     question: "Lateral inhibition in retina: surround inhibits center. Visual edge enhancement occurs because?",
     options: [
       "Contrast at borders increases due to differential center vs surround firing",
-      "Most pixels fire equally (not implied by the circuit wiring described above.)",
-      "Main mechanism: photoreceptors spike (not implied by the circuit wiring described above.)",
-      "Main mechanism: cochlea tuned (not implied by the circuit wiring described above.)",
+      "Most pixels fire equally under typical experimental conditions at steady state in normoxic tissue",
+      "Localizes declarative memory storage to primary visual cortex area V1 in the primary sensory pathway named",
+      "Equates end-plate potential size with cortical epileptic afterdischarge when homeostatic mechanisms are intact",
     ],
     correct: 0,
     explanation: "Lateral inhibition enhances contrast at edges.",
@@ -3157,9 +3257,9 @@ const PROCTORED_CIRCUIT_POOL = [
     question: "Inhibitory interneuron (PV+) provides perisomatic inhibition on pyramidal cell. Effect on spike timing?",
     options: [
       "Precise control of spike timing and synchrony",
-      "Main mechanism: increases firing rate without bound (not implied by the circuit wiring described above.)",
-      "Main mechanism: blocks all input permanently (not implied by the circuit wiring described above.)",
-      "Main mechanism: affects glomeruli (not implied by the circuit wiring described above.)",
+      "States that photoreceptors generate overshooting Na⁺ spikes like axons",
+      "Uses passive cable decay alone to explain saltatory conduction at nodes",
+      "Implies the Na⁺/K⁺ pump alone produces the spike upswing",
     ],
     correct: 0,
     explanation: "Perisomatic inhibition strongly regulates spike timing.",
@@ -3195,9 +3295,9 @@ const PROCTORED_CIRCUIT_POOL = [
     question: "Divergent excitatory circuit: one sensory neuron drives many motor neurons. Effect?",
     options: [
       "Amplification/spread of signal to multiple outputs",
-      "Main mechanism: one motor neuron can ever fire (not implied by the circuit wiring described above.)",
-      "Main mechanism: inhibition spreads (not implied by the circuit wiring described above.)",
-      "Main mechanism: photoreceptor signal (not implied by the circuit wiring described above.)",
+      "States that dorsal root ganglion neurons cannot regenerate central processes",
+      "Uses passive cable decay alone to explain saltatory conduction at nodes",
+      "Confuses nicotinic receptor desensitization with metabotropic second-messenger cascades",
     ],
     correct: 0,
     explanation: "Divergence distributes input to many targets.",
@@ -3214,9 +3314,9 @@ const PROCTORED_CIRCUIT_POOL = [
     question: "Convergent excitatory circuit: many sensory neurons onto one motor neuron. Effect?",
     options: [
       "Spatial summation can reach threshold more easily",
-      "Motor neuron cannot integrate inputs (not implied by the circuit wiring described above.)",
-      "Main mechanism: one synapse matters (not implied by the circuit wiring described above.)",
-      "Main mechanism: gap junctions converge (not implied by the circuit wiring described above.)",
+      "Motor neuron cannot integrate inputs",
+      "Uses steady-state Nernst for one ion while both g_Na and g_K change in time",
+      "Applies photoreceptor dark current logic to axonal action potentials",
     ],
     correct: 0,
     explanation: "Convergence allows spatial summation.",
@@ -3296,7 +3396,7 @@ const PROCTORED_CLAMP_TRACE_POOL = [
       "Voltage-gated K⁺",
       "Na⁺ influx",
       "Photopigment current",
-      "Glomerular odor current",
+      "Applies a sensory transduction pathway from a different modality",
     ],
     correct: 0,
     diagram: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 160\" role=\"img\" aria-label=\"TTX clamp\"><rect width=\"340\" height=\"160\" fill=\"#fafafa\"/><text x=\"170\" y=\"14\" text-anchor=\"middle\" font-size=\"10\">I (nA) vs time</text><line x1=\"30\" y1=\"130\" x2=\"310\" y2=\"130\" stroke=\"#333\"/><polyline fill=\"none\" stroke=\"#a41034\" stroke-width=\"2\" points=\"30,90 100,90 100,95 250,95\"/></svg>",
@@ -3314,9 +3414,9 @@ const PROCTORED_CLAMP_TRACE_POOL = [
     question: "Which statement best describes After TEA, the early inward current remains but repolarizing outward current is reduced. Early inward?",
     options: [
       "Na⁺ current (TEA blocks K⁺)",
-      "Main mechanism: cl⁻ (not implied by the circuit wiring described above.)",
-      "Main mechanism: pump current (not implied by the circuit wiring described above.)",
-      "Main mechanism: gap junction (not implied by the circuit wiring described above.)",
+      "Implies the Na⁺/K⁺ pump alone produces the spike upswing",
+      "Confuses dorsal-column touch with spinothalamic pain and temperature",
+      "Assigns the behavior to the wrong CNS nucleus or peripheral ganglion",
     ],
     correct: 0,
     diagram: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 160\" role=\"img\" aria-label=\"TEA clamp\"><rect width=\"340\" height=\"160\" fill=\"#fafafa\"/><text x=\"170\" y=\"14\" text-anchor=\"middle\" font-size=\"10\">I (nA) vs time</text><polyline fill=\"none\" stroke=\"#a41034\" stroke-width=\"2\" points=\"30,90 100,90 100,40 250,40 250,70 300,70\"/></svg>",
@@ -3354,9 +3454,9 @@ const PROCTORED_CLAMP_TRACE_POOL = [
     question: "Which anatomic lesion best explains I–V plot shows inward current at depolarized potentials crossing zero near +55 mV. This reversal near +55 mV?",
     options: [
       "Predominantly Na⁺ current under these conditions",
-      "Predominantly K⁺ mainly at all voltages (not implied by the circuit wiring described above.)",
-      "No ionic currents (not implied by the circuit wiring described above.)",
-      "Main mechanism: cl⁻ at all voltages (not implied by the circuit wiring described above.)",
+      "Predominantly K⁺ mainly at all voltages",
+      "No ionic currents",
+      "States that photoreceptors generate overshooting Na⁺ spikes like axons",
     ],
     correct: 0,
     diagram: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 160\" role=\"img\" aria-label=\"I-V curve\"><rect width=\"340\" height=\"160\" fill=\"#fafafa\"/><text x=\"170\" y=\"14\" text-anchor=\"middle\" font-size=\"10\">I (nA)</text><text x=\"8\" y=\"80\" font-size=\"10\" transform=\"rotate(-90 8 80)\">V_m (mV)</text><line x1=\"40\" y1=\"140\" x2=\"300\" y2=\"140\" stroke=\"#333\"/><line x1=\"40\" y1=\"20\" x2=\"40\" y2=\"140\" stroke=\"#333\"/><polyline fill=\"none\" stroke=\"#a41034\" stroke-width=\"2\" points=\"40,100 120,100 200,40 280,120\"/></svg>",
@@ -3374,9 +3474,9 @@ const PROCTORED_CLAMP_TRACE_POOL = [
     question: "Current-clamp: brief hyperpolarizing current step produces exponential return with time constant τ. τ primarily reflects?",
     options: [
       "R_m × C_m membrane properties",
-      "Axon diameter (not implied by the circuit wiring described above.)",
-      "Main mechanism: synaptic quanta (not implied by the circuit wiring described above.)",
-      "Main mechanism: myelin thickness without R_m (not implied by the circuit wiring described above.)",
+      "Axon diameter",
+      "Attributes taste transduction to cochlear outer hair cell motility",
+      "Mixes up ipsilateral cerebellar signs with contralateral corticospinal deficits",
     ],
     correct: 0,
     diagram: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 160\" role=\"img\" aria-label=\"current clamp\"><rect width=\"340\" height=\"160\" fill=\"#fafafa\"/><text x=\"170\" y=\"14\" text-anchor=\"middle\" font-size=\"10\">V_m (mV) vs time</text><polyline fill=\"none\" stroke=\"#a41034\" stroke-width=\"2\" points=\"30,110 100,110 100,70 220,70 220,85 300,85\"/></svg>",
@@ -3394,9 +3494,9 @@ const PROCTORED_CLAMP_TRACE_POOL = [
     question: "Subthreshold current-clamp step produces graded depolarization without spikes. The trace shows?",
     options: [
       "Passive/subthreshold response without regenerative Na⁺ activation",
-      "Full action potential train (not implied by the circuit wiring described above.)",
-      "Main mechanism: synaptic vesicle fusion (not implied by the circuit wiring described above.)",
-      "Main mechanism: cochlear tuning (not implied by the circuit wiring described above.)",
+      "Full action potential train",
+      "Applies photoreceptor dark current logic to axonal action potentials",
+      "Attributes blood–brain barrier tight junctions to muscle endplate ACh receptors",
     ],
     correct: 0,
     diagram: "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 160\" role=\"img\" aria-label=\"subthreshold\"><rect width=\"340\" height=\"160\" fill=\"#fafafa\"/><text x=\"170\" y=\"14\" text-anchor=\"middle\" font-size=\"10\">V_m (mV)</text><polyline fill=\"none\" stroke=\"#a41034\" stroke-width=\"2\" points=\"30,100 100,100 100,85 250,85\"/></svg>",

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-22T17:30:22.556Z",
-  "count": 1304,
+  "generatedAt": "2026-11-22T18:36:24.786Z",
+  "count": 1300,
   "items": [
     {
       "id": "inline:PART1:0",
@@ -3359,20 +3359,8 @@
     {
       "id": "questions-expansion:PART2_EXPANSION_POOL:25",
       "source": "questions-expansion:PART2_EXPANSION_POOL",
-      "score": 88,
-      "topic": "Neuromuscular Junction"
-    },
-    {
-      "id": "questions-expansion:PART2_EXPANSION_POOL:26",
-      "source": "questions-expansion:PART2_EXPANSION_POOL",
       "score": 83,
       "topic": "Neuromuscular Junction"
-    },
-    {
-      "id": "questions-expansion:PART2_EXPANSION_POOL:27",
-      "source": "questions-expansion:PART2_EXPANSION_POOL",
-      "score": 83,
-      "topic": "Drug Effects"
     },
     {
       "id": "questions-expansion:PART2_EXPANSION_POOL:28",
@@ -4673,7 +4661,7 @@
     {
       "id": "questions-extra-pools:PART3_EXTRA_POOL:20",
       "source": "questions-extra-pools:PART3_EXTRA_POOL",
-      "score": 88,
+      "score": 83,
       "topic": "Neuroanatomy"
     },
     {
@@ -5511,12 +5499,6 @@
       "topic": "Auditory Pathway"
     },
     {
-      "id": "questions-fresh-pools:PART3_FRESH_POOL_2:4",
-      "source": "questions-fresh-pools:PART3_FRESH_POOL_2",
-      "score": 83,
-      "topic": "Auditory System"
-    },
-    {
       "id": "questions-fresh-pools:PART3_FRESH_POOL_2:6",
       "source": "questions-fresh-pools:PART3_FRESH_POOL_2",
       "score": 83,
@@ -6220,12 +6202,6 @@
     },
     {
       "id": "questions-pinnacle-megabank:PINNACLE_MEGA_POOL:134",
-      "source": "questions-pinnacle-megabank:PINNACLE_MEGA_POOL",
-      "score": 83,
-      "topic": "Neural Circuits"
-    },
-    {
-      "id": "questions-pinnacle-megabank:PINNACLE_MEGA_POOL:136",
       "source": "questions-pinnacle-megabank:PINNACLE_MEGA_POOL",
       "score": 83,
       "topic": "Neural Circuits"
