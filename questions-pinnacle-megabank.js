@@ -5,6 +5,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Nernst Equation",
     question: "At 37°C, [K⁺]i = 140 mM and [K⁺]o = 5 mM. E_K is closest to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "-89 mV",
       "-49 mV",
@@ -23,6 +26,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Nernst Equation",
     question: "At 37°C, [K⁺]i = 140 mM and [K⁺]o = 2.5 mM. E_K is closest to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "≈ 0 mV",
       "≈ -68 mV",
@@ -41,6 +47,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Nernst Equation",
     question: "At 37°C, [Na⁺]i = 15 mM and [Na⁺]o = 145 mM. E_Na is closest to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "31 mV",
       "61 mV",
@@ -95,6 +104,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Goldman Equation",
     question: "With standard K⁺/Na⁺ concentrations and P_K:P_Na = 1:0.05, resting V_m is best described as?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Near −65 mV",
       "At E_K (≈ −90 mV) exactly",
@@ -113,6 +125,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Goldman Equation",
     question: "With standard K⁺/Na⁺ concentrations and P_Cl equals P_K with E_Cl negative to rest, resting V_m is best described as?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "V_m undefined",
       "V_m pulled toward E_Cl if P_Cl high",
@@ -131,6 +146,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Cable Properties",
     question: "Which statement best describes Passive cable: Doubling R_m with R_i fixed. The expected effect?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "τ equals λ when homeostatic mechanisms are intact",
       "λ halves under typical experimental conditions",
@@ -149,6 +167,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Cable Properties",
     question: "Which statement best describes Passive cable: Doubling C_m with fixed g_leak. The expected effect?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "No effect on τ under typical experimental conditions",
       "τ halves under typical experimental conditions",
@@ -185,6 +206,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Application of TTX on squid giant axon produces which outcome?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Blocks voltage-gated Na⁺; no action potentials",
       "Depolarizes to, 60 mV at mammalian body temperature",
@@ -203,6 +227,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Application of TEA during an action potential produces which outcome?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Slows repolarization; broadens spike",
       "Hyperpolarizes to E_K instantly",
@@ -221,6 +248,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Application of Ouabain on a neuron produces which outcome?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Instant hyperpolarization at steady state in normoxic tissue",
       "Selective GABA block when ligand-gated channels are open",
@@ -239,6 +269,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Application of 4-AP (K⁺ channel blocker) produces which outcome?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Eliminates EPSPs following presynaptic Ca²⁺ influx",
       "Mimics myelin when Na⁺ inactivation has progressed",
@@ -257,6 +290,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Synaptic Transmission",
     question: "In AMPA receptor activation at rest Mg²⁺, the best description?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Requires presynaptic effect at fast chemical synapses",
       "Ionotropic Cl⁻ influx at fast chemical synapses",
@@ -275,6 +311,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Synaptic Transmission",
     question: "In NMDA receptor with strong depolarization, the best description?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Often closed at rest when ligand-gated channels are open",
       "Requires metabotropic at fast chemical synapses",
@@ -293,6 +332,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Synaptic Transmission",
     question: "In GABA<sub>A</sub> at rest when E_Cl ≈ −70 mV, the best description?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Cl⁻ influx; inhibition/shunting",
       "Often excitatory",
@@ -311,6 +353,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Synaptic Transmission",
     question: "In GABA<sub>B</sub> receptor activation, the best description?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "G-protein; opens K⁺ / closes Ca²⁺",
       "Requires in retina at fast chemical synapses",
@@ -329,6 +374,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Synaptic Transmission",
     question: "In Nicotinic ACh at NMJ, the best description?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Fast cationic EPSP leading to endplate potential",
       "Glutamate release when ligand-gated channels are open",
@@ -347,6 +395,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Synaptic Transmission",
     question: "In Botulinum toxin at motor synapse, the best description?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Postsynaptic receptor block at fast chemical synapses",
       "Myelin damage when Na⁺ inactivation has progressed",
@@ -365,6 +416,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Synaptic Transmission",
     question: "In α-Latrotoxin (excess release), the best description?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Requires inhibits GABA following presynaptic Ca²⁺ influx",
       "Blocks Ca²⁺ channels when ligand-gated channels are open",
@@ -383,6 +437,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Synaptic Transmission",
     question: "In Strengthening an synapse via LTP protocol, the best description?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Treats cerebellar parallel fibers as the sole output of the basal ganglia",
       "Requires presynaptic Na⁺ increase",
@@ -419,6 +476,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Synaptic Integration",
     question: "EPSP at dendrite vs soma (same amplitude locally)?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Distal EPSP smaller at soma (cable filter)",
       "Distal larger at fast chemical synapses",
@@ -437,6 +497,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Synaptic Integration",
     question: "Shunting inhibition during an EPSP?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Increased EPSP",
       "Reduced EPSP amplitude via increased conductance",
@@ -455,6 +518,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     question: "Given Left optic nerve transection, which deficit is expected?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Blindness in left eye",
       "Bitemporal hemianopia",
@@ -473,6 +539,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     question: "Which clinical presentation is most consistent with Given Optic chiasm midline compression, which deficit is expected?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Right homonymous hemianopia",
       "Bitemporal hemianopia",
@@ -491,6 +560,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     question: "Which clinical presentation is most consistent with Given Right optic tract lesion, which deficit is expected?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Ipsilateral quadrantanopia",
       "Right monocular blindness",
@@ -509,6 +581,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     question: "Given Left Meyer's loop (temporal lobe) damage, which deficit is expected?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Bitemporal hemianopia under typical experimental conditions",
       "Left superior quadrantanopia at steady state in normoxic tissue",
@@ -527,6 +602,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     question: "Which clinical presentation is most consistent with Given Right occipital lobe (V1) lesion, which deficit is expected?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Pure alexia when homeostatic mechanisms are intact",
       "Right monocular blindness at steady state in normoxic tissue",
@@ -545,6 +623,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     question: "Given Complete left medial lemniscus in medulla, which deficit is expected?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Contralateral loss of touch/proprioception",
       "Bilateral blindness at steady state in normoxic tissue",
@@ -563,6 +644,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     question: "Which clinical presentation is most consistent with Given Left spinothalamic tract at T8, which deficit is expected?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Deafness when homeostatic mechanisms are intact",
       "Ipsilateral proprioception loss contralateral to monocular stimulation",
@@ -581,6 +665,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     question: "Given Brown-Séquard hemisection at T10 (right), which deficit is expected?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Ipsilateral UMN weakness, DCML loss",
       "Pure cerebellar ataxia",
@@ -599,6 +686,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     question: "Which clinical presentation is most consistent with Given Anterior spinal artery infarct, which deficit is expected?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Isolated proprioception loss contralateral to monocular stimulation",
       "Pure ataxia when homeostatic mechanisms are intact",
@@ -617,6 +707,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     question: "Which clinical presentation is most consistent with Given Right cerebellar hemisphere lesion, which deficit is expected?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Contralateral hemiparesis at steady state in normoxic tissue",
       "Bitemporal hemianopia under typical experimental conditions",
@@ -635,6 +728,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     question: "Which clinical presentation is most consistent with Given Cerebellar vermis lesion, which deficit is expected?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Truncal/gait ataxia",
       "Ipsilateral arm intention tremor",
@@ -653,6 +749,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     question: "Given Bilateral hippocampal damage, which deficit is expected?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Deafness when homeostatic mechanisms are intact",
       "Anterograde declarative memory impairment",
@@ -671,6 +770,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     question: "Given Substantia nigra dopamine loss, which deficit is expected?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Pure sensory neglect when homeostatic mechanisms are intact",
       "Bradykinesia and rigidity",
@@ -689,6 +791,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     question: "Given Left Broca area damage, which deficit is expected?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Pure alexia when homeostatic mechanisms are intact",
       "Nonfluent aphasia; comprehension relatively spared",
@@ -707,6 +812,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     question: "Given Left Wernicke area damage, which deficit is expected?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Deafness when homeostatic mechanisms are intact",
       "Pure motor neglect under typical experimental conditions",
@@ -725,6 +833,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     question: "Which clinical presentation is most consistent with Given MLF lesion (left), which deficit is expected?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Monocular blindness at steady state in normoxic tissue",
       "Internuclear ophthalmoplegia",
@@ -743,6 +854,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     question: "Which clinical presentation is most consistent with Given Right CN VI nucleus lesion, which deficit is expected?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Optic chiasm syndrome under typical experimental conditions at steady state in normoxic tissue",
       "Pure aphasia under typical experimental conditions at steady state in normoxic tissue",
@@ -761,6 +875,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     question: "Which clinical presentation is most consistent with Given Unilateral vestibular nerve lesion, which deficit is expected?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Vertigo and imbalance toward lesion",
       "Homonymous hemianopia under typical experimental conditions",
@@ -779,6 +896,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Clinical Neuroanatomy",
     question: "Which clinical presentation is most consistent with Given Left lateral pontine syndrome (AICA), which deficit is expected?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Ipsilateral face pain/temp, cerebellar signs",
       "Pure motor weakness at steady state in normoxic tissue",
@@ -797,6 +917,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "Photoreceptor in darkness?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Spiking at 100 Hz when homeostatic mechanisms are intact",
       "Releases ACh at fast chemical synapses following presynaptic Ca²⁺ influx",
@@ -815,6 +938,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "Hair cell stereocilia deflection toward tallest row?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Complete silence at steady state in normoxic tissue",
       "Increased firing rate in auditory nerve",
@@ -851,6 +977,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "Pacinian corpuscle high-frequency vibration?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Slow adaptation under typical experimental conditions",
       "Requires in retina in the primary sensory pathway named",
@@ -869,6 +998,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Methods",
     question: "Voltage clamp at −40 mV with TTX and K⁺ channels available?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Mostly K⁺ current isolated if Na⁺ blocked",
       "Applies a sensory transduction pathway from a different modality",
@@ -887,6 +1019,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Methods",
     question: "Current clamp with brief hyperpolarizing step?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Subthreshold voltage change without spikes",
       "Describes synaptic machinery unrelated to the membrane process in the stem",
@@ -905,6 +1040,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Methods",
     question: "Dual whole-cell recording of connected cells?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Can measure gap junction coupling or monosynaptic latency",
       "Requires measures bone density",
@@ -923,6 +1061,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Action Potentials",
     question: "Inactivation of Na⁺ channels during a long train?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Spike amplitude may decline; frequency adaptation",
       "Resting potential becomes, 60 mV",
@@ -959,6 +1100,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Action Potentials",
     question: "Ectopic spike initiation in demyelinated axon?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "In dendrites",
       "Confuses resting multi-ion equilibrium with active spike conductance changes",
@@ -977,6 +1121,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Action Potentials",
     question: "Antidromic vs orthodromic propagation?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Same biophysics; direction follows refractory tail",
       "Orthodromic mainly in retina during the rising phase of the spike",
@@ -995,6 +1142,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Action Potentials",
     question: "Absolute refractory period primarily reflects?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Requires photopigment recovery along a uniformly leaky cable",
       "Na⁺ inactivation preventing immediate re-firing",
@@ -1031,6 +1181,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Action Potentials",
     question: "Anode break excitation after hyperpolarization?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Applies a sensory transduction pathway from a different modality",
       "Applies a sensory transduction pathway from a different modality",
@@ -1049,6 +1202,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Action Potentials",
     question: "Threshold is best defined as?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Voltage where net inward current triggers regenerative Na⁺ activation",
       "Fixed at 0 mV at mammalian body temperature with dominant K⁺ permeability at rest",
@@ -1067,6 +1223,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Action Potentials",
     question: "Safety factor for propagation in myelinated axon?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Myelin blocks all current during the rising phase of the spike",
       "Requires dendrites propagate during the rising phase of the spike",
@@ -1085,6 +1244,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Action Potentials",
     question: "Temperature increase on squid axon?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Resting potential fixed at 0 mV",
       "Kinetics faster; shorter AP width",
@@ -1103,6 +1265,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Action Potentials",
     question: "Local anesthetic block of small vs large fibers?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Dopamine from amacrine cells opens CNG channels in the dark when Na⁺ inactivation has progressed",
       "Large fibers blocked first when Na⁺ inactivation has progressed along a uniformly leaky cable",
@@ -1121,6 +1286,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Action Potentials",
     question: "Accommodation during slow depolarizing ramp?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Requires affects cochlea basilar membrane",
       "Describes vestibular hair-cell signaling as identical to retinal phototransduction",
@@ -1157,6 +1325,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Action Potentials",
     question: "Synaptic fatigue after high-frequency stimulation?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Depletion of readily releasable vesicles",
       "Requires myelin loss when Na⁺ inactivation has progressed",
@@ -1175,6 +1346,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Action Potentials",
     question: "Dendritic Na⁺ spike in some pyramidal neurons?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Can boost distal signal toward soma",
       "Seldom occurs in CNS",
@@ -1193,6 +1367,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Action Potentials",
     question: "Backpropagating action potential into dendrites?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Blocked by myelin on dendrites",
       "Requires in muscle spindles",
@@ -1211,6 +1388,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Action Potentials",
     question: "Ephaptic coupling between unmyelinated fibers?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "In retina primarily during the rising phase of the spike",
       "In cerebellum primarily when Na⁺ inactivation has progressed",
@@ -1229,6 +1409,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Bicuculline applied to a CNS slice blocks which effect?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Myelin compaction",
       "GABA_A-mediated fast IPSPs",
@@ -1247,6 +1430,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Picrotoxin and bicuculline both disrupt inhibition primarily by targeting?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Glutamate transporters following presynaptic Ca²⁺ influx",
       "GABA_A receptor–channel function",
@@ -1265,6 +1451,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Strychnine causes convulsions mainly by blocking?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Glycine receptors in spinal cord",
       "Dopamine reuptake transporters at fast chemical synapses",
@@ -1301,6 +1490,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Which capability best describes Barbiturates at anesthetic doses differ from benzodiazepines because they?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Selectively block NMDA mainly at all doses under typical experimental conditions",
       "Activate dopamine D1 receptors at fast chemical synapses",
@@ -1319,6 +1511,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Atropine blocks muscarinic receptors; expected peripheral effect includes?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Bradycardia and miosis at steady state in normoxic tissue",
       "Tachycardia and reduced salivation",
@@ -1337,6 +1532,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Neostigmine reverses neuromuscular blockade by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Blocking nicotinic receptors following presynaptic Ca²⁺ influx",
       "Opening voltage-gated K⁺ channels under typical experimental conditions",
@@ -1355,6 +1553,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Succinylcholine produces initial fasciculations because it?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Hyperpolarizes muscle to E_K at steady state in normoxic tissue",
       "Depolarizes the motor endplate (nicotinic agonist)",
@@ -1373,6 +1574,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Dantrolene treats malignant hyperthermia by reducing?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Central dopamine synthesis when ligand-gated channels are open",
       "Na⁺ channel density in neurons under typical experimental conditions",
@@ -1391,6 +1595,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Reserpine depletes monoamine stores by inhibiting?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "COMT in synaptic cleft following presynaptic Ca²⁺ influx",
       "Dopamine β-hydroxylase following presynaptic Ca²⁺ influx",
@@ -1409,6 +1616,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Amphetamine increases synaptic catecholamines primarily by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Reversing DAT/NET transporters and promoting release",
       "Blocking all voltage-gated Na⁺ channels under typical experimental conditions",
@@ -1427,6 +1637,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Cocaine's acute psychoactive motor effect is linked most to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "GABA_B activation in striatum when ligand-gated channels are open",
       "Blockade of dopamine reuptake (DAT)",
@@ -1445,6 +1658,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Haloperidol treats psychosis mainly through?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "D2 dopamine receptor antagonism",
       "Nicotinic agonism in cortex in the adult human CNS",
@@ -1481,6 +1697,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Carbidopa is co-administered with L-DOPA to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Inhibit peripheral DOPA decarboxylase",
       "Cross the BBB faster than L-DOPA when homeostatic mechanisms are intact",
@@ -1499,6 +1718,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Selegiline (low dose) can augment L-DOPA by inhibiting?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Acetylcholinesterase at NMJ under typical experimental conditions",
       "GABA transaminase when ligand-gated channels are open",
@@ -1517,6 +1739,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "SSRIs increase serotonin signaling chiefly by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Opening 5-HT3 channels directly",
       "Blocking SERT reuptake",
@@ -1535,6 +1760,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Ketamine's rapid antidepressant actions are often attributed to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Requires mu-opioid receptor agonism when ligand-gated channels are open",
       "Persistent GABA_A blockade when ligand-gated channels are open",
@@ -1553,6 +1781,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Morphine analgesia in the spinal dorsal horn involves?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Blocking all K⁺ channels in DRG at steady state in normoxic tissue",
       "AMPA receptor potentiation on nociceptors when ligand-gated channels are open",
@@ -1589,6 +1820,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Caffeine opposes sleepiness largely by antagonizing?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Nicotinic receptors at NMJ",
       "Adenosine A1/A2A receptors",
@@ -1607,6 +1841,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "When Ethanol potentiates GABA_A and inhibits NMDA; at high dose this, which change in membrane potential is most likely?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Cause generalized seizures via NMDA potentiation",
       "Depress CNS function (sedation, ataxia)",
@@ -1625,6 +1862,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Which outcome is most likely when Phenylephrine as an alpha-1 agonist typically occurs?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Hyperpolarization of all neurons to E_K under typical experimental conditions",
       "Bronchodilation via β2 receptors when ligand-gated channels are open",
@@ -1643,6 +1883,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Propranolol reduces tremor and tachycardia by blocking?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Alpha-1 receptors primarily",
       "D2 receptors in striatum",
@@ -1661,6 +1904,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Nifedipine lowers blood pressure primarily by blocking?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Kir channels in glia when homeostatic mechanisms are intact",
       "T-type Ca²⁺ in thalamus via major descending or ascending tracts",
@@ -1679,6 +1925,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Verapamil differs from nifedipine partly because verapamil also?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Blocks all glutamate receptors",
       "Activates VMAT",
@@ -1715,6 +1964,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Memantine in Alzheimer's disease is thought to act by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Depleting acetylcholine stores under typical experimental conditions",
       "Blocking all AMPA receptors at fast chemical synapses",
@@ -1751,6 +2003,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Riluzole in ALS may prolong survival partly by reducing?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Myelin basic protein expression",
       "Cochlear outer hair cell motility",
@@ -1769,6 +2024,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Tetrabenazine reduces chorea in Huntington's by depleting?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Monoamines via VMAT2 inhibition",
       "GABA via GAD blockade",
@@ -1787,6 +2045,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Levetiracetam binds SV2A; this antiseizure action likely alters?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Muscarinic M1 primarily in heart when homeostatic mechanisms are intact",
       "Synaptic vesicle release probability",
@@ -1805,6 +2066,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Carbamazepine treats trigeminal neuralgia partly by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Stabilizing inactivated Na⁺ channels (use-dependent block)",
       "Opening KCNQ channels irreversibly at steady state in normoxic tissue",
@@ -1823,6 +2087,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Phenytoin reduces seizure spread primarily through?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Persistent NMDA removal",
       "GABA transporter inhibition",
@@ -1841,6 +2108,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Valproate has multiple mechanisms including?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Increased GABA tone and Na⁺/Ca²⁺ channel effects",
       "Requires dopamine reuptake blockade when ligand-gated channels are open",
@@ -1859,6 +2129,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Baclofen reduces spasticity mainly by activating?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "GABA_B receptors (Gi/o) in spinal cord",
       "AMPA on Ia afferents primarily under typical experimental conditions",
@@ -1877,6 +2150,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Gabapentinoids bind alpha-2-delta subunits of?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Ryanodine receptor at fast chemical synapses following presynaptic Ca²⁺ influx",
       "Voltage-gated Ca²⁺ channels (modulating release)",
@@ -1895,6 +2171,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Local anesthetic use-dependence means block is stronger when?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Channels open frequently during firing",
       "Confuses nicotinic receptor desensitization with metabotropic second-messenger cascades",
@@ -1913,6 +2192,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Capsaicin desensitization reduces pain by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Overactivating TRPV1 leading to nociceptor defunctionalization",
       "Blocking all Na⁺ channels permanently at steady state in normoxic tissue",
@@ -1949,6 +2231,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Apamin blocks SK channels; expected neuronal effect?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Increased excitability and altered spike timing",
       "Describes synaptic machinery unrelated to the membrane process in the stem",
@@ -1967,6 +2252,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Which statement best describes D-AP5 blocks NMDA receptors; pairing-induced hippocampal LTP?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Enhanced regardless of voltage under typical experimental conditions",
       "Blocked mainly in cerebellum bilaterally at the level described",
@@ -1985,6 +2273,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "CNQX blocks AMPA/kainate; fast EPSCs at many glutamatergic synapses?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Are unchanged because NMDA carries all fast current",
       "Are greatly reduced or abolished",
@@ -2003,6 +2294,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Diazoxide opens K_ATP channels in beta cells, causing?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Requires glucagon release at steady state in normoxic tissue",
       "Depolarization and insulin surge along a uniformly leaky cable",
@@ -2021,6 +2315,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Pharmacology",
     question: "Sulfonylureas stimulate insulin release by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Opening all GABA_A channels in pancreas at fast chemical synapses",
       "Activating D2 receptors in liver when ligand-gated channels are open",
@@ -2039,6 +2336,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "In the direct pathway of basal ganglia, striatal D1 MSNs tend to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Hyperpolarize motor cortex directly via major descending or ascending tracts",
       "Excite STN to increase GPi output under typical experimental conditions",
@@ -2057,6 +2357,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "The indirect pathway (D2 MSNs) promotes motor suppression by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Eliminating dopamine release permanently following presynaptic Ca²⁺ influx",
       "Directly opening Na⁺ channels in muscle under typical experimental conditions",
@@ -2075,6 +2378,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "Dopamine loss in Parkinson's shifts basal ganglia balance toward?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Pure cerebellar ataxia bilaterally at the level described",
       "Complete loss of thalamus bilaterally at the level described",
@@ -2093,6 +2399,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "STN deep brain stimulation often improves Parkinsonian symptoms by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Replacing lost dopamine in substantia nigra following presynaptic Ca²⁺ influx",
       "Blocking all sensory input to M1 when homeostatic mechanisms are intact",
@@ -2111,6 +2420,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "Climbing fiber input to Purkinje cells primarily?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Carries proprioception from muscle spindles contralateral to monocular stimulation",
       "Is the sole driver of simple spikes along a uniformly leaky cable",
@@ -2129,6 +2441,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "Mossy fiber input to cerebellum carries?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Requires retinal ON/OFF channels before cortical association areas",
       "Diverse sensory and motor-related information to granule cells",
@@ -2147,6 +2462,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "Purkinje cell simple spikes are driven mainly by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Parallel fiber synaptic input",
       "Dopamine from VTA",
@@ -2165,6 +2483,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "Cerebellar deep nuclei are the primary output because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Climbing fibers bypass Purkinje cells entirely at steady state in normoxic tissue",
       "Vestibular nuclei have no connection under typical experimental conditions",
@@ -2183,6 +2504,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "Which statement best describes trisynaptic hippocampal circuit order?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "CA1 → dentate → subiculum → thalamus in the adult human CNS",
       "Entorhinal cortex → dentate gyrus → CA3 → CA1",
@@ -2201,6 +2525,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "Place cells in CA1 fire maximally when?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Muscle spindle is silent",
       "Basilar membrane is at cochlear apex",
@@ -2219,6 +2546,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "Grid cells in entorhinal cortex show?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Periodic firing fields tiling space hexagonally",
       "Orientation tuning like V1 simple cells in the primary sensory pathway named",
@@ -2255,6 +2585,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "Thalamic reticular nucleus (TRN) provides?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Myelin to optic nerve during the rising phase of the spike",
       "Direct dopamine to striatum at fast chemical synapses",
@@ -2273,6 +2606,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "Which capability best describes Corticothalamic feedback to sensory thalamus?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Replace all peripheral transduction",
       "Eliminate need for Na⁺ channels",
@@ -2291,6 +2627,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "Superior colliculus deep layers are important for?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Orienting eye/head movements toward stimuli",
       "Applies a sensory transduction pathway from a different modality",
@@ -2309,6 +2648,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "Default mode network is most active during?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Maximal stretch reflex activation",
       "Pure photoreceptor transduction",
@@ -2327,6 +2669,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "Layer 5 pyramidal neurons often?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Project subcortically and intracortically",
       "Fire mainly at 200 Hz without adaptation at steady state in normoxic tissue",
@@ -2345,6 +2690,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "Parvalbumin interneurons in cortex typically?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Are identical to Purkinje cells at steady state in normoxic tissue",
       "Carry proprioception to DCML contralateral to monocular stimulation",
@@ -2363,6 +2711,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "VTA → nucleus accumbens dopamine mediates?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Reward prediction and motivational salience",
       "Cochlear tuning in the primary sensory pathway named",
@@ -2399,6 +2750,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "SCN circadian pacemaker synchronizes via?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Requires olfactory bulb oscillations in the primary sensory pathway named",
       "Retinohypothalamic light input and internal gene loops",
@@ -2417,6 +2771,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "Amygdala lateral nucleus is critical for?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Generating AIS spikes primarily when Na⁺ inactivation has progressed",
       "Associating sensory cues with emotional significance",
@@ -2435,6 +2792,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "Cerebellar flocculus is involved in?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Pain crossing in cord",
       "VOR adaptation",
@@ -2453,6 +2813,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "Inferior olive climbing fibers are linked to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Timing errors and cerebellar motor learning",
       "Applies a sensory transduction pathway from a different modality",
@@ -2471,6 +2834,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "Red nucleus participates in?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Rubrospinal influence on limb flexor tone",
       "Purely visual stereopsis in the primary sensory pathway named",
@@ -2507,6 +2873,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "Locus coeruleus norepinephrine increases?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Equates capacitive charging with full Hodgkin–Huxley conductance kinetics",
       "Arousal and signal-to-noise in many circuits",
@@ -2525,6 +2894,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "Basal forebrain cholinergic neurons promote?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Requires spinal reflex reversal",
       "Cochlear map inversion",
@@ -2543,6 +2915,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "Which outcome is most likely when Internal capsule corticospinal lesion occurs?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Pure Wernicke aphasia",
       "Bitemporal hemianopia",
@@ -2579,6 +2954,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "Which clinical presentation is most consistent with Spinoreticular tract contributes to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Arousal and affective aspects of pain",
       "Fine two-point discrimination",
@@ -2597,6 +2975,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "Cuneate vs gracile nuclei divide?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "High vs low sound frequency under typical experimental conditions",
       "Left vs right visual hemifields contralateral to monocular stimulation",
@@ -2633,6 +3014,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "Which outcome is most likely when Hypoglossal nucleus damage occurs?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Pure ataxia without weakness at steady state in normoxic tissue",
       "Contralateral hemianopia under typical experimental conditions",
@@ -2651,6 +3035,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "Which anatomic lesion best explains Facial nerve lesion with forehead sparing?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Peripheral Bell's palsy whole hemiface",
       "Complete DCML loss",
@@ -2669,6 +3056,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "Medial longitudinal fasciculus coordinates?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Requires ia discharge under typical experimental conditions",
       "Cochlear amplification contralateral to monocular stimulation",
@@ -2687,6 +3077,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "Nucleus ambiguus motor fibers innervate?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Dorsal root ganglion when homeostatic mechanisms are intact",
       "Corticospinal tract bilaterally at the level described",
@@ -2705,6 +3098,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "Area postrema detects emetic toxins because it?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Has no synapses at fast chemical synapses",
       "Is sole site of Na⁺ pump under typical experimental conditions",
@@ -2723,6 +3119,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "Nucleus tractus solitarius receives?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Requires motor cortex commands in the adult human CNS",
       "Requires ia fibers directly under typical experimental conditions",
@@ -2759,6 +3158,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "Rostral ventrolateral medulla is important for?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Sympathetic vasomotor tone",
       "Color opponency under typical experimental conditions",
@@ -2777,6 +3179,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "Solitary nucleus baroreceptor afferents regulate?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Applies a sensory transduction pathway from a different modality",
       "Photopigment regeneration",
@@ -2795,6 +3200,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "Cortico-pontine-cerebellar pathway carries?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Requires lamina I pain contralateral to monocular stimulation",
       "Efference copy of planned motor signals",
@@ -2813,6 +3221,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Neural Circuits",
     question: "Cerebello-thalamo-cortical loop returns to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Applies a sensory transduction pathway from a different modality",
       "Olfactory epithelium",
@@ -2849,6 +3260,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "Photoreceptors hyperpolarize to light because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Glutamate release increases in light at fast chemical synapses following presynaptic Ca²⁺ influx",
       "cGMP-gated channels close → photoreceptor depolarization in dark reverses",
@@ -2867,6 +3281,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "ON bipolar cells depolarize to light via?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "ON pathway sign inversion (e.g., mGluR6 cascade)",
       "Requires muscarinic receptors when ligand-gated channels are open",
@@ -2885,6 +3302,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "Horizontal cells contribute to center-surround by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Generating cochlear traveling wave",
       "Releasing ACh at NMJ",
@@ -2903,6 +3323,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "Ganglion cell receptive fields often show center-surround because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Bipolar/amacrine circuits create antagonistic surrounds",
       "Requires muscle spindles create surround",
@@ -2921,6 +3344,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "M pathway (parvocellular) vs P pathway (magnocellular) in primates?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "M: smell; P: proprioception in the primary sensory pathway named",
       "P carries pain from cord in the primary sensory pathway named contralateral to monocular stimulation",
@@ -2939,6 +3365,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "Cochlear tonotopy maps frequency because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Applies a sensory transduction pathway from a different modality",
       "Most hair cells identical tuning",
@@ -2975,6 +3404,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "Tip links in hair cells transduce sound by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Requires gap junction coupling under typical experimental conditions",
       "Opening mechanotransduction channels when stereocilia shear",
@@ -2993,6 +3425,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "Semicircular canals detect?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Angular acceleration of the head",
       "Skin vibration",
@@ -3011,6 +3446,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "Utricle and saccule detect?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Linear acceleration and head tilt (gravity)",
       "Color opponency under typical experimental conditions",
@@ -3047,6 +3485,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "Two-point discrimination is finest on fingertips because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Requires spinothalamic input is used under typical experimental conditions",
       "High receptor density and large cortical representation",
@@ -3065,6 +3506,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "Merkel discs are well suited for?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Fine texture and sustained touch (SA I)",
       "Proprioception from muscle spindles before cortical association areas",
@@ -3083,6 +3527,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "Pacinian corpuscles encode?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Retinal contrast contralateral to monocular stimulation",
       "Olfactory identity in the primary sensory pathway named",
@@ -3101,6 +3548,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "Ruffini endings detect?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Sound frequency at cochlear apex before cortical association areas",
       "Skin stretch and sustained deformation",
@@ -3119,6 +3569,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "Free nerve endings often mediate?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Applies a sensory transduction pathway from a different modality",
       "pain/temp (among other signals)",
@@ -3137,6 +3590,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "Gate control theory of pain emphasizes?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "References a circuit element that does not control the variable asked about",
       "Mixes up temporal versus spatial summation at the postsynaptic membrane",
@@ -3155,6 +3611,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "Referred pain from heart is often felt in left arm because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Describes synaptic machinery unrelated to the membrane process in the stem",
       "Convergence of visceral and somatic pain pathways in CNS",
@@ -3173,6 +3632,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "Capsaicin activates TRPV1 on?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Nociceptors sensing noxious heat/pH",
       "Alpha motor neurons",
@@ -3191,6 +3653,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "Cooling menthol sensation uses?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Rod cGMP channels when homeostatic mechanisms are intact",
       "TRPM8 channels on cold-sensitive fibers",
@@ -3209,6 +3674,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "Olfactory receptor neurons use?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "States that dorsal root ganglion neurons cannot regenerate central processes",
       "Direct gap junctions to cortex",
@@ -3227,6 +3695,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "Glomeruli in olfactory bulb represent?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Inputs from ORNs expressing the same receptor type (roughly)",
       "Single retinal photoreceptors when ligand-gated channels are open",
@@ -3245,6 +3716,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "Taste sweet stimuli often act through?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "T1R2/T1R3 G-protein coupled receptors",
       "Equates capacitive charging with full Hodgkin–Huxley conductance kinetics",
@@ -3263,6 +3737,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "Umami taste is primarily?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Describes synaptic transmission rather than membrane voltage-gated currents",
       "States that dorsal root ganglion neurons cannot regenerate central processes",
@@ -3281,6 +3758,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "Bitter taste uses T2R receptors to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Encode sound localization",
       "Detect potentially toxic compounds",
@@ -3317,6 +3797,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "Primary somatosensory cortex (S1) is organized?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Without any spatial map when homeostatic mechanisms are intact",
       "Somatotopically (homunculus)",
@@ -3335,6 +3818,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "Receptive field size in S1 is smaller for?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Trunk vs fingers larger on fingers",
       "Attributes blood–brain barrier tight junctions to muscle endplate ACh receptors",
@@ -3353,6 +3839,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "Cortical blindness with V1 damage occurs because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Optic nerve transection",
       "No conscious visual perception despite intact eyes",
@@ -3371,6 +3860,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "Which anatomic lesion best explains Blindsight?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Complete loss of all retina function in the primary sensory pathway named",
       "Requires proprioception remains contralateral to monocular stimulation",
@@ -3407,6 +3899,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "Akinetopsia (motion blindness) links to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "References a circuit element that does not control the variable asked about",
       "Requires spinal shock",
@@ -3443,6 +3938,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "Color opponency (red-green) arises partly from?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Describes synaptic machinery unrelated to the membrane process in the stem",
       "Requires spinothalamic lamina I",
@@ -3461,6 +3959,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "Auditory brainstem response (ABR) reflects?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Hippocampal theta via major descending or ascending tracts",
       "Synchronized activity in auditory nerve/brainstem nuclei",
@@ -3479,6 +3980,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "Interaural time differences localize?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Uses passive cable decay alone to explain saltatory conduction at nodes",
       "Claims inhibitory GABA_A activation always produces net excitation in adults",
@@ -3497,6 +4001,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "Interaural level differences localize?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Requires retinal rods",
       "Describes synaptic machinery unrelated to the membrane process in the stem",
@@ -3533,6 +4040,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "Dark adaptation curve inflection reflects?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Olfactory fatigue before cortical association areas",
       "Rod system taking over from cones in dim light",
@@ -3551,6 +4061,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Sensory Systems",
     question: "Conduction aphasia (arcuate) often shows?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Nonfluent Broca speech at steady state in normoxic tissue when homeostatic mechanisms are intact",
       "Impaired repetition with fluent speech/comprehension relatively spared",
@@ -3569,6 +4082,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Motor Systems",
     question: "Alpha motor neurons innervate?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Extrafusal skeletal muscle fibers",
       "Most smooth muscle in gut",
@@ -3587,6 +4103,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Motor Systems",
     question: "Gamma motor neurons adjust?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Retinal gain",
       "Applies a sensory transduction pathway from a different modality",
@@ -3605,6 +4124,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Motor Systems",
     question: "Coactivation of alpha and gamma during contraction?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Maintains spindle sensitivity during muscle shortening",
       "Requires affects cerebellum bilaterally at the level described",
@@ -3623,6 +4145,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Motor Systems",
     question: "Which statement best describes Stretch reflex (myotatic)?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Polysynaptic pain withdrawal when ligand-gated channels are open",
       "Monosynaptic Ia → alpha motor neuron excitation",
@@ -3641,6 +4166,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Motor Systems",
     question: "Golgi tendon organ Ib afferents mediate?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Applies a sensory transduction pathway from a different modality",
       "Cochlear amplification",
@@ -3659,6 +4187,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Motor Systems",
     question: "Reciprocal inhibition during stretch reflex?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Requires occurs in retina",
       "Excites antagonist",
@@ -3695,6 +4226,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Motor Systems",
     question: "Which clinical presentation is most consistent with Upper motor neuron lesion signs include?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Flaccid paralysis with fasciculations typically",
       "Blindness",
@@ -3713,6 +4247,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Motor Systems",
     question: "Which clinical presentation is most consistent with Lower motor neuron lesion signs include?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Homonymous hemianopia at steady state in normoxic tissue",
       "Hyperreflexia when homeostatic mechanisms are intact",
@@ -3731,6 +4268,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Motor Systems",
     question: "Which anatomic lesion best explains Decorticate posturing (flexor arms)?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Applies a sensory transduction pathway from a different modality",
       "Damage above red nucleus (cortex/thalamus)",
@@ -3749,6 +4289,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Motor Systems",
     question: "Which anatomic lesion best explains Decerebrate posturing (extensor)?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Requires retinal detachment following presynaptic Ca²⁺ influx",
       "Brainstem lesion below red nucleus level",
@@ -3767,6 +4310,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Motor Systems",
     question: "Which clinical presentation is most consistent with Corticospinal tract primarily decussates in?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Optic chiasm at steady state in normoxic tissue",
       "Pyramids of medulla (most fibers)",
@@ -3785,6 +4331,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Motor Systems",
     question: "Voluntary fine finger movement relies heavily on?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "References a circuit element that does not control the variable asked about",
       "Requires autonomic ganglia",
@@ -3803,6 +4352,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Motor Systems",
     question: "Basal ganglia motor role is often described as?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Transducing odorants under typical experimental conditions at steady state in normoxic tissue",
       "Generating cochlear traveling waves in the primary sensory pathway named",
@@ -3839,6 +4391,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Motor Systems",
     question: "Which anatomic lesion best explains Intention tremor?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Pure UMN corticospinal lesion in the adult human CNS",
       "Cerebellar or cerebellar outflow dysfunction",
@@ -3857,6 +4412,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Motor Systems",
     question: "Dysmetria on finger-nose testing indicates?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Requires dCML loss at steady state in normoxic tissue",
       "Requires blindness at steady state in normoxic tissue",
@@ -3875,6 +4433,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Motor Systems",
     question: "Chorea (Huntington's) reflects?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Requires spinal shock",
       "Dysregulated basal ganglia leading to random movements",
@@ -3893,6 +4454,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Motor Systems",
     question: "Dystonia involves?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Applies a sensory transduction pathway from a different modality",
       "Requires hippocampal place cells",
@@ -3911,6 +4475,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Motor Systems",
     question: "Myasthenia gravis fatigability is due to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Requires retinal bipolar dysfunction contralateral to monocular stimulation",
       "Autoimmune reduction of functional nicotinic receptors at NMJ",
@@ -3929,6 +4496,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Motor Systems",
     question: "Which clinical presentation is most consistent with Lambert-Eaton syndrome differs from myasthenia because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Postsynaptic AChR destruction",
       "Presynaptic Ca²⁺ channel autoimmunity reduces ACh release",
@@ -3965,6 +4535,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Motor Systems",
     question: "End-plate potential is graded because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Confuses dorsal-column touch with spinothalamic pain and temperature",
       "Often regenerative Na⁺ along entire muscle instantly",
@@ -3983,6 +4556,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Motor Systems",
     question: "Muscle fiber types (slow vs fast) differ partly in?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "References a circuit element that does not control the variable asked about",
       "Applies a sensory transduction pathway from a different modality",
@@ -4019,6 +4595,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Motor Systems",
     question: "Size principle of motor unit recruitment?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Smaller units recruited before larger units for graded force",
       "Random order",
@@ -4037,6 +4616,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Motor Systems",
     question: "Spinal shock after transection initially shows?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Pure aphasia at steady state in normoxic tissue",
       "Flaccid paralysis and areflexia below lesion",
@@ -4055,6 +4637,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Motor Systems",
     question: "After spinal shock, chronic SCI often shows?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Spasticity and hyperreflexia below lesion",
       "Describes vestibular hair-cell signaling as identical to retinal phototransduction",
@@ -4073,6 +4658,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Motor Systems",
     question: "Which capability best describes Central pattern generators in spinal cord?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Claims inhibitory GABA_A activation always produces net excitation in adults",
       "Produce rhythmic locomotor-like activity",
@@ -4091,6 +4679,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Motor Systems",
     question: "Which clinical presentation is most consistent with Rubrospinal tract generally facilitates?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Flexor muscle tone in upper limb (with other pathways)",
       "Requires retinal ON bipolar cells",
@@ -4109,6 +4700,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Motor Systems",
     question: "Reticulospinal pathways influence?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Hippocampal grids primarily",
       "Posture, locomotion, and autonomic-motor integration",
@@ -4127,6 +4721,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Motor Systems",
     question: "Which clinical presentation is most consistent with Vestibulospinal tract helps?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Postural adjustments to maintain balance",
       "Requires lTP induction without changes in presynaptic release probability",
@@ -4145,6 +4742,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Motor Systems",
     question: "Which clinical presentation is most consistent with Tectospinal tract contributes to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Requires dCML fine touch at steady state in normoxic tissue",
       "Requires insulin release at steady state in normoxic tissue",
@@ -4163,6 +4763,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Motor Systems",
     question: "ALS typically involves?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Treats cerebrospinal fluid secretion as the primary driver of cortical γ rhythms",
       "Combined UMN and LMN degeneration",
@@ -4181,6 +4784,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Motor Systems",
     question: "Multiple sclerosis motor signs can include?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Pure agnosia at steady state in normoxic tissue",
       "Peripheral LMN pattern when homeostatic mechanisms are intact",
@@ -4199,6 +4805,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Motor Systems",
     question: "Parkinsonian rigidity is often?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "States that dorsal root ganglion neurons cannot regenerate central processes",
       "Lead-pipe or cogwheel",
@@ -4235,6 +4844,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Motor Systems",
     question: "Hemiballismus classically follows?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Optic chiasm compression",
       "Assumes olfactory glomeruli compute frequency maps like the basilar membrane",
@@ -4253,6 +4865,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Motor Systems",
     question: "Focal dystonia in musicians may relate to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Maladaptive cortical sensorimotor plasticity",
       "Hippocampal sclerosis",
@@ -4271,6 +4886,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Motor Systems",
     question: "Mirror neurons (premotor/parietal) fire when?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Performing or observing similar actions",
       "States that all chemical synapses use electrical coupling for propagation",
@@ -4289,6 +4907,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Memory & Learning",
     question: "Declarative memory depends critically on?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Medial temporal lobe structures (hippocampus and related)",
       "Cerebellar cortex primarily",
@@ -4307,6 +4928,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Memory & Learning",
     question: "Procedural memory (skills/habits) involves?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Spinal lamina I primarily in the adult human CNS",
       "Basal ganglia and cerebellum among other circuits",
@@ -4325,6 +4949,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Memory & Learning",
     question: "Patient H.M. after bilateral hippocampal damage showed?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Loss of pain sensation in the primary sensory pathway named",
       "Severe anterograde declarative amnesia",
@@ -4343,6 +4970,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Memory & Learning",
     question: "Consolidation of declarative memories is thought to require?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Hippocampal-cortical dialogue over time",
       "References a circuit element that does not control the variable asked about",
@@ -4379,6 +5009,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Memory & Learning",
     question: "Working memory prefrontal activity often shows?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Requires ia afferent silence",
       "Sustained delay-period firing for held information",
@@ -4397,6 +5030,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Memory & Learning",
     question: "NMDA receptor-dependent LTP at CA3–CA1 Schaffer collateral synapses requires?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Blockade of NMDA receptors without postsynaptic depolarization",
       "LTD induced by presynaptic spikes alone without postsynaptic voltage change",
@@ -4415,6 +5051,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Memory & Learning",
     question: "LTD at cerebellar parallel fiber–Purkinje synapses is often?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "States that dorsal root ganglion neurons cannot regenerate central processes",
       "Climbing fiber–dependent",
@@ -4451,6 +5090,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Memory & Learning",
     question: "Extinction of conditioned response involves?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Persistent deletion of all hippocampal neurons",
       "Nernst potential is independent of ion concentration gradients",
@@ -4469,6 +5111,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Memory & Learning",
     question: "Kandel Aplysia sensitization involves?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "References a circuit element that does not control the variable asked about",
       "NMDA LTP in CA1",
@@ -4487,6 +5132,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Memory & Learning",
     question: "Hebbian plasticity is summarized as?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Attributes REM atonia solely to hippocampal theta without brainstem REM circuitry",
       "Confuses upper motor neuron signs with lower motor neuron flaccid paralysis",
@@ -4523,6 +5171,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Memory & Learning",
     question: "Reconsolidation theory suggests retrieved memories?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Can become labile and require restabilization",
       "Exist mainly in muscle spindles after repeated synaptic activation",
@@ -4559,6 +5210,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Memory & Learning",
     question: "Eyeblink classical conditioning in rabbits involves?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "DCML nuclei primarily without changes in presynaptic release probability",
       "Requires primary visual cortex before cortical association areas",
@@ -4577,6 +5231,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Memory & Learning",
     question: "Fear conditioning to tone often requires?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Amygdala (lateral/basal nuclei) for acquisition",
       "Requires alpha motor neurons",
@@ -4595,6 +5252,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Memory & Learning",
     question: "Contextual fear conditioning to chamber requires?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Requires proprioception loss",
       "Requires wernicke area",
@@ -4613,6 +5273,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Memory & Learning",
     question: "Retrograde amnesia after hippocampal damage is often?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Equates synaptic quantal release with graded muscle spindle stretch signaling",
       "Describes vestibular hair-cell signaling as identical to retinal phototransduction",
@@ -4631,6 +5294,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Memory & Learning",
     question: "Semantic vs episodic memory distinction?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Both identical to procedural after repeated synaptic activation",
       "Both require NMJ after repeated synaptic activation",
@@ -4649,6 +5315,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Memory & Learning",
     question: "Priming is a form of?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Claims inhibitory GABA_A activation always produces net excitation in adults",
       "Implicit memory",
@@ -4667,6 +5336,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Memory & Learning",
     question: "Which clinical presentation is most consistent with Korsakoff syndrome memory deficits link to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Peripheral neuropathy",
       "Thiamine deficiency affecting diencephalon (mammillary bodies etc.)",
@@ -4685,6 +5357,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Memory & Learning",
     question: "Alzheimer's early hippocampal involvement explains?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Deafness when NMDA receptors are co-activated",
       "Early episodic memory impairment",
@@ -4703,6 +5378,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Memory & Learning",
     question: "Long-term potentiation maintenance phases may involve?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Structural synaptic changes and protein synthesis",
       "Requires golgi tendon silence when NMDA receptors are co-activated",
@@ -4721,6 +5399,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Memory & Learning",
     question: "Sharp-wave ripples in hippocampus are associated with?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Cochlear otoacoustic emissions",
       "Applies a sensory transduction pathway from a different modality",
@@ -4757,6 +5438,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Memory & Learning",
     question: "Object recognition memory (perirhinal cortex) tests?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Pain withdrawal latency",
       "Confuses nicotinic receptor desensitization with metabotropic second-messenger cascades",
@@ -4775,6 +5459,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Memory & Learning",
     question: "Delayed non-match to sample tasks probe?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Describes synaptic machinery unrelated to the membrane process in the stem",
       "Working memory and recognition in prefrontal/temporal networks",
@@ -4793,6 +5480,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Memory & Learning",
     question: "Medial temporal lobe amnesia spares?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Vision lost when NMDA receptors are co-activated",
       "Often procedural and priming (depending on lesion)",
@@ -4811,6 +5501,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Memory & Learning",
     question: "Cognitive map concept (Tolman) refers to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Requires motor unit map in muscle",
       "Describes synaptic machinery unrelated to the membrane process in the stem",
@@ -4829,6 +5522,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Memory & Learning",
     question: "Engram cells refer to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Muscle fibers",
       "Applies a sensory transduction pathway from a different modality",
@@ -4847,6 +5543,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Memory & Learning",
     question: "Which capability best describes Optogenetic reactivation of engram cells?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Uses steady-state Nernst for one ion while both g_Na and g_K change in time",
       "States that all chemical synapses use electrical coupling for propagation",
@@ -4865,6 +5564,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Memory & Learning",
     question: "Sleep slow-wave activity supports memory by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Requiring metabotropic glutamate receptors without Ca²⁺ entry at fast chemical synapses",
       "Inhibition of K⁺ leak channels only with dominant K⁺ permeability at rest",
@@ -4883,6 +5585,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Memory & Learning",
     question: "REM sleep is associated with?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Vivid dreaming and cortical activation with muscle atonia",
       "Cochlear amplification primarily contralateral to monocular stimulation",
@@ -4901,6 +5606,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Memory & Learning",
     question: "Which capability best describes Transcranial magnetic stimulation (TMS)?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Measure E_K directly in vivo without electrodes",
       "Replace all fMRI",
@@ -4919,6 +5627,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Methods",
     question: "Patch-clamp gigaohm seal enables?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Requires eEG scalp averaging without contact",
       "High-resolution measurement of single-channel or whole-cell currents",
@@ -4937,6 +5648,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Methods",
     question: "Voltage-clamp mode holds membrane potential fixed to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Measure unlimited action potentials freely when Na⁺ inactivation has progressed",
       "Measure olfactory OR mRNA before cortical association areas",
@@ -4955,6 +5669,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Methods",
     question: "Current-clamp records?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Implies the Na⁺/K⁺ pump alone produces the spike upswing",
       "Confuses nicotinic receptor desensitization with metabotropic second-messenger cascades",
@@ -4973,6 +5690,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Methods",
     question: "Which capability best describes Whole-cell patch clamp dialyzes cytoplasm, which?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Wash out second messengers over time (run-down concern)",
       "Increase seal resistance to infinity harmful zero",
@@ -4991,6 +5711,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Methods",
     question: "Cell-attached patch can record?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Uses passive cable decay alone to explain saltatory conduction at nodes",
       "Treats cerebellar parallel fibers as the sole output of the basal ganglia",
@@ -5009,6 +5732,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Methods",
     question: "Sharp electrode intracellular recording differs from patch in?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Higher access resistance; can impale without seal",
       "Claims inhibitory GABA_A activation always produces net excitation in adults",
@@ -5027,6 +5753,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Methods",
     question: "Local field potential (LFP) reflects?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Single Na⁺ channel openings isolated",
       "Summed synaptic currents near electrode",
@@ -5045,6 +5774,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Methods",
     question: "Which statement best describes Multi-unit activity?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Confuses resting multi-ion equilibrium with active spike conductance changes",
       "Identical to patch clamp single channel",
@@ -5063,6 +5795,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Methods",
     question: "Calcium imaging with GCaMP reports?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Fluorescence changes tied to calcium influx/activity",
       "Persistent membrane voltage without indicator change",
@@ -5081,6 +5816,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Methods",
     question: "Optogenetics Channelrhodopsin-2 typically?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Hyperpolarizes with any opsin under typical experimental conditions",
       "Requires works without light if ATP high when homeostatic mechanisms are intact",
@@ -5117,6 +5855,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Methods",
     question: "DREADDs (hM3Dq) activate neurons when exposed to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Presynaptic LTP without postsynaptic depolarization when Na⁺ inactivation has progressed",
       "Inhibition of K⁺ leak channels only at mammalian body temperature with dominant K⁺ permeability at rest",
@@ -5135,6 +5876,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Methods",
     question: "Chemogenetic silencing Gi DREADDs typically?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Often cause LTP when NMDA receptors are co-activated without changes in presynaptic release probability",
       "Often bleach photopigment when ligand-gated channels are open",
@@ -5153,6 +5897,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Methods",
     question: "fMRI BOLD signal is best interpreted as?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Direct measure of each synaptic vesicle fusion when ligand-gated channels are open",
       "Measure of E_K precisely at steady state in normoxic tissue",
@@ -5171,6 +5918,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Methods",
     question: "EEG alpha rhythm (8–13 Hz) prominent when?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Equates capacitive charging with full Hodgkin–Huxley conductance kinetics",
       "Treats myelin length constant as the driver of Na⁺ and K⁺ conductance timing",
@@ -5207,6 +5957,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Methods",
     question: "Event-related potential (ERP) P300 often relates to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Requires ia afferent silence when homeostatic mechanisms are intact",
       "Requires rod dark current when homeostatic mechanisms are intact",
@@ -5225,6 +5978,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Methods",
     question: "Two-photon microscopy advantage in brain?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "States that dorsal root ganglion neurons cannot regenerate central processes",
       "Deep scattering tissue imaging with localized excitation",
@@ -5243,6 +5999,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Methods",
     question: "Optical intrinsic signal imaging maps?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Activity-related changes in light reflectance/absorption",
       "Requires olfactory OR gene sequences",
@@ -5261,6 +6020,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Methods",
     question: "Unit recording with tetrodes helps?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Replace all behavior experiments",
       "Sort spikes from multiple nearby neurons",
@@ -5279,6 +6041,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Methods",
     question: "Which clinical presentation is most consistent with Antidromic activation in tract tracing stimulation means?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Action potential propagated toward axon terminals from stimulation site",
       "Inhibition of K⁺ leak channels only at mammalian body temperature with dominant K⁺ permeability at rest",
@@ -5297,6 +6062,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Methods",
     question: "Retrograde tracer (e.g., cholera toxin B) labels?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Neurons projecting to injection site",
       "Assumes olfactory glomeruli compute frequency maps like the basilar membrane",
@@ -5315,6 +6083,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Methods",
     question: "Anterograde tracer (e.g., Phaseolus) labels?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Treats cerebellar parallel fibers as the sole output of the basal ganglia",
       "Describes synaptic transmission rather than membrane voltage-gated currents",
@@ -5333,6 +6104,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Methods",
     question: "Which clinical presentation is most consistent with Lesion study limitation includes?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Lack of specificity and compensation over time",
       "Affects glia seldom neurons at steady state in normoxic tissue",
@@ -5351,6 +6125,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Methods",
     question: "Transcranial electrical stimulation (tES) modulates?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Uses passive cable decay alone to explain saltatory conduction at nodes",
       "States that photoreceptors generate overshooting Na⁺ spikes like axons",
@@ -5369,6 +6146,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Methods",
     question: "Brain-computer interface decode algorithms often use?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Population activity patterns from motor cortex (e.g., for prosthetics)",
       "Inhibition of K⁺ leak channels only at mammalian body temperature with dominant K⁺ permeability at rest",
@@ -5387,6 +6167,9 @@ const PINNACLE_MEGA_POOL = [
   {
     topic: "Methods",
     question: "What does Miniscope calcium imaging in freely moving rodents allow?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Attributes blood–brain barrier tight junctions to muscle endplate ACh receptors",
       "Mobile neural activity imaging",

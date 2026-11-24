@@ -1,15 +1,15 @@
 {
   "total": 1490,
-  "approved": 5,
-  "quarantined": 166,
+  "approved": 116,
+  "quarantined": 164,
   "missingExpl": 0,
-  "needsReview": 1485,
-  "avgQualityScore": 84.7,
-  "duplicateStemGroups": 48,
+  "needsReview": 1374,
+  "avgQualityScore": 85.2,
+  "duplicateStemGroups": 56,
   "byStage": {
-    "needs_revision": 1319,
-    "quarantined": 166,
-    "approved_practice": 5
+    "approved_practice": 116,
+    "needs_revision": 1210,
+    "quarantined": 164
   },
   "byCourse": {
     "MCB80.1x": 265,
@@ -30,10 +30,9 @@
     "missing_objective_mapping": 1490,
     "missing_source": 1490,
     "short_stem": 23,
-    "duplicate_stem": 48,
-    "near_duplicate_stem": 87,
-    "short_explanation": 273,
-    "filler_distractors": 13,
-    "duplicate_options": 1
+    "duplicate_stem": 56,
+    "near_duplicate_stem": 95,
+    "duplicate_options": 19,
+    "short_explanation": 273
   }
 }

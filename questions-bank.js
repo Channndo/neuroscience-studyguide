@@ -4,6 +4,9 @@ const PART1_VARIANTS = [
   {
     topic: "Resting Potential",
     question: "If a neuron has high K⁺ leak conductance and only minimal Na⁺ leak conductance, its resting membrane potential will lie closest to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "The Na⁺ equilibrium potential",
       "The K⁺ equilibrium potential",
@@ -22,6 +25,9 @@ const PART1_VARIANTS = [
   {
     topic: "Nernst Equation",
     question: "If extracellular K⁺ concentration is increased while intracellular K⁺ is held constant, the K⁺ equilibrium potential (E_K)?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Becomes more negative",
       "Becomes less negative (moves toward 0 mV)",
@@ -40,6 +46,9 @@ const PART1_VARIANTS = [
   {
     topic: "Passive Membrane Properties",
     question: "The membrane time constant (τ) equals R_m × C_m. Increasing membrane capacitance while holding R_m constant will?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Speed up voltage changes for a given current when homeostatic mechanisms are intact",
       "Slow down voltage changes for a given current",
@@ -58,6 +67,9 @@ const PART1_VARIANTS = [
   {
     topic: "Passive Membrane Properties",
     question: "The length constant (λ) depends on both membrane resistance and internal (axial) resistance. Increasing internal resistance (R_i) while R_m is unchanged will?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Increase λ and extend passive spread",
       "Decrease λ and shorten passive spread",
@@ -76,6 +88,9 @@ const PART1_VARIANTS = [
   {
     topic: "Action Potentials",
     question: "During the relative refractory period, a larger-than-normal depolarizing stimulus may still trigger a spike because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Inactivated Na⁺ channels are recovering and fewer channels are available",
       "Most K⁺ channels are permanently closed along a uniformly leaky cable",
@@ -94,6 +109,9 @@ const PART1_VARIANTS = [
   {
     topic: "Action Potentials",
     question: "The falling phase of the action potential is driven primarily by delayed-rectifier K⁺ channels because they?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Open with slower kinetics than the initial Na⁺ surge and carry outward current",
       "Permit massive Na⁺ influx during the rising phase of the spike when Na⁺ inactivation has progressed",
@@ -112,6 +130,9 @@ const PART1_VARIANTS = [
   {
     topic: "Action Potentials",
     question: "The absolute refractory period is defined by the state of voltage-gated Na⁺ channels in which?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Activation gates are open and inactivation gates are closed when Na⁺ inactivation has progressed",
       "Inactivation gates remain closed even if the activation gate opens",
@@ -130,6 +151,9 @@ const PART1_VARIANTS = [
   {
     topic: "Action Potentials",
     question: "What does Threshold is reached when regenerative Na⁺ channel opening produce?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Net outward current exceeding inward current",
       "Net inward current exceeding outward current",
@@ -148,6 +172,9 @@ const PART1_VARIANTS = [
   {
     topic: "Action Potential Propagation",
     question: "In a myelinated axon, the passive spread of depolarization between nodes of Ranvier occurs because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Myelin contains voltage-gated channels during the rising phase of the spike when Na⁺ inactivation has progressed",
       "Internodal membrane capacitance is charged passively while active regeneration occurs at nodes",
@@ -166,6 +193,9 @@ const PART1_VARIANTS = [
   {
     topic: "Action Potential Propagation",
     question: "Myelin increases conduction velocity primarily by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Increasing the number of voltage-gated channels per unit length when Na⁺ inactivation has progressed",
       "Reducing effective membrane capacitance and limiting active regeneration to nodes",
@@ -184,6 +214,9 @@ const PART1_VARIANTS = [
   {
     topic: "Electrical Signaling",
     question: "Depolarization of the membrane means the membrane potential becomes?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "More negative than at rest at steady state in normoxic tissue",
       "Less negative than at rest (moves toward 0 mV or above)",
@@ -202,6 +235,9 @@ const PART1_VARIANTS = [
   {
     topic: "Electrical Signaling",
     question: "The Goldman equation predicts that if membrane permeability to Na⁺ greatly exceeds permeability to K⁺, V_m will approach?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "The potassium reversal potential (E_K), as if K⁺ were the dominant permeant ion",
       "The sodium reversal potential (E_Na), weighted by high relative Na⁺ permeability",
@@ -220,6 +256,9 @@ const PART1_VARIANTS = [
   {
     topic: "Resting Potential",
     question: "The Na⁺/K⁺ ATPase is electrogenic because it?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Transports 3 Na⁺ out and 2 K⁺ in per cycle, contributing net outward positive charge movement",
       "Opens voltage-gated Na⁺ channels directly at steady state in normoxic tissue when homeostatic mechanisms are intact",
@@ -238,6 +277,9 @@ const PART1_VARIANTS = [
   {
     topic: "Passive Membrane Properties",
     question: "For a given constant current injection, a neuron with a larger membrane time constant will show?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "A faster rise to steady-state voltage",
       "A slower rise to steady-state voltage",
@@ -256,6 +298,9 @@ const PART1_VARIANTS = [
   {
     topic: "Action Potentials",
     question: "Subthreshold depolarizing stimuli differ from suprathreshold stimuli in that subthreshold stimuli?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Produce graded potentials that decay without triggering an all-or-none spike",
       "Often produce full-amplitude action potentials",
@@ -277,6 +322,9 @@ const PART2_VARIANTS = [
   {
     topic: "Chemical Synapses",
     question: "Presynaptic action potentials trigger neurotransmitter release most directly through?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Ca²⁺ influx via voltage-gated calcium channels",
       "Na⁺ efflux through leak channels with dominant K⁺ permeability at rest",
@@ -295,6 +343,9 @@ const PART2_VARIANTS = [
   {
     topic: "Synaptic Transmission",
     question: "An EPSP that brings the postsynaptic membrane from −70 mV to −55 mV has?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Hyperpolarized the cell away from threshold when Na⁺ inactivation has progressed",
       "Depolarized the cell closer to spike threshold",
@@ -313,6 +364,9 @@ const PART2_VARIANTS = [
   {
     topic: "Synaptic Transmission",
     question: "An IPSP mediated by open Cl⁻ channels is hyperpolarizing when?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "E_Cl⁻ is more negative than the resting membrane potential",
       "E_Cl⁻ equals, 40 mV",
@@ -331,6 +385,9 @@ const PART2_VARIANTS = [
   {
     topic: "Receptor Types",
     question: "Ionotropic glutamate receptors produce fast synaptic responses because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "They require G-protein activation before any ion flow following presynaptic Ca²⁺ influx",
       "Neurotransmitter binding directly opens an ion channel pore",
@@ -349,6 +406,9 @@ const PART2_VARIANTS = [
   {
     topic: "Receptor Types",
     question: "Metabotropic receptor signaling is typically slower than ionotropic signaling because it involves?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Direct ion flux through the receptor pore following presynaptic Ca²⁺ influx",
       "G-protein activation and second-messenger cascades before channel modulation",
@@ -367,6 +427,9 @@ const PART2_VARIANTS = [
   {
     topic: "Second Messengers",
     question: "Activation of adenylyl cyclase by a Gαs-coupled receptor leads to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Hydrolysis of cAMP to AMP",
       "Conversion of ATP to cAMP in the cytosol",
@@ -385,6 +448,9 @@ const PART2_VARIANTS = [
   {
     topic: "Second Messengers",
     question: "IP₃ signaling raises cytosolic Ca²⁺ primarily by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Opening plasmalemmal Na⁺ channels when homeostatic mechanisms are intact",
       "Releasing Ca²⁺ from endoplasmic reticulum stores",
@@ -403,6 +469,9 @@ const PART2_VARIANTS = [
   {
     topic: "Synaptic Integration",
     question: "Temporal summation is most likely when?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Two EPSPs from different dendritic branches arrive simultaneously",
       "Repeated EPSPs arrive at the same synapse before previous ones decay",
@@ -421,6 +490,9 @@ const PART2_VARIANTS = [
   {
     topic: "Synaptic Integration",
     question: "Spatial summation requires?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Inputs at a single synapse over a long interval following presynaptic Ca²⁺ influx",
       "Simultaneous EPSPs from multiple synapses converging on the same neuron",
@@ -439,6 +511,9 @@ const PART2_VARIANTS = [
   {
     topic: "Neuromodulation",
     question: "Neuromodulators often differ from point-to-point neurotransmission because they?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Act mainly at gap junctions with zero delay with diffuse forebrain projections",
       "Can diffuse broadly and alter neuronal gain or excitability over many synapses",
@@ -457,6 +532,9 @@ const PART2_VARIANTS = [
   {
     topic: "Neural Circuits",
     question: "Dale's principle implies that a single neuron?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Randomly switches neurotransmitters at typical synapse at fast chemical synapses",
       "Releases the same primary neurotransmitter(s) from all its synaptic terminals",
@@ -475,6 +553,9 @@ const PART2_VARIANTS = [
   {
     topic: "Neural Circuits",
     question: "Feedforward inhibition shapes neural responses by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Delaying the inhibitory interneuron until long after output firing under typical experimental conditions",
       "Activating an interneuron in parallel with the excitatory pathway to limit output timing",
@@ -493,6 +574,9 @@ const PART2_VARIANTS = [
   {
     topic: "Electrical Synapses",
     question: "Electrical synapses allow bidirectional current flow because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "They use SNARE-mediated vesicle release following presynaptic Ca²⁺ influx",
       "Gap junction channels connect the cytoplasm of coupled cells",
@@ -511,6 +595,9 @@ const PART2_VARIANTS = [
   {
     topic: "Synaptic Transmission",
     question: "AMPA receptors mediate fast EPSCs at glutamatergic synapses primarily by passing?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Na⁺ and some K⁺ at resting potentials",
       "Cl⁻",
@@ -529,6 +616,9 @@ const PART2_VARIANTS = [
   {
     topic: "Synaptic Transmission",
     question: "GABA<sub>A</sub> receptor activation typically produces inhibition by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Increasing Cl⁻ conductance when E_Cl⁻ is below rest",
       "Opening Na⁺ channels at the axon hillock when Na⁺ inactivation has progressed",
@@ -550,6 +640,9 @@ const PART3_VARIANTS = [
   {
     topic: "Visual System",
     question: "Vertebrate photoreceptors hyperpolarize in response to light because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Light closes cGMP-gated cation channels",
       "Light opens voltage-gated Na channels throughout the outer segment",
@@ -568,6 +661,9 @@ const PART3_VARIANTS = [
   {
     topic: "Visual System",
     question: "Center-surround receptive fields in retinal ganglion cells enhance contrast through?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Identical ON responses in center and surround",
       "Antagonistic center and surround responses",
@@ -586,6 +682,9 @@ const PART3_VARIANTS = [
   {
     topic: "Auditory System",
     question: "Tonotopic organization of the cochlea means that?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Most frequencies activate the same hair cell row in the primary sensory pathway named",
       "Different sound frequencies maximally stimulate different basilar membrane locations",
@@ -604,6 +703,9 @@ const PART3_VARIANTS = [
   {
     topic: "Somatosensation",
     question: "The somatosensory homunculus illustrates that cortical area is determined mainly by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Absolute body segment volume contralateral to monocular stimulation",
       "Sensory receptor density and acuity of the body region",
@@ -622,6 +724,9 @@ const PART3_VARIANTS = [
   {
     topic: "Somatosensation",
     question: "Pacinian corpuscles are specialized for detecting?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Static deep pressure over minutes in the primary sensory pathway named",
       "High-frequency vibration and rapid mechanical transients",
@@ -640,6 +745,9 @@ const PART3_VARIANTS = [
   {
     topic: "Olfactory System",
     question: "Combinatorial odor coding in the olfactory bulb relies on?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Many sensory neuron expressing all receptor types when ligand-gated channels are open at fast chemical synapses",
       "Each olfactory sensory neuron expressing one receptor type and projecting to specific glomeruli",
@@ -658,6 +766,9 @@ const PART3_VARIANTS = [
   {
     topic: "Neuroanatomy",
     question: "CNS capillary endothelial tight junctions contribute to the blood-brain barrier by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Allowing free paracellular diffusion of all solutes under typical experimental conditions",
       "Restricting paracellular passage of polar molecules into brain parenchyma",
@@ -676,6 +787,9 @@ const PART3_VARIANTS = [
   {
     topic: "Neuroanatomy",
     question: "Which clinical presentation is most consistent with The corpus callosum is classified as a commissural tract because it?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Connects spinal segments within one side of the cord bilaterally at the level described",
       "Connects corresponding areas of the left and right cerebral hemispheres",
@@ -694,6 +808,9 @@ const PART3_VARIANTS = [
   {
     topic: "Neuroanatomy",
     question: "Hippocampal damage most specifically impairs?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Consolidation of new declarative (episodic) memories",
       "Transduction of photons in rods",
@@ -712,6 +829,9 @@ const PART3_VARIANTS = [
   {
     topic: "Motor Systems",
     question: "Dopaminergic neurons of the substantia nigra pars compacta target the?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Retinal bipolar cell layer in the primary sensory pathway named",
       "Striatum (caudate and putamen)",
@@ -730,6 +850,9 @@ const PART3_VARIANTS = [
   {
     topic: "Learning & Memory",
     question: "NMDA receptor-dependent LTP at CA1 synapses requires coincident?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Glutamate binding and postsynaptic depolarization relieving Mg²⁺ block",
       "Cl⁻ influx and hyperpolarization below −90 mV if voltage-gated Na⁺ channels are inactivated",
@@ -748,6 +871,9 @@ const PART3_VARIANTS = [
   {
     topic: "Learning & Memory",
     question: "Hebbian synaptic plasticity strengthens a synapse when?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Presynaptic activity consistently contributes to postsynaptic firing",
       "Pre- and postsynaptic activity are anti-correlated following presynaptic Ca²⁺ influx",
@@ -766,6 +892,9 @@ const PART3_VARIANTS = [
   {
     topic: "Learning & Memory",
     question: "CREB-dependent transcription supports long-term memory by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Directly opening voltage-gated Na channels at the synapse when ligand-gated channels are open",
       "Regulating gene expression for proteins that stabilize synaptic changes",
@@ -784,6 +913,9 @@ const PART3_VARIANTS = [
   {
     topic: "Learning & Memory",
     question: "The immediate early gene c-fos is induced rapidly after strong synaptic activity because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "It is constitutively expressed at equal levels in all silent neurons when NMDA receptors are co-activated",
       "Calcium and activity-dependent signaling activate its transcription quickly",
@@ -802,6 +934,9 @@ const PART3_VARIANTS = [
   {
     topic: "Brain Function",
     question: "Topographic sensory maps in cortex mean that?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Neighboring cortical neurons represent neighboring sensory receptor locations",
       "Most sensory modalities share one random map with no structure at steady state in normoxic tissue",
@@ -823,6 +958,9 @@ const NEW_TIER1 = [
   {
     topic: "Resting Potential",
     question: "What primarily sets the ion concentration gradients that establish the resting potential?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "The Na⁺/K⁺ ATPase maintaining Na⁺ and K⁺ gradients",
       "Voltage-gated channels at the axon hillock",
@@ -841,6 +979,9 @@ const NEW_TIER1 = [
   {
     topic: "Resting Potential",
     question: "Leak channels passively allow ions to move down?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Their electrochemical gradients toward respective equilibrium potentials",
       "Attributes blood–brain barrier tight junctions to muscle endplate ACh receptors",
@@ -859,6 +1000,9 @@ const NEW_TIER1 = [
   {
     topic: "Nernst Equation",
     question: "The Nernst equation calculates the equilibrium potential for an ion based on?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Intracellular and extracellular concentrations of that ion",
       "Axon diameter and myelination thickness at mammalian body temperature",
@@ -877,6 +1021,9 @@ const NEW_TIER1 = [
   {
     topic: "Passive Membrane Properties",
     question: "The length constant (λ) describes?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "How far a subthreshold voltage spreads before decaying",
       "The minimum interval between action potentials when Na⁺ inactivation has progressed",
@@ -895,6 +1042,9 @@ const NEW_TIER1 = [
   {
     topic: "Action Potentials",
     question: "Voltage-gated Na⁺ channels contribute to the rising phase because they?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Allow Na⁺ influx when the membrane depolarizes past activation threshold",
       "Pump K⁺ into the cell along a uniformly leaky cable during the rising phase of the spike",
@@ -913,6 +1063,9 @@ const NEW_TIER1 = [
   {
     topic: "Action Potential Propagation",
     question: "Unmyelinated axon conduction is called continuous because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "The action potential regenerates along every patch of membrane",
       "It occurs mainly at nodes of Ranvier when Na⁺ inactivation has progressed",
@@ -931,6 +1084,9 @@ const NEW_TIER1 = [
   {
     topic: "Electrical Signaling",
     question: "The Goldman equation is needed when?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Multiple ions are permeant with different equilibrium potentials",
       "Treats cerebellar parallel fibers as the sole output of the basal ganglia",
@@ -949,6 +1105,9 @@ const NEW_TIER1 = [
   {
     topic: "Chemical Synapses",
     question: "Synaptic vesicles fuse with the presynaptic membrane through?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "SNARE-mediated exocytosis triggered by calcium",
       "Passive diffusion through gap junctions",
@@ -967,6 +1126,9 @@ const NEW_TIER1 = [
   {
     topic: "Chemical Synapses",
     question: "The postsynaptic density contains?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Concentrated receptors and signaling proteins opposite the active zone",
       "Myelin wraps around dendrites at many micron when Na⁺ inactivation has progressed",
@@ -985,6 +1147,9 @@ const NEW_TIER1 = [
   {
     topic: "Synaptic Transmission",
     question: "Quantal transmission means that postsynaptic responses occur in?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Discrete steps corresponding to fusion of vesicles",
       "Continuous analog waves without discrete units following presynaptic Ca²⁺ influx",
@@ -1003,6 +1168,9 @@ const NEW_TIER1 = [
   {
     topic: "Receptor Types",
     question: "Which statement best describes Nicotinic acetylcholine receptors at the neuromuscular junction?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Ionotropic",
       "Metabotropic G-protein-coupled",
@@ -1021,6 +1189,9 @@ const NEW_TIER1 = [
   {
     topic: "Synaptic Integration",
     question: "The axon initial segment is the preferred site for action potential initiation because it?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Has a high density of voltage-gated Na⁺ channels and low threshold",
       "Is completely myelinated along its entire length along a uniformly leaky cable",
@@ -1039,6 +1210,9 @@ const NEW_TIER1 = [
   {
     topic: "Neural Circuits",
     question: "Recurrent inhibition occurs when?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "An output neuron activates an interneuron that feeds back onto itself or its pool",
       "Myelin thickness alone determines saltatory conduction velocity during the rising phase of the spike",
@@ -1057,6 +1231,9 @@ const NEW_TIER1 = [
   {
     topic: "Neuromodulation",
     question: "Dopamine modulates striatal circuits primarily through?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Metabotropic D1 and D2 receptors altering cAMP and channel activity",
       "Direct ionotropic pores with millisecond kinetics with diffuse forebrain projections",
@@ -1075,6 +1252,9 @@ const NEW_TIER1 = [
   {
     topic: "Visual System",
     question: "Rods are more sensitive than cones primarily because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "They express higher levels of photopigment and converge on bipolar cells",
       "They respond to bright daylight before cortical association areas in the primary sensory pathway named",
@@ -1093,6 +1273,9 @@ const NEW_TIER1 = [
   {
     topic: "Visual System",
     question: "Cones mediate?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Color and high-acuity daylight vision",
       "Assumes olfactory glomeruli compute frequency maps like the basilar membrane",
@@ -1111,6 +1294,9 @@ const NEW_TIER1 = [
   {
     topic: "Auditory System",
     question: "Inner hair cells transduce sound by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Mechanically gating ion channels via stereocilia deflection",
       "Releasing dopamine into the synaptic cleft of photoreceptors",
@@ -1129,6 +1315,9 @@ const NEW_TIER1 = [
   {
     topic: "Auditory System",
     question: "The tectorial membrane in the cochlea?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Couples mechanical vibration to stereocilia of hair cells",
       "Forms the blood-brain barrier in cortex in the primary sensory pathway named",
@@ -1147,6 +1336,9 @@ const NEW_TIER1 = [
   {
     topic: "Somatosensation",
     question: "Merkel cells and associated nerve endings detect?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Sustained pressure and texture (slowly adapting)",
       "High-frequency vibration (rapidly adapting) contralateral to monocular stimulation",
@@ -1165,6 +1357,9 @@ const NEW_TIER1 = [
   {
     topic: "Neuroanatomy",
     question: "Gray matter consists primarily of?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Neuronal cell bodies, dendrites, and synapses",
       "Myelinated axon tracts",
@@ -1183,6 +1378,9 @@ const NEW_TIER1 = [
   {
     topic: "Neuroanatomy",
     question: "Cerebrospinal fluid is produced mainly by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Choroid plexus epithelium in the ventricles",
       "Applies a sensory transduction pathway from a different modality",
@@ -1201,6 +1399,9 @@ const NEW_TIER1 = [
   {
     topic: "Learning & Memory",
     question: "Declarative memory is associated with?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Hippocampus and medial temporal lobe structures",
       "States that photoreceptors generate overshooting Na⁺ spikes like axons",
@@ -1219,6 +1420,9 @@ const NEW_TIER1 = [
   {
     topic: "Learning & Memory",
     question: "Working memory temporarily maintains information through?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Sustained activity in prefrontal and related cortical circuits",
       "Persistent structural changes in muscle spindles",
@@ -1237,6 +1441,9 @@ const NEW_TIER1 = [
   {
     topic: "Olfactory System",
     question: "Olfactory sensory neurons regenerate throughout life in mammals because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "They are continually replaced from basal stem cells in the epithelium",
       "They are identical to cortical pyramidal cells before cortical association areas",
@@ -1255,6 +1462,9 @@ const NEW_TIER1 = [
   {
     topic: "Motor Systems",
     question: "Upper motor neurons originate in?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Motor cortex and descend to brainstem or spinal cord",
       "Muscle spindles primarily",
@@ -1273,6 +1483,9 @@ const NEW_TIER1 = [
   {
     topic: "Brain Function",
     question: "Contralateral organization of sensory pathways means?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Left body side projects largely to right hemisphere",
       "Both sides project to ipsilateral cortex",
@@ -1291,6 +1504,9 @@ const NEW_TIER1 = [
   {
     topic: "Resting Potential",
     question: "Which ion has the highest resting membrane permeability in most neurons?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "K⁺",
       "Na⁺",
@@ -1309,6 +1525,9 @@ const NEW_TIER1 = [
   {
     topic: "Nernst Equation",
     question: "For a cation with higher extracellular than intracellular concentration, what is the sign of E_ion at equilibrium?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Positive (inside relative to outside)",
       "Negative (inside relative to outside)",
@@ -1327,6 +1546,9 @@ const NEW_TIER1 = [
   {
     topic: "Passive Membrane Properties",
     question: "Membrane capacitance (C_m) represents the ability of the membrane to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Store charge across the lipid bilayer",
       "Pump ions against gradients",
@@ -1345,6 +1567,9 @@ const NEW_TIER1 = [
   {
     topic: "Action Potentials",
     question: "The all-or-none property of action potentials means that?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Suprathreshold stimuli produce full-amplitude spikes",
       "Subthreshold stimuli produce larger spikes than threshold stimuli",
@@ -1363,6 +1588,9 @@ const NEW_TIER1 = [
   {
     topic: "Action Potential Propagation",
     question: "Action potentials propagate without decrement because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Each depolarized segment actively regenerates the spike in adjacent membrane",
       "Passive spread alone carries the full spike amplitude indefinitely when Na⁺ inactivation has progressed",
@@ -1381,6 +1609,9 @@ const NEW_TIER1 = [
   {
     topic: "Electrical Signaling",
     question: "Hyperpolarization means the membrane potential becomes?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "More negative than at rest",
       "Less negative than at rest",
@@ -1399,6 +1630,9 @@ const NEW_TIER1 = [
   {
     topic: "Chemical Synapses",
     question: "The synaptic cleft separates?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Presynaptic terminal and postsynaptic membrane",
       "Axon hillock and initial segment",
@@ -1417,6 +1651,9 @@ const NEW_TIER1 = [
   {
     topic: "Synaptic Transmission",
     question: "A miniature EPSP (mEPSP) reflects?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Postsynaptic response to spontaneous release of one vesicle",
       "An action potential in the postsynaptic cell along a uniformly leaky cable",
@@ -1435,6 +1672,9 @@ const NEW_TIER1 = [
   {
     topic: "Receptor Types",
     question: "Metabotropic receptors are coupled to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "G proteins and second-messenger cascades",
       "Direct ion pore opening without intermediates",
@@ -1453,6 +1693,9 @@ const NEW_TIER1 = [
   {
     topic: "Synaptic Integration",
     question: "Shunting inhibition reduces EPSP amplitude primarily by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Lowering input resistance and diverting current",
       "Opening Na⁺ channels at the axon hillock during the rising phase of the spike",
@@ -1471,6 +1714,9 @@ const NEW_TIER1 = [
   {
     topic: "Neural Circuits",
     question: "Lateral inhibition in sensory systems serves to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Enhance contrast between active and neighboring regions",
       "Eliminate all spontaneous activity at steady state in normoxic tissue",
@@ -1489,6 +1735,9 @@ const NEW_TIER1 = [
   {
     topic: "Neuromodulation",
     question: "Volume transmission describes neuromodulator signaling that?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Diffuses broadly rather than point-to-point across a single cleft",
       "Electrical synapses primarily when ligand-gated channels are open",
@@ -1507,6 +1756,9 @@ const NEW_TIER1 = [
   {
     topic: "Visual System",
     question: "Photoreceptor outer segments contain?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Membrane disks with photopigment molecules",
       "Myelin wraps for saltatory conduction along a uniformly leaky cable",
@@ -1525,6 +1777,9 @@ const NEW_TIER1 = [
   {
     topic: "Auditory System",
     question: "The basilar membrane in the cochlea is tonotopically organized such that?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "High frequencies peak near the base and low frequencies near the apex",
       "Most frequencies activate the same location equally in the primary sensory pathway named",
@@ -1543,6 +1798,9 @@ const NEW_TIER1 = [
   {
     topic: "Somatosensation",
     question: "Free nerve endings in skin primarily detect?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "pain/temp",
       "High-frequency vibration at Pacinian frequency",
@@ -1561,6 +1819,9 @@ const NEW_TIER1 = [
   {
     topic: "Olfactory System",
     question: "Each olfactory sensory neuron typically expresses?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "One functional odor receptor type",
       "Most receptor genes simultaneously",
@@ -1579,6 +1840,9 @@ const NEW_TIER1 = [
   {
     topic: "Neuroanatomy",
     question: "White matter tracts consist primarily of?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Myelinated axons",
       "Neuronal cell bodies and dendrites",
@@ -1597,6 +1861,9 @@ const NEW_TIER1 = [
   {
     topic: "Motor Systems",
     question: "Lower motor neurons directly innervate?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Skeletal muscle fibers",
       "Attributes taste transduction to cochlear outer hair cell motility",
@@ -1615,6 +1882,9 @@ const NEW_TIER1 = [
   {
     topic: "Learning & Memory",
     question: "Procedural memory for skills is most associated with?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Basal ganglia and cerebellum",
       "Treats cerebrospinal fluid secretion as the primary driver of cortical γ rhythms",
@@ -1633,6 +1903,9 @@ const NEW_TIER1 = [
   {
     topic: "Brain Function",
     question: "The thalamus functions primarily as?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "A relay station for sensory information to cortex",
       "The sole site of phototransduction under typical experimental conditions",
@@ -1651,6 +1924,9 @@ const NEW_TIER1 = [
   {
     topic: "Electrical Synapses",
     question: "Connexons in gap junctions are composed of?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Connexin proteins forming intercellular pores",
       "SNARE complexes for vesicle fusion when ligand-gated channels are open",
@@ -1669,6 +1945,9 @@ const NEW_TIER1 = [
   {
     topic: "Second Messengers",
     question: "cAMP is degraded by the enzyme?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Phosphodiesterase",
       "Adenylyl cyclase",
@@ -1687,6 +1966,9 @@ const NEW_TIER1 = [
   {
     topic: "Resting Potential",
     question: "Cl⁻ equilibrium potential is often near resting V_m in many neurons because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Cl⁻ channels passively set V_Cl near rest via transporter activity",
       "Cl⁻ is impermeant at all times when homeostatic mechanisms are intact",
@@ -1705,6 +1987,9 @@ const NEW_TIER1 = [
   {
     topic: "Action Potentials",
     question: "Tetrodotoxin (TTX) blocks action potentials by binding to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Voltage-gated Na⁺ channels",
       "Voltage-gated K⁺ channels",
@@ -1723,6 +2008,9 @@ const NEW_TIER1 = [
   {
     topic: "Synaptic Transmission",
     question: "Endocytosis at the presynaptic terminal recaptures?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Membrane and vesicle components after exocytosis",
       "Uses passive cable decay alone to explain saltatory conduction at nodes",
@@ -1741,6 +2029,9 @@ const NEW_TIER1 = [
   {
     topic: "Visual System",
     question: "Horizontal cells in the retina contribute to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Lateral inhibition and contrast enhancement",
       "Saltatory conduction in optic nerve during the rising phase of the spike",
@@ -1759,6 +2050,9 @@ const NEW_TIER1 = [
   {
     topic: "Auditory System",
     question: "Outer hair cells in the cochlea enhance sensitivity through?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Electromotility that amplifies basilar membrane motion",
       "Releasing glutamate onto photoreceptors",
@@ -1777,6 +2071,9 @@ const NEW_TIER1 = [
   {
     topic: "Neuroanatomy",
     question: "The blood-brain barrier restricts passage of many substances primarily at?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "CNS capillary endothelial tight junctions",
       "Nodes of Ranvier in peripheral nerve",
@@ -1795,6 +2092,9 @@ const NEW_TIER1 = [
   {
     topic: "Learning & Memory",
     question: "Long-term potentiation (LTP) is defined as?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "A persistent increase in synaptic strength after high-frequency stimulation",
       "Persistent elimination of all inhibitory synapses at fast chemical synapses",
@@ -1816,6 +2116,9 @@ const NEW_TIER2 = [
   {
     topic: "Resting Potential",
     question: "If the Na⁺/K⁺ pump is blocked, over time the resting potential will?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Move toward 0 mV as gradients collapse",
       "Become more negative indefinitely without limit",
@@ -1834,6 +2137,9 @@ const NEW_TIER2 = [
   {
     topic: "Nernst Equation",
     question: "If intracellular K⁺ is 140 mM and extracellular K⁺ is 4 mM, E_K is approximately?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "−95 mV (negative inside)",
       "≈ 60 mV (positive inside)",
@@ -1852,6 +2158,9 @@ const NEW_TIER2 = [
   {
     topic: "Passive Membrane Properties",
     question: "Increasing dendritic diameter (lower R_i) while R_m is constant will?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Increase λ and extend passive spread",
       "Decrease λ at steady state in normoxic tissue",
@@ -1870,6 +2179,9 @@ const NEW_TIER2 = [
   {
     topic: "Passive Membrane Properties",
     question: "Input resistance measures?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "The voltage change per unit injected current (inverse of conductance)",
       "The speed of saltatory conduction during the rising phase of the spike",
@@ -1888,6 +2200,9 @@ const NEW_TIER2 = [
   {
     topic: "Action Potentials",
     question: "The relative refractory period follows the absolute refractory period and is characterized by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Higher threshold and reduced spike amplitude possible",
       "Complete inability to fire under any stimulus along a uniformly leaky cable",
@@ -1906,6 +2221,9 @@ const NEW_TIER2 = [
   {
     topic: "Action Potential Propagation",
     question: "Decreasing axon diameter in an unmyelinated fiber generally?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Slows conduction velocity by increasing internal resistance",
       "Speeds conduction by reducing capacitance during the rising phase of the spike",
@@ -1924,6 +2242,9 @@ const NEW_TIER2 = [
   {
     topic: "Electrical Signaling",
     question: "Under the conditions described in the stem, which value equals membrane potential?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Conductance times driving force (I = g × (V_m − E_ion))",
       "Conductance times voltage alone (I = g × V_m) — uses the wrong sign or driving force for ionic current.",
@@ -1942,6 +2263,9 @@ const NEW_TIER2 = [
   {
     topic: "Chemical Synapses",
     question: "Blocking presynaptic voltage-gated Ca²⁺ channels will most directly reduce?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Neurotransmitter release probability",
       "Postsynaptic AMPA receptor density at fast chemical synapses",
@@ -1960,6 +2284,9 @@ const NEW_TIER2 = [
   {
     topic: "Synaptic Transmission",
     question: "Neurotransmitter reuptake transporters on glia or presynaptic terminals serve to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Terminate synaptic signaling by clearing transmitter from the cleft",
       "Open voltage-gated Na⁺ channels in the cleft when ligand-gated channels are open",
@@ -1978,6 +2305,9 @@ const NEW_TIER2 = [
   {
     topic: "Receptor Types",
     question: "Which capability best describes Muscarinic acetylcholine receptors are metabotropic and?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Modulate K or Ca channels via G-proteins",
       "Directly form a cation pore with no G-proteins",
@@ -1996,6 +2326,9 @@ const NEW_TIER2 = [
   {
     topic: "Receptor Types",
     question: "IPSPs mediated by K⁺ channels opened via G-proteins occur when?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "E_K is below rest and opening channels hyperpolarizes or stabilizes V_m",
       "E_K is above rest following presynaptic Ca²⁺ influx when ligand-gated channels are open",
@@ -2014,6 +2347,9 @@ const NEW_TIER2 = [
   {
     topic: "Synaptic Integration",
     question: "Shunting inhibition reduces EPSP efficacy by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Lowering input resistance so depolarizing current produces smaller voltage change",
       "Increasing input resistance maximally at fast chemical synapses following presynaptic Ca²⁺ influx",
@@ -2032,6 +2368,9 @@ const NEW_TIER2 = [
   {
     topic: "Neural Circuits",
     question: "Lateral inhibition in sensory systems enhances contrast by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Suppressing neighboring channels when one is strongly activated",
       "Amplifying uniform background equally everywhere under typical experimental conditions",
@@ -2050,6 +2389,9 @@ const NEW_TIER2 = [
   {
     topic: "Neuromodulation",
     question: "Neuromodulatory effects can persist longer than fast synaptic potentials because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Second-messenger cascades and kinase activity outlast the initial signal",
       "Ionotropic channels remain open indefinitely when brainstem arousal nuclei are active",
@@ -2068,6 +2410,9 @@ const NEW_TIER2 = [
   {
     topic: "Visual System",
     question: "ON bipolar cells depolarize to light because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "They express metabotropic glutamate receptors that close TRPM1 channels in ON pathways",
       "They use ionotropic AMPA receptors identical to cochlear hair cells when ligand-gated channels are open",
@@ -2086,6 +2431,9 @@ const NEW_TIER2 = [
   {
     topic: "Auditory System",
     question: "The organ of Corti sits on the basilar membrane, which vibrates maximally at?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Different positions for different sound frequencies",
       "One fixed position for all frequencies before cortical association areas",
@@ -2104,6 +2452,9 @@ const NEW_TIER2 = [
   {
     topic: "Somatosensation",
     question: "Free nerve endings in skin primarily signal?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "pain/temp",
       "States that all chemical synapses use electrical coupling for propagation",
@@ -2122,6 +2473,9 @@ const NEW_TIER2 = [
   {
     topic: "Somatosensation",
     question: "Which clinical presentation is most consistent with The spinothalamic tract carries?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "pain/temp to the thalamus",
       "Treats cerebellar parallel fibers as the sole output of the basal ganglia",
@@ -2140,6 +2494,9 @@ const NEW_TIER2 = [
   {
     topic: "Neuroanatomy",
     question: "White matter appears white because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Myelin sheaths around axons scatter light",
       "It contains neuronal cell bodies when homeostatic mechanisms are intact",
@@ -2158,6 +2515,9 @@ const NEW_TIER2 = [
   {
     topic: "Learning & Memory",
     question: "Procedural memory (e.g., riding a bicycle) relies more on?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Basal ganglia and cerebellum among other motor circuits",
       "The optic disc primarily without changes in presynaptic release probability",
@@ -2176,6 +2536,9 @@ const NEW_TIER2 = [
   {
     topic: "Olfactory System",
     question: "Glomeruli in the olfactory bulb represent?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Convergence of OSNs expressing the same receptor type",
       "Tonotopic frequency bands from the cochlea contralateral to monocular stimulation",
@@ -2194,6 +2557,9 @@ const NEW_TIER2 = [
   {
     topic: "Motor Systems",
     question: "Lower motor neurons in the spinal ventral horn?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Directly innervate skeletal muscle fibers",
       "Uses passive cable decay alone to explain saltatory conduction at nodes",
@@ -2212,6 +2578,9 @@ const NEW_TIER2 = [
   {
     topic: "Motor Systems",
     question: "The cerebellar cortex contains?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Purkinje cells, granule cells, and parallel fibers",
       "Describes vestibular hair-cell signaling as identical to retinal phototransduction",
@@ -2230,6 +2599,9 @@ const NEW_TIER2 = [
   {
     topic: "Brain Function",
     question: "The prefrontal cortex contributes to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Working memory and executive control of behavior",
       "Phototransduction in rods primarily",
@@ -2248,6 +2620,9 @@ const NEW_TIER2 = [
   {
     topic: "Brain Function",
     question: "The amygdala is heavily involved in?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Emotional processing and fear learning",
       "Basilar membrane tonotopy primarily",
@@ -2266,6 +2641,9 @@ const NEW_TIER2 = [
   {
     topic: "Resting Potential",
     question: "If E_K = −90 mV and E_Na = +60 mV, increasing P_Na/P_K at rest will shift V_m?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Toward E_Na (less negative)",
       "Toward E_K (more negative)",
@@ -2284,6 +2662,9 @@ const NEW_TIER2 = [
   {
     topic: "Nernst Equation",
     question: "Raising intracellular Na⁺ concentration while extracellular Na⁺ is fixed will make E_Na?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Less positive (closer to 0 mV)",
       "More positive with dominant K⁺ permeability at rest",
@@ -2302,6 +2683,9 @@ const NEW_TIER2 = [
   {
     topic: "Passive Membrane Properties",
     question: "Doubling membrane resistance R_m while keeping C_m constant will?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Double the time constant τ and increase input resistance",
       "Halve the time constant τ at steady state in normoxic tissue",
@@ -2320,6 +2704,9 @@ const NEW_TIER2 = [
   {
     topic: "Action Potentials",
     question: "Afterhyperpolarization following a spike is driven mainly by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Delayed-rectifier K⁺ channels and Ca²⁺-activated K⁺ channels",
       "Continued Na⁺ influx when Na⁺ inactivation has progressed",
@@ -2338,6 +2725,9 @@ const NEW_TIER2 = [
   {
     topic: "Action Potential Propagation",
     question: "In saltatory conduction, the largest density of voltage-gated Na⁺ channels is at?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Nodes of Ranvier",
       "Internodal myelin wraps",
@@ -2356,6 +2746,9 @@ const NEW_TIER2 = [
   {
     topic: "Electrical Signaling",
     question: "If g_Na increases while V_m is held fixed, the Na⁺ equilibrium current (I_Na) according to I = g(V_m − E_ion) will?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Increase in magnitude if V_m ≠ E_Na",
       "Often become zero regardless of V_m",
@@ -2374,6 +2767,9 @@ const NEW_TIER2 = [
   {
     topic: "Chemical Synapses",
     question: "Synaptotagmin on synaptic vesicles acts as a?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Ca²⁺ sensor triggering fast exocytosis",
       "Voltage-gated Na⁺ channel subunit when ligand-gated channels are open",
@@ -2392,6 +2788,9 @@ const NEW_TIER2 = [
   {
     topic: "Synaptic Transmission",
     question: "If presynaptic Ca²⁺ influx is reduced, one expects?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Lower probability of vesicle release",
       "Larger quantal size per vesicle",
@@ -2410,6 +2809,9 @@ const NEW_TIER2 = [
   {
     topic: "Receptor Types",
     question: "Which statement best describes Glycine receptors at spinal inhibitory synapses?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Ionotropic Cl⁻ channels producing fast IPSPs",
       "Metabotropic G-protein receptors following presynaptic Ca²⁺ influx",
@@ -2428,6 +2830,9 @@ const NEW_TIER2 = [
   {
     topic: "Synaptic Integration",
     question: "Coincidence detection at a synapse is exemplified by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "NMDA receptor activation requiring presynaptic release and postsynaptic depolarization",
       "AMPA-dominated transmission without voltage dependence when ligand-gated channels are open",
@@ -2446,6 +2851,9 @@ const NEW_TIER2 = [
   {
     topic: "Neural Circuits",
     question: "Disynaptic inhibition refers to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "An inhibitory interneuron interposed between excitatory input and target",
       "Direct monosynaptic excitation at fast chemical synapses following presynaptic Ca²⁺ influx",
@@ -2464,6 +2872,9 @@ const NEW_TIER2 = [
   {
     topic: "Neuromodulation",
     question: "Serotonin (5-HT) commonly modulates circuits through?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Multiple G-protein-coupled receptor subtypes",
       "Direct ligand-gated cation pores mainly at Many synapses",
@@ -2482,6 +2893,9 @@ const NEW_TIER2 = [
   {
     topic: "Visual System",
     question: "On-center retinal ganglion cells increase firing when?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Light hits the receptive field center",
       "Light hits the surround without center stimulation",
@@ -2500,6 +2914,9 @@ const NEW_TIER2 = [
   {
     topic: "Auditory System",
     question: "Auditory nerve fibers encode sound intensity primarily by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Increasing firing rate with louder stimuli",
       "Changing the wavelength of basilar membrane resonance",
@@ -2518,6 +2935,9 @@ const NEW_TIER2 = [
   {
     topic: "Somatosensation",
     question: "Meissner corpuscles in glabrous skin are most sensitive to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Low-frequency flutter and texture",
       "Sustained deep pressure",
@@ -2536,6 +2956,9 @@ const NEW_TIER2 = [
   {
     topic: "Olfactory System",
     question: "Mitral cells in the olfactory bulb receive input from?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Olfactory sensory neuron axons in glomeruli",
       "Inner hair cells of the cochlea before cortical association areas",
@@ -2554,6 +2977,9 @@ const NEW_TIER2 = [
   {
     topic: "Neuroanatomy",
     question: "Which clinical presentation is most consistent with The decussation of pyramidal tract fibers occurs mainly in?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "The medulla (pyramids)",
       "The retina",
@@ -2590,6 +3016,9 @@ const NEW_TIER2 = [
   {
     topic: "Learning & Memory",
     question: "LTD (long-term depression) is characterized by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Persistent decrease in synaptic strength after specific stimulation patterns",
       "Persistent block of all Na⁺ channels without changes in presynaptic release probability",
@@ -2608,6 +3037,9 @@ const NEW_TIER2 = [
   {
     topic: "Brain Function",
     question: "The primary visual cortex (V1) is organized such that?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Neighboring columns represent neighboring regions of visual space",
       "Most orientations are represented in one cell when homeostatic mechanisms are intact",
@@ -2626,6 +3058,9 @@ const NEW_TIER2 = [
   {
     topic: "Electrical Synapses",
     question: "What is a major advantage of electrical synapses over chemical synapses?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Faster, bidirectional signaling with minimal synaptic delay",
       "Ability to store long-term memories without protein synthesis",
@@ -2644,6 +3079,9 @@ const NEW_TIER2 = [
   {
     topic: "Second Messengers",
     question: "Protein kinase A (PKA) is activated when?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "cAMP binds regulatory subunits releasing catalytic subunits",
       "IP₃ directly opens the Na⁺ channel pore when homeostatic mechanisms are intact",
@@ -2662,6 +3100,9 @@ const NEW_TIER2 = [
   {
     topic: "Action Potentials",
     question: "Tetraethylammonium (TEA) applied to voltage-gated K⁺ channels typically?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Prolongs repolarization and broadens the action potential",
       "Blocks Na⁺ channels and prevents initiation during the rising phase of the spike",
@@ -2680,6 +3121,9 @@ const NEW_TIER2 = [
   {
     topic: "Passive Membrane Properties",
     question: "An EPSP recorded at the soma from a distal dendritic synapse is smaller than at the synapse because of?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Passive cable attenuation along dendrites",
       "Active regeneration in dendrites identical to axons",
@@ -2698,6 +3142,9 @@ const NEW_TIER2 = [
   {
     topic: "Synaptic Transmission",
     question: "Desensitization of ionotropic receptors reduces the response because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Receptors enter a closed state despite ligand binding",
       "Vesicle pool is permanently depleted in one trial following presynaptic Ca²⁺ influx",
@@ -2719,6 +3166,9 @@ const NEW_TIER3 = [
   {
     topic: "Resting Potential",
     question: "At rest, if K⁺ leak conductance dominates, increasing Na⁺ leak conductance will shift V_m?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Toward E_Na (less negative)",
       "Toward E_K (more negative)",
@@ -2737,6 +3187,9 @@ const NEW_TIER3 = [
   {
     topic: "Nernst Equation",
     question: "If inside and outside concentrations are equal, what is the Nernst equilibrium potential?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "0 mV",
       "−90 mV",
@@ -2755,6 +3208,9 @@ const NEW_TIER3 = [
   {
     topic: "Passive Membrane Properties",
     question: "If λ is short, EPSPs from distal synapses at the axon hillock will be?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Smaller due to greater attenuation",
       "Larger than proximal EPSPs",
@@ -2773,6 +3229,9 @@ const NEW_TIER3 = [
   {
     topic: "Action Potentials",
     question: "Local anesthetics that block voltage-gated Na⁺ channels prevent action potentials by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Reducing regenerative Na⁺ current needed for propagation",
       "Opening all K⁺ leak channels at mammalian body temperature",
@@ -2791,6 +3250,9 @@ const NEW_TIER3 = [
   {
     topic: "Action Potential Propagation",
     question: "At a node of Ranvier, the inward current during an action potential is carried mainly by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Voltage-gated Na⁺ channels",
       "K⁺ leak channels",
@@ -2809,6 +3271,9 @@ const NEW_TIER3 = [
   {
     topic: "Electrical Signaling",
     question: "If E_ion for a permeant cation is +50 mV and V_m is −70 mV, the driving force for that ion?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "120 mV inward (V_m − E_ion = −120 mV)",
       "20 mV outward at mammalian body temperature",
@@ -2827,6 +3292,9 @@ const NEW_TIER3 = [
   {
     topic: "Electrical Signaling",
     question: "Under the conditions described in the stem, which value equals membrane potential?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Conductance times driving force (I = g × (V_m − E_ion))",
       "Conductance times voltage alone (I = g × V_m) — uses the wrong sign or driving force for ionic current.",
@@ -2845,6 +3313,9 @@ const NEW_TIER3 = [
   {
     topic: "Chemical Synapses",
     question: "Miniature EPSCs (mEPSCs) reflect?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Spontaneous single-vesicle release without action potentials",
       "Action-potential-evoked multivesicular release at fast chemical synapses",
@@ -2863,6 +3334,9 @@ const NEW_TIER3 = [
   {
     topic: "Synaptic Transmission",
     question: "Desensitization of ionotropic receptors reduces postsynaptic current even when?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Neurotransmitter remains bound",
       "No neurotransmitter is present",
@@ -2881,6 +3355,9 @@ const NEW_TIER3 = [
   {
     topic: "Receptor Types",
     question: "NMDA receptors require both glutamate binding and?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Postsynaptic depolarization to relieve Mg block",
       "Hyperpolarization below −120 mV at mammalian body temperature",
@@ -2899,6 +3376,9 @@ const NEW_TIER3 = [
   {
     topic: "Synaptic Integration",
     question: "Coincidence detection at CA1 synapses is implemented by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "NMDA receptor voltage-dependent Mg block",
       "AMPA receptors at hyperpolarized potentials",
@@ -2917,6 +3397,9 @@ const NEW_TIER3 = [
   {
     topic: "Synaptic Integration",
     question: "EPSP amplitude at the soma is reduced for distal synapses primarily due to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Passive cable attenuation along dendrites",
       "Complete absence of receptors at distal sites",
@@ -2935,6 +3418,9 @@ const NEW_TIER3 = [
   {
     topic: "Neural Circuits",
     question: "Disinhibition refers to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Removal of inhibitory input onto a neuron, effectively increasing its excitability",
       "Adding extra GABAergic synapses permanently following presynaptic Ca²⁺ influx when ligand-gated channels are open",
@@ -2953,6 +3439,9 @@ const NEW_TIER3 = [
   {
     topic: "Neuromodulation",
     question: "Volume transmission describes?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Diffusion of neuromodulators through extracellular fluid to distant targets",
       "Saltatory conduction primarily during the rising phase of the spike when Na⁺ inactivation has progressed",
@@ -2971,6 +3460,9 @@ const NEW_TIER3 = [
   {
     topic: "Visual System",
     question: "The blind spot corresponds to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "The optic disc where ganglion cell axons exit and photoreceptors are absent",
       "The fovea with highest acuity in the primary sensory pathway named contralateral to monocular stimulation",
@@ -2989,6 +3481,9 @@ const NEW_TIER3 = [
   {
     topic: "Visual System",
     question: "Color opponency in retinal ganglion cells arises from?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Antagonistic inputs from different cone types",
       "Tonotopic mapping on the basilar membrane in the primary sensory pathway named",
@@ -3007,6 +3502,9 @@ const NEW_TIER3 = [
   {
     topic: "Auditory System",
     question: "Auditory nerve fibers encode sound intensity primarily through?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Increased action potential firing rate",
       "Changing the amino acid sequence of rhodopsin",
@@ -3025,6 +3523,9 @@ const NEW_TIER3 = [
   {
     topic: "Somatosensation",
     question: "The dorsal column-medial lemniscus pathway carries?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Fine touch and proprioceptive information to the thalamus",
       "States that all chemical synapses use electrical coupling for propagation",
@@ -3043,6 +3544,9 @@ const NEW_TIER3 = [
   {
     topic: "Neuroanatomy",
     question: "The thalamus functions mainly as?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "A relay and gate for sensory information to cortex",
       "The primary site of phototransduction",
@@ -3061,6 +3565,9 @@ const NEW_TIER3 = [
   {
     topic: "Neuroanatomy",
     question: "The ventricular system contains?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "CSF-filled cavities lined by ependyma connecting brain regions",
       "Myelinated axons primarily with no fluid",
@@ -3079,6 +3586,9 @@ const NEW_TIER3 = [
   {
     topic: "Learning & Memory",
     question: "Long-term depression (LTD) at cerebellar parallel fiber-Purkinje synapses involves?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Climbing fiber co-activation and Ca signaling leading to AMPA receptor internalization",
       "Exclusive NMDA-independent phototransduction when NMDA receptors are co-activated without changes in presynaptic release probability",
@@ -3097,6 +3607,9 @@ const NEW_TIER3 = [
   {
     topic: "Learning & Memory",
     question: "LTD in hippocampus can be induced by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Low-frequency stimulation leading to reduced AMPA receptor insertion",
       "Exclusive high-frequency tetanic stimulation causing LTP when NMDA receptors are co-activated",
@@ -3115,6 +3628,9 @@ const NEW_TIER3 = [
   {
     topic: "Olfactory System",
     question: "Mitral/tufted cells in the olfactory bulb?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Project olfactory information to higher brain areas",
       "Transduce photons in the outer segment in the primary sensory pathway named",
@@ -3133,6 +3649,9 @@ const NEW_TIER3 = [
   {
     topic: "Motor Systems",
     question: "The basal ganglia loop through the striatum helps?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Select and initiate appropriate motor programs",
       "Transduce light in rods and cones at steady state in normoxic tissue",
@@ -3151,6 +3670,9 @@ const NEW_TIER3 = [
   {
     topic: "Brain Function",
     question: "Brain lateralization includes?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Specialization of language functions in the left hemisphere",
       "Identical olfactory maps in most glomerulus for all odors before cortical association areas",
@@ -3169,6 +3691,9 @@ const NEW_TIER3 = [
   {
     topic: "Resting Potential",
     question: "If the Na⁺/K⁺ pump rate doubles but relative leak conductances are unchanged, the immediate effect on V_m?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Slight hyperpolarization due to electrogenic 3Na⁺/2K⁺ exchange",
       "Immediate depolarization to E_Na when Na⁺ inactivation has progressed",
@@ -3187,6 +3712,9 @@ const NEW_TIER3 = [
   {
     topic: "Nernst Equation",
     question: "At 37°C, a tenfold increase in external K⁺ (with fixed internal K⁺) shifts E_K by approximately?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "61 mV (toward 0 mV)",
       "≈ −61 mV at 37 °C if voltage-gated Na⁺ channels are inactivated",
@@ -3205,6 +3733,9 @@ const NEW_TIER3 = [
   {
     topic: "Passive Membrane Properties",
     question: "If both R_m and R_i double while C_m is constant, the length constant λ?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Remains unchanged because λ = √(R_m/R_i)",
       "Doubles at steady state in normoxic tissue",
@@ -3223,6 +3754,9 @@ const NEW_TIER3 = [
   {
     topic: "Action Potentials",
     question: "The positive feedback loop during the rising phase ends when?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Na⁺ channel inactivation dominates and K⁺ efflux increases",
       "The pump stops entirely when Na⁺ inactivation has progressed",
@@ -3241,6 +3775,9 @@ const NEW_TIER3 = [
   {
     topic: "Action Potential Propagation",
     question: "Cooling an axon reduces conduction velocity primarily by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Slowing voltage-gated channel kinetics and ion diffusion",
       "Increasing myelin thickness when Na⁺ inactivation has progressed",
@@ -3259,6 +3796,9 @@ const NEW_TIER3 = [
   {
     topic: "Electrical Signaling",
     question: "If V_m is clamped at E_K, the driving force on K⁺ ions?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Zero (no net electrochemical driving force)",
       "Maximal inward at steady state in normoxic tissue",
@@ -3277,6 +3817,9 @@ const NEW_TIER3 = [
   {
     topic: "Chemical Synapses",
     question: "Botulinum toxin reduces synaptic transmission by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Cleaving SNARE proteins required for vesicle fusion",
       "Opening all postsynaptic Cl⁻ channels",
@@ -3295,6 +3838,9 @@ const NEW_TIER3 = [
   {
     topic: "Synaptic Transmission",
     question: "Facilitation at a synapse after a short train of presynaptic spikes is often due to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Residual presynaptic Ca²⁺ elevating release probability",
       "Immediate postsynaptic receptor insertion without activity",
@@ -3313,6 +3859,9 @@ const NEW_TIER3 = [
   {
     topic: "Receptor Types",
     question: "GABA<sub>B</sub> receptors inhibit neurons primarily by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Opening K⁺ channels via G-proteins and reducing Ca²⁺ channel activity",
       "Producing fast Cl⁻ influx through the same pore as GABA<sub>A</sub> receptors when ligand-gated channels are open",
@@ -3331,6 +3880,9 @@ const NEW_TIER3 = [
   {
     topic: "Synaptic Integration",
     question: "Divisive normalization in neural circuits adjusts responses by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Scaling activity relative to pooled network activity",
       "Adding excitatory inputs without inhibition",
@@ -3349,6 +3901,9 @@ const NEW_TIER3 = [
   {
     topic: "Neural Circuits",
     question: "Winner-take-all dynamics in a network can arise from?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Recurrent lateral inhibition among excitatory units",
       "Elimination of all inhibitory interneurons",
@@ -3367,6 +3922,9 @@ const NEW_TIER3 = [
   {
     topic: "Neuromodulation",
     question: "Norepinephrine increases cortical arousal partly by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Modulating HCN and other channels via β-adrenergic receptors",
       "Directly gating nicotinic ACh pores at the neuromuscular junction",
@@ -3385,6 +3943,9 @@ const NEW_TIER3 = [
   {
     topic: "Visual System",
     question: "Receptive field orientation selectivity in V1 simple cells reflects?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Specific arrangements of ON and OFF subregions in space",
       "Tonotopic mapping of sound frequency contralateral to monocular stimulation",
@@ -3403,6 +3964,9 @@ const NEW_TIER3 = [
   {
     topic: "Auditory System",
     question: "Phase locking in auditory brainstem neurons helps encode?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Low-frequency pitch via precise spike timing to waveform phase",
       "Color opponency in the fovea contralateral to monocular stimulation",
@@ -3421,6 +3985,9 @@ const NEW_TIER3 = [
   {
     topic: "Somatosensation",
     question: "Two-point discrimination acuity is highest on fingertips because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Receptor density and cortical magnification are greatest there",
       "Pacinian corpuscles are absent in glabrous skin",
@@ -3439,6 +4006,9 @@ const NEW_TIER3 = [
   {
     topic: "Olfactory System",
     question: "Granule cells in the olfactory bulb provide?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Recurrent inhibition onto mitral cells via dendrodendritic synapses",
       "Direct transduction of odorants to action potentials along a uniformly leaky cable",
@@ -3457,6 +4027,9 @@ const NEW_TIER3 = [
   {
     topic: "Neuroanatomy",
     question: "The limbic system is functionally linked to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Emotion, memory, and motivated behavior",
       "Exclusive control of phototransduction",
@@ -3475,6 +4048,9 @@ const NEW_TIER3 = [
   {
     topic: "Motor Systems",
     question: "The cerebellum contributes to motor control primarily by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Error correction and timing of movements via mossy and climbing fiber input",
       "Transducing odorants in glomeruli at steady state in normoxic tissue when homeostatic mechanisms are intact",
@@ -3493,6 +4069,9 @@ const NEW_TIER3 = [
   {
     topic: "Learning & Memory",
     question: "Protein synthesis is required for long-term memory because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Persistent synaptic changes require new proteins for structural plasticity",
       "Immediate early genes alone permanently store memory without translation without changes in presynaptic release probability",
@@ -3511,6 +4090,9 @@ const NEW_TIER3 = [
   {
     topic: "Brain Function",
     question: "Default mode network activity is most prominent during?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Internally directed cognition when not engaged in a task",
       "Active phototransduction in bright light under typical experimental conditions",
@@ -3529,6 +4111,9 @@ const NEW_TIER3 = [
   {
     topic: "Electrical Synapses",
     question: "Electrical coupling strength between cells can be modulated by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Phosphorylation state of connexins altering gap junction conductance",
       "SNARE-mediated vesicle fusion in the cleft following presynaptic Ca²⁺ influx",
@@ -3547,6 +4132,9 @@ const NEW_TIER3 = [
   {
     topic: "Second Messengers",
     question: "DAG (diacylglycerol) activates?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Protein kinase C at the membrane",
       "Voltage-gated Na⁺ channels directly without lipids",
@@ -3565,6 +4153,9 @@ const NEW_TIER3 = [
   {
     topic: "Action Potentials",
     question: "A neuron with reduced Na⁺ channel density will likely show?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Higher threshold and slower rising phase",
       "Lower threshold and faster rising phase",
@@ -3583,6 +4174,9 @@ const NEW_TIER3 = [
   {
     topic: "Passive Membrane Properties",
     question: "Under voltage clamp, increasing membrane conductance while holding voltage constant increases?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Clamp current required to maintain the set voltage",
       "Resting potential without clamp",
@@ -3601,6 +4195,9 @@ const NEW_TIER3 = [
   {
     topic: "Synaptic Transmission",
     question: "Stochastic release at a synapse means?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Only a fraction of presynaptic spikes trigger vesicle fusion",
       "Every spike releases exactly one vesicle with certainty",
@@ -3622,6 +4219,9 @@ const NEW_TIER4 = [
   {
     topic: "Resting Potential",
     question: "Given E_K = −90 mV, E_Na = +60 mV, and P_K : P_Na = 40 : 1 at rest, V_m is best approximated as?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Near −90 mV because P_K dominates",
       "Near, 60 mV because E_Na is larger",
@@ -3640,6 +4240,9 @@ const NEW_TIER4 = [
   {
     topic: "Resting Potential",
     question: "If a drug doubles K⁺ leak conductance without changing the pump, the new resting potential will?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Move closer to E_K",
       "Move closer to E_Na",
@@ -3658,6 +4261,9 @@ const NEW_TIER4 = [
   {
     topic: "Resting Potential",
     question: "If P_Cl increases while E_Cl remains −70 mV and rest is −65 mV, V_m will shift toward?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "E_Cl (more negative)",
       "E_Na primarily",
@@ -3676,6 +4282,9 @@ const NEW_TIER4 = [
   {
     topic: "Nernst Equation",
     question: "Halving intracellular Na⁺ while keeping extracellular Na⁺ constant will make E_Na?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "More positive",
       "More negative (closer to 0 mV)",
@@ -3694,6 +4303,9 @@ const NEW_TIER4 = [
   {
     topic: "Nernst Equation",
     question: "The Nernst slope for a monovalent cation at 37°C is approximately?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "~62 mV per 10-fold concentration change",
       "~5 mV per 10-fold concentration change",
@@ -3712,6 +4324,9 @@ const NEW_TIER4 = [
   {
     topic: "Nernst Equation",
     question: "For a divalent cation such as Ca²⁺, a 10-fold concentration gradient at 37°C yields a Nernst potential with magnitude?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "~31 mV (half that of monovalent due to z=2)",
       "≈ ~62 mV identical to monovalent at 37 °C if voltage-gated Na⁺ channels are inactivated",
@@ -3730,6 +4345,9 @@ const NEW_TIER4 = [
   {
     topic: "Passive Membrane Properties",
     question: "For a passive dendrite, doubling R_m while holding R_i constant changes λ by a factor of?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "√2 (increases)",
       "2 (doubles exactly)",
@@ -3748,6 +4366,9 @@ const NEW_TIER4 = [
   {
     topic: "Passive Membrane Properties",
     question: "The time constant τ = R_m C_m implies that halving R_m while doubling C_m will?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Leave τ unchanged",
       "Quadruple τ when homeostatic mechanisms are intact",
@@ -3766,6 +4387,9 @@ const NEW_TIER4 = [
   {
     topic: "Passive Membrane Properties",
     question: "Specific membrane resistance (R_m) differs from axial resistance (R_i) in that R_m?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Relates transmembrane current to voltage across the membrane",
       "Measures intracellular cytoplasmic resistivity along the axon",
@@ -3784,6 +4408,9 @@ const NEW_TIER4 = [
   {
     topic: "Action Potentials",
     question: "After a spike, Na⁺ channel recovery from inactivation requires?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Repolarization of the membrane toward rest",
       "Further depolarization above, 40 mV with dominant K⁺ permeability at rest",
@@ -3802,6 +4429,9 @@ const NEW_TIER4 = [
   {
     topic: "Action Potentials",
     question: "If voltage-gated K⁺ channels are pharmacologically blocked during a spike, repolarization will?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Be slowed and the action potential may broaden",
       "Complete instantly with no change along a uniformly leaky cable",
@@ -3820,6 +4450,9 @@ const NEW_TIER4 = [
   {
     topic: "Action Potentials",
     question: "Tetrodotoxin (TTX) selectively blocks?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Voltage-gated Na⁺ channels",
       "K⁺ leak channels",
@@ -3838,6 +4471,9 @@ const NEW_TIER4 = [
   {
     topic: "Action Potential Propagation",
     question: "Internodal myelin reduces what component of the membrane that slows voltage changes?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Capacitive charging of the membrane (C_m per unit length)",
       "Intracellular resistance mainly with no capacitive effect",
@@ -3856,6 +4492,9 @@ const NEW_TIER4 = [
   {
     topic: "Action Potential Propagation",
     question: "If nodes of Ranvier are spaced farther apart in a myelinated axon, conduction velocity typically?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Increases up to a point because fewer regenerative steps are needed",
       "Decreases to zero during the rising phase of the spike when Na⁺ inactivation has progressed",
@@ -3874,6 +4513,9 @@ const NEW_TIER4 = [
   {
     topic: "Action Potential Propagation",
     question: "Orthodromic conduction refers to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Action potentials traveling in the normal direction from soma toward axon terminals",
       "Backpropagation from terminals to soma primarily called antidromic when Na⁺ inactivation has progressed",
@@ -3892,6 +4534,9 @@ const NEW_TIER4 = [
   {
     topic: "Electrical Signaling",
     question: "At V_m = E_K, net K⁺ current is zero because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "The electrical and chemical driving forces balance",
       "Most K⁺ channels are removed from the membrane under typical experimental conditions",
@@ -3910,6 +4555,9 @@ const NEW_TIER4 = [
   {
     topic: "Electrical Signaling",
     question: "Increasing membrane conductance to an ion while V_m is held fixed will?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Increase current flow for that ion",
       "Decrease current flow proportionally to conductance",
@@ -3928,6 +4576,9 @@ const NEW_TIER4 = [
   {
     topic: "Electrical Signaling",
     question: "Hyperpolarizing current injection moves V_m?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Away from 0 mV (more negative)",
       "Toward 0 mV",
@@ -3946,6 +4597,9 @@ const NEW_TIER4 = [
   {
     topic: "Chemical Synapses",
     question: "The synaptic cleft is typically on the order of?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "~20–40 nm wide",
       "~2×10³ μm wide",
@@ -3964,6 +4618,9 @@ const NEW_TIER4 = [
   {
     topic: "Chemical Synapses",
     question: "Endocytosis following exocytosis serves to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Recycle synaptic vesicle membrane and maintain release capacity",
       "Permanently remove all presynaptic receptors following presynaptic Ca²⁺ influx",
@@ -3982,6 +4639,9 @@ const NEW_TIER4 = [
   {
     topic: "Chemical Synapses",
     question: "Active zone proteins (e.g., RIM, Munc13) function to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Dock and prime vesicles near Ca channels for release",
       "Generate myelin around the terminal when Na⁺ inactivation has progressed",
@@ -4000,6 +4660,9 @@ const NEW_TIER4 = [
   {
     topic: "Synaptic Transmission",
     question: "Co-release of multiple neurotransmitters from one terminal violates Dale's principle only if?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "The same neuron releases different transmitters from different terminals inconsistently with its phenotype",
       "One vesicle contains glutamate at fast chemical synapses following presynaptic Ca²⁺ influx when ligand-gated channels are open",
@@ -4018,6 +4681,9 @@ const NEW_TIER4 = [
   {
     topic: "Synaptic Transmission",
     question: "High-frequency stimulation can deplete the readily releasable vesicle pool, causing?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Short-term synaptic depression",
       "Persistent LTP at Many synapses instantly",
@@ -4036,6 +4702,9 @@ const NEW_TIER4 = [
   {
     topic: "Synaptic Transmission",
     question: "Which statement best describes Glycine receptors in spinal circuits?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Ionotropic Cl⁻ channels mediating fast inhibition",
       "Metabotropic mainly with no ion pore",
@@ -4054,6 +4723,9 @@ const NEW_TIER4 = [
   {
     topic: "Receptor Types",
     question: "Allosteric modulators of ionotropic receptors?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Bind sites distinct from the agonist site and alter channel gating",
       "Would need to replace neurotransmitter in the primary binding pocket to have any effect",
@@ -4072,6 +4744,9 @@ const NEW_TIER4 = [
   {
     topic: "Receptor Types",
     question: "GABA<sub>B</sub> receptors are metabotropic and typically?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Open K⁺ channels or inhibit Ca²⁺ channels via G-proteins",
       "Form fast Cl⁻ channels identical to GABA<sub>A</sub> following presynaptic Ca²⁺ influx",
@@ -4090,6 +4765,9 @@ const NEW_TIER4 = [
   {
     topic: "Receptor Types",
     question: "Which capability best describes Metabotropic glutamate receptors (mGluRs) on presynaptic terminals?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Inhibit or facilitate transmitter release via G-protein modulation of Ca channels",
       "Directly pass large Na currents at rest when ligand-gated channels are open at fast chemical synapses",
@@ -4108,6 +4786,9 @@ const NEW_TIER4 = [
   {
     topic: "Synaptic Integration",
     question: "If EPSPs and IPSPs arrive simultaneously at the axon hillock, the net effect depends on?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "The algebraic sum of depolarizing and hyperpolarizing inputs weighted by timing and location",
       "Confuses dorsal-column touch with spinothalamic pain and temperature following presynaptic Ca²⁺ influx",
@@ -4126,6 +4807,9 @@ const NEW_TIER4 = [
   {
     topic: "Synaptic Integration",
     question: "A neuron with a high firing threshold compared to resting potential will?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Require greater net depolarization to fire",
       "Fire spontaneously at rest without input at fast chemical synapses",
@@ -4144,6 +4828,9 @@ const NEW_TIER4 = [
   {
     topic: "Synaptic Integration",
     question: "Which capability best describes Backpropagating action potentials into dendrites?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Provide a depolarization signal for coincidence-dependent plasticity",
       "Occur mainly in photoreceptors when ligand-gated channels are open",
@@ -4162,6 +4849,9 @@ const NEW_TIER4 = [
   {
     topic: "Neural Circuits",
     question: "Winner-take-all circuit dynamics can emerge from?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Strong recurrent inhibition among competing excitatory units",
       "Purely passive membrane properties without synapses at fast chemical synapses",
@@ -4180,6 +4870,9 @@ const NEW_TIER4 = [
   {
     topic: "Neural Circuits",
     question: "An excitatory-inhibitory balance in cortical circuits helps?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Maintain stable firing rates and prevent runaway excitation",
       "Eliminate all action potentials at rest during the rising phase of the spike",
@@ -4198,6 +4891,9 @@ const NEW_TIER4 = [
   {
     topic: "Neural Circuits",
     question: "Central pattern generators produce rhythmic motor output?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Without requiring continuous sensory input for each cycle",
       "Attributes REM atonia solely to hippocampal theta without brainstem REM circuitry",
@@ -4216,6 +4912,9 @@ const NEW_TIER4 = [
   {
     topic: "Neuromodulation",
     question: "Noradrenergic modulation of cortex during alert states typically?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Increases gain and reduces spontaneous noise in neural responses",
       "Eliminates all synaptic plasticity permanently following presynaptic Ca²⁺ influx",
@@ -4234,6 +4933,9 @@ const NEW_TIER4 = [
   {
     topic: "Neuromodulation",
     question: "Which capability best describes Serotonergic modulation of spinal circuits?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Alter motor pattern generator excitability and reflex gain",
       "Directly transduce odorant molecules during quiet wakefulness",
@@ -4252,6 +4954,9 @@ const NEW_TIER4 = [
   {
     topic: "Neuromodulation",
     question: "Acetylcholine in cortex during attention acts through?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Both nicotinic (ionotropic) and muscarinic (metabotropic) receptors",
       "Rod outer segments generate all-or-none spikes in darkness",
@@ -4270,6 +4975,9 @@ const NEW_TIER4 = [
   {
     topic: "Visual System",
     question: "Midget ganglion cells in the fovea support high acuity through?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Small receptive field centers with minimal convergence",
       "Massive convergence from hundreds of rods per cell in the primary sensory pathway named",
@@ -4288,6 +4996,9 @@ const NEW_TIER4 = [
   {
     topic: "Visual System",
     question: "Direction-selective ganglion cells encode motion direction using?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Asymmetric inhibition from starburst amacrine cells",
       "Place coding on the basilar membrane contralateral to monocular stimulation",
@@ -4306,6 +5017,9 @@ const NEW_TIER4 = [
   {
     topic: "Visual System",
     question: "Horizontal cells mediate lateral inhibition in retina by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Providing feedback/feedforward inhibition to photoreceptors and bipolar cells",
       "Encoding pitch on the basilar membrane in the primary sensory pathway named",
@@ -4324,6 +5038,9 @@ const NEW_TIER4 = [
   {
     topic: "Auditory System",
     question: "Outer hair cells contribute to cochlear amplification through?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Electromotility adjusting basilar membrane mechanics",
       "Direct phototransduction of light in the primary sensory pathway named",
@@ -4342,6 +5059,9 @@ const NEW_TIER4 = [
   {
     topic: "Auditory System",
     question: "Interaural time differences are used for?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Localizing low-frequency sounds in the horizontal plane",
       "Detecting bitter taste on the tongue in the primary sensory pathway named",
@@ -4360,6 +5080,9 @@ const NEW_TIER4 = [
   {
     topic: "Auditory System",
     question: "The medial geniculate nucleus of thalamus relays?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Auditory information to primary auditory cortex",
       "Olfactory glomerular maps directly to muscle",
@@ -4378,6 +5101,9 @@ const NEW_TIER4 = [
   {
     topic: "Somatosensation",
     question: "Two-point discrimination threshold is finest on?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Fingertips due to high receptor density and cortical magnification",
       "Upper arm due to large skin area before cortical association areas",
@@ -4396,6 +5122,9 @@ const NEW_TIER4 = [
   {
     topic: "Somatosensation",
     question: "Rapidly adapting mechanoreceptors fire mainly at?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Onset and offset of mechanical stimuli",
       "Steady sustained pressure without change",
@@ -4432,6 +5161,9 @@ const NEW_TIER4 = [
   {
     topic: "Neuroanatomy",
     question: "The blood-brain barrier astrocytic endfeet contribute by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Regulating the extracellular environment and supporting endothelial barrier function",
       "Generating action potentials for saltatory conduction along a uniformly leaky cable",
@@ -4450,6 +5182,9 @@ const NEW_TIER4 = [
   {
     topic: "Neuroanatomy",
     question: "The cerebellum is critical for?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Coordinating timing and precision of movement (motor learning)",
       "Initial transduction of olfactory odorants",
@@ -4468,6 +5203,9 @@ const NEW_TIER4 = [
   {
     topic: "Neuroanatomy",
     question: "The internal capsule carries?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Corticospinal and thalamocortical fibers between cortex and brainstem/spinal cord",
       "Attributes REM atonia solely to hippocampal theta without brainstem REM circuitry",
@@ -4486,6 +5224,9 @@ const NEW_TIER4 = [
   {
     topic: "Learning & Memory",
     question: "Which capability best describes Protein synthesis inhibition shortly after LTP induction?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Impair consolidation of long-lasting synaptic changes",
       "Enhance immediate early gene expression permanently without changes in presynaptic release probability",
@@ -4504,6 +5245,9 @@ const NEW_TIER4 = [
   {
     topic: "Learning & Memory",
     question: "Systems consolidation proposes that over time declarative memories?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Become less dependent on hippocampus and more on neocortex",
       "Are stored primarily in the cochlear nucleus forever in the primary sensory pathway named",
@@ -4522,6 +5266,9 @@ const NEW_TIER4 = [
   {
     topic: "Learning & Memory",
     question: "Morris water maze testing in rodents assesses?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Hippocampal-dependent spatial navigation memory",
       "Applies a sensory transduction pathway from a different modality",
@@ -4540,6 +5287,9 @@ const NEW_TIER4 = [
   {
     topic: "Olfactory System",
     question: "Adaptation in olfactory receptor neurons reduces response to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Prolonged constant odorant exposure",
       "Single photons of light",
@@ -4558,6 +5308,9 @@ const NEW_TIER4 = [
   {
     topic: "Olfactory System",
     question: "Enantiomers (mirror-image odor molecules) can smell different because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Receptor binding geometry is stereoselective",
       "The basilar membrane maps them to different frequencies",
@@ -4576,6 +5329,9 @@ const NEW_TIER4 = [
   {
     topic: "Olfactory System",
     question: "Pheromone detection in many mammals involves?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "The vomeronasal organ projecting to accessory olfactory bulb",
       "The basilar membrane frequency map primarily",
@@ -4594,6 +5350,9 @@ const NEW_TIER4 = [
   {
     topic: "Motor Systems",
     question: "Which clinical presentation is most consistent with Corticospinal tract lesions typically produce?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Contralateral weakness or paralysis of voluntary movement",
       "Loss of olfactory receptor gene expression",
@@ -4612,6 +5371,9 @@ const NEW_TIER4 = [
   {
     topic: "Motor Systems",
     question: "Muscle spindles provide proprioceptive feedback through?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Group Ia afferents signaling muscle stretch",
       "Direct dopamine release from substantia nigra to retina",
@@ -4630,6 +5392,9 @@ const NEW_TIER4 = [
   {
     topic: "Motor Systems",
     question: "The red nucleus contributes to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Motor coordination via rubrospinal tract influence on limb flexors",
       "Phototransduction primarily at steady state in normoxic tissue when homeostatic mechanisms are intact",
@@ -4648,6 +5413,9 @@ const NEW_TIER4 = [
   {
     topic: "Brain Function",
     question: "Default mode network activity increases during?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Internally directed thought and rest, decreasing during focused external tasks",
       "High-intensity physical exercise of a single muscle spindle at steady state in normoxic tissue",
@@ -4666,6 +5434,9 @@ const NEW_TIER4 = [
   {
     topic: "Brain Function",
     question: "Functional magnetic resonance imaging (fMRI) BOLD signal reflects?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Local changes in blood oxygenation coupled to neural activity",
       "Direct measurement of every synaptic vesicle fusion event when ligand-gated channels are open",
@@ -4684,6 +5455,9 @@ const NEW_TIER4 = [
   {
     topic: "Brain Function",
     question: "Broca's area is associated with?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Speech production (language output)",
       "Primary visual transduction in rods",
@@ -4702,6 +5476,9 @@ const NEW_TIER4 = [
   {
     topic: "Resting Potential",
     question: "With E_K = −90 mV, E_Na = +60 mV, E_Cl = −70 mV, and P_K:P_Na:P_Cl = 1:0.05:0.45 at rest, V_m is closest to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Between E_K and E_Cl, weighted by conductances",
       "Exactly E_Na when homeostatic mechanisms are intact",
@@ -4720,6 +5497,9 @@ const NEW_TIER4 = [
   {
     topic: "Nernst Equation",
     question: "If z = +2 for Ca²⁺, a fourfold increase in external Ca²⁺ (fixed internal) changes E_Ca by approximately?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Treats passive cable properties as sufficient for regenerative action potentials",
       "61 mV if voltage-gated Na⁺ channels are inactivated at mammalian body temperature",
@@ -4738,6 +5518,9 @@ const NEW_TIER4 = [
   {
     topic: "Passive Membrane Properties",
     question: "Separating R_m and R_i effects: increasing R_m alone increases both λ and τ, whereas increasing R_i alone?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Decreases λ but leaves τ unchanged if C_m is constant",
       "Increases both λ and τ at steady state in normoxic tissue",
@@ -4756,6 +5539,9 @@ const NEW_TIER4 = [
   {
     topic: "Action Potentials",
     question: "The minimal stimulus (rheobase) to elicit a spike increases during the relative refractory period because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Fewer Na⁺ channels are available due to inactivation",
       "Most K⁺ channels are permanently deleted during the rising phase of the spike",
@@ -4774,6 +5560,9 @@ const NEW_TIER4 = [
   {
     topic: "Action Potential Propagation",
     question: "If nodal Na⁺ channel density is halved in a myelinated axon, conduction failure is most likely when?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Internodal distance is long and passive decay is large",
       "Internodal distance is very short with strong passive spread",
@@ -4792,6 +5581,9 @@ const NEW_TIER4 = [
   {
     topic: "Electrical Signaling",
     question: "Under conditions of constant total conductance, shifting relative g_K upward while holding V_m fixed increases?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Outward K⁺ current if V_m > E_K",
       "Inward Na⁺ current if V_m < E_Na",
@@ -4810,6 +5602,9 @@ const NEW_TIER4 = [
   {
     topic: "Chemical Synapses",
     question: "Capacitance measurements at presynaptic terminals during exocytosis detect?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Increased membrane area as vesicles fuse",
       "Decreased area due to endocytosis during release",
@@ -4828,6 +5623,9 @@ const NEW_TIER4 = [
   {
     topic: "Synaptic Transmission",
     question: "If release probability p approaches 1, the coefficient of variation (CV) of EPSC amplitude across trials?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Decreases toward zero (less trial-to-trial variability)",
       "Increases without bound when ligand-gated channels are open",
@@ -4846,6 +5644,9 @@ const NEW_TIER4 = [
   {
     topic: "Receptor Types",
     question: "MK-801 blocks NMDA receptors by binding?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Inside the pore in a use-dependent manner",
       "Treats cerebellar parallel fibers as the sole output of the basal ganglia",
@@ -4864,6 +5665,9 @@ const NEW_TIER4 = [
   {
     topic: "Synaptic Integration",
     question: "A dendritic EPSP is attenuated more at the soma if an inhibitory synapse on the same dendritic branch opens Cl⁻ channels because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Shunting reduces effective EPSP amplitude at the soma",
       "Cl⁻ channels depolarize above 0 mV",
@@ -4882,6 +5686,9 @@ const NEW_TIER4 = [
   {
     topic: "Neural Circuits",
     question: "A feedforward inhibitory circuit that sets a delay line for coincidence detection requires?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Matched timing of excitation and delayed inhibition onto the target",
       "Requires electrical synapses without chemical components when ligand-gated channels are open",
@@ -4900,6 +5707,9 @@ const NEW_TIER4 = [
   {
     topic: "Neuromodulation",
     question: "Presynaptic inhibition via GABAergic terminals on sensory afferents often acts by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Depolarizing primary afferents (primary afferent depolarization) reducing Ca²⁺ influx",
       "Opening voltage-gated Na⁺ channels in photoreceptors following presynaptic Ca²⁺ influx",
@@ -4918,6 +5728,9 @@ const NEW_TIER4 = [
   {
     topic: "Visual System",
     question: "Color opponency in parvocellular pathway cells arises from?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Antagonistic cone inputs",
       "Tonotopic mapping on the basilar membrane",
@@ -4936,6 +5749,9 @@ const NEW_TIER4 = [
   {
     topic: "Auditory System",
     question: "The medial superior olive localizes low-frequency sounds using?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Interaural time differences via delay lines and coincidence detection",
       "Interaural level differences above 10 kHz without timing before cortical association areas",
@@ -4954,6 +5770,9 @@ const NEW_TIER4 = [
   {
     topic: "Somatosensation",
     question: "Rapid adaptation in Pacinian corpuscles means they respond best to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Onset and offset of vibration, not steady pressure",
       "Constant deep pressure without change contralateral to monocular stimulation",
@@ -4972,6 +5791,9 @@ const NEW_TIER4 = [
   {
     topic: "Olfactory System",
     question: "Sparse coding in piriform cortex means?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Only a small fraction of neurons fire strongly for a given odor",
       "Most neuron fires identically for all odors before cortical association areas",
@@ -4990,6 +5812,9 @@ const NEW_TIER4 = [
   {
     topic: "Neuroanatomy",
     question: "The substantia nigra pars compacta is located in the?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Midbrain and provides dopaminergic input to striatum",
       "Retina and transduces photons before cortical association areas",
@@ -5008,6 +5833,9 @@ const NEW_TIER4 = [
   {
     topic: "Motor Systems",
     question: "Alpha motor neurons and gamma motor neurons differ in that gamma neurons?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Innervate intrafusal muscle fibers in spindles",
       "Innervate extrafusal fibers producing force when homeostatic mechanisms are intact",
@@ -5026,6 +5854,9 @@ const NEW_TIER4 = [
   {
     topic: "Learning & Memory",
     question: "Tagging-and-capture models of synaptic consolidation propose that?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Synapses marked by activity capture plasticity-related proteins arriving globally",
       "Many synapses strengthen without specificity following presynaptic Ca²⁺ influx",
@@ -5044,6 +5875,9 @@ const NEW_TIER4 = [
   {
     topic: "Brain Function",
     question: "Binocular rivalry occurs when?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Different images to each eye compete for perceptual dominance",
       "Both eyes fuse images without competition at steady state in normoxic tissue",
@@ -5062,6 +5896,9 @@ const NEW_TIER4 = [
   {
     topic: "Electrical Synapses",
     question: "If two neurons are coupled by gap junctions, injecting hyperpolarizing current into one will?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Hyperpolarize the coupled partner (if junction is open)",
       "Depolarize the partner regardless of polarity when Na⁺ inactivation has progressed",
@@ -5080,6 +5917,9 @@ const NEW_TIER4 = [
   {
     topic: "Second Messengers",
     question: "Which capability best describes CaMKII autophosphorylation after Ca²⁺ influx?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Maintain kinase activity after Ca²⁺ returns to baseline",
       "Permanently open all Na⁺ channels without phosphorylation targets",
@@ -5098,6 +5938,9 @@ const NEW_TIER4 = [
   {
     topic: "Resting Potential",
     question: "Which outcome is most likely when Ouabain inhibition of Na⁺/K⁺ ATPase eventually occurs?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Depolarization as Na⁺ and K⁺ gradients run down",
       "Immediate hyperpolarization to −120 mV with dominant K⁺ permeability at rest",
@@ -5116,6 +5959,9 @@ const NEW_TIER4 = [
   {
     topic: "Nernst Equation",
     question: "For Cl⁻ with higher internal than external concentration, what is the relative value of E_Cl?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Negative (inside relative to outside)",
       "Positive if voltage-gated Na⁺ channels are inactivated",
@@ -5134,6 +5980,9 @@ const NEW_TIER4 = [
   {
     topic: "Passive Membrane Properties",
     question: "In a passive cable, doubling both diameter and R_m per unit area leaves λ?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Unchanged if R_i scales inversely with diameter as in uniform geometry",
       "Doubled at steady state in normoxic tissue when homeostatic mechanisms are intact",
@@ -5152,6 +6001,9 @@ const NEW_TIER4 = [
   {
     topic: "Action Potentials",
     question: "Persistent Na⁺ current (non-inactivating component) contributes to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Subthreshold resonance and repeated firing near threshold",
       "Exclusive repolarization after spikes during the rising phase of the spike",
@@ -5170,6 +6022,9 @@ const NEW_TIER4 = [
   {
     topic: "Action Potential Propagation",
     question: "Ectopic spike initiation can occur at?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Damaged axon segments with altered channel density",
       "Applies a sensory transduction pathway from a different modality",
@@ -5188,6 +6043,9 @@ const NEW_TIER4 = [
   {
     topic: "Electrical Signaling",
     question: "If E_K is −90 mV and V_m is −60 mV, net K⁺ current through open K⁺ channels?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Outward (efflux)",
       "Inward (influx)",
@@ -5206,6 +6064,9 @@ const NEW_TIER4 = [
   {
     topic: "Chemical Synapses",
     question: "Retrograde messengers such as endocannabinoids act by?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Traveling from postsynaptic to presynaptic terminals to reduce release",
       "Often anterograde from photoreceptors to bipolar cells when ligand-gated channels are open",
@@ -5224,6 +6085,9 @@ const NEW_TIER4 = [
   {
     topic: "Synaptic Transmission",
     question: "Which anatomic lesion best explains Asynchronous release after a presynaptic spike?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Release from distant boutons with slower Ca²⁺ clearance or lower sensitivity",
       "Exclusive quantal release at exactly 0 ms delay when ligand-gated channels are open",
@@ -5242,6 +6106,9 @@ const NEW_TIER4 = [
   {
     topic: "Receptor Types",
     question: "Inverse agonists of G-protein-coupled receptors?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Stabilize inactive receptor conformations below basal activity",
       "Often open ionotropic pores directly when ligand-gated channels are open",
@@ -5260,6 +6127,9 @@ const NEW_TIER4 = [
   {
     topic: "Synaptic Integration",
     question: "Plateau potentials in dendrites can sustain firing when?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Voltage-gated Ca²⁺ and Na⁺ channels produce regenerative depolarization locally",
       "Treats myelin length constant as the driver of Na⁺ and K⁺ conductance timing during the rising phase of the spike",
@@ -5278,6 +6148,9 @@ const NEW_TIER4 = [
   {
     topic: "Neural Circuits",
     question: "Central pattern generators produce rhythmic motor output because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Recurrent excitatory and inhibitory connections form pacemaker-like loops",
       "Sensory input is required most cycle in most recordings at steady state in normoxic tissue",
@@ -5296,6 +6169,9 @@ const NEW_TIER4 = [
   {
     topic: "Neuromodulation",
     question: "Acetylcholine in cortex during arousal often?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Reduces adaptation in pyramidal cells and enhances signal detection",
       "Closes all nicotinic receptors permanently at fast chemical synapses",
@@ -5314,6 +6190,9 @@ const NEW_TIER4 = [
   {
     topic: "Visual System",
     question: "Magnocellular pathway neurons preferentially respond to?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "High temporal frequency and motion",
       "Fine color borders requiring parvocellular input",
@@ -5332,6 +6211,9 @@ const NEW_TIER4 = [
   {
     topic: "Auditory System",
     question: "The lateral superior olive uses interaural level differences primarily for?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "High-frequency localization via intensity cues",
       "Low-frequency phase locking without level before cortical association areas",
@@ -5368,6 +6250,9 @@ const NEW_TIER4 = [
   {
     topic: "Olfactory System",
     question: "Enantiomers can smell different because?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Receptor binding geometry differs despite identical chemical formula",
       "Mitral cells lack any inhibition in the primary sensory pathway named",
@@ -5404,6 +6289,9 @@ const NEW_TIER4 = [
   {
     topic: "Motor Systems",
     question: "When Basal ganglia direct pathway activity increases, which effect on neural circuit function is most likely?",
+    reviewStatus: "verified",
+    scientificReview: "automated_mcb80x_gate_v1",
+    pipelineStage: "approved_practice",
     options: [
       "Facilitate intended movements by disinhibiting thalamocortical activity",
       "Block all movement in most recordings when homeostatic mechanisms are intact",

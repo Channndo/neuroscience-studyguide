@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-07T22:53:08.030Z",
+  "generatedAt": "2026-11-24T14:15:53.040Z",
   "totalMcq": 1490,
-  "flagCount": 2,
+  "flagCount": 3,
   "accuracyFlags": 0,
   "accuracyStems": [],
   "flags": [
@@ -18,6 +18,13 @@
       "stem": "which clinical presentation is most consistent with corticospinal tract lesions usually produce",
       "topic": "Motor Systems",
       "canonicalId": "questions-exam-paraphrases:PART3_EXAM_PARAPHRASE_POOL:21"
+    },
+    {
+      "category": "clarity",
+      "reason": "≥2 joke distractors on unrelated stem.",
+      "stem": "transmitter: glutamate. typical role",
+      "topic": "Synaptic Transmission",
+      "canonicalId": "questions-expansion:PART2_EXPANSION_POOL:4"
     }
   ]
 }
