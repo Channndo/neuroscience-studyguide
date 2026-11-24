@@ -41,6 +41,9 @@ jobs:
       - name: MCQ junk option scan
         run: node scripts/test-mcq-no-junk.mjs
 
+      - name: Index inline script parse
+        run: node scripts/test-index-inline-parse.mjs
+
       - name: Question stem repair check
         run: node scripts/repair-question-stems.mjs
 

@@ -49,7 +49,7 @@
   function weakestObjectives(data, limit = 5) {
     const stats = data?.objectiveStats || {};
     return Object.entries(stats)
-      .map(([key, s]) => ({ key, ...s, mastery: estimateMastery(s) })
+      .map(([key, s]) => ({ key, ...s, mastery: estimateMastery(s) }))
       .filter(r => r.total >= 2 && r.mastery.level === "weak")
       .sort((a, b) => a.correct / a.total - b.correct / b.total)
       .slice(0, limit);
